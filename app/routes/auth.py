@@ -85,7 +85,7 @@ def login():
         return jsonify({"error": "Invalid password"}), 401
 
     # expiration = datetime.datetime.utcnow() + datetime.timedelta(hours=24)
-    expiration = datetime.datetime.utcnow() + datetime.timedelta(minutes=1)
+    expiration = datetime.datetime.utcnow() + datetime.timedelta(hours=24)
     token = jwt.encode(
         {
             "sub": user["id"],
