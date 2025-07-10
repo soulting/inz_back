@@ -93,6 +93,92 @@ def create_task():
         return jsonify({"error": f"Unexpected error: {str(e)}"}), 500
 
 
+@tasks_bp.route('/get_subpoints/<int:task_id>', methods=['GET'])
+def get_subpoints(task_id):
+    auth_header = request.headers.get('Authorization')
+    payload, error_message, status_code = decode_jwt_token(auth_header)
+
+    if not payload:
+        return jsonify({"error": error_message}), status_code
+
+    try:
+        # Pobierz subpunkty dla konkretnego zadania
+        subpoints_response = supabase \
+            .from_("podpunkt") \
+            .select("*") \
+            .eq("task_id", task_id) \
+            .execute()
+
+        subpoints = subpoints_response.data
+
+        return jsonify({"subpoints": subpoints})
+
+    except APIError as e:
+        return jsonify({"error": f"Supabase API error: {str(e)}"}), 500
+
+    except Exception as e:
+        return jsonify({"error": f"Unexpected error: {str(e)}"}), 500
+
+
+
+@tasks_bp.route('/update_task/<int:task_id>', methods=['PUT'])
+def update_task(task_id):
+    auth_header = request.headers.get('Authorization')
+    payload, error_message, status_code = decode_jwt_token(auth_header)
+
+    if not payload:
+        return jsonify({"error": error_message}), status_code
+
+    user_id = payload["sub"]
+    data = request.get_json()
+    print(data)
+
+    try:
+        # Aktualizuj zadanie
+        supabase.from_("zadanie").update({
+            "question": data["question"],
+            "main_category": data["selectedMainCategory"],
+            "first_category": data["selectedFirstCategory"],
+            "task_type": data["taskType"],
+            "level": data["level"]
+        }).eq("id", task_id).eq("creator_id", user_id).execute()
+
+        # Przetwarzanie subpunktów
+        subpoints = data.get("subpoints", [])
+        for index, point in enumerate(subpoints):
+            subpoint_data = {
+                "question": point.get("originalSentence"),
+                "options": point.get("options", None),
+                "correct_answer": point.get("correctedSentence"),
+                "points": point.get("points", 1),
+                "sequence": index + 1,
+                "hint": point.get("hint", None)
+            }
+
+            if "id" in point:
+                # Aktualizacja istniejącego podpunktu
+                supabase.from_("podpunkt") \
+                    .update(subpoint_data) \
+                    .eq("id", point["id"]) \
+                    .eq("task_id", task_id) \
+                    .execute()
+            else:
+                # Dodanie nowego podpunktu
+                subpoint_data["task_id"] = task_id
+                supabase.from_("podpunkt") \
+                    .insert(subpoint_data) \
+                    .execute()
+
+        return jsonify({"message": "Zadanie zaktualizowane pomyślnie"}), 200
+
+    except APIError as e:
+        return jsonify({"error": f"Supabase API error: {str(e)}"}), 500
+
+    except Exception as e:
+        return jsonify({"error": f"Unexpected error: {str(e)}"}), 500
+
+
+
 
 
 
