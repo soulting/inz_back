@@ -13,11 +13,13 @@ def create_app():
     from  .routes.classes import classes_bp
     from .routes.tasks import tasks_bp
     from .routes.lessons import lessons_bp
+    from .routes.sections import sections_bp
 
     app.register_blueprint(auth_bp, url_prefix="/auth")
     app.register_blueprint(placement_test_bp, url_prefix="/placement_test")
     app.register_blueprint(classes_bp, url_prefix="/classes")
     app.register_blueprint(tasks_bp, url_prefix="/tasks")
     app.register_blueprint(lessons_bp, url_prefix="/lessons")
+    app.register_blueprint(sections_bp, url_prefix="/sections")
 
     return app

@@ -19,17 +19,16 @@ def get_teacher_tasks():
     user_id = payload["sub"]
 
     try:
-        # Pobierz wszystkie zadania użytkownika (creator_id)
-        zadania_response = supabase \
-            .from_("zadanie") \
+        tasks_response = supabase \
+            .from_("tasks") \
             .select("*") \
-            .eq("creator_id", user_id) \
+            .eq("owner_id", user_id) \
             .execute()
 
-        zadania = zadania_response.data
+        tasks = tasks_response.data
 
 
-        return jsonify(zadania)
+        return jsonify(tasks)
 
     except APIError as e:
         return jsonify({"error": f"Supabase API error: {str(e)}"}), 500
@@ -48,41 +47,38 @@ def create_task():
     user_id = payload["sub"]
     data = request.get_json()
 
+    print(data)
+
 
     try:
-        # Wstaw zadanie do tabeli "zadanie"
-        task_insert_response = supabase.from_("zadanie").insert({
+        task_insert_response = supabase.from_("tasks").insert({
             "question": data["question"],
-            "main_category": data["selectedMainCategory"],
-            "first_category": data["selectedFirstCategory"],
-            "task_type": data["taskType"],
+            "main_category": data["main_category"],
+            "sub_category": data["sub_category"],
+            "task_type": data["task_type"],
             "level": data["level"],
-            "creator_id": user_id,
+            "owner_id": user_id,
             "created_at": datetime.utcnow().isoformat()
 
         }).execute()
 
-        # Pobierz ID nowo utworzonego zadania
         new_task_id = task_insert_response.data[0]['id']
 
-        # Wstaw subpunkty (jeśli istnieją) do tabeli "subpoints"
-        subpoints = data.get("subpoints", [])
+        task_items = data.get("task_items", [])
 
-        if subpoints:
-            formatted_subpoints = []
-            for index, point in enumerate(subpoints):
-
-                formatted_subpoints.append({
+        if task_items:
+            formatted_task_items = []
+            for index, task_item in enumerate(task_items):
+                formatted_task_items.append({
                     "task_id": new_task_id,
-                    "question": point.get("originalSentence"),
-                    "options": point.get("options", None),
-                    "correct_answer": point.get("correctedSentence"),
-                    "points": point.get("points", 1),
-                    "sequence": index + 1,
-                    "hint": point.get("tips", None)
+                    "template": task_item.get("template"),
+                    "options": task_item.get("options", None),
+                    "correct_answer": task_item.get("correct_answer"),
+                    "bonus_information": task_item.get("bonus_information", None),
+                    "correct_index": task_item.get("correct_index", None)
                 })
 
-            supabase.from_("podpunkt").insert(formatted_subpoints).execute()
+            supabase.from_("task_items").insert(formatted_task_items).execute()
 
         return jsonify({"message": "Zadanie utworzone pomyślnie", "task_id": new_task_id}), 201
 
@@ -93,8 +89,8 @@ def create_task():
         return jsonify({"error": f"Unexpected error: {str(e)}"}), 500
 
 
-@tasks_bp.route('/get_subpoints/<int:task_id>', methods=['GET'])
-def get_subpoints(task_id):
+@tasks_bp.route('/get_task_items/<int:task_id>', methods=['GET'])
+def get_task_items(task_id):
     auth_header = request.headers.get('Authorization')
     payload, error_message, status_code = decode_jwt_token(auth_header)
 
@@ -102,16 +98,15 @@ def get_subpoints(task_id):
         return jsonify({"error": error_message}), status_code
 
     try:
-        # Pobierz subpunkty dla konkretnego zadania
-        subpoints_response = supabase \
-            .from_("podpunkt") \
+        task_items_response = supabase \
+            .from_("task_items") \
             .select("*") \
             .eq("task_id", task_id) \
             .execute()
 
-        subpoints = subpoints_response.data
+        task_items = task_items_response.data
 
-        return jsonify({"subpoints": subpoints})
+        return jsonify({"task_items": task_items})
 
     except APIError as e:
         return jsonify({"error": f"Supabase API error: {str(e)}"}), 500
@@ -134,39 +129,36 @@ def update_task(task_id):
     print(data)
 
     try:
-        # Aktualizuj zadanie
-        supabase.from_("zadanie").update({
+        supabase.from_("tasks").update({
             "question": data["question"],
-            "main_category": data["selectedMainCategory"],
-            "first_category": data["selectedFirstCategory"],
-            "task_type": data["taskType"],
+            "main_category": data["main_category"],
+            "sub_category": data["sub_category"],
+            "task_type": data["task_type"],
             "level": data["level"]
-        }).eq("id", task_id).eq("creator_id", user_id).execute()
+        }).eq("id", task_id).eq("owner_id", user_id).execute()
 
-        # Przetwarzanie subpunktów
-        subpoints = data.get("subpoints", [])
-        for index, point in enumerate(subpoints):
-            subpoint_data = {
-                "question": point.get("originalSentence"),
-                "options": point.get("options", None),
-                "correct_answer": point.get("correctedSentence"),
-                "points": point.get("points", 1),
-                "sequence": index + 1,
-                "hint": point.get("hint", None)
+        print("dfsgfsdgdf")
+
+        task_items = data.get("task_items", [])
+        for index, task_item in enumerate(task_items):
+            task_item_data = {
+                "template": task_item.get("template"),
+                "options": task_item.get("options", None),
+                "correct_answer": task_item.get("correct_answer"),
+                "bonus_information": task_item.get("bonus_information", None),
+                "correct_index": task_item.get("correct_index", None)
             }
 
-            if "id" in point:
-                # Aktualizacja istniejącego podpunktu
-                supabase.from_("podpunkt") \
-                    .update(subpoint_data) \
-                    .eq("id", point["id"]) \
+            if "id" in task_item:
+                supabase.from_("task_items") \
+                    .update(task_item_data) \
+                    .eq("id", task_item["id"]) \
                     .eq("task_id", task_id) \
                     .execute()
             else:
-                # Dodanie nowego podpunktu
-                subpoint_data["task_id"] = task_id
-                supabase.from_("podpunkt") \
-                    .insert(subpoint_data) \
+                task_item_data["task_id"] = task_id
+                supabase.from_("task_items") \
+                    .insert(task_item_data) \
                     .execute()
 
         return jsonify({"message": "Zadanie zaktualizowane pomyślnie"}), 200
@@ -178,9 +170,49 @@ def update_task(task_id):
         return jsonify({"error": f"Unexpected error: {str(e)}"}), 500
 
 
+@tasks_bp.route('/delete_task/<task_id>', methods=['DELETE'])
+def delete_teacher_task(task_id):
+    auth_header = request.headers.get('Authorization')
+    payload, error_message, status_code = decode_jwt_token(auth_header)
 
+    if not payload:
+        return jsonify({"error": error_message}), status_code
 
+    owner_id = payload["sub"]
 
+    try:
+        # Sprawdź, czy zadanie istnieje i należy do właściciela
+        task_response = supabase \
+            .from_("tasks") \
+            .select("*") \
+            .eq("id", task_id) \
+            .eq("owner_id", owner_id) \
+            .single() \
+            .execute()
 
+        if not task_response.data:
+            return jsonify({"error": "Zadanie nie istnieje lub brak dostępu"}), 404
 
+        # Usuń zadanie
+        supabase \
+            .from_("tasks") \
+            .delete() \
+            .eq("id", task_id) \
+            .eq("owner_id", owner_id) \
+            .execute()
+
+        # Pobierz zaktualizowaną listę zadań właściciela
+        updated_tasks = supabase \
+            .from_("tasks") \
+            .select("*") \
+            .eq("owner_id", owner_id) \
+            .order("created_at", desc=True) \
+            .execute()
+
+        return jsonify(updated_tasks.data), 200
+
+    except APIError as e:
+        return jsonify({"error": f"Supabase API error: {str(e)}"}), 500
+    except Exception as e:
+        return jsonify({"error": f"Unexpected error: {str(e)}"}), 500
 

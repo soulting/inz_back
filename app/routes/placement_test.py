@@ -19,27 +19,26 @@ def get_test():
 
     try:
         # Pobierz wszystkie zadania dla danego poziomu
-        zadania_response = supabase \
-            .from_("zadanie") \
+        tasks_response = supabase \
+            .from_("tasks") \
             .select("*") \
             .eq("level", level) \
             .execute()
 
 
-        zadania = zadania_response.data
+        tasks = tasks_response.data
 
         # Dla każdego zadania pobierz podpunkty
-        for zadanie in zadania:
-            podpunkty_response = supabase \
-                .from_("podpunkt") \
+        for task in tasks:
+            task_items_response = supabase \
+                .from_("task_items") \
                 .select("*") \
-                .eq("task_id", zadanie["id"]) \
-                .order("sequence") \
+                .eq("task_id", task["id"]) \
                 .execute()
 
-            zadanie["subtasks"] = podpunkty_response.data if podpunkty_response.data else []
+            task["task_items"] = task_items_response.data if task_items_response.data else []
 
-        return jsonify(zadania)
+        return jsonify(tasks)
 
 
     except APIError as e:
@@ -63,11 +62,12 @@ def submit_test():
     data = request.json
     answers = data.get("answers",[]).get("answers",[])
 
+
     try:
         for answer in answers:
-            zadanie_insert = {
+            task_result_insert = {
                 "user_id": user_id,
-                "zadanie_id": answer["taskId"],
+                "task_id": answer["taskId"],
                 "task_points": answer["taskPoints"],
                 "task_error": answer["taskError"],
                 "task_uncertainty": answer["taskUncertainty"],
@@ -76,24 +76,24 @@ def submit_test():
                 "completion_date": answer["completionDate"]
             }
 
-            result = supabase.table("wynik_zadania").insert(zadanie_insert).execute()
-            wynik_zadania_id = result.data[0]["id"]
+            result = supabase.table("task_results").insert(task_result_insert).execute()
+            task_result_id = result.data[0]["id"]
 
 
 
-            subtasks = answer.get("scoredAnswers", [])
-            for sub in subtasks:
+            task_items_result = answer.get("scoredAnswers", [])
+            for sub in task_items_result:
 
-                podpunkt_dane = list(sub.values())[0]
+                task_items_data = list(sub.values())[0]
 
                 supabase.table("odpowiedz_podpunkt").insert({
-                    "wynik_zadania_id": wynik_zadania_id,
+                    "wynik_zadania_id": task_result_id,
                     "podpunkt_id": list(sub.keys())[0],
-                    "point": podpunkt_dane["point"],
-                    "error": podpunkt_dane["error"],
-                    "uncertain": podpunkt_dane["uncertain"],
-                    "my_answer": podpunkt_dane["myAnswer"],
-                    "correct_answer": podpunkt_dane["correctAnswer"]
+                    "point": task_items_data["point"],
+                    "error": task_items_data["error"],
+                    "uncertain": task_items_data["uncertain"],
+                    "my_answer": task_items_data["myAnswer"],
+                    "correct_answer": task_items_data["correctAnswer"]
                 }).execute()
 
         return jsonify({"status": "success"}), 200
