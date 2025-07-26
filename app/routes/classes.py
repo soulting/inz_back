@@ -42,7 +42,6 @@ def get_teacher_classes():
 
         return jsonify({"error": f"Unexpected error: {str(e)}"}), 500
 
-
 @classes_bp.route('/delete_teacher_class/<class_id>', methods=['DELETE'])
 def delete_teacher_class(class_id):
     auth_header = request.headers.get('Authorization')
@@ -66,7 +65,7 @@ def delete_teacher_class(class_id):
         if not class_response.data:
             return jsonify({"error": "Klasa nie istnieje lub brak dostępu"}), 404
 
-        # Usuń klasę (jeśli powyżej się nie wysypało, to tu też nie powinno)
+        # Usuń klasę
         supabase \
             .from_("classes") \
             .delete() \
@@ -74,15 +73,7 @@ def delete_teacher_class(class_id):
             .eq("owner_id", owner_id) \
             .execute()
 
-        # Pobierz zaktualizowaną listę klas
-        updated_classes = supabase \
-            .from_("classes") \
-            .select("*") \
-            .eq("owner_id", owner_id) \
-            .order("created_at", desc=True) \
-            .execute()
-
-        return jsonify(updated_classes.data), 200
+        return jsonify({"message": "Klasa została pomyślnie usunięta"}), 200
 
     except APIError as e:
         return jsonify({"error": f"Supabase API error: {str(e)}"}), 500
@@ -90,7 +81,7 @@ def delete_teacher_class(class_id):
         return jsonify({"error": f"Unexpected error: {str(e)}"}), 500
 
 
-@classes_bp.route('/create_class', methods=['POST'])
+@classes_bp.route('/create_teacher_class', methods=['POST'])
 def create_class():
     auth_header = request.headers.get('Authorization')
     payload, error_message, status_code = decode_jwt_token(auth_header)
@@ -99,41 +90,29 @@ def create_class():
         return jsonify({"error": error_message}), status_code
 
     data = request.get_json()
-
     name = data.get("name")
-    password = data.get("password")  # hasło może być opcjonalne
+    password = data.get("password")
     image_url = data.get("image_url")
-
-    if not name:
-        return jsonify({"error": "Brakuje nazwy klasy"}), 400
 
     password_hash = None
     if password:
         password_hash = bcrypt.hashpw(password.encode("utf-8"), bcrypt.gensalt()).decode("utf-8")
 
-    print(password_hash)
-
     try:
         supabase.table("classes").insert({
-                "name": name,
-                "password": password_hash,
-                "owner_id": payload["sub"],
-                "image_url":image_url
+            "name": name,
+            "password": password_hash,
+            "owner_id": payload["sub"],
+            "image_url": image_url
+        }).execute()
 
-            }).execute()
-
-        classes_response = supabase \
-            .from_("classes") \
-            .select("*") \
-            .eq("owner_id", payload["sub"]) \
-            .execute()
-
-        return jsonify(classes_response.data), 201
+        return jsonify({"message": "Klasa została pomyślnie utworzona."}), 201
 
     except APIError as e:
         return jsonify({"error": f"Supabase API error: {str(e)}"}), 500
     except Exception as e:
         return jsonify({"error": f"Unexpected error: {str(e)}"}), 500
+
 
 @classes_bp.route('/get_student_classes', methods=['GET'])
 def get_student_classes():

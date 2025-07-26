@@ -44,6 +44,8 @@ def get_sections(class_id):
     auth_header = request.headers.get('Authorization')
     payload, error_message, status_code = decode_jwt_token(auth_header)
 
+    print(class_id)
+
     if not payload:
         return jsonify({"error": error_message}), status_code
 
@@ -52,7 +54,8 @@ def get_sections(class_id):
 
         sections = response.data
 
-        return jsonify({"sections": sections}), 200
+
+        return jsonify( sections), 200
 
     except APIError as e:
         return jsonify({"error": f"Supabase API error: {str(e)}"}), 500
@@ -71,13 +74,11 @@ def add_lesson_to_section():
         return jsonify({"error": error_message}), status_code
 
     data = request.get_json()
-    print(data)
 
     section_id = data.get('section_id')
-    lesson_id = data.get('item_id')
+    lesson_id = data.get('lesson_id')
+    class_id = data.get('class_id')
 
-    if not section_id or not lesson_id:
-        return jsonify({"error": "Brakuje section_id lub lesson_id"}), 400
 
     try:
         # Sprawdzenie czy taki wpis już istnieje
@@ -90,6 +91,7 @@ def add_lesson_to_section():
         response = supabase.from_("section_lesson").insert({
             "section_id": section_id,
             "lesson_id": lesson_id,
+            "class": class_id,
             "created_at": datetime.utcnow().isoformat()
         }).execute()
 
@@ -116,10 +118,10 @@ def add_task_to_section():
     data = request.get_json()
 
     section_id = data.get('section_id')
-    task_id = data.get('item_id')
+    task_id = data.get('task_id')
+    class_id = data.get('class_id')
 
-    if not section_id or not task_id:
-        return jsonify({"error": "Brakuje section_id lub task_id"}), 400
+
 
     try:
         # Sprawdzenie czy taki wpis już istnieje
@@ -135,6 +137,7 @@ def add_task_to_section():
         response = supabase.from_("section_task").insert({
             "section_id": section_id,
             "task_id": task_id,
+            "class_id": class_id,
             "created_at": datetime.utcnow().isoformat()
         }).execute()
 

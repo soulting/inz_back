@@ -99,7 +99,7 @@ def get_lesson(lesson_id):
     except Exception as e:
         return jsonify({"error": f"Unexpected error: {str(e)}"}), 500
 
-@lessons_bp.route('/delete_lesson/<lesson_id>', methods=['DELETE'])
+@lessons_bp.route('/delete_teacher_lesson/<lesson_id>', methods=['DELETE'])
 def delete_teacher_lesson(lesson_id):
     auth_header = request.headers.get('Authorization')
     payload, error_message, status_code = decode_jwt_token(auth_header)
@@ -130,20 +130,13 @@ def delete_teacher_lesson(lesson_id):
             .eq("owner_id", owner_id) \
             .execute()
 
-        # Pobierz zaktualizowaną listę lekcji właściciela
-        updated_lessons = supabase \
-            .from_("lessons") \
-            .select("*") \
-            .eq("owner_id", owner_id) \
-            .order("created_at", desc=True) \
-            .execute()
-
-        return jsonify(updated_lessons.data), 200
+        return jsonify({"message": "Lekcja została usunięta pomyślnie."}), 200
 
     except APIError as e:
         return jsonify({"error": f"Supabase API error: {str(e)}"}), 500
     except Exception as e:
         return jsonify({"error": f"Unexpected error: {str(e)}"}), 500
+
 
 @lessons_bp.route('/update_lesson/<lesson_id>', methods=['PUT'])
 def update_lesson(lesson_id):
@@ -157,10 +150,10 @@ def update_lesson(lesson_id):
     data = request.get_json()
 
     try:
-        # Sprawdź, czy lekcja istnieje i należy do właściciela
+        # Sprawdzenie, czy lekcja należy do użytkownika
         lesson_response = supabase \
             .from_("lessons") \
-            .select("*") \
+            .select("id") \
             .eq("id", lesson_id) \
             .eq("owner_id", owner_id) \
             .single() \
@@ -169,7 +162,7 @@ def update_lesson(lesson_id):
         if not lesson_response.data:
             return jsonify({"error": "Lekcja nie istnieje lub brak dostępu"}), 404
 
-        # Przygotowanie danych do aktualizacji
+        # Aktualizacja lekcji
         lesson_update = {
             "title": data["title"],
             "description": data.get("description", ""),
@@ -179,7 +172,7 @@ def update_lesson(lesson_id):
             "level": data["level"],
         }
 
-        update_response = supabase \
+        supabase \
             .from_("lessons") \
             .update(lesson_update) \
             .eq("id", lesson_id) \
@@ -187,12 +180,12 @@ def update_lesson(lesson_id):
             .execute()
 
         return jsonify({
-            "message": "Lekcja została zaktualizowana.",
-            "lesson": update_response.data[0]
+            "message": "Lekcja została zaktualizowana."
         }), 200
 
     except APIError as e:
         return jsonify({"error": f"Supabase API error: {str(e)}"}), 500
     except Exception as e:
         return jsonify({"error": f"Unexpected error: {str(e)}"}), 500
+
 

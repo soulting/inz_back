@@ -89,7 +89,7 @@ def create_task():
         return jsonify({"error": f"Unexpected error: {str(e)}"}), 500
 
 
-@tasks_bp.route('/get_task_items/<int:task_id>', methods=['GET'])
+@tasks_bp.route('/get_task_items/<task_id>', methods=['GET'])
 def get_task_items(task_id):
     auth_header = request.headers.get('Authorization')
     payload, error_message, status_code = decode_jwt_token(auth_header)
@@ -126,7 +126,6 @@ def update_task(task_id):
 
     user_id = payload["sub"]
     data = request.get_json()
-    print(data)
 
     try:
         supabase.from_("tasks").update({
@@ -137,7 +136,6 @@ def update_task(task_id):
             "level": data["level"]
         }).eq("id", task_id).eq("owner_id", user_id).execute()
 
-        print("dfsgfsdgdf")
 
         task_items = data.get("task_items", [])
         for index, task_item in enumerate(task_items):
@@ -170,7 +168,7 @@ def update_task(task_id):
         return jsonify({"error": f"Unexpected error: {str(e)}"}), 500
 
 
-@tasks_bp.route('/delete_task/<task_id>', methods=['DELETE'])
+@tasks_bp.route('/delete_teacher_task/<task_id>', methods=['DELETE'])
 def delete_teacher_task(task_id):
     auth_header = request.headers.get('Authorization')
     payload, error_message, status_code = decode_jwt_token(auth_header)
@@ -201,18 +199,55 @@ def delete_teacher_task(task_id):
             .eq("owner_id", owner_id) \
             .execute()
 
-        # Pobierz zaktualizowaną listę zadań właściciela
-        updated_tasks = supabase \
-            .from_("tasks") \
-            .select("*") \
-            .eq("owner_id", owner_id) \
-            .order("created_at", desc=True) \
-            .execute()
-
-        return jsonify(updated_tasks.data), 200
+        return jsonify({"message": "Zadanie zostało pomyślnie usunięte"}), 200
 
     except APIError as e:
         return jsonify({"error": f"Supabase API error: {str(e)}"}), 500
     except Exception as e:
         return jsonify({"error": f"Unexpected error: {str(e)}"}), 500
+
+
+@tasks_bp.route('/get_task/<task_id>', methods=['GET'])
+def get_task(task_id):
+    auth_header = request.headers.get('Authorization')
+    payload, error_message, status_code = decode_jwt_token(auth_header)
+
+    if not payload:
+        return jsonify({"error": error_message}), status_code
+
+    try:
+        task_response = supabase \
+            .from_("tasks") \
+            .select("*") \
+            .eq("id", task_id) \
+            .single() \
+            .execute()
+
+        if task_response.data is None:
+            return jsonify({"error": "Zadanie nie istnieje."}), 404
+
+        task = task_response.data
+
+        print("asdfas",task_response.data)
+
+        # Pobierz powiązane task_items
+        task_items_response = supabase \
+            .from_("task_items") \
+            .select("*") \
+            .eq("task_id", task_id) \
+            .execute()
+
+        task_items = task_items_response.data or []
+
+        # Dołącz task_items do obiektu zadania
+        task["task_items"] = task_items
+
+        return jsonify(task)
+
+    except APIError as e:
+        return jsonify({"error": f"Supabase API error: {str(e)}"}), 500
+
+    except Exception as e:
+        return jsonify({"error": f"Unexpected error: {str(e)}"}), 500
+
 
