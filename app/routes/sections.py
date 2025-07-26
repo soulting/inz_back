@@ -43,23 +43,54 @@ def get_sections(class_id):
     auth_header = request.headers.get('Authorization')
     payload, error_message, status_code = decode_jwt_token(auth_header)
 
-
     if not payload:
         return jsonify({"error": error_message}), status_code
 
+    print("dupa")
+
     try:
-        response = supabase.from_("sections").select("*").eq("class_id", class_id).order("created_at", desc=False).execute()
+        # Pobierz sekcje dla klasy
+        sections_resp = supabase \
+            .from_("sections") \
+            .select("*") \
+            .eq("class_id", class_id) \
+            .order("created_at", desc=False) \
+            .execute()
+        sections = sections_resp.data
 
-        sections = response.data
+        # Pobierz lekcje powiązane z klasą
+        lessons_resp = supabase \
+            .from_("section_lesson") \
+            .select("*, lessons(*)") \
+            .eq("class_id", class_id) \
+            .execute()
+        lessons = lessons_resp.data
+
+        # Pobierz zadania powiązane z klasą
+        tasks_resp = supabase \
+            .from_("section_task") \
+            .select("*, tasks(*)") \
+            .eq("class_id", class_id) \
+            .execute()
+        tasks = tasks_resp.data
 
 
-        return jsonify( sections), 200
+
+
+
+
+        return jsonify({
+            "sections": sections,
+            "lessons": lessons,
+            "tasks": tasks,
+        }), 200
 
     except APIError as e:
         return jsonify({"error": f"Supabase API error: {str(e)}"}), 500
 
     except Exception as e:
         return jsonify({"error": f"Unexpected error: {str(e)}"}), 500
+
 
 
 
@@ -77,7 +108,6 @@ def add_lesson_to_section():
     lesson_id = data.get('lesson_id')
     class_id = data.get('class_id')
 
-
     try:
         # Sprawdzenie czy taki wpis już istnieje
         existing = supabase.from_("section_lesson").select("*").eq("section_id", section_id).eq("lesson_id", lesson_id).execute()
@@ -89,7 +119,7 @@ def add_lesson_to_section():
         response = supabase.from_("section_lesson").insert({
             "section_id": section_id,
             "lesson_id": lesson_id,
-            "class": class_id,
+            "class_id": class_id,
             "created_at": datetime.utcnow().isoformat()
         }).execute()
 
