@@ -1,11 +1,13 @@
 from datetime import datetime
 
 from flask import Blueprint, request, jsonify
-from app.services.supabase_client import supabase
 from postgrest.exceptions import APIError
+
+from app.services.supabase_client import supabase
 from ..services.jwt_check import decode_jwt_token
 
 sections_bp = Blueprint('sections', __name__)
+
 
 @sections_bp.route('/create_section', methods=['POST'])
 def create_section():
@@ -17,7 +19,6 @@ def create_section():
 
     user_id = payload["sub"]
     data = request.get_json()
-
 
     try:
         section_insert_response = supabase.from_("sections").insert({
@@ -38,6 +39,7 @@ def create_section():
     except Exception as e:
         return jsonify({"error": f"Unexpected error: {str(e)}"}), 500
 
+
 @sections_bp.route('/get_sections/<class_id>', methods=['GET'])
 def get_sections(class_id):
     auth_header = request.headers.get('Authorization')
@@ -45,8 +47,6 @@ def get_sections(class_id):
 
     if not payload:
         return jsonify({"error": error_message}), status_code
-
-    print("dupa")
 
     try:
         # Pobierz sekcje dla klasy
@@ -74,24 +74,24 @@ def get_sections(class_id):
             .execute()
         tasks = tasks_resp.data
 
+        for section in sections:
+            section["lessons"] = []
+            section["tasks"] = []
+            for lesson in lessons:
+                if lesson["section_id"] == section['id']:
+                    section["lessons"].append(lesson)
 
+            for task in tasks:
+                if task["section_id"] == section['id']:
+                    section["tasks"].append(task)
 
-
-
-
-        return jsonify({
-            "sections": sections,
-            "lessons": lessons,
-            "tasks": tasks,
-        }), 200
+        return jsonify(sections), 200
 
     except APIError as e:
         return jsonify({"error": f"Supabase API error: {str(e)}"}), 500
 
     except Exception as e:
         return jsonify({"error": f"Unexpected error: {str(e)}"}), 500
-
-
 
 
 @sections_bp.route('/add_lesson_to_section', methods=['POST'])
@@ -110,7 +110,8 @@ def add_lesson_to_section():
 
     try:
         # Sprawdzenie czy taki wpis już istnieje
-        existing = supabase.from_("section_lesson").select("*").eq("section_id", section_id).eq("lesson_id", lesson_id).execute()
+        existing = supabase.from_("section_lesson").select("*").eq("section_id", section_id).eq("lesson_id",
+                                                                                                lesson_id).execute()
 
         if existing.data and len(existing.data) > 0:
             return jsonify({"error": "Ta lekcja już znajduje się w sekcji"}), 409
@@ -149,13 +150,11 @@ def add_task_to_section():
     task_id = data.get('task_id')
     class_id = data.get('class_id')
 
-
-
     try:
         # Sprawdzenie czy taki wpis już istnieje
-        existing = supabase.from_("section_task").select("*")\
-            .eq("section_id", section_id)\
-            .eq("task_id", task_id)\
+        existing = supabase.from_("section_task").select("*") \
+            .eq("section_id", section_id) \
+            .eq("task_id", task_id) \
             .execute()
 
         if existing.data and len(existing.data) > 0:
