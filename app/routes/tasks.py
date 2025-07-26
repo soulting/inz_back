@@ -47,8 +47,6 @@ def create_task():
     user_id = payload["sub"]
     data = request.get_json()
 
-    print(data)
-
 
     try:
         task_insert_response = supabase.from_("tasks").insert({
@@ -227,8 +225,6 @@ def get_task(task_id):
             return jsonify({"error": "Zadanie nie istnieje."}), 404
 
         task = task_response.data
-
-        print("asdfas",task_response.data)
 
         # Pobierz powiązane task_items
         task_items_response = supabase \
