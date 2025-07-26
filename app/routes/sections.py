@@ -18,7 +18,6 @@ def create_section():
     user_id = payload["sub"]
     data = request.get_json()
 
-    print(data)
 
     try:
         section_insert_response = supabase.from_("sections").insert({
@@ -44,7 +43,6 @@ def get_sections(class_id):
     auth_header = request.headers.get('Authorization')
     payload, error_message, status_code = decode_jwt_token(auth_header)
 
-    print(class_id)
 
     if not payload:
         return jsonify({"error": error_message}), status_code
