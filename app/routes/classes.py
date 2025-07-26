@@ -11,16 +11,15 @@ from ..services.jwt_check import decode_jwt_token
 
 classes_bp = Blueprint('classes', __name__)
 
+
 @classes_bp.route('/get_teacher_classes', methods=['GET'])
 def get_teacher_classes():
-
     auth_header = request.headers.get('Authorization')
 
     payload, error_message, status_code = decode_jwt_token(auth_header)
 
     if not payload:
         return jsonify({"error": error_message}), status_code
-
 
     try:
         # Pobierz wszystkie zadania dla danego poziomu
@@ -41,6 +40,7 @@ def get_teacher_classes():
     except Exception as e:
 
         return jsonify({"error": f"Unexpected error: {str(e)}"}), 500
+
 
 @classes_bp.route('/delete_teacher_class/<class_id>', methods=['DELETE'])
 def delete_teacher_class(class_id):
@@ -140,7 +140,6 @@ def get_student_classes():
         user_id = payload["sub"]
         classes_raw = response.data
 
-
         # Przetwórz klasy i dodaj flagę owned_by_user
         classes_with_flag = []
         for cls in classes_raw:
@@ -161,6 +160,7 @@ def get_student_classes():
 
     except Exception as e:
         return jsonify({"error": f"Unexpected error: {str(e)}"}), 500
+
 
 @classes_bp.route('/join_class', methods=['POST'])
 def join_class():
@@ -285,4 +285,3 @@ def leave_class(class_id):
         return jsonify({"error": f"Supabase API error: {str(e)}"}), 500
     except Exception as e:
         return jsonify({"error": f"Unexpected error: {str(e)}"}), 500
-
