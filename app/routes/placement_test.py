@@ -49,6 +49,7 @@ def get_test():
 
         return jsonify({"error": f"Unexpected error: {str(e)}"}), 500
 
+
 @placement_test_bp.route('/submit_test', methods=['POST'])
 def submit_test():
     auth_header = request.headers.get('Authorization')
@@ -60,8 +61,13 @@ def submit_test():
 
     user_id = payload["sub"]
     data = request.json
-    answers = data.get("answers",[]).get("answers",[])
 
+    # Poprawny dostęp do danych
+    answers_data = data.get("answers", {})
+    answers = answers_data.get("answers", [])
+
+    print("Received data:", data)
+    print("Answers length:", len(answers))
 
     try:
         for answer in answers:
@@ -77,18 +83,20 @@ def submit_test():
             }
 
             result = supabase.table("task_results").insert(task_result_insert).execute()
+
+            # Sprawdzenie czy insert się udał
+            if not result.data:
+                raise Exception("Failed to insert task result")
+
             task_result_id = result.data[0]["id"]
-
-
 
             task_items_result = answer.get("scoredAnswers", [])
             for sub in task_items_result:
-
                 task_items_data = list(sub.values())[0]
 
-                supabase.table("odpowiedz_podpunkt").insert({
-                    "wynik_zadania_id": task_result_id,
-                    "podpunkt_id": list(sub.keys())[0],
+                supabase.table("answer_items").insert({
+                    "task_result_id": task_result_id,
+                    "item_id": list(sub.keys())[0],
                     "point": task_items_data["point"],
                     "error": task_items_data["error"],
                     "uncertain": task_items_data["uncertain"],
@@ -99,8 +107,8 @@ def submit_test():
         return jsonify({"status": "success"}), 200
 
     except Exception as e:
+        print(f"Error: {str(e)}")
         return jsonify({"error": str(e)}), 500
-
 
 
 

@@ -164,7 +164,6 @@ def get_student_classes():
 
 @classes_bp.route('/join_class', methods=['POST'])
 def join_class():
-    # 🔐 Autoryzacja użytkownika przez JWT
     auth_header = request.headers.get('Authorization')
     payload, error_message, status_code = decode_jwt_token(auth_header)
 
@@ -177,7 +176,6 @@ def join_class():
     join_password = data.get("joinPassword")
 
     try:
-        # 🔎 Pobierz klasę po ID
         response = supabase.table("classes").select("*").eq("id", class_id).single().execute()
         class_data = response.data
 
@@ -190,7 +188,7 @@ def join_class():
             if not join_password:
                 return jsonify({"error": "Hasło jest wymagane"}), 400
             if not bcrypt.checkpw(join_password.encode("utf-8"), db_password.encode("utf-8")):
-                return jsonify({"error": "Nieprawidłowe hasło"}), 401
+                return jsonify({"error": "Nieprawidłowe hasło"}), 422
 
         # ➕ Dodaj wpis do tabeli user_classes
         supabase.table("user_classes").insert({
@@ -227,7 +225,6 @@ def join_class():
 
     except Exception as e:
         return jsonify({"error": f"Unexpected error: {str(e)}"}), 500
-
 
     except APIError as e:
         return jsonify({"error": f"Supabase API error: {str(e)}"}), 500
