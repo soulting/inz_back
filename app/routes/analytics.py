@@ -15,8 +15,6 @@ def should_send_lesson_metrics(time_on_page, char_count, lesson_level='A1', user
         'A1': 1.3,
         'A2': 1.4,
         'B1': 1.5,
-        'B2': 1.7,
-        'C1': 1.9,
     }
     lesson_factor = lesson_difficulty_factors.get(lesson_level.upper(), 1.5)
 
@@ -163,6 +161,17 @@ def get_class_analytics(class_id):
         return jsonify({"error": error_message}), status_code
 
     try:
+        # Najpierw sprawdź czy klasa istnieje
+        class_res = supabase \
+            .from_("classes") \
+            .select("id, name") \
+            .eq("id", class_id) \
+            .single() \
+            .execute()
+        class_info = class_res.data
+        if not class_info:
+            return jsonify({"error": "Nie znaleziono klasy"}), 404
+
         # Pobierz dane z Supabase
         analytics_res = supabase \
             .from_("lesson_analytics") \
@@ -171,8 +180,13 @@ def get_class_analytics(class_id):
             .execute()
         analytics_entries = analytics_res.data or []
 
+        # Jeśli brak danych, zwróć pustą strukturę
         if not analytics_entries:
-            return jsonify({"error": "Brak danych"}), 404
+            return jsonify({
+                "class_id": class_info["id"],
+                "class_name": class_info["name"],
+                "lessons": []
+            }), 200
 
         # Lekcje
         lesson_ids = list({e["lesson_id"] for e in analytics_entries})
@@ -191,17 +205,6 @@ def get_class_analytics(class_id):
             .in_("id", user_ids) \
             .execute()
         users = {u["id"]: u["name"] for u in users_res.data or []}
-
-        # Klasa
-        class_res = supabase \
-            .from_("classes") \
-            .select("id, name") \
-            .eq("id", class_id) \
-            .single() \
-            .execute()
-        class_info = class_res.data
-        if not class_info:
-            return jsonify({"error": "Nie znaleziono klasy"}), 404
 
         # Grupowanie po lekcji
         lessons_output = {}
@@ -276,7 +279,148 @@ def get_class_analytics(class_id):
         return jsonify({"error": f"Unexpected error: {str(e)}"}), 500
 
 
+@analytics_bp.route('/get_class_performance_analysis/<class_id>/<level>', methods=['GET'])
+def get_class_performance_analysis(class_id, level):
+    """
+    Analizuje wyniki testów klasy dla konkretnego poziomu trudności
+    Zwraca podkategorie posortowane od najgorszych do najlepszych
+    """
+    auth_header = request.headers.get('Authorization')
+    payload, error_message, status_code = decode_jwt_token(auth_header)
 
+    if not payload:
+        return jsonify({"error": error_message}), status_code
 
+    try:
+        # KROK 1: Pobierz wszystkich uczniów z klasy
+        class_users_res = supabase \
+            .from_("user_classes") \
+            .select("user_id") \
+            .eq("class_id", class_id) \
+            .execute()
 
+        user_ids = [cu["user_id"] for cu in (class_users_res.data or [])]
 
+        if not user_ids:
+            return jsonify({"error": "Brak uczniów w klasie lub klasa nie istnieje"}), 404
+
+        print(f"Znaleziono {len(user_ids)} uczniów w klasie {class_id} dla poziomu {level}")
+
+        # KROK 2: Pobierz wyniki testów dla poziomu
+        task_results_res = supabase \
+            .from_("task_results") \
+            .select("""
+                task_points, 
+                task_error, 
+                task_uncertainty,
+                difficulty,
+                user_id,
+                tasks!inner (
+                    main_category,
+                    sub_category,
+                    level
+                )
+            """) \
+            .in_("user_id", user_ids) \
+            .eq("tasks.level", level) \
+            .execute()
+
+        task_results = task_results_res.data or []
+
+        if not task_results:
+            return jsonify({
+                "error": f"Brak wyników testów dla poziomu {level} w tej klasie",
+                "class_id": class_id,
+                "level": level,
+                "subcategories": []
+            }), 404
+
+        print(f"Znaleziono {len(task_results)} wyników dla poziomu {level}")
+
+        # KROK 3: Pobierz informacje o klasie
+        class_res = supabase \
+            .from_("classes") \
+            .select("id, name") \
+            .eq("id", class_id) \
+            .single() \
+            .execute()
+
+        class_info = class_res.data
+        if not class_info:
+            return jsonify({"error": "Nie znaleziono klasy"}), 404
+
+        # KROK 4: Analiza po podkategoriach
+        subcategory_stats = {}
+
+        for result in task_results:
+            task_info = result.get("tasks", {})
+            main_category = task_info.get("main_category", "Nieznana kategoria")
+            sub_category = task_info.get("sub_category", "Nieznana podkategoria")
+
+            points = result.get("task_points", 0)
+            errors = result.get("task_error", 0)
+            uncertainty = result.get("task_uncertainty", 0)
+            difficulty = result.get("difficulty", 3)
+
+            total_possible = points + errors + uncertainty
+
+            # Klucz podkategorii
+            sub_key = f"{main_category}#{sub_category}"
+
+            if sub_key not in subcategory_stats:
+                subcategory_stats[sub_key] = {
+                    "main_category": main_category,
+                    "sub_category": sub_category,
+                    "total_points": 0,
+                    "total_possible": 0,
+                    "total_errors": 0,
+                    "total_uncertainty": 0,
+                    "total_difficulty": 0,
+                    "total_tasks": 0
+                }
+
+            subcategory_stats[sub_key]["total_points"] += points
+            subcategory_stats[sub_key]["total_possible"] += total_possible
+            subcategory_stats[sub_key]["total_errors"] += errors
+            subcategory_stats[sub_key]["total_uncertainty"] += uncertainty
+            subcategory_stats[sub_key]["total_difficulty"] += difficulty
+            subcategory_stats[sub_key]["total_tasks"] += 1
+
+        # KROK 5: Oblicz procenty i przygotuj wyniki
+        subcategories_analysis = []
+
+        for sub_key, stats in subcategory_stats.items():
+            score_percentage = (stats["total_points"] / stats["total_possible"] * 100) if stats[
+                                                                                              "total_possible"] > 0 else 0
+            error_rate = (stats["total_errors"] / stats["total_possible"] * 100) if stats["total_possible"] > 0 else 0
+            uncertainty_rate = (stats["total_uncertainty"] / stats["total_possible"] * 100) if stats[
+                                                                                                   "total_possible"] > 0 else 0
+            avg_difficulty = stats["total_difficulty"] / stats["total_tasks"] if stats["total_tasks"] > 0 else 0
+
+            subcategories_analysis.append({
+                "main_category": stats["main_category"],
+                "sub_category": stats["sub_category"],
+                "score_percentage": round(score_percentage, 1),
+                "error_rate": round(error_rate, 1),
+                "uncertainty_rate": round(uncertainty_rate, 1),
+                "difficulty": round(avg_difficulty, 1)
+            })
+
+        # KROK 6: Sortuj od najgorszych do najlepszych
+        subcategories_analysis.sort(key=lambda x: x["score_percentage"])
+
+        return jsonify({
+            "class_info": {
+                "class_id": class_info["id"],
+                "class_name": class_info["name"],
+                "level": level,
+                "total_students": len(user_ids),
+                "total_results_analyzed": len(task_results)
+            },
+            "subcategories": subcategories_analysis
+        }), 200
+
+    except APIError as e:
+        return jsonify({"error": f"Supabase API error: {str(e)}"}), 500
+    except Exception as e:
+        return jsonify({"error": f"Unexpected error: {str(e)}"}), 500
