@@ -45,6 +45,7 @@ def create_lesson_analytics():
 
     user_id = payload["sub"]
     data = request.get_json()
+    print(data)
 
     try:
         # Walidacja długości tekstu, czasu itp. (opcjonalne)
@@ -59,8 +60,7 @@ def create_lesson_analytics():
         #     return jsonify({"message": "Dane zostały pominięte — czas spoza zakresu."}), 200
 
         analytics_data = {
-            # "user_id": user_id,
-            "user_id": data.get("user_id"),
+            "user_id": user_id,
             "class_id": data.get("classId"),
             "section_id": data.get("sectionId"),
             "lesson_id": data.get("lessonId"),
@@ -73,7 +73,7 @@ def create_lesson_analytics():
             "level": data.get("level"),
             "main_category": data.get("main_category"),
             "sub_category": data.get("sub_category"),
-            "expected_time": data.get("expected_time")
+            "expected_time": expected_time
         }
 
         print(analytics_data)
@@ -156,6 +156,7 @@ from collections import defaultdict, Counter
 def get_class_analytics(class_id):
     auth_header = request.headers.get('Authorization')
     payload, error_message, status_code = decode_jwt_token(auth_header)
+
 
     if not payload:
         return jsonify({"error": error_message}), status_code
@@ -424,3 +425,214 @@ def get_class_performance_analysis(class_id, level):
         return jsonify({"error": f"Supabase API error: {str(e)}"}), 500
     except Exception as e:
         return jsonify({"error": f"Unexpected error: {str(e)}"}), 500
+
+
+@analytics_bp.route('/get_task_analytics/<class_id>', methods=['GET'])
+def get_task_analytics(class_id):
+    auth_header = request.headers.get('Authorization')
+    payload, error_message, status_code = decode_jwt_token(auth_header)
+
+    if not payload:
+        return jsonify({"error": error_message}), status_code
+
+    try:
+        # Pobierz wszystkie task_results dla tej klasy wraz z danymi ucznia i zadania
+        task_results_res = supabase \
+            .from_("task_results") \
+            .select("""
+                task_id,
+                user_id,
+                task_points,
+                task_error,
+                task_uncertainty,
+                time_spent,
+                difficulty,
+                completion_date,
+                users!inner (
+                    name
+                ),
+                tasks!inner (
+                    question,
+                    task_type,
+                    level,
+                    main_category,
+                    sub_category
+                )
+            """) \
+            .eq("class_id", class_id) \
+            .execute()
+
+        task_results = task_results_res.data or []
+
+        if not task_results:
+            return jsonify({
+                "class_id": class_id,
+                "total_tasks": 0,
+                "tasks": []
+            }), 200
+
+        # Grupowanie wyników po task_id
+        tasks_dict = {}
+
+        for result in task_results:
+            task_id = result.get("task_id")
+            user_info = result.get("users", {})
+            task_info = result.get("tasks", {})
+
+            # Jeśli pierwszy raz widzimy to zadanie, inicjalizuj
+            if task_id not in tasks_dict:
+                tasks_dict[task_id] = {
+                    "task_id": task_id,
+                    "question": task_info.get("question", ""),
+                    "main_category": task_info.get("main_category", ""),
+                    "sub_category": task_info.get("sub_category", "") or "",
+                    "task_type": task_info.get("task_type", ""),
+                    "level": task_info.get("level", ""),
+                    "students_count": 0,
+                    "task_points": 0,  # Suma punktów od wszystkich uczniów
+                    "task_error": 0,
+                    "task_uncertainty": 0,
+                    "time_spent": 0,
+                    "difficulty": 0,
+                    "difficulty_count": 0,
+                    "student_results": []  # Lista wszystkich odpowiedzi uczniów
+                }
+
+            # Dodaj wynik ucznia do listy
+            student_result = {
+                "user_id": result.get("user_id"),
+                "student_name": user_info.get("name", "Nieznany"),
+                "task_points": result.get("task_points", 0),
+                "task_error": result.get("task_error", 0),
+                "task_uncertainty": result.get("task_uncertainty", 0),
+                "time_spent": result.get("time_spent", 0),
+                "difficulty": result.get("difficulty"),
+                "completion_date": result.get("completion_date")
+            }
+
+            tasks_dict[task_id]["student_results"].append(student_result)
+
+            # Agregacja dla całego zadania
+            task_data = tasks_dict[task_id]
+            task_data["task_points"] += result.get("task_points", 0)  # Suma punktów od wszystkich uczniów
+            task_data["task_error"] += result.get("task_error", 0)
+            task_data["task_uncertainty"] += result.get("task_uncertainty", 0)
+            task_data["time_spent"] += result.get("time_spent", 0)
+
+            if result.get("difficulty") is not None:
+                task_data["difficulty"] += result.get("difficulty", 0)
+                task_data["difficulty_count"] += 1
+
+        # Finalizacja - oblicz średnie i uporządkuj
+        tasks_list = []
+        for task_data in tasks_dict.values():
+            # Oblicz liczbę unikalnych uczniów
+            task_data["students_count"] = len({sr["user_id"] for sr in task_data["student_results"]})
+
+            # Oblicz średnią trudność
+            if task_data["difficulty_count"] > 0:
+                task_data["difficulty"] = round(task_data["difficulty"] / task_data["difficulty_count"], 1)
+            else:
+                task_data["difficulty"] = 3.0
+
+            # Usuń pomocnicze pole
+            del task_data["difficulty_count"]
+
+            # Sortuj wyniki uczniów po imieniu
+            task_data["student_results"].sort(key=lambda x: x["student_name"])
+
+            tasks_list.append(task_data)
+
+        # Sortuj zadania
+        tasks_list.sort(key=lambda x: (x["main_category"], x["level"], x["question"]))
+
+        response = {
+            "class_id": class_id,
+            "total_tasks": len(tasks_list),
+            "tasks": tasks_list
+        }
+
+        return jsonify(response), 200
+
+    except APIError as e:
+        return jsonify({"error": f"Supabase API error: {str(e)}"}), 500
+    except Exception as e:
+        return jsonify({"error": f"Unexpected error: {str(e)}"}), 500
+
+
+
+@analytics_bp.route('/get_task_item_analytics/<class_id>/<task_id>', methods=['GET'])
+def get_task_item_analytics(task_id, class_id):
+    # Autoryzacja
+    auth_header = request.headers.get('Authorization')
+    payload, error_message, status_code = decode_jwt_token(auth_header)
+    if not payload:
+        return jsonify({"error": error_message}), status_code
+
+    try:
+        # 1. Pobierz wszystkie task_results dla danego task_id i klasy
+        task_results_res = supabase \
+            .from_("task_results") \
+            .select("id,user_id") \
+            .eq("task_id", task_id) \
+            .eq("class_id", class_id) \
+            .execute()
+
+        task_results = task_results_res.data or []
+        if not task_results:
+            return jsonify({
+                "task_id": task_id,
+                "class_id": class_id,
+                "items": []
+            }), 200
+
+        task_result_ids = [tr["id"] for tr in task_results]
+
+        # 2. Pobierz wszystkie podpunkty tego zadania
+        task_items_res = supabase \
+            .from_("task_items") \
+            .select("*") \
+            .eq("task_id", task_id) \
+            .execute()
+
+        task_items = task_items_res.data or []
+
+        # 3. Pobierz wszystkie odpowiedzi (answer_items) powiązane z wynikami dla tej klasy
+        answer_items_res = supabase \
+            .from_("answer_items") \
+            .select("*") \
+            .in_("task_result_id", task_result_ids) \
+            .execute()
+
+        answer_items = answer_items_res.data or []
+
+        # 4. Agregacja wyników dla każdego podpunktu
+        items_stats = []
+        for item in task_items:
+            item_id = item["id"]
+            answers_for_item = [a for a in answer_items if a["item_id"] == item_id]
+
+            stats = {
+                "item_id": item_id,
+                "template": item["template"],
+                "bonus_information": item["bonus_information"],
+                "correct_answer": item["correct_answer"],
+                "total_answers": len(answers_for_item),
+                "correct": sum(a["point"] for a in answers_for_item),
+                "incorrect": sum(a["error"] for a in answers_for_item),
+                "uncertain": sum(a["uncertain"] for a in answers_for_item)
+            }
+            items_stats.append(stats)
+
+
+
+
+        print(items_stats)
+        return jsonify({
+            "task_id": task_id,
+            "class_id": class_id,
+            "items": items_stats
+        }), 200
+
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
