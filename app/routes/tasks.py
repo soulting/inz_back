@@ -302,6 +302,7 @@ def submit_single_task():
         task_result_insert = {
             "user_id": user_id,
             "task_id": data["taskId"],
+            "class_id": data["classId"],
             "task_points": data["taskPoints"],
             "task_error": data["taskError"],
             "task_uncertainty": data["taskUncertainty"],

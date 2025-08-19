@@ -99,8 +99,11 @@ def login():
     user_data = {
         "id": user["id"],
         "email": user["email"],
-        "name": user.get("name", ""),
-        "role":user["role"]
+        "name": user.get("name"),
+        "role":user["role"],
+        "profile_image": user.get("profile_image"),
+        "cookies": user.get("cookies"),
+        "notifications": user.get("notifications"),
     }
 
     return jsonify({"user": user_data, "token": token}), 200
