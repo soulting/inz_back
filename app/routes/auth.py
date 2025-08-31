@@ -118,25 +118,6 @@ def login():
 
     return jsonify({"success": True,"user": user_data, "token": token}), 200
 
-@auth_bp.route('/test', methods=['POST'])
-def test():
-    try:
-
-        success, message = send_activation_email("name", "andrzej_insadowski@onet.pl", "97128623-8913-4183-9f4a-7bc7bbf18e9a")
-        print(success, message)
-
-        return jsonify({
-            "message": "User registered successfully",
-        }), 201
-
-
-
-    except APIError as e:
-        return jsonify({"error": f"Supabase API error: {str(e)}"}), 500
-    except Exception as e:
-        print(e)
-        return jsonify({"error": f"Unexpected error: {str(e)}"}), 500
-
 
 @auth_bp.route('/activate/<user_id>', methods=['GET'])
 def activate_account(user_id):
@@ -173,5 +154,4 @@ def activate_account(user_id):
     except APIError as e:
         return jsonify({"error": f"Supabase API error: {str(e)}"}), 500
     except Exception as e:
-        print(e)
         return jsonify({"error": f"Unexpected error: {str(e)}"}), 500
