@@ -1,0 +1,229 @@
+<!-- templates/emails/welcome.html -->
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Witamy w Czas na niemiecki!</title>
+    <style>
+        /* Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333333;
+            background-color: #f8f9fa;
+        }
+
+        /* Main container */
+        .email-wrapper {
+            width: 100%;
+            background-color: #f8f9fa;
+            padding: 20px 0;
+        }
+
+        .email-container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+        }
+
+        /* Header */
+        .header {
+            background: linear-gradient(135deg, #0077b6 0%, #0096c7 100%);
+            padding: 40px 30px;
+            text-align: center;
+            color: white;
+        }
+
+        .header h1 {
+            font-size: 28px;
+            font-weight: 300;
+            margin-bottom: 8px;
+        }
+
+        .header p {
+            font-size: 16px;
+            opacity: 0.9;
+        }
+
+        /* Content */
+        .content {
+            padding: 40px 30px;
+            text-align: center;
+        }
+
+        .content h2 {
+            font-size: 24px;
+            color: #333;
+            margin-bottom: 20px;
+            font-weight: 500;
+        }
+
+        .content p {
+            font-size: 16px;
+            color: #666;
+            margin-bottom: 20px;
+            line-height: 1.7;
+        }
+
+        /* CTA Button */
+        .cta-container {
+            text-align: center;
+            margin: 35px 0;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 16px 32px;
+            background: linear-gradient(135deg, #0077b6 0%, #0096c7 100%);
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 16px;
+            transition: all 0.3s ease;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(0, 119, 182, 0.4);
+        }
+
+        /* Features list */
+        .features {
+            background-color: #f8f9fa;
+            border-radius: 8px;
+            padding: 25px;
+            margin: 30px 0;
+            text-align: left;
+        }
+
+        .feature-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 12px;
+        }
+
+        .feature-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .feature-icon {
+            margin-right: 12px;
+            font-size: 16px;
+            margin-top: 2px;
+        }
+
+        .feature-text {
+            color: #666;
+            font-size: 15px;
+        }
+
+        /* Footer */
+        .footer {
+            background-color: #f8f9fa;
+            padding: 30px;
+            text-align: center;
+            border-top: 1px solid #e9ecef;
+        }
+
+        .footer p {
+            color: #999;
+            font-size: 14px;
+            margin-bottom: 8px;
+        }
+
+        /* Responsive */
+        @media only screen and (max-width: 600px) {
+            .email-wrapper {
+                padding: 10px;
+            }
+
+            .email-container {
+                border-radius: 0;
+            }
+
+            .header,
+            .content {
+                padding: 30px 20px;
+            }
+
+            .header h1 {
+                font-size: 24px;
+            }
+
+            .content h2 {
+                font-size: 20px;
+            }
+
+            .cta-button {
+                padding: 14px 28px;
+                font-size: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="email-wrapper">
+        <div class="email-container">
+            <!-- Header -->
+            <div class="header">
+                <h1>🎉 Konto aktywowane!</h1>
+                <p>Witaj w <strong>Czas na niemiecki</strong></p>
+            </div>
+
+            <!-- Main Content -->
+            <div class="content">
+                <h2>Super, jesteś już z nami!</h2>
+
+                <p>Twoje konto na <strong>czasnaniemiecki.pl</strong> zostało pomyślnie aktywowane. Od teraz możesz w pełni korzystać z naszej platformy do nauki języka niemieckiego.</p>
+
+                <!-- Features -->
+                <div class="features">
+                    <div class="feature-item">
+                        <span class="feature-icon">📚</span>
+                        <span class="feature-text">Indywidualne notatki i materiały od nauczyciela</span>
+                    </div>
+                    <div class="feature-item">
+                        <span class="feature-icon">🎯</span>
+                        <span class="feature-text">Ćwiczenia dopasowane do Twojego poziomu</span>
+                    </div>
+                    <div class="feature-item">
+                        <span class="feature-icon">👥</span>
+                        <span class="feature-text">Możliwość pracy z nauczycielem i w grupie</span>
+                    </div>
+                    <div class="feature-item">
+                        <span class="feature-icon">📊</span>
+                        <span class="feature-text">Śledzenie postępów w nauce</span>
+                    </div>
+                </div>
+
+                <p>Powodzenia w nauce i pamiętaj – teraz jest <strong>Czas na niemiecki</strong>! 🚀</p>
+
+<!--                <div class="cta-container">-->
+<!--                    <a href="https://czasnaniemiecki.pl" class="cta-button">Przejdź do platformy</a>-->
+<!--                </div>-->
+
+                <p style="margin-top: 30px; color: #999; font-size: 15px;">
+                    Zespół <strong>Czas na niemiecki</strong>
+                </p>
+            </div>
+
+            <!-- Footer -->
+            <div class="footer">
+                <p>© 2025 <a href="https://czasnaniemiecki.pl" style="color:#999; text-decoration:none;">czasnaniemiecki.pl</a> – Wszystkie prawa zastrzeżone.</p>
+                <p>Ten email został wysłany automatycznie po aktywacji konta.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
