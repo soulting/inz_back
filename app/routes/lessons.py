@@ -1,5 +1,3 @@
-from datetime import datetime
-
 from flask import Blueprint, request, jsonify
 from app.services.supabase_client import supabase
 from postgrest.exceptions import APIError
@@ -7,7 +5,7 @@ from ..services.jwt_check import decode_jwt_token
 
 lessons_bp = Blueprint('lessons_bp', __name__)
 
-@lessons_bp.route('/get_teacher_lessons', methods=['GET'])
+@lessons_bp.route('/lessons', methods=['GET'])
 def get_teacher_lessons():
     auth_header = request.headers.get('Authorization')
     payload, error_message, status_code = decode_jwt_token(auth_header)
@@ -35,7 +33,7 @@ def get_teacher_lessons():
     except Exception as e:
         return jsonify({"error": f"Unexpected error: {str(e)}"}), 500
 
-@lessons_bp.route('/create_lesson', methods=['POST'])
+@lessons_bp.route('/lesson', methods=['POST'])
 def create_lesson():
     auth_header = request.headers.get('Authorization')
     payload, error_message, status_code = decode_jwt_token(auth_header)
@@ -75,7 +73,7 @@ def create_lesson():
     except Exception as e:
         return jsonify({"error": f"Unexpected error: {str(e)}"}), 500
 
-@lessons_bp.route('/get_lesson/<lesson_id>', methods=['GET'])
+@lessons_bp.route('/lesson/<lesson_id>', methods=['GET'])
 def get_lesson(lesson_id):
 
     try:
@@ -99,7 +97,7 @@ def get_lesson(lesson_id):
     except Exception as e:
         return jsonify({"error": f"Unexpected error: {str(e)}"}), 500
 
-@lessons_bp.route('/delete_teacher_lesson/<lesson_id>', methods=['DELETE'])
+@lessons_bp.route('/lesson/<lesson_id>', methods=['DELETE'])
 def delete_teacher_lesson(lesson_id):
     auth_header = request.headers.get('Authorization')
     payload, error_message, status_code = decode_jwt_token(auth_header)
@@ -137,8 +135,7 @@ def delete_teacher_lesson(lesson_id):
     except Exception as e:
         return jsonify({"error": f"Unexpected error: {str(e)}"}), 500
 
-
-@lessons_bp.route('/update_lesson/<lesson_id>', methods=['PUT'])
+@lessons_bp.route('/lesson/<lesson_id>', methods=['PUT'])
 def update_lesson(lesson_id):
     auth_header = request.headers.get('Authorization')
     payload, error_message, status_code = decode_jwt_token(auth_header)

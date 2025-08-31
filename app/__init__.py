@@ -14,6 +14,8 @@ def create_app():
     from .routes.tasks import tasks_bp
     from .routes.lessons import lessons_bp
     from .routes.sections import sections_bp
+    from .routes.analytics import analytics_bp
+    from .routes.settings import settings_bp
 
     app.register_blueprint(auth_bp, url_prefix="/auth")
     app.register_blueprint(placement_test_bp, url_prefix="/placement_test")
@@ -21,5 +23,7 @@ def create_app():
     app.register_blueprint(tasks_bp, url_prefix="/tasks")
     app.register_blueprint(lessons_bp, url_prefix="/lessons")
     app.register_blueprint(sections_bp, url_prefix="/sections")
+    app.register_blueprint(analytics_bp, url_prefix="/analytics")
+    app.register_blueprint(settings_bp, url_prefix="/settings")
 
     return app

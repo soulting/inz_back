@@ -11,16 +11,15 @@ from ..services.jwt_check import decode_jwt_token
 
 classes_bp = Blueprint('classes', __name__)
 
-@classes_bp.route('/get_teacher_classes', methods=['GET'])
-def get_teacher_classes():
 
+@classes_bp.route('/teacher_classes', methods=['GET'])
+def get_teacher_classes():
     auth_header = request.headers.get('Authorization')
 
     payload, error_message, status_code = decode_jwt_token(auth_header)
 
     if not payload:
         return jsonify({"error": error_message}), status_code
-
 
     try:
         # Pobierz wszystkie zadania dla danego poziomu
@@ -42,7 +41,8 @@ def get_teacher_classes():
 
         return jsonify({"error": f"Unexpected error: {str(e)}"}), 500
 
-@classes_bp.route('/delete_teacher_class/<class_id>', methods=['DELETE'])
+
+@classes_bp.route('/class/<class_id>', methods=['DELETE'])
 def delete_teacher_class(class_id):
     auth_header = request.headers.get('Authorization')
     payload, error_message, status_code = decode_jwt_token(auth_header)
@@ -81,7 +81,7 @@ def delete_teacher_class(class_id):
         return jsonify({"error": f"Unexpected error: {str(e)}"}), 500
 
 
-@classes_bp.route('/create_teacher_class', methods=['POST'])
+@classes_bp.route('/class', methods=['POST'])
 def create_class():
     auth_header = request.headers.get('Authorization')
     payload, error_message, status_code = decode_jwt_token(auth_header)
@@ -114,7 +114,7 @@ def create_class():
         return jsonify({"error": f"Unexpected error: {str(e)}"}), 500
 
 
-@classes_bp.route('/get_student_classes', methods=['GET'])
+@classes_bp.route('/student_classes', methods=['GET'])
 def get_student_classes():
     auth_header = request.headers.get('Authorization')
 
@@ -140,7 +140,6 @@ def get_student_classes():
         user_id = payload["sub"]
         classes_raw = response.data
 
-
         # Przetwórz klasy i dodaj flagę owned_by_user
         classes_with_flag = []
         for cls in classes_raw:
@@ -162,9 +161,9 @@ def get_student_classes():
     except Exception as e:
         return jsonify({"error": f"Unexpected error: {str(e)}"}), 500
 
+
 @classes_bp.route('/join_class', methods=['POST'])
 def join_class():
-    # 🔐 Autoryzacja użytkownika przez JWT
     auth_header = request.headers.get('Authorization')
     payload, error_message, status_code = decode_jwt_token(auth_header)
 
@@ -177,7 +176,6 @@ def join_class():
     join_password = data.get("joinPassword")
 
     try:
-        # 🔎 Pobierz klasę po ID
         response = supabase.table("classes").select("*").eq("id", class_id).single().execute()
         class_data = response.data
 
@@ -190,7 +188,7 @@ def join_class():
             if not join_password:
                 return jsonify({"error": "Hasło jest wymagane"}), 400
             if not bcrypt.checkpw(join_password.encode("utf-8"), db_password.encode("utf-8")):
-                return jsonify({"error": "Nieprawidłowe hasło"}), 401
+                return jsonify({"error": "Nieprawidłowe hasło"}), 422
 
         # ➕ Dodaj wpis do tabeli user_classes
         supabase.table("user_classes").insert({
@@ -227,7 +225,6 @@ def join_class():
 
     except Exception as e:
         return jsonify({"error": f"Unexpected error: {str(e)}"}), 500
-
 
     except APIError as e:
         return jsonify({"error": f"Supabase API error: {str(e)}"}), 500
@@ -285,4 +282,3 @@ def leave_class(class_id):
         return jsonify({"error": f"Supabase API error: {str(e)}"}), 500
     except Exception as e:
         return jsonify({"error": f"Unexpected error: {str(e)}"}), 500
-

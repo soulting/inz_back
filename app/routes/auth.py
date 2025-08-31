@@ -4,9 +4,10 @@ import datetime
 import os
 
 import bcrypt
-from flask import Blueprint, request, jsonify
+from flask import Blueprint, request, jsonify, render_template
 from app.services.supabase_client import supabase
 from postgrest.exceptions import APIError
+from app.services.mail_service import send_activation_email, send_welcome_email
 
 auth_bp = Blueprint('auth', __name__)
 
@@ -44,12 +45,20 @@ def register():
         password_hash = bcrypt.hashpw(password.encode("utf-8"), bcrypt.gensalt()).decode("utf-8")
 
         # Dodanie użytkownika
-        supabase.table("users").insert({
+        new_user = supabase.table("users").insert({
             "email": email,
             "password_hash": password_hash,
             "name": name,
             "role": role,
         }).execute()
+
+        success, message = send_activation_email(name, email, new_user.data[0]['id'])
+
+        if not success:
+            return jsonify({
+                "error": "User created but activation email could not be sent",
+                "details": message
+            }), 500
 
         return jsonify({
             "message": "User registered successfully",
@@ -63,6 +72,7 @@ def register():
     except APIError as e:
         return jsonify({"error": f"Supabase API error: {str(e)}"}), 500
     except Exception as e:
+        print(e)
         return jsonify({"error": f"Unexpected error: {str(e)}"}), 500
 
 @auth_bp.route('/login', methods=['POST'])
@@ -76,7 +86,7 @@ def login():
         return jsonify({"error": "Email and password are required"}), 400
 
     try:
-        response = supabase.from_("users").select("*").eq("email", email).single().execute()
+        response = supabase.from_("users").select("*").eq("email", email).eq("is_active", True).single().execute()
         user = response.data
     except APIError as e:
         return jsonify({"error": "User not found"}), 404
@@ -99,8 +109,69 @@ def login():
     user_data = {
         "id": user["id"],
         "email": user["email"],
-        "name": user.get("name", ""),
-        "role":user["role"]
+        "name": user.get("name"),
+        "role":user["role"],
+        "profile_image": user.get("profile_image"),
+        "cookies": user.get("cookies"),
+        "notifications": user.get("notifications"),
     }
 
-    return jsonify({"user": user_data, "token": token}), 200
+    return jsonify({"success": True,"user": user_data, "token": token}), 200
+
+@auth_bp.route('/test', methods=['POST'])
+def test():
+    try:
+
+        success, message = send_activation_email("name", "andrzej_insadowski@onet.pl", "97128623-8913-4183-9f4a-7bc7bbf18e9a")
+        print(success, message)
+
+        return jsonify({
+            "message": "User registered successfully",
+        }), 201
+
+
+
+    except APIError as e:
+        return jsonify({"error": f"Supabase API error: {str(e)}"}), 500
+    except Exception as e:
+        print(e)
+        return jsonify({"error": f"Unexpected error: {str(e)}"}), 500
+
+
+@auth_bp.route('/activate/<user_id>', methods=['GET'])
+def activate_account(user_id):
+    try:
+        # Pobierz usera
+        user_resp = (
+            supabase.table("users")
+            .select("is_active")
+            .eq("id", user_id)
+            .single()
+            .execute()
+        )
+
+        if not user_resp.data:
+            return jsonify({"error": "User not found"}), 404
+
+        if user_resp.data.get("is_active"):
+            return render_template("emails/already_active.html")
+
+        # Aktualizacja konta
+        response = (
+            supabase.table("users")
+            .update({"is_active": True})
+            .eq("id", user_id)
+            .execute()
+        )
+
+        if not response.data:
+            return jsonify({"error": "Activation failed"}), 500
+
+
+        return render_template("emails/welcome_message.html")
+
+    except APIError as e:
+        return jsonify({"error": f"Supabase API error: {str(e)}"}), 500
+    except Exception as e:
+        print(e)
+        return jsonify({"error": f"Unexpected error: {str(e)}"}), 500
