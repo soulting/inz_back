@@ -22,7 +22,6 @@ def get_teacher_classes():
         return jsonify({"error": error_message}), status_code
 
     try:
-        # Pobierz wszystkie zadania dla danego poziomu
         classes_response = supabase \
             .from_("classes") \
             .select("*") \
@@ -41,7 +40,6 @@ def get_teacher_classes():
 
         return jsonify({"error": f"Unexpected error: {str(e)}"}), 500
 
-
 @classes_bp.route('/class/<class_id>', methods=['DELETE'])
 def delete_teacher_class(class_id):
     auth_header = request.headers.get('Authorization')
@@ -53,7 +51,6 @@ def delete_teacher_class(class_id):
     owner_id = payload["sub"]
 
     try:
-        # Sprawdź, czy klasa istnieje i należy do właściciela
         class_response = supabase \
             .from_("classes") \
             .select("*") \
@@ -65,7 +62,6 @@ def delete_teacher_class(class_id):
         if not class_response.data:
             return jsonify({"error": "Klasa nie istnieje lub brak dostępu"}), 404
 
-        # Usuń klasę
         supabase \
             .from_("classes") \
             .delete() \
@@ -79,7 +75,6 @@ def delete_teacher_class(class_id):
         return jsonify({"error": f"Supabase API error: {str(e)}"}), 500
     except Exception as e:
         return jsonify({"error": f"Unexpected error: {str(e)}"}), 500
-
 
 @classes_bp.route('/class', methods=['POST'])
 def create_class():
@@ -113,7 +108,6 @@ def create_class():
     except Exception as e:
         return jsonify({"error": f"Unexpected error: {str(e)}"}), 500
 
-
 @classes_bp.route('/student_classes', methods=['GET'])
 def get_student_classes():
     auth_header = request.headers.get('Authorization')
@@ -124,7 +118,6 @@ def get_student_classes():
         return jsonify({"error": error_message}), status_code
 
     try:
-        # Pobierz wszystkie klasy z relacją user_classes
         response = supabase \
             .from_("classes") \
             .select("""
@@ -140,7 +133,6 @@ def get_student_classes():
         user_id = payload["sub"]
         classes_raw = response.data
 
-        # Przetwórz klasy i dodaj flagę owned_by_user
         classes_with_flag = []
         for cls in classes_raw:
             owned_by_user = any(uc["user_id"] == user_id for uc in cls.get("user_classes", []))
@@ -160,7 +152,6 @@ def get_student_classes():
 
     except Exception as e:
         return jsonify({"error": f"Unexpected error: {str(e)}"}), 500
-
 
 @classes_bp.route('/join_class', methods=['POST'])
 def join_class():
@@ -182,7 +173,6 @@ def join_class():
         if not class_data:
             return jsonify({"error": "Nie znaleziono klasy"}), 404
 
-        # 🔐 Sprawdź hasło jeśli jest wymagane
         db_password = class_data.get("password")
         if db_password:
             if not join_password:
@@ -190,13 +180,11 @@ def join_class():
             if not bcrypt.checkpw(join_password.encode("utf-8"), db_password.encode("utf-8")):
                 return jsonify({"error": "Nieprawidłowe hasło"}), 422
 
-        # ➕ Dodaj wpis do tabeli user_classes
         supabase.table("user_classes").insert({
             "user_id": user_id,
             "class_id": class_id,
         }).execute()
 
-        # 🔁 Zwróć zaktualizowaną listę klas z flagą `owned_by_user`
         result = supabase \
             .from_("classes") \
             .select("""
@@ -231,10 +219,8 @@ def join_class():
     except Exception as e:
         return jsonify({"error": f"Unexpected error: {str(e)}"}), 500
 
-
 @classes_bp.route('/leave_class/<class_id>', methods=['DELETE'])
 def leave_class(class_id):
-    # 🔐 Autoryzacja użytkownika przez JWT
     auth_header = request.headers.get('Authorization')
     payload, error_message, status_code = decode_jwt_token(auth_header)
 
@@ -244,14 +230,12 @@ def leave_class(class_id):
     user_id = payload["sub"]
 
     try:
-        # 🗑️ Usuń wpis z tabeli user_classes
         supabase.table("user_classes") \
             .delete() \
             .eq("user_id", user_id) \
             .eq("class_id", class_id) \
             .execute()
 
-        # 🔁 Zwróć zaktualizowaną listę klas z flagą `owned_by_user`
         result = supabase \
             .from_("classes") \
             .select("""

@@ -109,7 +109,6 @@ def get_task(task_id):
 
         task = task_response.data
 
-        # Pobierz powiązane task_items
         task_items_response = supabase \
             .from_("task_items") \
             .select("*") \
@@ -118,7 +117,6 @@ def get_task(task_id):
 
         task_items = task_items_response.data or []
 
-        # Dołącz task_items do obiektu zadania
         task["task_items"] = task_items
 
         return jsonify(task)
@@ -141,7 +139,6 @@ def delete_teacher_task(task_id):
     owner_id = payload["sub"]
 
     try:
-        # Sprawdź, czy zadanie istnieje i należy do właściciela
         task_response = supabase \
             .from_("tasks") \
             .select("*") \
@@ -153,7 +150,6 @@ def delete_teacher_task(task_id):
         if not task_response.data:
             return jsonify({"error": "Zadanie nie istnieje lub brak dostępu"}), 404
 
-        # Usuń zadanie
         supabase \
             .from_("tasks") \
             .delete() \
@@ -259,7 +255,6 @@ def submit_single_task():
     data = request.get_json()
 
     try:
-        # Sprawdź czy wszystkie wymagane pola są obecne
         required_fields = ['taskId', 'classId', 'scoredAnswers', 'taskPoints', 'taskError',
                            'taskUncertainty', 'difficulty', 'timeSpent', 'completionDate']
 
@@ -269,7 +264,6 @@ def submit_single_task():
 
         print(f"Otrzymano dane zadania: taskId={data['taskId']}, classId={data['classId']}")
 
-        # Sprawdź czy zadanie istnieje
         task_response = supabase \
             .from_("tasks") \
             .select("*") \
@@ -280,7 +274,6 @@ def submit_single_task():
         if not task_response.data:
             return jsonify({"error": "Zadanie nie istnieje"}), 404
 
-        # Sprawdź czy już istnieje wynik dla tego zadania od tego użytkownika
         existing_result = supabase \
             .table("task_results") \
             .select("id") \
@@ -288,7 +281,6 @@ def submit_single_task():
             .eq("task_id", data["taskId"]) \
             .execute()
 
-        # Jeśli istnieje, usuń stary wynik
         if existing_result.data:
             print(f"Usuwam stary wynik dla zadania {data['taskId']}")
             supabase \
@@ -298,11 +290,11 @@ def submit_single_task():
                 .eq("task_id", data["taskId"]) \
                 .execute()
 
-        # Zapisz nowy wynik zadania (używając tej samej struktury co placement test)
         task_result_insert = {
             "user_id": user_id,
             "task_id": data["taskId"],
             "class_id": data["classId"],
+            "section_id": data["sectionId"],
             "task_points": data["taskPoints"],
             "task_error": data["taskError"],
             "task_uncertainty": data["taskUncertainty"],
@@ -319,14 +311,12 @@ def submit_single_task():
         task_result_id = result.data[0]["id"]
         print(f"Zapisano wynik zadania z ID: {task_result_id}")
 
-        # Zapisz szczegółowe odpowiedzi (używając tej samej struktury co placement test)
         if data["scoredAnswers"]:
             for answer_obj in data["scoredAnswers"]:
-                # Każdy element to obiekt typu {task_item_id: {point, error, uncertain, myAnswer, correctAnswer}}
                 for task_item_id, answer_data in answer_obj.items():
                     supabase.table("answer_items").insert({
                         "task_result_id": task_result_id,
-                        "item_id": task_item_id,  # Usunąłem int() - UUID zostaje jako string
+                        "item_id": task_item_id,
                         "point": answer_data["point"],
                         "error": answer_data["error"],
                         "uncertain": answer_data["uncertain"],
@@ -336,7 +326,6 @@ def submit_single_task():
 
         print(f"Zapisano {len(data['scoredAnswers'])} szczegółowych odpowiedzi")
 
-        # Oblicz podstawowe statystyki
         total_items = len(data["scoredAnswers"])
         percentage = round((data["taskPoints"] / total_items) * 100, 2) if total_items > 0 else 0
 
@@ -354,6 +343,82 @@ def submit_single_task():
                 "time_spent": data["timeSpent"]
             }
         }), 201
+
+    except APIError as e:
+        print(f"Supabase API error: {str(e)}")
+        return jsonify({"error": f"Supabase API error: {str(e)}"}), 500
+
+    except Exception as e:
+        print(f"Unexpected error: {str(e)}")
+        return jsonify({"error": f"Unexpected error: {str(e)}"}), 500
+
+
+@tasks_bp.route('/student_section_task_results/<section_id>', methods=['GET'])
+def student_section_task_results(section_id):
+    auth_header = request.headers.get('Authorization')
+    payload, error_message, status_code = decode_jwt_token(auth_header)
+
+    if not payload:
+        return jsonify({"error": error_message}), status_code
+
+    user_id = payload["sub"]
+
+    try:
+        task_response = supabase \
+            .from_("task_results") \
+            .select("*") \
+            .eq("user_id", user_id) \
+            .eq("section_id", section_id) \
+            .execute()
+
+        if task_response.data is None:
+            return jsonify({"error": "Zadanie nie istnieje."}), 404
+
+        task_items = task_response.data
+
+        return jsonify({"task_items": task_items})
+
+    except APIError as e:
+        print(f"Supabase API error: {str(e)}")
+        return jsonify({"error": f"Supabase API error: {str(e)}"}), 500
+
+    except Exception as e:
+        print(f"Unexpected error: {str(e)}")
+        return jsonify({"error": f"Unexpected error: {str(e)}"}), 500
+
+
+@tasks_bp.route('/singular_task_result/<result_id>', methods=['GET'])
+def singular_task_result(result_id):
+    auth_header = request.headers.get('Authorization')
+    payload, error_message, status_code = decode_jwt_token(auth_header)
+
+    if not payload:
+        return jsonify({"error": error_message}), status_code
+
+    user_id = payload["sub"]
+
+    try:
+        task_response = supabase \
+            .from_("task_results") \
+            .select("*") \
+            .eq("id", result_id) \
+            .execute()
+
+        if task_response.data is None:
+            return jsonify({"error": "Zadanie nie istnieje."}), 404
+
+
+        task_answers = supabase \
+            .from_("answer_items") \
+            .select("*") \
+            .eq("task_result_id", result_id) \
+            .execute()
+
+        task_items = task_response.data[0]
+        task_items["answers"] = task_answers.data
+
+
+        return jsonify({"task_items": task_items})
 
     except APIError as e:
         print(f"Supabase API error: {str(e)}")

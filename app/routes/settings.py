@@ -22,7 +22,6 @@ def update_username():
     username = data['username']
 
     try:
-        # Sprawdź czy nazwa użytkownika już istnieje (opcjonalnie)
         existing_user = supabase \
             .from_("users") \
             .select("id") \
@@ -33,7 +32,6 @@ def update_username():
         if existing_user.data:
             return jsonify({"success": False, "error": "Ta nazwa użytkownika jest już zajęta"}), 400
 
-        # Aktualizuj nazwę użytkownika
         response = supabase \
             .from_("users") \
             .update({"name": username}) \
@@ -66,7 +64,6 @@ def change_password():
     new_password = data['newPassword']
 
     try:
-        # Pobierz aktualne hasło użytkownika
         user_response = supabase \
             .from_("users") \
             .select("password_hash") \
@@ -77,14 +74,11 @@ def change_password():
         if not user_response.data:
             return jsonify({"success": False, "error": "Nie znaleziono użytkownika"}), 404
 
-        # Sprawdź stare hasło
         if not bcrypt.checkpw(old_password.encode('utf-8'), user_response.data['password_hash'].encode('utf-8')):
             return jsonify({"success": False, "error": "Nieprawidłowe aktualne hasło"}), 400
 
-        # Zahashuj nowe hasło
         new_password_hash = bcrypt.hashpw(new_password.encode('utf-8'), bcrypt.gensalt()).decode('utf-8')
 
-        # Aktualizuj hasło w bazie
         response = supabase \
             .from_("users") \
             .update({"password_hash": new_password_hash}) \
@@ -115,13 +109,11 @@ def change_profile_picture():
     file = request.files['profile_picture']
 
     try:
-        # rozszerzenie i content-type
         file_extension = file.filename.rsplit('.', 1)[1].lower() if '.' in file.filename else 'jpg'
         file_name = f"avatar_{user_id}_{uuid.uuid4().hex}.{file_extension}"
         bucket_name = "inzyniekrka-images"
         content_type = file.mimetype or "image/jpeg"
 
-        # odczyt bajtów
         file_bytes = file.read()
 
         response = supabase.storage.from_(bucket_name).upload(
@@ -134,14 +126,11 @@ def change_profile_picture():
             }
         )
 
-        # jeśli coś poszło nie tak
         if isinstance(response, dict) and response.get("error"):
             return jsonify({"success": False, "error": response["error"]["message"]}), 500
 
-        # pobierz publiczny URL (supabase-py zwraca dict -> ['data']['publicUrl'])
         public_result = supabase.storage.from_(bucket_name).get_public_url(file_name)
 
-        # update w tabeli users
         supabase.from_("users").update({"profile_image": public_result}).eq("id", user_id).execute()
 
         return jsonify({

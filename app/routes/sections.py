@@ -49,7 +49,6 @@ def get_sections(class_id):
         return jsonify({"error": error_message}), status_code
 
     try:
-        # Pobierz sekcje dla klasy
         sections_resp = supabase \
             .from_("sections") \
             .select("*") \
@@ -58,7 +57,6 @@ def get_sections(class_id):
             .execute()
         sections = sections_resp.data
 
-        # Pobierz lekcje powiązane z klasą
         lessons_resp = supabase \
             .from_("section_lesson") \
             .select("*, lessons(*)") \
@@ -66,7 +64,6 @@ def get_sections(class_id):
             .execute()
         lessons = lessons_resp.data
 
-        # Pobierz zadania powiązane z klasą
         tasks_resp = supabase \
             .from_("section_task") \
             .select("*, tasks(*)") \
@@ -109,14 +106,12 @@ def add_lesson_to_section():
     class_id = data.get('class_id')
 
     try:
-        # Sprawdzenie czy taki wpis już istnieje
         existing = supabase.from_("section_lesson").select("*").eq("section_id", section_id).eq("lesson_id",
                                                                                                 lesson_id).execute()
 
         if existing.data and len(existing.data) > 0:
             return jsonify({"error": "Ta lekcja już znajduje się w sekcji"}), 409
 
-        # Dodanie wpisu jeśli nie istnieje
         response = supabase.from_("section_lesson").insert({
             "section_id": section_id,
             "lesson_id": lesson_id,
@@ -151,7 +146,6 @@ def add_task_to_section():
     class_id = data.get('class_id')
 
     try:
-        # Sprawdzenie czy taki wpis już istnieje
         existing = supabase.from_("section_task").select("*") \
             .eq("section_id", section_id) \
             .eq("task_id", task_id) \
@@ -160,7 +154,7 @@ def add_task_to_section():
         if existing.data and len(existing.data) > 0:
             return jsonify({"error": "To zadanie już znajduje się w sekcji"}), 409
 
-        # Dodanie wpisu jeśli nie istnieje
+
         response = supabase.from_("section_task").insert({
             "section_id": section_id,
             "task_id": task_id,

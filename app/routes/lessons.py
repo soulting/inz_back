@@ -16,7 +16,6 @@ def get_teacher_lessons():
     user_id = payload["sub"]
 
     try:
-        # Pobierz wszystkie lekcje użytkownika (author_id)
         lessons_response = supabase \
             .from_("lessons") \
             .select("*") \
@@ -108,7 +107,6 @@ def delete_teacher_lesson(lesson_id):
     owner_id = payload["sub"]
 
     try:
-        # Sprawdź, czy lekcja istnieje i należy do właściciela
         lesson_response = supabase \
             .from_("lessons") \
             .select("*") \
@@ -120,7 +118,6 @@ def delete_teacher_lesson(lesson_id):
         if not lesson_response.data:
             return jsonify({"error": "Lekcja nie istnieje lub brak dostępu"}), 404
 
-        # Usuń lekcję
         supabase \
             .from_("lessons") \
             .delete() \
@@ -147,7 +144,6 @@ def update_lesson(lesson_id):
     data = request.get_json()
 
     try:
-        # Sprawdzenie, czy lekcja należy do użytkownika
         lesson_response = supabase \
             .from_("lessons") \
             .select("id") \
@@ -159,7 +155,6 @@ def update_lesson(lesson_id):
         if not lesson_response.data:
             return jsonify({"error": "Lekcja nie istnieje lub brak dostępu"}), 404
 
-        # Aktualizacja lekcji
         lesson_update = {
             "title": data["title"],
             "description": data.get("description", ""),

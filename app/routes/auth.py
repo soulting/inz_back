@@ -2,17 +2,21 @@ import time
 import jwt
 import datetime
 import os
+import secrets
+import string
+from werkzeug.security import generate_password_hash
 
 import bcrypt
 from flask import Blueprint, request, jsonify, render_template
+
+from app.services.exceptions import EmailAlreadyTakenError
 from app.services.supabase_client import supabase
 from postgrest.exceptions import APIError
-from app.services.mail_service import send_activation_email, send_welcome_email
+from app.services.mail_service import send_activation_email, send_password_reset_email
 
 auth_bp = Blueprint('auth', __name__)
 
 SECRET_KEY = os.getenv("SECRET_KEY")
-
 
 @auth_bp.route('/register', methods=['POST'])
 def register():
@@ -20,13 +24,13 @@ def register():
     email = data.get("email")
     password = data.get("password")
     name = data.get("name")
-    role = data.get("role", "student")  # domyślnie student
+    role = data.get("role", "student")
 
     if not email or not password or not name:
         return jsonify({"error": "Email, password and name are required"}), 400
 
     try:
-        # Sprawdzenie, czy email lub name już istnieje
+
         existing_user = (
             supabase.table("users")
             .select("id, email, name")
@@ -41,10 +45,10 @@ def register():
                 if user["name"] == name:
                     return jsonify({"error": "username taken"}), 409
 
-        # Haszowanie hasła
+
         password_hash = bcrypt.hashpw(password.encode("utf-8"), bcrypt.gensalt()).decode("utf-8")
 
-        # Dodanie użytkownika
+
         new_user = supabase.table("users").insert({
             "email": email,
             "password_hash": password_hash,
@@ -94,7 +98,7 @@ def login():
     if not bcrypt.checkpw(password.encode('utf-8'), user["password_hash"].encode('utf-8')):
         return jsonify({"error": "Invalid password"}), 401
 
-    # expiration = datetime.datetime.utcnow() + datetime.timedelta(hours=24)
+
     expiration = datetime.datetime.utcnow() + datetime.timedelta(hours=24)
     token = jwt.encode(
         {
@@ -118,11 +122,9 @@ def login():
 
     return jsonify({"success": True,"user": user_data, "token": token}), 200
 
-
 @auth_bp.route('/activate/<user_id>', methods=['GET'])
 def activate_account(user_id):
     try:
-        # Pobierz usera
         user_resp = (
             supabase.table("users")
             .select("is_active")
@@ -137,7 +139,6 @@ def activate_account(user_id):
         if user_resp.data.get("is_active"):
             return render_template("emails/already_active.html")
 
-        # Aktualizacja konta
         response = (
             supabase.table("users")
             .update({"is_active": True})
@@ -155,3 +156,80 @@ def activate_account(user_id):
         return jsonify({"error": f"Supabase API error: {str(e)}"}), 500
     except Exception as e:
         return jsonify({"error": f"Unexpected error: {str(e)}"}), 500
+
+@auth_bp.route('/reset-password', methods=['POST'])
+def send_reset_mail():
+    data = request.json
+    email = data.get("email")
+
+    if not email:
+        return jsonify({"error": "Email is required"}), 400
+
+    try:
+        user = supabase.from_("users").select("*").eq("email", email).eq("is_active", True).single().execute()
+        success, message = send_password_reset_email(email, user.data['id'])
+
+        if not success:
+            return jsonify({
+                "error": "Password reset failed",
+                "details": message
+            }), 500
+
+        return jsonify({
+            "message": "Password reset successfully",
+        }), 201
+
+
+    except APIError as e:
+        return jsonify({"error": f"Supabase API error: {str(e)}"}), 500
+    except Exception as e:
+        return jsonify({"error": f"Unexpected error: {str(e)}"}), 500
+
+@auth_bp.route('/reset-password/<user_id>', methods=['GET'])
+def reset_password(user_id):
+    try:
+        user_resp = (
+            supabase.table("users")
+            .select("id, email, name")
+            .eq("id", user_id)
+            .single()
+            .execute()
+        )
+
+        if not user_resp.data:
+            return jsonify({"error": "User not found"}), 404
+
+        def generate_secure_password(length=12):
+            characters = string.ascii_letters + string.digits + "!@#$%^&*"
+            return ''.join(secrets.choice(characters) for _ in range(length))
+
+        new_password = generate_secure_password()
+        hashed_password  = bcrypt.hashpw(new_password.encode("utf-8"), bcrypt.gensalt()).decode("utf-8")
+
+        response = (
+            supabase.table("users")
+            .update({"password_hash": hashed_password})
+            .eq("id", user_id)
+            .execute()
+        )
+
+        if not response.data:
+            return jsonify({"error": "Password reset failed"}), 500
+
+        return render_template(
+            "emails/password_reset_success.html",
+            name=user_resp.data.get("name", ""),
+            email=user_resp.data.get("email", ""),
+            new_password=new_password
+        )
+
+    except APIError as e:
+        return jsonify({"error": f"Supabase API error: {str(e)}"}), 500
+    except Exception as e:
+        return jsonify({"error": f"Unexpected error: {str(e)}"}), 500
+
+
+
+
+
+

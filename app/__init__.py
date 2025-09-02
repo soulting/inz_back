@@ -1,10 +1,11 @@
 from flask import Flask
 from dotenv import load_dotenv
 from flask_cors import CORS
+from app.services.error_handler import register_error_handlers
 import os
 
 def create_app():
-    load_dotenv()  # wczytaj zmienne środowiskowe
+    load_dotenv()
     app = Flask(__name__)
     CORS(app)
 
@@ -25,5 +26,7 @@ def create_app():
     app.register_blueprint(sections_bp, url_prefix="/sections")
     app.register_blueprint(analytics_bp, url_prefix="/analytics")
     app.register_blueprint(settings_bp, url_prefix="/settings")
+
+    register_error_handlers(app)
 
     return app
