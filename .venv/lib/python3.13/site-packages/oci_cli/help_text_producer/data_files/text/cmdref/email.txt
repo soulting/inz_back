@@ -1,0 +1,92 @@
+email
+*****
+
+
+Description
+===========
+
+Email Delivery Service CLI
+
+
+Available Commands
+==================
+
+* configuration
+
+  * get-email
+
+* dkim
+
+  * create
+
+  * delete
+
+  * get
+
+  * list
+
+  * update
+
+* domain
+
+  * change-compartment
+
+  * create
+
+  * delete
+
+  * get
+
+  * list
+
+  * update
+
+* email-return-path
+
+  * create
+
+  * delete
+
+  * get
+
+  * list
+
+  * update
+
+* sender
+
+  * change-compartment
+
+  * create
+
+  * delete
+
+  * get
+
+  * list
+
+  * update
+
+* suppression
+
+  * create
+
+  * delete
+
+  * get
+
+  * list
+
+* work-request
+
+  * get
+
+  * list
+
+* work-request-error
+
+  * list
+
+* work-request-log
+
+  * list

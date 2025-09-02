@@ -1,0 +1,160 @@
+kms
+***
+
+
+Description
+===========
+
+Key Management
+
+
+Available Commands
+==================
+
+* crypto
+
+  * decrypt
+
+  * encrypt
+
+  * generate-data-encryption-key
+
+  * key
+
+    * export
+
+  * signed-data
+
+    * sign
+
+  * verified-data
+
+    * verify
+
+* ekm
+
+  * ekms-private-endpoint
+
+    * create
+
+    * delete
+
+    * get
+
+    * list
+
+    * update
+
+* kms-hsm-cluster
+
+  * hsm-cluster
+
+    * cancel-hsm-cluster-deletion
+
+    * change-compartment
+
+    * create
+
+    * download-certificate-signing-request
+
+    * get
+
+    * get-pre-co-user-credentials
+
+    * list
+
+    * schedule-hsm-cluster-deletion
+
+    * update
+
+    * upload-partition-certificates
+
+  * hsm-partition
+
+    * get
+
+    * list
+
+* management
+
+  * key
+
+    * backup
+
+    * cancel-deletion
+
+    * change-compartment
+
+    * create
+
+    * disable
+
+    * enable
+
+    * get
+
+    * import
+
+    * list
+
+    * restore
+
+    * restore-from-file
+
+    * schedule-deletion
+
+    * update
+
+  * key-version
+
+    * cancel-deletion
+
+    * create
+
+    * get
+
+    * import
+
+    * list
+
+    * schedule-deletion
+
+  * replication-status-details
+
+    * get-replication-status
+
+  * vault
+
+    * backup
+
+    * cancel-deletion
+
+    * change-compartment
+
+    * create
+
+    * create-vault-replica
+
+    * delete-vault-replica
+
+    * get
+
+    * list
+
+    * list-vault-replicas
+
+    * restore
+
+    * restore-from-file
+
+    * schedule-deletion
+
+    * update
+
+    * usage
+
+      * get
+
+  * wrapping-key
+
+    * get

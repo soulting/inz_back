@@ -1,0 +1,108 @@
+function GetOciTopLevelCommand_artifacts() {
+    return 'artifacts'
+}
+
+function GetOciSubcommands_artifacts() {
+    $ociSubcommands = @{
+        'artifacts' = 'container generic repository'
+        'artifacts container' = 'configuration image image-signature repository'
+        'artifacts container configuration' = 'get update'
+        'artifacts container image' = 'delete get list remove-version restore update'
+        'artifacts container image-signature' = 'create delete get get-verify list sign-upload update'
+        'artifacts container repository' = 'change-compartment create delete get list update'
+        'artifacts generic' = 'artifact'
+        'artifacts generic artifact' = 'delete delete-by-path download download-by-path get get-by-path list update update-by-path upload-by-path'
+        'artifacts repository' = 'change-compartment create create-generic-repository delete get list update update-generic-repository'
+    }
+    return $ociSubcommands
+}
+
+function GetOciCommandsToLongParams_artifacts() {
+    $ociCommandsToLongParams = @{
+        'artifacts container configuration get' = 'compartment-id from-json help'
+        'artifacts container configuration update' = 'compartment-id from-json help if-match is-repository-created-on-first-push'
+        'artifacts container image delete' = 'force from-json help if-match image-id max-wait-seconds wait-for-state wait-interval-seconds'
+        'artifacts container image get' = 'from-json help image-id'
+        'artifacts container image list' = 'all compartment-id compartment-id-in-subtree display-name from-json help image-id image-version is-versioned lifecycle-state limit page page-size repository-id repository-name sort-by sort-order'
+        'artifacts container image remove-version' = 'from-json help if-match image-id image-version'
+        'artifacts container image restore' = 'from-json help if-match image-id image-version max-wait-seconds wait-for-state wait-interval-seconds'
+        'artifacts container image update' = 'defined-tags force freeform-tags from-json help if-match image-id max-wait-seconds wait-for-state wait-interval-seconds'
+        'artifacts container image-signature create' = 'compartment-id defined-tags freeform-tags from-json help if-match image-id kms-key-id kms-key-version-id max-wait-seconds message signature signing-algorithm wait-for-state wait-interval-seconds'
+        'artifacts container image-signature delete' = 'force from-json help if-match image-signature-id max-wait-seconds wait-for-state wait-interval-seconds'
+        'artifacts container image-signature get' = 'from-json help image-signature-id'
+        'artifacts container image-signature get-verify' = 'compartment-id compartment-id-in-subtree from-json help image-digest repo-name trusted-keys'
+        'artifacts container image-signature list' = 'all compartment-id compartment-id-in-subtree display-name from-json help image-digest image-id kms-key-id kms-key-version-id limit page page-size repository-id repository-name signing-algorithm sort-by sort-order'
+        'artifacts container image-signature sign-upload' = 'compartment-id description from-json help image-id kms-key-id kms-key-version-id metadata signing-algorithm'
+        'artifacts container image-signature update' = 'defined-tags force freeform-tags from-json help if-match image-signature-id max-wait-seconds wait-for-state wait-interval-seconds'
+        'artifacts container repository change-compartment' = 'compartment-id from-json help if-match repository-id'
+        'artifacts container repository create' = 'compartment-id defined-tags display-name freeform-tags from-json help is-immutable is-public max-wait-seconds readme wait-for-state wait-interval-seconds'
+        'artifacts container repository delete' = 'force from-json help if-match max-wait-seconds repository-id wait-for-state wait-interval-seconds'
+        'artifacts container repository get' = 'from-json help repository-id'
+        'artifacts container repository list' = 'all compartment-id compartment-id-in-subtree display-name from-json help is-public lifecycle-state limit page page-size repository-id sort-by sort-order'
+        'artifacts container repository update' = 'defined-tags force freeform-tags from-json help if-match is-immutable is-public readme repository-id'
+        'artifacts generic artifact delete' = 'artifact-id force from-json help if-match max-wait-seconds wait-for-state wait-interval-seconds'
+        'artifacts generic artifact delete-by-path' = 'artifact-path artifact-version force from-json help if-match repository-id'
+        'artifacts generic artifact download' = 'artifact-id file from-json help'
+        'artifacts generic artifact download-by-path' = 'artifact-path artifact-version file from-json help repository-id'
+        'artifacts generic artifact get' = 'artifact-id from-json help'
+        'artifacts generic artifact get-by-path' = 'artifact-path artifact-version from-json help repository-id'
+        'artifacts generic artifact list' = 'all artifact-path artifact-version compartment-id display-name from-json help id lifecycle-state limit page page-size repository-id sha256 sort-by sort-order'
+        'artifacts generic artifact update' = 'artifact-id defined-tags force freeform-tags from-json help if-match max-wait-seconds wait-for-state wait-interval-seconds'
+        'artifacts generic artifact update-by-path' = 'artifact-path artifact-version defined-tags force freeform-tags from-json help if-match repository-id'
+        'artifacts generic artifact upload-by-path' = 'artifact-path artifact-version content-body from-json help if-match repository-id'
+        'artifacts repository change-compartment' = 'compartment-id from-json help if-match repository-id'
+        'artifacts repository create' = 'compartment-id defined-tags description display-name freeform-tags from-json help is-immutable max-wait-seconds repository-type wait-for-state wait-interval-seconds'
+        'artifacts repository create-generic-repository' = 'compartment-id defined-tags description display-name freeform-tags from-json help is-immutable max-wait-seconds wait-for-state wait-interval-seconds'
+        'artifacts repository delete' = 'force from-json help if-match max-wait-seconds repository-id wait-for-state wait-interval-seconds'
+        'artifacts repository get' = 'from-json help repository-id'
+        'artifacts repository list' = 'all compartment-id display-name from-json help id is-immutable lifecycle-state limit page page-size sort-by sort-order'
+        'artifacts repository update' = 'defined-tags description display-name force freeform-tags from-json help if-match max-wait-seconds repository-id repository-type wait-for-state wait-interval-seconds'
+        'artifacts repository update-generic-repository' = 'defined-tags description display-name force freeform-tags from-json help if-match max-wait-seconds repository-id wait-for-state wait-interval-seconds'
+    }
+    return $ociCommandsToLongParams
+}
+
+function GetOciCommandsToShortParams_artifacts() {
+    $ociCommandsToShortParams = @{
+        'artifacts container configuration get' = '? c h'
+        'artifacts container configuration update' = '? c h'
+        'artifacts container image delete' = '? h'
+        'artifacts container image get' = '? h'
+        'artifacts container image list' = '? c h'
+        'artifacts container image remove-version' = '? h'
+        'artifacts container image restore' = '? h'
+        'artifacts container image update' = '? h'
+        'artifacts container image-signature create' = '? c h'
+        'artifacts container image-signature delete' = '? h'
+        'artifacts container image-signature get' = '? h'
+        'artifacts container image-signature get-verify' = '? c h'
+        'artifacts container image-signature list' = '? c h'
+        'artifacts container image-signature sign-upload' = '? c h'
+        'artifacts container image-signature update' = '? h'
+        'artifacts container repository change-compartment' = '? c h'
+        'artifacts container repository create' = '? c h'
+        'artifacts container repository delete' = '? h'
+        'artifacts container repository get' = '? h'
+        'artifacts container repository list' = '? c h'
+        'artifacts container repository update' = '? h'
+        'artifacts generic artifact delete' = '? h'
+        'artifacts generic artifact delete-by-path' = '? h'
+        'artifacts generic artifact download' = '? h'
+        'artifacts generic artifact download-by-path' = '? h'
+        'artifacts generic artifact get' = '? h'
+        'artifacts generic artifact get-by-path' = '? h'
+        'artifacts generic artifact list' = '? c h'
+        'artifacts generic artifact update' = '? h'
+        'artifacts generic artifact update-by-path' = '? h'
+        'artifacts generic artifact upload-by-path' = '? h'
+        'artifacts repository change-compartment' = '? c h'
+        'artifacts repository create' = '? c h'
+        'artifacts repository create-generic-repository' = '? c h'
+        'artifacts repository delete' = '? h'
+        'artifacts repository get' = '? h'
+        'artifacts repository list' = '? c h'
+        'artifacts repository update' = '? h'
+        'artifacts repository update-generic-repository' = '? h'
+    }
+    return $ociCommandsToShortParams
+}

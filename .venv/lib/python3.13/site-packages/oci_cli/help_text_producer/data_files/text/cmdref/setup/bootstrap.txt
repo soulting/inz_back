@@ -1,0 +1,55 @@
+"bootstrap"
+***********
+
+* Description
+
+* Usage
+
+* Optional Parameters
+
+* Global Parameters
+
+
+Description
+===========
+
+Provides an interactive process to create a CLI config file using
+username / password based login through a browser. Also handles
+generating API keys and uploading them to your Oracle Cloud
+Infrastructure account.
+
+Note that port 8181 must be available in order for this command to
+complete properly.
+
+
+Usage
+=====
+
+   oci setup bootstrap [OPTIONS]
+
+
+Optional Parameters
+===================
+
+--config-location [text]
+
+Path to the config for the new profile
+
+--profile-name [text]
+
+Name of the profile you are creating
+
+
+Global Parameters
+=================
+
+Use "oci --help" for help on global parameters.
+
+"--auth-purpose", "--auth", "--cert-bundle", "--cli-auto-prompt", "--
+cli-rc-file", "--config-file", "--connection-timeout", "--debug", "--
+defaults-file", "--endpoint", "--generate-full-command-json-input", "
+--generate-param-json-input", "--help", "--latest-version", "--max-
+retries", "--no-retry", "--opc-client-request-id", "--opc-request-id",
+"--output", "--profile", "--proxy", "--query", "--raw-output", "--
+read-timeout", "--realm-specific-endpoint", "--region", "--release-
+info", "--request-id", "--version", "-?", "-d", "-h", "-i", "-v"

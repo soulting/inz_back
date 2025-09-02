@@ -1,0 +1,14 @@
+job-executions-status
+*********************
+
+
+Description
+===========
+
+A collection of job execution status summary objects.
+
+
+Available Commands
+==================
+
+* summarize

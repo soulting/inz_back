@@ -1,0 +1,14 @@
+bot
+***
+
+
+Description
+===========
+
+Metadata for a Bot resource.
+
+
+Available Commands
+==================
+
+* import

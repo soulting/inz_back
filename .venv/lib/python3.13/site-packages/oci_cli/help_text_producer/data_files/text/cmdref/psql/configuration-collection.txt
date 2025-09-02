@@ -1,0 +1,15 @@
+configuration-collection
+************************
+
+
+Description
+===========
+
+Results of a configuration search. Contains the ConfigurationSummary
+items and other information, such as metadata.
+
+
+Available Commands
+==================
+
+* list-configurations

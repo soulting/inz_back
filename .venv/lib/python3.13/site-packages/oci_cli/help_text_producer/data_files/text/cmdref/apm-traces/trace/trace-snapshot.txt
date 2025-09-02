@@ -1,0 +1,14 @@
+trace-snapshot
+**************
+
+
+Description
+===========
+
+Definition of a trace snapshot object.
+
+
+Available Commands
+==================
+
+* get

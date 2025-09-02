@@ -1,0 +1,115 @@
+"generate-playlist"
+*******************
+
+* Description
+
+* Usage
+
+* Required Parameters
+
+* Optional Parameters
+
+* Global Parameters
+
+* Example using required parameter
+
+
+Description
+===========
+
+Gets the playlist content for the specified Packaging Configuration
+and Media Asset combination. This API call is made using the
+MediaStreamsClient, which requires the endpoint to be set with the
+value of the distribution channel domain name (for example, https://e
+xample_channel.dc.mediaservices.example_region.oci.oraclecloud.com) to
+generate a session token or playlist for a media asset registered in
+this distribution channel.
+
+
+Usage
+=====
+
+   oci media-services media-stream stream-distribution-channel generate-playlist [OPTIONS]
+
+
+Required Parameters
+===================
+
+--file [filename]
+
+The name of the file that will receive the response data, or ‘-‘ to
+write to STDOUT.
+
+--media-asset-id [text]
+
+Unique MediaAsset identifier.
+
+--stream-packaging-config-id [text]
+
+Unique Stream Packaging Configuration identifier.
+
+
+Optional Parameters
+===================
+
+--from-json [text]
+
+Provide input to this command as a JSON document from a file using the
+file://path-to/file syntax.
+
+The "--generate-full-command-json-input" option can be used to
+generate a sample json file to be used with this command option. The
+key names are pre-populated and match the command option names
+(converted to camelCase format, e.g. compartment-id –> compartmentId),
+while the values of the keys need to be populated by the user before
+using the sample file as an input to this command. For any command
+option that accepts multiple values, the value of the key can be a
+JSON array.
+
+Options can still be provided on the command line. If an option exists
+in both the JSON document and the command line then the command line
+specified value will be used.
+
+For examples on usage of this option, please see our “using CLI with
+advanced JSON options” link: https://docs.cloud.oracle.com/iaas/Conte
+nt/API/SDKDocs/cliusing.htm#AdvancedJSONOptions
+
+--token [text]
+
+Streaming session authentication token.
+
+
+Global Parameters
+=================
+
+Use "oci --help" for help on global parameters.
+
+"--auth-purpose", "--auth", "--cert-bundle", "--cli-auto-prompt", "--
+cli-rc-file", "--config-file", "--connection-timeout", "--debug", "--
+defaults-file", "--endpoint", "--generate-full-command-json-input", "
+--generate-param-json-input", "--help", "--latest-version", "--max-
+retries", "--no-retry", "--opc-client-request-id", "--opc-request-id",
+"--output", "--profile", "--proxy", "--query", "--raw-output", "--
+read-timeout", "--realm-specific-endpoint", "--region", "--release-
+info", "--request-id", "--version", "-?", "-d", "-h", "-i", "-v"
+
+
+Example using required parameter
+================================
+
+Copy the following CLI commands into a file named example.sh. Run the
+command by typing “bash example.sh” and replacing the example
+parameters with your own.
+
+Please note this sample will only work in the POSIX-compliant bash-
+like shell. You need to set up the OCI configuration and appropriate
+security policies before trying the examples.
+
+       export compartment_id=<substitute-value-of-compartment_id> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/media-services/media-asset/create.html#cmdoption-compartment-id
+       export type=<substitute-value-of-type> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/media-services/media-asset/create.html#cmdoption-type
+       export file=<substitute-value-of-file> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/media-services/media-stream/stream-distribution-channel/generate-playlist.html#cmdoption-file
+       export stream_packaging_config_id=<substitute-value-of-stream_packaging_config_id> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/media-services/media-stream/stream-distribution-channel/generate-playlist.html#cmdoption-stream-packaging-config-id
+
+       media_asset_id=$(oci media-services media-asset create --compartment-id $compartment_id --type $type --query data.id --raw-output)
+
+       oci media-services media-stream stream-distribution-channel generate-playlist --file $file --media-asset-id $media_asset_id --stream-packaging-config-id $stream_packaging_config_id

@@ -1,0 +1,16 @@
+associated-resource-summary
+***************************
+
+
+Description
+===========
+
+Summary information for a resource associated with a stack or job.
+
+
+Available Commands
+==================
+
+* list-job-associated-resources
+
+* list-stack-associated-resources

@@ -1,0 +1,170 @@
+api-gateway
+***********
+
+
+Description
+===========
+
+CLI for the API Gateway service. Use this CLI to manage gateways,
+deployments, and related items. For more information, see Overview of
+API Gateway.
+
+
+Available Commands
+==================
+
+* api
+
+  * add-lock
+
+  * change-compartment
+
+  * content
+
+    * get
+
+  * create
+
+  * delete
+
+  * deployment-specification
+
+    * get
+
+  * get
+
+  * list
+
+  * remove-lock
+
+  * update
+
+  * validations
+
+    * get
+
+* certificate
+
+  * add-lock
+
+  * change-compartment
+
+  * create
+
+  * delete
+
+  * get
+
+  * list
+
+  * remove-lock
+
+  * update
+
+* deployment
+
+  * add-lock
+
+  * change-compartment
+
+  * create
+
+  * delete
+
+  * get
+
+  * list
+
+  * remove-lock
+
+  * update
+
+* gateway
+
+  * add-lock
+
+  * change-compartment
+
+  * create
+
+  * delete
+
+  * get
+
+  * list
+
+  * remove-lock
+
+  * update
+
+* sdk
+
+  * add-lock
+
+  * create
+
+  * delete
+
+  * get
+
+  * list
+
+  * remove-lock
+
+  * update
+
+* sdk-language-type
+
+  * list
+
+* subscriber
+
+  * add-lock
+
+  * change-compartment
+
+  * create
+
+  * delete
+
+  * get
+
+  * list
+
+  * remove-lock
+
+  * update
+
+* usage-plan
+
+  * add-lock
+
+  * change-compartment
+
+  * create
+
+  * delete
+
+  * get
+
+  * list
+
+  * remove-lock
+
+  * update
+
+* work-request
+
+  * cancel
+
+  * get
+
+  * list
+
+* work-request-error
+
+  * list
+
+* work-request-log
+
+  * list

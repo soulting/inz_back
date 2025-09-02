@@ -1,0 +1,82 @@
+service-catalog
+***************
+
+
+Description
+===========
+
+Manage solutions in Oracle Cloud Infrastructure Service Catalog.
+
+
+Available Commands
+==================
+
+* application-summary
+
+  * list-applications
+
+* private-application
+
+  * change-compartment
+
+  * create
+
+  * create-with-stack-package
+
+  * delete
+
+  * download-logo
+
+  * get
+
+  * list
+
+  * update
+
+* private-application-package
+
+  * download-config
+
+  * get
+
+  * list
+
+* service-catalog
+
+  * change-compartment
+
+  * create
+
+  * delete
+
+  * get
+
+  * list
+
+  * update
+
+* service-catalog-association
+
+  * bulk-replace
+
+  * create
+
+  * delete
+
+  * get
+
+  * list
+
+* work-request
+
+  * get
+
+  * list
+
+* work-request-error
+
+  * list
+
+* work-request-log-entry
+
+  * list-work-request-logs

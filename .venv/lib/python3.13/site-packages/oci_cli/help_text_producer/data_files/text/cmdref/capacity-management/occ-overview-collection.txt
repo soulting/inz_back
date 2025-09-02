@@ -1,0 +1,16 @@
+occ-overview-collection
+***********************
+
+
+Description
+===========
+
+A list representing response of overview API.
+
+
+Available Commands
+==================
+
+* list
+
+* list-internal-namespace-occ-overviews

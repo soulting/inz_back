@@ -1,0 +1,45 @@
+limits
+******
+
+
+Description
+===========
+
+CLI that interact with the resource limits of a specific resource
+type.
+
+
+Available Commands
+==================
+
+* definition
+
+  * list
+
+* quota
+
+  * addlock
+
+  * create
+
+  * delete
+
+  * get
+
+  * list
+
+  * removelock
+
+  * update
+
+* resource-availability
+
+  * get
+
+* service
+
+  * list
+
+* value
+
+  * list

@@ -1,0 +1,15 @@
+occ-demand-signal-collection
+****************************
+
+
+Description
+===========
+
+Results of a occDemandSignal search. Contains both
+OccDemandSignalSummary items and other information, such as metadata.
+
+
+Available Commands
+==================
+
+* list-occ-demand-signals

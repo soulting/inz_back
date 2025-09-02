@@ -1,0 +1,15 @@
+system-minor-version
+********************
+
+
+Description
+===========
+
+Results of the System minor version lists. Contains
+SystemVersionMinorVersionSummary items.
+
+
+Available Commands
+==================
+
+* list

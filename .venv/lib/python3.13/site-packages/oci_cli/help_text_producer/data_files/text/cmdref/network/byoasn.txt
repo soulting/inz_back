@@ -1,0 +1,30 @@
+byoasn
+******
+
+
+Description
+===========
+
+Oracle offers the ability to Bring Your Own Autonomous System Number
+(BYOASN), importing AS Numbers you currently own to Oracle Cloud
+Infrastructure. A *Byoasn* resource is a record of the imported AS
+Number and also some associated metadata. The process used to Bring
+Your Own ASN is explained in the documentation.
+
+
+Available Commands
+==================
+
+* change-compartment
+
+* create
+
+* delete
+
+* get
+
+* list
+
+* update
+
+* validate

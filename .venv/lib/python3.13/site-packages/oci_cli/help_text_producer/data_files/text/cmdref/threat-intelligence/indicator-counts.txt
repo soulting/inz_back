@@ -1,0 +1,14 @@
+indicator-counts
+****************
+
+
+Description
+===========
+
+A list of indicator counts by indicator type.
+
+
+Available Commands
+==================
+
+* list-indicator-counts

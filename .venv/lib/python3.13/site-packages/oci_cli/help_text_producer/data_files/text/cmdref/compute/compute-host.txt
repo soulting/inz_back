@@ -1,0 +1,24 @@
+compute-host
+************
+
+
+Description
+===========
+
+The customer facing object includes host details.
+
+
+Available Commands
+==================
+
+* attach
+
+* change-compartment
+
+* detach
+
+* get
+
+* list
+
+* update

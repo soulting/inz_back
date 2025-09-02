@@ -1,0 +1,102 @@
+logging
+*******
+
+
+Description
+===========
+
+Use the Logging Management CLI to create, read, list, update, move and
+delete log groups, log objects, log saved searches, and agent
+configurations.
+
+For more information, see Logging Overview.
+
+
+Available Commands
+==================
+
+* agent-configuration
+
+  * change-compartment
+
+  * create
+
+  * create-log-configuration
+
+  * create-unified-agent-configuration-unified-agent-monitoring-
+    configuration-details
+
+  * delete
+
+  * get
+
+  * list
+
+  * update
+
+  * update-log-configuration
+
+  * update-unified-agent-configuration-unified-agent-monitoring-
+    configuration-details
+
+* log
+
+  * change-log-group
+
+  * create
+
+  * delete
+
+  * get
+
+  * list
+
+  * update
+
+* log-group
+
+  * change-compartment
+
+  * create
+
+  * delete
+
+  * get
+
+  * list
+
+  * update
+
+* log-saved-search
+
+  * change-compartment
+
+  * create
+
+  * delete
+
+  * get
+
+  * list
+
+  * update
+
+* service
+
+  * list
+
+* work-request
+
+  * delete
+
+  * get
+
+  * list
+
+* work-request-error
+
+  * list
+
+* work-request-log
+
+  * list

@@ -1,0 +1,94 @@
+software-source
+***************
+
+
+Description
+===========
+
+The object that defines a software source. A software source contains
+a collection of packages. For more information, see Managing Software
+Sources.
+
+
+Available Commands
+==================
+
+* add-packages
+
+* change-availability
+
+* change-compartment
+
+* create-custom-swsrc
+
+* create-entitlement
+
+* create-private-swsrc
+
+* create-third-party-swsrc
+
+* create-versioned-custom-swsrc
+
+* delete
+
+* generate-metadata
+
+* get
+
+* get-erratum
+
+* get-module-profile
+
+* get-module-stream
+
+* get-package-group
+
+* get-software-package
+
+* get-software-package-by-name
+
+* get-software-source-manifest
+
+* list
+
+* list-all-software-packages
+
+* list-available-software-packages
+
+* list-entitlements
+
+* list-errata
+
+* list-module-profiles
+
+* list-module-streams
+
+* list-package-groups
+
+* list-software-packages
+
+* list-software-source-vendors
+
+* list-software-sources-with-package
+
+* remove-packages
+
+* replace-packages
+
+* replicate-vendor-swsrc
+
+* search-module-streams
+
+* search-modules
+
+* search-package-groups
+
+* update-custom-swsrc
+
+* update-private-swsrc
+
+* update-software-source-manifest
+
+* update-third-party-swsrc
+
+* update-versioned-custom-swsrc

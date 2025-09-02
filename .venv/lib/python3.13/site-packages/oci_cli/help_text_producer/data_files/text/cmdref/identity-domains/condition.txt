@@ -1,0 +1,26 @@
+condition
+*********
+
+
+Description
+===========
+
+Condition resource. A unit that captures a condition.
+
+
+Available Commands
+==================
+
+* create
+
+* delete
+
+* get
+
+* list
+
+* patch
+
+* put
+
+* search

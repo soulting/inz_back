@@ -1,0 +1,14 @@
+create-refresh-activity-details
+*******************************
+
+
+Description
+===========
+
+The information about current refresh.
+
+
+Available Commands
+==================
+
+* create-refresh-activity

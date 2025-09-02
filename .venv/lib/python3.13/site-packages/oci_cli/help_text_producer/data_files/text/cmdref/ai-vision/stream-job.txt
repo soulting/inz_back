@@ -1,0 +1,30 @@
+stream-job
+**********
+
+
+Description
+===========
+
+Job details for a stream analysis.
+
+
+Available Commands
+==================
+
+* change-compartment
+
+* create
+
+* create-stream-job-object-storage-output-location
+
+* delete
+
+* get
+
+* start
+
+* stop
+
+* update
+
+* update-stream-job-object-storage-output-location

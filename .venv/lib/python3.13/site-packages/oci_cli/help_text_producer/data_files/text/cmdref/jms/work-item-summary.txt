@@ -1,0 +1,14 @@
+work-item-summary
+*****************
+
+
+Description
+===========
+
+Work item to complete a work request.
+
+
+Available Commands
+==================
+
+* list-work-items

@@ -1,0 +1,22 @@
+lockbox
+*******
+
+
+Description
+===========
+
+Description of Lockbox.
+
+
+Available Commands
+==================
+
+* change-compartment
+
+* create
+
+* delete
+
+* get
+
+* update

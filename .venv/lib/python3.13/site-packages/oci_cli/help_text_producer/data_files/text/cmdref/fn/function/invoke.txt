@@ -1,0 +1,140 @@
+"invoke"
+********
+
+* Description
+
+* Usage
+
+* Required Parameters
+
+* Optional Parameters
+
+* Global Parameters
+
+* Example using required parameter
+
+
+Description
+===========
+
+Invokes a function
+
+
+Usage
+=====
+
+   oci fn function invoke [OPTIONS]
+
+
+Required Parameters
+===================
+
+--body [text]
+
+The body of the function invocation. Note: The maximum size of the
+request is limited. This limit is currently 6MB and the endpoint will
+not accept requests that are bigger than this limit.
+
+--file [filename]
+
+The name of the file that will receive the response data, or ‘-‘ to
+write to STDOUT.
+
+--function-id [text]
+
+The OCID of this function.
+
+
+Optional Parameters
+===================
+
+--fn-intent [text]
+
+An optional intent header that indicates to the FDK the way the event
+should be interpreted. E.g. ‘httprequest’, ‘cloudevent’.
+
+Accepted values are:
+
+   cloudevent, httprequest
+
+--fn-invoke-type [text]
+
+Indicates whether Oracle Functions should execute the request and
+return the result (‘sync’) of the execution, or whether Oracle
+Functions should return as soon as processing has begun (‘detached’)
+and leave result handling to the function.
+
+Accepted values are:
+
+   detached, sync
+
+--from-json [text]
+
+Provide input to this command as a JSON document from a file using the
+file://path-to/file syntax.
+
+The "--generate-full-command-json-input" option can be used to
+generate a sample json file to be used with this command option. The
+key names are pre-populated and match the command option names
+(converted to camelCase format, e.g. compartment-id –> compartmentId),
+while the values of the keys need to be populated by the user before
+using the sample file as an input to this command. For any command
+option that accepts multiple values, the value of the key can be a
+JSON array.
+
+Options can still be provided on the command line. If an option exists
+in both the JSON document and the command line then the command line
+specified value will be used.
+
+For examples on usage of this option, please see our “using CLI with
+advanced JSON options” link: https://docs.cloud.oracle.com/iaas/Conte
+nt/API/SDKDocs/cliusing.htm#AdvancedJSONOptions
+
+--is-dry-run [boolean]
+
+Indicates that the request is a dry run, if set to “true”. A dry run
+request does not execute the function.
+
+
+Global Parameters
+=================
+
+Use "oci --help" for help on global parameters.
+
+"--auth-purpose", "--auth", "--cert-bundle", "--cli-auto-prompt", "--
+cli-rc-file", "--config-file", "--connection-timeout", "--debug", "--
+defaults-file", "--endpoint", "--generate-full-command-json-input", "
+--generate-param-json-input", "--help", "--latest-version", "--max-
+retries", "--no-retry", "--opc-client-request-id", "--opc-request-id",
+"--output", "--profile", "--proxy", "--query", "--raw-output", "--
+read-timeout", "--realm-specific-endpoint", "--region", "--release-
+info", "--request-id", "--version", "-?", "-d", "-h", "-i", "-v"
+
+
+Example using required parameter
+================================
+
+Copy and paste the following example into a JSON file, replacing the
+example parameters with your own.
+
+       oci fn application create --generate-param-json-input subnet-ids > subnet-ids.json
+
+Copy the following CLI commands into a file named example.sh. Run the
+command by typing “bash example.sh” and replacing the example
+parameters with your own.
+
+Please note this sample will only work in the POSIX-compliant bash-
+like shell. You need to set up the OCI configuration and appropriate
+security policies before trying the examples.
+
+       export compartment_id=<substitute-value-of-compartment_id> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/fn/application/create.html#cmdoption-compartment-id
+       export display_name=<substitute-value-of-display_name> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/fn/application/create.html#cmdoption-display-name
+       export image=<substitute-value-of-image> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/fn/function/create.html#cmdoption-image
+       export memory_in_mbs=<substitute-value-of-memory_in_mbs> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/fn/function/create.html#cmdoption-memory-in-mbs
+       export body=<substitute-value-of-body> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/fn/function/invoke.html#cmdoption-body
+
+       application_id=$(oci fn application create --compartment-id $compartment_id --display-name $display_name --subnet-ids file://subnet-ids.json --query data.id --raw-output)
+
+       function_id=$(oci fn function create --application-id $application_id --display-name $display_name --image $image --memory-in-mbs $memory_in_mbs --query data.id --raw-output)
+
+       oci fn function invoke --body $body --file $file --function-id $function_id

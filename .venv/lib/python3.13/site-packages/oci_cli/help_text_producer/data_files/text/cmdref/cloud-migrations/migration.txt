@@ -1,0 +1,29 @@
+migration
+*********
+
+
+Description
+===========
+
+A top-level container to track all aspects of a long-running migration
+workflow to OCI.
+
+
+Available Commands
+==================
+
+* change-compartment
+
+* create
+
+* delete
+
+* get
+
+* list
+
+* refresh
+
+* start-migration-replication
+
+* update

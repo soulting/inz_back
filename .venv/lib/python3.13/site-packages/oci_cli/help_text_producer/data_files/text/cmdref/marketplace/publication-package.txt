@@ -1,0 +1,16 @@
+publication-package
+*******************
+
+
+Description
+===========
+
+A base object for all types of publication packages.
+
+
+Available Commands
+==================
+
+* get
+
+* list

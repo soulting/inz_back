@@ -1,0 +1,124 @@
+fusion-apps
+***********
+
+
+Description
+===========
+
+Use the Fusion Applications Environment Management CLI to manage the
+environments where your Fusion Applications run. For more information,
+see the Fusion Applications Environment Management documentation.
+
+
+Available Commands
+==================
+
+* create-refresh-activity-details
+
+  * create-refresh-activity
+
+* data-masking-activity
+
+  * create
+
+  * get
+
+  * list
+
+* fusion-environment
+
+  * change-compartment
+
+  * create
+
+  * create-fusion-environment-admin-user
+
+  * delete
+
+  * delete-fusion-environment-admin-user
+
+  * generate-extract-details
+
+  * get
+
+  * initiate-extract
+
+  * list
+
+  * list-admin-users
+
+  * reset-fusion-environment-password
+
+  * update
+
+* fusion-environment-family
+
+  * change-compartment
+
+  * create
+
+  * delete
+
+  * get
+
+  * get-fusion-environment-family-subscription-detail
+
+  * list
+
+  * update
+
+* fusion-environment-family-limits-and-usage
+
+  * get
+
+* fusion-environment-status
+
+  * get
+
+* refresh-activity
+
+  * delete
+
+  * get
+
+  * list
+
+* scheduled-activity
+
+  * get
+
+  * list
+
+* service-attachment
+
+  * create
+
+  * delete
+
+  * get
+
+  * list
+
+  * verify
+
+* time-available-for-refresh
+
+  * list
+
+* update-refresh-activity-details
+
+  * update-refresh-activity
+
+* work-request
+
+  * get
+
+  * list
+
+* work-request-error
+
+  * list
+
+* work-request-log-entry
+
+  * list-work-request-logs

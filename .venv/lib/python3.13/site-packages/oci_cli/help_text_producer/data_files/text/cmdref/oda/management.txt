@@ -1,0 +1,224 @@
+management
+**********
+
+
+Description
+===========
+
+CLI to create and maintain Oracle Digital Assistant service instances.
+
+
+Available Commands
+==================
+
+* authentication-provider
+
+  * create
+
+  * delete
+
+  * get
+
+  * list
+
+  * update
+
+* bot
+
+  * import
+
+* channel
+
+  * create
+
+  * create-channel-create-android-channel-details
+
+  * create-channel-create-app-event-channel-details
+
+  * create-channel-create-application-channel-details
+
+  * create-channel-create-cortana-channel-details
+
+  * create-channel-create-facebook-channel-details
+
+  * create-channel-create-ios-channel-details
+
+  * create-channel-create-ms-teams-channel-details
+
+  * create-channel-create-oss-channel-details
+
+  * create-channel-create-osvc-channel-details
+
+  * create-channel-create-service-cloud-channel-details
+
+  * create-channel-create-slack-channel-details
+
+  * create-channel-create-twilio-channel-details
+
+  * create-channel-create-web-channel-details
+
+  * create-channel-create-webhook-channel-details
+
+  * delete
+
+  * get
+
+  * list
+
+  * rotate-channel-keys
+
+  * start
+
+  * stop
+
+  * update
+
+  * update-channel-update-android-channel-details
+
+  * update-channel-update-app-event-channel-details
+
+  * update-channel-update-application-channel-details
+
+  * update-channel-update-cortana-channel-details
+
+  * update-channel-update-facebook-channel-details
+
+  * update-channel-update-ios-channel-details
+
+  * update-channel-update-ms-teams-channel-details
+
+  * update-channel-update-oss-channel-details
+
+  * update-channel-update-osvc-channel-details
+
+  * update-channel-update-service-cloud-channel-details
+
+  * update-channel-update-slack-channel-details
+
+  * update-channel-update-twilio-channel-details
+
+  * update-channel-update-web-channel-details
+
+  * update-channel-update-webhook-channel-details
+
+* digital-assistant
+
+  * create
+
+  * create-digital-assistant-clone-digital-assistant-details
+
+  * create-digital-assistant-create-digital-assistant-version-details
+
+  * create-digital-assistant-create-new-digital-assistant-details
+
+  * create-digital-assistant-extend-digital-assistant-details
+
+  * delete
+
+  * get
+
+  * list
+
+  * publish
+
+  * update
+
+* digital-assistant-parameter
+
+  * configure
+
+  * get
+
+  * list
+
+  * update
+
+* oda-private-endpoint
+
+  * change-compartment
+
+  * create
+
+  * delete
+
+  * get
+
+  * list
+
+  * update
+
+* oda-private-endpoint-attachment
+
+  * create
+
+  * delete
+
+  * get
+
+  * list
+
+* oda-private-endpoint-scan-proxy
+
+  * create
+
+  * delete
+
+  * get
+
+  * list
+
+* skill
+
+  * bulk-create-skill-entities
+
+  * cascading-delete-skill-custom-entities
+
+  * create
+
+  * create-skill-clone-skill-details
+
+  * create-skill-create-new-skill-details
+
+  * create-skill-create-skill-version-details
+
+  * create-skill-extend-skill-details
+
+  * delete
+
+  * export
+
+  * export-digital-assistant
+
+  * get
+
+  * list
+
+  * publish
+
+  * train
+
+  * update
+
+* skill-parameter
+
+  * create
+
+  * delete
+
+  * get
+
+  * list
+
+  * update
+
+* translator
+
+  * create
+
+  * delete
+
+  * get
+
+  * list
+
+  * update

@@ -1,0 +1,20 @@
+work-request
+************
+
+
+Description
+===========
+
+A VBS Instance related work request
+
+
+Available Commands
+==================
+
+* errors
+
+* get
+
+* list
+
+* logs

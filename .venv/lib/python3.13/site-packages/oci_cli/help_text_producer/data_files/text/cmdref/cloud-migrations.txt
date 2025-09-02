@@ -1,0 +1,116 @@
+cloud-migrations
+****************
+
+
+Description
+===========
+
+A description of the Oracle Cloud Migrations CLI.
+
+
+Available Commands
+==================
+
+* available_shapes
+
+  * list
+
+* migration
+
+  * change-compartment
+
+  * create
+
+  * delete
+
+  * get
+
+  * list
+
+  * refresh
+
+  * start-migration-replication
+
+  * update
+
+* migration-asset
+
+  * create
+
+  * delete
+
+  * get
+
+  * get-replication-progress
+
+  * list
+
+  * refresh
+
+  * start_replication
+
+  * update
+
+* migration-plan
+
+  * change-compartment
+
+  * create
+
+  * delete
+
+  * execute
+
+  * export
+
+  * get
+
+  * import
+
+  * list
+
+  * refresh
+
+  * update
+
+* replication-schedule
+
+  * change-compartment
+
+  * create
+
+  * delete
+
+  * get
+
+  * list
+
+  * update
+
+* target-asset
+
+  * create
+
+  * delete
+
+  * get
+
+  * list
+
+  * update
+
+* work-request
+
+  * cancel
+
+  * get
+
+  * list
+
+* work-request-error
+
+  * list
+
+* work-request-log-entry
+
+  * list

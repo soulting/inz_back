@@ -1,0 +1,14 @@
+char-encoding-collection
+************************
+
+
+Description
+===========
+
+List of supported character encodings.
+
+
+Available Commands
+==================
+
+* list-supported-encodings

@@ -1,0 +1,32 @@
+problem
+*******
+
+
+Description
+===========
+
+Problems are at the core of Cloud Guard’s functionality. A Problem
+resource is created whenever an action or a configuration on a
+resource triggers a rule in a detector that’s attached to the target
+containing the compartment where the resource is located. Each Problem
+resource contains all the details for a single problem. This is the
+information for the problem that appears on the Cloud Guard Problems
+page.
+
+
+Available Commands
+==================
+
+* get
+
+* list
+
+* list-problem-entities
+
+* list-problem-histories
+
+* trigger-responder
+
+* update-bulk-problem-status
+
+* update-problem-status

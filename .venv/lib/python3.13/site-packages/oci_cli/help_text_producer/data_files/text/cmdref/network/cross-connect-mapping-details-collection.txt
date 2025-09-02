@@ -1,0 +1,14 @@
+cross-connect-mapping-details-collection
+****************************************
+
+
+Description
+===========
+
+An array of CrossConnectMappingDetails
+
+
+Available Commands
+==================
+
+* list-cross-connect-mappings

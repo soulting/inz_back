@@ -1,0 +1,30 @@
+demand-signal
+*************
+
+
+Description
+===========
+
+Use the OCI Control Center Demand Signal CLI to manage Demand Signals.
+
+
+Available Commands
+==================
+
+* occ-demand-signal
+
+  * change-compartment
+
+  * create
+
+  * delete
+
+  * get
+
+  * patch
+
+  * update
+
+* occ-demand-signal-collection
+
+  * list-occ-demand-signals

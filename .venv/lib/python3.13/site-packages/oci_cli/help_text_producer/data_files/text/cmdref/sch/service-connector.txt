@@ -1,0 +1,30 @@
+service-connector
+*****************
+
+
+Description
+===========
+
+The configuration details of the flow defined by the connector. For
+more information about flows defined by connectors, see Overview of
+Connector Hub.
+
+
+Available Commands
+==================
+
+* activate
+
+* change-compartment
+
+* create
+
+* deactivate
+
+* delete
+
+* get
+
+* list
+
+* update

@@ -1,0 +1,21 @@
+namespace
+*********
+
+
+Description
+===========
+
+This is the namespace details of a tenancy in Logging Analytics
+application
+
+
+Available Commands
+==================
+
+* get
+
+* list
+
+* offboard
+
+* onboard

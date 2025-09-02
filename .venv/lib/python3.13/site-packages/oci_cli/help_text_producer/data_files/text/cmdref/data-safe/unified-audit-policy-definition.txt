@@ -1,0 +1,20 @@
+unified-audit-policy-definition
+*******************************
+
+
+Description
+===========
+
+Resource represents a single unified audit policy definition.
+
+
+Available Commands
+==================
+
+* change-compartment
+
+* delete
+
+* get
+
+* update

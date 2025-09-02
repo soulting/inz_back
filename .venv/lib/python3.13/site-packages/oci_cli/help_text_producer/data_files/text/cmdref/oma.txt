@@ -1,0 +1,87 @@
+oma
+***
+
+
+Description
+===========
+
+Use the Managed Access CLI to approve access requests, create and
+manage templates, and manage resource approval settings. For more
+information, see Managed Access Overview.
+
+Use the table of contents and search tool to explore the Managed
+Access CLI.
+
+
+Available Commands
+==================
+
+* access-materials
+
+  * get
+
+* access-request
+
+  * create
+
+  * get
+
+  * handle
+
+* access-request-ext
+
+  * get-access-request-internal
+
+* access-requests
+
+  * export-access-requests
+
+  * list
+
+* approval-template
+
+  * change-compartment
+
+  * create
+
+  * delete
+
+  * get
+
+  * update
+
+* approval-templates
+
+  * list
+
+* lockbox
+
+  * change-compartment
+
+  * create
+
+  * delete
+
+  * get
+
+  * update
+
+* lockboxes
+
+  * list
+
+* work-request
+
+  * cancel
+
+  * get
+
+  * list
+
+* work-request-error
+
+  * list
+
+* work-request-log
+
+  * list

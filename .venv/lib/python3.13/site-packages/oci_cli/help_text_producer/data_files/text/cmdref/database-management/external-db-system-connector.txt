@@ -1,0 +1,24 @@
+external-db-system-connector
+****************************
+
+
+Description
+===========
+
+The details of an external DB system connector.
+
+
+Available Commands
+==================
+
+* check-connection-status
+
+* create-macs-connector
+
+* delete
+
+* get
+
+* list
+
+* update-macs-connector

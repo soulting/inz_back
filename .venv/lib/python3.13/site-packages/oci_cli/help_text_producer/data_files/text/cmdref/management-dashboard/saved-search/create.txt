@@ -1,0 +1,302 @@
+"create"
+********
+
+* Description
+
+* Usage
+
+* Required Parameters
+
+* Optional Parameters
+
+* Global Parameters
+
+* Example using required parameter
+
+
+Description
+===========
+
+Creates a new saved search. Here’s an example of how you can use CLI
+to create a saved search. For information on the details that must be
+passed to CREATE, you can use the GET API to obtain the Create.json
+file: *oci management-dashboard saved-search get –management-saved-
+search-id ocid1.managementsavedsearch.oc1..savedsearchId1 –query data
+> Create.json*. You can then modify the Create.json file by removing
+the *id* attribute and making other required changes, and use the *oci
+management-dashboard saved-search create* command.
+
+
+Usage
+=====
+
+   oci management-dashboard saved-search create [OPTIONS]
+
+
+Required Parameters
+===================
+
+--compartment-id, -c [text]
+
+OCID of the compartment in which the saved search resides.
+
+--data-config [complex type]
+
+It defines how data is fetched. A functional saved search needs a
+valid dataConfig. See examples on how it can be constructed for
+various data sources. This is a complex type whose value must be valid
+JSON. The value can be provided as a string on the command line or
+passed in as a file using the file://path/to/file syntax.
+
+The "--generate-param-json-input" option can be used to generate an
+example of the JSON which must be provided. We recommend storing this
+example in a file, modifying it as needed and then passing it back in
+via the file:// syntax.
+
+--description [text]
+
+Description of the saved search.
+
+--display-name [text]
+
+Display name of the saved search.
+
+--is-oob-saved-search [boolean]
+
+Determines whether the saved search is an Out-of-the-Box (OOB) saved
+search. Note that OOB saved searches are only provided by Oracle and
+cannot be modified.
+
+--metadata-version [text]
+
+The version of the metadata defined in the API. This is maintained and
+enforced by dashboard server. Currently it is 2.0.
+
+--nls [complex type]
+
+JSON that contains internationalization options. This is a complex
+type whose value must be valid JSON. The value can be provided as a
+string on the command line or passed in as a file using the
+file://path/to/file syntax.
+
+The "--generate-param-json-input" option can be used to generate an
+example of the JSON which must be provided. We recommend storing this
+example in a file, modifying it as needed and then passing it back in
+via the file:// syntax.
+
+--provider-id [text]
+
+ID of the service (for example log-analytics) that owns the saved
+search. Each service has a unique ID.
+
+--provider-name [text]
+
+The user friendly name of the service (for example, Logging Analytics)
+that owns the saved search.
+
+--provider-version [text]
+
+The version of the metadata of the provider. This is useful for
+provider to version its features and metadata. Any newly created saved
+search (or dashboard) should use providerVersion 3.0.0.
+
+--screen-image [text]
+
+Screen image of the saved search.
+
+--type [text]
+
+Determines how the saved search is displayed in a dashboard.
+
+Accepted values are:
+
+   FILTER_DONT_SHOW_IN_DASHBOARD, FILTER_SHOW_IN_DASHBOARD, SEARCH_DONT_SHOW_IN_DASHBOARD, SEARCH_SHOW_IN_DASHBOARD, WIDGET_DONT_SHOW_IN_DASHBOARD, WIDGET_SHOW_IN_DASHBOARD
+
+--ui-config [complex type]
+
+It defines the visualization type of the widget saved search, the UI
+options of that visualization type, the binding of data to the
+visualization. This is a complex type whose value must be valid JSON.
+The value can be provided as a string on the command line or passed in
+as a file using the file://path/to/file syntax.
+
+The "--generate-param-json-input" option can be used to generate an
+example of the JSON which must be provided. We recommend storing this
+example in a file, modifying it as needed and then passing it back in
+via the file:// syntax.
+
+--widget-template [text]
+
+The UI template that the saved search uses to render itself.
+
+--widget-vm [text]
+
+The View Model that the saved search uses to render itself.
+
+
+Optional Parameters
+===================
+
+--defined-tags [complex type]
+
+Defined tags for this resource. Each key is predefined and scoped to a
+namespace. Example: *{“foo-namespace”: {“bar-key”: “value”}}* This is
+a complex type whose value must be valid JSON. The value can be
+provided as a string on the command line or passed in as a file using
+the file://path/to/file syntax.
+
+The "--generate-param-json-input" option can be used to generate an
+example of the JSON which must be provided. We recommend storing this
+example in a file, modifying it as needed and then passing it back in
+via the file:// syntax.
+
+--drilldown-config [complex type]
+
+Drill-down configuration to define the destination of a drill-down
+action. This is a complex type whose value must be valid JSON. The
+value can be provided as a string on the command line or passed in as
+a file using the file://path/to/file syntax.
+
+The "--generate-param-json-input" option can be used to generate an
+example of the JSON which must be provided. We recommend storing this
+example in a file, modifying it as needed and then passing it back in
+via the file:// syntax.
+
+--features-config [complex type]
+
+Contains configuration for enabling features. This is a complex type
+whose value must be valid JSON. The value can be provided as a string
+on the command line or passed in as a file using the
+file://path/to/file syntax.
+
+The "--generate-param-json-input" option can be used to generate an
+example of the JSON which must be provided. We recommend storing this
+example in a file, modifying it as needed and then passing it back in
+via the file:// syntax.
+
+--freeform-tags [complex type]
+
+Simple key-value pair that is applied without any predefined name,
+type or scope. Exists for cross-compatibility only. Example: *{“bar-
+key”: “value”}* This is a complex type whose value must be valid JSON.
+The value can be provided as a string on the command line or passed in
+as a file using the file://path/to/file syntax.
+
+The "--generate-param-json-input" option can be used to generate an
+example of the JSON which must be provided. We recommend storing this
+example in a file, modifying it as needed and then passing it back in
+via the file:// syntax.
+
+--from-json [text]
+
+Provide input to this command as a JSON document from a file using the
+file://path-to/file syntax.
+
+The "--generate-full-command-json-input" option can be used to
+generate a sample json file to be used with this command option. The
+key names are pre-populated and match the command option names
+(converted to camelCase format, e.g. compartment-id –> compartmentId),
+while the values of the keys need to be populated by the user before
+using the sample file as an input to this command. For any command
+option that accepts multiple values, the value of the key can be a
+JSON array.
+
+Options can still be provided on the command line. If an option exists
+in both the JSON document and the command line then the command line
+specified value will be used.
+
+For examples on usage of this option, please see our “using CLI with
+advanced JSON options” link: https://docs.cloud.oracle.com/iaas/Conte
+nt/API/SDKDocs/cliusing.htm#AdvancedJSONOptions
+
+--id [text]
+
+ID of the saved search, which must only be provided for Out-of-the-Box
+(OOB) saved search.
+
+--max-wait-seconds [integer]
+
+The maximum time to wait for the resource to reach the lifecycle state
+defined by "--wait-for-state". Defaults to 1200 seconds.
+
+--parameters-config [complex type]
+
+Defines parameters for the saved search. This is a complex type whose
+value must be valid JSON. The value can be provided as a string on the
+command line or passed in as a file using the file://path/to/file
+syntax.
+
+The "--generate-param-json-input" option can be used to generate an
+example of the JSON which must be provided. We recommend storing this
+example in a file, modifying it as needed and then passing it back in
+via the file:// syntax.
+
+--wait-for-state [text]
+
+This operation creates, modifies or deletes a resource that has a
+defined lifecycle state. Specify this option to perform the action and
+then wait until the resource reaches a given lifecycle state. Multiple
+states can be specified, returning on the first state. For example, "
+--wait-for-state" SUCCEEDED "--wait-for-state" FAILED would return on
+whichever lifecycle state is reached first. If timeout is reached, a
+return code of 2 is returned. For any other error, a return code of 1
+is returned.
+
+Accepted values are:
+
+   ACTIVE
+
+--wait-interval-seconds [integer]
+
+Check every "--wait-interval-seconds" to see whether the resource has
+reached the lifecycle state defined by "--wait-for-state". Defaults to
+30 seconds.
+
+
+Global Parameters
+=================
+
+Use "oci --help" for help on global parameters.
+
+"--auth-purpose", "--auth", "--cert-bundle", "--cli-auto-prompt", "--
+cli-rc-file", "--config-file", "--connection-timeout", "--debug", "--
+defaults-file", "--endpoint", "--generate-full-command-json-input", "
+--generate-param-json-input", "--help", "--latest-version", "--max-
+retries", "--no-retry", "--opc-client-request-id", "--opc-request-id",
+"--output", "--profile", "--proxy", "--query", "--raw-output", "--
+read-timeout", "--realm-specific-endpoint", "--region", "--release-
+info", "--request-id", "--version", "-?", "-d", "-h", "-i", "-v"
+
+
+Example using required parameter
+================================
+
+Copy and paste the following example into a JSON file, replacing the
+example parameters with your own.
+
+       oci management-dashboard saved-search create --generate-param-json-input data-config > data-config.json
+       oci management-dashboard saved-search create --generate-param-json-input nls > nls.json
+       oci management-dashboard saved-search create --generate-param-json-input ui-config > ui-config.json
+
+Copy the following CLI commands into a file named example.sh. Run the
+command by typing “bash example.sh” and replacing the example
+parameters with your own.
+
+Please note this sample will only work in the POSIX-compliant bash-
+like shell. You need to set up the OCI configuration and appropriate
+security policies before trying the examples.
+
+       export compartment_id=<substitute-value-of-compartment_id> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/management-dashboard/saved-search/create.html#cmdoption-compartment-id
+       export description=<substitute-value-of-description> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/management-dashboard/saved-search/create.html#cmdoption-description
+       export display_name=<substitute-value-of-display_name> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/management-dashboard/saved-search/create.html#cmdoption-display-name
+       export is_oob_saved_search=<substitute-value-of-is_oob_saved_search> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/management-dashboard/saved-search/create.html#cmdoption-is-oob-saved-search
+       export metadata_version=<substitute-value-of-metadata_version> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/management-dashboard/saved-search/create.html#cmdoption-metadata-version
+       export provider_id=<substitute-value-of-provider_id> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/management-dashboard/saved-search/create.html#cmdoption-provider-id
+       export provider_name=<substitute-value-of-provider_name> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/management-dashboard/saved-search/create.html#cmdoption-provider-name
+       export provider_version=<substitute-value-of-provider_version> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/management-dashboard/saved-search/create.html#cmdoption-provider-version
+       export screen_image=<substitute-value-of-screen_image> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/management-dashboard/saved-search/create.html#cmdoption-screen-image
+       export type=<substitute-value-of-type> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/management-dashboard/saved-search/create.html#cmdoption-type
+       export widget_template=<substitute-value-of-widget_template> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/management-dashboard/saved-search/create.html#cmdoption-widget-template
+       export widget_vm=<substitute-value-of-widget_vm> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/management-dashboard/saved-search/create.html#cmdoption-widget-vm
+
+       oci management-dashboard saved-search create --compartment-id $compartment_id --data-config file://data-config.json --description $description --display-name $display_name --is-oob-saved-search $is_oob_saved_search --metadata-version $metadata_version --nls file://nls.json --provider-id $provider_id --provider-name $provider_name --provider-version $provider_version --screen-image $screen_image --type $type --ui-config file://ui-config.json --widget-template $widget_template --widget-vm $widget_vm

@@ -1,0 +1,15 @@
+work-request-error-collection
+*****************************
+
+
+Description
+===========
+
+Results of a workRequestError search. Contains both WorkRequestError
+items and other information, such as metadata.
+
+
+Available Commands
+==================
+
+* list-work-request-errors

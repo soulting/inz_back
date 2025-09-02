@@ -1,0 +1,59 @@
+listing-revision-attachment
+***************************
+
+
+Description
+===========
+
+A attachment for the listing revision. User can provide an external
+URL/upload a file
+
+
+Available Commands
+==================
+
+* create
+
+* create-listing-revision-attachment-create-customer-success-
+  attachment
+
+* create-listing-revision-attachment-create-related-document-
+  attachment-details
+
+* create-listing-revision-attachment-create-review-support-document-
+  attachment
+
+* create-listing-revision-attachment-create-screen-shot-attachment-
+  details
+
+* create-listing-revision-attachment-create-supported-service-
+  attachment
+
+* create-listing-revision-attachment-create-video-attachment-details
+
+* delete
+
+* get
+
+* get-listing-revision-attachment-content
+
+* update
+
+* update-listing-revision-attachment-content
+
+* update-listing-revision-attachment-update-customer-success-
+  attachment
+
+* update-listing-revision-attachment-update-related-document-
+  attachment-details
+
+* update-listing-revision-attachment-update-review-support-document-
+  attachment
+
+* update-listing-revision-attachment-update-screen-shot-attachment-
+  details
+
+* update-listing-revision-attachment-update-supported-service-
+  attachment
+
+* update-listing-revision-attachment-update-video-attachment-details

@@ -1,0 +1,14 @@
+account-mgmt-info
+*****************
+
+
+Description
+===========
+
+Schema for AccountMgmtInfo resource.
+
+
+Available Commands
+==================
+
+* get

@@ -1,0 +1,40 @@
+appmgmt-control
+***************
+
+
+Description
+===========
+
+Use the Resource Discovery and Monitoring Control CLI to get details
+about monitored instances and perform actions. For more information,
+see Resource Discovery and Monitoring.
+
+
+Available Commands
+==================
+
+* monitored-instance
+
+  * activate-plugin
+
+  * get
+
+  * publish-top-processes
+
+* monitored-instance-collection
+
+  * list-monitored-instances
+
+* work-request
+
+  * get
+
+  * list
+
+* work-request-error
+
+  * list
+
+* work-request-log-entry
+
+  * list

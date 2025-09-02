@@ -1,0 +1,26 @@
+em-bridge
+*********
+
+
+Description
+===========
+
+Configuration details for enterprise manager bridge.
+
+
+Available Commands
+==================
+
+* change-compartment
+
+* create
+
+* delete
+
+* get
+
+* list
+
+* summary
+
+* update

@@ -1,0 +1,126 @@
+"upload-otlp-logs"
+******************
+
+* Description
+
+* Usage
+
+* Required Parameters
+
+* Optional Parameters
+
+* Global Parameters
+
+* Example using required parameter
+
+
+Description
+===========
+
+Accepts log data in OTLP JSON-encoded Protobuf format.
+
+
+Usage
+=====
+
+   oci log-analytics upload upload-otlp-logs [OPTIONS]
+
+
+Required Parameters
+===================
+
+--file [text]
+
+Accepts log data in OTLP JSON-encoded Protobuf format. Sample format:
+https://github.com/open-telemetry/opentelemetry-
+proto/blob/v1.3.1/examples/logs.json
+
+--namespace-name [text]
+
+The Logging Analytics namespace used for the request.
+
+--opc-meta-loggrpid [text]
+
+The log group OCID to which the log data in this upload will be mapped
+to.
+
+
+Optional Parameters
+===================
+
+--content-type [text]
+
+The content type of the log data.
+
+--expect [text]
+
+A value of *100-continue* requests preliminary verification of the
+request method, path, and headers before the request body is sent. If
+no error results from such verification, the server will send a 100
+(Continue) interim response to indicate readiness for the request
+body. The only allowed value for this parameter is “100-Continue”
+(case-insensitive).
+
+--from-json [text]
+
+Provide input to this command as a JSON document from a file using the
+file://path-to/file syntax.
+
+The "--generate-full-command-json-input" option can be used to
+generate a sample json file to be used with this command option. The
+key names are pre-populated and match the command option names
+(converted to camelCase format, e.g. compartment-id –> compartmentId),
+while the values of the keys need to be populated by the user before
+using the sample file as an input to this command. For any command
+option that accepts multiple values, the value of the key can be a
+JSON array.
+
+Options can still be provided on the command line. If an option exists
+in both the JSON document and the command line then the command line
+specified value will be used.
+
+For examples on usage of this option, please see our “using CLI with
+advanced JSON options” link: https://docs.cloud.oracle.com/iaas/Conte
+nt/API/SDKDocs/cliusing.htm#AdvancedJSONOptions
+
+--log-set [text]
+
+The log set that gets associated with the uploaded logs.
+
+--opc-meta-properties [text]
+
+Metadata key and value pairs separated by a semicolon. Example
+k1:v1;k2:v2;k3:v3
+
+
+Global Parameters
+=================
+
+Use "oci --help" for help on global parameters.
+
+"--auth-purpose", "--auth", "--cert-bundle", "--cli-auto-prompt", "--
+cli-rc-file", "--config-file", "--connection-timeout", "--debug", "--
+defaults-file", "--endpoint", "--generate-full-command-json-input", "
+--generate-param-json-input", "--help", "--latest-version", "--max-
+retries", "--no-retry", "--opc-client-request-id", "--opc-request-id",
+"--output", "--profile", "--proxy", "--query", "--raw-output", "--
+read-timeout", "--realm-specific-endpoint", "--region", "--release-
+info", "--request-id", "--version", "-?", "-d", "-h", "-i", "-v"
+
+
+Example using required parameter
+================================
+
+Copy the following CLI commands into a file named example.sh. Run the
+command by typing “bash example.sh” and replacing the example
+parameters with your own.
+
+Please note this sample will only work in the POSIX-compliant bash-
+like shell. You need to set up the OCI configuration and appropriate
+security policies before trying the examples.
+
+       export file=<substitute-value-of-file> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/log-analytics/upload/upload-otlp-logs.html#cmdoption-file
+       export namespace_name=<substitute-value-of-namespace_name> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/log-analytics/upload/upload-otlp-logs.html#cmdoption-namespace-name
+       export opc_meta_loggrpid=<substitute-value-of-opc_meta_loggrpid> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/log-analytics/upload/upload-otlp-logs.html#cmdoption-opc-meta-loggrpid
+
+       oci log-analytics upload upload-otlp-logs --file $file --namespace-name $namespace_name --opc-meta-loggrpid $opc_meta_loggrpid

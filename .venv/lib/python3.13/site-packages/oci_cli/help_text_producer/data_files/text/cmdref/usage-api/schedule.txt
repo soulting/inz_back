@@ -1,0 +1,22 @@
+schedule
+********
+
+
+Description
+===========
+
+The schedule.
+
+
+Available Commands
+==================
+
+* create
+
+* delete
+
+* get
+
+* list
+
+* update

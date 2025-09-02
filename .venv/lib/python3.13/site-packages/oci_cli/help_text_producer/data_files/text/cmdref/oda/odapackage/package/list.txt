@@ -1,0 +1,181 @@
+"list"
+******
+
+* Description
+
+* Usage
+
+* Optional Parameters
+
+* Global Parameters
+
+* Example using required parameter
+
+
+Description
+===========
+
+Returns a page of summaries for packages that are available for
+import. The optional odaInstanceId query parameter can be used to
+filter packages that are available for import by a specific instance.
+If odaInstanceId query parameter is not provided, the returned list
+will include packages available within the region indicated by the
+request URL. The optional resourceType query param may be specified to
+filter packages that contain the indicated resource type. If no
+resourceType query param is given, packages containing all resource
+types will be returned. The optional name query parameter can be used
+to limit the list to packages whose name matches the given name. The
+optional displayName query parameter can be used to limit the list to
+packages whose displayName matches the given name. The optional
+isLatestVersionOnly query parameter can be used to limit the returned
+list to include only the latest version of any given package. If not
+specified, all versions of any otherwise matching package will be
+returned.
+
+If the *opc-next-page* header appears in the response, then there are
+more items to retrieve. To get the next page in the subsequent GET
+request, include the header’s value as the *page* query parameter.
+
+
+Usage
+=====
+
+   oci oda odapackage package list [OPTIONS]
+
+
+Optional Parameters
+===================
+
+--all
+
+Fetches all pages of results. If you provide this option, then you
+cannot provide the "--limit" option.
+
+--compartment-id, -c [text]
+
+List the packages that belong to this compartment.
+
+--display-name [text]
+
+List only the information for the Digital Assistant instance with this
+user-friendly name. These names don’t have to be unique and may
+change.
+
+Example:
+
+   My new resource
+
+--from-json [text]
+
+Provide input to this command as a JSON document from a file using the
+file://path-to/file syntax.
+
+The "--generate-full-command-json-input" option can be used to
+generate a sample json file to be used with this command option. The
+key names are pre-populated and match the command option names
+(converted to camelCase format, e.g. compartment-id –> compartmentId),
+while the values of the keys need to be populated by the user before
+using the sample file as an input to this command. For any command
+option that accepts multiple values, the value of the key can be a
+JSON array.
+
+Options can still be provided on the command line. If an option exists
+in both the JSON document and the command line then the command line
+specified value will be used.
+
+For examples on usage of this option, please see our “using CLI with
+advanced JSON options” link: https://docs.cloud.oracle.com/iaas/Conte
+nt/API/SDKDocs/cliusing.htm#AdvancedJSONOptions
+
+--is-latest-version-only [boolean]
+
+Should we return only the latest version of a package (instead of all
+versions)?
+
+--limit [integer]
+
+The maximum number of items to return per page.
+
+--name [text]
+
+List only the information for the package with this name. Package
+names are unique to a publisher and may not change.
+
+Example:
+
+   My Package
+
+--oda-instance-id [text]
+
+List only the information for this Digital Assistant instance.
+
+--page [text]
+
+The page at which to start retrieving results.
+
+You get this value from the *opc-next-page* header in a previous list
+request. To retireve the first page, omit this query parameter.
+
+Example:
+
+   MToxMA==
+
+--page-size [integer]
+
+When fetching results, the number of results to fetch per call. Only
+valid when used with "--all" or "--limit", and ignored otherwise.
+
+--resource-type [text]
+
+Resource type identifier. Used to limit query results to the items
+which are applicable to the given type.
+
+--sort-by [text]
+
+Sort on this field. You can specify one sort order only. The default
+sort field is *TIMECREATED*.
+
+The default sort order for *TIMECREATED* is descending, and the
+default sort order for *DISPLAYNAME* is ascending.
+
+Accepted values are:
+
+   DISPLAYNAME, TIMECREATED
+
+--sort-order [text]
+
+Sort the results in this order, use either *ASC* (ascending) or *DESC*
+(descending).
+
+Accepted values are:
+
+   ASC, DESC
+
+
+Global Parameters
+=================
+
+Use "oci --help" for help on global parameters.
+
+"--auth-purpose", "--auth", "--cert-bundle", "--cli-auto-prompt", "--
+cli-rc-file", "--config-file", "--connection-timeout", "--debug", "--
+defaults-file", "--endpoint", "--generate-full-command-json-input", "
+--generate-param-json-input", "--help", "--latest-version", "--max-
+retries", "--no-retry", "--opc-client-request-id", "--opc-request-id",
+"--output", "--profile", "--proxy", "--query", "--raw-output", "--
+read-timeout", "--realm-specific-endpoint", "--region", "--release-
+info", "--request-id", "--version", "-?", "-d", "-h", "-i", "-v"
+
+
+Example using required parameter
+================================
+
+Copy the following CLI commands into a file named example.sh. Run the
+command by typing “bash example.sh” and replacing the example
+parameters with your own.
+
+Please note this sample will only work in the POSIX-compliant bash-
+like shell. You need to set up the OCI configuration and appropriate
+security policies before trying the examples.
+
+       oci oda odapackage package list

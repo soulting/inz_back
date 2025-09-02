@@ -1,0 +1,26 @@
+processor-job
+*************
+
+
+Description
+===========
+
+Details of a processor job.
+
+
+Available Commands
+==================
+
+* cancel
+
+* create
+
+* create-processor-job-general-processor-config
+
+* create-processor-job-inline-document-content
+
+* create-processor-job-invoice-processor-config
+
+* create-processor-job-object-storage-locations
+
+* get

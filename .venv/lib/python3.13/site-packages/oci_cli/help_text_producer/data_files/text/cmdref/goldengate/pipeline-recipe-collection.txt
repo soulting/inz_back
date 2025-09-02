@@ -1,0 +1,14 @@
+pipeline-recipe-collection
+**************************
+
+
+Description
+===========
+
+The list of Recipe objects.
+
+
+Available Commands
+==================
+
+* list-recipes

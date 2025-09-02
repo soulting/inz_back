@@ -1,0 +1,532 @@
+"update-instance-update-instance-source-via-image-details"
+**********************************************************
+
+* Description
+
+* Usage
+
+* Required Parameters
+
+* Optional Parameters
+
+* Global Parameters
+
+* Example using required parameter
+
+
+Description
+===========
+
+Updates certain fields on the specified instance. Fields that are not
+provided in the request will not be updated. Avoid entering
+confidential information.
+
+Changes to metadata fields will be reflected in the instance metadata
+service (this may take up to a minute).
+
+The OCID of the instance remains the same.
+
+
+Usage
+=====
+
+   oci compute instance update-instance-update-instance-source-via-image-details [OPTIONS]
+
+
+Required Parameters
+===================
+
+--instance-id [text]
+
+The OCID of the instance.
+
+--source-details-image-id [text]
+
+The OCID of the image used to boot the instance.
+
+
+Optional Parameters
+===================
+
+--agent-config [complex type]
+
+This is a complex type whose value must be valid JSON. The value can
+be provided as a string on the command line or passed in as a file
+using the file://path/to/file syntax.
+
+The "--generate-param-json-input" option can be used to generate an
+example of the JSON which must be provided. We recommend storing this
+example in a file, modifying it as needed and then passing it back in
+via the file:// syntax.
+
+--availability-config [complex type]
+
+This is a complex type whose value must be valid JSON. The value can
+be provided as a string on the command line or passed in as a file
+using the file://path/to/file syntax.
+
+The "--generate-param-json-input" option can be used to generate an
+example of the JSON which must be provided. We recommend storing this
+example in a file, modifying it as needed and then passing it back in
+via the file:// syntax.
+
+--capacity-reservation-id [text]
+
+The OCID of the compute capacity reservation this instance is launched
+under. You can remove the instance from a reservation by specifying an
+empty string as input for this field. For more information, see
+Capacity Reservations.
+
+--dedicated-vm-host-id [text]
+
+The OCID of the dedicated virtual machine host to place the instance
+on. Supported only if this VM instance was already placed on a
+dedicated virtual machine host - that is, you can’t move an instance
+from on-demand capacity to dedicated capacity, nor can you move an
+instance from dedicated capacity to on-demand capacity.
+
+--defined-tags [complex type]
+
+Defined tags for this resource. Each key is predefined and scoped to a
+namespace. For more information, see Resource Tags.
+
+Example:
+
+   {"Operations": {"CostCenter": "42"}}
+
+This is a complex type whose value must be valid JSON. The value can
+be provided as a string on the command line or passed in as a file
+using the file://path/to/file syntax.
+
+The "--generate-param-json-input" option can be used to generate an
+example of the JSON which must be provided. We recommend storing this
+example in a file, modifying it as needed and then passing it back in
+via the file:// syntax.
+
+--display-name [text]
+
+A user-friendly name. Does not have to be unique, and it’s changeable.
+Avoid entering confidential information.
+
+--extended-metadata [complex type]
+
+Additional metadata key/value pairs that you provide. They serve the
+same purpose and functionality as fields in the *metadata* object.
+
+They are distinguished from *metadata* fields in that these can be
+nested JSON objects (whereas *metadata* fields are string/string maps
+only).
+
+The “user_data” field and the “ssh_authorized_keys” field cannot be
+changed after an instance has launched. Any request that updates,
+removes, or adds either of these fields will be rejected. You must
+provide the same values for “user_data” and “ssh_authorized_keys” that
+already exist on the instance.
+
+The combined size of the *metadata* and *extendedMetadata* objects can
+be a maximum of 32,000 bytes. This is a complex type whose value must
+be valid JSON. The value can be provided as a string on the command
+line or passed in as a file using the file://path/to/file syntax.
+
+The "--generate-param-json-input" option can be used to generate an
+example of the JSON which must be provided. We recommend storing this
+example in a file, modifying it as needed and then passing it back in
+via the file:// syntax.
+
+--fault-domain [text]
+
+A fault domain is a grouping of hardware and infrastructure within an
+availability domain. Each availability domain contains three fault
+domains. Fault domains let you distribute your instances so that they
+are not on the same physical hardware within a single availability
+domain. A hardware failure or Compute hardware maintenance that
+affects one fault domain does not affect instances in other fault
+domains.
+
+To get a list of fault domains, use the ListFaultDomains operation in
+the Identity and Access Management Service API.
+
+Example:
+
+   FAULT-DOMAIN-1
+
+--force
+
+Perform update without prompting for confirmation.
+
+--freeform-tags [complex type]
+
+Free-form tags for this resource. Each tag is a simple key-value pair
+with no predefined name, type, or namespace. For more information, see
+Resource Tags.
+
+Example:
+
+   {"Department": "Finance"}
+
+This is a complex type whose value must be valid JSON. The value can
+be provided as a string on the command line or passed in as a file
+using the file://path/to/file syntax.
+
+The "--generate-param-json-input" option can be used to generate an
+example of the JSON which must be provided. We recommend storing this
+example in a file, modifying it as needed and then passing it back in
+via the file:// syntax.
+
+--from-json [text]
+
+Provide input to this command as a JSON document from a file using the
+file://path-to/file syntax.
+
+The "--generate-full-command-json-input" option can be used to
+generate a sample json file to be used with this command option. The
+key names are pre-populated and match the command option names
+(converted to camelCase format, e.g. compartment-id –> compartmentId),
+while the values of the keys need to be populated by the user before
+using the sample file as an input to this command. For any command
+option that accepts multiple values, the value of the key can be a
+JSON array.
+
+Options can still be provided on the command line. If an option exists
+in both the JSON document and the command line then the command line
+specified value will be used.
+
+For examples on usage of this option, please see our “using CLI with
+advanced JSON options” link: https://docs.cloud.oracle.com/iaas/Conte
+nt/API/SDKDocs/cliusing.htm#AdvancedJSONOptions
+
+--if-match [text]
+
+For optimistic concurrency control. In the PUT or DELETE call for a
+resource, set the *if-match* parameter to the value of the etag from a
+previous GET or POST response for that resource. The resource will be
+updated or deleted only if the etag you provide matches the resource’s
+current etag value.
+
+--instance-options [complex type]
+
+This is a complex type whose value must be valid JSON. The value can
+be provided as a string on the command line or passed in as a file
+using the file://path/to/file syntax.
+
+The "--generate-param-json-input" option can be used to generate an
+example of the JSON which must be provided. We recommend storing this
+example in a file, modifying it as needed and then passing it back in
+via the file:// syntax.
+
+--launch-options [complex type]
+
+This is a complex type whose value must be valid JSON. The value can
+be provided as a string on the command line or passed in as a file
+using the file://path/to/file syntax.
+
+The "--generate-param-json-input" option can be used to generate an
+example of the JSON which must be provided. We recommend storing this
+example in a file, modifying it as needed and then passing it back in
+via the file:// syntax.
+
+--licensing-configs [complex type]
+
+The list of liscensing configurations with target update values.
+
+This option is a JSON list with items of type
+UpdateInstanceLicensingConfig.  For documentation on
+UpdateInstanceLicensingConfig please see our API reference: https://d
+ocs.cloud.oracle.com/api/#/en/iaas/20160918/datatypes/UpdateInstanceL
+icensingConfig. This is a complex type whose value must be valid JSON.
+The value can be provided as a string on the command line or passed in
+as a file using the file://path/to/file syntax.
+
+The "--generate-param-json-input" option can be used to generate an
+example of the JSON which must be provided. We recommend storing this
+example in a file, modifying it as needed and then passing it back in
+via the file:// syntax.
+
+--max-wait-seconds [integer]
+
+The maximum time to wait for the resource to reach the lifecycle state
+defined by "--wait-for-state". Defaults to 1200 seconds.
+
+--metadata [complex type]
+
+Custom metadata key/value string pairs that you provide. Any set of
+key/value pairs provided here will completely replace the current set
+of key/value pairs in the *metadata* field on the instance.
+
+The “user_data” field and the “ssh_authorized_keys” field cannot be
+changed after an instance has launched. Any request that updates,
+removes, or adds either of these fields will be rejected. You must
+provide the same values for “user_data” and “ssh_authorized_keys” that
+already exist on the instance.
+
+The combined size of the *metadata* and *extendedMetadata* objects can
+be a maximum of 32,000 bytes. This is a complex type whose value must
+be valid JSON. The value can be provided as a string on the command
+line or passed in as a file using the file://path/to/file syntax.
+
+The "--generate-param-json-input" option can be used to generate an
+example of the JSON which must be provided. We recommend storing this
+example in a file, modifying it as needed and then passing it back in
+via the file:// syntax.
+
+--platform-config [complex type]
+
+This is a complex type whose value must be valid JSON. The value can
+be provided as a string on the command line or passed in as a file
+using the file://path/to/file syntax.
+
+The "--generate-param-json-input" option can be used to generate an
+example of the JSON which must be provided. We recommend storing this
+example in a file, modifying it as needed and then passing it back in
+via the file:// syntax.
+
+--security-attributes [complex type]
+
+Security attributes are labels for a resource that can be referenced
+in a Zero Trust Packet Routing (ZPR) policy to control access to ZPR-
+supported resources.
+
+Example:
+
+   {"Oracle-DataSecurity-ZPR": {"MaxEgressCount": {"value":"42","mode":"audit"}}}
+
+This is a complex type whose value must be valid JSON. The value can
+be provided as a string on the command line or passed in as a file
+using the file://path/to/file syntax.
+
+The "--generate-param-json-input" option can be used to generate an
+example of the JSON which must be provided. We recommend storing this
+example in a file, modifying it as needed and then passing it back in
+via the file:// syntax.
+
+--shape [text]
+
+The shape of the instance. The shape determines the number of CPUs and
+the amount of memory allocated to the instance. For more information
+about how to change shapes, and a list of shapes that are supported,
+see Editing an Instance.
+
+For details about the CPUs, memory, and other properties of each
+shape, see Compute Shapes.
+
+The new shape must be compatible with the image that was used to
+launch the instance. You can enumerate all available shapes and
+determine image compatibility by calling ListShapes.
+
+To determine whether capacity is available for a specific shape before
+you change the shape of an instance, use the
+CreateComputeCapacityReport operation.
+
+If the instance is running when you change the shape, the instance is
+rebooted.
+
+Example:
+
+   VM.Standard2.1
+
+--shape-config [complex type]
+
+This is a complex type whose value must be valid JSON. The value can
+be provided as a string on the command line or passed in as a file
+using the file://path/to/file syntax.
+
+The "--generate-param-json-input" option can be used to generate an
+example of the JSON which must be provided. We recommend storing this
+example in a file, modifying it as needed and then passing it back in
+via the file:// syntax.
+
+--source-details-boot-volume-size-in-gbs [integer]
+
+The size of the boot volume in GBs. Minimum value is 50 GB and maximum
+value is 32,768 GB (32 TB).
+
+--source-details-is-preserve-boot-volume-enabled [boolean]
+
+Whether to preserve the boot volume that was previously attached to
+the instance after a successful replacement of that boot volume.
+
+--source-details-kms-key-id [text]
+
+The OCID of the Vault service key to assign as the master encryption
+key for the boot volume.
+
+--time-maintenance-reboot-due [datetime]
+
+For a VM instance, resets the scheduled time that the instance will be
+reboot migrated for infrastructure maintenance, in the format defined
+by RFC3339. If the instance hasn’t been rebooted after this date,
+Oracle reboots the instance within 24 hours of the time and date that
+maintenance is due.
+
+To get the maximum possible date that a maintenance reboot can be
+extended, use GetInstanceMaintenanceReboot.
+
+Regardless of how the instance is stopped, this flag is reset to empty
+as soon as the instance reaches the Stopped state.
+
+To reboot migrate a bare metal instance, use the InstanceAction
+operation.
+
+For more information, see Infrastructure Maintenance.
+
+Example: *2018-05-25T21:10:29.600Z*
+
+   The following datetime formats are supported:
+
+
+UTC with microseconds
+---------------------
+
+   Format: YYYY-MM-DDTHH:mm:ss.ssssssTZD
+   Example: 2017-09-15T20:30:00.123456Z
+
+   UTC with milliseconds
+   ***********************
+   .. code::
+
+       Format: YYYY-MM-DDTHH:mm:ss.sssTZD
+       Example: 2017-09-15T20:30:00.123Z
+
+   UTC without milliseconds
+   **************************
+   .. code::
+
+       Format: YYYY-MM-DDTHH:mm:ssTZD
+       Example: 2017-09-15T20:30:00Z
+
+   UTC with minute precision
+   **************************
+   .. code::
+
+       Format: YYYY-MM-DDTHH:mmTZD
+       Example: 2017-09-15T20:30Z
+
+
+Timezone with microseconds
+--------------------------
+
+   Format: YYYY-MM-DDTHH:mm:ssTZD
+   Example: 2017-09-15T12:30:00.456789-08:00, 2017-09-15T12:30:00.456789-0800
+
+   Timezone with milliseconds
+   ***************************
+   .. code::
+
+       Format: YYYY-MM-DDTHH:mm:ssTZD
+       Example: 2017-09-15T12:30:00.456-08:00, 2017-09-15T12:30:00.456-0800
+
+   Timezone without milliseconds
+   *******************************
+   .. code::
+
+       Format: YYYY-MM-DDTHH:mm:ssTZD
+       Example: 2017-09-15T12:30:00-08:00, 2017-09-15T12:30:00-0800
+
+   Timezone with minute precision
+   *******************************
+   .. code::
+
+       Format: YYYY-MM-DDTHH:mmTZD
+       Example: 2017-09-15T12:30-08:00, 2017-09-15T12:30-0800
+
+   Short date and time
+   ********************
+   The timezone for this date and time will be taken as UTC (Needs to be surrounded by single or double quotes)
+
+   .. code::
+
+       Format: 'YYYY-MM-DD HH:mm' or "YYYY-MM-DD HH:mm"
+       Example: '2017-09-15 17:25'
+
+   Date Only
+   **********
+   This date will be taken as midnight UTC of that day
+
+   .. code::
+
+       Format: YYYY-MM-DD
+       Example: 2017-09-15
+
+   Epoch seconds
+   **************
+   .. code::
+
+       Example: 1412195400
+
+--update-operation-constraint [text]
+
+The parameter acts as a fail-safe to prevent unwanted downtime when
+updating a running instance. The default is ALLOW_DOWNTIME. *
+*ALLOW_DOWNTIME* - Compute might reboot the instance while updating
+the instance if a reboot is required. * *AVOID_DOWNTIME* - If the
+instance is in running state, Compute tries to update the instance
+without rebooting                   it. If the instance requires a
+reboot to be updated, an error is returned and the instance
+is not updated. If the instance is stopped, it is updated and remains
+in the stopped state.
+
+Accepted values are:
+
+   ALLOW_DOWNTIME, AVOID_DOWNTIME
+
+--wait-for-state [text]
+
+This operation creates, modifies or deletes a resource that has a
+defined lifecycle state. Specify this option to perform the action and
+then wait until the resource reaches a given lifecycle state. Multiple
+states can be specified, returning on the first state. For example, "
+--wait-for-state" SUCCEEDED "--wait-for-state" FAILED would return on
+whichever lifecycle state is reached first. If timeout is reached, a
+return code of 2 is returned. For any other error, a return code of 1
+is returned.
+
+Accepted values are:
+
+   CREATING_IMAGE, MOVING, PROVISIONING, RUNNING, STARTING, STOPPED, STOPPING, TERMINATED, TERMINATING
+
+--wait-interval-seconds [integer]
+
+Check every "--wait-interval-seconds" to see whether the resource has
+reached the lifecycle state defined by "--wait-for-state". Defaults to
+30 seconds.
+
+
+Global Parameters
+=================
+
+Use "oci --help" for help on global parameters.
+
+"--auth-purpose", "--auth", "--cert-bundle", "--cli-auto-prompt", "--
+cli-rc-file", "--config-file", "--connection-timeout", "--debug", "--
+defaults-file", "--endpoint", "--generate-full-command-json-input", "
+--generate-param-json-input", "--help", "--latest-version", "--max-
+retries", "--no-retry", "--opc-client-request-id", "--opc-request-id",
+"--output", "--profile", "--proxy", "--query", "--raw-output", "--
+read-timeout", "--realm-specific-endpoint", "--region", "--release-
+info", "--request-id", "--version", "-?", "-d", "-h", "-i", "-v"
+
+
+Example using required parameter
+================================
+
+Copy the following CLI commands into a file named example.sh. Run the
+command by typing “bash example.sh” and replacing the example
+parameters with your own.
+
+Please note this sample will only work in the POSIX-compliant bash-
+like shell. You need to set up the OCI configuration and appropriate
+security policies before trying the examples.
+
+       export cidr_block=<substitute-value-of-cidr_block> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/network/vcn/create.html#cmdoption-cidr-block
+       export compartment_id=<substitute-value-of-compartment_id> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/network/vcn/create.html#cmdoption-compartment-id
+       export availability_domain=<substitute-value-of-availability_domain> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/compute/instance/launch.html#cmdoption-availability-domain
+       export image_id=<substitute-value-of-image_id> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/compute/instance/launch.html#cmdoption-image-id
+       export source_details_image_id=<substitute-value-of-source_details_image_id> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/compute/instance/update-instance-update-instance-source-via-image-details.html#cmdoption-source-details-image-id
+
+       vcn_id=$(oci network vcn create --cidr-block $cidr_block --compartment-id $compartment_id --query data.id --raw-output)
+
+       subnet_id=$(oci network subnet create --cidr-block $cidr_block --compartment-id $compartment_id --vcn-id $vcn_id --query data.id --raw-output)
+
+       instance_id=$(oci compute instance launch --availability-domain $availability_domain --compartment-id $compartment_id --image-id $image_id --subnet-id $subnet_id --query data.id --raw-output)
+
+       oci compute instance update-instance-update-instance-source-via-image-details --instance-id $instance_id --source-details-image-id $source_details_image_id

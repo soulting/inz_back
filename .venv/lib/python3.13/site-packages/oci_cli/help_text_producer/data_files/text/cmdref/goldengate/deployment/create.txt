@@ -1,0 +1,358 @@
+"create"
+********
+
+* Description
+
+* Usage
+
+* Required Parameters
+
+* Optional Parameters
+
+* Global Parameters
+
+
+Description
+===========
+
+Creates a new Deployment.
+
+
+Usage
+=====
+
+   oci goldengate deployment create [OPTIONS]
+
+
+Required Parameters
+===================
+
+--compartment-id, -c [text]
+
+The OCID of the compartment being referenced.
+
+--display-name [text]
+
+An object’s Display Name.
+
+--subnet-id [text]
+
+The OCID of the subnet of the deployment’s private endpoint. The
+subnet must be a private subnet. For backward compatibility, public
+subnets are allowed until May 31 2025, after which the private subnet
+will be enforced.
+
+
+Optional Parameters
+===================
+
+--admin-password [text]
+
+The password associated with the GoldenGate deployment console
+username. The password must be 8 to 30 characters long and must
+contain at least 1 uppercase, 1 lowercase, 1 numeric, and 1 special
+character. Special characters such as ‘$’, ‘^’, or ‘?’ are not
+allowed. This field will be deprecated and replaced by ‘password-
+secret-id’.
+
+--admin-username [text]
+
+The GoldenGate deployment console username.
+
+--availability-domain [text]
+
+The availability domain of a placement.
+
+--backup-schedule [complex type]
+
+This is a complex type whose value must be valid JSON. The value can
+be provided as a string on the command line or passed in as a file
+using the file://path/to/file syntax.
+
+The "--generate-param-json-input" option can be used to generate an
+example of the JSON which must be provided. We recommend storing this
+example in a file, modifying it as needed and then passing it back in
+via the file:// syntax.
+
+--byol-cpu-core-count-limit [integer]
+
+The maximum number of CPUs allowed with a ‘Bring Your Own License’
+(BYOL) license type. Any CPU usage above this limit is considered as
+License Included and billed.
+
+--certificate-file [filename]
+
+The SSL certificate for this deployment in PEM format.
+
+--cpu-core-count [integer]
+
+The Minimum number of OCPUs to be made available for this Deployment.
+
+--credential-store [text]
+
+The type of credential store for OGG.
+
+Accepted values are:
+
+   GOLDENGATE, IAM
+
+--defined-tags [complex type]
+
+Tags defined for this resource. Each key is predefined and scoped to a
+namespace.
+
+Example:
+
+   {"foo-namespace": {"bar-key": "value"}}
+
+This is a complex type whose value must be valid JSON. The value can
+be provided as a string on the command line or passed in as a file
+using the file://path/to/file syntax.
+
+The "--generate-param-json-input" option can be used to generate an
+example of the JSON which must be provided. We recommend storing this
+example in a file, modifying it as needed and then passing it back in
+via the file:// syntax.
+
+--deployment-backup-id [text]
+
+The OCID of the backup being referenced.
+
+--deployment-name [text]
+
+The name given to the GoldenGate service deployment. The name must be
+1 to 32 characters long, must contain only alphanumeric characters and
+must start with a letter.
+
+--deployment-type [text]
+
+The type of deployment, which can be any one of the Allowed values.
+NOTE: Use of the value ‘OGG’ is maintained for backward compatibility
+purposes.     Its use is discouraged in favor of ‘DATABASE_ORACLE’.
+
+Accepted values are:
+
+   BIGDATA, DATABASE_DB2I, DATABASE_DB2ZOS, DATABASE_MICROSOFT_SQLSERVER, DATABASE_MYSQL, DATABASE_ORACLE, DATABASE_POSTGRESQL, DATA_TRANSFORMS, GGSA, OGG
+
+--description [text]
+
+Metadata about this specific object.
+
+--environment-type [text]
+
+Specifies whether the deployment is used in a production or
+development/testing environment.
+
+Accepted values are:
+
+   DEVELOPMENT_OR_TESTING, PRODUCTION
+
+--fault-domain [text]
+
+The fault domain of a placement.
+
+--fqdn [text]
+
+A three-label Fully Qualified Domain Name (FQDN) for a resource.
+
+--freeform-tags [complex type]
+
+A simple key-value pair that is applied without any predefined name,
+type, or scope. Exists for cross-compatibility only.
+
+Example:
+
+   {"bar-key": "value"}
+
+This is a complex type whose value must be valid JSON. The value can
+be provided as a string on the command line or passed in as a file
+using the file://path/to/file syntax.
+
+The "--generate-param-json-input" option can be used to generate an
+example of the JSON which must be provided. We recommend storing this
+example in a file, modifying it as needed and then passing it back in
+via the file:// syntax.
+
+--from-json [text]
+
+Provide input to this command as a JSON document from a file using the
+file://path-to/file syntax.
+
+The "--generate-full-command-json-input" option can be used to
+generate a sample json file to be used with this command option. The
+key names are pre-populated and match the command option names
+(converted to camelCase format, e.g. compartment-id –> compartmentId),
+while the values of the keys need to be populated by the user before
+using the sample file as an input to this command. For any command
+option that accepts multiple values, the value of the key can be a
+JSON array.
+
+Options can still be provided on the command line. If an option exists
+in both the JSON document and the command line then the command line
+specified value will be used.
+
+For examples on usage of this option, please see our “using CLI with
+advanced JSON options” link: https://docs.cloud.oracle.com/iaas/Conte
+nt/API/SDKDocs/cliusing.htm#AdvancedJSONOptions
+
+--identity-domain-id [text]
+
+The OCID of the Identity Domain when IAM credential store is used.
+
+--is-auto-scaling-enabled [boolean]
+
+Indicates if auto scaling is enabled for the Deployment’s CPU core
+count.
+
+--is-byol-cpu-core-count-limit-enabled [boolean]
+
+Flag to allow to configure the ‘Bring Your Own License’ (BYOL) license
+type CPU limit. If enabled, the exact number of CPUs must be provided
+via byolCpuCoreCountLimit.
+
+--is-public [boolean]
+
+True if this object is publicly available.
+
+--license-model [text]
+
+The Oracle license model that applies to a Deployment.
+
+Accepted values are:
+
+   BRING_YOUR_OWN_LICENSE, LICENSE_INCLUDED
+
+--load-balancer-subnet-id [text]
+
+The OCID of a public subnet in the customer tenancy. Can be provided
+only for public deployments. If provided, the loadbalancer will be
+created in this subnet instead of the service tenancy. For backward
+compatibility, this is an optional property. It will become mandatory
+for public deployments after October 1, 2024.
+
+--locks [complex type]
+
+Locks associated with this resource.
+
+This option is a JSON list with items of type AddResourceLockDetails.
+For documentation on AddResourceLockDetails please see our API
+reference: https://docs.cloud.oracle.com/api/#/en/goldengate/20200407
+/datatypes/AddResourceLockDetails. This is a complex type whose value
+must be valid JSON. The value can be provided as a string on the
+command line or passed in as a file using the file://path/to/file
+syntax.
+
+The "--generate-param-json-input" option can be used to generate an
+example of the JSON which must be provided. We recommend storing this
+example in a file, modifying it as needed and then passing it back in
+via the file:// syntax.
+
+--maintenance-configuration [complex type]
+
+This is a complex type whose value must be valid JSON. The value can
+be provided as a string on the command line or passed in as a file
+using the file://path/to/file syntax.
+
+The "--generate-param-json-input" option can be used to generate an
+example of the JSON which must be provided. We recommend storing this
+example in a file, modifying it as needed and then passing it back in
+via the file:// syntax.
+
+--maintenance-window-day [text]
+
+Day of week for the maintenance.
+
+Accepted values are:
+
+   FRIDAY, MONDAY, SATURDAY, SUNDAY, THURSDAY, TUESDAY, WEDNESDAY
+
+--maintenance-window-start-hour [text]
+
+Start hour for maintenance period. Hour is in UTC.
+
+--max-wait-seconds [integer]
+
+The maximum time to wait for the work request to reach the state
+defined by "--wait-for-state". Defaults to 1200 seconds.
+
+--nsg-ids [complex type]
+
+An array of Network Security Group OCIDs used to define network access
+for either Deployments or Connections. This is a complex type whose
+value must be valid JSON. The value can be provided as a string on the
+command line or passed in as a file using the file://path/to/file
+syntax.
+
+The "--generate-param-json-input" option can be used to generate an
+example of the JSON which must be provided. We recommend storing this
+example in a file, modifying it as needed and then passing it back in
+via the file:// syntax.
+
+--ogg-version [text]
+
+Version of OGG.
+
+--password-secret-id [text]
+
+The OCID of the Secret where the deployment password is stored.
+
+--placements [complex type]
+
+An array of local peers of deployment
+
+This option is a JSON list with items of type
+DeploymentPlacementDetails.  For documentation on
+DeploymentPlacementDetails please see our API reference: https://docs
+.cloud.oracle.com/api/#/en/goldengate/20200407/datatypes/DeploymentPl
+acementDetails. This is a complex type whose value must be valid JSON.
+The value can be provided as a string on the command line or passed in
+as a file using the file://path/to/file syntax.
+
+The "--generate-param-json-input" option can be used to generate an
+example of the JSON which must be provided. We recommend storing this
+example in a file, modifying it as needed and then passing it back in
+via the file:// syntax.
+
+--private-key-file [filename]
+
+The private key for your certificate in PEM format.
+
+--source-deployment-id [text]
+
+The OCID of the deployment being referenced.
+
+--wait-for-state [text]
+
+This operation asynchronously creates, modifies or deletes a resource
+and uses a work request to track the progress of the operation.
+Specify this option to perform the action and then wait until the work
+request reaches a certain state. Multiple states can be specified,
+returning on the first state. For example, "--wait-for-state"
+SUCCEEDED "--wait-for-state" FAILED would return on whichever
+lifecycle state is reached first. If timeout is reached, a return code
+of 2 is returned. For any other error, a return code of 1 is returned.
+
+Accepted values are:
+
+   ACCEPTED, CANCELED, FAILED, IN_PROGRESS, SUCCEEDED
+
+--wait-interval-seconds [integer]
+
+Check every "--wait-interval-seconds" to see whether the work request
+has reached the state defined by "--wait-for-state". Defaults to 30
+seconds.
+
+
+Global Parameters
+=================
+
+Use "oci --help" for help on global parameters.
+
+"--auth-purpose", "--auth", "--cert-bundle", "--cli-auto-prompt", "--
+cli-rc-file", "--config-file", "--connection-timeout", "--debug", "--
+defaults-file", "--endpoint", "--generate-full-command-json-input", "
+--generate-param-json-input", "--help", "--latest-version", "--max-
+retries", "--no-retry", "--opc-client-request-id", "--opc-request-id",
+"--output", "--profile", "--proxy", "--query", "--raw-output", "--
+read-timeout", "--realm-specific-endpoint", "--region", "--release-
+info", "--request-id", "--version", "-?", "-d", "-h", "-i", "-v"

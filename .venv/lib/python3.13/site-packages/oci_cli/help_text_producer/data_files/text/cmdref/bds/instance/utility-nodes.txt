@@ -1,0 +1,17 @@
+utility-nodes
+*************
+
+
+Description
+===========
+
+Increases the size (scales out) of a cluster by adding utility nodes.
+The added utility nodes will have the same shape and will have the
+same amount of attached block storage as other utility nodes in the
+cluster. [Command Reference](addUtilityNodes)
+
+
+Available Commands
+==================
+
+* add

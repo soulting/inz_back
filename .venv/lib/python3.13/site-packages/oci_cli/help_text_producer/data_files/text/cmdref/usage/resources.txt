@@ -1,0 +1,22 @@
+resources
+*********
+
+
+Description
+===========
+
+Use the Usage Proxy CLI to list Oracle Support Rewards, view related
+detailed usage information, and manage users who redeem rewards. For
+more information, see Oracle Support Rewards Overview.
+
+
+Available Commands
+==================
+
+* resource-quotum-summary
+
+  * list-resource-quota
+
+* resource-summary
+
+  * list-resources

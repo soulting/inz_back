@@ -1,0 +1,22 @@
+stream-group
+************
+
+
+Description
+===========
+
+Details for a Stream Group
+
+
+Available Commands
+==================
+
+* change-compartment
+
+* create
+
+* delete
+
+* get
+
+* update

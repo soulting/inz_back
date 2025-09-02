@@ -1,0 +1,67 @@
+pluggable-database
+******************
+
+
+Description
+===========
+
+A pluggable database (PDB) is portable collection of schemas, schema
+objects, and non-schema objects that appears to an Oracle client as a
+non-container database. To use a PDB, it needs to be plugged into a
+CDB. To use any of the API operations, you must be authorized in an
+IAM policy. If you are not authorized, talk to a tenancy
+administrator. If you are an administrator who needs to write policies
+to give users access, see Getting Started with Policies.
+
+**Warning:** Oracle recommends that you avoid using any confidential
+information when you supply string values using the API.
+
+
+Available Commands
+==================
+
+* convert-to-regular
+
+* create
+
+* create-local-clone
+
+* create-remote-clone
+
+* create-snapshot
+
+* delete
+
+* delete-snapshot
+
+* disable-pluggable-database-management
+
+* enable-pluggable-database-management
+
+* get
+
+* get-snapshot
+
+* list
+
+* list-snapshots
+
+* local-clone
+
+* modify-pluggable-database-management
+
+* refresh
+
+* relocate-pdb
+
+* remote-clone
+
+* rotate-encryption-key
+
+* set-oci-pdb-key-version
+
+* start
+
+* stop
+
+* update

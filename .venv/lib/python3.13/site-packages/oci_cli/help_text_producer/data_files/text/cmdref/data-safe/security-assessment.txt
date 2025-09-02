@@ -1,0 +1,70 @@
+security-assessment
+*******************
+
+
+Description
+===========
+
+A security assessment that provides an overall insight into your
+database security posture. The security assessment results are based
+on the analysis of your database configurations, user accounts, and
+security controls. For more information, see Security Assessment
+Overview.
+
+
+Available Commands
+==================
+
+* apply-security-assessment-template
+
+* change-compartment
+
+* compare
+
+* compare-to-template-baseline
+
+* create
+
+* delete
+
+* download-security-assessment-report
+
+* generate-security-assessment-report
+
+* get
+
+* get-security-assessment-comparison
+
+* get-template-baseline-comparison
+
+* list
+
+* list-checks
+
+* list-finding-analytics
+
+* list-findings
+
+* list-findings-change-audit-logs
+
+* list-security-feature-analytics
+
+* list-security-features
+
+* list-template-analytics
+
+* list-template-association-analytics
+
+* patch-checks
+
+* patch-findings
+
+* refresh
+
+* remove
+
+* set-security-assessment-baseline
+
+* unset-security-assessment-baseline
+
+* update

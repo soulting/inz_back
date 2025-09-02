@@ -1,0 +1,14 @@
+message-summary
+***************
+
+
+Description
+===========
+
+Deployment message Summary.
+
+
+Available Commands
+==================
+
+* list-messages

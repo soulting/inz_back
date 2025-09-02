@@ -1,0 +1,15 @@
+connection-details
+******************
+
+
+Description
+===========
+
+Database system connection information. Used to connect to PostgreSQL
+instance(s).
+
+
+Available Commands
+==================
+
+* get

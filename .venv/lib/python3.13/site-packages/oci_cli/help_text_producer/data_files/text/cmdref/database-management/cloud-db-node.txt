@@ -1,0 +1,20 @@
+cloud-db-node
+*************
+
+
+Description
+===========
+
+The details of a cloud database node.
+
+
+Available Commands
+==================
+
+* get
+
+* list
+
+* summarize-cloud-db-node-metrics
+
+* update

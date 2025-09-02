@@ -1,0 +1,14 @@
+flex-component
+**************
+
+
+Description
+===========
+
+Results of a FlexComponent lists. Contains FlexComponentSummary items.
+
+
+Available Commands
+==================
+
+* list

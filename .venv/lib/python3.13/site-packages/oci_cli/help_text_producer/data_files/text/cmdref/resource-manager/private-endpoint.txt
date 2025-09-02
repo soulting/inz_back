@@ -1,0 +1,28 @@
+private-endpoint
+****************
+
+
+Description
+===========
+
+A private endpoint allowing Resource Manager to access nonpublic cloud
+resources. For more information about private endpoints, see Private
+Endpoint Management.
+
+
+Available Commands
+==================
+
+* change-compartment
+
+* create
+
+* delete
+
+* get
+
+* get-reachable-ip
+
+* list
+
+* update

@@ -1,0 +1,15 @@
+work-request-log
+****************
+
+
+Description
+===========
+
+Results of a workRequestLog search. Contains both workRequestLog items
+and other information, such as metadata.
+
+
+Available Commands
+==================
+
+* list

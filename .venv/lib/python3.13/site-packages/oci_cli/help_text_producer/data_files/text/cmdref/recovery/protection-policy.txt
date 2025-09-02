@@ -1,0 +1,27 @@
+protection-policy
+*****************
+
+
+Description
+===========
+
+The details of a protection policy.A policy defines the exact number
+of days to retain protected database backups created by Recovery
+Service. Each protected database must be associated with one
+protection policy. You can use Oracle-defined protection policies or
+create custom policies to suit your internal backup storage regulation
+demands.
+
+
+Available Commands
+==================
+
+* change-compartment
+
+* create
+
+* delete
+
+* get
+
+* update

@@ -1,0 +1,18 @@
+block-storage
+*************
+
+
+Description
+===========
+
+Adds block storage to existing worker/compute only worker nodes. The
+same amount of  storage will be added to all worker/compute only
+worker nodes. No change will be made to storage that is already
+attached. Block storage cannot be removed. [Command
+Reference](addBlockStorage)
+
+
+Available Commands
+==================
+
+* add

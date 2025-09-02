@@ -1,0 +1,74 @@
+managed-instance
+****************
+
+
+Description
+===========
+
+An object that defines the instance being managed by the service.
+
+
+Available Commands
+==================
+
+* associate-managed-instances-with-management-station
+
+* attach-profile
+
+* attach-software-sources
+
+* delete
+
+* detach-profile
+
+* detach-software-sources
+
+* disable-module-stream
+
+* enable-module-stream
+
+* get
+
+* get-analytic-content
+
+* get-content
+
+* install-module-profile
+
+* install-packages
+
+* install-windows-updates
+
+* list
+
+* list-available-packages
+
+* list-available-software-sources
+
+* list-available-windows-updates
+
+* list-errata
+
+* list-installed-packages
+
+* list-installed-windows-updates
+
+* list-modules
+
+* list-updatable-packages
+
+* reboot
+
+* refresh-software
+
+* remove-module-profile
+
+* remove-packages
+
+* summarize-analytics
+
+* switch-module-stream
+
+* update
+
+* update-packages

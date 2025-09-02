@@ -1,0 +1,14 @@
+support-doc-collection
+**********************
+
+
+Description
+===========
+
+Results of a supportDoc search. Contains the supportDoc items.
+
+
+Available Commands
+==================
+
+* list-support-docs

@@ -1,0 +1,22 @@
+task-record
+***********
+
+
+Description
+===========
+
+Attributes of a task record.
+
+
+Available Commands
+==================
+
+* change-compartment
+
+* create
+
+* delete
+
+* get
+
+* update

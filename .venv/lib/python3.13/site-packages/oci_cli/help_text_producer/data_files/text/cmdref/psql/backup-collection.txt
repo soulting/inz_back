@@ -1,0 +1,15 @@
+backup-collection
+*****************
+
+
+Description
+===========
+
+Results of a backup search. Contains the BackupSummary items and other
+information, such as metadata.
+
+
+Available Commands
+==================
+
+* list-backups

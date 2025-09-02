@@ -1,0 +1,41 @@
+configuration-source-provider
+*****************************
+
+
+Description
+===========
+
+The properties that define a configuration source provider. For more
+information, see Managing Configuration Source Providers.
+
+
+Available Commands
+==================
+
+* change-compartment
+
+* create
+
+* create-bitbucket-cloud-username-app-password-provider
+
+* create-bitbucket-server-access-token-provider
+
+* create-github-access-token-provider
+
+* create-gitlab-access-token-provider
+
+* delete
+
+* get
+
+* list
+
+* update
+
+* update-bitbucket-cloud-username-app-password-provider
+
+* update-bitbucket-server-access-token-provider
+
+* update-github-access-token-provider
+
+* update-gitlab-access-token-provider

@@ -1,0 +1,19 @@
+subscription
+************
+
+
+Description
+===========
+
+Base subscription type, which carries shared properties for any
+subscription version.
+
+
+Available Commands
+==================
+
+* get
+
+* list
+
+* list-available-regions

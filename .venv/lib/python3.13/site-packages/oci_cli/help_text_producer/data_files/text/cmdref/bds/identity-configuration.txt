@@ -1,0 +1,34 @@
+identity-configuration
+**********************
+
+
+Description
+===========
+
+Details about the identity configuration
+
+
+Available Commands
+==================
+
+* activate-iam-user-sync-configuration
+
+* activate-upst-configuration
+
+* create
+
+* deactivate-iam-user-sync-configuration
+
+* deactivate-upst-configuration
+
+* delete
+
+* get
+
+* list
+
+* refresh-confidential-application
+
+* refresh-upst-token-exchange-keytab
+
+* update

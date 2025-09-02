@@ -1,0 +1,37 @@
+vm-cluster
+**********
+
+
+Description
+===========
+
+Details of the VM cluster resource. Applies to Exadata Cloud@Customer
+instances only.
+
+
+Available Commands
+==================
+
+* add
+
+* change-compartment
+
+* create
+
+* delete
+
+* get
+
+* get-update
+
+* get-update-history
+
+* list
+
+* list-update-histories
+
+* list-updates
+
+* remove
+
+* update

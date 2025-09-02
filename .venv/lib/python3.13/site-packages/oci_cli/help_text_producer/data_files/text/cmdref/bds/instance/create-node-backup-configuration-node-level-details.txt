@@ -1,0 +1,152 @@
+"create-node-backup-configuration-node-level-details"
+*****************************************************
+
+* Description
+
+* Usage
+
+* Required Parameters
+
+* Optional Parameters
+
+* Global Parameters
+
+* Example using required parameter
+
+
+Description
+===========
+
+Add a node volume backup configuration to the cluster for an indicated
+node type or node.
+
+
+Usage
+=====
+
+   oci bds instance create-node-backup-configuration-node-level-details [OPTIONS]
+
+
+Required Parameters
+===================
+
+--bds-instance-id [text]
+
+The OCID of the cluster.
+
+--level-type-details-node-host-name [text]
+
+Host name of the node to create backup configuration.
+
+--schedule [text]
+
+Day/time recurrence (specified following RFC 5545) at which to trigger
+the backup process. Currently only DAILY, WEEKLY and MONTHLY frequency
+is supported. Days of the week are specified using BYDAY field. Time
+of the day is specified using BYHOUR. Other fields are not supported.
+
+
+Optional Parameters
+===================
+
+--backup-type [text]
+
+Incremental backup type includes only the changes since the last
+backup. Full backup type includes all changes since the volume was
+created.
+
+--display-name [text]
+
+A user-friendly name. Only ASCII alphanumeric characters with no
+spaces allowed. The name does not have to be unique, and it may be
+changed. Avoid entering confidential information.
+
+--from-json [text]
+
+Provide input to this command as a JSON document from a file using the
+file://path-to/file syntax.
+
+The "--generate-full-command-json-input" option can be used to
+generate a sample json file to be used with this command option. The
+key names are pre-populated and match the command option names
+(converted to camelCase format, e.g. compartment-id –> compartmentId),
+while the values of the keys need to be populated by the user before
+using the sample file as an input to this command. For any command
+option that accepts multiple values, the value of the key can be a
+JSON array.
+
+Options can still be provided on the command line. If an option exists
+in both the JSON document and the command line then the command line
+specified value will be used.
+
+For examples on usage of this option, please see our “using CLI with
+advanced JSON options” link: https://docs.cloud.oracle.com/iaas/Conte
+nt/API/SDKDocs/cliusing.htm#AdvancedJSONOptions
+
+--max-wait-seconds [integer]
+
+The maximum time to wait for the work request to reach the state
+defined by "--wait-for-state". Defaults to 1200 seconds.
+
+--number-of-backups-to-retain [integer]
+
+Number of backup copies to retain.
+
+--timezone [text]
+
+The time zone of the execution schedule, in IANA time zone database
+name format
+
+--wait-for-state [text]
+
+This operation asynchronously creates, modifies or deletes a resource
+and uses a work request to track the progress of the operation.
+Specify this option to perform the action and then wait until the work
+request reaches a certain state. Multiple states can be specified,
+returning on the first state. For example, "--wait-for-state"
+SUCCEEDED "--wait-for-state" FAILED would return on whichever
+lifecycle state is reached first. If timeout is reached, a return code
+of 2 is returned. For any other error, a return code of 1 is returned.
+
+Accepted values are:
+
+   ACCEPTED, CANCELED, CANCELING, FAILED, IN_PROGRESS, SUCCEEDED
+
+--wait-interval-seconds [integer]
+
+Check every "--wait-interval-seconds" to see whether the work request
+has reached the state defined by "--wait-for-state". Defaults to 30
+seconds.
+
+
+Global Parameters
+=================
+
+Use "oci --help" for help on global parameters.
+
+"--auth-purpose", "--auth", "--cert-bundle", "--cli-auto-prompt", "--
+cli-rc-file", "--config-file", "--connection-timeout", "--debug", "--
+defaults-file", "--endpoint", "--generate-full-command-json-input", "
+--generate-param-json-input", "--help", "--latest-version", "--max-
+retries", "--no-retry", "--opc-client-request-id", "--opc-request-id",
+"--output", "--profile", "--proxy", "--query", "--raw-output", "--
+read-timeout", "--realm-specific-endpoint", "--region", "--release-
+info", "--request-id", "--version", "-?", "-d", "-h", "-i", "-v"
+
+
+Example using required parameter
+================================
+
+Copy the following CLI commands into a file named example.sh. Run the
+command by typing “bash example.sh” and replacing the example
+parameters with your own.
+
+Please note this sample will only work in the POSIX-compliant bash-
+like shell. You need to set up the OCI configuration and appropriate
+security policies before trying the examples.
+
+       export bds_instance_id=<substitute-value-of-bds_instance_id> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/bds/instance/create-node-backup-configuration-node-level-details.html#cmdoption-bds-instance-id
+       export level_type_details_node_host_name=<substitute-value-of-level_type_details_node_host_name> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/bds/instance/create-node-backup-configuration-node-level-details.html#cmdoption-level-type-details-node-host-name
+       export schedule=<substitute-value-of-schedule> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/bds/instance/create-node-backup-configuration-node-level-details.html#cmdoption-schedule
+
+       oci bds instance create-node-backup-configuration-node-level-details --bds-instance-id $bds_instance_id --level-type-details-node-host-name $level_type_details_node_host_name --schedule $schedule

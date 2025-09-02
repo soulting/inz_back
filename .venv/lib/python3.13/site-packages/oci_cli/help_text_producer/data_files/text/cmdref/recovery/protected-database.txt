@@ -1,0 +1,34 @@
+protected-database
+******************
+
+
+Description
+===========
+
+A protected database is an Oracle Cloud Database whose backups are
+managed by Oracle Database Autonomous Recovery Service. Each protected
+database requires a recovery service subnet and a protection policy to
+use Recovery Service as the backup destination for centralized backup
+and recovery
+
+
+Available Commands
+==================
+
+* cancel-protected-database-deletion
+
+* change-compartment
+
+* change-protected-database-subscription
+
+* create
+
+* delete
+
+* fetch-protected-database-configuration
+
+* get
+
+* schedule-protected-database-deletion
+
+* update

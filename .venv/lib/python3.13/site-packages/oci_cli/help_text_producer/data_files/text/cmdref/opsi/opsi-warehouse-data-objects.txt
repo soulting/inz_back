@@ -1,0 +1,19 @@
+opsi-warehouse-data-objects
+***************************
+
+
+Description
+===========
+
+Logical grouping used for Operations Insights Warehouse data objects
+operations.
+
+
+Available Commands
+==================
+
+* list
+
+* query-warehouse-data-standard-query
+
+* query-warehouse-data-templatized-query

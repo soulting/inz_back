@@ -1,0 +1,15 @@
+pdb-metrics
+***********
+
+
+Description
+===========
+
+The summary of Pluggable Databases (PDBs) and their resource usage
+metrics, within a specific Container Database (CDB).
+
+
+Available Commands
+==================
+
+* get

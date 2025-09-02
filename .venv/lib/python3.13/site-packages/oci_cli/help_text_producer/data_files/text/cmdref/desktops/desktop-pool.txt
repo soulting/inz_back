@@ -1,0 +1,33 @@
+desktop-pool
+************
+
+
+Description
+===========
+
+Provides information about a desktop pool including all configuration
+parameters.
+
+
+Available Commands
+==================
+
+* change-compartment
+
+* create
+
+* delete
+
+* get
+
+* list
+
+* list-desktops
+
+* list-volumes
+
+* start
+
+* stop
+
+* update

@@ -1,0 +1,22 @@
+category
+********
+
+
+Description
+===========
+
+A category into which resources can be placed.
+
+
+Available Commands
+==================
+
+* get
+
+* list
+
+* list-resource-category
+
+* remove-resource-category
+
+* update-resource-category

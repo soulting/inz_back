@@ -1,0 +1,29 @@
+schedule
+********
+
+
+Description
+===========
+
+A repeating action. Examples: * Invoke a ML Pipeline Run once an hour.
+* Call ML Job Run every night at midnight.
+
+
+Available Commands
+==================
+
+* activate
+
+* change-compartment
+
+* create
+
+* deactivate
+
+* delete
+
+* get
+
+* list
+
+* update

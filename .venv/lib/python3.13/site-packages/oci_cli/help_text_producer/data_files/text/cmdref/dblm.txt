@@ -1,0 +1,60 @@
+dblm
+****
+
+
+Description
+===========
+
+A description of the Dblm CLI
+
+
+Available Commands
+==================
+
+* dblm-patch-management
+
+  * get-patch-management
+
+* dblm-vulnerability
+
+  * get-vulnerability
+
+  * list-aggregated-vulnerability-data
+
+  * list-vulnerabilities
+
+* notification-collection
+
+  * list-notifications
+
+* patch-databases-collection
+
+  * list-databases
+
+* vulnerability-resource-collection
+
+  * list-vulnerability-resources
+
+* vulnerability-scan
+
+  * create
+
+  * get
+
+* vulnerability-scan-collection
+
+  * list-vulnerability-scans
+
+* work-request
+
+  * get
+
+  * list
+
+* work-request-error
+
+  * list
+
+* work-request-log-entry
+
+  * list-work-request-logs

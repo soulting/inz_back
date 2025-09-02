@@ -1,0 +1,16 @@
+support-doc
+***********
+
+
+Description
+===========
+
+The model for the supportDoc details.
+
+
+Available Commands
+==================
+
+* get
+
+* get-support-doc-content

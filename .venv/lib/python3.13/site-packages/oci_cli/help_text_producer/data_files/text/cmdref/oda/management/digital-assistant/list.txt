@@ -1,0 +1,194 @@
+"list"
+******
+
+* Description
+
+* Usage
+
+* Required Parameters
+
+* Optional Parameters
+
+* Global Parameters
+
+* Example using required parameter
+
+
+Description
+===========
+
+Returns a page of Digital Assistants that belong to the specified
+Digital Assistant instance.
+
+If the *opc-next-page* header appears in the response, then there are
+more items to retrieve. To get the next page in the subsequent GET
+request, include the header’s value as the *page* query parameter.
+
+
+Usage
+=====
+
+   oci oda management digital-assistant list [OPTIONS]
+
+
+Required Parameters
+===================
+
+--oda-instance-id [text]
+
+Unique Digital Assistant instance identifier.
+
+
+Optional Parameters
+===================
+
+--all
+
+Fetches all pages of results. If you provide this option, then you
+cannot provide the "--limit" option.
+
+--category [text]
+
+List only Bot resources with this category.
+
+--from-json [text]
+
+Provide input to this command as a JSON document from a file using the
+file://path-to/file syntax.
+
+The "--generate-full-command-json-input" option can be used to
+generate a sample json file to be used with this command option. The
+key names are pre-populated and match the command option names
+(converted to camelCase format, e.g. compartment-id –> compartmentId),
+while the values of the keys need to be populated by the user before
+using the sample file as an input to this command. For any command
+option that accepts multiple values, the value of the key can be a
+JSON array.
+
+Options can still be provided on the command line. If an option exists
+in both the JSON document and the command line then the command line
+specified value will be used.
+
+For examples on usage of this option, please see our “using CLI with
+advanced JSON options” link: https://docs.cloud.oracle.com/iaas/Conte
+nt/API/SDKDocs/cliusing.htm#AdvancedJSONOptions
+
+--id [text]
+
+Unique Digital Assistant identifier.
+
+--lifecycle-details [text]
+
+List only Bot resources with this lifecycle details.
+
+--lifecycle-state [text]
+
+List only the resources that are in this lifecycle state.
+
+Accepted values are:
+
+   ACTIVE, CREATING, DELETED, DELETING, FAILED, INACTIVE, UPDATING
+
+--limit [integer]
+
+The maximum number of items to return per page.
+
+--name [text]
+
+List only Bot resources with this name. Names are unique and may not
+change.
+
+Example:
+
+   MySkill
+
+--namespace [text]
+
+List only Bot resources with this namespace. Namespaces may not
+change.
+
+Example:
+
+   MyNamespace
+
+--page [text]
+
+The page at which to start retrieving results.
+
+You get this value from the *opc-next-page* header in a previous list
+request. To retireve the first page, omit this query parameter.
+
+Example:
+
+   MToxMA==
+
+--page-size [integer]
+
+When fetching results, the number of results to fetch per call. Only
+valid when used with "--all" or "--limit", and ignored otherwise.
+
+--platform-version [text]
+
+List only Bot resources with this platform version.
+
+--sort-by [text]
+
+Sort on this field. You can specify one sort order only. The default
+sort field is *timeCreated*.
+
+The default sort order for *timeCreated* and *timeUpdated* is
+descending. For all other sort fields the default sort order is
+ascending.
+
+Accepted values are:
+
+   name, timeCreated, timeUpdated
+
+--sort-order [text]
+
+Sort the results in this order, use either *ASC* (ascending) or *DESC*
+(descending).
+
+Accepted values are:
+
+   ASC, DESC
+
+--version-parameterconflict [text]
+
+List only Bot resources with this version. Versions are unique and may
+not change.
+
+Example:
+
+   1.0
+
+
+Global Parameters
+=================
+
+Use "oci --help" for help on global parameters.
+
+"--auth-purpose", "--auth", "--cert-bundle", "--cli-auto-prompt", "--
+cli-rc-file", "--config-file", "--connection-timeout", "--debug", "--
+defaults-file", "--endpoint", "--generate-full-command-json-input", "
+--generate-param-json-input", "--help", "--latest-version", "--max-
+retries", "--no-retry", "--opc-client-request-id", "--opc-request-id",
+"--output", "--profile", "--proxy", "--query", "--raw-output", "--
+read-timeout", "--realm-specific-endpoint", "--region", "--release-
+info", "--request-id", "--version", "-?", "-d", "-h", "-i", "-v"
+
+
+Example using required parameter
+================================
+
+Copy the following CLI commands into a file named example.sh. Run the
+command by typing “bash example.sh” and replacing the example
+parameters with your own.
+
+Please note this sample will only work in the POSIX-compliant bash-
+like shell. You need to set up the OCI configuration and appropriate
+security policies before trying the examples.
+
+       export oda_instance_id=<substitute-value-of-oda_instance_id> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/oda/management/digital-assistant/list.html#cmdoption-oda-instance-id
+
+       oci oda management digital-assistant list --oda-instance-id $oda_instance_id

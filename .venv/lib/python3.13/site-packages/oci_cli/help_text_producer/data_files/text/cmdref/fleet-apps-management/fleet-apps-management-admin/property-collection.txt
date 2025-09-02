@@ -1,0 +1,15 @@
+property-collection
+*******************
+
+
+Description
+===========
+
+Results of a property search. Contains both PropertySummary items and
+other information, such as metadata.
+
+
+Available Commands
+==================
+
+* list-properties

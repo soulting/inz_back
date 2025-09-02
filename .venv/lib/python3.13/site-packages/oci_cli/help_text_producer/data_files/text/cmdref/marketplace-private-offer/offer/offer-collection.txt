@@ -1,0 +1,15 @@
+offer-collection
+****************
+
+
+Description
+===========
+
+Results of a offers search. Contains boh OfferSummary items and other
+information, such as metadata.
+
+
+Available Commands
+==================
+
+* list-offers

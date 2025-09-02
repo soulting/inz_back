@@ -1,0 +1,43 @@
+tag
+***
+
+
+Description
+===========
+
+A tag definition that belongs to a specific tag namespace.  “Defined
+tags” must be set up in your tenancy before you can apply them to
+resources. For more information, see Managing Tags and Tag Namespaces.
+
+**Warning:** Oracle recommends that you avoid using any confidential
+information when you supply string values using the API.
+
+
+Available Commands
+==================
+
+* bulk-delete
+
+* bulk-edit
+
+* bulk-edit-tags-resource-type
+
+  * list
+
+* create
+
+* delete
+
+* get
+
+* import-standard-tags
+
+* list
+
+* list-cost-tracking
+
+* reactivate
+
+* retire
+
+* update

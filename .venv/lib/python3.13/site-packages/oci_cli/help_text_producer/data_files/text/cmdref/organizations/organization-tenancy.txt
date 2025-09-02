@@ -1,0 +1,22 @@
+organization-tenancy
+********************
+
+
+Description
+===========
+
+The information about the organization tenancy.
+
+
+Available Commands
+==================
+
+* approve-organization-tenancy-for-transfer
+
+* delete
+
+* get
+
+* restore
+
+* unapprove-organization-tenancy-for-transfer

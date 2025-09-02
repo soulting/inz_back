@@ -1,0 +1,191 @@
+resource-manager
+****************
+
+
+Description
+===========
+
+Use the Resource Manager CLI to automate deployment and operations for
+all Oracle Cloud Infrastructure resources. Using the infrastructure-
+as-code (IaC) model, the service is based on Terraform, an open source
+industry standard that lets DevOps engineers develop and deploy their
+infrastructure anywhere. For more information, see the Resource
+Manager documentation.
+
+
+Available Commands
+==================
+
+* associated-resource-summary
+
+  * list-job-associated-resources
+
+  * list-stack-associated-resources
+
+* configuration-source-provider
+
+  * change-compartment
+
+  * create
+
+  * create-bitbucket-cloud-username-app-password-provider
+
+  * create-bitbucket-server-access-token-provider
+
+  * create-github-access-token-provider
+
+  * create-gitlab-access-token-provider
+
+  * delete
+
+  * get
+
+  * list
+
+  * update
+
+  * update-bitbucket-cloud-username-app-password-provider
+
+  * update-bitbucket-server-access-token-provider
+
+  * update-github-access-token-provider
+
+  * update-gitlab-access-token-provider
+
+* job
+
+  * cancel
+
+  * create
+
+  * create-apply-job
+
+  * create-apply-rollback-job
+
+  * create-destroy-job
+
+  * create-import-tf-state-job
+
+  * create-plan-job
+
+  * create-plan-rollback-job
+
+  * get
+
+  * get-detailed-log-content
+
+  * get-job-logs
+
+  * get-job-logs-content
+
+  * get-job-tf-config
+
+  * get-job-tf-plan
+
+  * get-job-tf-state
+
+  * list
+
+  * update
+
+* job-output-summary
+
+  * list-job-outputs
+
+* private-endpoint
+
+  * change-compartment
+
+  * create
+
+  * delete
+
+  * get
+
+  * get-reachable-ip
+
+  * list
+
+  * update
+
+* stack
+
+  * change-compartment
+
+  * code
+
+  * copy
+
+  * create
+
+  * create-from-bitbucket-cloud
+
+  * create-from-bitbucket-server
+
+  * create-from-compartment
+
+  * create-from-git-provider
+
+  * create-from-object-storage
+
+  * create-from-template
+
+  * create-stack-create-dev-ops-config-source-details
+
+  * delete
+
+  * detect-drift
+
+  * get
+
+  * get-stack-tf-config
+
+  * get-stack-tf-state
+
+  * list
+
+  * list-resource-discovery-services
+
+  * list-resource-drift-details
+
+  * list-terraform-versions
+
+  * update
+
+  * update-from-bitbucket-cloud
+
+  * update-from-git-provider
+
+  * update-from-object-storage
+
+  * update-stack-update-dev-ops-config-source-details
+
+* template
+
+  * change-compartment
+
+  * create
+
+  * delete
+
+  * get
+
+  * get-template-logo
+
+  * get-template-tf-config
+
+  * list
+
+  * list-template-categories
+
+  * update
+
+* work-request
+
+  * get
+
+  * list
+
+  * list-work-request-errors
+
+  * list-work-request-logs

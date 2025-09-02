@@ -1,0 +1,17 @@
+fleet-target-collection
+***********************
+
+
+Description
+===========
+
+Results of a fleetTarget search. Contains both FleetTargetSummary
+items and other information, such as metadata.
+
+
+Available Commands
+==================
+
+* list-fleet-targets
+
+* list-targets

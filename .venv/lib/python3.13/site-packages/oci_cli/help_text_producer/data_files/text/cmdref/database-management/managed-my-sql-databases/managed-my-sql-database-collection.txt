@@ -1,0 +1,14 @@
+managed-my-sql-database-collection
+**********************************
+
+
+Description
+===========
+
+A collection of Managed MySQL Database objects.
+
+
+Available Commands
+==================
+
+* list-managed-my-sql-databases

@@ -1,0 +1,15 @@
+impacted-resource-summary
+*************************
+
+
+Description
+===========
+
+Summary of information on a resource that’s been impacted by a
+detected problem.
+
+
+Available Commands
+==================
+
+* list-impacted-resources

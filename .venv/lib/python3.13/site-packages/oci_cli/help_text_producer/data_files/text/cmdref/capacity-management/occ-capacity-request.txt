@@ -1,0 +1,31 @@
+occ-capacity-request
+********************
+
+
+Description
+===========
+
+A single request of some quantity of a specific server type, in a
+specific location and expected delivery date. The maximum amount
+possible to request is the smallest number between the number of
+servers available for purchase and the number of servers allowed by
+the constraints (For example, power, network, physical space, and so
+on).
+
+
+Available Commands
+==================
+
+* create
+
+* delete
+
+* get
+
+* patch
+
+* patch-internal
+
+* update
+
+* update-internal

@@ -1,0 +1,50 @@
+internal-demand-signal
+**********************
+
+
+Description
+===========
+
+OCI Control Center (OCC) Capacity Management enables you to manage
+capacity requests in realms where OCI Control Center Capacity
+Management is available. For more information, see OCI Control Center.
+
+
+Available Commands
+==================
+
+* internal-occm-demand-signal
+
+  * get
+
+  * list
+
+  * update
+
+* internal-occm-demand-signal-catalog-resource
+
+  * list
+
+* internal-occm-demand-signal-delivery
+
+  * create
+
+  * delete
+
+  * get
+
+  * list
+
+  * update
+
+* internal-occm-demand-signal-item-collection
+
+  * list-internal
+
+* occm-demand-signal-catalog
+
+  * list-internal
+
+* occm-demand-signal-catalog-resource
+
+  * get

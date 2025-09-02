@@ -1,0 +1,54 @@
+inventory
+*********
+
+
+Description
+===========
+
+CLI for Oracle Cloud Bridge service.
+
+
+Available Commands
+==================
+
+* asset
+
+  * change-compartment
+
+  * change-tags
+
+  * create
+
+  * delete
+
+  * get
+
+  * list
+
+  * update
+
+* asset-aggregation
+
+  * analyze-assets
+
+* historical-metric
+
+  * list
+
+  * submit
+
+* inventory
+
+  * create
+
+  * delete
+
+  * get
+
+  * import
+
+  * import-via-assets
+
+  * list
+
+  * update

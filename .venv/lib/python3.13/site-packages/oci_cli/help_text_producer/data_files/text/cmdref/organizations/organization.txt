@@ -1,0 +1,20 @@
+organization
+************
+
+
+Description
+===========
+
+An organization entity.
+
+
+Available Commands
+==================
+
+* get
+
+* list
+
+* list-organization-tenancies
+
+* update

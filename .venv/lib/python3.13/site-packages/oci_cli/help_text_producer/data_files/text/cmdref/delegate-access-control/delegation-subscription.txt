@@ -1,0 +1,24 @@
+delegation-subscription
+***********************
+
+
+Description
+===========
+
+Details of the Delegation Subscription.
+
+
+Available Commands
+==================
+
+* change-compartment
+
+* create
+
+* delete
+
+* get
+
+* list
+
+* update

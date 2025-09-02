@@ -1,0 +1,16 @@
+plugin
+******
+
+
+Description
+===========
+
+An Oracle Cloud Agent plugin.
+
+
+Available Commands
+==================
+
+* get
+
+* list

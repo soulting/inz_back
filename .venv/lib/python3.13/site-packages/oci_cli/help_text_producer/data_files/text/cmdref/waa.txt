@@ -1,0 +1,58 @@
+waa
+***
+
+
+Description
+===========
+
+CLI for the Web Application Acceleration service. Use this CLI to
+manage regional Web App Acceleration policies such as Caching and
+Compression for accelerating HTTP services.
+
+
+Available Commands
+==================
+
+* web-app-acceleration
+
+  * change-compartment
+
+  * create-for-load-balancer
+
+  * delete
+
+  * get
+
+  * list
+
+  * purge-entire-cache
+
+  * update
+
+* web-app-acceleration-policy
+
+  * change-compartment
+
+  * create
+
+  * delete
+
+  * get
+
+  * list
+
+  * update
+
+* work-request
+
+  * get
+
+  * list
+
+* work-request-error
+
+  * list
+
+* work-request-log
+
+  * list

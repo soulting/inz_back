@@ -1,0 +1,25 @@
+ekm
+***
+
+
+Description
+===========
+
+Use the Key Management CLI to manage vaults and keys. For more
+information, see Managing Vaults and Managing Keys.
+
+
+Available Commands
+==================
+
+* ekms-private-endpoint
+
+  * create
+
+  * delete
+
+  * get
+
+  * list
+
+  * update

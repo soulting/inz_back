@@ -1,0 +1,15 @@
+internal-occm-demand-signal-item-collection
+*******************************************
+
+
+Description
+===========
+
+A list containing detailed information about different resources
+demanded as part of a given demand signal.
+
+
+Available Commands
+==================
+
+* list-internal

@@ -1,0 +1,233 @@
+"add"
+*****
+
+* Description
+
+* Usage
+
+* Required Parameters
+
+* Optional Parameters
+
+* Global Parameters
+
+* Example using required parameter
+
+
+Description
+===========
+
+Adds a lock to a resource.
+
+
+Usage
+=====
+
+   oci fs file-system add [OPTIONS]
+
+
+Required Parameters
+===================
+
+--file-system-id [text]
+
+The OCID of the file system.
+
+--type [text]
+
+Type of the lock.
+
+Accepted values are:
+
+   DELETE, FULL
+
+
+Optional Parameters
+===================
+
+--from-json [text]
+
+Provide input to this command as a JSON document from a file using the
+file://path-to/file syntax.
+
+The "--generate-full-command-json-input" option can be used to
+generate a sample json file to be used with this command option. The
+key names are pre-populated and match the command option names
+(converted to camelCase format, e.g. compartment-id –> compartmentId),
+while the values of the keys need to be populated by the user before
+using the sample file as an input to this command. For any command
+option that accepts multiple values, the value of the key can be a
+JSON array.
+
+Options can still be provided on the command line. If an option exists
+in both the JSON document and the command line then the command line
+specified value will be used.
+
+For examples on usage of this option, please see our “using CLI with
+advanced JSON options” link: https://docs.cloud.oracle.com/iaas/Conte
+nt/API/SDKDocs/cliusing.htm#AdvancedJSONOptions
+
+--if-match [text]
+
+For optimistic concurrency control. In the PUT or DELETE call for a
+resource, set the *if-match* parameter to the value of the etag from a
+previous GET or POST response for that resource. The resource will be
+updated or deleted only if the etag you provide matches the resource’s
+current etag value.
+
+--max-wait-seconds [integer]
+
+The maximum time to wait for the resource to reach the lifecycle state
+defined by "--wait-for-state". Defaults to 1200 seconds.
+
+--message [text]
+
+A message added by the creator of the lock. This is typically used to
+give an indication of why the resource is locked.
+
+--related-resource-id [text]
+
+The ID of the resource that is locking this resource. Indicates that
+deleting this resource will remove the lock.
+
+--time-created [datetime]
+
+When the lock was created.
+
+   The following datetime formats are supported:
+
+
+UTC with microseconds
+---------------------
+
+   Format: YYYY-MM-DDTHH:mm:ss.ssssssTZD
+   Example: 2017-09-15T20:30:00.123456Z
+
+   UTC with milliseconds
+   ***********************
+   .. code::
+
+       Format: YYYY-MM-DDTHH:mm:ss.sssTZD
+       Example: 2017-09-15T20:30:00.123Z
+
+   UTC without milliseconds
+   **************************
+   .. code::
+
+       Format: YYYY-MM-DDTHH:mm:ssTZD
+       Example: 2017-09-15T20:30:00Z
+
+   UTC with minute precision
+   **************************
+   .. code::
+
+       Format: YYYY-MM-DDTHH:mmTZD
+       Example: 2017-09-15T20:30Z
+
+
+Timezone with microseconds
+--------------------------
+
+   Format: YYYY-MM-DDTHH:mm:ssTZD
+   Example: 2017-09-15T12:30:00.456789-08:00, 2017-09-15T12:30:00.456789-0800
+
+   Timezone with milliseconds
+   ***************************
+   .. code::
+
+       Format: YYYY-MM-DDTHH:mm:ssTZD
+       Example: 2017-09-15T12:30:00.456-08:00, 2017-09-15T12:30:00.456-0800
+
+   Timezone without milliseconds
+   *******************************
+   .. code::
+
+       Format: YYYY-MM-DDTHH:mm:ssTZD
+       Example: 2017-09-15T12:30:00-08:00, 2017-09-15T12:30:00-0800
+
+   Timezone with minute precision
+   *******************************
+   .. code::
+
+       Format: YYYY-MM-DDTHH:mmTZD
+       Example: 2017-09-15T12:30-08:00, 2017-09-15T12:30-0800
+
+   Short date and time
+   ********************
+   The timezone for this date and time will be taken as UTC (Needs to be surrounded by single or double quotes)
+
+   .. code::
+
+       Format: 'YYYY-MM-DD HH:mm' or "YYYY-MM-DD HH:mm"
+       Example: '2017-09-15 17:25'
+
+   Date Only
+   **********
+   This date will be taken as midnight UTC of that day
+
+   .. code::
+
+       Format: YYYY-MM-DD
+       Example: 2017-09-15
+
+   Epoch seconds
+   **************
+   .. code::
+
+       Example: 1412195400
+
+--wait-for-state [text]
+
+This operation creates, modifies or deletes a resource that has a
+defined lifecycle state. Specify this option to perform the action and
+then wait until the resource reaches a given lifecycle state. Multiple
+states can be specified, returning on the first state. For example, "
+--wait-for-state" SUCCEEDED "--wait-for-state" FAILED would return on
+whichever lifecycle state is reached first. If timeout is reached, a
+return code of 2 is returned. For any other error, a return code of 1
+is returned.
+
+Accepted values are:
+
+   ACTIVE, CREATING, DELETED, DELETING, FAILED, UPDATING
+
+--wait-interval-seconds [integer]
+
+Check every "--wait-interval-seconds" to see whether the resource has
+reached the lifecycle state defined by "--wait-for-state". Defaults to
+30 seconds.
+
+
+Global Parameters
+=================
+
+Use "oci --help" for help on global parameters.
+
+"--auth-purpose", "--auth", "--cert-bundle", "--cli-auto-prompt", "--
+cli-rc-file", "--config-file", "--connection-timeout", "--debug", "--
+defaults-file", "--endpoint", "--generate-full-command-json-input", "
+--generate-param-json-input", "--help", "--latest-version", "--max-
+retries", "--no-retry", "--opc-client-request-id", "--opc-request-id",
+"--output", "--profile", "--proxy", "--query", "--raw-output", "--
+read-timeout", "--realm-specific-endpoint", "--region", "--release-
+info", "--request-id", "--version", "-?", "-d", "-h", "-i", "-v"
+
+
+Example using required parameter
+================================
+
+Copy the following CLI commands into a file named example.sh. Run the
+command by typing “bash example.sh” and replacing the example
+parameters with your own.
+
+Please note this sample will only work in the POSIX-compliant bash-
+like shell. You need to set up the OCI configuration and appropriate
+security policies before trying the examples.
+
+       export availability_domain=<substitute-value-of-availability_domain> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/fs/file-system/create.html#cmdoption-availability-domain
+       export compartment_id=<substitute-value-of-compartment_id> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/fs/file-system/create.html#cmdoption-compartment-id
+       export type=<substitute-value-of-type> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/fs/file-system/add.html#cmdoption-type
+
+       file_system_id=$(oci fs file-system create --availability-domain $availability_domain --compartment-id $compartment_id --query data.id --raw-output)
+
+       oci fs file-system add --file-system-id $file_system_id --type $type

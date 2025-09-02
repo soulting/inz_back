@@ -1,0 +1,14 @@
+branding-setting
+****************
+
+
+Description
+===========
+
+Brand Settings schema
+
+
+Available Commands
+==================
+
+* get

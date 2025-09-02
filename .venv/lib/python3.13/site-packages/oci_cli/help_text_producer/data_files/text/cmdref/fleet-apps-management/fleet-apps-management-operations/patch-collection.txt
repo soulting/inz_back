@@ -1,0 +1,15 @@
+patch-collection
+****************
+
+
+Description
+===========
+
+Results of a patch search. Contains both PatchSummary items and other
+information, such as metadata.
+
+
+Available Commands
+==================
+
+* list-patches

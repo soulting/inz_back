@@ -1,0 +1,19 @@
+tenancy-attachment
+******************
+
+
+Description
+===========
+
+Tenancy attachment associates a tenancy to a governance rule via an
+inclusion criterion.
+
+
+Available Commands
+==================
+
+* get
+
+* list
+
+* retry

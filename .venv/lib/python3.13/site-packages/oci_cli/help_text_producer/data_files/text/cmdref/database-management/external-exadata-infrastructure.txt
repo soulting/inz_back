@@ -1,0 +1,30 @@
+external-exadata-infrastructure
+*******************************
+
+
+Description
+===========
+
+The details of the Exadata infrastructure.
+
+
+Available Commands
+==================
+
+* change-compartment
+
+* create
+
+* delete
+
+* disable-external-exadata-infrastructure-management
+
+* discover
+
+* enable-external-exadata-infrastructure-management
+
+* get
+
+* list
+
+* update

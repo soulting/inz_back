@@ -1,0 +1,24 @@
+diagnosability
+**************
+
+
+Description
+===========
+
+Use the Database Management CLI to monitor and manage resources such
+as Oracle Databases, MySQL Databases, and External Database Systems.
+For more information, see Database Management.
+
+
+Available Commands
+==================
+
+* managed-database
+
+  * list-alert-logs
+
+  * list-attention-logs
+
+  * summarize-alert-log-counts
+
+  * summarize-attention-log-counts

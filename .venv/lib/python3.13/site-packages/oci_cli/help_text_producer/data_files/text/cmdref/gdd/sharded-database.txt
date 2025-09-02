@@ -1,0 +1,42 @@
+sharded-database
+****************
+
+
+Description
+===========
+
+Sharded Database resource.
+
+
+Available Commands
+==================
+
+* change-compartment
+
+* configure-sharded-database-gsms
+
+* configure-sharding
+
+* create-sharded-database-create-dedicated-sharded-database
+
+* delete
+
+* download-gsm-certificate-signing-request
+
+* fetch-connection-string
+
+* generate-gsm-certificate-signing-request
+
+* generate-wallet
+
+* get
+
+* patch
+
+* start
+
+* stop
+
+* update
+
+* upload-signed-certificate-and-generate-wallet

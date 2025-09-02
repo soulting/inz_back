@@ -1,0 +1,14 @@
+sql-firewall-allowed-sql
+************************
+
+
+Description
+===========
+
+Collection of SQL Firewall allowed SQL statements.
+
+
+Available Commands
+==================
+
+* list

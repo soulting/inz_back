@@ -1,0 +1,30 @@
+model
+*****
+
+
+Description
+===========
+
+Machine-learned Model.
+
+
+Available Commands
+==================
+
+* add
+
+* change-compartment
+
+* create
+
+* delete
+
+* get
+
+* list
+
+* patch
+
+* remove
+
+* update

@@ -1,0 +1,36 @@
+replication
+***********
+
+
+Description
+===========
+
+Replications are the primary resource that governs the policy of
+cross-region replication between source and target file systems.
+Replications are associated with a secondary resource called a
+>>``<<ReplicationTarget` <https://docs.cloud.oracle.com/api/#/en/iaas
+/latest/ReplicationTarget>`__ located in another availability domain
+in the same or different region. The replication retrieves the delta
+of data between two snapshots of a source file system and sends it to
+the associated *ReplicationTarget*, which applies it to the target
+file system. For more information, see File System Replication.
+
+
+Available Commands
+==================
+
+* add
+
+* change-compartment
+
+* create
+
+* delete
+
+* get
+
+* list
+
+* remove
+
+* update

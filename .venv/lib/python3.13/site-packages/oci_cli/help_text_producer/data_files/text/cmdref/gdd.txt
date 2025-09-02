@@ -1,0 +1,81 @@
+gdd
+***
+
+
+Description
+===========
+
+Use the Globally Distributed Database service CLI to create and manage
+distributed databases.
+
+
+Available Commands
+==================
+
+* private-endpoint
+
+  * change-compartment
+
+  * create
+
+  * delete
+
+  * get
+
+  * reinstate-proxy-instance
+
+  * update
+
+* private-endpoint-collection
+
+  * list-private-endpoints
+
+* sharded-database
+
+  * change-compartment
+
+  * configure-sharded-database-gsms
+
+  * configure-sharding
+
+  * create-sharded-database-create-dedicated-sharded-database
+
+  * delete
+
+  * download-gsm-certificate-signing-request
+
+  * fetch-connection-string
+
+  * generate-gsm-certificate-signing-request
+
+  * generate-wallet
+
+  * get
+
+  * patch
+
+  * start
+
+  * stop
+
+  * update
+
+  * upload-signed-certificate-and-generate-wallet
+
+* sharded-database-collection
+
+  * list-sharded-databases
+
+* work-request
+
+  * get
+
+  * list
+
+* work-request-error
+
+  * list
+
+* work-request-log-entry
+
+  * list-work-request-logs

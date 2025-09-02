@@ -1,0 +1,14 @@
+available_shapes
+****************
+
+
+Description
+===========
+
+Results of an available shapes search. Contains list of shapes.
+
+
+Available Commands
+==================
+
+* list

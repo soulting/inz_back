@@ -1,0 +1,30 @@
+dr-plan
+*******
+
+
+Description
+===========
+
+The details of a DR plan.
+
+
+Available Commands
+==================
+
+* create
+
+* delete
+
+* get
+
+* list
+
+* refresh
+
+* refresh-dr-plan-refresh-dr-plan-default-details
+
+* update
+
+* verify
+
+* verify-dr-plan-verify-dr-plan-default-details

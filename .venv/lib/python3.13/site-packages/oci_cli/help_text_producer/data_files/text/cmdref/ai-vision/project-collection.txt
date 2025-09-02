@@ -1,0 +1,14 @@
+project-collection
+******************
+
+
+Description
+===========
+
+The results of a project search.
+
+
+Available Commands
+==================
+
+* list-projects

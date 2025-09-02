@@ -1,0 +1,26 @@
+bds-metastore-configuration
+***************************
+
+
+Description
+===========
+
+The metastore configuration information.
+
+
+Available Commands
+==================
+
+* activate
+
+* create
+
+* delete
+
+* get
+
+* list
+
+* test
+
+* update

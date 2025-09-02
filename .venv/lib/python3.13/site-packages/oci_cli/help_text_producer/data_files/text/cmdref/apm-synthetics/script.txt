@@ -1,0 +1,20 @@
+script
+******
+
+
+Description
+===========
+
+The information about the script.
+
+
+Available Commands
+==================
+
+* create
+
+* delete
+
+* get
+
+* update

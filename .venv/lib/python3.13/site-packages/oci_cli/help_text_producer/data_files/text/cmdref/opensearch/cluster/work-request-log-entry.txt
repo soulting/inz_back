@@ -1,0 +1,15 @@
+work-request-log-entry
+**********************
+
+
+Description
+===========
+
+The list of work request log entries returned in a work request log
+search.
+
+
+Available Commands
+==================
+
+* list

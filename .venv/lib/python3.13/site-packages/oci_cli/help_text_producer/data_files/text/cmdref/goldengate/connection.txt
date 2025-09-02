@@ -1,0 +1,139 @@
+connection
+**********
+
+
+Description
+===========
+
+Represents the metadata description of a connection used by
+deployments in the same compartment.
+
+
+Available Commands
+==================
+
+* add-lock
+
+* change-compartment
+
+* create-amazon-kinesis-connection
+
+* create-amazon-redshift-connection
+
+* create-amazon-s3-connection
+
+* create-azure-data-lake-storage-connection
+
+* create-azure-synapse-connection
+
+* create-databricks-connection
+
+* create-db2-connection
+
+* create-elasticsearch-connection
+
+* create-generic-connection
+
+* create-goldengate-connection
+
+* create-google-big-query-connection
+
+* create-google-cloud-storage-connection
+
+* create-google-pub-sub-connection
+
+* create-hdfs-connection
+
+* create-iceberg-connection
+
+* create-jms-connection
+
+* create-kafka-connection
+
+* create-kafka-schema-registry-connection
+
+* create-microsoft-fabric-connection
+
+* create-microsoft-sqlserver-connection
+
+* create-mongo-db-connection
+
+* create-mysql-connection
+
+* create-object-storage-connection
+
+* create-oracle-connection
+
+* create-oracle-nosql-connection
+
+* create-postgresql-connection
+
+* create-redis-connection
+
+* create-snowflake-connection
+
+* delete
+
+* get
+
+* list
+
+* refresh
+
+* remove-lock
+
+* update-amazon-kinesis-connection
+
+* update-amazon-redshift-connection
+
+* update-amazon-s3-connection
+
+* update-azure-data-lake-storage-connection
+
+* update-azure-synapse-connection
+
+* update-databricks-connection
+
+* update-db2-connection
+
+* update-elasticsearch-connection
+
+* update-generic-connection
+
+* update-goldengate-connection
+
+* update-google-big-query-connection
+
+* update-google-cloud-storage-connection
+
+* update-google-pub-sub-connection
+
+* update-hdfs-connection
+
+* update-iceberg-connection
+
+* update-jms-connection
+
+* update-kafka-connection
+
+* update-kafka-schema-registry-connection
+
+* update-microsoft-fabric-connection
+
+* update-microsoft-sqlserver-connection
+
+* update-mongo-db-connection
+
+* update-mysql-connection
+
+* update-object-storage-connection
+
+* update-oracle-connection
+
+* update-oracle-nosql-connection
+
+* update-postgresql-connection
+
+* update-redis-connection
+
+* update-snowflake-connection

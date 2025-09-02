@@ -1,0 +1,1068 @@
+database-management
+*******************
+
+
+Description
+===========
+
+Use the Database Management CLI to monitor and manage resources such
+as Oracle Databases, MySQL Databases, and External Database Systems.
+For more information, see Database Management.
+
+
+Available Commands
+==================
+
+* associated-database-summary
+
+  * list-associated-databases
+
+* cloud-asm
+
+  * get
+
+  * get-cloud-asm-configuration
+
+  * list
+
+  * list-cloud-asm-disk-groups
+
+  * list-cloud-asm-users
+
+  * summarize-cloud-asm-metrics
+
+  * update
+
+* cloud-asm-instance
+
+  * get
+
+  * list
+
+  * update
+
+* cloud-cluster
+
+  * get
+
+  * list
+
+  * summarize-cloud-cluster-metrics
+
+  * update
+
+* cloud-cluster-instance
+
+  * get
+
+  * list
+
+  * update
+
+* cloud-database-collection
+
+  * list-cloud-databases
+
+* cloud-db-home
+
+  * get
+
+  * list
+
+  * update
+
+* cloud-db-node
+
+  * get
+
+  * list
+
+  * summarize-cloud-db-node-metrics
+
+  * update
+
+* cloud-db-system
+
+  * create
+
+  * delete
+
+  * disable-cloud-db-system-database-management
+
+  * disable-cloud-db-system-stack-monitoring
+
+  * enable-cloud-db-system-database-management
+
+  * enable-cloud-db-system-stack-monitoring
+
+  * get
+
+  * list
+
+  * summarize-cloud-db-system-availability-metrics
+
+  * update
+
+* cloud-db-system-connector
+
+  * check-cloud-db-system-connector-connection-status
+
+  * create
+
+  * create-cloud-db-system-connector-create-cloud-db-system-macs-
+    connector-details
+
+  * delete
+
+  * get
+
+  * list
+
+  * update
+
+  * update-cloud-db-system-connector-update-cloud-db-system-macs-
+    connector-details
+
+* cloud-db-system-discovery
+
+  * create
+
+  * delete
+
+  * get
+
+  * list
+
+  * patch
+
+  * update
+
+* cloud-listener
+
+  * get
+
+  * list
+
+  * list-cloud-listener-services
+
+  * summarize-cloud-listener-metrics
+
+  * update
+
+* cluster-cache-metric
+
+  * get
+
+* database-fleet-backup-metrics
+
+  * get
+
+* database-fleet-dataguard-metrics
+
+  * get
+
+* database-fleet-ha-overview-metrics
+
+  * get
+
+* dataguard-performance-metrics
+
+  * get
+
+* diagnosability
+
+  * managed-database
+
+    * list-alert-logs
+
+    * list-attention-logs
+
+    * summarize-alert-log-counts
+
+    * summarize-attention-log-counts
+
+* external-asm
+
+  * get
+
+  * get-external-asm-configuration
+
+  * list
+
+  * list-external-asm-disk-groups
+
+  * list-external-asm-users
+
+  * summarize-external-asm-metrics
+
+  * update
+
+* external-asm-instance
+
+  * get
+
+  * list
+
+  * update
+
+* external-cluster
+
+  * get
+
+  * list
+
+  * summarize-external-cluster-metrics
+
+  * update
+
+* external-cluster-instance
+
+  * get
+
+  * list
+
+  * update
+
+* external-database-collection
+
+  * list-external-databases
+
+* external-db-home
+
+  * get
+
+  * list
+
+  * update
+
+* external-db-node
+
+  * get
+
+  * list
+
+  * summarize-external-db-node-metrics
+
+  * update
+
+* external-db-system
+
+  * change-compartment
+
+  * create
+
+  * delete
+
+  * disable-external-db-system-database-management
+
+  * disable-external-db-system-stack-monitoring
+
+  * enable-external-db-system-database-management
+
+  * enable-external-db-system-stack-monitoring
+
+  * get
+
+  * list
+
+  * summarize-external-db-system-availability-metrics
+
+  * update
+
+* external-db-system-connector
+
+  * check-connection-status
+
+  * create-macs-connector
+
+  * delete
+
+  * get
+
+  * list
+
+  * update-macs-connector
+
+* external-db-system-discovery
+
+  * create
+
+  * delete
+
+  * get
+
+  * list
+
+  * patch
+
+  * update
+
+* external-exadata-infrastructure
+
+  * change-compartment
+
+  * create
+
+  * delete
+
+  * disable-external-exadata-infrastructure-management
+
+  * discover
+
+  * enable-external-exadata-infrastructure-management
+
+  * get
+
+  * list
+
+  * update
+
+* external-exadata-storage-connector
+
+  * check
+
+  * create
+
+  * delete
+
+  * get
+
+  * list
+
+  * update
+
+* external-exadata-storage-grid
+
+  * get
+
+  * update
+
+* external-exadata-storage-server
+
+  * get
+
+  * get-iorm-plan
+
+  * get-open-alert-history
+
+  * get-top-sql-cpu-activity
+
+  * list
+
+  * update
+
+* external-listener
+
+  * get
+
+  * list
+
+  * list-external-listener-services
+
+  * summarize-external-listener-metrics
+
+  * update
+
+* fleet-health-metrics
+
+  * get
+
+* job
+
+  * change-compartment
+
+  * create-sql-job
+
+  * delete
+
+  * get
+
+  * list
+
+  * update
+
+  * update-result-location
+
+  * update-sql-job-details
+
+* job-execution
+
+  * get
+
+  * list
+
+* job-executions-status
+
+  * summarize
+
+* job-run
+
+  * get
+
+  * list
+
+* managed-database
+
+  * cfg-auto-capture-filters
+
+  * cfg-auto-capture-filters-with-password
+
+  * cfg-auto-capture-filters-with-secret
+
+  * cfg-auto-spm-evolve-task
+
+  * cfg-auto-spm-evolve-task-with-password
+
+  * cfg-auto-spm-evolve-task-with-secret
+
+  * change-database-parameters
+
+  * change-database-parameters-database-named-credential-details
+
+  * change-database-parameters-database-password-credential-details
+
+  * change-database-parameters-database-secret-credential-details
+
+  * change-plan-retention
+
+  * change-plan-retention-database-named-credential-details
+
+  * change-plan-retention-database-password-credential-details
+
+  * change-plan-retention-database-secret-credential-details
+
+  * change-plan-retention-with-password
+
+  * change-plan-retention-with-secret
+
+  * change-space-budget
+
+  * change-space-budget-database-named-credential-details
+
+  * change-space-budget-database-password-credential-details
+
+  * change-space-budget-database-secret-credential-details
+
+  * change-space-budget-with-password
+
+  * change-space-budget-with-secret
+
+  * change-spb-attr
+
+  * change-spb-attr-with-password
+
+  * change-spb-attr-with-secret
+
+  * change-sql-plan-baselines-attributes-database-named-credential-
+    details
+
+  * change-sql-plan-baselines-attributes-database-password-credential-
+    details
+
+  * change-sql-plan-baselines-attributes-database-secret-credential-
+    details
+
+  * configure-automatic-capture-filters-database-named-credential-
+    details
+
+  * configure-automatic-capture-filters-database-password-credential-
+    details
+
+  * configure-automatic-capture-filters-database-secret-credential-
+    details
+
+  * configure-automatic-spm-evolve-advisor-task-database-named-
+    credential-details
+
+  * configure-automatic-spm-evolve-advisor-task-database-password-
+    credential-details
+
+  * configure-automatic-spm-evolve-advisor-task-database-secret-
+    credential-details
+
+  * database-ha-backup-details
+
+    * get
+
+  * disable-auto-plan-capture
+
+  * disable-auto-plan-capture-with-password
+
+  * disable-auto-plan-capture-with-secret
+
+  * disable-auto-spm-evolve-task
+
+  * disable-auto-spm-evolve-task-with-password
+
+  * disable-auto-spm-evolve-task-with-secret
+
+  * disable-automatic-initial-plan-capture-database-named-credential-
+    details
+
+  * disable-automatic-initial-plan-capture-database-password-
+    credential-details
+
+  * disable-automatic-initial-plan-capture-database-secret-credential-
+    details
+
+  * disable-automatic-spm-evolve-advisor-task-database-named-
+    credential-details
+
+  * disable-automatic-spm-evolve-advisor-task-database-password-
+    credential-details
+
+  * disable-automatic-spm-evolve-advisor-task-database-secret-
+    credential-details
+
+  * disable-autonomous-database-management-feature
+
+  * disable-database-management-feature
+
+  * disable-external-container-database-management-feature
+
+  * disable-external-non-container-database-management-feature
+
+  * disable-external-pluggable-database-management-feature
+
+  * disable-hf-auto-spm-evolve-task
+
+  * disable-hf-auto-spm-evolve-task-with-password
+
+  * disable-hf-auto-spm-evolve-task-with-secret
+
+  * disable-high-frequency-automatic-spm-evolve-advisor-task-database-
+    named-credential-details
+
+  * disable-high-frequency-automatic-spm-evolve-advisor-task-database-
+    password-credential-details
+
+  * disable-high-frequency-automatic-spm-evolve-advisor-task-database-
+    secret-credential-details
+
+  * disable-pluggable-database-management-feature
+
+  * disable-spb-usage
+
+  * disable-spb-usage-with-password
+
+  * disable-spb-usage-with-secret
+
+  * disable-sql-plan-baselines-usage-database-named-credential-details
+
+  * disable-sql-plan-baselines-usage-database-password-credential-
+    details
+
+  * disable-sql-plan-baselines-usage-database-secret-credential-
+    details
+
+  * drop-sql-plan-baselines
+
+  * drop-sql-plan-baselines-database-named-credential-details
+
+  * drop-sql-plan-baselines-database-password-credential-details
+
+  * drop-sql-plan-baselines-database-secret-credential-details
+
+  * drop-sql-plan-baselines-with-password
+
+  * drop-sql-plan-baselines-with-secret
+
+  * enable-auto-plan-capture
+
+  * enable-auto-plan-capture-with-password
+
+  * enable-auto-plan-capture-with-secret
+
+  * enable-auto-spm-evolve-task
+
+  * enable-auto-spm-evolve-task-with-password
+
+  * enable-auto-spm-evolve-task-with-secret
+
+  * enable-automatic-initial-plan-capture-database-named-credential-
+    details
+
+  * enable-automatic-initial-plan-capture-database-password-
+    credential-details
+
+  * enable-automatic-initial-plan-capture-database-secret-credential-
+    details
+
+  * enable-automatic-spm-evolve-advisor-task-database-named-
+    credential-details
+
+  * enable-automatic-spm-evolve-advisor-task-database-password-
+    credential-details
+
+  * enable-automatic-spm-evolve-advisor-task-database-secret-
+    credential-details
+
+  * enable-autonomous-database-management-feature
+
+  * enable-autonomous-database-management-feature-autonomous-database-
+    diagnostics-and-management-feature-details
+
+  * enable-autonomous-database-management-feature-autonomous-database-
+    sql-watch-feature-details
+
+  * enable-database-management-feature
+
+  * enable-database-management-feature-database-diagnostics-and-
+    management-feature-details
+
+  * enable-database-management-feature-database-lifecycle-management-
+    feature-details
+
+  * enable-database-management-feature-database-sql-watch-feature-
+    details
+
+  * enable-external-container-database-management-feature
+
+  * enable-external-container-database-management-feature-external-
+    database-diagnostics-and-management-feature-details
+
+  * enable-external-container-database-management-feature-external-
+    database-lifecycle-management-feature-details
+
+  * enable-external-container-database-management-feature-external-
+    database-sql-watch-feature-details
+
+  * enable-external-non-container-database-management-feature
+
+  * enable-external-non-container-database-management-feature-
+    external-database-diagnostics-and-management-feature-details
+
+  * enable-external-non-container-database-management-feature-
+    external-database-lifecycle-management-feature-details
+
+  * enable-external-non-container-database-management-feature-
+    external-database-sql-watch-feature-details
+
+  * enable-external-pluggable-database-management-feature
+
+  * enable-external-pluggable-database-management-feature-external-
+    pluggable-database-diagnostics-and-management-feature-details
+
+  * enable-external-pluggable-database-management-feature-external-
+    pluggable-database-lifecycle-management-feature-details
+
+  * enable-external-pluggable-database-management-feature-external-
+    pluggable-database-sql-watch-feature-details
+
+  * enable-hf-auto-spm-evolve-task
+
+  * enable-hf-auto-spm-evolve-task-with-password
+
+  * enable-hf-auto-spm-evolve-task-with-secret
+
+  * enable-high-frequency-automatic-spm-evolve-advisor-task-database-
+    named-credential-details
+
+  * enable-high-frequency-automatic-spm-evolve-advisor-task-database-
+    password-credential-details
+
+  * enable-high-frequency-automatic-spm-evolve-advisor-task-database-
+    secret-credential-details
+
+  * enable-pluggable-database-management-feature
+
+  * enable-pluggable-database-management-feature-database-diagnostics-
+    and-management-feature-details
+
+  * enable-pluggable-database-management-feature-database-lifecycle-
+    management-feature-details
+
+  * enable-pluggable-database-management-feature-database-sql-watch-
+    feature-details
+
+  * enable-spb-usage
+
+  * enable-spb-usage-with-password
+
+  * enable-spb-usage-with-secret
+
+  * enable-sql-plan-baselines-usage-database-named-credential-details
+
+  * enable-sql-plan-baselines-usage-database-password-credential-
+    details
+
+  * enable-sql-plan-baselines-usage-database-secret-credential-details
+
+  * get
+
+  * get-awr-db-report
+
+  * get-awr-db-sql-report
+
+  * get-optimizer-statistics-advisor-execution
+
+  * get-optimizer-statistics-advisor-execution-script
+
+  * get-optimizer-statistics-collection-operation
+
+  * get-spb-configuration
+
+  * get-sql-plan-baseline
+
+  * get-user
+
+  * implement-optimizer-statistics-advisor-recommendations
+
+  * list
+
+  * list-asm-properties
+
+  * list-awr-db-snapshots
+
+  * list-awr-dbs
+
+  * list-consumer-group-privileges
+
+  * list-cursor-cache-statements
+
+  * list-data-access-containers
+
+  * list-database-parameters
+
+  * list-object-privileges
+
+  * list-optimizer-statistics-advisor-executions
+
+  * list-optimizer-statistics-collection-aggregations
+
+  * list-optimizer-statistics-collection-operations
+
+  * list-proxied-for-users
+
+  * list-proxy-users
+
+  * list-roles
+
+  * list-spb-jobs
+
+  * list-sql-plan-baselines
+
+  * list-system-privileges
+
+  * list-table-statistics
+
+  * list-users
+
+  * load-spb-from-awr
+
+  * load-spb-from-awr-with-password
+
+  * load-spb-from-awr-with-secret
+
+  * load-spb-from-cc
+
+  * load-spb-from-cc-with-password
+
+  * load-spb-from-cc-with-secret
+
+  * load-sql-plan-baselines-from-awr-database-named-credential-details
+
+  * load-sql-plan-baselines-from-awr-database-password-credential-
+    details
+
+  * load-sql-plan-baselines-from-awr-database-secret-credential-
+    details
+
+  * load-sql-plan-baselines-from-cursor-cache-database-named-
+    credential-details
+
+  * load-sql-plan-baselines-from-cursor-cache-database-password-
+    credential-details
+
+  * load-sql-plan-baselines-from-cursor-cache-database-secret-
+    credential-details
+
+  * modify-autonomous-database-management-feature
+
+  * modify-autonomous-database-management-feature-autonomous-database-
+    diagnostics-and-management-feature-details
+
+  * modify-autonomous-database-management-feature-autonomous-database-
+    sql-watch-feature-details
+
+  * modify-database-management-feature
+
+  * modify-database-management-feature-database-diagnostics-and-
+    management-feature-details
+
+  * modify-database-management-feature-database-lifecycle-management-
+    feature-details
+
+  * modify-database-management-feature-database-sql-watch-feature-
+    details
+
+  * modify-external-container-database-management-feature
+
+  * modify-external-container-database-management-feature-external-
+    database-diagnostics-and-management-feature-details
+
+  * modify-external-container-database-management-feature-external-
+    database-lifecycle-management-feature-details
+
+  * modify-external-container-database-management-feature-external-
+    database-sql-watch-feature-details
+
+  * modify-pluggable-database-management-feature
+
+  * modify-pluggable-database-management-feature-database-diagnostics-
+    and-management-feature-details
+
+  * modify-pluggable-database-management-feature-database-lifecycle-
+    management-feature-details
+
+  * modify-pluggable-database-management-feature-database-sql-watch-
+    feature-details
+
+  * reset-database-parameters
+
+  * reset-database-parameters-database-named-credential-details
+
+  * reset-database-parameters-database-password-credential-details
+
+  * reset-database-parameters-database-secret-credential-details
+
+  * summarize-awr-db-cpu-usages
+
+  * summarize-awr-db-metrics
+
+  * summarize-awr-db-parameter-changes
+
+  * summarize-awr-db-parameters
+
+  * summarize-awr-db-snapshot-ranges
+
+  * summarize-awr-db-sysstats
+
+  * summarize-awr-db-top-wait-events
+
+  * summarize-awr-db-wait-event-buckets
+
+  * summarize-awr-db-wait-events
+
+  * summarize-managed-database-availability-metrics
+
+  * summarize-sql-plan-baselines
+
+  * summarize-sql-plan-baselines-by-last-execution
+
+  * update
+
+* managed-database-group
+
+  * add
+
+  * change-compartment
+
+  * create
+
+  * delete
+
+  * get
+
+  * list
+
+  * remove
+
+  * update
+
+* managed-my-sql-databases
+
+  * heat-wave-fleet-metrics
+
+    * get
+
+  * managed-my-sql-database
+
+    * change-mysql-database-management-type
+
+    * get
+
+    * get-binary-log-information
+
+    * get-general-replication-information
+
+    * get-my-sql-query-details
+
+    * list-high-availability-members
+
+    * list-inbound-replications
+
+    * list-managed-my-sql-database-configuration-data
+
+    * list-managed-my-sql-database-sql-data
+
+    * list-my-sql-digest-errors
+
+    * list-outbound-replications
+
+    * summarize-managed-my-sql-database-availability-metrics
+
+  * managed-my-sql-database-collection
+
+    * list-managed-my-sql-databases
+
+  * my-sql-fleet-metrics
+
+    * get
+
+* named-credential
+
+  * change-compartment
+
+  * create
+
+  * create-named-credential-basic-named-credential-content
+
+  * delete
+
+  * get
+
+  * list
+
+  * test
+
+  * update
+
+  * update-named-credential-basic-named-credential-content
+
+* pdb-metrics
+
+  * get
+
+* peer-database-metrics
+
+  * get
+
+* perfhub
+
+  * managed-database
+
+    * modify-snapshot-settings
+
+* preferred-credential
+
+  * delete
+
+  * get
+
+  * list
+
+  * test
+
+  * test-basic-preferred-credential-details
+
+  * test-preferred-credential-test-named-preferred-credential-details
+
+  * update
+
+  * update-basic-preferred-credential-details
+
+  * update-preferred-credential-update-named-preferred-credential-
+    details
+
+* private-endpoint
+
+  * change-compartment
+
+  * create
+
+  * delete
+
+  * get
+
+  * list
+
+  * update
+
+* sql-tuning-task
+
+  * clone
+
+  * clone-with-pwd
+
+  * clone-with-secret
+
+  * drop
+
+  * drop-with-pwd
+
+  * drop-with-secret
+
+  * get-exec-plan-stats-compare
+
+  * get-sql-exec-plan
+
+  * get-summary-report
+
+  * list-findings
+
+  * list-recommendations
+
+  * list-tasks
+
+  * start
+
+  * start-with-pwd
+
+  * start-with-secret
+
+* summary-metrics
+
+  * get
+
+* tablespace
+
+  * add
+
+  * create
+
+  * drop
+
+  * drop-tablespace-database-named-credential-details
+
+  * drop-tablespace-database-password-credential-details
+
+  * drop-tablespace-database-secret-credential-details
+
+  * drop-with-pwd
+
+  * drop-with-secret
+
+  * get
+
+  * list
+
+  * remove
+
+  * remove-data-file-database-named-credential-details
+
+  * remove-data-file-database-password-credential-details
+
+  * remove-data-file-database-secret-credential-details
+
+  * remove-datafile-with-pwd
+
+  * remove-datafile-with-secret
+
+  * resize-data-file
+
+  * update
+
+* work-request
+
+  * get
+
+  * list
+
+* work-request-error
+
+  * list
+
+* work-request-log-entry
+
+  * list-work-request-logs

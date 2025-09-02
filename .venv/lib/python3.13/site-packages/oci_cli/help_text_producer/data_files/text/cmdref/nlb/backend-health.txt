@@ -1,0 +1,14 @@
+backend-health
+**************
+
+
+Description
+===========
+
+The health status of the specified backend server.
+
+
+Available Commands
+==================
+
+* get

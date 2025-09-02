@@ -1,0 +1,16 @@
+template
+********
+
+
+Description
+===========
+
+Template application.
+
+
+Available Commands
+==================
+
+* get
+
+* list

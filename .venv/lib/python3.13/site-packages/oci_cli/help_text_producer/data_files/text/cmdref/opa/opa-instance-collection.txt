@@ -1,0 +1,15 @@
+opa-instance-collection
+***********************
+
+
+Description
+===========
+
+Results of a opaInstance search. Contains boh OpaInstanceSummary items
+and other information, such as metadata.
+
+
+Available Commands
+==================
+
+* list-opa-instances

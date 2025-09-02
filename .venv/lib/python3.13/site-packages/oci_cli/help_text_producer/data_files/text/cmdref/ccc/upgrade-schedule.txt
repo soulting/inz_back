@@ -1,0 +1,24 @@
+upgrade-schedule
+****************
+
+
+Description
+===========
+
+Defines a schedule for preferred upgrade times.
+
+
+Available Commands
+==================
+
+* change-compartment
+
+* create
+
+* delete
+
+* get
+
+* list
+
+* update

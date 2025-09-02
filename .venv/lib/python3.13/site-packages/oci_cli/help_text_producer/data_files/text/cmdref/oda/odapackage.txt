@@ -1,0 +1,30 @@
+odapackage
+**********
+
+
+Description
+===========
+
+CLI to create and maintain Oracle Digital Assistant service instances.
+
+
+Available Commands
+==================
+
+* imported-package
+
+  * create
+
+  * delete
+
+  * get
+
+  * list
+
+  * update
+
+* package
+
+  * get
+
+  * list

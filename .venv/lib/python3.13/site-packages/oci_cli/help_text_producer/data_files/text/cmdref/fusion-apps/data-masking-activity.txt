@@ -1,0 +1,18 @@
+data-masking-activity
+*********************
+
+
+Description
+===========
+
+Details of data masking activity.
+
+
+Available Commands
+==================
+
+* create
+
+* get
+
+* list

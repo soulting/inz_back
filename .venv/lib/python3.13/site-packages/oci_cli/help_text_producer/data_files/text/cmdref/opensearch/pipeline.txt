@@ -1,0 +1,23 @@
+pipeline
+********
+
+
+Description
+===========
+
+The OpenSearch service CLI provides access to OCI Search Service with
+OpenSearch.
+
+
+Available Commands
+==================
+
+* create
+
+* delete
+
+* get
+
+* list
+
+* update

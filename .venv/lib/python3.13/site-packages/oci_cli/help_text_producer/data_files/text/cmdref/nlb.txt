@@ -1,0 +1,110 @@
+nlb
+***
+
+
+Description
+===========
+
+This describes the network load balancer CLI.
+
+
+Available Commands
+==================
+
+* backend
+
+  * create
+
+  * delete
+
+  * get
+
+  * list
+
+  * update
+
+* backend-health
+
+  * get
+
+* backend-operational-status
+
+  * get
+
+* backend-set
+
+  * create
+
+  * delete
+
+  * get
+
+  * list
+
+  * update
+
+* backend-set-health
+
+  * get
+
+* health-checker
+
+  * get
+
+  * update
+
+* listener
+
+  * create
+
+  * delete
+
+  * get
+
+  * list
+
+  * update
+
+* listener-protocols
+
+  * list
+
+* network-load-balancer
+
+  * change-compartment
+
+  * create
+
+  * delete
+
+  * get
+
+  * list
+
+  * update
+
+  * update-network-security-groups
+
+* network-load-balancer-health
+
+  * get
+
+  * list
+
+* network-load-balancing-policy
+
+  * list
+
+* work-request
+
+  * get
+
+  * list
+
+* work-request-error
+
+  * list
+
+* work-request-log-entry
+
+  * list

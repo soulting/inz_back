@@ -1,0 +1,26 @@
+database-software-image
+***********************
+
+
+Description
+===========
+
+Database software images are created by specifying a patch set, one-
+off patches and patches for the database home (listed by *ls
+inventory*).
+
+
+Available Commands
+==================
+
+* change-compartment
+
+* create
+
+* delete
+
+* get
+
+* list
+
+* update

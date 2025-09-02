@@ -1,0 +1,18 @@
+analyze-document-result
+***********************
+
+
+Description
+===========
+
+The document analysis results.
+
+
+Available Commands
+==================
+
+* analyze-document
+
+* analyze-document-inline-document-details
+
+* analyze-document-object-storage-document-details

@@ -1,0 +1,15 @@
+masking-error-summary
+*********************
+
+
+Description
+===========
+
+Summary of a masking error. A Masking error is an error seen during
+the masking run.
+
+
+Available Commands
+==================
+
+* list-masking-errors

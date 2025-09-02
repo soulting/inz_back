@@ -1,0 +1,274 @@
+"create"
+********
+
+* Description
+
+* Usage
+
+* Optional Parameters
+
+* Global Parameters
+
+* Example using required parameter
+
+
+Description
+===========
+
+Creates a new boot volume in the specified compartment from an
+existing boot volume or a boot volume backup. For general information
+about boot volumes, see Boot Volumes. You may optionally specify a
+*display name* for the volume, which is simply a friendly name or
+description. It does not have to be unique, and you can change it.
+Avoid entering confidential information.
+
+
+Usage
+=====
+
+   oci bv boot-volume create [OPTIONS]
+
+
+Optional Parameters
+===================
+
+--autotune-policies [complex type]
+
+The list of autotune policies to be enabled for this volume.
+
+This option is a JSON list with items of type AutotunePolicy.  For
+documentation on AutotunePolicy please see our API reference: https:/
+/docs.cloud.oracle.com/api/#/en/iaas/20160918/datatypes/AutotunePolic
+y. This is a complex type whose value must be valid JSON. The value
+can be provided as a string on the command line or passed in as a file
+using the file://path/to/file syntax.
+
+The "--generate-param-json-input" option can be used to generate an
+example of the JSON which must be provided. We recommend storing this
+example in a file, modifying it as needed and then passing it back in
+via the file:// syntax.
+
+--availability-domain [text]
+
+The Availability Domain of the boot volume. Example: *Uocm:PHX-AD-1*.
+
+This is optional when cloning a boot volume as the newly created boot
+volume will be created in the same Availability Domain as its source.
+This is required when restoring a volume from a backup.
+
+--backup-policy-id [text]
+
+If provided, specifies the ID of the boot volume backup policy to
+assign to the newly created boot volume. If omitted, no policy will be
+assigned.
+
+--boot-volume-backup-id [text]
+
+The OCID of the boot volume backup from which the data should be
+restored on the newly created boot volume. You can specify either
+this, –source-boot-volume-id or –source-volume-replica-id but not all.
+
+--boot-volume-replicas [complex type]
+
+The list of boot volume replicas to be enabled for this boot volume in
+the specified destination availability domains.
+
+This option is a JSON list with items of type
+BootVolumeReplicaDetails.  For documentation on
+BootVolumeReplicaDetails please see our API reference: https://docs.c
+loud.oracle.com/api/#/en/iaas/20160918/datatypes/BootVolumeReplicaDet
+ails. This is a complex type whose value must be valid JSON. The value
+can be provided as a string on the command line or passed in as a file
+using the file://path/to/file syntax.
+
+The "--generate-param-json-input" option can be used to generate an
+example of the JSON which must be provided. We recommend storing this
+example in a file, modifying it as needed and then passing it back in
+via the file:// syntax.
+
+--cluster-placement-group-id [text]
+
+The clusterPlacementGroup Id of the volume for volume placement.
+
+--compartment-id, -c [text]
+
+The OCID of the compartment that contains the boot volume. This is
+optional when cloning a boot volume or restoring a boot volume from a
+backup. If it is not supplied then the boot volume will be created in
+the same compartment as the source.
+
+--defined-tags [complex type]
+
+Defined tags for this resource. Each key is predefined and scoped to a
+namespace. For more information, see Resource Tags.
+
+Example:
+
+   {"Operations": {"CostCenter": "42"}}
+
+This is a complex type whose value must be valid JSON. The value can
+be provided as a string on the command line or passed in as a file
+using the file://path/to/file syntax.
+
+The "--generate-param-json-input" option can be used to generate an
+example of the JSON which must be provided. We recommend storing this
+example in a file, modifying it as needed and then passing it back in
+via the file:// syntax.
+
+--display-name [text]
+
+A user-friendly name. Does not have to be unique, and it’s changeable.
+Avoid entering confidential information.
+
+--freeform-tags [complex type]
+
+Free-form tags for this resource. Each tag is a simple key-value pair
+with no predefined name, type, or namespace. For more information, see
+Resource Tags.
+
+Example:
+
+   {"Department": "Finance"}
+
+This is a complex type whose value must be valid JSON. The value can
+be provided as a string on the command line or passed in as a file
+using the file://path/to/file syntax.
+
+The "--generate-param-json-input" option can be used to generate an
+example of the JSON which must be provided. We recommend storing this
+example in a file, modifying it as needed and then passing it back in
+via the file:// syntax.
+
+--from-json [text]
+
+Provide input to this command as a JSON document from a file using the
+file://path-to/file syntax.
+
+The "--generate-full-command-json-input" option can be used to
+generate a sample json file to be used with this command option. The
+key names are pre-populated and match the command option names
+(converted to camelCase format, e.g. compartment-id –> compartmentId),
+while the values of the keys need to be populated by the user before
+using the sample file as an input to this command. For any command
+option that accepts multiple values, the value of the key can be a
+JSON array.
+
+Options can still be provided on the command line. If an option exists
+in both the JSON document and the command line then the command line
+specified value will be used.
+
+For examples on usage of this option, please see our “using CLI with
+advanced JSON options” link: https://docs.cloud.oracle.com/iaas/Conte
+nt/API/SDKDocs/cliusing.htm#AdvancedJSONOptions
+
+--is-auto-tune-enabled [boolean]
+
+Specifies whether the auto-tune performance is enabled for this boot
+volume. This field is deprecated. Use the
+*DetachedVolumeAutotunePolicy* instead to enable the volume for
+detached autotune.
+
+--kms-key-id [text]
+
+The OCID of the Vault service key to assign as the master encryption
+key for the boot volume.
+
+--max-wait-seconds [integer]
+
+The maximum time to wait for the resource to reach the lifecycle state
+defined by "--wait-for-state". Defaults to 1200 seconds.
+
+--size-in-gbs [integer]
+
+The size of the volume in GBs.
+
+--source-boot-volume-id [text]
+
+The OCID of a boot volume in the same Availability Domain from which
+the data should be cloned to the newly created boot volume. You can
+specify either this, –boot-volume-backup-id or –source-volume-replica-
+id but not all.
+
+--source-volume-replica-id [text]
+
+The OCID of the boot volume replica from which the data should be
+restored on the newly created boot volume. You can specify either
+this, –source-boot-volume-id or –boot-volume-backup-id –but not all.
+
+--vpus-per-gb [integer]
+
+The number of volume performance units (VPUs) that will be applied to
+this volume per GB, representing the Block Volume service’s elastic
+performance options. See Block Volume Performance Levels for more
+information.
+
+Allowed values:
+
+   * *10*: Represents the Balanced option.
+
+   * *20*: Represents the Higher Performance option.
+
+   * *30*-*120*: Represents the Ultra High Performance option.
+
+For performance autotune enabled volumes, it would be the
+Default(Minimum) VPUs/GB.
+
+--wait-for-state [text]
+
+This operation creates, modifies or deletes a resource that has a
+defined lifecycle state. Specify this option to perform the action and
+then wait until the resource reaches a given lifecycle state. Multiple
+states can be specified, returning on the first state. For example, "
+--wait-for-state" SUCCEEDED "--wait-for-state" FAILED would return on
+whichever lifecycle state is reached first. If timeout is reached, a
+return code of 2 is returned. For any other error, a return code of 1
+is returned.
+
+Accepted values are:
+
+   AVAILABLE, FAULTY, PROVISIONING, RESTORING, TERMINATED, TERMINATING
+
+--wait-interval-seconds [integer]
+
+Check every "--wait-interval-seconds" to see whether the resource has
+reached the lifecycle state defined by "--wait-for-state". Defaults to
+30 seconds.
+
+--xrc-kms-key-id [text]
+
+The OCID of the Vault service key which is the master encryption key
+for the boot volume cross region backups, which will be used in the
+destination region to encrypt the backup’s encryption keys. For more
+information about the Vault service and encryption keys, see Overview
+of Vault service and Using Keys.
+
+
+Global Parameters
+=================
+
+Use "oci --help" for help on global parameters.
+
+"--auth-purpose", "--auth", "--cert-bundle", "--cli-auto-prompt", "--
+cli-rc-file", "--config-file", "--connection-timeout", "--debug", "--
+defaults-file", "--endpoint", "--generate-full-command-json-input", "
+--generate-param-json-input", "--help", "--latest-version", "--max-
+retries", "--no-retry", "--opc-client-request-id", "--opc-request-id",
+"--output", "--profile", "--proxy", "--query", "--raw-output", "--
+read-timeout", "--realm-specific-endpoint", "--region", "--release-
+info", "--request-id", "--version", "-?", "-d", "-h", "-i", "-v"
+
+
+Example using required parameter
+================================
+
+Copy the following CLI commands into a file named example.sh. Run the
+command by typing “bash example.sh” and replacing the example
+parameters with your own.
+
+Please note this sample will only work in the POSIX-compliant bash-
+like shell. You need to set up the OCI configuration and appropriate
+security policies before trying the examples.
+
+       export source_boot_volume_id=<substitute-value-of-source_boot_volume_id> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/bv/boot-volume/create.html#cmdoption-source-boot-volume-id
+
+       oci bv boot-volume create --source-boot-volume-id $source_boot_volume_id

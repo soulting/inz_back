@@ -1,0 +1,181 @@
+"list"
+******
+
+* Description
+
+* Usage
+
+* Required Parameters
+
+* Optional Parameters
+
+* Global Parameters
+
+* Example using required parameter
+
+
+Description
+===========
+
+Lists the Connections in the compartment.
+
+
+Usage
+=====
+
+   oci goldengate connection list [OPTIONS]
+
+
+Required Parameters
+===================
+
+--compartment-id, -c [text]
+
+The OCID of the compartment that contains the work request. Work
+requests should be scoped to the same compartment as the resource the
+work request affects. If the work request concerns multiple resources,
+and those resources are not in the same compartment, it is up to the
+service team to pick the primary resource whose compartment should be
+used.
+
+
+Optional Parameters
+===================
+
+--all
+
+Fetches all pages of results. If you provide this option, then you
+cannot provide the "--limit" option.
+
+--assignable-deployment-id [text]
+
+Filters for compatible connections which can be, but currently not
+assigned to the deployment specified by its id.
+
+--assignable-deployment-type [text]
+
+Filters for connections which can be assigned to the latest version of
+the specified deployment type.
+
+Accepted values are:
+
+   BIGDATA, DATABASE_DB2I, DATABASE_DB2ZOS, DATABASE_MICROSOFT_SQLSERVER, DATABASE_MYSQL, DATABASE_ORACLE, DATABASE_POSTGRESQL, DATA_TRANSFORMS, GGSA, OGG
+
+--assigned-deployment-id [text]
+
+The OCID of the deployment which for the connection must be assigned.
+
+--connection-type [text]
+
+The array of connection types.
+
+Accepted values are:
+
+   AMAZON_KINESIS, AMAZON_REDSHIFT, AMAZON_S3, AZURE_DATA_LAKE_STORAGE, AZURE_SYNAPSE_ANALYTICS, DATABRICKS, DB2, ELASTICSEARCH, GENERIC, GOLDENGATE, GOOGLE_BIGQUERY, GOOGLE_CLOUD_STORAGE, GOOGLE_PUBSUB, HDFS, ICEBERG, JAVA_MESSAGE_SERVICE, KAFKA, KAFKA_SCHEMA_REGISTRY, MICROSOFT_FABRIC, MICROSOFT_SQLSERVER, MONGODB, MYSQL, OCI_OBJECT_STORAGE, ORACLE, ORACLE_NOSQL, POSTGRESQL, REDIS, SNOWFLAKE
+
+--display-name [text]
+
+A filter to return only the resources that match the entire
+‘displayName’ given.
+
+--from-json [text]
+
+Provide input to this command as a JSON document from a file using the
+file://path-to/file syntax.
+
+The "--generate-full-command-json-input" option can be used to
+generate a sample json file to be used with this command option. The
+key names are pre-populated and match the command option names
+(converted to camelCase format, e.g. compartment-id –> compartmentId),
+while the values of the keys need to be populated by the user before
+using the sample file as an input to this command. For any command
+option that accepts multiple values, the value of the key can be a
+JSON array.
+
+Options can still be provided on the command line. If an option exists
+in both the JSON document and the command line then the command line
+specified value will be used.
+
+For examples on usage of this option, please see our “using CLI with
+advanced JSON options” link: https://docs.cloud.oracle.com/iaas/Conte
+nt/API/SDKDocs/cliusing.htm#AdvancedJSONOptions
+
+--lifecycle-state [text]
+
+A filter to return only connections having the ‘lifecycleState’ given.
+
+Accepted values are:
+
+   ACTIVE, CREATING, DELETED, DELETING, FAILED, UPDATING
+
+--limit [integer]
+
+The maximum number of items to return.
+
+--page [text]
+
+The page token representing the page at which to start retrieving
+results. This is usually retrieved from a previous list call.
+
+--page-size [integer]
+
+When fetching results, the number of results to fetch per call. Only
+valid when used with "--all" or "--limit", and ignored otherwise.
+
+--sort-by [text]
+
+The field to sort by. Only one sort order can be provided. Default
+order for ‘timeCreated’ is descending.  Default order for
+‘displayName’ is ascending. If no value is specified timeCreated is
+the default.
+
+Accepted values are:
+
+   displayName, timeCreated
+
+--sort-order [text]
+
+The sort order to use, either ‘asc’ or ‘desc’.
+
+Accepted values are:
+
+   ASC, DESC
+
+--technology-type [text]
+
+The array of technology types.
+
+Accepted values are:
+
+   AMAZON_AURORA_MYSQL, AMAZON_AURORA_POSTGRESQL, AMAZON_DOCUMENT_DB, AMAZON_KINESIS, AMAZON_RDS_MARIADB, AMAZON_RDS_MYSQL, AMAZON_RDS_ORACLE, AMAZON_RDS_POSTGRESQL, AMAZON_RDS_SQLSERVER, AMAZON_REDSHIFT, AMAZON_S3, APACHE_ICEBERG, APACHE_KAFKA, AZURE_COSMOS_DB_FOR_MONGODB, AZURE_COSMOS_DB_FOR_POSTGRESQL, AZURE_DATA_LAKE_STORAGE, AZURE_EVENT_HUBS, AZURE_MYSQL, AZURE_POSTGRESQL, AZURE_SQLSERVER_MANAGED_INSTANCE, AZURE_SQLSERVER_NON_MANAGED_INSTANCE, AZURE_SYNAPSE_ANALYTICS, CONFLUENT_KAFKA, CONFLUENT_SCHEMA_REGISTRY, DATABRICKS, DB2_I, DB2_ZOS, ELASTICSEARCH, GENERIC, GOLDENGATE, GOOGLE_ALLOY_DB_FOR_POSTGRESQL, GOOGLE_BIGQUERY, GOOGLE_CLOUD_SQL_MYSQL, GOOGLE_CLOUD_SQL_POSTGRESQL, GOOGLE_CLOUD_SQL_SQLSERVER, GOOGLE_CLOUD_STORAGE, GOOGLE_PUBSUB, HDFS, MARIADB, MICROSOFT_FABRIC_LAKEHOUSE, MICROSOFT_FABRIC_MIRROR, MICROSOFT_SQLSERVER, MONGODB, MYSQL_HEATWAVE_ON_AWS, MYSQL_HEATWAVE_ON_AZURE, MYSQL_SERVER, OCI_AUTONOMOUS_DATABASE, OCI_AUTONOMOUS_JSON_DATABASE, OCI_CACHE_WITH_REDIS, OCI_MYSQL, OCI_OBJECT_STORAGE, OCI_POSTGRESQL, OCI_STREAMING, ORACLE_AUTONOMOUS_DATABASE_AT_AWS, ORACLE_AUTONOMOUS_DATABASE_AT_AZURE, ORACLE_AUTONOMOUS_DATABASE_AT_GOOGLE_CLOUD, ORACLE_DATABASE, ORACLE_EXADATA, ORACLE_EXADATA_DATABASE_AT_AWS, ORACLE_EXADATA_DATABASE_AT_AZURE, ORACLE_EXADATA_DATABASE_AT_GOOGLE_CLOUD, ORACLE_JSON_COLLECTION, ORACLE_NOSQL, ORACLE_REST_DATA_SERVICES, ORACLE_WEBLOGIC_JMS, POSTGRESQL_SERVER, REDIS, SINGLESTOREDB, SINGLESTOREDB_CLOUD, SNOWFLAKE
+
+
+Global Parameters
+=================
+
+Use "oci --help" for help on global parameters.
+
+"--auth-purpose", "--auth", "--cert-bundle", "--cli-auto-prompt", "--
+cli-rc-file", "--config-file", "--connection-timeout", "--debug", "--
+defaults-file", "--endpoint", "--generate-full-command-json-input", "
+--generate-param-json-input", "--help", "--latest-version", "--max-
+retries", "--no-retry", "--opc-client-request-id", "--opc-request-id",
+"--output", "--profile", "--proxy", "--query", "--raw-output", "--
+read-timeout", "--realm-specific-endpoint", "--region", "--release-
+info", "--request-id", "--version", "-?", "-d", "-h", "-i", "-v"
+
+
+Example using required parameter
+================================
+
+Copy the following CLI commands into a file named example.sh. Run the
+command by typing “bash example.sh” and replacing the example
+parameters with your own.
+
+Please note this sample will only work in the POSIX-compliant bash-
+like shell. You need to set up the OCI configuration and appropriate
+security policies before trying the examples.
+
+       export compartment_id=<substitute-value-of-compartment_id> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/goldengate/connection/list.html#cmdoption-compartment-id
+
+       oci goldengate connection list --compartment-id $compartment_id

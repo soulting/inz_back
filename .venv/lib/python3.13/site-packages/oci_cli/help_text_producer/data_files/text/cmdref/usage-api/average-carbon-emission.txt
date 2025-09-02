@@ -1,0 +1,14 @@
+average-carbon-emission
+***********************
+
+
+Description
+===========
+
+Average carbon emissions.
+
+
+Available Commands
+==================
+
+* request

@@ -1,0 +1,14 @@
+tactic-summary
+**************
+
+
+Description
+===========
+
+Summary information for a tactic.
+
+
+Available Commands
+==================
+
+* list-tactics

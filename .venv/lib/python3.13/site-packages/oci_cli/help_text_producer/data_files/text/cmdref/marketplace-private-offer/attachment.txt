@@ -1,0 +1,27 @@
+attachment
+**********
+
+
+Description
+===========
+
+Use the Marketplace Publisher CLI to manage the publishing of
+applications in Oracle Cloud Infrastructure Marketplace.
+
+
+Available Commands
+==================
+
+* attachment
+
+  * create
+
+  * delete
+
+  * get
+
+  * get-attachment-content
+
+* attachment-collection
+
+  * list-attachments

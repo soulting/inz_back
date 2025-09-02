@@ -1,0 +1,22 @@
+translator
+**********
+
+
+Description
+===========
+
+The properties for a Translator.
+
+
+Available Commands
+==================
+
+* create
+
+* delete
+
+* get
+
+* list
+
+* update

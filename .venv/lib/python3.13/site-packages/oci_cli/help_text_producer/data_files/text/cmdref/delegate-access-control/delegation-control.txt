@@ -1,0 +1,29 @@
+delegation-control
+******************
+
+
+Description
+===========
+
+Delegation Control enables you to grant, audit, or revoke the access
+Oracle has to your Exadata Cloud infrastructure, and obtain audit
+reports of all actions taken by a human operator, in a near real-time
+manner.
+
+
+Available Commands
+==================
+
+* change-compartment
+
+* create
+
+* delete
+
+* get
+
+* list
+
+* list-delegation-control-resources
+
+* update

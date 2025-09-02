@@ -1,0 +1,32 @@
+customization
+*************
+
+
+Description
+===========
+
+Description of a Customization.
+
+
+Available Commands
+==================
+
+* change-compartment
+
+* create
+
+* create-customization-entity-list-dataset
+
+* create-customization-object-storage-dataset
+
+* delete
+
+* get
+
+* list
+
+* update
+
+* update-customization-entity-list-dataset
+
+* update-customization-object-storage-dataset

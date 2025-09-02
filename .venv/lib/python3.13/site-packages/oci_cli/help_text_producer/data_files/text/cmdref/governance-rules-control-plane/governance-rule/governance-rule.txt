@@ -1,0 +1,37 @@
+governance-rule
+***************
+
+
+Description
+===========
+
+Represents a rule in parent tenancy which governs resources in child
+tenancies.
+
+
+Available Commands
+==================
+
+* create
+
+* create-governance-rule-allowed-regions-template
+
+* create-governance-rule-quota-template
+
+* create-governance-rule-tag-template
+
+* delete
+
+* get
+
+* list
+
+* retry
+
+* update
+
+* update-governance-rule-allowed-regions-template
+
+* update-governance-rule-quota-template
+
+* update-governance-rule-tag-template

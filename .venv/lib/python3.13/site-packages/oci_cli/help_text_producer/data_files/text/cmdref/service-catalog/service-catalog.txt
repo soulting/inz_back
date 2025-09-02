@@ -1,0 +1,24 @@
+service-catalog
+***************
+
+
+Description
+===========
+
+The model for an Oracle Cloud Infrastructure Service Catalog.
+
+
+Available Commands
+==================
+
+* change-compartment
+
+* create
+
+* delete
+
+* get
+
+* list
+
+* update

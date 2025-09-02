@@ -1,0 +1,15 @@
+monitored-instance-collection
+*****************************
+
+
+Description
+===========
+
+Results of a monitored instance search. Contains
+MonitoredInstanceSummary items.
+
+
+Available Commands
+==================
+
+* list-monitored-instances

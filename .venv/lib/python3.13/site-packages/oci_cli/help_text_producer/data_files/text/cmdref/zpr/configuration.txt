@@ -1,0 +1,17 @@
+configuration
+*************
+
+
+Description
+===========
+
+The configuration details of ZPR in the root compartment (the root
+compartment is the tenancy).
+
+
+Available Commands
+==================
+
+* create
+
+* get

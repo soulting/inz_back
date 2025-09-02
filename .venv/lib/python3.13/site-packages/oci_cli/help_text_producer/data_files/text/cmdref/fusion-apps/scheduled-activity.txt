@@ -1,0 +1,16 @@
+scheduled-activity
+******************
+
+
+Description
+===========
+
+Details of scheduled activity.
+
+
+Available Commands
+==================
+
+* get
+
+* list

@@ -1,0 +1,22 @@
+referential-relation
+********************
+
+
+Description
+===========
+
+A referential relation is a resource corresponding to database
+columns. It’s a subresource of sensitive data model resource and is
+always associated with a sensitive data model.
+
+
+Available Commands
+==================
+
+* create
+
+* delete
+
+* get
+
+* list

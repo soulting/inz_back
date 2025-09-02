@@ -1,0 +1,30 @@
+stream-cdn-config
+*****************
+
+
+Description
+===========
+
+Configuration used for integrating with a CDN.
+
+
+Available Commands
+==================
+
+* add
+
+* create-akamai-stream-cdn-config
+
+* create-edge-stream-cdn-config
+
+* delete
+
+* get
+
+* list
+
+* remove
+
+* update-akamai-stream-cdn-config
+
+* update-edge-stream-cdn-config

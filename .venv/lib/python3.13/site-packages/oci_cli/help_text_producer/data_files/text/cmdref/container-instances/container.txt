@@ -1,0 +1,23 @@
+container
+*********
+
+
+Description
+===========
+
+A single container on a container instance.
+
+If you delete a container, the record remains visible for a short
+period of time before being permanently removed.
+
+
+Available Commands
+==================
+
+* get
+
+* list
+
+* retrieve-logs
+
+* update

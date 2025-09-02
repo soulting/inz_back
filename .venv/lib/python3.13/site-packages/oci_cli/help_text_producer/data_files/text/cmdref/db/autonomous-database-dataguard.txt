@@ -1,0 +1,20 @@
+autonomous-database-dataguard
+*****************************
+
+
+Description
+===========
+
+The properties that define dataguard association between two different
+Autonomous Databases. Note that Autonomous Databases inherit DataGuard
+association from parent Autonomous Container Database. No actions can
+be taken on AutonomousDatabaseDataguardAssociation, usage is strictly
+informational.
+
+
+Available Commands
+==================
+
+* get
+
+* list

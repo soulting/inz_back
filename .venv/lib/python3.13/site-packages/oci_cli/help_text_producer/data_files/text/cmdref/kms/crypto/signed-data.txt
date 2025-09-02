@@ -1,0 +1,14 @@
+signed-data
+***********
+
+
+Description
+===========
+
+The response to a request to sign the message.
+
+
+Available Commands
+==================
+
+* sign

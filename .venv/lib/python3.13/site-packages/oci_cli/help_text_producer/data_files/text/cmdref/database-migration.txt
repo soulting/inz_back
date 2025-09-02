@@ -1,0 +1,133 @@
+database-migration
+******************
+
+
+Description
+===========
+
+Use the Oracle Cloud Infrastructure Database Migration CLI to perform
+database migration operations.
+
+
+Available Commands
+==================
+
+* connection
+
+  * change-compartment
+
+  * connection-diagnostics
+
+  * create-mysql-connection
+
+  * create-oracle-connection
+
+  * delete
+
+  * get
+
+  * list
+
+  * update-mysql-connection
+
+  * update-oracle-connection
+
+* excluded-object-summary
+
+  * list
+
+* job
+
+  * abort
+
+  * collect-traces
+
+  * create-parameter-file-version
+
+  * delete
+
+  * delete-parameter-file-version
+
+  * get
+
+  * get-advisor-report
+
+  * get-job-output-content
+
+  * get-parameter-file-version
+
+  * list
+
+  * list-parameter-file-versions
+
+  * make-current-parameter-file-version
+
+  * resume
+
+  * suspend
+
+  * update
+
+* job-output
+
+  * list
+
+* migration
+
+  * add-mysql-objects
+
+  * add-oracle-objects
+
+  * change-compartment
+
+  * clone-mysql-migration
+
+  * clone-oracle-migration
+
+  * create-mysql-migration
+
+  * create-oracle-migration
+
+  * delete
+
+  * evaluate
+
+  * get
+
+  * list
+
+  * remove-mysql-objects
+
+  * remove-oracle-objects
+
+  * retrieve-supported-phases
+
+  * start
+
+  * update-mysql-migration
+
+  * update-oracle-migration
+
+* migration-object-type-summary
+
+* migration-objects
+
+  * list
+
+* migration-parameter-summary
+
+  * list-migration-parameters
+
+* work-request
+
+  * get
+
+  * list
+
+* work-request-error
+
+  * list
+
+* work-request-logs
+
+  * list

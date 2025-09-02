@@ -1,0 +1,14 @@
+threat-types-collection
+***********************
+
+
+Description
+===========
+
+List of threat types that can be associated with threat indicators.
+
+
+Available Commands
+==================
+
+* list-threat-types

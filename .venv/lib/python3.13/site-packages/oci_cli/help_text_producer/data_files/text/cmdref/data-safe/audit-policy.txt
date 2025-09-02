@@ -1,0 +1,27 @@
+audit-policy
+************
+
+
+Description
+===========
+
+The resource represents all available audit policies relevant for the
+target database with their corresponding audit conditions. The audit
+policies could be in any one of the following 3 states in the target
+database 1) Created and enabled 2) Created but not enabled 3) Not
+created For more details on available audit policies, refer to
+documentation.
+
+
+Available Commands
+==================
+
+* change-compartment
+
+* get
+
+* provision
+
+* retrieve
+
+* update

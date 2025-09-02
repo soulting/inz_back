@@ -1,0 +1,20 @@
+announcements-preferences
+*************************
+
+
+Description
+===========
+
+Manage Oracle Cloud Infrastructure console announcements.
+
+
+Available Commands
+==================
+
+* create
+
+* get
+
+* list
+
+* update

@@ -1,0 +1,349 @@
+"get"
+*****
+
+* Description
+
+* Usage
+
+* Required Parameters
+
+* Optional Parameters
+
+* Global Parameters
+
+* Example using required parameter
+
+* Other Examples
+
+
+Description
+===========
+
+Gets the metadata and body of an object.
+
+Example:
+   oci os object get -ns mynamespace -bn mybucket –name myfile.txt
+   –file /Users/me/myfile.txt
+
+
+Usage
+=====
+
+   oci os object get [OPTIONS]
+
+
+Required Parameters
+===================
+
+-bn, --bucket-name [text]
+
+The name of the bucket.
+
+--file [filename]
+
+The name of the file that will receive the object content, or ‘-‘ to
+write to STDOUT.
+
+--name [text]
+
+The name of the object.
+
+
+Optional Parameters
+===================
+
+--encryption-key-file [filename]
+
+A file containing the base64-encoded string of the AES-256 encryption
+key associated with the object.
+
+--from-json [text]
+
+Provide input to this command as a JSON document from a file using the
+file://path-to/file syntax.
+
+The "--generate-full-command-json-input" option can be used to
+generate a sample json file to be used with this command option. The
+key names are pre-populated and match the command option names
+(converted to camelCase format, e.g. compartment-id –> compartmentId),
+while the values of the keys need to be populated by the user before
+using the sample file as an input to this command. For any command
+option that accepts multiple values, the value of the key can be a
+JSON array.
+
+Options can still be provided on the command line. If an option exists
+in both the JSON document and the command line then the command line
+specified value will be used.
+
+For examples on usage of this option, please see our “using CLI with
+advanced JSON options” link: https://docs.cloud.oracle.com/iaas/Conte
+nt/API/SDKDocs/cliusing.htm#AdvancedJSONOptions
+
+--http-response-cache-control [text]
+
+This value will be used in Cache-Control header of the response.
+
+--http-response-content-disposition [text]
+
+This value will be used in Content-Disposition header of the response.
+
+--http-response-content-encoding [text]
+
+This value will be used in Content-Encoding header of the response
+
+--http-response-content-language [text]
+
+This value will be used in Content-Language header of the response.
+
+--http-response-content-type [text]
+
+This value will be used in Content-Type header of the response.
+
+--http-response-expires [text]
+
+This value will be used in Expires header of the response
+
+--if-match [text]
+
+The entity tag to match.
+
+--if-none-match [text]
+
+The entity tag to avoid matching.
+
+--multipart-download-threshold [integer range]
+
+Objects larger than this size (in MiB) will be downloaded in multiple
+parts. The minimum allowable threshold is 128 MiB.
+
+-ns, --namespace, --namespace-name [text]
+
+The top-level namespace used for the request. If not provided, this
+parameter will be obtained internally using a call to ‘oci os ns get’
+
+--no-multipart
+
+Do not transfer the file in multiple parts. By default, files above
+128 MiB will be transferred in multiple parts, then combined.
+
+--parallel-download-count [integer range]
+
+The number of parallel operations to perform when downloading an
+object in multiple parts. Decreasing this value will make multipart
+downloads less resource intensive but they may take longer. Increasing
+this value may improve download times, but the download process will
+consume more system resources and network bandwidth. [default: 10]
+
+--part-size [integer range]
+
+Part size (in MiB) to use when the file is split into multiple parts
+and then combined. Part size must be greater than 10 MiB and defaults
+to 128 MiB.
+
+--range [text]
+
+Byte range to fetch. Follows
+https://tools.ietf.org/html/rfc7233#section-2.1. Example: bytes=2-10
+
+--version-id [text]
+
+VersionId used to identify a particular version of the object
+
+
+Global Parameters
+=================
+
+Use "oci --help" for help on global parameters.
+
+"--auth-purpose", "--auth", "--cert-bundle", "--cli-auto-prompt", "--
+cli-rc-file", "--config-file", "--connection-timeout", "--debug", "--
+defaults-file", "--endpoint", "--generate-full-command-json-input", "
+--generate-param-json-input", "--help", "--latest-version", "--max-
+retries", "--no-retry", "--opc-client-request-id", "--opc-request-id",
+"--output", "--profile", "--proxy", "--query", "--raw-output", "--
+read-timeout", "--realm-specific-endpoint", "--region", "--release-
+info", "--request-id", "--version", "-?", "-d", "-h", "-i", "-v"
+
+
+Example using required parameter
+================================
+
+Copy the following CLI commands into a file named example.sh. Run the
+command by typing “bash example.sh” and replacing the example
+parameters with your own.
+
+Please note this sample will only work in the POSIX-compliant bash-
+like shell. You need to set up the OCI configuration and appropriate
+security policies before trying the examples.
+
+       export bucket_name=<substitute-value-of-bucket_name> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/os/object/get.html#cmdoption-bucket-name
+       export file=<substitute-value-of-file> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/os/object/get.html#cmdoption-file
+       export name=<substitute-value-of-name> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/os/object/get.html#cmdoption-name
+
+       oci os object get --bucket-name $bucket_name --file $file --name $name
+
+
+Other Examples
+==============
+
+
+Description
+-----------
+
+This command will print the content of the object on the terminal
+
+
+Command
+-------
+
+    oci os object get -bn bucket-client --file - --name test.txt
+
+
+Output
+------
+
+   {
+    "output": "Sample Test File Input"
+   }
+
+
+Description
+-----------
+
+This command will download the object with file name local_test.txt
+
+
+Command
+-------
+
+    oci os object get -bn bucket-client --file local_test.txt --name test.txt
+
+
+Output
+------
+
+   {
+    "output": null
+   }
+
+
+Description
+-----------
+
+This command will download the object only when etag matches
+
+
+Command
+-------
+
+    oci os object get -bn bucket-client --name test.txt --file new_file.txt --if-match 38ffcfda-1200-4e9f-a7c7-4ff307032c44
+
+
+Output
+------
+
+   {
+    "output": null
+   }
+
+
+Description
+-----------
+
+This command will download the object only when etag does not match
+
+
+Command
+-------
+
+    oci os object get -bn bucket-client --name test.txt --file new_file.txt --if-none-match 38ffcfda-invalid-etag
+
+
+Output
+------
+
+   {
+    "output": null
+   }
+
+
+Description
+-----------
+
+This command will download the object as a single file
+
+
+Command
+-------
+
+    oci os object get -bn bucket-client --name test.txt --file new_file.txt --no-multipart
+
+
+Output
+------
+
+   {
+    "output": "Downloading object  [####################################]  100%"
+   }
+
+
+Description
+-----------
+
+This command will download the object in specified number of parallel
+operations
+
+
+Command
+-------
+
+    oci os object get -bn bucket-client --name test.txt --file new_file.txt --parallel-download-count 2
+
+
+Output
+------
+
+   {
+    "output": null
+   }
+
+
+Description
+-----------
+
+This command will download the object in part size of 200 and combine
+it
+
+
+Command
+-------
+
+    oci os object get -bn bucket-client --name test.txt --file new_file.txt --part-size 200
+
+
+Output
+------
+
+   {
+    "output": null
+   }
+
+
+Description
+-----------
+
+This command will download the object part in the specified range
+
+
+Command
+-------
+
+    oci os object get -bn bucket-client --name test.txt --file new_file_5.txt --range bytes=2-10
+
+
+Output
+------
+
+   {
+    "output": null
+   }

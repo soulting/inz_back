@@ -1,0 +1,23 @@
+build-pipeline
+**************
+
+
+Description
+===========
+
+A set of stages forming a directed acyclic graph that defines the
+build process.
+
+
+Available Commands
+==================
+
+* create
+
+* delete
+
+* get
+
+* list
+
+* update

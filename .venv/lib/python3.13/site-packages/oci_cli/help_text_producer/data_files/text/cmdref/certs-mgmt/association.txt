@@ -1,0 +1,16 @@
+association
+***********
+
+
+Description
+===========
+
+The details of the association.
+
+
+Available Commands
+==================
+
+* get
+
+* list

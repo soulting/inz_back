@@ -1,0 +1,38 @@
+instance-agent
+**************
+
+
+Description
+===========
+
+Compute Instance Agent Service CLI
+
+
+Available Commands
+==================
+
+* available-plugins
+
+  * get
+
+* command
+
+  * cancel
+
+  * create
+
+  * get
+
+  * list
+
+* command-execution
+
+  * get
+
+  * list
+
+* plugin
+
+  * get
+
+  * list

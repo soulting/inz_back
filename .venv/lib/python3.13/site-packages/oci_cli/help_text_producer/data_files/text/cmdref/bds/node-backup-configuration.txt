@@ -1,0 +1,14 @@
+node-backup-configuration
+*************************
+
+
+Description
+===========
+
+The information about the NodeBackupConfiguration.
+
+
+Available Commands
+==================
+
+* delete

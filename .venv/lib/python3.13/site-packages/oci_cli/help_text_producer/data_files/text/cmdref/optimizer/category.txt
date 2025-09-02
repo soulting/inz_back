@@ -1,0 +1,14 @@
+category
+********
+
+
+Description
+===========
+
+The metadata associated with the category.
+
+
+Available Commands
+==================
+
+* get

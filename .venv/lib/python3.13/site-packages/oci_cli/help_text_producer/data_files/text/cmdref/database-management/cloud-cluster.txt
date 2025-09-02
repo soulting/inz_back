@@ -1,0 +1,20 @@
+cloud-cluster
+*************
+
+
+Description
+===========
+
+The details of a cloud cluster.
+
+
+Available Commands
+==================
+
+* get
+
+* list
+
+* summarize-cloud-cluster-metrics
+
+* update

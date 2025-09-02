@@ -1,0 +1,14 @@
+migration-objects
+*****************
+
+
+Description
+===========
+
+Common Migration Objects collection.
+
+
+Available Commands
+==================
+
+* list

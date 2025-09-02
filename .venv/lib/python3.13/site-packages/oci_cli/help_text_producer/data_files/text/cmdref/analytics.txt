@@ -1,0 +1,68 @@
+analytics
+*********
+
+
+Description
+===========
+
+Analytics CLI.
+
+
+Available Commands
+==================
+
+* analytics-instance
+
+  * change-compartment
+
+  * change-network-endpoint
+
+  * create
+
+  * create-private-access-channel
+
+  * create-vanity-url
+
+  * delete
+
+  * delete-private-access-channel
+
+  * delete-vanity-url
+
+  * get
+
+  * get-private-access-channel
+
+  * list
+
+  * scale
+
+  * set-feature-bundle
+
+  * set-kms-key
+
+  * start
+
+  * stop
+
+  * update
+
+  * update-private-access-channel
+
+  * update-vanity-url
+
+* work-request
+
+  * delete
+
+  * get
+
+  * list
+
+* work-request-error
+
+  * list
+
+* work-request-log
+
+  * list

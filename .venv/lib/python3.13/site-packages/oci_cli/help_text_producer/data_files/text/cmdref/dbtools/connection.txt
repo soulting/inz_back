@@ -1,0 +1,46 @@
+connection
+**********
+
+
+Description
+===========
+
+Description of the Database Tools connection.
+
+
+Available Commands
+==================
+
+* add-lock
+
+* change-compartment
+
+* create-generic-jdbc
+
+* create-mysql-database
+
+* create-oracle-database
+
+* create-postgresql
+
+* delete
+
+* get
+
+* list
+
+* remove-lock
+
+* update-generic-jdbc
+
+* update-mysql-database
+
+* update-oracle-database
+
+* update-postgresql
+
+* validate-mysql-database
+
+* validate-oracle-database
+
+* validate-postgresql

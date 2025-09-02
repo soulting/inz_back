@@ -1,0 +1,197 @@
+"list-ip-inventory"
+*******************
+
+* Description
+
+* Usage
+
+* Required Parameters
+
+* Optional Parameters
+
+* Global Parameters
+
+* Example using required parameter
+
+
+Description
+===========
+
+Lists the IP Inventory information in the selected compartments.
+
+
+Usage
+=====
+
+   oci network ipam list-ip-inventory [OPTIONS]
+
+
+Required Parameters
+===================
+
+--compartment-list [complex type]
+
+List the OCID of the compartments. This is a complex type whose value
+must be valid JSON. The value can be provided as a string on the
+command line or passed in as a file using the file://path/to/file
+syntax.
+
+The "--generate-param-json-input" option can be used to generate an
+example of the JSON which must be provided. We recommend storing this
+example in a file, modifying it as needed and then passing it back in
+via the file:// syntax.
+
+--region-list [complex type]
+
+Lists the selected regions. This is a complex type whose value must be
+valid JSON. The value can be provided as a string on the command line
+or passed in as a file using the file://path/to/file syntax.
+
+The "--generate-param-json-input" option can be used to generate an
+example of the JSON which must be provided. We recommend storing this
+example in a file, modifying it as needed and then passing it back in
+via the file:// syntax.
+
+
+Optional Parameters
+===================
+
+--address-type-list [complex type]
+
+List of IP address types used.
+
+This option is a JSON list with items of type AddressType.  For
+documentation on AddressType please see our API reference: https://do
+cs.cloud.oracle.com/api/#/en/iaas/20160918/datatypes/AddressType. This
+is a complex type whose value must be valid JSON. The value can be
+provided as a string on the command line or passed in as a file using
+the file://path/to/file syntax.
+
+The "--generate-param-json-input" option can be used to generate an
+example of the JSON which must be provided. We recommend storing this
+example in a file, modifying it as needed and then passing it back in
+via the file:// syntax.
+
+--all
+
+Fetches all pages of results.
+
+--from-json [text]
+
+Provide input to this command as a JSON document from a file using the
+file://path-to/file syntax.
+
+The "--generate-full-command-json-input" option can be used to
+generate a sample json file to be used with this command option. The
+key names are pre-populated and match the command option names
+(converted to camelCase format, e.g. compartment-id –> compartmentId),
+while the values of the keys need to be populated by the user before
+using the sample file as an input to this command. For any command
+option that accepts multiple values, the value of the key can be a
+JSON array.
+
+Options can still be provided on the command line. If an option exists
+in both the JSON document and the command line then the command line
+specified value will be used.
+
+For examples on usage of this option, please see our “using CLI with
+advanced JSON options” link: https://docs.cloud.oracle.com/iaas/Conte
+nt/API/SDKDocs/cliusing.htm#AdvancedJSONOptions
+
+--overlapping-vcns-only [boolean]
+
+List of overlapping VCNs.
+
+--override-filters [boolean]
+
+List of selected filters.
+
+--pagination-limit [integer]
+
+Specifies the maximum number of results displayed per page for a
+paginated “List” call. For more information, see List Pagination.
+Example: *50*
+
+--pagination-offset [integer]
+
+Most List operations paginate results. Results are paginated for the
+ListInstances operations. When you call a paginated List operation,
+the response indicates more pages of results by including the opc-
+next-page header. For more information, see List Pagination.
+
+--resource-type-list [text]
+
+List of VCN resource types.
+
+Accepted values are:
+
+   Resource
+
+--search-keyword [text]
+
+Filters the results for the specified string.
+
+--sort-by [text]
+
+Provide the sort order (*sortOrder*) to sort the fields such as
+TIMECREATED in descending or descending order, and DISPLAYNAME in case
+sensitive.
+
+**Note:** For some “List” operations (for example, *ListInstances*),
+sort resources by an availability domain when the resources belong to
+a single availability domain. If you sort the “List” operations
+without specifying an availability domain, the resources are grouped
+by availability domains and then sorted.
+
+Accepted values are:
+
+   DISPLAYNAME, DNS_HOSTNAME, REGION, UTILIZATION
+
+--sort-order [text]
+
+Specifies the sort order to use. Select either ascending (*ASC*) or
+descending (*DESC*) order. The DISPLAYNAME sort order is case
+sensitive.
+
+Accepted values are:
+
+   ASC, DESC
+
+--utilization [float]
+
+The CIDR utilization of a VCN.
+
+
+Global Parameters
+=================
+
+Use "oci --help" for help on global parameters.
+
+"--auth-purpose", "--auth", "--cert-bundle", "--cli-auto-prompt", "--
+cli-rc-file", "--config-file", "--connection-timeout", "--debug", "--
+defaults-file", "--endpoint", "--generate-full-command-json-input", "
+--generate-param-json-input", "--help", "--latest-version", "--max-
+retries", "--no-retry", "--opc-client-request-id", "--opc-request-id",
+"--output", "--profile", "--proxy", "--query", "--raw-output", "--
+read-timeout", "--realm-specific-endpoint", "--region", "--release-
+info", "--request-id", "--version", "-?", "-d", "-h", "-i", "-v"
+
+
+Example using required parameter
+================================
+
+Copy and paste the following example into a JSON file, replacing the
+example parameters with your own.
+
+       oci network ipam list-ip-inventory --generate-param-json-input compartment-list > compartment-list.json
+       oci network ipam list-ip-inventory --generate-param-json-input region-list > region-list.json
+
+Copy the following CLI commands into a file named example.sh. Run the
+command by typing “bash example.sh” and replacing the example
+parameters with your own.
+
+Please note this sample will only work in the POSIX-compliant bash-
+like shell. You need to set up the OCI configuration and appropriate
+security policies before trying the examples.
+
+       oci network ipam list-ip-inventory --compartment-list file://compartment-list.json --region-list file://region-list.json

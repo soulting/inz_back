@@ -1,0 +1,15 @@
+on-premise-vantage-point-collection
+***********************************
+
+
+Description
+===========
+
+The results of an On-premise vantage point search, which contains
+OnPremiseVantagePointSummary items and other data in an APM domain.
+
+
+Available Commands
+==================
+
+* list-on-premise-vantage-points

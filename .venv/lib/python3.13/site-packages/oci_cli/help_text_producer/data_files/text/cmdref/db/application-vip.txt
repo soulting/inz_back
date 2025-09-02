@@ -1,0 +1,20 @@
+application-vip
+***************
+
+
+Description
+===========
+
+Details of an application virtual IP (VIP) address.
+
+
+Available Commands
+==================
+
+* create
+
+* delete
+
+* get
+
+* list

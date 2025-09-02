@@ -1,0 +1,25 @@
+oda-private-endpoint
+********************
+
+
+Description
+===========
+
+A private endpoint allows Digital Assistant Instance to access
+resources in a customer’s virtual cloud network (VCN).
+
+
+Available Commands
+==================
+
+* change-compartment
+
+* create
+
+* delete
+
+* get
+
+* list
+
+* update

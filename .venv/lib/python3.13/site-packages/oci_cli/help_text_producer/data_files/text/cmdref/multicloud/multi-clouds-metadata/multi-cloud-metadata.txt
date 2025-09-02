@@ -1,0 +1,15 @@
+multi-cloud-metadata
+********************
+
+
+Description
+===========
+
+Multicloud metadata information including base multicloud compartments
+information.
+
+
+Available Commands
+==================
+
+* get

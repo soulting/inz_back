@@ -1,0 +1,15 @@
+work-request-log-entry-collection
+*********************************
+
+
+Description
+===========
+
+Results of a workRequestLog search. Contains both workRequestLog items
+and other information, such as metadata.
+
+
+Available Commands
+==================
+
+* list-work-request-logs

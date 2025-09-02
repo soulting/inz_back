@@ -1,0 +1,14 @@
+scheduled-fleet-collection
+**************************
+
+
+Description
+===========
+
+Results of a Scheduled ActionGroup search.
+
+
+Available Commands
+==================
+
+* list-scheduled-fleets

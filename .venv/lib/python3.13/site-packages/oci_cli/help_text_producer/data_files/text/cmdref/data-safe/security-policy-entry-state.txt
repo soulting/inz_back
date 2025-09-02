@@ -1,0 +1,17 @@
+security-policy-entry-state
+***************************
+
+
+Description
+===========
+
+The resource represents the state of a specific entry type deployment
+on a target.
+
+
+Available Commands
+==================
+
+* get
+
+* list

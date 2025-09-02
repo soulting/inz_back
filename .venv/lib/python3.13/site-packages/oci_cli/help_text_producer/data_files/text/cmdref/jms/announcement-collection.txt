@@ -1,0 +1,14 @@
+announcement-collection
+***********************
+
+
+Description
+===========
+
+Results of list announcements call. Contains AnnouncementSummary items
+
+
+Available Commands
+==================
+
+* list-announcements

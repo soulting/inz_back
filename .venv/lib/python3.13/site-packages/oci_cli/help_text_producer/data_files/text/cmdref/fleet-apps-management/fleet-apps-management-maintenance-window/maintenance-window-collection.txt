@@ -1,0 +1,16 @@
+maintenance-window-collection
+*****************************
+
+
+Description
+===========
+
+Results of a maintenanceWindow search. Contains both
+MaintenanceWindowSummary items and other information, such as
+metadata.
+
+
+Available Commands
+==================
+
+* list-maintenance-windows

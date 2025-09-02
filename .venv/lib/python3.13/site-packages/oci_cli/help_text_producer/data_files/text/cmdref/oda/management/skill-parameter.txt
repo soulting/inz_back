@@ -1,0 +1,22 @@
+skill-parameter
+***************
+
+
+Description
+===========
+
+Metadata for a Skill Parameter.
+
+
+Available Commands
+==================
+
+* create
+
+* delete
+
+* get
+
+* list
+
+* update

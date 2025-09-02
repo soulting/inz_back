@@ -1,0 +1,340 @@
+"get"
+*****
+
+* Description
+
+* Usage
+
+* Required Parameters
+
+* Optional Parameters
+
+* Global Parameters
+
+* Example using required parameter
+
+* Other Examples
+
+
+Description
+===========
+
+Gets the current representation of the given bucket in the given
+Object Storage namespace.
+
+Bucket  summary  includes  the  ‘namespace’,  ‘name’,
+‘compartmentId’, ‘createdBy’, ‘timeCreated’, and ‘etag’ fields.
+
+
+Usage
+=====
+
+   oci os bucket get [OPTIONS]
+
+
+Required Parameters
+===================
+
+--bucket-name, --name, -bn [text]
+
+The name of the bucket. Avoid entering confidential information.
+Example: *my-new-bucket1*
+
+
+Optional Parameters
+===================
+
+--fields [text]
+
+This parameter can only include ‘approximateCount’ (approximate number
+of objects) and ‘approximateSize’ (total approximate size in bytes of
+all objects). For example ‘–fields approximateCount –fields
+approximateSize’.
+
+Accepted values are:
+
+   approximateCount, approximateSize, autoTiering
+
+--from-json [text]
+
+Provide input to this command as a JSON document from a file using the
+file://path-to/file syntax.
+
+The "--generate-full-command-json-input" option can be used to
+generate a sample json file to be used with this command option. The
+key names are pre-populated and match the command option names
+(converted to camelCase format, e.g. compartment-id –> compartmentId),
+while the values of the keys need to be populated by the user before
+using the sample file as an input to this command. For any command
+option that accepts multiple values, the value of the key can be a
+JSON array.
+
+Options can still be provided on the command line. If an option exists
+in both the JSON document and the command line then the command line
+specified value will be used.
+
+For examples on usage of this option, please see our “using CLI with
+advanced JSON options” link: https://docs.cloud.oracle.com/iaas/Conte
+nt/API/SDKDocs/cliusing.htm#AdvancedJSONOptions
+
+--if-match [text]
+
+The entity tag (ETag) to match with the ETag of an existing resource.
+If the specified ETag matches the ETag of the existing resource, GET
+and HEAD requests will return the resource and PUT and POST requests
+will upload the resource.
+
+--if-none-match [text]
+
+The entity tag (ETag) to avoid matching. Wildcards (‘*’) are not
+allowed. If the specified ETag does not match the ETag of the existing
+resource, the request returns the expected response. If the ETag
+matches the ETag of the existing resource, the request returns an HTTP
+304 status without a response body.
+
+--namespace-name, --namespace, -ns [text]
+
+The Object Storage namespace used for the request. If not provided,
+this parameter will be obtained internally using a call to ‘oci os ns
+get’
+
+
+Global Parameters
+=================
+
+Use "oci --help" for help on global parameters.
+
+"--auth-purpose", "--auth", "--cert-bundle", "--cli-auto-prompt", "--
+cli-rc-file", "--config-file", "--connection-timeout", "--debug", "--
+defaults-file", "--endpoint", "--generate-full-command-json-input", "
+--generate-param-json-input", "--help", "--latest-version", "--max-
+retries", "--no-retry", "--opc-client-request-id", "--opc-request-id",
+"--output", "--profile", "--proxy", "--query", "--raw-output", "--
+read-timeout", "--realm-specific-endpoint", "--region", "--release-
+info", "--request-id", "--version", "-?", "-d", "-h", "-i", "-v"
+
+
+Example using required parameter
+================================
+
+Copy the following CLI commands into a file named example.sh. Run the
+command by typing “bash example.sh” and replacing the example
+parameters with your own.
+
+Please note this sample will only work in the POSIX-compliant bash-
+like shell. You need to set up the OCI configuration and appropriate
+security policies before trying the examples.
+
+       export bucket_name=<substitute-value-of-bucket_name> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/os/bucket/get.html#cmdoption-bucket-name
+
+       oci os bucket get --bucket-name $bucket_name
+
+
+Other Examples
+==============
+
+
+Description
+-----------
+
+Gets the current representation of the specified bucket
+
+
+Command
+-------
+
+    oci os bucket get -bn bucket-client
+
+
+Output
+------
+
+   {
+    "data": {
+         "approximate-count": null,
+         "approximate-size": null,
+         "auto-tiering": null,
+         "compartment-id": "ocid1.compartment.oc1..aaaaaaaa3ffjane6aoullgob4daj6xw2bzkm7maswctna2zgoxfny4smpoha",
+         "created-by": "ocid1.user.oc1..aaaaaaaatflstw5i7x3pb5ukijuanrhdgijymtiqwlkexuzar2aoyaluqcdq",
+         "defined-tags": {},
+         "etag": "d822baac-990c-4d29-8715-f59a36910283",
+         "freeform-tags": {},
+         "id": "ocid1.bucket.oc1.phx.aaaaaaaaxkx2ogrmrtz32xfyvazwxcfu4l3jb4tl3rvwsmvhbnin2e5zexgq",
+         "is-read-only": false,
+         "kms-key-id": null,
+         "metadata": {},
+         "name": "bucket-client",
+         "namespace": "bmcostests",
+         "object-events-enabled": false,
+         "object-lifecycle-policy-etag": null,
+         "public-access-type": "NoPublicAccess",
+         "replication-enabled": false,
+         "storage-tier": "Standard",
+         "time-created": "2022-11-18T11:37:31.283000+00:00",
+         "versioning": "Disabled"
+    },
+    "etag": "d822baac-990c-4d29-8715-f59a36910283"
+   }
+
+
+Description
+-----------
+
+Gets the bucket representation with only the specified fields, other
+fields will be null
+
+
+Command
+-------
+
+    oci os bucket get -bn bucket-client --fields approximateCount --fields  autoTiering
+
+
+Output
+------
+
+   {
+    "data": {
+         "approximate-count": 0,
+         "approximate-size": null,
+         "auto-tiering": "Disabled",
+         "compartment-id": "ocid1.compartment.oc1..aaaaaaaa3ffjane6aoullgob4daj6xw2bzkm7maswctna2zgoxfny4smpoha",
+         "created-by": "ocid1.user.oc1..aaaaaaaatflstw5i7x3pb5ukijuanrhdgijymtiqwlkexuzar2aoyaluqcdq",
+         "defined-tags": {},
+         "etag": "d822baac-990c-4d29-8715-f59a36910283",
+         "freeform-tags": {},
+         "id": "ocid1.bucket.oc1.phx.aaaaaaaaxkx2ogrmrtz32xfyvazwxcfu4l3jb4tl3rvwsmvhbnin2e5zexgq",
+         "is-read-only": false,
+         "kms-key-id": null,
+         "metadata": {},
+         "name": "bucket-client",
+         "namespace": "bmcostests",
+         "object-events-enabled": false,
+         "object-lifecycle-policy-etag": null,
+         "public-access-type": "NoPublicAccess",
+         "replication-enabled": false,
+         "storage-tier": "Standard",
+         "time-created": "2022-11-18T11:37:31.283000+00:00",
+         "versioning": "Disabled"
+    },
+    "etag": "d822baac-990c-4d29-8715-f59a36910283"
+   }
+
+
+Description
+-----------
+
+Gets the bucket representation only if the specified etag matches with
+the bucket etag
+
+
+Command
+-------
+
+    oci os bucket get -bn bucket-client --if-match d822baac-990c-4d29-8715-f59a36910283
+
+
+Output
+------
+
+   {
+    "data": {
+         "approximate-count": null,
+         "approximate-size": null,
+         "auto-tiering": null,
+         "compartment-id": "ocid1.compartment.oc1..aaaaaaaa3ffjane6aoullgob4daj6xw2bzkm7maswctna2zgoxfny4smpoha",
+         "created-by": "ocid1.user.oc1..aaaaaaaatflstw5i7x3pb5ukijuanrhdgijymtiqwlkexuzar2aoyaluqcdq",
+         "defined-tags": {},
+         "etag": "d822baac-990c-4d29-8715-f59a36910283",
+         "freeform-tags": {},
+         "id": "ocid1.bucket.oc1.phx.aaaaaaaaxkx2ogrmrtz32xfyvazwxcfu4l3jb4tl3rvwsmvhbnin2e5zexgq",
+         "is-read-only": false,
+         "kms-key-id": null,
+         "metadata": {},
+         "name": "bucket-client",
+         "namespace": "bmcostests",
+         "object-events-enabled": false,
+         "object-lifecycle-policy-etag": null,
+         "public-access-type": "NoPublicAccess",
+         "replication-enabled": false,
+         "storage-tier": "Standard",
+         "time-created": "2022-11-18T11:37:31.283000+00:00",
+         "versioning": "Disabled"
+    },
+    "etag": "d822baac-990c-4d29-8715-f59a36910283"
+   }
+
+
+Description
+-----------
+
+Gets the bucket representation only if the specified etag does not
+matches with the bucket etag
+
+
+Command
+-------
+
+    oci os bucket get -bn bucket-client --if-none-match d822baac-990c-4d29-8715-f59a36910283
+
+
+Output
+------
+
+   {
+    "client_version": "Oracle-PythonSDK/2.85.0, Oracle-PythonCLI/3.18.1",
+    "code": null,
+    "logging_tips": "Please run the OCI CLI command using --debug flag to find more debug information.",
+    "message": "The service returned error code 304",
+    "opc-request-id": "phx-1:MDjeCe2awzhSPDABy81WiTj0-3BVGbNzrk8wp1qQ13EM-7D6U7QCmMVwI0_GgatF",
+    "operation_name": "get_bucket",
+    "request_endpoint": "GET https://objectstorage.us-phoenix-1.oraclecloud.com/n/bmcostests/b/bucket-client",
+    "status": 304,
+    "target_service": "object_storage",
+    "timestamp": "2022-11-18T11:43:53.261713+00:00",
+    "troubleshooting_tips": "See https://docs.oracle.com/iaas/Content/API/References/apierrors.htm#apierrors_304__304_none for more information about resolving this error. If you are unable to resolve this issue, run this CLI command with --debug option and contact Oracle support and provide them the full error message."
+   }
+
+
+Description
+-----------
+
+Gets the bucket representation of the bucket in the specified
+namespace
+
+
+Command
+-------
+
+    oci os bucket get -bn bucket-client -ns bmcostests
+
+
+Output
+------
+
+   {
+    "data": {
+         "approximate-count": null,
+         "approximate-size": null,
+         "auto-tiering": null,
+         "compartment-id": "ocid1.compartment.oc1..aaaaaaaa3ffjane6aoullgob4daj6xw2bzkm7maswctna2zgoxfny4smpoha",
+         "created-by": "ocid1.user.oc1..aaaaaaaatflstw5i7x3pb5ukijuanrhdgijymtiqwlkexuzar2aoyaluqcdq",
+         "defined-tags": {},
+         "etag": "d822baac-990c-4d29-8715-f59a36910283",
+         "freeform-tags": {},
+         "id": "ocid1.bucket.oc1.phx.aaaaaaaaxkx2ogrmrtz32xfyvazwxcfu4l3jb4tl3rvwsmvhbnin2e5zexgq",
+         "is-read-only": false,
+         "kms-key-id": null,
+         "metadata": {},
+         "name": "bucket-client",
+         "namespace": "bmcostests",
+         "object-events-enabled": false,
+         "object-lifecycle-policy-etag": null,
+         "public-access-type": "NoPublicAccess",
+         "replication-enabled": false,
+         "storage-tier": "Standard",
+         "time-created": "2022-11-18T11:37:31.283000+00:00",
+         "versioning": "Disabled"
+    },
+    "etag": "d822baac-990c-4d29-8715-f59a36910283"
+   }

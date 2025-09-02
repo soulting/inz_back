@@ -1,0 +1,34 @@
+vtap
+****
+
+
+Description
+===========
+
+A virtual test access point (VTAP) provides a way to mirror all
+traffic from a designated source to a selected target in order to
+facilitate troubleshooting, security analysis, and data monitoring. A
+VTAP is functionally similar to a test access point (TAP) you might
+deploy in your on-premises network.
+
+A *`capture filter
+<https://docs.cloud.oracle.com/api/#/en/iaas/latest/CaptureFilter>`__*
+contains a set of *`rules <https://docs.cloud.oracle.com/api/#/en/iaa
+s/latest/datatypes/CaptureFilterRuleDetails>`__* governing what
+traffic a VTAP mirrors.
+
+
+Available Commands
+==================
+
+* change-compartment
+
+* create
+
+* delete
+
+* get
+
+* list
+
+* update

@@ -1,0 +1,14 @@
+resource-profile-impacted-resource-summary
+******************************************
+
+
+Description
+===========
+
+Summary information on impacted resource in resource profile.
+
+
+Available Commands
+==================
+
+* list-resource-profile-impacted-resources

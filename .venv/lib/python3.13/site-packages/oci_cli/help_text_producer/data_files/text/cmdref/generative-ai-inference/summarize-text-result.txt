@@ -1,0 +1,14 @@
+summarize-text-result
+*********************
+
+
+Description
+===========
+
+Summarize text result to return to caller.
+
+
+Available Commands
+==================
+
+* summarize-text

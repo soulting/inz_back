@@ -1,0 +1,14 @@
+license-metric
+**************
+
+
+Description
+===========
+
+Overview of product license and resources usage.
+
+
+Available Commands
+==================
+
+* get

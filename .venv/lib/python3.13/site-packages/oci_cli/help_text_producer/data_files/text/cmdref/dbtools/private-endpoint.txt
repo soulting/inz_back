@@ -1,0 +1,28 @@
+private-endpoint
+****************
+
+
+Description
+===========
+
+Description of Database Tools private endpoint.
+
+
+Available Commands
+==================
+
+* add-lock
+
+* change-compartment
+
+* create
+
+* delete
+
+* get
+
+* list
+
+* remove-lock
+
+* update

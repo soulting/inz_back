@@ -1,0 +1,186 @@
+"list-sources"
+**************
+
+* Description
+
+* Usage
+
+* Required Parameters
+
+* Optional Parameters
+
+* Global Parameters
+
+* Example using required parameter
+
+
+Description
+===========
+
+Returns a list of sources, containing detailed information about them.
+You may limit the number of results, provide sorting order, and filter
+by information such as display name, description and entity type.
+
+
+Usage
+=====
+
+   oci log-analytics source list-sources [OPTIONS]
+
+
+Required Parameters
+===================
+
+--compartment-id, -c [text]
+
+The ID of the compartment in which to list resources.
+
+--namespace-name [text]
+
+The Logging Analytics namespace used for the request.
+
+
+Optional Parameters
+===================
+
+--all
+
+Fetches all pages of results. If you provide this option, then you
+cannot provide the "--limit" option.
+
+--categories [text]
+
+A comma-separated list of categories used for filtering
+
+--entity-type [text]
+
+A filter to return only sources associated with entities of the
+specified type. The match is case-insensitive.
+
+--from-json [text]
+
+Provide input to this command as a JSON document from a file using the
+file://path-to/file syntax.
+
+The "--generate-full-command-json-input" option can be used to
+generate a sample json file to be used with this command option. The
+key names are pre-populated and match the command option names
+(converted to camelCase format, e.g. compartment-id –> compartmentId),
+while the values of the keys need to be populated by the user before
+using the sample file as an input to this command. For any command
+option that accepts multiple values, the value of the key can be a
+JSON array.
+
+Options can still be provided on the command line. If an option exists
+in both the JSON document and the command line then the command line
+specified value will be used.
+
+For examples on usage of this option, please see our “using CLI with
+advanced JSON options” link: https://docs.cloud.oracle.com/iaas/Conte
+nt/API/SDKDocs/cliusing.htm#AdvancedJSONOptions
+
+--is-auto-associated [boolean]
+
+An auto-associate flag used for filtering.  Only sources which are
+marked for automatic association will be returned.
+
+--is-simplified [boolean]
+
+A flag specifying whether or not to return all source information, or
+a subset of the information about each source.  A value of true will
+return only the source unique identifier and the source name.  A value
+of false will return all source information (such as author, updated
+date, system flag, etc.)
+
+--is-system [text]
+
+The system value used for filtering.  Only items with the specified
+system value will be returned.  Valid values are built in, custom (for
+user defined items), or all (for all items, regardless of system
+value).
+
+Accepted values are:
+
+   ALL, BUILT_IN, CUSTOM
+
+--limit [integer]
+
+The maximum number of items to return.
+
+--name [text]
+
+A filter to return only log analytics entities whose name matches the
+entire name given. The match is case-insensitive.
+
+--page [text]
+
+The page token representing the page at which to start retrieving
+results. This is usually retrieved from a previous list call.
+
+--page-size [integer]
+
+When fetching results, the number of results to fetch per call. Only
+valid when used with "--all" or "--limit", and ignored otherwise.
+
+--pattern-text [text]
+
+The pattern text filter. Only sources with a pattern | which contains
+text with the specified string will be returned.
+
+--sort-by [text]
+
+The attribute used to sort the returned sources
+
+Accepted values are:
+
+   associationCount, name, sourceType, timeUpdated
+
+--sort-order [text]
+
+The sort order to use, either ascending (*ASC*) or descending
+(*DESC*).
+
+Accepted values are:
+
+   ASC, DESC
+
+--source-display-text [text]
+
+The source display text used for filtering.  Only sources with the
+specified name or description will be returned.
+
+--source-type [text]
+
+The source type.
+
+
+Global Parameters
+=================
+
+Use "oci --help" for help on global parameters.
+
+"--auth-purpose", "--auth", "--cert-bundle", "--cli-auto-prompt", "--
+cli-rc-file", "--config-file", "--connection-timeout", "--debug", "--
+defaults-file", "--endpoint", "--generate-full-command-json-input", "
+--generate-param-json-input", "--help", "--latest-version", "--max-
+retries", "--no-retry", "--opc-client-request-id", "--opc-request-id",
+"--output", "--profile", "--proxy", "--query", "--raw-output", "--
+read-timeout", "--realm-specific-endpoint", "--region", "--release-
+info", "--request-id", "--version", "-?", "-d", "-h", "-i", "-v"
+
+
+Example using required parameter
+================================
+
+Copy the following CLI commands into a file named example.sh. Run the
+command by typing “bash example.sh” and replacing the example
+parameters with your own.
+
+Please note this sample will only work in the POSIX-compliant bash-
+like shell. You need to set up the OCI configuration and appropriate
+security policies before trying the examples.
+
+       export compartment_id=<substitute-value-of-compartment_id> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/log-analytics/source/list-sources.html#cmdoption-compartment-id
+       export namespace_name=<substitute-value-of-namespace_name> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/log-analytics/source/list-sources.html#cmdoption-namespace-name
+
+       oci log-analytics source list-sources --compartment-id $compartment_id --namespace-name $namespace_name

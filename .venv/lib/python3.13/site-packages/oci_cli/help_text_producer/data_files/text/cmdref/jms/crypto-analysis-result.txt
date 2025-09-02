@@ -1,0 +1,19 @@
+crypto-analysis-result
+**********************
+
+
+Description
+===========
+
+Metadata for the result of a crypto event analysis. The analysis
+result is stored in an Object Storage bucket.
+
+
+Available Commands
+==================
+
+* delete
+
+* get
+
+* list

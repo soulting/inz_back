@@ -1,0 +1,28 @@
+detailed-description
+********************
+
+
+Description
+===========
+
+The detailed description of an object.
+
+
+Available Commands
+==================
+
+* create-application
+
+* create-dis-application
+
+* delete-application
+
+* delete-dis-application
+
+* get-application
+
+* get-dis-application
+
+* update-application
+
+* update-dis-application

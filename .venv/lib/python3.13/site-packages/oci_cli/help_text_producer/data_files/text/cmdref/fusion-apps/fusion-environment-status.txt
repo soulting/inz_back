@@ -1,0 +1,15 @@
+fusion-environment-status
+*************************
+
+
+Description
+===========
+
+The health status of the Fusion Applications environment. For more
+information, see Environment Status.
+
+
+Available Commands
+==================
+
+* get

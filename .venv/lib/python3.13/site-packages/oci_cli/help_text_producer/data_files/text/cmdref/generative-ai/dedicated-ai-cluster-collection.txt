@@ -1,0 +1,16 @@
+dedicated-ai-cluster-collection
+*******************************
+
+
+Description
+===========
+
+Results of a dedicate AI cluster search. Contains
+DedicatedAiClusterSummary items and other information such as
+metadata.
+
+
+Available Commands
+==================
+
+* list-dedicated-ai-clusters

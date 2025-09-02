@@ -1,0 +1,32 @@
+hsm-cluster
+***********
+
+
+Description
+===========
+
+Dedicated KMS-HSM Cluster Management
+
+
+Available Commands
+==================
+
+* cancel-hsm-cluster-deletion
+
+* change-compartment
+
+* create
+
+* download-certificate-signing-request
+
+* get
+
+* get-pre-co-user-credentials
+
+* list
+
+* schedule-hsm-cluster-deletion
+
+* update
+
+* upload-partition-certificates

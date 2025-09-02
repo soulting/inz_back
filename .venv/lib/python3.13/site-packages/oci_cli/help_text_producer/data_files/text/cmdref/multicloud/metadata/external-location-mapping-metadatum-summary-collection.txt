@@ -1,0 +1,14 @@
+external-location-mapping-metadatum-summary-collection
+******************************************************
+
+
+Description
+===========
+
+External location information from OCI primitives to a CSP
+
+
+Available Commands
+==================
+
+* list-external-location-mapping-metadata

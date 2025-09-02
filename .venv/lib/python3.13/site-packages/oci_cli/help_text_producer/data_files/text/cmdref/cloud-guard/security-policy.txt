@@ -1,0 +1,17 @@
+security-policy
+***************
+
+
+Description
+===========
+
+A security policy (SecurityPolicy resource) defines security
+requirements for resources in a security zone. If a security zone
+enables a security policy through a security recipe (SecurityRecipe
+resource), then any action that would violate that policy is blocked.
+
+
+Available Commands
+==================
+
+* get

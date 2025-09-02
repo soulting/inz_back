@@ -1,0 +1,17 @@
+subscription
+************
+
+
+Description
+===========
+
+Set of CLI that return the Subscription Details, Commitment and
+Effective Rate Card Details
+
+
+Available Commands
+==================
+
+* subscription
+
+  * list

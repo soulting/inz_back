@@ -1,0 +1,333 @@
+"update"
+********
+
+* Description
+
+* Usage
+
+* Required Parameters
+
+* Optional Parameters
+
+* Global Parameters
+
+* Example using required parameter
+
+* Other Examples
+
+
+Description
+===========
+
+Updates the specified retention rule. Rule changes take effect
+typically within 30 seconds.
+
+
+Usage
+=====
+
+   oci os retention-rule update [OPTIONS]
+
+
+Required Parameters
+===================
+
+--bucket-name, --bucket, -bn [text]
+
+The name of the bucket. Avoid entering confidential information.
+Example: *my-new-bucket1*
+
+--retention-rule-id [text]
+
+The ID of the retention rule.
+
+
+Optional Parameters
+===================
+
+--display-name [text]
+
+A user-specified name for the retention rule. Names can be helpful in
+identifying retention rules. Avoid entering confidential information.
+
+--from-json [text]
+
+Provide input to this command as a JSON document from a file using the
+file://path-to/file syntax.
+
+The "--generate-full-command-json-input" option can be used to
+generate a sample json file to be used with this command option. The
+key names are pre-populated and match the command option names
+(converted to camelCase format, e.g. compartment-id –> compartmentId),
+while the values of the keys need to be populated by the user before
+using the sample file as an input to this command. For any command
+option that accepts multiple values, the value of the key can be a
+JSON array.
+
+Options can still be provided on the command line. If an option exists
+in both the JSON document and the command line then the command line
+specified value will be used.
+
+For examples on usage of this option, please see our “using CLI with
+advanced JSON options” link: https://docs.cloud.oracle.com/iaas/Conte
+nt/API/SDKDocs/cliusing.htm#AdvancedJSONOptions
+
+--if-match [text]
+
+The entity tag (ETag) to match with the ETag of an existing resource.
+If the specified ETag matches the ETag of the existing resource, GET
+and HEAD requests will return the resource and PUT and POST requests
+will upload the resource.
+
+--namespace-name, --namespace, -ns [text]
+
+The Object Storage namespace used for the request. If not provided,
+this parameter will be obtained internally using a call to ‘oci os ns
+get’
+
+--time-amount [text]
+
+The amount of time that objects in the bucket should be preserved for
+and which is calculated in relation to each object’s Last-Modified
+timestamp. To unset it, specify an empty string.
+
+--time-rule-locked [text]
+
+The date and time as per RFC 3339 after which this rule is locked and
+can only be deleted by deleting the bucket. Once a rule is locked,
+only increases in the duration are allowed and no other properties can
+be changed. Specifying it when a duration is not specified is
+considered an error. This property cannot be updated for rules that
+are in a locked state. Before time-rule-locked has elapsed, it can be
+unset by specifying an empty string.
+
+   The following datetime formats are supported:
+
+
+UTC with microseconds
+---------------------
+
+   Format: YYYY-MM-DDTHH:mm:ss.ssssssTZD
+   Example: 2017-09-15T20:30:00.123456Z
+
+   UTC with milliseconds
+   ***********************
+   .. code::
+
+       Format: YYYY-MM-DDTHH:mm:ss.sssTZD
+       Example: 2017-09-15T20:30:00.123Z
+
+   UTC without milliseconds
+   **************************
+   .. code::
+
+       Format: YYYY-MM-DDTHH:mm:ssTZD
+       Example: 2017-09-15T20:30:00Z
+
+   UTC with minute precision
+   **************************
+   .. code::
+
+       Format: YYYY-MM-DDTHH:mmTZD
+       Example: 2017-09-15T20:30Z
+
+
+Timezone with microseconds
+--------------------------
+
+   Format: YYYY-MM-DDTHH:mm:ssTZD
+   Example: 2017-09-15T12:30:00.456789-08:00, 2017-09-15T12:30:00.456789-0800
+
+   Timezone with milliseconds
+   ***************************
+   .. code::
+
+       Format: YYYY-MM-DDTHH:mm:ssTZD
+       Example: 2017-09-15T12:30:00.456-08:00, 2017-09-15T12:30:00.456-0800
+
+   Timezone without milliseconds
+   *******************************
+   .. code::
+
+       Format: YYYY-MM-DDTHH:mm:ssTZD
+       Example: 2017-09-15T12:30:00-08:00, 2017-09-15T12:30:00-0800
+
+   Timezone with minute precision
+   *******************************
+   .. code::
+
+       Format: YYYY-MM-DDTHH:mmTZD
+       Example: 2017-09-15T12:30-08:00, 2017-09-15T12:30-0800
+
+   Short date and time
+   ********************
+   The timezone for this date and time will be taken as UTC (Needs to be surrounded by single or double quotes)
+
+   .. code::
+
+       Format: 'YYYY-MM-DD HH:mm' or "YYYY-MM-DD HH:mm"
+       Example: '2017-09-15 17:25'
+
+   Date Only
+   **********
+   This date will be taken as midnight UTC of that day
+
+   .. code::
+
+       Format: YYYY-MM-DD
+       Example: 2017-09-15
+
+   Epoch seconds
+   **************
+   .. code::
+
+       Example: 1412195400
+
+--time-unit [text]
+
+The unit that should be used to interpret time-amount
+
+Accepted values are:
+
+   DAYS, YEARS
+
+
+Global Parameters
+=================
+
+Use "oci --help" for help on global parameters.
+
+"--auth-purpose", "--auth", "--cert-bundle", "--cli-auto-prompt", "--
+cli-rc-file", "--config-file", "--connection-timeout", "--debug", "--
+defaults-file", "--endpoint", "--generate-full-command-json-input", "
+--generate-param-json-input", "--help", "--latest-version", "--max-
+retries", "--no-retry", "--opc-client-request-id", "--opc-request-id",
+"--output", "--profile", "--proxy", "--query", "--raw-output", "--
+read-timeout", "--realm-specific-endpoint", "--region", "--release-
+info", "--request-id", "--version", "-?", "-d", "-h", "-i", "-v"
+
+
+Example using required parameter
+================================
+
+Copy the following CLI commands into a file named example.sh. Run the
+command by typing “bash example.sh” and replacing the example
+parameters with your own.
+
+Please note this sample will only work in the POSIX-compliant bash-
+like shell. You need to set up the OCI configuration and appropriate
+security policies before trying the examples.
+
+       export bucket_name=<substitute-value-of-bucket_name> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/os/retention-rule/create.html#cmdoption-bucket-name
+
+       retention_rule_id=$(oci os retention-rule create --bucket-name $bucket_name --query data.id --raw-output)
+
+       oci os retention-rule update --bucket-name $bucket_name --retention-rule-id $retention_rule_id
+
+
+Other Examples
+==============
+
+Updates display name of the specified retention rule.
+
+    oci os retention-rule update -bn bucket-client --retention-rule-id 72b6e778-04b1-40d3-8828-0a05220bff39 --display-name RetentionRuleOn
+
+   {
+    "data": {
+         "display-name": "RetentionRuleOne",
+         "duration": {
+              "time-amount": 5,
+              "time-unit": "DAYS"
+         },
+         "etag": "091cff90-4ba0-4193-b083-9abf56fe96e2",
+         "id": "72b6e778-04b1-40d3-8828-0a05220bff39",
+         "time-created": "2022-12-15T12:42:00.017000+00:00",
+         "time-modified": "2022-12-15T14:40:17.618000+00:00",
+         "time-rule-locked": null
+    },
+    "etag": "091cff90-4ba0-4193-b083-9abf56fe96e2"
+   }
+
+Updates display name of the specified retention rule, only if
+specified etag matches.
+
+    oci os retention-rule update -bn bucket-client --retention-rule-id 72b6e778-04b1-40d3-8828-0a05220bff39 --display-name RetentionRuleTwo --if-match 091cff90-4ba0-4193-b083-9abf56fe96e2
+
+   {
+    "data": {
+         "display-name": "RetentionRuleTwo",
+         "duration": {
+              "time-amount": 5,
+              "time-unit": "DAYS"
+         },
+         "etag": "ceea74b2-1c00-4da0-9c31-caf14245003f",
+         "id": "72b6e778-04b1-40d3-8828-0a05220bff39",
+         "time-created": "2022-12-15T12:42:00.017000+00:00",
+         "time-modified": "2022-12-15T14:59:04.567000+00:00",
+         "time-rule-locked": null
+    },
+    "etag": "ceea74b2-1c00-4da0-9c31-caf14245003f"
+   }
+
+Updates display name of the specified retention rule in specified
+namespace.
+
+    oci os retention-rule update -bn bucket-client --retention-rule-id 72b6e778-04b1-40d3-8828-0a05220bff39 --display-name RetentionRuleOne -ns bmcostests
+
+   {
+    "data": {
+         "display-name": "RetentionRuleOne",
+         "duration": {
+              "time-amount": 5,
+              "time-unit": "DAYS"
+         },
+         "etag": "e0906137-0a94-4855-a4d6-e032ecbe02fd",
+         "id": "72b6e778-04b1-40d3-8828-0a05220bff39",
+         "time-created": "2022-12-15T12:42:00.017000+00:00",
+         "time-modified": "2022-12-15T15:03:01.881000+00:00",
+         "time-rule-locked": null
+    },
+    "etag": "e0906137-0a94-4855-a4d6-e032ecbe02fd"
+   }
+
+Updates amount of time in the specified retention rule that objects in
+the bucket should be preserved for.
+
+    oci os retention-rule update -bn bucket-client --retention-rule-id 72b6e778-04b1-40d3-8828-0a05220bff39 --time-amount 3 --time-unit DAYS
+
+   {
+    "data": {
+         "display-name": "RetentionRuleOne",
+         "duration": {
+              "time-amount": 3,
+              "time-unit": "DAYS"
+         },
+         "etag": "c3745f0a-baa4-4710-a8cd-50484037b065",
+         "id": "72b6e778-04b1-40d3-8828-0a05220bff39",
+         "time-created": "2022-12-15T12:42:00.017000+00:00",
+         "time-modified": "2022-12-15T15:03:55.267000+00:00",
+         "time-rule-locked": null
+    },
+    "etag": "c3745f0a-baa4-4710-a8cd-50484037b065"
+   }
+
+Updates the date and time value after which this rule is locked of the
+specified retention rule.
+
+    oci os retention-rule update -bn bucket-client --retention-rule-id 72b6e778-04b1-40d3-8828-0a05220bff39 --time-rule-locked 2022-12-17T20:30:00.123456Z
+
+   {
+    "data": {
+         "display-name": "RetentionRuleOne",
+         "duration": {
+              "time-amount": 3,
+              "time-unit": "DAYS"
+         },
+         "etag": "78b1a876-0a2a-4115-94f8-0f8546d15b51",
+         "id": "72b6e778-04b1-40d3-8828-0a05220bff39",
+         "time-created": "2022-12-15T12:42:00.017000+00:00",
+         "time-modified": "2022-12-15T15:04:42.593000+00:00",
+         "time-rule-locked": "2022-12-17T20:30:00.123456+00:00"
+    },
+    "etag": "78b1a876-0a2a-4115-94f8-0f8546d15b51"
+   }

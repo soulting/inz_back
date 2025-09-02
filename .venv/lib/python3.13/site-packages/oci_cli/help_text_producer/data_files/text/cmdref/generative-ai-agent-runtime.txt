@@ -1,0 +1,53 @@
+generative-ai-agent-runtime
+***************************
+
+
+Description
+===========
+
+OCI Generative AI Agents is a fully managed service that combines the
+power of large language models (LLMs) with an intelligent retrieval
+system to create contextually relevant answers by searching your
+knowledge base, making your AI applications smart and efficient.
+
+OCI Generative AI Agents supports several ways to onboard your data
+and then allows you and your customers to interact with your data
+using a chat interface or CLI.
+
+Use the Generative AI Agents Client CLI to create and manage client
+chat sessions. A session represents an interactive conversation
+initiated by a user through an CLI to engage with an agent. It
+involves a series of exchanges where the user sends queries or
+prompts, and the agent responds with relevant information, actions, or
+assistance based on the user’s input. The session persists for the
+duration of the interaction, maintaining context and continuity to
+provide coherent and meaningful responses throughout the conversation.
+
+For creating and managing agents, knowledge bases, data sources,
+endpoints, and data ingestion jobs see the [Generative AI Agents
+Management CLI].
+
+To learn more about the service, see the Generative AI Agents
+documentation.
+
+
+Available Commands
+==================
+
+* agent-endpoint
+
+  * chat
+
+* knowledge-base-metadata-summary
+
+  * retrieve-metadata
+
+* session
+
+  * create
+
+  * delete
+
+  * get
+
+  * update

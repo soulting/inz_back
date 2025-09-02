@@ -1,0 +1,41 @@
+oracle-db-azure-vault
+*********************
+
+
+Description
+===========
+
+1. Oracle Azure Connector Resource: This is for installing Azure Arc
+   Server in ExaCS VM Cluster.
+
+   There are two way to install Azure Arc Server (Azure Identity) in
+   ExaCS VMCluster.
+      1. Using Bearer Access Token or
+
+      2. By providing Authentication token
+
+2. Oracle Azure Blob Container Resource: This is for to capture Azure
+   Container details and same will be used in multiple ExaCS VMCluster
+   to mount the Azure Container.
+
+3. Oracle Azure Blob Mount Resource: This is for to mount Azure
+   Container in ExaCS VMCluster using Oracle Azure Connector and
+   Oracle Azure Blob Container Resource.
+
+
+Available Commands
+==================
+
+* change-compartment
+
+* create
+
+* delete
+
+* get
+
+* list
+
+* refresh
+
+* update

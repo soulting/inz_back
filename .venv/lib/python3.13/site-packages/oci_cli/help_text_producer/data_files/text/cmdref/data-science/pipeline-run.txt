@@ -1,0 +1,26 @@
+pipeline-run
+************
+
+
+Description
+===========
+
+Description of PipelineRun.
+
+
+Available Commands
+==================
+
+* cancel
+
+* change-compartment
+
+* create
+
+* delete
+
+* get
+
+* list
+
+* update

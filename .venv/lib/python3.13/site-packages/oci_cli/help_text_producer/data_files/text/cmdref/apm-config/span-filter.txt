@@ -1,0 +1,15 @@
+span-filter
+***********
+
+
+Description
+===========
+
+A named setting that specifies the filter criteria to match a subset
+of the spans.
+
+
+Available Commands
+==================
+
+* validate-pattern

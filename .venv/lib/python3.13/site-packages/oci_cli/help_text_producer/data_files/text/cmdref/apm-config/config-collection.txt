@@ -1,0 +1,14 @@
+config-collection
+*****************
+
+
+Description
+===========
+
+A collection of configuration items.
+
+
+Available Commands
+==================
+
+* list

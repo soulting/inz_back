@@ -1,0 +1,15 @@
+worker-collection
+*****************
+
+
+Description
+===========
+
+The results of an On-premise VP worker search, which contains
+WorkerSummary items and other data in an APM domain.
+
+
+Available Commands
+==================
+
+* list-workers

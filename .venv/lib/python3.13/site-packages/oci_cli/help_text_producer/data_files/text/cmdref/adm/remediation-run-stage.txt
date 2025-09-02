@@ -1,0 +1,18 @@
+remediation-run-stage
+*********************
+
+
+Description
+===========
+
+A remediation run stage is one step of an remediation run. Each stage
+provides output logs and has a specific type. The stages are: DETECT,
+RECOMMEND, VERIFY, and APPLY.
+
+
+Available Commands
+==================
+
+* get-stage
+
+* list-stages

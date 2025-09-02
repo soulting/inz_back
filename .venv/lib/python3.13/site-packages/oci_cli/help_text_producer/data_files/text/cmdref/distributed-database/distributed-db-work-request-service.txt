@@ -1,0 +1,27 @@
+distributed-db-work-request-service
+***********************************
+
+
+Description
+===========
+
+Use the Globally Distributed Database service CLI to create and manage
+the Globally distributed databases.
+
+
+Available Commands
+==================
+
+* work-request
+
+  * get
+
+  * list
+
+* work-request-error
+
+  * list
+
+* work-request-log-entry
+
+  * list-work-request-logs

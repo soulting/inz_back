@@ -1,0 +1,23 @@
+oci-cache-config-set
+********************
+
+
+Description
+===========
+
+Configurations for OCI Cache to manage the behavior, performance, and
+functionality of the underlying cache engine.
+
+
+Available Commands
+==================
+
+* change-compartment
+
+* create
+
+* delete
+
+* get
+
+* update

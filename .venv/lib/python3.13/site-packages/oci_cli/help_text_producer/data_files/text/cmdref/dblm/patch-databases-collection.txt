@@ -1,0 +1,15 @@
+patch-databases-collection
+**************************
+
+
+Description
+===========
+
+Results of a patchDatabases search. Contains items for databases,
+images and patch compliance information.
+
+
+Available Commands
+==================
+
+* list-databases

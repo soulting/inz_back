@@ -1,0 +1,14 @@
+publication-summary
+*******************
+
+
+Description
+===========
+
+The model for a summary of an Oracle Cloud Infrastructure publication.
+
+
+Available Commands
+==================
+
+* list-publications

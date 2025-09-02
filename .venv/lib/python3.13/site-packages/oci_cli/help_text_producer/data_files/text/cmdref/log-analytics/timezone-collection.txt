@@ -1,0 +1,14 @@
+timezone-collection
+*******************
+
+
+Description
+===========
+
+List of supported timezones.
+
+
+Available Commands
+==================
+
+* list-supported-timezones

@@ -1,0 +1,16 @@
+alert-summary
+*************
+
+
+Description
+===========
+
+Summary of a Data Safe Alert.
+
+
+Available Commands
+==================
+
+* list-alert-analytics
+
+* list-alerts

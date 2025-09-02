@@ -1,0 +1,14 @@
+governance-instance-configuration
+*********************************
+
+
+Description
+===========
+
+The tenancy-wide configuration for GovernanceInstances.
+
+
+Available Commands
+==================
+
+* get

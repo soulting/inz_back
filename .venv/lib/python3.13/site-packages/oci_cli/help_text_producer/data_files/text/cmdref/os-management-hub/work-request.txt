@@ -1,0 +1,22 @@
+work-request
+************
+
+
+Description
+===========
+
+An object that defines a work request.
+
+
+Available Commands
+==================
+
+* get
+
+* list
+
+* list-errors
+
+* list-logs
+
+* rerun

@@ -1,0 +1,38 @@
+privileged-api-requests
+***********************
+
+
+Description
+===========
+
+This service is used to restrict the control plane service apis; so
+that everybody won’t be able to access those apis. There are two main
+resouces defined as a part of this service 1. PrivilegedApiControl:
+This is created by the customer which defines which service apis are
+
+   controlled and who can access it.
+
+2. PrivilegedApiRequest: This is a request object again created by the
+   customer operators who           seek access to those privileged
+   apis. After a request is obtained based on the
+   PrivilegedAccessControl for which the api belongs to, either it can
+   be approved so that the          requested person can execute the
+   service apis or it will wait for the customer to approve it.
+
+
+Available Commands
+==================
+
+* approve
+
+* close
+
+* create
+
+* get
+
+* list-privileged-api-requests
+
+* reject
+
+* revoke

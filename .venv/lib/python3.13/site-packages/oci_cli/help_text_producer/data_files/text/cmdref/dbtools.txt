@@ -1,0 +1,87 @@
+dbtools
+*******
+
+
+Description
+===========
+
+Use the Database Tools CLI to manage connections, private endpoints,
+and work requests in the Database Tools service.
+
+
+Available Commands
+==================
+
+* connection
+
+  * add-lock
+
+  * change-compartment
+
+  * create-generic-jdbc
+
+  * create-mysql-database
+
+  * create-oracle-database
+
+  * create-postgresql
+
+  * delete
+
+  * get
+
+  * list
+
+  * remove-lock
+
+  * update-generic-jdbc
+
+  * update-mysql-database
+
+  * update-oracle-database
+
+  * update-postgresql
+
+  * validate-mysql-database
+
+  * validate-oracle-database
+
+  * validate-postgresql
+
+* endpoint-service
+
+  * get
+
+  * list
+
+* private-endpoint
+
+  * add-lock
+
+  * change-compartment
+
+  * create
+
+  * delete
+
+  * get
+
+  * list
+
+  * remove-lock
+
+  * update
+
+* work-request
+
+  * get
+
+  * list
+
+* work-request-error
+
+  * list
+
+* work-request-log-entry
+
+  * list

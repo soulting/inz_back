@@ -1,0 +1,28 @@
+resource-task
+*************
+
+
+Description
+===========
+
+The request details for importing resources from Telemetry.
+
+
+Available Commands
+==================
+
+* change-compartment
+
+* create
+
+* get
+
+* import-telemetry-resources
+
+* list
+
+* update
+
+* update-agent-receiver
+
+* update-resource-type-configs

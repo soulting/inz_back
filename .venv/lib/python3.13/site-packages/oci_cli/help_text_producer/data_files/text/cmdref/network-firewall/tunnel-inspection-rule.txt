@@ -1,0 +1,27 @@
+tunnel-inspection-rule
+**********************
+
+
+Description
+===========
+
+Tunnel Inspection Rule used in the firewall policy rules. Tunnel
+Inspection Rule determines whether tunnel inspection is applied on the
+traffic based on attributes such as  Tunnel Inspect protocol, the
+source and destination IP addresses.
+
+
+Available Commands
+==================
+
+* bulk-upload
+
+* create
+
+* delete
+
+* get
+
+* list
+
+* update

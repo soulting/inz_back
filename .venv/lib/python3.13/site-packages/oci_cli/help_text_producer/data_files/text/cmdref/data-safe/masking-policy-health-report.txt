@@ -1,0 +1,24 @@
+masking-policy-health-report
+****************************
+
+
+Description
+===========
+
+The masking policy health report.
+
+
+Available Commands
+==================
+
+* change-compartment
+
+* delete
+
+* generate-health-report
+
+* get
+
+* list
+
+* list-masking-policy-health-report-logs

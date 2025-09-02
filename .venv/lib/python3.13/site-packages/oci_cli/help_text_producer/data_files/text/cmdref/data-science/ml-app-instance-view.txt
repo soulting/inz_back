@@ -1,0 +1,29 @@
+ml-app-instance-view
+********************
+
+
+Description
+===========
+
+Representation of ML Application Instance which providers use for
+instance observability.
+
+
+Available Commands
+==================
+
+* change-compartment
+
+* disable-trigger
+
+* enable-trigger
+
+* get
+
+* list
+
+* recover
+
+* trigger
+
+* update

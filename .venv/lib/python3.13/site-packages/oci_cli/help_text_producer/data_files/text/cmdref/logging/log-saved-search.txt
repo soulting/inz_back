@@ -1,0 +1,25 @@
+log-saved-search
+****************
+
+
+Description
+===========
+
+A LogSavedSearch that can be used to save and share a given search
+result.
+
+
+Available Commands
+==================
+
+* change-compartment
+
+* create
+
+* delete
+
+* get
+
+* list
+
+* update

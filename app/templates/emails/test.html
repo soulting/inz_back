@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email dla Amandy</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px 0;
+        }
+        
+        .email-container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
+        
+        .header {
+            background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+            padding: 30px;
+            text-align: center;
+            color: white;
+        }
+        
+        .title {
+            font-size: 28px;
+            font-weight: 600;
+            margin: 0;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+        }
+        
+        .wave {
+            font-size: 24px;
+            margin-top: 10px;
+            animation: wave 2s ease-in-out infinite;
+        }
+        
+        @keyframes wave {
+            0%, 100% { transform: rotate(0deg); }
+            25% { transform: rotate(20deg); }
+            75% { transform: rotate(-20deg); }
+        }
+        
+        .content {
+            padding: 40px 30px;
+            line-height: 1.7;
+            color: #444;
+        }
+        
+        .greeting {
+            font-size: 22px;
+            color: #ff6b6b;
+            margin-bottom: 25px;
+            font-weight: 500;
+        }
+        
+        .message {
+            background: linear-gradient(135deg, #f8f9ff 0%, #fff8f8 100%);
+            padding: 25px;
+            border-radius: 15px;
+            margin: 25px 0;
+            border-left: 4px solid #4ecdc4;
+            font-size: 16px;
+        }
+        
+        .highlight {
+            color: #ff6b6b;
+            font-weight: 600;
+        }
+        
+        .signature {
+            text-align: center;
+            margin-top: 30px;
+            padding: 20px;
+            background: #f9f9f9;
+            border-radius: 10px;
+        }
+        
+        .signature-name {
+            font-size: 18px;
+            font-weight: 600;
+            color: #667eea;
+        }
+        
+        .footer {
+            background: linear-gradient(45deg, #4ecdc4, #44a08d);
+            padding: 20px;
+            text-align: center;
+            color: white;
+            font-size: 14px;
+        }
+        
+        .emoji-decoration {
+            font-size: 20px;
+            margin: 0 5px;
+        }
+        
+        @media (max-width: 600px) {
+            .content, .header {
+                padding: 20px;
+            }
+            
+            .title {
+                font-size: 24px;
+            }
+            
+            .greeting {
+                font-size: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="email-container">
+        <div class="header">
+            <h1 class="title">Cześć Amanda!</h1>
+            <div class="wave">👋</div>
+        </div>
+        
+        <div class="content">
+            <div class="greeting">Jak się masz? 😊</div>
+            
+            <div class="message">
+                Chciałem Ci napisać, bo <span class="highlight">myślałem o Tobie</span> i pomyślałem, że fajnie byłoby się odezwać!
+                
+                <br><br>
+                
+                Mam nadzieję, że masz świetny dzień i że wszystko u Ciebie w porządku. 
+                Może kiedyś się spotkamy na kawie? ☕
+                
+                <br><br>
+                
+                <span class="emoji-decoration">✨</span> Życzę Ci samych dobrych rzeczy! <span class="emoji-decoration">✨</span>
+            </div>
+            
+            <div class="signature">
+                <div class="signature-name">Pozdrawiam ciepło! 🌟</div>
+                <div style="margin-top: 5px; color: #888;">Andrzej</div>
+            </div>
+        </div>
+        
+        <div class="footer">
+            Miłego dnia! <span class="emoji-decoration">🌈</span> <span class="emoji-decoration">💫</span> <span class="emoji-decoration">🌸</span>
+        </div>
+    </div>
+</body>
+</html>

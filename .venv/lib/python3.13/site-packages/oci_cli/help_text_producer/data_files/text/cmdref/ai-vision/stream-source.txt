@@ -1,0 +1,26 @@
+stream-source
+*************
+
+
+Description
+===========
+
+Stream source information
+
+
+Available Commands
+==================
+
+* change-compartment
+
+* create
+
+* create-stream-source-rtsp-source-details
+
+* delete
+
+* get
+
+* update
+
+* update-stream-source-rtsp-source-details

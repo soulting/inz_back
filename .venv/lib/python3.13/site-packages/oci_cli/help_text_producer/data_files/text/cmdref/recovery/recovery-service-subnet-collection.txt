@@ -1,0 +1,15 @@
+recovery-service-subnet-collection
+**********************************
+
+
+Description
+===========
+
+Results of a recovery service subnet search operation. The results
+contain recovery service subnet summary and metadata information.
+
+
+Available Commands
+==================
+
+* list-recovery-service-subnets

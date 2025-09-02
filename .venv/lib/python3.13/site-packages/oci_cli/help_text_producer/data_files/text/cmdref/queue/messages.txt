@@ -1,0 +1,26 @@
+messages
+********
+
+
+Description
+===========
+
+A message consumed from a queue.
+
+
+Available Commands
+==================
+
+* delete-message
+
+* delete-messages
+
+* get-messages
+
+* get-stats
+
+* put-messages
+
+* update-message
+
+* update-messages

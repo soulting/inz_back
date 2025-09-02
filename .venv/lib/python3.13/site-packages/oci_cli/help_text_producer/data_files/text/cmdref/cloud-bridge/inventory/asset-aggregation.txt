@@ -1,0 +1,14 @@
+asset-aggregation
+*****************
+
+
+Description
+===========
+
+The result of an analytics aggregation on a set of assets.
+
+
+Available Commands
+==================
+
+* analyze-assets

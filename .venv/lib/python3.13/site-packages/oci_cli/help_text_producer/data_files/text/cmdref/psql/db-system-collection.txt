@@ -1,0 +1,15 @@
+db-system-collection
+********************
+
+
+Description
+===========
+
+Results of a database system search. Contains both DbSystemSummary
+items and other information, such as metadata.
+
+
+Available Commands
+==================
+
+* list-db-systems

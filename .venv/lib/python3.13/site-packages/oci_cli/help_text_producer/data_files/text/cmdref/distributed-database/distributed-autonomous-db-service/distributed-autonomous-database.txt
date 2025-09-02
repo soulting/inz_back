@@ -1,0 +1,49 @@
+distributed-autonomous-database
+*******************************
+
+
+Description
+===========
+
+Globally distributed autonomous database.
+
+
+Available Commands
+==================
+
+* add
+
+* change-compartment
+
+* configure-distributed-autonomous-database-gsms
+
+* configure-distributed-autonomous-database-sharding
+
+* create
+
+* delete
+
+* download-distributed-autonomous-database-gsm-certificate-signing-
+  request
+
+* generate-distributed-autonomous-database-gsm-certificate-signing-
+  request
+
+* generate-distributed-autonomous-database-wallet
+
+* get
+
+* patch
+
+* rotate-distributed-autonomous-database-passwords
+
+* start
+
+* stop
+
+* update
+
+* upload-distributed-autonomous-database-signed-certificate-and-
+  generate-wallet
+
+* validate-distributed-autonomous-database-network

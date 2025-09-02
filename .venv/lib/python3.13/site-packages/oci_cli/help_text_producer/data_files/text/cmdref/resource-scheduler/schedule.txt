@@ -1,0 +1,36 @@
+schedule
+********
+
+
+Description
+===========
+
+A Schedule describes the date and time when an operation will be or
+has been applied to a set of resources. You must specify either the
+resources directly or provide a set of resource filters to select the
+resources.
+
+To use any of the API operations, you must be authorized in an IAM
+policy. If you’re not authorized, contact your administrator. If
+you’re an administrator who needs to write policies to give users
+access, see Getting Started with Policies.
+
+
+Available Commands
+==================
+
+* activate
+
+* change-compartment
+
+* create
+
+* deactivate
+
+* delete
+
+* get
+
+* list
+
+* update

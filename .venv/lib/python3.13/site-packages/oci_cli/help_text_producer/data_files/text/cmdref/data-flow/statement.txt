@@ -1,0 +1,20 @@
+statement
+*********
+
+
+Description
+===========
+
+A statement object.
+
+
+Available Commands
+==================
+
+* create
+
+* delete
+
+* get
+
+* list

@@ -1,0 +1,14 @@
+sql-firewall-policy-analytics
+*****************************
+
+
+Description
+===========
+
+SQL Firewall policy analytics collection.
+
+
+Available Commands
+==================
+
+* list

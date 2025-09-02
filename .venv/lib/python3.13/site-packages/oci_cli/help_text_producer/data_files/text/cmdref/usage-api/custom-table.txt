@@ -1,0 +1,22 @@
+custom-table
+************
+
+
+Description
+===========
+
+The saved custom table.
+
+
+Available Commands
+==================
+
+* create
+
+* delete
+
+* get
+
+* list
+
+* update

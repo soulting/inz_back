@@ -1,0 +1,14 @@
+onboarding-collection
+*********************
+
+
+Description
+===========
+
+List of Fleet Application Management Onboardings.
+
+
+Available Commands
+==================
+
+* list-onboardings

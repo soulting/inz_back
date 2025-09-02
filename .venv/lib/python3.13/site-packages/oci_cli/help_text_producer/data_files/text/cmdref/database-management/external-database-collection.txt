@@ -1,0 +1,14 @@
+external-database-collection
+****************************
+
+
+Description
+===========
+
+A collection of external databases.
+
+
+Available Commands
+==================
+
+* list-external-databases

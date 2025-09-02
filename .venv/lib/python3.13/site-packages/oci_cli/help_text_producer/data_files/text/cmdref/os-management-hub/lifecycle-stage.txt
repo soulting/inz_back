@@ -1,0 +1,26 @@
+lifecycle-stage
+***************
+
+
+Description
+===========
+
+Defines the lifecycle stage.
+
+
+Available Commands
+==================
+
+* attach-managed-instance
+
+* detach-managed-instance
+
+* get
+
+* list
+
+* list-installed-packages
+
+* promote-software-source
+
+* reboot

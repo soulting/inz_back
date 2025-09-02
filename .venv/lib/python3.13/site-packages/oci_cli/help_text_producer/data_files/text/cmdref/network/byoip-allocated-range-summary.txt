@@ -1,0 +1,15 @@
+byoip-allocated-range-summary
+*****************************
+
+
+Description
+===========
+
+A summary of CIDR block subranges that are currently allocated to an
+IP pool.
+
+
+Available Commands
+==================
+
+* list-byoip-allocated-ranges

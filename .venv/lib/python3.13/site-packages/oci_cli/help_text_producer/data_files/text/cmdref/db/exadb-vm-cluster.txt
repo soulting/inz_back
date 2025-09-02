@@ -1,0 +1,37 @@
+exadb-vm-cluster
+****************
+
+
+Description
+===========
+
+Details of the Exadata VM cluster on Exascale Infrastructure. Applies
+to Exadata Database Service on Exascale Infrastructure only.
+
+
+Available Commands
+==================
+
+* change-compartment
+
+* change-exadb-vm-cluster-subscription
+
+* create
+
+* delete
+
+* get
+
+* get-update
+
+* get-update-history
+
+* list
+
+* list-update-histories
+
+* list-updates
+
+* remove
+
+* update

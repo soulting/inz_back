@@ -1,0 +1,15 @@
+redis-cluster-summary
+*********************
+
+
+Description
+===========
+
+Summary of information about a cluster. A cluster is a memory-based
+storage solution. For more information, see OCI Cache.
+
+
+Available Commands
+==================
+
+* list-redis-clusters

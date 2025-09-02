@@ -1,0 +1,14 @@
+unified-audit-policy-definition-collection
+******************************************
+
+
+Description
+===========
+
+Collection of audit policy summary.
+
+
+Available Commands
+==================
+
+* list-unified-audit-policy-definitions

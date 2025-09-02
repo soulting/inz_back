@@ -1,0 +1,42 @@
+api-platform
+************
+
+
+Description
+===========
+
+Control Plane designed to manage lifecycle of CLIP Instances
+
+
+Available Commands
+==================
+
+* api-platform-instance
+
+  * change-compartment
+
+  * create
+
+  * delete
+
+  * get
+
+  * update
+
+* api-platform-instance-collection
+
+  * list-api-platform-instances
+
+* work-request
+
+  * get
+
+  * list
+
+* work-request-error
+
+  * list
+
+* work-request-log-entry
+
+  * list-work-request-logs

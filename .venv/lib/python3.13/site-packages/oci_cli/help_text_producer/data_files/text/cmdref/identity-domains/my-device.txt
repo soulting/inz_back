@@ -1,0 +1,18 @@
+my-device
+*********
+
+
+Description
+===========
+
+Device Resource.
+
+
+Available Commands
+==================
+
+* delete
+
+* get
+
+* patch

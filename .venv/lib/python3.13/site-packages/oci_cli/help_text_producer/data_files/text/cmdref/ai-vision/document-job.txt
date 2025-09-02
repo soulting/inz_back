@@ -1,0 +1,20 @@
+document-job
+************
+
+
+Description
+===========
+
+The job details for a batch document analysis.
+
+
+Available Commands
+==================
+
+* cancel
+
+* create
+
+* create-document-job-object-list-inline-input-location
+
+* get

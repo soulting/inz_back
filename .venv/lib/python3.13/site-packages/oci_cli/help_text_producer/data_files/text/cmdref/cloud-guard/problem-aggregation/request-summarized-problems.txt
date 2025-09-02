@@ -1,0 +1,144 @@
+"request-summarized-problems"
+*****************************
+
+* Description
+
+* Usage
+
+* Required Parameters
+
+* Optional Parameters
+
+* Global Parameters
+
+* Example using required parameter
+
+
+Description
+===========
+
+Returns the number of problems matching the key-value pairs in
+dimensionMap.
+
+The parameter *accessLevel* specifies whether to return only those
+compartments for which the requestor has INSPECT permissions on at
+least one resource directly or indirectly (ACCESSIBLE) (the resource
+can be in a subcompartment) or to return Not Authorized if Principal
+doesn’t have access to even one of the child compartments. This is
+valid only when *compartmentIdInSubtree* is set to *true*.
+
+The parameter *compartmentIdInSubtree* applies when you perform
+summarize API on the *compartmentId* passed and when it is set to
+true, the entire hierarchy of compartments can be returned. To get a
+full list of all compartments and subcompartments in the tenancy (root
+compartment), set the parameter *compartmentIdInSubtree* to true and
+*accessLevel* to ACCESSIBLE.
+
+
+Usage
+=====
+
+   oci cloud-guard problem-aggregation request-summarized-problems [OPTIONS]
+
+
+Required Parameters
+===================
+
+--compartment-id, -c [text]
+
+The OCID of the compartment in which to list resources.
+
+--list-dimensions [text]
+
+The possible attributes based on which the problems can be
+distinguished.
+
+Accepted values are:
+
+   COMPARTMENT_ID, REGION, RESOURCE_TYPE, RISK_LEVEL
+
+
+Optional Parameters
+===================
+
+--access-level [text]
+
+Valid values are *RESTRICTED* and *ACCESSIBLE*. Default is
+*RESTRICTED*. Setting this to *ACCESSIBLE* returns only those
+compartments for which the user has INSPECT permissions directly or
+indirectly (permissions can be on a resource in a subcompartment).
+When set to *RESTRICTED* permissions are checked and no partial
+results are displayed.
+
+Accepted values are:
+
+   ACCESSIBLE, RESTRICTED
+
+--compartment-id-in-subtree [boolean]
+
+Default is false. When set to true, the hierarchy of compartments is
+traversed and all compartments and subcompartments in the tenancy are
+returned depending on the setting of *accessLevel*.
+
+--from-json [text]
+
+Provide input to this command as a JSON document from a file using the
+file://path-to/file syntax.
+
+The "--generate-full-command-json-input" option can be used to
+generate a sample json file to be used with this command option. The
+key names are pre-populated and match the command option names
+(converted to camelCase format, e.g. compartment-id –> compartmentId),
+while the values of the keys need to be populated by the user before
+using the sample file as an input to this command. For any command
+option that accepts multiple values, the value of the key can be a
+JSON array.
+
+Options can still be provided on the command line. If an option exists
+in both the JSON document and the command line then the command line
+specified value will be used.
+
+For examples on usage of this option, please see our “using CLI with
+advanced JSON options” link: https://docs.cloud.oracle.com/iaas/Conte
+nt/API/SDKDocs/cliusing.htm#AdvancedJSONOptions
+
+--limit [integer]
+
+The maximum number of items to return
+
+--page [text]
+
+The page token representing the page at which to start retrieving
+results. This is usually retrieved from a previous list call.
+
+
+Global Parameters
+=================
+
+Use "oci --help" for help on global parameters.
+
+"--auth-purpose", "--auth", "--cert-bundle", "--cli-auto-prompt", "--
+cli-rc-file", "--config-file", "--connection-timeout", "--debug", "--
+defaults-file", "--endpoint", "--generate-full-command-json-input", "
+--generate-param-json-input", "--help", "--latest-version", "--max-
+retries", "--no-retry", "--opc-client-request-id", "--opc-request-id",
+"--output", "--profile", "--proxy", "--query", "--raw-output", "--
+read-timeout", "--realm-specific-endpoint", "--region", "--release-
+info", "--request-id", "--version", "-?", "-d", "-h", "-i", "-v"
+
+
+Example using required parameter
+================================
+
+Copy the following CLI commands into a file named example.sh. Run the
+command by typing “bash example.sh” and replacing the example
+parameters with your own.
+
+Please note this sample will only work in the POSIX-compliant bash-
+like shell. You need to set up the OCI configuration and appropriate
+security policies before trying the examples.
+
+       export compartment_id=<substitute-value-of-compartment_id> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/cloud-guard/problem-aggregation/request-summarized-problems.html#cmdoption-compartment-id
+       export list_dimensions=<substitute-value-of-list_dimensions> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/cloud-guard/problem-aggregation/request-summarized-problems.html#cmdoption-list-dimensions
+
+       oci cloud-guard problem-aggregation request-summarized-problems --compartment-id $compartment_id --list-dimensions $list_dimensions

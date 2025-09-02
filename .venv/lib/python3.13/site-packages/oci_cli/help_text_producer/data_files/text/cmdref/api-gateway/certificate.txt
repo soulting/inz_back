@@ -1,0 +1,30 @@
+certificate
+***********
+
+
+Description
+===========
+
+A certificate contains information to be installed on a gateway to
+secure the traffic going through it. For more information, see API
+Gateway Concepts.
+
+
+Available Commands
+==================
+
+* add-lock
+
+* change-compartment
+
+* create
+
+* delete
+
+* get
+
+* list
+
+* remove-lock
+
+* update

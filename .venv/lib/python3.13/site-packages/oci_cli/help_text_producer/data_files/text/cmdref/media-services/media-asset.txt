@@ -1,0 +1,29 @@
+media-asset
+***********
+
+
+Description
+===========
+
+Represents the metadata associated with an asset that has been either
+produced by or registered with Media Services.
+
+
+Available Commands
+==================
+
+* add
+
+* change-compartment
+
+* create
+
+* delete
+
+* get
+
+* list
+
+* remove
+
+* update

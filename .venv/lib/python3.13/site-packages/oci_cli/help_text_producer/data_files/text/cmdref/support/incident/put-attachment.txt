@@ -1,0 +1,153 @@
+"put-attachment"
+****************
+
+* Description
+
+* Usage
+
+* Required Parameters
+
+* Optional Parameters
+
+* Global Parameters
+
+* Example using required parameter
+
+
+Description
+===========
+
+Uploads the file and attaches it to the support request.
+
+
+Usage
+=====
+
+   oci support incident put-attachment [OPTIONS]
+
+
+Required Parameters
+===================
+
+--compartment-id, -c [text]
+
+The OCID of the tenancy.
+
+--file [filename]
+
+File to be uploaded as attachment to the Service Request.
+
+--incident-key [text]
+
+Unique identifier for the support request.
+
+--is-restricted-flag [boolean]
+
+Set to *true* when the attachment contains personal information (PI)
+or protected health information (PHI).
+
+
+Optional Parameters
+===================
+
+--bearertoken [text]
+
+Token that provided by multi cloud provider, which help to validate
+the email.
+
+--bearertokentype [text]
+
+Token type that determine which cloud provider the request come from.
+
+--csi [text]
+
+The Customer Support Identifier (CSI) number associated with the
+support account. The CSI is optional for all support request types.
+
+--domainid [text]
+
+The OCID of identity domain. DomainID is mandatory if the user is part
+of Non Default Identity domain.
+
+--from-json [text]
+
+Provide input to this command as a JSON document from a file using the
+file://path-to/file syntax.
+
+The "--generate-full-command-json-input" option can be used to
+generate a sample json file to be used with this command option. The
+key names are pre-populated and match the command option names
+(converted to camelCase format, e.g. compartment-id –> compartmentId),
+while the values of the keys need to be populated by the user before
+using the sample file as an input to this command. For any command
+option that accepts multiple values, the value of the key can be a
+JSON array.
+
+Options can still be provided on the command line. If an option exists
+in both the JSON document and the command line then the command line
+specified value will be used.
+
+For examples on usage of this option, please see our “using CLI with
+advanced JSON options” link: https://docs.cloud.oracle.com/iaas/Conte
+nt/API/SDKDocs/cliusing.htm#AdvancedJSONOptions
+
+--homeregion [text]
+
+The region of the tenancy.
+
+--idtoken [text]
+
+IdToken that provided by multi cloud provider, which help to validate
+the email.
+
+--if-match [text]
+
+For optimistic concurrency control. In the PUT or DELETE call for a
+resource, set the *if-match* parameter to the value of the etag from a
+previous GET or POST response for that resource. The resource will be
+updated or deleted only if the etag you provide matches the resource’s
+current etag value.
+
+--ocid [text]
+
+User OCID for Oracle Identity Cloud Service (IDCS) users who also have
+a federated Oracle Cloud Infrastructure account. User OCID is
+mandatory for OCI Users and optional for Multicloud users.
+
+--problemtype [text]
+
+The kind of support request.
+
+
+Global Parameters
+=================
+
+Use "oci --help" for help on global parameters.
+
+"--auth-purpose", "--auth", "--cert-bundle", "--cli-auto-prompt", "--
+cli-rc-file", "--config-file", "--connection-timeout", "--debug", "--
+defaults-file", "--endpoint", "--generate-full-command-json-input", "
+--generate-param-json-input", "--help", "--latest-version", "--max-
+retries", "--no-retry", "--opc-client-request-id", "--opc-request-id",
+"--output", "--profile", "--proxy", "--query", "--raw-output", "--
+read-timeout", "--realm-specific-endpoint", "--region", "--release-
+info", "--request-id", "--version", "-?", "-d", "-h", "-i", "-v"
+
+
+Example using required parameter
+================================
+
+Copy the following CLI commands into a file named example.sh. Run the
+command by typing “bash example.sh” and replacing the example
+parameters with your own.
+
+Please note this sample will only work in the POSIX-compliant bash-
+like shell. You need to set up the OCI configuration and appropriate
+security policies before trying the examples.
+
+       export compartment_id=<substitute-value-of-compartment_id> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/support/incident/put-attachment.html#cmdoption-compartment-id
+       export file=<substitute-value-of-file> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/support/incident/put-attachment.html#cmdoption-file
+       export incident_key=<substitute-value-of-incident_key> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/support/incident/put-attachment.html#cmdoption-incident-key
+       export is_restricted_flag=<substitute-value-of-is_restricted_flag> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/support/incident/put-attachment.html#cmdoption-is-restricted-flag
+
+       oci support incident put-attachment --compartment-id $compartment_id --file $file --incident-key $incident_key --is-restricted-flag $is_restricted_flag

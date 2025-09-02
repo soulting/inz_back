@@ -1,0 +1,37 @@
+data-mask-rule
+**************
+
+
+Description
+===========
+
+A data mask rule specifies the conditions in which the value for a
+sensitive data field in the UI is to be hidden or displayed when
+viewed by specified groups of users. The DataMaskRule resource
+contains the parameters for a data mask rule.
+
+
+Available Commands
+==================
+
+* create
+
+* create-for-all-targets
+
+* create-for-services
+
+* create-for-targets
+
+* delete
+
+* get
+
+* list
+
+* update
+
+* update-for-all-targets
+
+* update-for-services
+
+* update-for-targets

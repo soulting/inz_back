@@ -1,0 +1,14 @@
+security-policy-report
+**********************
+
+
+Description
+===========
+
+The resource represents the security policy report
+
+
+Available Commands
+==================
+
+* get

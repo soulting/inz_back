@@ -1,0 +1,28 @@
+attribute-set
+*************
+
+
+Description
+===========
+
+Represents an attribute set. An attribute set is a collection of data
+attributes defined by the user. i.e an attribute set of ip addresses,
+os user names or database privileged users.
+
+
+Available Commands
+==================
+
+* change-compartment
+
+* create
+
+* delete
+
+* get
+
+* list
+
+* list-associated-resources
+
+* update

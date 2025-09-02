@@ -1,0 +1,513 @@
+devops
+******
+
+
+Description
+===========
+
+Use the DevOps CLI to create DevOps projects, configure code
+repositories,  add artifacts to deploy, build and test software
+applications, configure  target deployment environments, and deploy
+software applications.  For more information, see DevOps.
+
+
+Available Commands
+==================
+
+* build-pipeline
+
+  * create
+
+  * delete
+
+  * get
+
+  * list
+
+  * update
+
+* build-pipeline-stage
+
+  * create-build-stage
+
+  * create-deliver-artifact-stage
+
+  * create-trigger-deployment-stage
+
+  * create-wait-stage
+
+  * delete
+
+  * get
+
+  * list
+
+  * update-build-stage
+
+  * update-deliver-artifact-stage
+
+  * update-trigger-deployment-stage
+
+  * update-wait-stage
+
+* build-run
+
+  * cancel
+
+  * create
+
+  * get
+
+  * list
+
+  * update
+
+* connection
+
+  * create-bitbucket-cloud-connection
+
+  * create-bitbucket-server-connection
+
+  * create-github-connection
+
+  * create-gitlab-connection
+
+  * create-gitlab-server-connection
+
+  * create-vbs-connection
+
+  * delete
+
+  * get
+
+  * list
+
+  * update-bitbucket-cloud-connection
+
+  * update-bitbucket-server-connection
+
+  * update-github-connection
+
+  * update-gitlab-connection
+
+  * update-gitlab-server-connection
+
+  * update-vbs-connection
+
+  * validate
+
+* deploy-artifact
+
+  * create-generic-artifact
+
+  * create-helm-command-spec
+
+  * create-helm-repository-artifact
+
+  * create-inline-artifact
+
+  * create-ocir-artifact
+
+  * delete
+
+  * get
+
+  * list
+
+  * update
+
+  * update-generic-artifact
+
+  * update-helm-command-spec
+
+  * update-helm-repository-artifact
+
+  * update-inline-artifact
+
+  * update-ocir-artifact
+
+* deploy-environment
+
+  * create-compute-instance-environment
+
+  * create-function-environment
+
+  * create-oke-cluster-environment
+
+  * delete
+
+  * get
+
+  * list
+
+  * update
+
+  * update-compute-instance-environment
+
+  * update-function-environment
+
+  * update-oke-cluster-environment
+
+* deploy-pipeline
+
+  * create
+
+  * delete
+
+  * get
+
+  * list
+
+  * update
+
+* deploy-stage
+
+  * create-compute-instance-group-blue-green-traffic-shift-stage
+
+  * create-compute-instance-group-canary-approval-stage
+
+  * create-compute-instance-group-canary-traffic-shift-stage
+
+  * create-deploy-compute-instance-group-blue-green-stage
+
+  * create-deploy-compute-instance-group-canary-stage
+
+  * create-deploy-compute-instance-group-stage
+
+  * create-deploy-function-stage
+
+  * create-deploy-oke-blue-green-stage
+
+  * create-deploy-oke-canary-stage
+
+  * create-deploy-oke-stage
+
+  * create-invoke-function-stage
+
+  * create-load-balancer-traffic-shift-stage
+
+  * create-manual-approval-stage
+
+  * create-oke-blue-green-traffic-shift-stage
+
+  * create-oke-canary-approval-stage
+
+  * create-oke-canary-traffic-shift-stage
+
+  * create-oke-helm-chart-stage
+
+  * create-shell-stage
+
+  * create-wait-stage
+
+  * delete
+
+  * get
+
+  * list
+
+  * update
+
+  * update-compute-instance-group-blue-green-traffic-shift-stage
+
+  * update-compute-instance-group-canary-approval-stage
+
+  * update-compute-instance-group-canary-traffic-shift-stage
+
+  * update-deploy-compute-instance-group-blue-green-stage
+
+  * update-deploy-compute-instance-group-canary-stage
+
+  * update-deploy-compute-instance-group-stage
+
+  * update-deploy-function-stage
+
+  * update-deploy-oke-blue-green-stage
+
+  * update-deploy-oke-canary-stage
+
+  * update-deploy-oke-stage
+
+  * update-invoke-function-stage
+
+  * update-load-balancer-traffic-shift-stage
+
+  * update-manual-approval-stage
+
+  * update-oke-blue-green-traffic-shift-stage
+
+  * update-oke-canary-approval-stage
+
+  * update-oke-canary-traffic-shift-stage
+
+  * update-oke-helm-chart-stage
+
+  * update-shell-stage
+
+  * update-wait-stage
+
+* deployment
+
+  * approve
+
+  * cancel
+
+  * create-pipeline-deployment
+
+  * create-pipeline-redeployment
+
+  * create-single-stage-deployment
+
+  * create-single-stage-redeployment
+
+  * get
+
+  * list
+
+  * update
+
+  * update-single-stage-redeployment
+
+* project
+
+  * cancel-cascading-delete
+
+  * change-compartment
+
+  * create
+
+  * delete
+
+  * delete-project-settings
+
+  * get
+
+  * get-notification-preference
+
+  * get-project-settings
+
+  * list
+
+  * list-project-analytics-authors
+
+  * schedule-cascading-delete
+
+  * summarize-project-analytics
+
+  * update
+
+  * update-notification-preference
+
+  * update-project-settings
+
+* protected-branch
+
+  * create-or-update
+
+  * delete
+
+* protected-branch-collection
+
+  * list-protected-branches
+
+* pull-request
+
+  * create
+
+  * create-pull-request-attachment
+
+  * decline
+
+  * delete
+
+  * delete-pull-request-attachment
+
+  * execute-merge-pull-request
+
+  * get
+
+  * get-pull-request-attachment
+
+  * get-pull-request-attachment-content
+
+  * get-pull-request-change-summary-metrics
+
+  * get-pull-request-notification-preference
+
+  * list-build-run-snapshots
+
+  * list-pull-request-activities
+
+  * list-pull-request-attachments
+
+  * list-pull-request-commits
+
+  * list-pull-request-file-changes
+
+  * list-pull-requests
+
+  * patch
+
+  * reopen
+
+  * reopen-pull-request-comment
+
+  * resolve-pull-request-comment
+
+  * review
+
+  * unsubscribe
+
+  * update
+
+  * update-pull-request-notification-preference
+
+  * validate-merge-pull-request
+
+* pull-request-comment
+
+  * create-pull-request-comment
+
+  * delete-pull-request-comment
+
+  * get-pull-request-comment
+
+  * like-pull-request-comment
+
+  * list-pull-request-comments
+
+  * unlike-pull-request-comment
+
+  * update-pull-request-comment
+
+* repository
+
+  * create
+
+  * create-or-update-git-branch-details
+
+  * create-or-update-git-tag-details
+
+  * delete
+
+  * delete-git-ref
+
+  * delete-ref
+
+  * delete-repository-settings
+
+  * get
+
+  * get-commit
+
+  * get-commit-diff
+
+  * get-file-diff
+
+  * get-mirror-record
+
+  * get-object
+
+  * get-object-content
+
+  * get-ref
+
+  * get-repo-file-diff
+
+  * get-repo-file-lines
+
+  * get-repository-archive-content
+
+  * get-repository-file-lines
+
+  * get-repository-notification-preference
+
+  * get-repository-settings
+
+  * list
+
+  * list-authors
+
+  * list-commit-diffs
+
+  * list-commits
+
+  * list-fork-sync-statuses
+
+  * list-mirror-records
+
+  * list-pull-request-authors
+
+  * list-refs
+
+  * list-repository-analytics-authors
+
+  * mirror
+
+  * put-repository-ref-branch-details
+
+  * put-repository-ref-tag-details
+
+  * summarize-repository-analytics
+
+  * sync
+
+  * update
+
+  * update-repository-notification-preference
+
+  * update-repository-settings
+
+* repository-path-summary
+
+  * list-paths
+
+* trigger
+
+  * create-bitbucket-cloud-trigger
+
+  * create-bitbucket-server-trigger
+
+  * create-devops-code-repo-trigger
+
+  * create-github-trigger
+
+  * create-gitlab-server-trigger
+
+  * create-gitlab-trigger
+
+  * create-vbs-trigger
+
+  * delete
+
+  * get
+
+  * list
+
+  * update-bitbucket-cloud-trigger
+
+  * update-bitbucket-server-trigger
+
+  * update-devops-code-repo-trigger
+
+  * update-github-trigger
+
+  * update-gitlab-server-trigger
+
+  * update-gitlab-trigger
+
+  * update-vbs-trigger
+
+* work-request
+
+  * get
+
+  * list
+
+* work-request-error
+
+  * list
+
+* work-request-log
+
+  * list

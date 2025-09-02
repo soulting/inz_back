@@ -1,0 +1,24 @@
+field
+*****
+
+
+Description
+===========
+
+Field Details
+
+
+Available Commands
+==================
+
+* delete-field
+
+* get-field
+
+* get-fields-summary
+
+* get-usages
+
+* list-fields
+
+* upsert-field

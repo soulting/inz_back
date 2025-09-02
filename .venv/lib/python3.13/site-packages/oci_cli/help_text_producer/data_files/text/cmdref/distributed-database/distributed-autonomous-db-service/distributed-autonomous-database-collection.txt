@@ -1,0 +1,14 @@
+distributed-autonomous-database-collection
+******************************************
+
+
+Description
+===========
+
+Collection of Globally distributed autonomous databases.
+
+
+Available Commands
+==================
+
+* list-distributed-autonomous-databases

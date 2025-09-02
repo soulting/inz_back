@@ -1,0 +1,36 @@
+sql-collection
+**************
+
+
+Description
+===========
+
+The resource represents SQL collection for a specific database user in
+a target. SqlCollection encapsulates the SQL commands issued in the
+user’s database sessions, and its execution context.
+
+
+Available Commands
+==================
+
+* change-compartment
+
+* create
+
+* delete
+
+* generate-sql-firewall-policy
+
+* get
+
+* list
+
+* purge-sql-collection-logs
+
+* refresh-sql-collection-log-insights
+
+* start
+
+* stop
+
+* update

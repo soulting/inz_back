@@ -1,0 +1,14 @@
+sql-collection-log-insights
+***************************
+
+
+Description
+===========
+
+SQL collection log analytics collection.
+
+
+Available Commands
+==================
+
+* list

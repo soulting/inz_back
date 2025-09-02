@@ -1,0 +1,62 @@
+managed-instance-group
+**********************
+
+
+Description
+===========
+
+An object that defines the managed instance group.
+
+
+Available Commands
+==================
+
+* attach-managed-instances
+
+* attach-software-sources
+
+* change-compartment
+
+* create
+
+* delete
+
+* detach-managed-instances
+
+* detach-software-sources
+
+* disable-module-stream
+
+* enable-module-stream
+
+* get
+
+* install-module-profile
+
+* install-packages
+
+* install-windows-updates
+
+* list
+
+* list-available-modules
+
+* list-available-packages
+
+* list-available-software-sources
+
+* list-installed-packages
+
+* list-modules
+
+* reboot
+
+* remove-module-profile
+
+* remove-packages
+
+* switch-module-stream
+
+* update
+
+* update-all-packages

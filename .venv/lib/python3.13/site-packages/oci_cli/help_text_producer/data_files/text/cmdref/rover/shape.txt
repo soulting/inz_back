@@ -1,0 +1,14 @@
+shape
+*****
+
+
+Description
+===========
+
+A description of the RoverCloudService CLI.
+
+
+Available Commands
+==================
+
+* list

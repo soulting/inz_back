@@ -1,0 +1,414 @@
+data-science
+************
+
+
+Description
+===========
+
+Use the Data Science CLI to organize your data science work, access
+data and computing resources, and build, train, deploy and manage
+models and model deployments. For more information, see Data Science.
+
+
+Available Commands
+==================
+
+* container
+
+  * list
+
+* ds-private-endpoint
+
+  * change-compartment
+
+  * create
+
+  * delete
+
+  * get
+
+  * list
+
+  * update
+
+* fast-launch-job-config
+
+  * list
+
+* job
+
+  * change-compartment
+
+  * create
+
+  * create-job-artifact
+
+  * delete
+
+  * get
+
+  * get-artifact-content
+
+  * head-job-artifact
+
+  * list
+
+  * update
+
+* job-run
+
+  * cancel
+
+  * change-compartment
+
+  * create
+
+  * delete
+
+  * get
+
+  * list
+
+  * update
+
+* job-shape
+
+  * list
+
+* ml-app
+
+  * change-compartment
+
+  * create
+
+  * delete
+
+  * get
+
+  * list
+
+  * update
+
+* ml-app-implementation
+
+  * change-compartment
+
+  * create
+
+  * delete
+
+  * download-package
+
+  * get
+
+  * list
+
+  * update
+
+  * upload-package
+
+* ml-app-implementation-version
+
+  * download-package
+
+  * get
+
+  * list
+
+  * update
+
+* ml-app-instance
+
+  * change-compartment
+
+  * create
+
+  * create-with-custom-service-idcs-auth
+
+  * create-with-iam-auth
+
+  * create-with-idcs-auth
+
+  * delete
+
+  * get
+
+  * list
+
+  * trigger
+
+  * update
+
+* ml-app-instance-view
+
+  * change-compartment
+
+  * disable-trigger
+
+  * enable-trigger
+
+  * get
+
+  * list
+
+  * recover
+
+  * trigger
+
+  * update
+
+* model
+
+  * activate
+
+  * change-compartment
+
+  * create
+
+  * create-model-artifact
+
+  * create-model-custom-metadatum-artifact
+
+  * create-model-defined-metadatum-artifact
+
+  * create-model-provenance
+
+  * deactivate
+
+  * delete
+
+  * delete-model-custom-metadatum-artifact
+
+  * delete-model-defined-metadatum-artifact
+
+  * export-model-artifact
+
+  * export-model-artifact-artifact-export-details-object-storage
+
+  * get
+
+  * get-artifact-content
+
+  * get-model-custom-metadatum-artifact-content
+
+  * get-model-defined-metadatum-artifact-content
+
+  * get-model-provenance
+
+  * head-model-artifact
+
+  * head-model-custom-metadatum-artifact
+
+  * head-model-defined-metadatum-artifact
+
+  * import-model-artifact
+
+  * import-model-artifact-artifact-import-details-object-storage
+
+  * list
+
+  * restore-archived-model-artifact
+
+  * update
+
+  * update-model-custom-metadatum-artifact
+
+  * update-model-defined-metadatum-artifact
+
+  * update-model-provenance
+
+* model-deployment
+
+  * activate
+
+  * change-compartment
+
+  * create
+
+  * create-model-deployment-model-group-deployment-configuration-
+    details
+
+  * deactivate
+
+  * delete
+
+  * get
+
+  * list
+
+  * update
+
+  * update-model-deployment-update-model-group-deployment-
+    configuration-details
+
+* model-deployment-model-state
+
+  * list
+
+* model-deployment-shape
+
+  * list
+
+* model-group
+
+  * activate
+
+  * change-compartment
+
+  * create
+
+  * create-model-group-artifact
+
+  * create-model-group-clone-model-group-details
+
+  * create-model-group-create-model-group-details
+
+  * deactivate
+
+  * delete
+
+  * get
+
+  * get-model-group-artifact-content
+
+  * head-model-group-artifact
+
+  * list
+
+  * list-model-group-models
+
+  * update
+
+* model-group-version-history
+
+  * change-compartment
+
+  * create
+
+  * delete
+
+  * get
+
+  * list
+
+  * update
+
+* model-version-set
+
+  * change-compartment
+
+  * create
+
+  * delete
+
+  * get
+
+  * list
+
+  * update
+
+* notebook-session
+
+  * activate
+
+  * change-compartment
+
+  * create
+
+  * deactivate
+
+  * delete
+
+  * get
+
+  * list
+
+  * update
+
+* notebook-session-shape
+
+  * list
+
+* pipeline
+
+  * change-compartment
+
+  * create
+
+  * create-step-artifact
+
+  * delete
+
+  * get
+
+  * get-step-artifact-content
+
+  * head-step-artifact
+
+  * list
+
+  * update
+
+* pipeline-run
+
+  * cancel
+
+  * change-compartment
+
+  * create
+
+  * delete
+
+  * get
+
+  * list
+
+  * update
+
+* project
+
+  * change-compartment
+
+  * create
+
+  * delete
+
+  * get
+
+  * list
+
+  * update
+
+* register-model-artifact-reference-details
+
+  * register-model-artifact-reference
+
+* schedule
+
+  * activate
+
+  * change-compartment
+
+  * create
+
+  * deactivate
+
+  * delete
+
+  * get
+
+  * list
+
+  * update
+
+* work-request
+
+  * cancel
+
+  * get
+
+  * list
+
+  * list-work-request-errors
+
+  * list-work-request-logs

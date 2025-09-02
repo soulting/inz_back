@@ -1,0 +1,24 @@
+occ-availability-catalog
+************************
+
+
+Description
+===========
+
+Details of the availability catalog resource.
+
+
+Available Commands
+==================
+
+* create
+
+* delete
+
+* get
+
+* get-catalog-content
+
+* publish
+
+* update

@@ -1,0 +1,19 @@
+performance-tuning-analysis-result
+**********************************
+
+
+Description
+===========
+
+Metadata of a Performance Tuning Analysis result. The analysis result
+is stored as the Object Storage object.
+
+
+Available Commands
+==================
+
+* delete
+
+* get
+
+* list

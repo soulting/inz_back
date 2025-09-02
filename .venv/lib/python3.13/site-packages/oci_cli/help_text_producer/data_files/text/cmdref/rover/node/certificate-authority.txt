@@ -1,0 +1,14 @@
+certificate-authority
+*********************
+
+
+Description
+===========
+
+Rover Node Certificate Authority.
+
+
+Available Commands
+==================
+
+* update-root-ca

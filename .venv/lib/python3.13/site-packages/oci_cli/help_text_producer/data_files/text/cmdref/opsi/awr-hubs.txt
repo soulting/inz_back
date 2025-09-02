@@ -1,0 +1,54 @@
+awr-hubs
+********
+
+
+Description
+===========
+
+Logical grouping used for Awr Hub operations.
+
+
+Available Commands
+==================
+
+* create
+
+* delete
+
+* get
+
+* get-awr-database-report
+
+* get-awr-database-sql-report
+
+* get-awr-report
+
+* list
+
+* list-awr-database-snapshots
+
+* list-awr-databases
+
+* list-awr-snapshots
+
+* summarize-awr-database-cpu-usages
+
+* summarize-awr-database-metrics
+
+* summarize-awr-database-parameter-changes
+
+* summarize-awr-database-parameters
+
+* summarize-awr-database-snapshot-ranges
+
+* summarize-awr-database-sysstats
+
+* summarize-awr-database-top-wait-events
+
+* summarize-awr-database-wait-event-buckets
+
+* summarize-awr-database-wait-events
+
+* summarize-awr-sources-summaries
+
+* update

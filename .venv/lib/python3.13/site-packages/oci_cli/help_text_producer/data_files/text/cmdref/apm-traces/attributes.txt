@@ -1,0 +1,30 @@
+attributes
+**********
+
+
+Description
+===========
+
+Use the Application Performance Monitoring Trace Explorer CLI to query
+traces and associated spans in Trace Explorer. For more information,
+see Application Performance Monitoring.
+
+
+Available Commands
+==================
+
+* activate
+
+* auto-activate-status
+
+* deactivate
+
+* pin
+
+* unpin
+
+* update-attribute
+
+* update-auto-activate
+
+* update-notes

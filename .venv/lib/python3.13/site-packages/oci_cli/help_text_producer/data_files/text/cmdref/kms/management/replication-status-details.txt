@@ -1,0 +1,14 @@
+replication-status-details
+**************************
+
+
+Description
+===========
+
+Details of replication status across all replica regions
+
+
+Available Commands
+==================
+
+* get-replication-status

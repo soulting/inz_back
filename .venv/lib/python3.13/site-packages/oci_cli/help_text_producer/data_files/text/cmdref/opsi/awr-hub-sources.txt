@@ -1,0 +1,28 @@
+awr-hub-sources
+***************
+
+
+Description
+===========
+
+Logical grouping used for Awr Hub Source operations.
+
+
+Available Commands
+==================
+
+* change
+
+* create
+
+* delete
+
+* disable
+
+* enable
+
+* get
+
+* list
+
+* update

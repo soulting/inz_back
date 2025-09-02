@@ -1,0 +1,16 @@
+fleet-advanced-feature-configuration
+************************************
+
+
+Description
+===========
+
+Metadata for the advanced features in the Fleet.
+
+
+Available Commands
+==================
+
+* get
+
+* update

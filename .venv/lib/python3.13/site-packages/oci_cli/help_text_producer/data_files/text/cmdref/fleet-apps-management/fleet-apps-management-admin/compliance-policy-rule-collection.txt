@@ -1,0 +1,16 @@
+compliance-policy-rule-collection
+*********************************
+
+
+Description
+===========
+
+Results of a compliancePolicyRule search. Contains both
+CompliancePolicyRuleSummary items and other information, such as
+metadata.
+
+
+Available Commands
+==================
+
+* list-compliance-policy-rules

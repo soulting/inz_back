@@ -1,0 +1,14 @@
+app-status-changer
+******************
+
+
+Description
+===========
+
+Schema for AppStatusChanger resource.
+
+
+Available Commands
+==================
+
+* put

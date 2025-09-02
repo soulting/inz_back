@@ -1,0 +1,28 @@
+work-request
+************
+
+
+Description
+===========
+
+A description of the GovernanceRulesControlPlane CLI
+
+
+Available Commands
+==================
+
+* work-request
+
+  * cancel
+
+  * get
+
+  * list
+
+* work-request-error
+
+  * list-errors
+
+* work-request-log-entry
+
+  * list-logs

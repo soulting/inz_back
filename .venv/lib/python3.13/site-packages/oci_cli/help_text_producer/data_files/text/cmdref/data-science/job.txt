@@ -1,0 +1,30 @@
+job
+***
+
+
+Description
+===========
+
+A job for training models.
+
+
+Available Commands
+==================
+
+* change-compartment
+
+* create
+
+* create-job-artifact
+
+* delete
+
+* get
+
+* get-artifact-content
+
+* head-job-artifact
+
+* list
+
+* update

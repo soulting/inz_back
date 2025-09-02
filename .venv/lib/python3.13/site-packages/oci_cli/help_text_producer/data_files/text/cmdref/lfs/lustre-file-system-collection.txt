@@ -1,0 +1,15 @@
+lustre-file-system-collection
+*****************************
+
+
+Description
+===========
+
+Results of a Lustre file system search. Contains both
+LustreFileSystemSummary items and other information, such as metadata.
+
+
+Available Commands
+==================
+
+* list-lustre-file-systems

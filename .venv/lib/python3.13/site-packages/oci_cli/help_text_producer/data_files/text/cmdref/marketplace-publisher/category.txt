@@ -1,0 +1,14 @@
+category
+********
+
+
+Description
+===========
+
+The model for the category details.
+
+
+Available Commands
+==================
+
+* get

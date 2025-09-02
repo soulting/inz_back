@@ -1,0 +1,70 @@
+node
+****
+
+
+Description
+===========
+
+Information about a RoverNode.
+
+
+Available Commands
+==================
+
+* add-workload
+
+* ca-bundle
+
+  * get
+
+* certificate
+
+  * create
+
+  * get-leaf-certificate
+
+  * update
+
+* certificate-authority
+
+  * update-root-ca
+
+* change-compartment
+
+* create
+
+* delete
+
+* delete-workload
+
+* get-certificate
+
+* get-encryption-key
+
+* list
+
+* list-workload
+
+* request-approval
+
+* rover-bundle
+
+  * copy-to-customer
+
+  * get-status
+
+* rover-bundle-request
+
+  * list
+
+* rover-bundle-version
+
+  * get
+
+* set-secrets
+
+* setup-identity
+
+* show
+
+* update

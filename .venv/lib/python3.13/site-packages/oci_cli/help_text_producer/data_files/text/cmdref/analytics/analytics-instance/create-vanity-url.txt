@@ -1,0 +1,167 @@
+"create-vanity-url"
+*******************
+
+* Description
+
+* Usage
+
+* Required Parameters
+
+* Optional Parameters
+
+* Global Parameters
+
+* Example using required parameter
+
+
+Description
+===========
+
+Allows specifying a custom host name to be used to access the
+analytics instance.  This requires prior setup of DNS entry and
+certificate for this host.
+
+
+Usage
+=====
+
+   oci analytics analytics-instance create-vanity-url [OPTIONS]
+
+
+Required Parameters
+===================
+
+--analytics-instance-id [text]
+
+The OCID of the AnalyticsInstance.
+
+--ca-certificate-file [filename]
+
+PEM CA certificate(s) file for HTTPS connections. This may include
+multiple PEM certificates.
+
+--hosts [complex type]
+
+List of fully qualified hostnames supported by this vanity URL
+definition (max of 3). This is a complex type whose value must be
+valid JSON. The value can be provided as a string on the command line
+or passed in as a file using the file://path/to/file syntax.
+
+The "--generate-param-json-input" option can be used to generate an
+example of the JSON which must be provided. We recommend storing this
+example in a file, modifying it as needed and then passing it back in
+via the file:// syntax.
+
+--private-key-file [filename]
+
+PEM Private key file for HTTPS connections.
+
+--public-certificate-file [filename]
+
+PEM certificate file for HTTPS connections.
+
+
+Optional Parameters
+===================
+
+--description [text]
+
+Optional description.
+
+--from-json [text]
+
+Provide input to this command as a JSON document from a file using the
+file://path-to/file syntax.
+
+The "--generate-full-command-json-input" option can be used to
+generate a sample json file to be used with this command option. The
+key names are pre-populated and match the command option names
+(converted to camelCase format, e.g. compartment-id –> compartmentId),
+while the values of the keys need to be populated by the user before
+using the sample file as an input to this command. For any command
+option that accepts multiple values, the value of the key can be a
+JSON array.
+
+Options can still be provided on the command line. If an option exists
+in both the JSON document and the command line then the command line
+specified value will be used.
+
+For examples on usage of this option, please see our “using CLI with
+advanced JSON options” link: https://docs.cloud.oracle.com/iaas/Conte
+nt/API/SDKDocs/cliusing.htm#AdvancedJSONOptions
+
+--max-wait-seconds [integer]
+
+The maximum time to wait for the work request to reach the state
+defined by "--wait-for-state". Defaults to 1200 seconds.
+
+--passphrase [text]
+
+Passphrase for the PEM Private key (if any).
+
+--wait-for-state [text]
+
+This operation asynchronously creates, modifies or deletes a resource
+and uses a work request to track the progress of the operation.
+Specify this option to perform the action and then wait until the work
+request reaches a certain state. Multiple states can be specified,
+returning on the first state. For example, "--wait-for-state"
+SUCCEEDED "--wait-for-state" FAILED would return on whichever
+lifecycle state is reached first. If timeout is reached, a return code
+of 2 is returned. For any other error, a return code of 1 is returned.
+
+Accepted values are:
+
+   ACCEPTED, CANCELED, CANCELING, FAILED, IN_PROGRESS, SUCCEEDED
+
+--wait-interval-seconds [integer]
+
+Check every "--wait-interval-seconds" to see whether the work request
+has reached the state defined by "--wait-for-state". Defaults to 30
+seconds.
+
+
+Global Parameters
+=================
+
+Use "oci --help" for help on global parameters.
+
+"--auth-purpose", "--auth", "--cert-bundle", "--cli-auto-prompt", "--
+cli-rc-file", "--config-file", "--connection-timeout", "--debug", "--
+defaults-file", "--endpoint", "--generate-full-command-json-input", "
+--generate-param-json-input", "--help", "--latest-version", "--max-
+retries", "--no-retry", "--opc-client-request-id", "--opc-request-id",
+"--output", "--profile", "--proxy", "--query", "--raw-output", "--
+read-timeout", "--realm-specific-endpoint", "--region", "--release-
+info", "--request-id", "--version", "-?", "-d", "-h", "-i", "-v"
+
+
+Example using required parameter
+================================
+
+Copy and paste the following example into a JSON file, replacing the
+example parameters with your own.
+
+       oci analytics analytics-instance create-vanity-url --generate-param-json-input hosts > hosts.json
+
+Copy the following CLI commands into a file named example.sh. Run the
+command by typing “bash example.sh” and replacing the example
+parameters with your own.
+
+Please note this sample will only work in the POSIX-compliant bash-
+like shell. You need to set up the OCI configuration and appropriate
+security policies before trying the examples.
+
+       export capacity_type=<substitute-value-of-capacity_type> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/analytics/analytics-instance/create.html#cmdoption-capacity-type
+       export capacity_value=<substitute-value-of-capacity_value> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/analytics/analytics-instance/create.html#cmdoption-capacity-value
+       export compartment_id=<substitute-value-of-compartment_id> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/analytics/analytics-instance/create.html#cmdoption-compartment-id
+       export feature_set=<substitute-value-of-feature_set> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/analytics/analytics-instance/create.html#cmdoption-feature-set
+       export license_type=<substitute-value-of-license_type> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/analytics/analytics-instance/create.html#cmdoption-license-type
+       export name=<substitute-value-of-name> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/analytics/analytics-instance/create.html#cmdoption-name
+       export ca_certificate_file=<substitute-value-of-ca_certificate_file> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/analytics/analytics-instance/create-vanity-url.html#cmdoption-ca-certificate-file
+       export private_key_file=<substitute-value-of-private_key_file> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/analytics/analytics-instance/create-vanity-url.html#cmdoption-private-key-file
+       export public_certificate_file=<substitute-value-of-public_certificate_file> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/analytics/analytics-instance/create-vanity-url.html#cmdoption-public-certificate-file
+
+       analytics_instance_id=$(oci analytics analytics-instance create --capacity-type $capacity_type --capacity-value $capacity_value --compartment-id $compartment_id --feature-set $feature_set --license-type $license_type --name $name --query data.id --raw-output)
+
+       oci analytics analytics-instance create-vanity-url --analytics-instance-id $analytics_instance_id --ca-certificate-file $ca_certificate_file --hosts file://hosts.json --private-key-file $private_key_file --public-certificate-file $public_certificate_file

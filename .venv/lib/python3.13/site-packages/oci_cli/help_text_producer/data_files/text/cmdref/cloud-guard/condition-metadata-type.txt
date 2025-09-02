@@ -1,0 +1,16 @@
+condition-metadata-type
+***********************
+
+
+Description
+===========
+
+The metadata definition of the requested condition type.
+
+
+Available Commands
+==================
+
+* get
+
+* list

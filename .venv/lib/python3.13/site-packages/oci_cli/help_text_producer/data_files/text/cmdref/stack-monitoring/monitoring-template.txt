@@ -1,0 +1,28 @@
+monitoring-template
+*******************
+
+
+Description
+===========
+
+Detailed information of the Monitoring Template
+
+
+Available Commands
+==================
+
+* apply
+
+* create
+
+* delete
+
+* export
+
+* get
+
+* list
+
+* unapply
+
+* update

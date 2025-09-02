@@ -1,0 +1,17 @@
+windows-update
+**************
+
+
+Description
+===========
+
+An object that provides information about an update for a Windows
+instance.
+
+
+Available Commands
+==================
+
+* get
+
+* list-windows-updates

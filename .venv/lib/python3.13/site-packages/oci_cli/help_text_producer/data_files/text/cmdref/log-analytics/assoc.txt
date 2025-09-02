@@ -1,0 +1,26 @@
+assoc
+*****
+
+
+Description
+===========
+
+LogAnalyticsAssociation
+
+
+Available Commands
+==================
+
+* delete-assocs
+
+* get-assoc-summary
+
+* list-associated-entities
+
+* list-entity-source-assocs
+
+* list-source-assocs
+
+* upsert-assocs
+
+* validate-assoc-params

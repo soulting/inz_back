@@ -1,0 +1,14 @@
+stream-group-collection
+***********************
+
+
+Description
+===========
+
+The results of a streamGroup search.
+
+
+Available Commands
+==================
+
+* list-stream-groups

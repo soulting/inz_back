@@ -1,0 +1,29 @@
+network-address-list
+********************
+
+
+Description
+===========
+
+IP addresses that can be used between different
+WebAppFirewallPolicies.
+
+
+Available Commands
+==================
+
+* change-compartment
+
+* create-addresses-list
+
+* create-vcn-addresses-list
+
+* delete
+
+* get
+
+* list
+
+* update-addresses-list
+
+* update-vcn-addresses-list

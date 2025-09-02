@@ -1,0 +1,15 @@
+iam-work-request-log
+********************
+
+
+Description
+===========
+
+(For tenancies that support identity domains) The log entity for a IAM
+work request.
+
+
+Available Commands
+==================
+
+* list

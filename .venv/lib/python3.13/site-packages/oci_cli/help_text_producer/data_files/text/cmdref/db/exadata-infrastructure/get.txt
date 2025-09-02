@@ -1,0 +1,119 @@
+"get"
+*****
+
+* Description
+
+* Usage
+
+* Required Parameters
+
+* Optional Parameters
+
+* Global Parameters
+
+* Example using required parameter
+
+
+Description
+===========
+
+Gets information about the specified Exadata infrastructure. Applies
+to Exadata Cloud@Customer instances only. To get information on an
+Exadata Cloud Service infrastructure resource, use the
+GetCloudExadataInfrastructure operation.
+
+
+Usage
+=====
+
+   oci db exadata-infrastructure get [OPTIONS]
+
+
+Required Parameters
+===================
+
+--exadata-infrastructure-id [text]
+
+The Exadata infrastructure OCID.
+
+
+Optional Parameters
+===================
+
+--excluded-fields [text]
+
+If provided, the specified fields will be excluded in the response.
+
+Accepted values are:
+
+   multiRackConfigurationFile
+
+--from-json [text]
+
+Provide input to this command as a JSON document from a file using the
+file://path-to/file syntax.
+
+The "--generate-full-command-json-input" option can be used to
+generate a sample json file to be used with this command option. The
+key names are pre-populated and match the command option names
+(converted to camelCase format, e.g. compartment-id –> compartmentId),
+while the values of the keys need to be populated by the user before
+using the sample file as an input to this command. For any command
+option that accepts multiple values, the value of the key can be a
+JSON array.
+
+Options can still be provided on the command line. If an option exists
+in both the JSON document and the command line then the command line
+specified value will be used.
+
+For examples on usage of this option, please see our “using CLI with
+advanced JSON options” link: https://docs.cloud.oracle.com/iaas/Conte
+nt/API/SDKDocs/cliusing.htm#AdvancedJSONOptions
+
+
+Global Parameters
+=================
+
+Use "oci --help" for help on global parameters.
+
+"--auth-purpose", "--auth", "--cert-bundle", "--cli-auto-prompt", "--
+cli-rc-file", "--config-file", "--connection-timeout", "--debug", "--
+defaults-file", "--endpoint", "--generate-full-command-json-input", "
+--generate-param-json-input", "--help", "--latest-version", "--max-
+retries", "--no-retry", "--opc-client-request-id", "--opc-request-id",
+"--output", "--profile", "--proxy", "--query", "--raw-output", "--
+read-timeout", "--realm-specific-endpoint", "--region", "--release-
+info", "--request-id", "--version", "-?", "-d", "-h", "-i", "-v"
+
+
+Example using required parameter
+================================
+
+Copy and paste the following example into a JSON file, replacing the
+example parameters with your own.
+
+       oci db exadata-infrastructure create --generate-param-json-input dns-server > dns-server.json
+       oci db exadata-infrastructure create --generate-param-json-input ntp-server > ntp-server.json
+
+Copy the following CLI commands into a file named example.sh. Run the
+command by typing “bash example.sh” and replacing the example
+parameters with your own.
+
+Please note this sample will only work in the POSIX-compliant bash-
+like shell. You need to set up the OCI configuration and appropriate
+security policies before trying the examples.
+
+       export admin_network_cidr=<substitute-value-of-admin_network_cidr> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/db/exadata-infrastructure/create.html#cmdoption-admin-network-cidr
+       export cloud_control_plane_server1=<substitute-value-of-cloud_control_plane_server1> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/db/exadata-infrastructure/create.html#cmdoption-cloud-control-plane-server1
+       export cloud_control_plane_server2=<substitute-value-of-cloud_control_plane_server2> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/db/exadata-infrastructure/create.html#cmdoption-cloud-control-plane-server2
+       export compartment_id=<substitute-value-of-compartment_id> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/db/exadata-infrastructure/create.html#cmdoption-compartment-id
+       export display_name=<substitute-value-of-display_name> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/db/exadata-infrastructure/create.html#cmdoption-display-name
+       export gateway=<substitute-value-of-gateway> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/db/exadata-infrastructure/create.html#cmdoption-gateway
+       export infini_band_network_cidr=<substitute-value-of-infini_band_network_cidr> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/db/exadata-infrastructure/create.html#cmdoption-infini-band-network-cidr
+       export netmask=<substitute-value-of-netmask> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/db/exadata-infrastructure/create.html#cmdoption-netmask
+       export shape=<substitute-value-of-shape> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/db/exadata-infrastructure/create.html#cmdoption-shape
+       export time_zone=<substitute-value-of-time_zone> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/db/exadata-infrastructure/create.html#cmdoption-time-zone
+
+       exadata_infrastructure_id=$(oci db exadata-infrastructure create --admin-network-cidr $admin_network_cidr --cloud-control-plane-server1 $cloud_control_plane_server1 --cloud-control-plane-server2 $cloud_control_plane_server2 --compartment-id $compartment_id --display-name $display_name --dns-server file://dns-server.json --gateway $gateway --infini-band-network-cidr $infini_band_network_cidr --netmask $netmask --ntp-server file://ntp-server.json --shape $shape --time-zone $time_zone --query data.id --raw-output)
+
+       oci db exadata-infrastructure get --exadata-infrastructure-id $exadata_infrastructure_id

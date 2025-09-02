@@ -1,0 +1,28 @@
+environment
+***********
+
+
+Description
+===========
+
+Description of the source environment.
+
+
+Available Commands
+==================
+
+* add
+
+* change-compartment
+
+* create
+
+* delete
+
+* get
+
+* list
+
+* remove
+
+* update

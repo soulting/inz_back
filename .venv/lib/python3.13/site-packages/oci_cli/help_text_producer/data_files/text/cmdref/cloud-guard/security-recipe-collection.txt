@@ -1,0 +1,15 @@
+security-recipe-collection
+**************************
+
+
+Description
+===========
+
+Collection of Security Zones recipes (SecurityRecipeSummary
+resources), resulting from a security zone recipe search.
+
+
+Available Commands
+==================
+
+* list-security-recipes

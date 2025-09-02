@@ -1,0 +1,16 @@
+scheduler-definition-collection
+*******************************
+
+
+Description
+===========
+
+Results of a schedulerDefinition search. Contains boh
+SchedulerDefinitionSummary items and other information, such as
+metadata.
+
+
+Available Commands
+==================
+
+* list-scheduler-definitions

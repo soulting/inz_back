@@ -1,0 +1,14 @@
+rate-card
+*********
+
+
+Description
+===========
+
+Rate Card Summary
+
+
+Available Commands
+==================
+
+* list

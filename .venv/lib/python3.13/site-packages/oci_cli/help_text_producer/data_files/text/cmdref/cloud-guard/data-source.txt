@@ -1,0 +1,34 @@
+data-source
+***********
+
+
+Description
+===========
+
+Detailed information for a data source (DataSource resource).
+
+
+Available Commands
+==================
+
+* change-compartment
+
+* create
+
+* create-data-source-logging-query-data-source-details
+
+* create-data-source-scheduled-query-data-source-obj-details
+
+* delete
+
+* get
+
+* list
+
+* list-data-source-events
+
+* update
+
+* update-data-source-logging-query-data-source-details
+
+* update-data-source-scheduled-query-data-source-obj-details

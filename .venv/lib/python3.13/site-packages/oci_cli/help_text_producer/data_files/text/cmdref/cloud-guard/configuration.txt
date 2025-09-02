@@ -1,0 +1,17 @@
+configuration
+*************
+
+
+Description
+===========
+
+Specifies several key settings for a Cloud Guard tenancy, identified
+by tenancy root compartment OCID.
+
+
+Available Commands
+==================
+
+* get
+
+* update

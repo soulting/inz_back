@@ -1,0 +1,376 @@
+compute
+*******
+
+
+Description
+===========
+
+Compute Service CLI
+
+
+Available Commands
+==================
+
+* boot-volume-attachment
+
+  * attach
+
+  * detach
+
+  * get
+
+  * list
+
+* capacity-reservation
+
+  * change-compartment
+
+  * create
+
+  * delete
+
+  * get
+
+  * instance
+
+    * list
+
+  * instance-shape
+
+    * list
+
+  * list
+
+  * update
+
+* capacity-topology
+
+  * bare-metal-host
+
+    * list
+
+  * change-compartment
+
+  * create
+
+  * delete
+
+  * get
+
+  * hpc-island
+
+    * list
+
+  * list
+
+  * network-block
+
+    * list
+
+  * update
+
+* compute-capacity-report
+
+  * create
+
+* compute-cluster
+
+  * change-compartment
+
+  * create
+
+  * delete
+
+  * get
+
+  * list
+
+  * update
+
+* compute-gpu-memory-cluster
+
+  * change-compartment
+
+  * create
+
+  * delete
+
+  * get
+
+  * list
+
+  * update
+
+* compute-gpu-memory-cluster-instance-summary
+
+  * list-compute-gpu-memory-cluster-instances
+
+* compute-gpu-memory-fabric
+
+  * change-compartment
+
+  * get
+
+  * list
+
+  * update
+
+* compute-host
+
+  * attach
+
+  * change-compartment
+
+  * detach
+
+  * get
+
+  * list
+
+  * update
+
+* compute-host-group
+
+  * change-compartment
+
+  * create
+
+  * delete
+
+  * get
+
+  * list
+
+  * update
+
+* console-history
+
+  * capture
+
+  * delete
+
+  * get
+
+  * get-content
+
+  * list
+
+  * update
+
+* dedicated-vm-host
+
+  * change-compartment
+
+  * create
+
+  * create-dedicated-vm-host-compute-bare-metal-host-placement-
+    constraint-details
+
+  * create-dedicated-vm-host-host-group-placement-constraint-details
+
+  * delete
+
+  * get
+
+  * host-shape
+
+    * list
+
+  * instance-shape
+
+    * list
+
+  * list
+
+  * update
+
+* dedicated-vm-host-instance
+
+  * list
+
+* device
+
+  * list-instance
+
+* global-image-capability-schema
+
+  * get
+
+  * list
+
+* global-image-capability-schema-version
+
+  * get
+
+  * list
+
+* image
+
+  * change-compartment
+
+  * create
+
+  * delete
+
+  * export
+
+    * to-object
+
+    * to-object-uri
+
+  * get
+
+  * import
+
+    * from-object
+
+    * from-object-uri
+
+  * list
+
+  * update
+
+* image-capability-schema
+
+  * change-compartment
+
+  * create
+
+  * delete
+
+  * get
+
+  * list
+
+  * update
+
+* image-shape-compatibility-entry
+
+  * add
+
+  * get
+
+  * list
+
+  * remove
+
+* instance
+
+  * action
+
+  * attach-vnic
+
+  * change-compartment
+
+  * detach-vnic
+
+  * get
+
+  * get-windows-initial-creds
+
+  * launch
+
+  * launch-instance-compute-bare-metal-host-placement-constraint-
+    details
+
+  * launch-instance-host-group-placement-constraint-details
+
+  * list
+
+  * list-vnics
+
+  * terminate
+
+  * update
+
+  * update-instance-amd-vm-update-instance-platform-config
+
+  * update-instance-intel-vm-update-instance-platform-config
+
+  * update-instance-update-instance-source-via-boot-volume-details
+
+  * update-instance-update-instance-source-via-image-details
+
+* instance-console-connection
+
+  * create
+
+  * delete
+
+  * get
+
+  * get-plink-connection-string
+
+  * list
+
+  * update
+
+* instance-maintenance-event
+
+  * get
+
+  * list
+
+  * update
+
+* instance-maintenance-reboot
+
+  * get
+
+* measured-boot-report
+
+  * accept-shielded-integrity-policy
+
+  * get
+
+* pic
+
+  * agreements
+
+    * get
+
+  * listing
+
+    * get
+
+    * list
+
+  * subscription
+
+    * create
+
+    * delete
+
+    * list
+
+  * version
+
+    * get
+
+    * list
+
+* shape
+
+  * list
+
+* vnic-attachment
+
+  * get
+
+  * list
+
+* volume-attachment
+
+  * attach
+
+  * attach-iscsi-volume
+
+  * attach-paravirtualized-volume
+
+  * detach
+
+  * get
+
+  * list
+
+  * update

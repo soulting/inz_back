@@ -1,0 +1,14 @@
+export-status
+*************
+
+
+Description
+===========
+
+Attributes of fleet’s export status.
+
+
+Available Commands
+==================
+
+* get

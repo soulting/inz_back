@@ -1,0 +1,53 @@
+user-assessment
+***************
+
+
+Description
+===========
+
+The details of the user assessment, which includes statistics related
+to target database users.
+
+
+Available Commands
+==================
+
+* change-compartment
+
+* compare
+
+* create
+
+* delete
+
+* download-user-assessment-report
+
+* generate-user-assessment-report
+
+* get
+
+* get-profile
+
+* get-user-assessment-comparison
+
+* list
+
+* list-grants
+
+* list-password-expiry-date-analytics
+
+* list-profile-summaries
+
+* list-user-access-analytics
+
+* list-user-analytics
+
+* list-users
+
+* refresh
+
+* set-user-assessment-baseline
+
+* unset-user-assessment-baseline
+
+* update

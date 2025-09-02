@@ -1,0 +1,412 @@
+"list"
+******
+
+* Description
+
+* Usage
+
+* Required Parameters
+
+* Optional Parameters
+
+* Global Parameters
+
+* Example using required parameter
+
+* Other Examples
+
+
+Description
+===========
+
+Lists the work requests in a compartment.
+
+
+Usage
+=====
+
+   oci os work-request list [OPTIONS]
+
+
+Required Parameters
+===================
+
+--compartment-id, -c [text]
+
+The ID of the compartment in which to list buckets.
+
+
+Optional Parameters
+===================
+
+--all
+
+Fetches all pages of results. If you provide this option, then you
+cannot provide the "--limit" option.
+
+--from-json [text]
+
+Provide input to this command as a JSON document from a file using the
+file://path-to/file syntax.
+
+The "--generate-full-command-json-input" option can be used to
+generate a sample json file to be used with this command option. The
+key names are pre-populated and match the command option names
+(converted to camelCase format, e.g. compartment-id –> compartmentId),
+while the values of the keys need to be populated by the user before
+using the sample file as an input to this command. For any command
+option that accepts multiple values, the value of the key can be a
+JSON array.
+
+Options can still be provided on the command line. If an option exists
+in both the JSON document and the command line then the command line
+specified value will be used.
+
+For examples on usage of this option, please see our “using CLI with
+advanced JSON options” link: https://docs.cloud.oracle.com/iaas/Conte
+nt/API/SDKDocs/cliusing.htm#AdvancedJSONOptions
+
+--limit [integer]
+
+For list pagination. The maximum number of results per page, or items
+to return in a paginated “List” call. For important details about how
+pagination works, see List Pagination.
+
+--page [text]
+
+For list pagination. The value of the *opc-next-page* response header
+from the previous “List” call. For important details about how
+pagination works, see List Pagination.
+
+--page-size [integer]
+
+When fetching results, the number of results to fetch per call. Only
+valid when used with "--all" or "--limit", and ignored otherwise.
+
+--private-endpoint-name [text]
+
+The name of the privateEndpoint for which to list work requests.
+
+
+Global Parameters
+=================
+
+Use "oci --help" for help on global parameters.
+
+"--auth-purpose", "--auth", "--cert-bundle", "--cli-auto-prompt", "--
+cli-rc-file", "--config-file", "--connection-timeout", "--debug", "--
+defaults-file", "--endpoint", "--generate-full-command-json-input", "
+--generate-param-json-input", "--help", "--latest-version", "--max-
+retries", "--no-retry", "--opc-client-request-id", "--opc-request-id",
+"--output", "--profile", "--proxy", "--query", "--raw-output", "--
+read-timeout", "--realm-specific-endpoint", "--region", "--release-
+info", "--request-id", "--version", "-?", "-d", "-h", "-i", "-v"
+
+
+Example using required parameter
+================================
+
+Copy the following CLI commands into a file named example.sh. Run the
+command by typing “bash example.sh” and replacing the example
+parameters with your own.
+
+Please note this sample will only work in the POSIX-compliant bash-
+like shell. You need to set up the OCI configuration and appropriate
+security policies before trying the examples.
+
+       export compartment_id=<substitute-value-of-compartment_id> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/os/work-request/list.html#cmdoption-compartment-id
+
+       oci os work-request list --compartment-id $compartment_id
+
+
+Other Examples
+==============
+
+
+Description
+-----------
+
+Lists first 1000 work requests in a compartment
+
+
+Command
+-------
+
+    oci os work-request list -c ocid1.compartment.oc1..aaaaaaaa3ffjane6aoullgob4daj6xw2bzkm7maswctna2zgoxfny4smpoha
+
+
+Output
+------
+
+   {
+    "data": [
+         {
+              "compartment-id": "ocid1.compartment.oc1..aaaaaaaa3ffjane6aoullgob4daj6xw2bzkm7maswctna2zgoxfny4smpoha",
+              "id": "2e883125-b949-4d43-9750-2a9930295196",
+              "operation-type": "COPY_OBJECT",
+              "percent-complete": 100.0,
+              "resources": [
+                   {
+                        "action-type": "READ",
+                        "entity-type": "object",
+                        "entity-uri": "/n/bmcostests/b/bucket-client/o/test.txt",
+                        "identifier": null,
+                        "metadata": {
+                             "BUCKET": "bucket-client",
+                             "NAMESPACE": "bmcostests",
+                             "OBJECT": "test.txt",
+                             "REGION": "us-phoenix-1"
+                        }
+                   },
+                   {
+                        "action-type": "WRITTEN",
+                        "entity-type": "object",
+                        "entity-uri": "/n/bmcostests/b/ankit-test/o/test.txt",
+                        "identifier": null,
+                        "metadata": {
+                             "BUCKET": "ankit-test",
+                             "NAMESPACE": "bmcostests",
+                             "OBJECT": "test.txt",
+                             "REGION": "us-phoenix-1"
+                        }
+                   }
+              ],
+              "status": "COMPLETED",
+              "time-accepted": "2022-12-19T09:42:27+00:00",
+              "time-finished": "2022-12-19T09:42:27+00:00",
+              "time-started": "2022-12-19T09:42:27+00:00"
+         }
+    ]
+   }
+
+
+Description
+-----------
+
+Lists all work requests in a compartment
+
+
+Command
+-------
+
+    oci os work-request list -c ocid1.compartment.oc1..aaaaaaaa3ffjane6aoullgob4daj6xw2bzkm7maswctna2zgoxfny4smpoha --all
+
+
+Output
+------
+
+   {
+    "data": [
+         {
+              "compartment-id": "ocid1.compartment.oc1..aaaaaaaa3ffjane6aoullgob4daj6xw2bzkm7maswctna2zgoxfny4smpoha",
+              "id": "2e883125-b949-4d43-9750-2a9930295196",
+              "operation-type": "COPY_OBJECT",
+              "percent-complete": 100.0,
+              "resources": [
+                   {
+                        "action-type": "READ",
+                        "entity-type": "object",
+                        "entity-uri": "/n/bmcostests/b/bucket-client/o/test.txt",
+                        "identifier": null,
+                        "metadata": {
+                             "BUCKET": "bucket-client",
+                             "NAMESPACE": "bmcostests",
+                             "OBJECT": "test.txt",
+                             "REGION": "us-phoenix-1"
+                        }
+                   },
+                   {
+                        "action-type": "WRITTEN",
+                        "entity-type": "object",
+                        "entity-uri": "/n/bmcostests/b/ankit-test/o/test.txt",
+                        "identifier": null,
+                        "metadata": {
+                             "BUCKET": "ankit-test",
+                             "NAMESPACE": "bmcostests",
+                             "OBJECT": "test.txt",
+                             "REGION": "us-phoenix-1"
+                        }
+                   }
+              ],
+              "status": "COMPLETED",
+              "time-accepted": "2022-12-19T09:42:27+00:00",
+              "time-finished": "2022-12-19T09:42:27+00:00",
+              "time-started": "2022-12-19T09:42:27+00:00"
+         }
+    ]
+   }
+
+
+Description
+-----------
+
+Lists work requests in the compartment, with maximum number of results
+per page equal to the specified limit
+
+
+Command
+-------
+
+    oci os work-request list -c ocid1.compartment.oc1..aaaaaaaa3ffjane6aoullgob4daj6xw2bzkm7maswctna2zgoxfny4smpoha --limit 1
+
+
+Output
+------
+
+   {
+    "data": [
+         {
+              "compartment-id": "ocid1.compartment.oc1..aaaaaaaa3ffjane6aoullgob4daj6xw2bzkm7maswctna2zgoxfny4smpoha",
+              "id": "2e883125-b949-4d43-9750-2a9930295196",
+              "operation-type": "COPY_OBJECT",
+              "percent-complete": 100.0,
+              "resources": [
+                   {
+                        "action-type": "READ",
+                        "entity-type": "object",
+                        "entity-uri": "/n/bmcostests/b/bucket-client/o/test.txt",
+                        "identifier": null,
+                        "metadata": {
+                             "BUCKET": "bucket-client",
+                             "NAMESPACE": "bmcostests",
+                             "OBJECT": "test.txt",
+                             "REGION": "us-phoenix-1"
+                        }
+                   },
+                   {
+                        "action-type": "WRITTEN",
+                        "entity-type": "object",
+                        "entity-uri": "/n/bmcostests/b/ankit-test/o/test.txt",
+                        "identifier": null,
+                        "metadata": {
+                             "BUCKET": "ankit-test",
+                             "NAMESPACE": "bmcostests",
+                             "OBJECT": "test.txt",
+                             "REGION": "us-phoenix-1"
+                        }
+                   }
+              ],
+              "status": "COMPLETED",
+              "time-accepted": "2022-12-19T09:42:27+00:00",
+              "time-finished": "2022-12-19T09:42:27+00:00",
+              "time-started": "2022-12-19T09:42:27+00:00"
+         }
+    ],
+    "opc-next-page": "1:bMd9i0XDSPgKtWK2Z0mB8j-OV_02CvwnYGoOaV-YfndxTbrq-tlnuhPrFouYqI6CINWKhXfwlZpx_dHGSiIhEvgm757v_Jz_-If7apNo3UU="
+   }
+
+
+Description
+-----------
+
+List work requests on the the specified page, use opc-next-page
+response header from the previous ”List” call
+
+
+Command
+-------
+
+    oci os work-request list -c ocid1.compartment.oc1..aaaaaaaa3ffjane6aoullgob4daj6xw2bzkm7maswctna2zgoxfny4smpoha --page 1:bMd9i0XDSPgKtWK2Z0mB8j-OV_02CvwnYGoOaV-YfndxTbrq-tlnuhPrFouYqI6CINWKhXfwlZpx_dHGSiIhEvgm757v_Jz_-If7apNo3UU=
+
+
+Output
+------
+
+   {
+    "data": [
+         {
+              "compartment-id": "ocid1.compartment.oc1..aaaaaaaa3ffjane6aoullgob4daj6xw2bzkm7maswctna2zgoxfny4smpoha",
+              "id": "2e883125-b949-4d43-9750-2a9930295196",
+              "operation-type": "COPY_OBJECT",
+              "percent-complete": 100.0,
+              "resources": [
+                   {
+                        "action-type": "READ",
+                        "entity-type": "object",
+                        "entity-uri": "/n/bmcostests/b/bucket-client/o/test.txt",
+                        "identifier": null,
+                        "metadata": {
+                             "BUCKET": "bucket-client",
+                             "NAMESPACE": "bmcostests",
+                             "OBJECT": "test.txt",
+                             "REGION": "us-phoenix-1"
+                        }
+                   },
+                   {
+                        "action-type": "WRITTEN",
+                        "entity-type": "object",
+                        "entity-uri": "/n/bmcostests/b/ankit-test/o/test.txt",
+                        "identifier": null,
+                        "metadata": {
+                             "BUCKET": "ankit-test",
+                             "NAMESPACE": "bmcostests",
+                             "OBJECT": "test.txt",
+                             "REGION": "us-phoenix-1"
+                        }
+                   }
+              ],
+              "status": "COMPLETED",
+              "time-accepted": "2022-12-19T09:42:27+00:00",
+              "time-finished": "2022-12-19T09:42:27+00:00",
+              "time-started": "2022-12-19T09:42:27+00:00"
+         }
+    ]
+   }
+
+
+Description
+-----------
+
+Lists work requests in the compartment, with number of results per
+call equal to the specified page size
+
+
+Command
+-------
+
+    oci os work-request list -c ocid1.compartment.oc1..aaaaaaaa3ffjane6aoullgob4daj6xw2bzkm7maswctna2zgoxfny4smpoha --page-size 2 --all
+
+
+Output
+------
+
+   {
+    "data": [
+         {
+              "compartment-id": "ocid1.compartment.oc1..aaaaaaaa3ffjane6aoullgob4daj6xw2bzkm7maswctna2zgoxfny4smpoha",
+              "id": "2e883125-b949-4d43-9750-2a9930295196",
+              "operation-type": "COPY_OBJECT",
+              "percent-complete": 100.0,
+              "resources": [
+                   {
+                        "action-type": "READ",
+                        "entity-type": "object",
+                        "entity-uri": "/n/bmcostests/b/bucket-client/o/test.txt",
+                        "identifier": null,
+                        "metadata": {
+                             "BUCKET": "bucket-client",
+                             "NAMESPACE": "bmcostests",
+                             "OBJECT": "test.txt",
+                             "REGION": "us-phoenix-1"
+                        }
+                   },
+                   {
+                        "action-type": "WRITTEN",
+                        "entity-type": "object",
+                        "entity-uri": "/n/bmcostests/b/ankit-test/o/test.txt",
+                        "identifier": null,
+                        "metadata": {
+                             "BUCKET": "ankit-test",
+                             "NAMESPACE": "bmcostests",
+                             "OBJECT": "test.txt",
+                             "REGION": "us-phoenix-1"
+                        }
+                   }
+              ],
+              "status": "COMPLETED",
+              "time-accepted": "2022-12-19T09:42:27+00:00",
+              "time-finished": "2022-12-19T09:42:27+00:00",
+              "time-started": "2022-12-19T09:42:27+00:00"
+         }
+    ]
+   }

@@ -1,0 +1,14 @@
+dataguard-performance-metrics
+*****************************
+
+
+Description
+===========
+
+A summary of Data Guard performance metrics for Managed Databases.
+
+
+Available Commands
+==================
+
+* get

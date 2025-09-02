@@ -1,0 +1,14 @@
+lead-collection
+***************
+
+
+Description
+===========
+
+The model for the collection of Marketplace Publisher Lead.
+
+
+Available Commands
+==================
+
+* list-leads

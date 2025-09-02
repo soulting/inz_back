@@ -1,0 +1,134 @@
+"change-database-parameters"
+****************************
+
+* Description
+
+* Usage
+
+* Required Parameters
+
+* Optional Parameters
+
+* Global Parameters
+
+
+Description
+===========
+
+Changes database parameter values. There are two kinds of database
+parameters:
+
+* Dynamic parameters: They can be changed for the current Oracle
+  Database instance. The changes take effect immediately. - Static
+  parameters: They cannot be changed for the current instance. You
+  must change these parameters and then restart the database before
+  changes take effect.
+
+**Note:** If the instance is started using a text initialization
+parameter file, the parameter changes are applicable only for the
+current instance. You must update them manually to be passed to a
+future instance.
+
+
+Usage
+=====
+
+   oci database-management managed-database change-database-parameters [OPTIONS]
+
+
+Required Parameters
+===================
+
+--managed-database-id [text]
+
+The OCID of the Managed Database.
+
+--parameters [complex type]
+
+A list of database parameters and their values. This is a complex type
+whose value must be valid JSON. The value can be provided as a string
+on the command line or passed in as a file using the
+file://path/to/file syntax.
+
+The "--generate-param-json-input" option can be used to generate an
+example of the JSON which must be provided. We recommend storing this
+example in a file, modifying it as needed and then passing it back in
+via the file:// syntax.
+
+--scope [text]
+
+The clause used to specify when the parameter change takes effect.
+
+Use *MEMORY* to make the change in memory and affect it immediately.
+Use *SPFILE* to make the change in the server parameter file. The
+change takes effect when the database is next shut down and started up
+again. Use *BOTH* to make the change in memory and in the server
+parameter file. The change takes effect immediately and persists after
+the database is shut down and started up again.
+
+Accepted values are:
+
+   BOTH, MEMORY, SPFILE
+
+
+Optional Parameters
+===================
+
+--credentials [complex type]
+
+This is a complex type whose value must be valid JSON. The value can
+be provided as a string on the command line or passed in as a file
+using the file://path/to/file syntax.
+
+The "--generate-param-json-input" option can be used to generate an
+example of the JSON which must be provided. We recommend storing this
+example in a file, modifying it as needed and then passing it back in
+via the file:// syntax.
+
+--database-credential [complex type]
+
+This is a complex type whose value must be valid JSON. The value can
+be provided as a string on the command line or passed in as a file
+using the file://path/to/file syntax.
+
+The "--generate-param-json-input" option can be used to generate an
+example of the JSON which must be provided. We recommend storing this
+example in a file, modifying it as needed and then passing it back in
+via the file:// syntax.
+
+--from-json [text]
+
+Provide input to this command as a JSON document from a file using the
+file://path-to/file syntax.
+
+The "--generate-full-command-json-input" option can be used to
+generate a sample json file to be used with this command option. The
+key names are pre-populated and match the command option names
+(converted to camelCase format, e.g. compartment-id –> compartmentId),
+while the values of the keys need to be populated by the user before
+using the sample file as an input to this command. For any command
+option that accepts multiple values, the value of the key can be a
+JSON array.
+
+Options can still be provided on the command line. If an option exists
+in both the JSON document and the command line then the command line
+specified value will be used.
+
+For examples on usage of this option, please see our “using CLI with
+advanced JSON options” link: https://docs.cloud.oracle.com/iaas/Conte
+nt/API/SDKDocs/cliusing.htm#AdvancedJSONOptions
+
+
+Global Parameters
+=================
+
+Use "oci --help" for help on global parameters.
+
+"--auth-purpose", "--auth", "--cert-bundle", "--cli-auto-prompt", "--
+cli-rc-file", "--config-file", "--connection-timeout", "--debug", "--
+defaults-file", "--endpoint", "--generate-full-command-json-input", "
+--generate-param-json-input", "--help", "--latest-version", "--max-
+retries", "--no-retry", "--opc-client-request-id", "--opc-request-id",
+"--output", "--profile", "--proxy", "--query", "--raw-output", "--
+read-timeout", "--realm-specific-endpoint", "--region", "--release-
+info", "--request-id", "--version", "-?", "-d", "-h", "-i", "-v"

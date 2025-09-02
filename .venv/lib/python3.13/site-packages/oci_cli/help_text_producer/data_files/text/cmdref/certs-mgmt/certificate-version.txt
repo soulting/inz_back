@@ -1,0 +1,23 @@
+certificate-version
+*******************
+
+
+Description
+===========
+
+The details of the certificate version. This object does not contain
+the certificate contents.
+
+
+Available Commands
+==================
+
+* cancel-deletion
+
+* get
+
+* list
+
+* revoke
+
+* schedule-deletion

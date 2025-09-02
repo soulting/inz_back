@@ -1,0 +1,129 @@
+redis
+*****
+
+
+Description
+===========
+
+Use the OCI Cache CLI to create and manage clusters. A cluster is a
+memory-based storage solution. For more information, see OCI Cache.
+
+
+Available Commands
+==================
+
+* oci-cache-config-set
+
+  * associated-oci-cache-cluster-summary
+
+    * list-associated-oci-cache-clusters
+
+  * oci-cache-config-set
+
+    * change-compartment
+
+    * create
+
+    * delete
+
+    * get
+
+    * update
+
+  * oci-cache-config-set-summary
+
+    * list-oci-cache-config-sets
+
+* oci-cache-default-config-set
+
+  * oci-cache-default-config-set
+
+    * get
+
+  * oci-cache-default-config-set-summary
+
+    * list-oci-cache-default-config-sets
+
+* oci-cache-user
+
+  * attached-oci-cache-cluster
+
+    * list-attached-redis-clusters
+
+  * create-oci-cache-user-details
+
+    * create-oci-cache-user
+
+    * create-oci-cache-user-iam-authentication-mode
+
+    * create-oci-cache-user-password-authentication-mode
+
+  * oci-cache-user
+
+    * change-compartment
+
+    * delete
+
+    * get
+
+    * update
+
+    * update-oci-cache-user-iam-authentication-mode
+
+    * update-oci-cache-user-password-authentication-mode
+
+  * oci-cache-user-summary
+
+    * list-oci-cache-users
+
+* redis-cluster
+
+  * attached-oci-cache-user
+
+    * list
+
+  * node-summary
+
+    * list-redis-cluster-nodes
+
+  * redis-cluster
+
+    * attach
+
+    * change-compartment
+
+    * create
+
+    * delete
+
+    * detach
+
+    * get
+
+    * update
+
+  * redis-cluster-summary
+
+    * list-redis-clusters
+
+  * work-request
+
+    * cancel
+
+    * get
+
+    * list
+
+  * work-request-error
+
+    * list
+
+  * work-request-log-entry
+
+    * list-work-request-logs
+
+* redis-identity
+
+  * create-identity-token-details
+
+    * create-identity-token

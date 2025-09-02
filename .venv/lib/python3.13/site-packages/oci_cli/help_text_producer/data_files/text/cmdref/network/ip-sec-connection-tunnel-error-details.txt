@@ -1,0 +1,14 @@
+ip-sec-connection-tunnel-error-details
+**************************************
+
+
+Description
+===========
+
+Details for an error on an IPSec tunnel.
+
+
+Available Commands
+==================
+
+* get-ip-sec-connection-tunnel-error

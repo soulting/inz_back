@@ -1,0 +1,25 @@
+agent-dependency
+****************
+
+
+Description
+===========
+
+Description of the AgentDependency, which is a sub-resource of the
+external environment.
+
+
+Available Commands
+==================
+
+* change-compartment
+
+* create
+
+* delete
+
+* get
+
+* list
+
+* update

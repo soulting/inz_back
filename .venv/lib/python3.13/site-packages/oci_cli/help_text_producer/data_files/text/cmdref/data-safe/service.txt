@@ -1,0 +1,18 @@
+service
+*******
+
+
+Description
+===========
+
+A Data Safe configuration for a tenancy and region.
+
+
+Available Commands
+==================
+
+* enable
+
+* get
+
+* modify-global-settings

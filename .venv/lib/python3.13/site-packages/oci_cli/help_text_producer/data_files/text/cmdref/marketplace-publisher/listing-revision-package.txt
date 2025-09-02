@@ -1,0 +1,26 @@
+listing-revision-package
+************************
+
+
+Description
+===========
+
+A base object for all types of listing revision packages.
+
+
+Available Commands
+==================
+
+* create
+
+* delete
+
+* get
+
+* mark-listing-revision-package-as-default
+
+* publish
+
+* un-publish
+
+* update

@@ -1,0 +1,165 @@
+"list-quota-rules"
+******************
+
+* Description
+
+* Usage
+
+* Required Parameters
+
+* Optional Parameters
+
+* Global Parameters
+
+* Example using required parameter
+
+
+Description
+===========
+
+List user or group usages and their quota rules by certain principal
+type.
+
+
+Usage
+=====
+
+   oci fs file-system list-quota-rules [OPTIONS]
+
+
+Required Parameters
+===================
+
+--file-system-id [text]
+
+The OCID of the file system.
+
+--principal-type [text]
+
+The type of the owner of this quota rule and usage.
+
+Accepted values are:
+
+   DEFAULT_GROUP, DEFAULT_USER, FILE_SYSTEM_LEVEL, INDIVIDUAL_GROUP, INDIVIDUAL_USER
+
+
+Optional Parameters
+===================
+
+--all
+
+Fetches all pages of results. If you provide this option, then you
+cannot provide the "--limit" option.
+
+--are-violators-only [boolean]
+
+An option to display only the users or groups that violate their quota
+rules. If *areViolatorsOnly* is false, results report all the quota
+and usage. If *areViolatorsOnly* is true, results only report the
+quota and usage for the users or groups that violate their quota
+rules.
+
+--from-json [text]
+
+Provide input to this command as a JSON document from a file using the
+file://path-to/file syntax.
+
+The "--generate-full-command-json-input" option can be used to
+generate a sample json file to be used with this command option. The
+key names are pre-populated and match the command option names
+(converted to camelCase format, e.g. compartment-id –> compartmentId),
+while the values of the keys need to be populated by the user before
+using the sample file as an input to this command. For any command
+option that accepts multiple values, the value of the key can be a
+JSON array.
+
+Options can still be provided on the command line. If an option exists
+in both the JSON document and the command line then the command line
+specified value will be used.
+
+For examples on usage of this option, please see our “using CLI with
+advanced JSON options” link: https://docs.cloud.oracle.com/iaas/Conte
+nt/API/SDKDocs/cliusing.htm#AdvancedJSONOptions
+
+--if-match [text]
+
+For optimistic concurrency control. In the PUT or DELETE call for a
+resource, set the *if-match* parameter to the value of the etag from a
+previous GET or POST response for that resource. The resource will be
+updated or deleted only if the etag you provide matches the resource’s
+current etag value.
+
+--limit [integer]
+
+For list pagination. The maximum number of results per page, or items
+to return in a paginated “List” call. 1 is the minimum, 4096 is the
+maximum.
+
+For important details about how pagination works, see List Pagination.
+
+Example:
+
+   500
+
+--page [text]
+
+For list pagination. The value of the *opc-next-page* response header
+from the previous “List” call.
+
+For important details about how pagination works, see List Pagination.
+
+--page-size [integer]
+
+When fetching results, the number of results to fetch per call. Only
+valid when used with "--all" or "--limit", and ignored otherwise.
+
+--principal-id [integer]
+
+An identifier for the user or the group associated with quota rule and
+usage. UNIX-like operating systems use this integer value to identify
+a user or group to manage access control.
+
+--sort-order [text]
+
+The sort order to use, either ‘asc’ or ‘desc’, where ‘asc’ is
+ascending and ‘desc’ is descending. The default order is ‘desc’ except
+for numeric values.
+
+Accepted values are:
+
+   ASC, DESC
+
+
+Global Parameters
+=================
+
+Use "oci --help" for help on global parameters.
+
+"--auth-purpose", "--auth", "--cert-bundle", "--cli-auto-prompt", "--
+cli-rc-file", "--config-file", "--connection-timeout", "--debug", "--
+defaults-file", "--endpoint", "--generate-full-command-json-input", "
+--generate-param-json-input", "--help", "--latest-version", "--max-
+retries", "--no-retry", "--opc-client-request-id", "--opc-request-id",
+"--output", "--profile", "--proxy", "--query", "--raw-output", "--
+read-timeout", "--realm-specific-endpoint", "--region", "--release-
+info", "--request-id", "--version", "-?", "-d", "-h", "-i", "-v"
+
+
+Example using required parameter
+================================
+
+Copy the following CLI commands into a file named example.sh. Run the
+command by typing “bash example.sh” and replacing the example
+parameters with your own.
+
+Please note this sample will only work in the POSIX-compliant bash-
+like shell. You need to set up the OCI configuration and appropriate
+security policies before trying the examples.
+
+       export availability_domain=<substitute-value-of-availability_domain> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/fs/file-system/create.html#cmdoption-availability-domain
+       export compartment_id=<substitute-value-of-compartment_id> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/fs/file-system/create.html#cmdoption-compartment-id
+       export principal_type=<substitute-value-of-principal_type> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/fs/file-system/list-quota-rules.html#cmdoption-principal-type
+
+       file_system_id=$(oci fs file-system create --availability-domain $availability_domain --compartment-id $compartment_id --query data.id --raw-output)
+
+       oci fs file-system list-quota-rules --file-system-id $file_system_id --principal-type $principal_type

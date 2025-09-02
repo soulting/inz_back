@@ -1,0 +1,17 @@
+detector
+********
+
+
+Description
+===========
+
+Information for a single detector category. For example,
+IAAS_ACTIVITY_DETECTOR or IAAS_CONFIGURATION_DETECTOR.
+
+
+Available Commands
+==================
+
+* get
+
+* list

@@ -1,0 +1,30 @@
+stream-distribution-channel
+***************************
+
+
+Description
+===========
+
+Channel used for delivering video streams to the end-users.
+
+
+Available Commands
+==================
+
+* add
+
+* change-compartment
+
+* create
+
+* delete
+
+* get
+
+* ingest
+
+* list
+
+* remove
+
+* update

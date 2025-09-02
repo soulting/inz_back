@@ -1,0 +1,14 @@
+onboarding-policy-collection
+****************************
+
+
+Description
+===========
+
+List of Fleet Application Management Onboard policies.
+
+
+Available Commands
+==================
+
+* list-onboarding-policies

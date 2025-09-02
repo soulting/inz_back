@@ -1,0 +1,14 @@
+job-activity
+************
+
+
+Description
+===========
+
+Activity details including status corresponding to an Action Group.
+
+
+Available Commands
+==================
+
+* get

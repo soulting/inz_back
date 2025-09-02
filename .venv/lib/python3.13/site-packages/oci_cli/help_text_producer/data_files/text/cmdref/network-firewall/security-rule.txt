@@ -1,0 +1,27 @@
+security-rule
+*************
+
+
+Description
+===========
+
+Security Rule used in the firewall policy rules. Security Rules
+determine whether to block or allow a session based on traffic
+attributes, such as  the source and destination IP address,
+protocol/port, and the HTTP(S) target URL.
+
+
+Available Commands
+==================
+
+* bulk-upload
+
+* create
+
+* delete
+
+* get
+
+* list
+
+* update

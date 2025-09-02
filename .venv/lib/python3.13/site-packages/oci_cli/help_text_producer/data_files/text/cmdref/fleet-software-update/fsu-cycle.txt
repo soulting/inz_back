@@ -1,0 +1,46 @@
+fsu-cycle
+*********
+
+
+Description
+===========
+
+Exadata Fleet Update Cycle resource details.
+
+
+Available Commands
+==================
+
+* change-compartment
+
+* clone
+
+* create
+
+* create-fsu-cycle-create-upgrade-fsu-cycle
+
+* create-patch
+
+* delete
+
+* get
+
+* update
+
+* update-fifty-batch
+
+* update-fsu-cycle-update-upgrade-fsu-cycle
+
+* update-image-id-target
+
+* update-non-rolling-batch
+
+* update-none-batch
+
+* update-patch
+
+* update-saf-batch
+
+* update-sequential-batch
+
+* update-version-target

@@ -1,0 +1,393 @@
+"create"
+********
+
+* Description
+
+* Usage
+
+* Required Parameters
+
+* Optional Parameters
+
+* Global Parameters
+
+* Example using required parameter
+
+
+Description
+===========
+
+Creates a new OpensearchCluster.
+
+
+Usage
+=====
+
+   oci opensearch cluster create [OPTIONS]
+
+
+Required Parameters
+===================
+
+--compartment-id, -c [text]
+
+The OCID of the compartment to create the cluster in.
+
+--data-node-count [integer]
+
+The number of data nodes to configure for the cluster.
+
+--data-node-host-memory-gb [integer]
+
+The amount of memory in GB, to configure per node for the cluster’s
+data nodes.
+
+--data-node-host-ocpu-count [integer]
+
+The number of OCPUs to configure for the cluster’s data nodes.
+
+--data-node-host-type [text]
+
+TThe instance type for the cluster’s data nodes.
+
+Accepted values are:
+
+   BM, FLEX
+
+--data-node-storage-gb [integer]
+
+The amount of storage in GB, to configure per node for the cluster’s
+data nodes.
+
+--display-name [text]
+
+The name of the cluster. Avoid entering confidential information.
+
+--master-node-count [integer]
+
+The number of master nodes to configure for the cluster.
+
+--master-node-host-memory-gb [integer]
+
+The amount of memory in GB, to configure per node for the cluster’s
+master nodes.
+
+--master-node-host-ocpu-count [integer]
+
+The number of OCPUs to configure for the cluser’s master nodes.
+
+--master-node-host-type [text]
+
+The instance type for the cluster’s master nodes.
+
+Accepted values are:
+
+   BM, FLEX
+
+--opendashboard-node-count [integer]
+
+The number of OpenSearch Dashboard nodes to configure for the cluster.
+
+--opendashboard-node-host-memory-gb [integer]
+
+The amount of memory in GB, to configure for the cluster’s OpenSearch
+Dashboard nodes.
+
+--opendashboard-node-host-ocpu-count [integer]
+
+The number of OCPUs to configure for the cluster’s OpenSearch
+Dashboard nodes.
+
+--software-version [text]
+
+The version of the software the cluster is running.
+
+--subnet-compartment-id [text]
+
+The OCID for the compartment where the cluster’s subnet is located.
+
+--subnet-id [text]
+
+The OCID of the cluster’s subnet.
+
+--vcn-compartment-id [text]
+
+The OCID for the compartment where the cluster’s VCN is located.
+
+--vcn-id [text]
+
+The OCID of the cluster’s VCN.
+
+
+Optional Parameters
+===================
+
+--backup-policy [complex type]
+
+This is a complex type whose value must be valid JSON. The value can
+be provided as a string on the command line or passed in as a file
+using the file://path/to/file syntax.
+
+The "--generate-param-json-input" option can be used to generate an
+example of the JSON which must be provided. We recommend storing this
+example in a file, modifying it as needed and then passing it back in
+via the file:// syntax.
+
+--data-node-host-bare-metal-shape [text]
+
+The bare metal shape for the cluster’s data nodes.
+
+--data-node-host-shape [text]
+
+The node shape for the cluster’s data nodes.
+
+--defined-tags [complex type]
+
+Defined tags for this resource. Each key is predefined and scoped to a
+namespace. Example: *{“foo-namespace”: {“bar-key”: “value”}}* This is
+a complex type whose value must be valid JSON. The value can be
+provided as a string on the command line or passed in as a file using
+the file://path/to/file syntax.
+
+The "--generate-param-json-input" option can be used to generate an
+example of the JSON which must be provided. We recommend storing this
+example in a file, modifying it as needed and then passing it back in
+via the file:// syntax.
+
+--freeform-tags [complex type]
+
+Simple key-value pair that is applied without any predefined name,
+type or scope. Exists for cross-compatibility only. Example: *{“bar-
+key”: “value”}* This is a complex type whose value must be valid JSON.
+The value can be provided as a string on the command line or passed in
+as a file using the file://path/to/file syntax.
+
+The "--generate-param-json-input" option can be used to generate an
+example of the JSON which must be provided. We recommend storing this
+example in a file, modifying it as needed and then passing it back in
+via the file:// syntax.
+
+--from-json [text]
+
+Provide input to this command as a JSON document from a file using the
+file://path-to/file syntax.
+
+The "--generate-full-command-json-input" option can be used to
+generate a sample json file to be used with this command option. The
+key names are pre-populated and match the command option names
+(converted to camelCase format, e.g. compartment-id –> compartmentId),
+while the values of the keys need to be populated by the user before
+using the sample file as an input to this command. For any command
+option that accepts multiple values, the value of the key can be a
+JSON array.
+
+Options can still be provided on the command line. If an option exists
+in both the JSON document and the command line then the command line
+specified value will be used.
+
+For examples on usage of this option, please see our “using CLI with
+advanced JSON options” link: https://docs.cloud.oracle.com/iaas/Conte
+nt/API/SDKDocs/cliusing.htm#AdvancedJSONOptions
+
+--inbound-cluster-ids [complex type]
+
+List of inbound clusters that will be queried using cross cluster
+search This is a complex type whose value must be valid JSON. The
+value can be provided as a string on the command line or passed in as
+a file using the file://path/to/file syntax.
+
+The "--generate-param-json-input" option can be used to generate an
+example of the JSON which must be provided. We recommend storing this
+example in a file, modifying it as needed and then passing it back in
+via the file:// syntax.
+
+--maintenance-details [complex type]
+
+This is a complex type whose value must be valid JSON. The value can
+be provided as a string on the command line or passed in as a file
+using the file://path/to/file syntax.
+
+The "--generate-param-json-input" option can be used to generate an
+example of the JSON which must be provided. We recommend storing this
+example in a file, modifying it as needed and then passing it back in
+via the file:// syntax.
+
+--master-node-host-bare-metal-shape [text]
+
+The bare metal shape for the cluster’s master nodes.
+
+--master-node-host-shape [text]
+
+The node shape for the cluster’s master nodes.
+
+--max-wait-seconds [integer]
+
+The maximum time to wait for the work request to reach the state
+defined by "--wait-for-state". Defaults to 1200 seconds.
+
+--opendashboard-node-host-shape [text]
+
+The node shape for the cluster’s OpenSearch Dashboard nodes.
+
+--outbound-cluster-config [complex type]
+
+This is a complex type whose value must be valid JSON. The value can
+be provided as a string on the command line or passed in as a file
+using the file://path/to/file syntax.
+
+The "--generate-param-json-input" option can be used to generate an
+example of the JSON which must be provided. We recommend storing this
+example in a file, modifying it as needed and then passing it back in
+via the file:// syntax.
+
+--reverse-connection-endpoint-customer-ips [complex type]
+
+The customer IP addresses of the endpoint in customer VCN This is a
+complex type whose value must be valid JSON. The value can be provided
+as a string on the command line or passed in as a file using the
+file://path/to/file syntax.
+
+The "--generate-param-json-input" option can be used to generate an
+example of the JSON which must be provided. We recommend storing this
+example in a file, modifying it as needed and then passing it back in
+via the file:// syntax.
+
+--search-node-count [integer]
+
+The number of search nodes configured for the cluster.
+
+--search-node-host-memory-gb [integer]
+
+The amount of memory in GB, for the cluster’s search nodes.
+
+--search-node-host-ocpu-count [integer]
+
+The number of OCPUs configured for the cluster’s search nodes.
+
+--search-node-host-shape [text]
+
+The node shape for the cluster’s search nodes.
+
+--search-node-host-type [text]
+
+The instance type for the cluster’s search nodes.
+
+Accepted values are:
+
+   FLEX
+
+--search-node-storage-gb [integer]
+
+The amount of storage in GB, to configure per node for the cluster’s
+search nodes.
+
+--security-master-user-name [text]
+
+The name of the master user that are used to manage security config
+
+--security-master-user-password-hash [text]
+
+The password hash of the master user that are used to manage security
+config
+
+--security-mode [text]
+
+The security mode of the cluster.
+
+Accepted values are:
+
+   DISABLED, ENFORCING, PERMISSIVE
+
+--security-saml-config [complex type]
+
+This is a complex type whose value must be valid JSON. The value can
+be provided as a string on the command line or passed in as a file
+using the file://path/to/file syntax.
+
+The "--generate-param-json-input" option can be used to generate an
+example of the JSON which must be provided. We recommend storing this
+example in a file, modifying it as needed and then passing it back in
+via the file:// syntax.
+
+--system-tags [complex type]
+
+Usage of system tag keys. These predefined keys are scoped to
+namespaces. Example: *{“orcl-cloud”: {“free-tier-retained”: “true”}}*
+This is a complex type whose value must be valid JSON. The value can
+be provided as a string on the command line or passed in as a file
+using the file://path/to/file syntax.
+
+The "--generate-param-json-input" option can be used to generate an
+example of the JSON which must be provided. We recommend storing this
+example in a file, modifying it as needed and then passing it back in
+via the file:// syntax.
+
+--wait-for-state [text]
+
+This operation asynchronously creates, modifies or deletes a resource
+and uses a work request to track the progress of the operation.
+Specify this option to perform the action and then wait until the work
+request reaches a certain state. Multiple states can be specified,
+returning on the first state. For example, "--wait-for-state"
+SUCCEEDED "--wait-for-state" FAILED would return on whichever
+lifecycle state is reached first. If timeout is reached, a return code
+of 2 is returned. For any other error, a return code of 1 is returned.
+
+Accepted values are:
+
+   ACCEPTED, CANCELED, CANCELING, FAILED, IN_PROGRESS, SUCCEEDED
+
+--wait-interval-seconds [integer]
+
+Check every "--wait-interval-seconds" to see whether the work request
+has reached the state defined by "--wait-for-state". Defaults to 30
+seconds.
+
+
+Global Parameters
+=================
+
+Use "oci --help" for help on global parameters.
+
+"--auth-purpose", "--auth", "--cert-bundle", "--cli-auto-prompt", "--
+cli-rc-file", "--config-file", "--connection-timeout", "--debug", "--
+defaults-file", "--endpoint", "--generate-full-command-json-input", "
+--generate-param-json-input", "--help", "--latest-version", "--max-
+retries", "--no-retry", "--opc-client-request-id", "--opc-request-id",
+"--output", "--profile", "--proxy", "--query", "--raw-output", "--
+read-timeout", "--realm-specific-endpoint", "--region", "--release-
+info", "--request-id", "--version", "-?", "-d", "-h", "-i", "-v"
+
+
+Example using required parameter
+================================
+
+Copy the following CLI commands into a file named example.sh. Run the
+command by typing “bash example.sh” and replacing the example
+parameters with your own.
+
+Please note this sample will only work in the POSIX-compliant bash-
+like shell. You need to set up the OCI configuration and appropriate
+security policies before trying the examples.
+
+       export compartment_id=<substitute-value-of-compartment_id> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/opensearch/cluster/create.html#cmdoption-compartment-id
+       export data_node_count=<substitute-value-of-data_node_count> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/opensearch/cluster/create.html#cmdoption-data-node-count
+       export data_node_host_memory_gb=<substitute-value-of-data_node_host_memory_gb> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/opensearch/cluster/create.html#cmdoption-data-node-host-memory-gb
+       export data_node_host_ocpu_count=<substitute-value-of-data_node_host_ocpu_count> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/opensearch/cluster/create.html#cmdoption-data-node-host-ocpu-count
+       export data_node_host_type=<substitute-value-of-data_node_host_type> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/opensearch/cluster/create.html#cmdoption-data-node-host-type
+       export data_node_storage_gb=<substitute-value-of-data_node_storage_gb> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/opensearch/cluster/create.html#cmdoption-data-node-storage-gb
+       export display_name=<substitute-value-of-display_name> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/opensearch/cluster/create.html#cmdoption-display-name
+       export master_node_count=<substitute-value-of-master_node_count> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/opensearch/cluster/create.html#cmdoption-master-node-count
+       export master_node_host_memory_gb=<substitute-value-of-master_node_host_memory_gb> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/opensearch/cluster/create.html#cmdoption-master-node-host-memory-gb
+       export master_node_host_ocpu_count=<substitute-value-of-master_node_host_ocpu_count> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/opensearch/cluster/create.html#cmdoption-master-node-host-ocpu-count
+       export master_node_host_type=<substitute-value-of-master_node_host_type> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/opensearch/cluster/create.html#cmdoption-master-node-host-type
+       export opendashboard_node_count=<substitute-value-of-opendashboard_node_count> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/opensearch/cluster/create.html#cmdoption-opendashboard-node-count
+       export opendashboard_node_host_memory_gb=<substitute-value-of-opendashboard_node_host_memory_gb> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/opensearch/cluster/create.html#cmdoption-opendashboard-node-host-memory-gb
+       export opendashboard_node_host_ocpu_count=<substitute-value-of-opendashboard_node_host_ocpu_count> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/opensearch/cluster/create.html#cmdoption-opendashboard-node-host-ocpu-count
+       export software_version=<substitute-value-of-software_version> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/opensearch/cluster/create.html#cmdoption-software-version
+       export subnet_compartment_id=<substitute-value-of-subnet_compartment_id> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/opensearch/cluster/create.html#cmdoption-subnet-compartment-id
+       export subnet_id=<substitute-value-of-subnet_id> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/opensearch/cluster/create.html#cmdoption-subnet-id
+       export vcn_compartment_id=<substitute-value-of-vcn_compartment_id> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/opensearch/cluster/create.html#cmdoption-vcn-compartment-id
+       export vcn_id=<substitute-value-of-vcn_id> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/opensearch/cluster/create.html#cmdoption-vcn-id
+
+       oci opensearch cluster create --compartment-id $compartment_id --data-node-count $data_node_count --data-node-host-memory-gb $data_node_host_memory_gb --data-node-host-ocpu-count $data_node_host_ocpu_count --data-node-host-type $data_node_host_type --data-node-storage-gb $data_node_storage_gb --display-name $display_name --master-node-count $master_node_count --master-node-host-memory-gb $master_node_host_memory_gb --master-node-host-ocpu-count $master_node_host_ocpu_count --master-node-host-type $master_node_host_type --opendashboard-node-count $opendashboard_node_count --opendashboard-node-host-memory-gb $opendashboard_node_host_memory_gb --opendashboard-node-host-ocpu-count $opendashboard_node_host_ocpu_count --software-version $software_version --subnet-compartment-id $subnet_compartment_id --subnet-id $subnet_id --vcn-compartment-id $vcn_compartment_id --vcn-id $vcn_id

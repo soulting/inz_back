@@ -1,0 +1,25 @@
+model-version-set
+*****************
+
+
+Description
+===========
+
+A model version set to associate different versions of machine
+learning models.
+
+
+Available Commands
+==================
+
+* change-compartment
+
+* create
+
+* delete
+
+* get
+
+* list
+
+* update

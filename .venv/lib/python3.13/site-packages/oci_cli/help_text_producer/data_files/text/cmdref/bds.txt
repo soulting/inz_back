@@ -1,0 +1,264 @@
+bds
+***
+
+
+Description
+===========
+
+REST CLI for Oracle Big Data Service. Use this CLI to build, deploy,
+and manage fully elastic Big Data Service clusters. Build on Hadoop,
+Spark and Data Science distributions, which can be fully integrated
+with existing enterprise data in Oracle Database and Oracle
+applications.
+
+
+Available Commands
+==================
+
+* auto-scale-config
+
+  * create
+
+  * delete
+
+  * edit
+
+  * get
+
+  * list
+
+* bds-api-key
+
+  * create
+
+  * delete
+
+  * get
+
+  * list
+
+  * test-bds-object-storage-connection
+
+* bds-capacity-report
+
+  * create
+
+* bds-cluster-version
+
+  * list
+
+* bds-metastore-configuration
+
+  * activate
+
+  * create
+
+  * delete
+
+  * get
+
+  * list
+
+  * test
+
+  * update
+
+* block-storage
+
+  * add
+
+* cloudsql
+
+  * add
+
+  * remove
+
+* identity-configuration
+
+  * activate-iam-user-sync-configuration
+
+  * activate-upst-configuration
+
+  * create
+
+  * deactivate-iam-user-sync-configuration
+
+  * deactivate-upst-configuration
+
+  * delete
+
+  * get
+
+  * list
+
+  * refresh-confidential-application
+
+  * refresh-upst-token-exchange-keytab
+
+  * update
+
+* instance
+
+  * backup-node
+
+  * backup-node-node-level-details
+
+  * backup-node-node-type-level-details
+
+  * certificate-service-info
+
+  * change-compartment
+
+  * change-shape
+
+  * create
+
+  * create-node-backup-configuration
+
+  * create-node-backup-configuration-node-level-details
+
+  * create-node-backup-configuration-node-type-level-details
+
+  * create-node-replace-configuration
+
+  * create-node-replace-configuration-node-level-details
+
+  * create-node-replace-configuration-node-type-level-details
+
+  * create-resource-principal-configuration
+
+  * delete
+
+  * disable-certificate
+
+  * enable-certificate
+
+  * execute-bootstrap-script
+
+  * force-refresh-resource-principal
+
+  * get
+
+  * get-node-backup
+
+  * get-node-backup-configuration
+
+  * get-node-replace-configuration
+
+  * get-os-patch-details
+
+  * get-resource-principal-configuration
+
+  * get-software-update
+
+  * install-os-patch
+
+  * install-os-patch-batching-based-patching-configs
+
+  * install-os-patch-domain-based-patching-configs
+
+  * install-os-patch-downtime-based-patching-configs
+
+  * install-patch
+
+  * install-patch-batching-based-odh-patching-config
+
+  * install-patch-domain-based-odh-patching-config
+
+  * install-patch-downtime-based-odh-patching-config
+
+  * install-software-updates
+
+  * list
+
+  * list-node-backup-configurations
+
+  * list-node-backups
+
+  * list-node-replace-configurations
+
+  * list-os-patches
+
+  * list-patch-histories
+
+  * list-patches
+
+  * list-resource-principal-configurations
+
+  * list-software-updates
+
+  * master-nodes
+
+    * add
+
+  * remove
+
+  * renew-certificate
+
+  * replace-node
+
+  * restart-node
+
+  * start
+
+  * stop
+
+  * update
+
+  * update-node-backup-configuration
+
+  * update-node-backup-configuration-node-level-details
+
+  * update-node-backup-configuration-node-type-level-details
+
+  * update-node-replace-configuration
+
+  * update-node-replace-configuration-node-level-details
+
+  * update-node-replace-configuration-node-type-level-details
+
+  * update-resource-principal-configuration
+
+  * utility-nodes
+
+    * add
+
+  * worker-nodes
+
+    * add
+
+* kafka
+
+  * add
+
+  * remove
+
+* node-backup
+
+  * delete
+
+* node-backup-configuration
+
+  * delete
+
+* node-replace-configuration
+
+  * remove
+
+* resource-principal-configuration
+
+  * remove
+
+* work-request
+
+  * get
+
+  * list
+
+* work-request-error
+
+  * list
+
+* work-request-log-entry
+
+  * list

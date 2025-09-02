@@ -1,0 +1,32 @@
+ml-app-instance
+***************
+
+
+Description
+===========
+
+Resource representing instance of ML Application.
+
+
+Available Commands
+==================
+
+* change-compartment
+
+* create
+
+* create-with-custom-service-idcs-auth
+
+* create-with-iam-auth
+
+* create-with-idcs-auth
+
+* delete
+
+* get
+
+* list
+
+* trigger
+
+* update

@@ -1,0 +1,192 @@
+"list-sensitive-column-analytics"
+*********************************
+
+* Description
+
+* Usage
+
+* Required Parameters
+
+* Optional Parameters
+
+* Global Parameters
+
+* Example using required parameter
+
+
+Description
+===========
+
+Gets consolidated sensitive columns analytics data based on the
+specified query parameters.
+
+When you perform the ListSensitiveColumnAnalytics operation, if the
+parameter compartmentIdInSubtree is set to “true,” and if the
+parameter accessLevel is set to ACCESSIBLE, then the operation returns
+compartments in which the requestor has INSPECT permissions on at
+least one resource, directly or indirectly (in subcompartments). If
+the operation is performed at the root compartment and the requestor
+does not have access to at least one subcompartment of the compartment
+specified by compartmentId, then “Not Authorized” is returned.
+
+To use ListSensitiveColumnAnalytics to get a full list of all
+compartments and subcompartments in the tenancy from the root
+compartment, set the parameter compartmentIdInSubtree to true and
+accessLevel to ACCESSIBLE.
+
+
+Usage
+=====
+
+   oci data-safe sensitive-data-model list-sensitive-column-analytics [OPTIONS]
+
+
+Required Parameters
+===================
+
+--compartment-id, -c [text]
+
+A filter to return only resources that match the specified compartment
+OCID.
+
+
+Optional Parameters
+===================
+
+--access-level [text]
+
+Valid values are RESTRICTED and ACCESSIBLE. Default is RESTRICTED.
+Setting this to ACCESSIBLE returns only those compartments for which
+the user has INSPECT permissions directly or indirectly (permissions
+can be on a resource in a subcompartment). When set to RESTRICTED
+permissions are checked and no partial results are displayed.
+
+Accepted values are:
+
+   ACCESSIBLE, RESTRICTED
+
+--all
+
+Fetches all pages of results. If you provide this option, then you
+cannot provide the "--limit" option.
+
+--column-name [text]
+
+A filter to return only a specific column based on column name.
+
+--compartment-id-in-subtree [boolean]
+
+Default is false. When set to true, the hierarchy of compartments is
+traversed and all compartments and subcompartments in the tenancy are
+returned. Depends on the ‘accessLevel’ setting.
+
+--from-json [text]
+
+Provide input to this command as a JSON document from a file using the
+file://path-to/file syntax.
+
+The "--generate-full-command-json-input" option can be used to
+generate a sample json file to be used with this command option. The
+key names are pre-populated and match the command option names
+(converted to camelCase format, e.g. compartment-id –> compartmentId),
+while the values of the keys need to be populated by the user before
+using the sample file as an input to this command. For any command
+option that accepts multiple values, the value of the key can be a
+JSON array.
+
+Options can still be provided on the command line. If an option exists
+in both the JSON document and the command line then the command line
+specified value will be used.
+
+For examples on usage of this option, please see our “using CLI with
+advanced JSON options” link: https://docs.cloud.oracle.com/iaas/Conte
+nt/API/SDKDocs/cliusing.htm#AdvancedJSONOptions
+
+--group-by [text]
+
+The group by parameter to summarize the sensitive columns.
+
+Accepted values are:
+
+   sensitiveDataModelId, sensitiveTypeId, targetId
+
+--limit [integer]
+
+For list pagination. The maximum number of items to return per page in
+a paginated “List” call. For details about how pagination works, see
+List Pagination.
+
+--object-name [text]
+
+A filter to return only items related to a specific object name.
+
+--page [text]
+
+For list pagination. The page token representing the page at which to
+start retrieving results. It is usually retrieved from a previous
+“List” call. For details about how pagination works, see List
+Pagination.
+
+--page-size [integer]
+
+When fetching results, the number of results to fetch per call. Only
+valid when used with "--all" or "--limit", and ignored otherwise.
+
+--schema-name [text]
+
+A filter to return only items related to specific schema name.
+
+--sensitive-data-model-id [text]
+
+A filter to return only the resources that match the specified
+sensitive data model OCID.
+
+--sensitive-type-group-id [text]
+
+An optional filter to return only resources that match the specified
+OCID of the sensitive type group resource.
+
+--sensitive-type-id [text]
+
+A filter to return only the sensitive columns that are associated with
+one of the sensitive types identified by the specified OCIDs.
+
+--target-database-group-id [text]
+
+A filter to return the target database group that matches the
+specified OCID.
+
+--target-id [text]
+
+A filter to return only items related to a specific target OCID.
+
+
+Global Parameters
+=================
+
+Use "oci --help" for help on global parameters.
+
+"--auth-purpose", "--auth", "--cert-bundle", "--cli-auto-prompt", "--
+cli-rc-file", "--config-file", "--connection-timeout", "--debug", "--
+defaults-file", "--endpoint", "--generate-full-command-json-input", "
+--generate-param-json-input", "--help", "--latest-version", "--max-
+retries", "--no-retry", "--opc-client-request-id", "--opc-request-id",
+"--output", "--profile", "--proxy", "--query", "--raw-output", "--
+read-timeout", "--realm-specific-endpoint", "--region", "--release-
+info", "--request-id", "--version", "-?", "-d", "-h", "-i", "-v"
+
+
+Example using required parameter
+================================
+
+Copy the following CLI commands into a file named example.sh. Run the
+command by typing “bash example.sh” and replacing the example
+parameters with your own.
+
+Please note this sample will only work in the POSIX-compliant bash-
+like shell. You need to set up the OCI configuration and appropriate
+security policies before trying the examples.
+
+       export compartment_id=<substitute-value-of-compartment_id> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/data-safe/sensitive-data-model/list-sensitive-column-analytics.html#cmdoption-compartment-id
+
+       oci data-safe sensitive-data-model list-sensitive-column-analytics --compartment-id $compartment_id

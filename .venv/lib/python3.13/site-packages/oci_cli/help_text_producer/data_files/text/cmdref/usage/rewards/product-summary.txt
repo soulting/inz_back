@@ -1,0 +1,14 @@
+product-summary
+***************
+
+
+Description
+===========
+
+Provides details about product rewards and the usage amount.
+
+
+Available Commands
+==================
+
+* list-products

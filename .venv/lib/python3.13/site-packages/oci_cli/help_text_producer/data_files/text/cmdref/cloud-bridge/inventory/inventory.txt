@@ -1,0 +1,26 @@
+inventory
+*********
+
+
+Description
+===========
+
+Description of inventory.
+
+
+Available Commands
+==================
+
+* create
+
+* delete
+
+* get
+
+* import
+
+* import-via-assets
+
+* list
+
+* update

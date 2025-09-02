@@ -1,0 +1,71 @@
+monitoring
+**********
+
+
+Description
+===========
+
+Use the Monitoring CLI to manage metric queries and alarms for
+assessing the health, capacity, and performance of your cloud
+resources. Endpoints vary by operation. For PostMetricData, use the
+*telemetry-ingestion* endpoints; for all other operations, use the
+*telemetry* endpoints. For more information, see the Monitoring
+documentation.
+
+
+Available Commands
+==================
+
+* alarm
+
+  * change-compartment
+
+  * create
+
+  * delete
+
+  * get
+
+  * list
+
+  * update
+
+* alarm-dimension-states-collection
+
+  * retrieve-dimension-states
+
+* alarm-history-collection
+
+  * get-alarm-history
+
+* alarm-status
+
+  * list-alarms-status
+
+* alarm-suppression
+
+  * create
+
+  * delete
+
+  * get
+
+  * summarize-alarm-suppression-history
+
+* alarm-suppression-collection
+
+  * list-alarm-suppressions
+
+* metric
+
+  * list
+
+* metric-data
+
+  * post
+
+  * summarize-metrics-data
+
+* suppression
+
+  * remove

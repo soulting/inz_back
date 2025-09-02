@@ -1,0 +1,14 @@
+managed-entity-aggregation-collection
+*************************************
+
+
+Description
+===========
+
+An array of Managed Entity objects
+
+
+Available Commands
+==================
+
+* summarize-managed-entity-counts

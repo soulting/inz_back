@@ -1,0 +1,14 @@
+deployment-wallets-operation-summary
+************************************
+
+
+Description
+===========
+
+Summary of the deployment wallets operations.
+
+
+Available Commands
+==================
+
+* list-wallet-operations

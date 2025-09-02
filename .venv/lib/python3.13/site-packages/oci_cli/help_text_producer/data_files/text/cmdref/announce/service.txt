@@ -1,0 +1,14 @@
+service
+*******
+
+
+Description
+===========
+
+Manage Oracle Cloud Infrastructure console announcements.
+
+
+Available Commands
+==================
+
+* list

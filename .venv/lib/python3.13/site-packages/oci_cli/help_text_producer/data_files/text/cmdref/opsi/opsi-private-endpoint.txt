@@ -1,0 +1,25 @@
+opsi-private-endpoint
+*********************
+
+
+Description
+===========
+
+A private endpoint that allows Operation Insights services to connect
+to databases in a customer’s virtual cloud network (VCN).
+
+
+Available Commands
+==================
+
+* change-compartment
+
+* create
+
+* delete
+
+* get
+
+* list
+
+* update

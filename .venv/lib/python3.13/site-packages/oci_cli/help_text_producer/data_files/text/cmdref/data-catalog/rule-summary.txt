@@ -1,0 +1,16 @@
+rule-summary
+************
+
+
+Description
+===========
+
+A list of rule resources. One or more rules can be defined for a data
+entity. Each rule can be defined on one or more attributes of the data
+entity.
+
+
+Available Commands
+==================
+
+* list-rules

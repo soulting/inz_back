@@ -1,0 +1,18 @@
+subscribed-service
+******************
+
+
+Description
+===========
+
+OneSubscription CLI
+
+
+Available Commands
+==================
+
+* subscribed-service
+
+  * get
+
+  * list

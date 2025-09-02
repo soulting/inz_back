@@ -1,0 +1,31 @@
+certificate-authority
+*********************
+
+
+Description
+===========
+
+The metadata details of the certificate authority (CA). This object
+does not contain the CA contents.
+
+
+Available Commands
+==================
+
+* cancel-deletion
+
+* change-compartment
+
+* create-root-ca-by-generating-config-details
+
+* create-subordinate-ca-issued-by-internal-ca
+
+* get
+
+* list
+
+* schedule-deletion
+
+* update-root-ca-by-generating-config-details
+
+* update-subordinate-ca-issued-by-internal-ca

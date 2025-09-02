@@ -1,0 +1,56 @@
+monitor
+*******
+
+
+Description
+===========
+
+The information about a monitor.
+
+
+Available Commands
+==================
+
+* create-browser-monitor
+
+* create-dns-sec-monitor
+
+* create-dns-server-monitor
+
+* create-dns-trace-monitor
+
+* create-ftp-monitor
+
+* create-network-monitor
+
+* create-rest-monitor
+
+* create-scripted-browser-monitor
+
+* create-scripted-rest-monitor
+
+* create-sql-monitor
+
+* delete
+
+* get
+
+* update-browser-monitor
+
+* update-dns-sec-monitor
+
+* update-dns-server-monitor
+
+* update-dns-trace-monitor
+
+* update-ftp-monitor
+
+* update-network-monitor
+
+* update-rest-monitor
+
+* update-scripted-browser-monitor
+
+* update-scripted-rest-monitor
+
+* update-sql-monitor

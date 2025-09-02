@@ -1,0 +1,130 @@
+fleet-apps-management-operations
+********************************
+
+
+Description
+===========
+
+Fleet Application Management provides a centralized platform to help
+you automate resource management tasks, validate patch compliance, and
+enhance operational efficiency across an enterprise.
+
+
+Available Commands
+==================
+
+* compliance-record
+
+  * export-compliance-report
+
+* compliance-record-aggregation-collection
+
+  * summarize-compliance-record-counts
+
+* compliance-record-collection
+
+  * list-compliance-records
+
+* execution
+
+  * get
+
+* execution-collection
+
+  * list-executions
+
+* inventory-record-collection
+
+  * list-inventory-records
+
+* job-activity
+
+  * get
+
+* managed-entity-aggregation-collection
+
+  * summarize-managed-entity-counts
+
+* patch
+
+  * change-compartment
+
+  * create
+
+  * create-patch-generic-artifact-details
+
+  * create-patch-platform-specific-artifact-details
+
+  * delete
+
+  * get
+
+  * update
+
+  * update-patch-generic-artifact-details
+
+  * update-patch-platform-specific-artifact-details
+
+* patch-collection
+
+  * list-patches
+
+* resource-collection
+
+  * list-resources
+
+* scheduled-fleet-collection
+
+  * list-scheduled-fleets
+
+* scheduler-definition
+
+  * create
+
+  * create-scheduler-definition-custom-schedule
+
+  * create-scheduler-definition-maintenance-window-schedule
+
+  * delete
+
+  * get
+
+  * update
+
+  * update-scheduler-definition-custom-schedule
+
+  * update-scheduler-definition-maintenance-window-schedule
+
+* scheduler-definition-collection
+
+  * list-scheduler-definitions
+
+* scheduler-execution-collection
+
+  * list-scheduler-executions
+
+* scheduler-job
+
+  * delete
+
+  * get
+
+  * manage-job-execution
+
+  * manage-job-execution-action-group-based-user-action-details
+
+  * manage-job-execution-step-based-user-action-details
+
+  * update
+
+* scheduler-job-aggregation-collection
+
+  * summarize-scheduler-job-counts
+
+* scheduler-job-collection
+
+  * list-scheduler-jobs
+
+* step-collection
+
+  * list-steps

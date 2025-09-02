@@ -1,0 +1,401 @@
+"create"
+********
+
+* Description
+
+* Usage
+
+* Required Parameters
+
+* Optional Parameters
+
+* Global Parameters
+
+* Example using required parameter
+
+
+Description
+===========
+
+Creates an Operator Control Assignment resource. In effect, this
+brings the target resource under the governance of the Operator
+Control for specified time duration.
+
+
+Usage
+=====
+
+   oci opctl operator-control-assignment create [OPTIONS]
+
+
+Required Parameters
+===================
+
+--compartment-id, -c [text]
+
+The OCID of the compartment that contains the operator control
+assignment.
+
+--is-enforced-always [boolean]
+
+If set, then the target resource is always governed by the operator
+control.
+
+--operator-control-id [text]
+
+The OCID of the operator control that is being assigned to a target
+resource.
+
+--resource-compartment-id [text]
+
+The OCID of the compartment that contains the target resource.
+
+--resource-id [text]
+
+The OCID of the target resource being brought under the governance of
+the operator control.
+
+--resource-name [text]
+
+Name of the target resource.
+
+--resource-type [text]
+
+Type of the target resource.
+
+Accepted values are:
+
+   AUTONOMOUSVMCLUSTER, CCCINFRASTRUCTURE, CLOUDAUTONOMOUSVMCLUSTER, EXACC, EXADATAINFRASTRUCTURE
+
+
+Optional Parameters
+===================
+
+--comment [text]
+
+Comment about the assignment of the operator control to this target
+resource.
+
+--defined-tags [complex type]
+
+Defined tags for this resource. Each key is predefined and scoped to a
+namespace. This is a complex type whose value must be valid JSON. The
+value can be provided as a string on the command line or passed in as
+a file using the file://path/to/file syntax.
+
+The "--generate-param-json-input" option can be used to generate an
+example of the JSON which must be provided. We recommend storing this
+example in a file, modifying it as needed and then passing it back in
+via the file:// syntax.
+
+--freeform-tags [complex type]
+
+Simple key-value pair that is applied without any predefined name,
+type or scope. Exists for cross-compatibility only. This is a complex
+type whose value must be valid JSON. The value can be provided as a
+string on the command line or passed in as a file using the
+file://path/to/file syntax.
+
+The "--generate-param-json-input" option can be used to generate an
+example of the JSON which must be provided. We recommend storing this
+example in a file, modifying it as needed and then passing it back in
+via the file:// syntax.
+
+--from-json [text]
+
+Provide input to this command as a JSON document from a file using the
+file://path-to/file syntax.
+
+The "--generate-full-command-json-input" option can be used to
+generate a sample json file to be used with this command option. The
+key names are pre-populated and match the command option names
+(converted to camelCase format, e.g. compartment-id –> compartmentId),
+while the values of the keys need to be populated by the user before
+using the sample file as an input to this command. For any command
+option that accepts multiple values, the value of the key can be a
+JSON array.
+
+Options can still be provided on the command line. If an option exists
+in both the JSON document and the command line then the command line
+specified value will be used.
+
+For examples on usage of this option, please see our “using CLI with
+advanced JSON options” link: https://docs.cloud.oracle.com/iaas/Conte
+nt/API/SDKDocs/cliusing.htm#AdvancedJSONOptions
+
+--is-auto-approve-during-maintenance [boolean]
+
+The boolean if true would autoApprove during maintenance.
+
+--is-hypervisor-log-forwarded [boolean]
+
+If set, then the hypervisor audit logs will be forwarded to the
+relevant remote syslog server
+
+--is-log-forwarded [boolean]
+
+If set, then the audit logs will be forwarded to the relevant remote
+logging server
+
+--max-wait-seconds [integer]
+
+The maximum time to wait for the resource to reach the lifecycle state
+defined by "--wait-for-state". Defaults to 1200 seconds.
+
+--remote-syslog-server-address [text]
+
+The address of the remote syslog server where the audit logs will be
+forwarded to. Address in host or IP format.
+
+--remote-syslog-server-ca-cert [text]
+
+The CA certificate of the remote syslog server. Identity of the remote
+syslog server will be asserted based on this certificate.
+
+--remote-syslog-server-port [integer]
+
+The listening port of the remote syslog server. The port range is 0 -
+65535. Only TCP supported.
+
+--time-assignment-from [datetime]
+
+The time at which the target resource will be brought under the
+governance of the operator control in RFC 3339 timestamp format.
+Example: ‘2020-05-22T21:10:29.600Z’
+
+   The following datetime formats are supported:
+
+
+UTC with microseconds
+---------------------
+
+   Format: YYYY-MM-DDTHH:mm:ss.ssssssTZD
+   Example: 2017-09-15T20:30:00.123456Z
+
+   UTC with milliseconds
+   ***********************
+   .. code::
+
+       Format: YYYY-MM-DDTHH:mm:ss.sssTZD
+       Example: 2017-09-15T20:30:00.123Z
+
+   UTC without milliseconds
+   **************************
+   .. code::
+
+       Format: YYYY-MM-DDTHH:mm:ssTZD
+       Example: 2017-09-15T20:30:00Z
+
+   UTC with minute precision
+   **************************
+   .. code::
+
+       Format: YYYY-MM-DDTHH:mmTZD
+       Example: 2017-09-15T20:30Z
+
+
+Timezone with microseconds
+--------------------------
+
+   Format: YYYY-MM-DDTHH:mm:ssTZD
+   Example: 2017-09-15T12:30:00.456789-08:00, 2017-09-15T12:30:00.456789-0800
+
+   Timezone with milliseconds
+   ***************************
+   .. code::
+
+       Format: YYYY-MM-DDTHH:mm:ssTZD
+       Example: 2017-09-15T12:30:00.456-08:00, 2017-09-15T12:30:00.456-0800
+
+   Timezone without milliseconds
+   *******************************
+   .. code::
+
+       Format: YYYY-MM-DDTHH:mm:ssTZD
+       Example: 2017-09-15T12:30:00-08:00, 2017-09-15T12:30:00-0800
+
+   Timezone with minute precision
+   *******************************
+   .. code::
+
+       Format: YYYY-MM-DDTHH:mmTZD
+       Example: 2017-09-15T12:30-08:00, 2017-09-15T12:30-0800
+
+   Short date and time
+   ********************
+   The timezone for this date and time will be taken as UTC (Needs to be surrounded by single or double quotes)
+
+   .. code::
+
+       Format: 'YYYY-MM-DD HH:mm' or "YYYY-MM-DD HH:mm"
+       Example: '2017-09-15 17:25'
+
+   Date Only
+   **********
+   This date will be taken as midnight UTC of that day
+
+   .. code::
+
+       Format: YYYY-MM-DD
+       Example: 2017-09-15
+
+   Epoch seconds
+   **************
+   .. code::
+
+       Example: 1412195400
+
+--time-assignment-to [datetime]
+
+The time at which the target resource will leave the governance of the
+operator control in >>`<<RFC 3339
+<https://tools.ietf.org/html/rfc3339>`__timestamp format.Example:
+‘2020-05-22T21:10:29.600Z’
+
+   The following datetime formats are supported:
+
+
+UTC with microseconds
+---------------------
+
+   Format: YYYY-MM-DDTHH:mm:ss.ssssssTZD
+   Example: 2017-09-15T20:30:00.123456Z
+
+   UTC with milliseconds
+   ***********************
+   .. code::
+
+       Format: YYYY-MM-DDTHH:mm:ss.sssTZD
+       Example: 2017-09-15T20:30:00.123Z
+
+   UTC without milliseconds
+   **************************
+   .. code::
+
+       Format: YYYY-MM-DDTHH:mm:ssTZD
+       Example: 2017-09-15T20:30:00Z
+
+   UTC with minute precision
+   **************************
+   .. code::
+
+       Format: YYYY-MM-DDTHH:mmTZD
+       Example: 2017-09-15T20:30Z
+
+
+Timezone with microseconds
+--------------------------
+
+   Format: YYYY-MM-DDTHH:mm:ssTZD
+   Example: 2017-09-15T12:30:00.456789-08:00, 2017-09-15T12:30:00.456789-0800
+
+   Timezone with milliseconds
+   ***************************
+   .. code::
+
+       Format: YYYY-MM-DDTHH:mm:ssTZD
+       Example: 2017-09-15T12:30:00.456-08:00, 2017-09-15T12:30:00.456-0800
+
+   Timezone without milliseconds
+   *******************************
+   .. code::
+
+       Format: YYYY-MM-DDTHH:mm:ssTZD
+       Example: 2017-09-15T12:30:00-08:00, 2017-09-15T12:30:00-0800
+
+   Timezone with minute precision
+   *******************************
+   .. code::
+
+       Format: YYYY-MM-DDTHH:mmTZD
+       Example: 2017-09-15T12:30-08:00, 2017-09-15T12:30-0800
+
+   Short date and time
+   ********************
+   The timezone for this date and time will be taken as UTC (Needs to be surrounded by single or double quotes)
+
+   .. code::
+
+       Format: 'YYYY-MM-DD HH:mm' or "YYYY-MM-DD HH:mm"
+       Example: '2017-09-15 17:25'
+
+   Date Only
+   **********
+   This date will be taken as midnight UTC of that day
+
+   .. code::
+
+       Format: YYYY-MM-DD
+       Example: 2017-09-15
+
+   Epoch seconds
+   **************
+   .. code::
+
+       Example: 1412195400
+
+--wait-for-state [text]
+
+This operation creates, modifies or deletes a resource that has a
+defined lifecycle state. Specify this option to perform the action and
+then wait until the resource reaches a given lifecycle state. Multiple
+states can be specified, returning on the first state. For example, "
+--wait-for-state" SUCCEEDED "--wait-for-state" FAILED would return on
+whichever lifecycle state is reached first. If timeout is reached, a
+return code of 2 is returned. For any other error, a return code of 1
+is returned.
+
+Accepted values are:
+
+   APPLIED, APPLYFAILED, CREATED, DELETED, DELETING, DELETIONFAILED, UPDATEFAILED, UPDATING
+
+--wait-interval-seconds [integer]
+
+Check every "--wait-interval-seconds" to see whether the resource has
+reached the lifecycle state defined by "--wait-for-state". Defaults to
+30 seconds.
+
+
+Global Parameters
+=================
+
+Use "oci --help" for help on global parameters.
+
+"--auth-purpose", "--auth", "--cert-bundle", "--cli-auto-prompt", "--
+cli-rc-file", "--config-file", "--connection-timeout", "--debug", "--
+defaults-file", "--endpoint", "--generate-full-command-json-input", "
+--generate-param-json-input", "--help", "--latest-version", "--max-
+retries", "--no-retry", "--opc-client-request-id", "--opc-request-id",
+"--output", "--profile", "--proxy", "--query", "--raw-output", "--
+read-timeout", "--realm-specific-endpoint", "--region", "--release-
+info", "--request-id", "--version", "-?", "-d", "-h", "-i", "-v"
+
+
+Example using required parameter
+================================
+
+Copy and paste the following example into a JSON file, replacing the
+example parameters with your own.
+
+       oci opctl operator-control create --generate-param-json-input approver-groups-list > approver-groups-list.json
+
+Copy the following CLI commands into a file named example.sh. Run the
+command by typing “bash example.sh” and replacing the example
+parameters with your own.
+
+Please note this sample will only work in the POSIX-compliant bash-
+like shell. You need to set up the OCI configuration and appropriate
+security policies before trying the examples.
+
+       export compartment_id=<substitute-value-of-compartment_id> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/opctl/operator-control/create.html#cmdoption-compartment-id
+       export is_fully_pre_approved=<substitute-value-of-is_fully_pre_approved> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/opctl/operator-control/create.html#cmdoption-is-fully-pre-approved
+       export operator_control_name=<substitute-value-of-operator_control_name> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/opctl/operator-control/create.html#cmdoption-operator-control-name
+       export resource_type=<substitute-value-of-resource_type> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/opctl/operator-control/create.html#cmdoption-resource-type
+       export is_enforced_always=<substitute-value-of-is_enforced_always> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/opctl/operator-control-assignment/create.html#cmdoption-is-enforced-always
+       export resource_compartment_id=<substitute-value-of-resource_compartment_id> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/opctl/operator-control-assignment/create.html#cmdoption-resource-compartment-id
+       export resource_id=<substitute-value-of-resource_id> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/opctl/operator-control-assignment/create.html#cmdoption-resource-id
+       export resource_name=<substitute-value-of-resource_name> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/opctl/operator-control-assignment/create.html#cmdoption-resource-name
+
+       operator_control_id=$(oci opctl operator-control create --approver-groups-list file://approver-groups-list.json --compartment-id $compartment_id --is-fully-pre-approved $is_fully_pre_approved --operator-control-name $operator_control_name --resource-type $resource_type --query data.id --raw-output)
+
+       oci opctl operator-control-assignment create --compartment-id $compartment_id --is-enforced-always $is_enforced_always --operator-control-id $operator_control_id --resource-compartment-id $resource_compartment_id --resource-id $resource_id --resource-name $resource_name --resource-type $resource_type

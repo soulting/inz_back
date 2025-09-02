@@ -1,0 +1,23 @@
+task-schedule
+*************
+
+
+Description
+===========
+
+A model that holds Schedule and other information required for
+scheduling a task.
+
+
+Available Commands
+==================
+
+* create
+
+* delete
+
+* get
+
+* list
+
+* update

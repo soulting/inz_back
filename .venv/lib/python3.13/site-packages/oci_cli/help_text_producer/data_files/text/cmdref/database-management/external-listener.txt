@@ -1,0 +1,22 @@
+external-listener
+*****************
+
+
+Description
+===========
+
+The details of an external listener.
+
+
+Available Commands
+==================
+
+* get
+
+* list
+
+* list-external-listener-services
+
+* summarize-external-listener-metrics
+
+* update

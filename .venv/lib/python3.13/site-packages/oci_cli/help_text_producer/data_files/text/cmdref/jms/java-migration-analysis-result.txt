@@ -1,0 +1,19 @@
+java-migration-analysis-result
+******************************
+
+
+Description
+===========
+
+Result of the Java migration analysis. The analysis result is stored
+in an Object Storage bucket.
+
+
+Available Commands
+==================
+
+* delete
+
+* get
+
+* list

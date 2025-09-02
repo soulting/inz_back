@@ -1,0 +1,14 @@
+quick-picks
+***********
+
+
+Description
+===========
+
+Summary of the Quick Pick query objects.
+
+
+Available Commands
+==================
+
+* list

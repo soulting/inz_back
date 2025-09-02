@@ -1,0 +1,14 @@
+recommendation-summary
+**********************
+
+
+Description
+===========
+
+Recommendation definition.
+
+
+Available Commands
+==================
+
+* list-recommendations

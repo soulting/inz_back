@@ -1,0 +1,62 @@
+source
+******
+
+
+Description
+===========
+
+LogAnalyticsSource
+
+
+Available Commands
+==================
+
+* add-event-types
+
+* delete-source
+
+* disable-auto-assoc
+
+* disable-event-types
+
+* enable-auto-assoc
+
+* enable-event-types
+
+* get-column-names
+
+* get-source
+
+* get-source-summary
+
+* list-associable-entities
+
+* list-auto-assocs
+
+* list-event-types
+
+* list-meta-source-types
+
+* list-source-extfield-defs
+
+* list-source-functions
+
+* list-source-label-operators
+
+* list-source-patterns
+
+* list-sources
+
+* remove-event-types
+
+* upsert-source
+
+* validate-label-condition
+
+* validate-log-endpoint
+
+* validate-loglist-endpoint
+
+* validate-source
+
+* validate-source-extfield-details

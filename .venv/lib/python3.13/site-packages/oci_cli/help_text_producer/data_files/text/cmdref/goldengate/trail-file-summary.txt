@@ -1,0 +1,14 @@
+trail-file-summary
+******************
+
+
+Description
+===========
+
+Summary of the TrailFiles.
+
+
+Available Commands
+==================
+
+* list-trail-files

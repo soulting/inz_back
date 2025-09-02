@@ -1,0 +1,85 @@
+recovery
+********
+
+
+Description
+===========
+
+Use Oracle Database Autonomous Recovery Service CLI to manage
+Protected Databases.
+
+
+Available Commands
+==================
+
+* protected-database
+
+  * cancel-protected-database-deletion
+
+  * change-compartment
+
+  * change-protected-database-subscription
+
+  * create
+
+  * delete
+
+  * fetch-protected-database-configuration
+
+  * get
+
+  * schedule-protected-database-deletion
+
+  * update
+
+* protected-database-collection
+
+  * list-protected-databases
+
+* protection-policy
+
+  * change-compartment
+
+  * create
+
+  * delete
+
+  * get
+
+  * update
+
+* protection-policy-collection
+
+  * list-protection-policies
+
+* recovery-service-subnet
+
+  * change-compartment
+
+  * create
+
+  * delete
+
+  * get
+
+  * update
+
+* recovery-service-subnet-collection
+
+  * list-recovery-service-subnets
+
+* work-request
+
+  * get
+
+* work-request-error-collection
+
+  * list-work-request-errors
+
+* work-request-log-entry-collection
+
+  * list-work-request-logs
+
+* work-request-summary-collection
+
+  * list-work-requests

@@ -1,0 +1,385 @@
+iam
+***
+
+
+Description
+===========
+
+Use the Identity and Access Management Service CLI to manage users,
+groups, identity domains, compartments, policies, tagging, and limits.
+For information about managing users, groups, compartments, and
+policies, see Identity and Access Management (without identity
+domains). For information about tagging and service limits, see
+Tagging and Service Limits. For information about creating, modifying,
+and deleting identity domains, see Identity and Access Management
+(with identity domains).
+
+
+Available Commands
+==================
+
+* auth-token
+
+  * create
+
+  * delete
+
+  * list
+
+  * update
+
+* authentication-policy
+
+  * get
+
+  * update
+
+* availability-domain
+
+  * list
+
+* bulk-action-resource-type-collection
+
+  * list
+
+* compartment
+
+  * bulk-delete-resources
+
+  * bulk-move-resources
+
+  * create
+
+  * delete
+
+  * get
+
+  * list
+
+  * move
+
+  * recover
+
+  * update
+
+* customer-secret-key
+
+  * create
+
+  * delete
+
+  * list
+
+  * update
+
+* db-token
+
+  * get
+
+* domain
+
+  * activate
+
+  * change-compartment
+
+  * change-domain-license-type
+
+  * create
+
+  * deactivate
+
+  * delete
+
+  * enable-replication-to-region
+
+  * get
+
+  * list
+
+  * list-license-types
+
+  * update
+
+* dynamic-group
+
+  * create
+
+  * delete
+
+  * get
+
+  * list
+
+  * update
+
+* fault-domain
+
+  * list
+
+* group
+
+  * add-user
+
+  * create
+
+  * delete
+
+  * get
+
+  * list
+
+  * list-users
+
+  * remove-user
+
+  * update
+
+* iam-work-request
+
+  * get
+
+  * list
+
+  * list-iam-work-request-errors
+
+* iam-work-request-log
+
+  * list
+
+* identity-provider
+
+  * create
+
+  * delete
+
+  * get
+
+  * list
+
+  * update
+
+* identity-provider-group
+
+  * list
+
+* mfa-totp-device
+
+  * activate
+
+  * create
+
+  * delete
+
+  * generate-totp-seed
+
+  * get
+
+  * list
+
+* network-sources
+
+  * create
+
+  * delete
+
+  * get
+
+  * list
+
+  * update
+
+* policy
+
+  * create
+
+  * delete
+
+  * get
+
+  * list
+
+  * update
+
+* region
+
+  * list
+
+* region-subscription
+
+  * create
+
+  * list
+
+* scim-client-credentials
+
+  * reset-idp-scim-client
+
+* smtp-credential
+
+  * create
+
+  * delete
+
+  * list
+
+  * update
+
+* standard-tag-namespace-template
+
+  * get-standard-tag-template
+
+  * list-standard-tag-namespaces
+
+* tag
+
+  * bulk-delete
+
+  * bulk-edit
+
+  * bulk-edit-tags-resource-type
+
+    * list
+
+  * create
+
+  * delete
+
+  * get
+
+  * import-standard-tags
+
+  * list
+
+  * list-cost-tracking
+
+  * reactivate
+
+  * retire
+
+  * update
+
+* tag-default
+
+  * add
+
+  * assemble-effective-tag-set
+
+  * create
+
+  * delete
+
+  * get
+
+  * list
+
+  * remove
+
+  * update
+
+* tag-namespace
+
+  * add
+
+  * cascade-delete
+
+  * change-compartment
+
+  * create
+
+  * delete
+
+  * get
+
+  * list
+
+  * reactivate
+
+  * remove
+
+  * retire
+
+  * update
+
+* tagging-work-request
+
+  * get
+
+  * list
+
+* tagging-work-request-error
+
+  * list
+
+* tagging-work-request-log
+
+  * list
+
+* tenancy
+
+  * get
+
+* ui-password-information
+
+  * get-user
+
+* user
+
+  * api-key
+
+    * delete
+
+    * list
+
+    * upload
+
+  * create
+
+  * create-db-credential
+
+  * delete
+
+  * delete-db-credential
+
+  * get
+
+  * list
+
+  * list-db-credentials
+
+  * list-groups
+
+  * oauth2-credential
+
+    * create
+
+    * delete
+
+    * list
+
+    * update
+
+  * swift-password
+
+    * create
+
+    * delete
+
+    * list
+
+    * update
+
+  * ui-password
+
+    * create-or-reset
+
+  * update
+
+  * update-user-capabilities
+
+  * update-user-state
+
+* work-request
+
+  * get
+
+  * list

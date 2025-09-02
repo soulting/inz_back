@@ -1,0 +1,15 @@
+resource-anchor-collection
+**************************
+
+
+Description
+===========
+
+Results of a resourceAnchor search. Contains both
+ResourceAnchorSummary items and other information, such as metadata.
+
+
+Available Commands
+==================
+
+* list-resource-anchors

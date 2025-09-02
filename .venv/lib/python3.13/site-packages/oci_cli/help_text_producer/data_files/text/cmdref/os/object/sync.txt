@@ -1,0 +1,402 @@
+"sync"
+******
+
+* Description
+
+* Usage
+
+* Required Parameters
+
+* Optional Parameters
+
+* Global Parameters
+
+* Example using required parameter
+
+* Other Examples
+
+
+Description
+===========
+
+Synchronizes a filesystem directory with objects in a bucket.
+Traverses sub-directories copying new and modified files or objects
+from the source to the destination and optionally deleting those that
+are not present in the source.
+
+
+Usage
+=====
+
+   oci os object sync [OPTIONS]
+
+
+Required Parameters
+===================
+
+-bn, --bucket-name [text]
+
+The name of the bucket.
+
+
+Optional Parameters
+===================
+
+--cache-control [text]
+
+The optional Cache-Control header that defines the caching behavior
+value to be returned in GetObject and HeadObject responses. Specifying
+values for this header has no effect on Object Storage behavior.
+Programs that read the object determine what to do based on the value
+provided. For example, you could use this header to identify objects
+that require caching restrictions.
+
+--content-disposition [text]
+
+The optional Content-Disposition header that defines presentational
+information for the object to be returned in GetObject and HeadObject
+responses. Specifying values for this header has no effect on Object
+Storage behavior. Programs that read the object determine what to do
+based on the value provided. For example, you could use this header to
+let users download objects with custom filenames in a browser.
+
+--content-encoding [text]
+
+The optional Content-Encoding header that defines the content encoding
+of the object to be returned in GetObject and HeadObject responses.
+Specifying values for this header has no effect on Object Storage
+behavior. Programs that read the object determine what to do based on
+the value provided. For example, you could use this header to
+determine what decoding mechanisms need to be applied to obtain the
+media-type specified by the Content-Type header of the object.
+
+--content-language [text]
+
+The optional Content-Language header that defines the content language
+of the object to be returned in GetObject and HeadObject responses.
+Specifying values for this header has no effect on Object Storage
+behavior. Programs that read the object determine what to do based on
+the value provided. For example, you could use this header to identify
+and differentiate objects based on a particular language.
+
+--content-type [text]
+
+The optional Content-Type header that defines the standard MIME type
+format of the object to be returned in GetObject and HeadObject
+responses. Content type defaults to ‘application/octet-stream’ if not
+specified. Specifying values for this header has no effect on Object
+Storage behavior. Programs that read the object determine what to do
+based on the value provided. For example, you could use this header to
+identify and perform special operations on text only objects.
+
+--delete
+
+delete files/objects that exist in the destination but not in the
+source. No files or objects are deleted by default.
+
+--dest-dir [text]
+
+Required when not specifying –src-dir. The directory into which
+objects in a bucket will be synced as files. This directory will be
+created if it does not exist. An object will require downloading if it
+does not exist in the local directory or if it exists, either the size
+of the object differs from the size of the local file or the last
+modified time of the object is newer than the last modified time of
+the local file. Objects in Archive tier which have not been restored
+will not be downloaded.
+
+--dry-run
+
+Prints the list of files that would be uploaded, downloaded or deleted
+without actually performing any actions.
+
+--encryption-key-file [filename]
+
+A file containing the base64-encoded string of the AES-256 encryption
+key associated with the object.
+
+--exclude [text]
+
+Only process files which do not match the specified pattern. Patterns
+are applied relative to the current directory. This option can be
+specified multiple times to match on multiple patterns. Supported
+pattern symbols are: 
+
+*: Matches everything
+
+?: Matches any single character
+
+[sequence]: Matches any character in sequence
+
+[!sequence]: Matches any character not in sequence
+
+--from-json [text]
+
+Provide input to this command as a JSON document from a file using the
+file://path-to/file syntax.
+
+The "--generate-full-command-json-input" option can be used to
+generate a sample json file to be used with this command option. The
+key names are pre-populated and match the command option names
+(converted to camelCase format, e.g. compartment-id –> compartmentId),
+while the values of the keys need to be populated by the user before
+using the sample file as an input to this command. For any command
+option that accepts multiple values, the value of the key can be a
+JSON array.
+
+Options can still be provided on the command line. If an option exists
+in both the JSON document and the command line then the command line
+specified value will be used.
+
+For examples on usage of this option, please see our “using CLI with
+advanced JSON options” link: https://docs.cloud.oracle.com/iaas/Conte
+nt/API/SDKDocs/cliusing.htm#AdvancedJSONOptions
+
+--include [text]
+
+Only process files which match the specified pattern. Patterns are
+applied relative to the current directory. This option can be
+specified multiple times to match on multiple patterns. Supported
+pattern symbols are: 
+
+*: Matches everything
+
+?: Matches any single character
+
+[sequence]: Matches any character in sequence
+
+[!sequence]: Matches any character not in sequence
+
+--metadata [text]
+
+Arbitrary string keys and values for user-defined metadata. This will
+be applied to all files being uploaded. Must be in JSON format.
+Example: ‘{“key1”:”value1”,”key2”:”value2”}’
+
+-ns, --namespace, --namespace-name [text]
+
+The top-level namespace used for the request. If not provided, this
+parameter will be obtained internally using a call to ‘oci os ns get’
+
+--no-follow-symlinks
+
+Symbolic links will be ignored while traversing the local filesystem.
+
+--no-multipart
+
+Do not transfer the file in multiple parts. By default, files above
+128 MiB will be transferred in multiple parts, then combined.
+
+--parallel-operations-count [integer range]
+
+The number of parallel operations to perform. Decreasing this value
+will make the process less resource intensive but it may take longer.
+Increasing this value may decrease the time taken, but the process
+will consume more system resources and network bandwidth. The maximum
+is 1000. [default: 10]
+
+--part-size [integer range]
+
+Part size (in MiB) to use when downloading an object in multiple
+parts. The minimum allowable size is 128 MiB.
+
+--prefix [text]
+
+When specified with –src-dir, the files are uploaded as objects with
+the specified prefix. When specified with –dest-dir, only objects with
+the specified prefix are downloaded but the prefix is not added to the
+file names.
+
+--src-dir [text]
+
+Required when not specifying –dest-dir. The directory from which the
+files will be synced to a bucket as objects. A local file will require
+uploading if the size of the local file is different than the size of
+the object, the last modified time of the local file is newer than the
+last modified time of the object, or the local file does not exist
+under the specified bucket and prefix.
+
+--storage-tier [text]
+
+The storage tier that the objects should be stored in. If not
+specified, the objects will be stored in the same storage tier as the
+bucket.
+
+Accepted values are:
+
+   Archive, InfrequentAccess, Standard
+
+
+Global Parameters
+=================
+
+Use "oci --help" for help on global parameters.
+
+"--auth-purpose", "--auth", "--cert-bundle", "--cli-auto-prompt", "--
+cli-rc-file", "--config-file", "--connection-timeout", "--debug", "--
+defaults-file", "--endpoint", "--generate-full-command-json-input", "
+--generate-param-json-input", "--help", "--latest-version", "--max-
+retries", "--no-retry", "--opc-client-request-id", "--opc-request-id",
+"--output", "--profile", "--proxy", "--query", "--raw-output", "--
+read-timeout", "--realm-specific-endpoint", "--region", "--release-
+info", "--request-id", "--version", "-?", "-d", "-h", "-i", "-v"
+
+
+Example using required parameter
+================================
+
+Copy the following CLI commands into a file named example.sh. Run the
+command by typing “bash example.sh” and replacing the example
+parameters with your own.
+
+Please note this sample will only work in the POSIX-compliant bash-
+like shell. You need to set up the OCI configuration and appropriate
+security policies before trying the examples.
+
+       export bucket_name=<substitute-value-of-bucket_name> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/os/object/sync.html#cmdoption-bucket-name
+
+       oci os object sync --bucket-name $bucket_name
+
+
+Other Examples
+==============
+
+
+Description
+-----------
+
+This command will sync the current directory to a bucket in object
+storage. Any file will be uploaded if an object by that name does not
+exist under the specified bucket or if it exists, either the size of
+the file differs from the size of the object or the last modified time
+of the file is newer than the last modified time of the object. No
+object will be deleted from the bucket.
+
+
+Command
+-------
+
+    oci os object sync --bn backup --src-dir .
+
+
+Output
+------
+
+   {
+    "skipped-objects": [
+         "file1.pdf",
+         "file2.pdf",
+         "file3.pdf"
+    ],
+    "upload-failures": {},
+    "uploaded-objects": {
+         "text1.txt": {
+              "etag": "e3ff97e5-8270-463d-932b-a59896df3325",
+              "last-modified": "Wed, 21 Jul 2021 16:07:22 GMT",
+              "opc-content-md5": "1B2M2Y8AsgTpgAmY7PhCfg=="
+         },
+         "web1.html": {
+              "etag": "32f57ee7-691e-44cf-8a21-69b69327ba83",
+              "last-modified": "Wed, 21 Jul 2021 16:07:22 GMT",
+              "opc-content-md5": "1B2M2Y8AsgTpgAmY7PhCfg=="
+         }
+    }
+   }
+
+
+Description
+-----------
+
+This command will sync the contents of a bucket to a local directory.
+An object be downloaded if a file by that name does not exist in the
+directory or if it exists, either the size of the object differs from
+the size of the file or the last modified time of the object is newer
+than the last modified time of the file. Any object that does not
+exist in the bucket but is found in the file system will be deleted.
+
+
+Command
+-------
+
+    oci os object sync --bn backup --dest-dir /export/backup --delete
+
+
+Output
+------
+
+   {
+    "deleted-files": [
+         "/export/backup/unwanted_file.pdf"
+    ],
+    "download-failures": {},
+    "downloaded-objects": [
+         "web2.html",
+         "web3.html",
+         "text2.txt",
+         "text1.txt",
+         "web1.html"
+    ],
+    "skipped-objects": []
+   }
+
+
+Description
+-----------
+
+This command will sync files (except for .bak and .toc files) as
+objects under the specified date prefix. It will also delete any files
+under the specified prefix (except for bak and .toc files) that are
+currently not found in the local directory.
+
+
+Command
+-------
+
+    oci os object sync --bn backups --prefix 20210719/ --src-dir /export/docs --exclude '*.bak' --exclude '*.toc'
+
+
+Output
+------
+
+   {
+    "deleted-files": [],
+    "download-failures": {},
+    "downloaded-objects": [
+         "web2.html",
+         "web3.html",
+         "text2.txt",
+         "text1.txt",
+         "web1.html"
+    ],
+    "skipped-objects": []
+   }
+
+
+Description
+-----------
+
+This command will sync only pdf files under the specified date prefix
+in the bucket to the local directory.
+
+
+Command
+-------
+
+    oci os object sync --bn backups --prefix 20210721/ --dest-dir /export/docs --include '*.pdf' --delete
+
+
+Output
+------
+
+   {
+    "deleted-files": [
+         "/export/docs/unwanted_file.pdf"
+    ],
+    "download-failures": {},
+    "downloaded-objects": [
+         "file3.pdf",
+         "file2.pdf",
+         "file1.pdf"
+    ],
+    "skipped-objects": []
+   }

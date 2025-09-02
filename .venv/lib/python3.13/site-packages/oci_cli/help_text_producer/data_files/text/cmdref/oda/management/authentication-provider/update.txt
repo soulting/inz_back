@@ -1,0 +1,226 @@
+"update"
+********
+
+* Description
+
+* Usage
+
+* Required Parameters
+
+* Optional Parameters
+
+* Global Parameters
+
+* Example using required parameter
+
+
+Description
+===========
+
+Updates the specified Authentication Provider with the information in
+the request body.
+
+
+Usage
+=====
+
+   oci oda management authentication-provider update [OPTIONS]
+
+
+Required Parameters
+===================
+
+--authentication-provider-id [text]
+
+Unique Authentication Provider identifier.
+
+--oda-instance-id [text]
+
+Unique Digital Assistant instance identifier.
+
+
+Optional Parameters
+===================
+
+--authorization-endpoint-url [text]
+
+The IDPs URL for the page that users authenticate with by entering the
+user name and password.
+
+--client-id [text]
+
+The client ID for the IDP application (OAuth Client) that was
+registered as described in Identity Provider Registration. With
+Microsoft identity platform, use the application ID.
+
+--client-secret [text]
+
+The client secret for the IDP application (OAuth Client) that was
+registered as described in Identity Provider Registration. With
+Microsoft identity platform, use the application secret.
+
+--defined-tags [complex type]
+
+Usage of predefined tag keys. These predefined keys are scoped to
+namespaces. Example: *{“foo-namespace”: {“bar-key”: “value”}}* This is
+a complex type whose value must be valid JSON. The value can be
+provided as a string on the command line or passed in as a file using
+the file://path/to/file syntax.
+
+The "--generate-param-json-input" option can be used to generate an
+example of the JSON which must be provided. We recommend storing this
+example in a file, modifying it as needed and then passing it back in
+via the file:// syntax.
+
+--force
+
+Perform update without prompting for confirmation.
+
+--freeform-tags [complex type]
+
+Simple key-value pair that is applied without any predefined name,
+type, or scope. Example: *{“bar-key”: “value”}* This is a complex type
+whose value must be valid JSON. The value can be provided as a string
+on the command line or passed in as a file using the
+file://path/to/file syntax.
+
+The "--generate-param-json-input" option can be used to generate an
+example of the JSON which must be provided. We recommend storing this
+example in a file, modifying it as needed and then passing it back in
+via the file:// syntax.
+
+--from-json [text]
+
+Provide input to this command as a JSON document from a file using the
+file://path-to/file syntax.
+
+The "--generate-full-command-json-input" option can be used to
+generate a sample json file to be used with this command option. The
+key names are pre-populated and match the command option names
+(converted to camelCase format, e.g. compartment-id –> compartmentId),
+while the values of the keys need to be populated by the user before
+using the sample file as an input to this command. For any command
+option that accepts multiple values, the value of the key can be a
+JSON array.
+
+Options can still be provided on the command line. If an option exists
+in both the JSON document and the command line then the command line
+specified value will be used.
+
+For examples on usage of this option, please see our “using CLI with
+advanced JSON options” link: https://docs.cloud.oracle.com/iaas/Conte
+nt/API/SDKDocs/cliusing.htm#AdvancedJSONOptions
+
+--if-match [text]
+
+For optimistic concurrency control in a PUT or DELETE call for a
+Digital Assistant instance, set the *if-match* query parameter to the
+value of the *ETAG* header from a previous GET or POST response for
+that instance. The service updates or deletes the instance only if the
+etag that you provide matches the instance’s current etag value.
+
+--max-wait-seconds [integer]
+
+The maximum time to wait for the resource to reach the lifecycle state
+defined by "--wait-for-state". Defaults to 1200 seconds.
+
+--redirect-url [text]
+
+The OAuth Redirect URL.
+
+--refresh-token-retention-period-in-days [integer]
+
+The number of days to keep the refresh token in the Digital Assistant
+cache.
+
+--revoke-token-endpoint-url [text]
+
+If you want to revoke all the refresh tokens and access tokens of the
+logged-in user from a dialog flow, then you need the IDP’s revoke
+refresh token URL. If you provide this URL, then you can use the
+System.OAuth2ResetTokens component to revoke the user’s tokens for
+this service.
+
+--scopes [text]
+
+A space-separated list of the scopes that must be included when
+Digital Assistant requests an access token from the provider. Include
+all the scopes that are required to access the resources. If refresh
+tokens are enabled, include the scope that’s necessary to get the
+refresh token (typically offline_access).
+
+--short-authorization-code-request-url [text]
+
+A shortened version of the authorization URL, which you can get from a
+URL shortener service (one that allows you to send query parameters).
+You might need this because the generated authorization-code-request
+URL could be too long for SMS and older smart phones.
+
+--subject-claim [text]
+
+The access-token profile claim to use to identify the user.
+
+--token-endpoint-url [text]
+
+The IDPs URL for requesting access tokens.
+
+--wait-for-state [text]
+
+This operation creates, modifies or deletes a resource that has a
+defined lifecycle state. Specify this option to perform the action and
+then wait until the resource reaches a given lifecycle state. Multiple
+states can be specified, returning on the first state. For example, "
+--wait-for-state" SUCCEEDED "--wait-for-state" FAILED would return on
+whichever lifecycle state is reached first. If timeout is reached, a
+return code of 2 is returned. For any other error, a return code of 1
+is returned.
+
+Accepted values are:
+
+   ACTIVE, CREATING, DELETED, DELETING, FAILED, INACTIVE, UPDATING
+
+--wait-interval-seconds [integer]
+
+Check every "--wait-interval-seconds" to see whether the resource has
+reached the lifecycle state defined by "--wait-for-state". Defaults to
+30 seconds.
+
+
+Global Parameters
+=================
+
+Use "oci --help" for help on global parameters.
+
+"--auth-purpose", "--auth", "--cert-bundle", "--cli-auto-prompt", "--
+cli-rc-file", "--config-file", "--connection-timeout", "--debug", "--
+defaults-file", "--endpoint", "--generate-full-command-json-input", "
+--generate-param-json-input", "--help", "--latest-version", "--max-
+retries", "--no-retry", "--opc-client-request-id", "--opc-request-id",
+"--output", "--profile", "--proxy", "--query", "--raw-output", "--
+read-timeout", "--realm-specific-endpoint", "--region", "--release-
+info", "--request-id", "--version", "-?", "-d", "-h", "-i", "-v"
+
+
+Example using required parameter
+================================
+
+Copy the following CLI commands into a file named example.sh. Run the
+command by typing “bash example.sh” and replacing the example
+parameters with your own.
+
+Please note this sample will only work in the POSIX-compliant bash-
+like shell. You need to set up the OCI configuration and appropriate
+security policies before trying the examples.
+
+       export client_id=<substitute-value-of-client_id> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/oda/management/authentication-provider/create.html#cmdoption-client-id
+       export client_secret=<substitute-value-of-client_secret> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/oda/management/authentication-provider/create.html#cmdoption-client-secret
+       export grant_type=<substitute-value-of-grant_type> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/oda/management/authentication-provider/create.html#cmdoption-grant-type
+       export identity_provider=<substitute-value-of-identity_provider> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/oda/management/authentication-provider/create.html#cmdoption-identity-provider
+       export name=<substitute-value-of-name> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/oda/management/authentication-provider/create.html#cmdoption-name
+       export oda_instance_id=<substitute-value-of-oda_instance_id> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/oda/management/authentication-provider/create.html#cmdoption-oda-instance-id
+       export scopes=<substitute-value-of-scopes> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/oda/management/authentication-provider/create.html#cmdoption-scopes
+       export token_endpoint_url=<substitute-value-of-token_endpoint_url> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/oda/management/authentication-provider/create.html#cmdoption-token-endpoint-url
+
+       authentication_provider_id=$(oci oda management authentication-provider create --client-id $client_id --client-secret $client_secret --grant-type $grant_type --identity-provider $identity_provider --name $name --oda-instance-id $oda_instance_id --scopes $scopes --token-endpoint-url $token_endpoint_url --query data.id --raw-output)
+
+       oci oda management authentication-provider update --authentication-provider-id $authentication_provider_id --oda-instance-id $oda_instance_id

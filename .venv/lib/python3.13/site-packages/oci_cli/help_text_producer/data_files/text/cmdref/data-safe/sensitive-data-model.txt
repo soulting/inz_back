@@ -1,0 +1,45 @@
+sensitive-data-model
+********************
+
+
+Description
+===========
+
+A sensitive data model is a collection of sensitive columns and their
+referential relationships. It helps understand the sensitive data
+landscape, track changes, and efficiently enable security controls
+such as data masking. It can be managed either manually or by
+performing sensitive data discovery on a reference target database.
+Learn more.
+
+
+Available Commands
+==================
+
+* apply-discovery-job-results
+
+* change-compartment
+
+* create
+
+* delete
+
+* download
+
+* download-discovery-report
+
+* generate-discovery-report-for-download
+
+* generate-sensitive-data-model-for-download
+
+* get
+
+* list
+
+* list-discovery-analytics
+
+* list-sensitive-column-analytics
+
+* update
+
+* upload

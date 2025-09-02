@@ -1,0 +1,22 @@
+query
+*****
+
+
+Description
+===========
+
+The query to filter and aggregate.
+
+
+Available Commands
+==================
+
+* create
+
+* delete
+
+* get
+
+* list
+
+* update

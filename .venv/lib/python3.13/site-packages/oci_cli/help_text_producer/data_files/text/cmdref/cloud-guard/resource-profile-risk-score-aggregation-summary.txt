@@ -1,0 +1,14 @@
+resource-profile-risk-score-aggregation-summary
+***********************************************
+
+
+Description
+===========
+
+Summary of resource profile risk score aggregations.
+
+
+Available Commands
+==================
+
+* request-summarized-top-trend-resource-profile-risk-scores

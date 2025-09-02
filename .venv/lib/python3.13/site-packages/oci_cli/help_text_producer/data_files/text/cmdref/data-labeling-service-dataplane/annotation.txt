@@ -1,0 +1,22 @@
+annotation
+**********
+
+
+Description
+===========
+
+An annotation represents a user- or machine-generated annotation for a
+given record.  The details of the annotation are captured in the
+RecordAnnotationDetails.
+
+
+Available Commands
+==================
+
+* create
+
+* delete
+
+* get
+
+* update

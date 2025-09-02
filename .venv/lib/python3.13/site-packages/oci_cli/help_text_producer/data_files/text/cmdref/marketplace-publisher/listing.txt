@@ -1,0 +1,24 @@
+listing
+*******
+
+
+Description
+===========
+
+The model for the Marketplace Publisher listing.
+
+
+Available Commands
+==================
+
+* cascading-delete
+
+* change-compartment
+
+* create
+
+* delete
+
+* get
+
+* update

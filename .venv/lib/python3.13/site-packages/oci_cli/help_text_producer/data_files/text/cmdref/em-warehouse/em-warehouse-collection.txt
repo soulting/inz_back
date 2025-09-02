@@ -1,0 +1,15 @@
+em-warehouse-collection
+***********************
+
+
+Description
+===========
+
+Results of a emWarehouse search. Contains boh EmWarehouseSummary items
+and other information, such as metadata.
+
+
+Available Commands
+==================
+
+* list-em-warehouses

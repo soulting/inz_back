@@ -1,0 +1,95 @@
+autonomous-database
+*******************
+
+
+Description
+===========
+
+An Oracle Autonomous Database.
+
+
+Available Commands
+==================
+
+* change-autonomous-database-subscription
+
+* change-compartment
+
+* change-disaster-recovery-configuration
+
+* configure-key
+
+* configure-saas-admin-user
+
+* create
+
+* create-adb-cross-region-data-guard-details
+
+* create-autonomous-database-create-cross-region-disaster-recovery-
+  details
+
+* create-autonomous-database-undelete-autonomous-database-details
+
+* create-cross-tenancy-disaster-recovery-details
+
+* create-from-backup-id
+
+* create-from-backup-timestamp
+
+* create-from-clone
+
+* create-refreshable-clone
+
+* data-safe
+
+  * deregister
+
+  * register
+
+* delete
+
+* disable-autonomous-database-management
+
+* disable-operations-insights
+
+* enable-autonomous-database-management
+
+* enable-operations-insights
+
+* fail-over
+
+* generate-wallet
+
+* get
+
+* list
+
+* list-autonomous-database-peers
+
+* list-clones
+
+* list-refreshable-clones
+
+* list-resource-pool-members
+
+* manual-refresh
+
+* resource-pool-shapes
+
+* restart
+
+* restore
+
+* rotate-key
+
+* saas-admin-user-status
+
+* shrink
+
+* start
+
+* stop
+
+* switchover
+
+* update

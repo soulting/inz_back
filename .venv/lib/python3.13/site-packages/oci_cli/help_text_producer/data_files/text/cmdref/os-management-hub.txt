@@ -1,0 +1,354 @@
+os-management-hub
+*****************
+
+
+Description
+===========
+
+Use the OS Management Hub CLI to manage and monitor updates and
+patches for instances in OCI, your private data center, or 3rd-party
+clouds. For more information, see Overview of OS Management Hub.
+
+
+Available Commands
+==================
+
+* event
+
+  * change-compartment
+
+  * delete
+
+  * delete-event-content
+
+  * get
+
+  * get-event-content
+
+  * import-event-content
+
+  * list
+
+  * update
+
+* install-all-windows-updates-in-compartment
+
+* lifecycle-environment
+
+  * change-compartment
+
+  * create
+
+  * delete
+
+  * get
+
+  * list
+
+  * update
+
+* lifecycle-stage
+
+  * attach-managed-instance
+
+  * detach-managed-instance
+
+  * get
+
+  * list
+
+  * list-installed-packages
+
+  * promote-software-source
+
+  * reboot
+
+* managed-instance
+
+  * associate-managed-instances-with-management-station
+
+  * attach-profile
+
+  * attach-software-sources
+
+  * delete
+
+  * detach-profile
+
+  * detach-software-sources
+
+  * disable-module-stream
+
+  * enable-module-stream
+
+  * get
+
+  * get-analytic-content
+
+  * get-content
+
+  * install-module-profile
+
+  * install-packages
+
+  * install-windows-updates
+
+  * list
+
+  * list-available-packages
+
+  * list-available-software-sources
+
+  * list-available-windows-updates
+
+  * list-errata
+
+  * list-installed-packages
+
+  * list-installed-windows-updates
+
+  * list-modules
+
+  * list-updatable-packages
+
+  * reboot
+
+  * refresh-software
+
+  * remove-module-profile
+
+  * remove-packages
+
+  * summarize-analytics
+
+  * switch-module-stream
+
+  * update
+
+  * update-packages
+
+* managed-instance-group
+
+  * attach-managed-instances
+
+  * attach-software-sources
+
+  * change-compartment
+
+  * create
+
+  * delete
+
+  * detach-managed-instances
+
+  * detach-software-sources
+
+  * disable-module-stream
+
+  * enable-module-stream
+
+  * get
+
+  * install-module-profile
+
+  * install-packages
+
+  * install-windows-updates
+
+  * list
+
+  * list-available-modules
+
+  * list-available-packages
+
+  * list-available-software-sources
+
+  * list-installed-packages
+
+  * list-modules
+
+  * reboot
+
+  * remove-module-profile
+
+  * remove-packages
+
+  * switch-module-stream
+
+  * update
+
+  * update-all-packages
+
+* management-station
+
+  * change-compartment
+
+  * create
+
+  * delete
+
+  * get
+
+  * list
+
+  * list-mirrors
+
+  * refresh-management-station-config
+
+  * sync-mirrors
+
+  * sync-single-mirrors
+
+  * update
+
+* profile
+
+  * attach-lifecycle-stage
+
+  * attach-managed-instance-group
+
+  * attach-management-station
+
+  * attach-software-sources
+
+  * change-compartment
+
+  * create-group-profile
+
+  * create-lifecycle-profile
+
+  * create-software-source-profile
+
+  * create-windows-stand-alone-profile
+
+  * delete
+
+  * detach-software-sources
+
+  * get
+
+  * get-profile-version
+
+  * list
+
+  * list-available-software-sources
+
+  * update
+
+* scheduled-job
+
+  * change-compartment
+
+  * create
+
+  * delete
+
+  * get
+
+  * list
+
+  * run-now
+
+  * update
+
+* software-source
+
+  * add-packages
+
+  * change-availability
+
+  * change-compartment
+
+  * create-custom-swsrc
+
+  * create-entitlement
+
+  * create-private-swsrc
+
+  * create-third-party-swsrc
+
+  * create-versioned-custom-swsrc
+
+  * delete
+
+  * generate-metadata
+
+  * get
+
+  * get-erratum
+
+  * get-module-profile
+
+  * get-module-stream
+
+  * get-package-group
+
+  * get-software-package
+
+  * get-software-package-by-name
+
+  * get-software-source-manifest
+
+  * list
+
+  * list-all-software-packages
+
+  * list-available-software-packages
+
+  * list-entitlements
+
+  * list-errata
+
+  * list-module-profiles
+
+  * list-module-streams
+
+  * list-package-groups
+
+  * list-software-packages
+
+  * list-software-source-vendors
+
+  * list-software-sources-with-package
+
+  * remove-packages
+
+  * replace-packages
+
+  * replicate-vendor-swsrc
+
+  * search-module-streams
+
+  * search-modules
+
+  * search-package-groups
+
+  * update-custom-swsrc
+
+  * update-private-swsrc
+
+  * update-software-source-manifest
+
+  * update-third-party-swsrc
+
+  * update-versioned-custom-swsrc
+
+* update-all-packages-in-compartment
+
+* windows-update
+
+  * get
+
+  * list-windows-updates
+
+* work-request
+
+  * get
+
+  * list
+
+  * list-errors
+
+  * list-logs
+
+  * rerun

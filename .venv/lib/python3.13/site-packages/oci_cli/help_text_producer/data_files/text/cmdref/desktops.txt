@@ -1,0 +1,61 @@
+desktops
+********
+
+
+Description
+===========
+
+Create and manage cloud-hosted desktops which can be accessed from a
+web browser or installed client.
+
+
+Available Commands
+==================
+
+* desktop
+
+  * delete
+
+  * get
+
+  * list
+
+  * start
+
+  * stop
+
+  * update
+
+* desktop-pool
+
+  * change-compartment
+
+  * create
+
+  * delete
+
+  * get
+
+  * list
+
+  * list-desktops
+
+  * list-volumes
+
+  * start
+
+  * stop
+
+  * update
+
+* work-request
+
+  * cancel
+
+  * get
+
+  * list
+
+  * *list-errors*
+
+  * *list-logs*

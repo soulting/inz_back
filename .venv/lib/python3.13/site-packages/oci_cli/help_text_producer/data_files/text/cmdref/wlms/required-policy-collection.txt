@@ -1,0 +1,14 @@
+required-policy-collection
+**************************
+
+
+Description
+===========
+
+Result of list RequiredPolicies.
+
+
+Available Commands
+==================
+
+* list-required-policies

@@ -1,0 +1,16 @@
+certificate-bundle
+******************
+
+
+Description
+===========
+
+The contents of the certificate, properties of the certificate (and
+certificate version), and user-provided contextual metadata for the
+certificate.
+
+
+Available Commands
+==================
+
+* get

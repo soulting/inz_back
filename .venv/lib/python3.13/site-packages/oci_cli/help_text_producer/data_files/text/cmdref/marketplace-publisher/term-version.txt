@@ -1,0 +1,26 @@
+term-version
+************
+
+
+Description
+===========
+
+Model object for the term version details.
+
+
+Available Commands
+==================
+
+* activate
+
+* create
+
+* delete
+
+* get
+
+* get-term-version-content
+
+* update
+
+* update-term-version-content

@@ -1,0 +1,20 @@
+user-attributes-setting
+***********************
+
+
+Description
+===========
+
+Schema for End User Attribute mutability
+
+
+Available Commands
+==================
+
+* get
+
+* list
+
+* patch
+
+* search

@@ -1,0 +1,170 @@
+"run-query"
+***********
+
+* Description
+
+* Usage
+
+* Required Parameters
+
+* Optional Parameters
+
+* Global Parameters
+
+* Example using required parameter
+
+
+Description
+===========
+
+Retrieves the results (selected attributes and aggregations) of a
+query constructed according to the Application Performance Monitoring
+Defined Query Syntax. Query results are filtered by the filter
+criteria specified in the where clause. Further query results are
+grouped by the attributes specified in the group by clause.  Finally,
+ordering (asc/desc) is done by the specified attributes in the order
+by clause.
+
+
+Usage
+=====
+
+   oci apm-traces query query-response run-query [OPTIONS]
+
+
+Required Parameters
+===================
+
+--apm-domain-id [text]
+
+The APM Domain ID for the intended request.
+
+--start-time-gte [datetime]
+
+Include spans that have a *spanStartTime* equal to or greater this
+value.  The following datetime formats are supported:  UTC with
+milliseconds *********************** Format: YYYY-MM-
+DDTHH:mm:ss.sssTZD
+
+Example:
+
+   2017-09-15T20:30:00.123Z
+
+ UTC without milliseconds ************************** Format: YYYY-MM-
+DDTHH:mm:ssTZD Example: 2017-09-15T20:30:00Z  UTC with minute
+precision ************************** Format: YYYY-MM-DDTHH:mmTZD
+Example: 2017-09-15T20:30Z  Timezone with milliseconds
+*************************** Format: YYYY-MM-DDTHH:mm:ssTZD Example:
+2017-09-15T12:30:00.456-08:00, 2017-09-15T12:30:00.456-0800  Timezone
+without milliseconds ******************************* Format: YYYY-MM-
+DDTHH:mm:ssTZD Example: 2017-09-15T12:30:00-08:00,
+2017-09-15T12:30:00-0800  Timezone with minute precision
+******************************* Format: YYYY-MM-DDTHH:mmTZD Example:
+2017-09-15T12:30-08:00, 2017-09-15T12:30-0800  Short date and time
+******************** The timezone for this date and time will be taken
+as UTC (Needs to be surrounded by single or double quotes) Format:
+‘YYYY-MM-DD HH:mm’ or “YYYY-MM-DD HH:mm” Example: ‘2017-09-15 17:25’ 
+Date Only ********* This date will be taken as midnight UTC of that
+day Format: YYYY-MM-DD Example: 2017-09-15  Epoch seconds
+************** Example: 1412195400
+
+--start-time-lt [datetime]
+
+Include spans that have a >>`<<spanStartTime`less than this value. 
+The following datetime formats are supported:  UTC with milliseconds
+*********************** Format: YYYY-MM-DDTHH:mm:ss.sssTZD
+
+Example:
+
+   2017-09-15T20:30:00.123Z
+
+ UTC without milliseconds ************************** Format: YYYY-MM-
+DDTHH:mm:ssTZD Example: 2017-09-15T20:30:00Z  UTC with minute
+precision ************************** Format: YYYY-MM-DDTHH:mmTZD
+Example: 2017-09-15T20:30Z  Timezone with milliseconds
+*************************** Format: YYYY-MM-DDTHH:mm:ssTZD Example:
+2017-09-15T12:30:00.456-08:00, 2017-09-15T12:30:00.456-0800  Timezone
+without milliseconds ******************************* Format: YYYY-MM-
+DDTHH:mm:ssTZD Example: 2017-09-15T12:30:00-08:00,
+2017-09-15T12:30:00-0800  Timezone with minute precision
+******************************* Format: YYYY-MM-DDTHH:mmTZD Example:
+2017-09-15T12:30-08:00, 2017-09-15T12:30-0800  Short date and time
+******************** The timezone for this date and time will be taken
+as UTC (Needs to be surrounded by single or double quotes) Format:
+‘YYYY-MM-DD HH:mm’ or “YYYY-MM-DD HH:mm” Example: ‘2017-09-15 17:25’ 
+Date Only ********* This date will be taken as midnight UTC of that
+day Format: YYYY-MM-DD Example: 2017-09-15  Epoch seconds
+************** Example: 1412195400
+
+
+Optional Parameters
+===================
+
+--from-json [text]
+
+Provide input to this command as a JSON document from a file using the
+file://path-to/file syntax.
+
+The "--generate-full-command-json-input" option can be used to
+generate a sample json file to be used with this command option. The
+key names are pre-populated and match the command option names
+(converted to camelCase format, e.g. compartment-id –> compartmentId),
+while the values of the keys need to be populated by the user before
+using the sample file as an input to this command. For any command
+option that accepts multiple values, the value of the key can be a
+JSON array.
+
+Options can still be provided on the command line. If an option exists
+in both the JSON document and the command line then the command line
+specified value will be used.
+
+For examples on usage of this option, please see our “using CLI with
+advanced JSON options” link: https://docs.cloud.oracle.com/iaas/Conte
+nt/API/SDKDocs/cliusing.htm#AdvancedJSONOptions
+
+--limit [integer]
+
+The maximum number of items to return.
+
+--page [text]
+
+The page token representing the page where to start retrieving
+results. This is usually retrieved from a previous response.
+
+--query-text [text]
+
+Application Performance Monitoring defined query string that filters
+and retrieves trace data results.
+
+
+Global Parameters
+=================
+
+Use "oci --help" for help on global parameters.
+
+"--auth-purpose", "--auth", "--cert-bundle", "--cli-auto-prompt", "--
+cli-rc-file", "--config-file", "--connection-timeout", "--debug", "--
+defaults-file", "--endpoint", "--generate-full-command-json-input", "
+--generate-param-json-input", "--help", "--latest-version", "--max-
+retries", "--no-retry", "--opc-client-request-id", "--opc-request-id",
+"--output", "--profile", "--proxy", "--query", "--raw-output", "--
+read-timeout", "--realm-specific-endpoint", "--region", "--release-
+info", "--request-id", "--version", "-?", "-d", "-h", "-i", "-v"
+
+
+Example using required parameter
+================================
+
+Copy the following CLI commands into a file named example.sh. Run the
+command by typing “bash example.sh” and replacing the example
+parameters with your own.
+
+Please note this sample will only work in the POSIX-compliant bash-
+like shell. You need to set up the OCI configuration and appropriate
+security policies before trying the examples.
+
+       export apm_domain_id=<substitute-value-of-apm_domain_id> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/apm-traces/query/query-response/run-query.html#cmdoption-apm-domain-id
+       export start_time_gte=<substitute-value-of-start_time_gte> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/apm-traces/query/query-response/run-query.html#cmdoption-start-time-gte
+       export start_time_lt=<substitute-value-of-start_time_lt> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/apm-traces/query/query-response/run-query.html#cmdoption-start-time-lt
+
+       oci apm-traces query query-response run-query --apm-domain-id $apm_domain_id --start-time-gte $start_time_gte --start-time-lt $start_time_lt

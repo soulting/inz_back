@@ -1,0 +1,397 @@
+"summarize-exadata-insight-resource-forecast-trend"
+***************************************************
+
+* Description
+
+* Usage
+
+* Required Parameters
+
+* Optional Parameters
+
+* Global Parameters
+
+* Example using required parameter
+
+
+Description
+===========
+
+Get historical usage and forecast predictions for an exadata system
+with breakdown by databases, hosts or storage servers. Additionally
+resources can be filtered using databaseInsightId, hostInsightId or
+storageServerName query parameters. Top five resources are returned if
+total exceeds the limit specified. Valid values for ResourceType
+DATABASE are CPU,MEMORY,IO and STORAGE. Database name is returned in
+name field. DatabaseInsightId , cdbName and hostName query parameter
+applies to ResourceType DATABASE. Valid values for ResourceType HOST
+are CPU and MEMORY. HostName s returned in name field. HostInsightId
+and hostName query parameter applies to ResourceType HOST. Valid
+values for ResourceType STORAGE_SERVER are STORAGE, IOPS and
+THROUGHPUT. Storage server name is returned in name field for
+resourceMetric IOPS and THROUGHPUT and asmName is returned in name
+field for resourceMetric STORAGE. StorageServerName query parameter
+applies to ResourceType STORAGE_SERVER. Valid value for ResourceType
+DISKGROUP is STORAGE. Comma delimited (asmName,diskgroupName) is
+returned in name field.
+
+
+Usage
+=====
+
+   oci opsi exadata-insights summarize-exadata-insight-resource-forecast-trend [OPTIONS]
+
+
+Required Parameters
+===================
+
+--exadata-insight-id [text]
+
+OCID of exadata insight resource.
+
+--resource-metric [text]
+
+Filter by resource metric. Supported values are CPU , STORAGE, MEMORY,
+IO, IOPS, THROUGHPUT
+
+--resource-type [text]
+
+Filter by resource. Supported values are HOST , STORAGE_SERVER and
+DATABASE
+
+
+Optional Parameters
+===================
+
+--analysis-time-interval [text]
+
+Specify time period in ISO 8601 format with respect to current time.
+Default is last 30 days represented by P30D. If timeInterval is
+specified, then timeIntervalStart and timeIntervalEnd will be ignored.
+Examples  P90D (last 90 days), P4W (last 4 weeks), P2M (last 2
+months), P1Y (last 12 months), . Maximum value allowed is 25 months
+prior to current time (P25M).
+
+--cdb-name [text]
+
+Filter by one or more cdb name.
+
+--confidence [integer]
+
+This parameter is used to change data’s confidence level, this data is
+ingested by the forecast algorithm. Confidence is the probability of
+an interval to contain the expected population parameter. Manipulation
+of this value will lead to different results. If not set, default
+confidence value is 95%.
+
+--database-insight-id [text]
+
+Optional list of database insight resource OCIDs.
+
+--exadata-type [text]
+
+Filter by one or more Exadata types. Possible value are DBMACHINE,
+EXACS, and EXACC.
+
+--forecast-days [integer]
+
+Number of days used for utilization forecast analysis.
+
+--forecast-model [text]
+
+Choose algorithm model for the forecasting. Possible values:   -
+LINEAR: Uses linear regression algorithm for forecasting.   - ML_AUTO:
+Automatically detects best algorithm to use for forecasting.   -
+ML_NO_AUTO: Automatically detects seasonality of the data for
+forecasting using linear or seasonal algorithm.
+
+Accepted values are:
+
+   LINEAR, ML_AUTO, ML_NO_AUTO
+
+--forecast-start-day [integer]
+
+Number of days used for utilization forecast analysis.
+
+--from-json [text]
+
+Provide input to this command as a JSON document from a file using the
+file://path-to/file syntax.
+
+The "--generate-full-command-json-input" option can be used to
+generate a sample json file to be used with this command option. The
+key names are pre-populated and match the command option names
+(converted to camelCase format, e.g. compartment-id –> compartmentId),
+while the values of the keys need to be populated by the user before
+using the sample file as an input to this command. For any command
+option that accepts multiple values, the value of the key can be a
+JSON array.
+
+Options can still be provided on the command line. If an option exists
+in both the JSON document and the command line then the command line
+specified value will be used.
+
+For examples on usage of this option, please see our “using CLI with
+advanced JSON options” link: https://docs.cloud.oracle.com/iaas/Conte
+nt/API/SDKDocs/cliusing.htm#AdvancedJSONOptions
+
+--host-insight-id [text]
+
+Optional list of host insight resource OCIDs.
+
+--host-name [text]
+
+Filter by hostname.
+
+--limit [integer]
+
+For list pagination. The maximum number of results per page, or items
+to return in a paginated “List” call. For important details about how
+pagination works, see List Pagination. Example: *50*
+
+--page [text]
+
+For list pagination. The value of the *opc-next-page* response header
+from the previous “List” call. For important details about how
+pagination works, see List Pagination.
+
+--sort-by [text]
+
+The order in which resource Forecast trend records are listed
+
+Accepted values are:
+
+   daysToReachCapacity, id, name
+
+--sort-order [text]
+
+The sort order to use, either ascending (*ASC*) or descending
+(*DESC*).
+
+Accepted values are:
+
+   ASC, DESC
+
+--statistic [text]
+
+Choose the type of statistic metric data to be used for forecasting.
+
+Accepted values are:
+
+   AVG, MAX
+
+--storage-server-name [text]
+
+Optional storage server name on an exadata system.
+
+--time-interval-end [datetime]
+
+Analysis end time in UTC in ISO 8601 format(exclusive). Example
+2019-10-30T00:00:00Z (yyyy-MM-ddThh:mm:ssZ). timeIntervalStart and
+timeIntervalEnd are used together. If timeIntervalEnd is not
+specified, current time is used as timeIntervalEnd.
+
+   The following datetime formats are supported:
+
+
+UTC with microseconds
+---------------------
+
+   Format: YYYY-MM-DDTHH:mm:ss.ssssssTZD
+   Example: 2017-09-15T20:30:00.123456Z
+
+   UTC with milliseconds
+   ***********************
+   .. code::
+
+       Format: YYYY-MM-DDTHH:mm:ss.sssTZD
+       Example: 2017-09-15T20:30:00.123Z
+
+   UTC without milliseconds
+   **************************
+   .. code::
+
+       Format: YYYY-MM-DDTHH:mm:ssTZD
+       Example: 2017-09-15T20:30:00Z
+
+   UTC with minute precision
+   **************************
+   .. code::
+
+       Format: YYYY-MM-DDTHH:mmTZD
+       Example: 2017-09-15T20:30Z
+
+
+Timezone with microseconds
+--------------------------
+
+   Format: YYYY-MM-DDTHH:mm:ssTZD
+   Example: 2017-09-15T12:30:00.456789-08:00, 2017-09-15T12:30:00.456789-0800
+
+   Timezone with milliseconds
+   ***************************
+   .. code::
+
+       Format: YYYY-MM-DDTHH:mm:ssTZD
+       Example: 2017-09-15T12:30:00.456-08:00, 2017-09-15T12:30:00.456-0800
+
+   Timezone without milliseconds
+   *******************************
+   .. code::
+
+       Format: YYYY-MM-DDTHH:mm:ssTZD
+       Example: 2017-09-15T12:30:00-08:00, 2017-09-15T12:30:00-0800
+
+   Timezone with minute precision
+   *******************************
+   .. code::
+
+       Format: YYYY-MM-DDTHH:mmTZD
+       Example: 2017-09-15T12:30-08:00, 2017-09-15T12:30-0800
+
+   Short date and time
+   ********************
+   The timezone for this date and time will be taken as UTC (Needs to be surrounded by single or double quotes)
+
+   .. code::
+
+       Format: 'YYYY-MM-DD HH:mm' or "YYYY-MM-DD HH:mm"
+       Example: '2017-09-15 17:25'
+
+   Date Only
+   **********
+   This date will be taken as midnight UTC of that day
+
+   .. code::
+
+       Format: YYYY-MM-DD
+       Example: 2017-09-15
+
+   Epoch seconds
+   **************
+   .. code::
+
+       Example: 1412195400
+
+--time-interval-start [datetime]
+
+Analysis start time in UTC in ISO 8601 format(inclusive). Example
+2019-10-30T00:00:00Z (yyyy-MM-ddThh:mm:ssZ). The minimum allowed value
+is 2 years prior to the current day. timeIntervalStart and
+timeIntervalEnd parameters are used together. If analysisTimeInterval
+is specified, this parameter is ignored.
+
+   The following datetime formats are supported:
+
+
+UTC with microseconds
+---------------------
+
+   Format: YYYY-MM-DDTHH:mm:ss.ssssssTZD
+   Example: 2017-09-15T20:30:00.123456Z
+
+   UTC with milliseconds
+   ***********************
+   .. code::
+
+       Format: YYYY-MM-DDTHH:mm:ss.sssTZD
+       Example: 2017-09-15T20:30:00.123Z
+
+   UTC without milliseconds
+   **************************
+   .. code::
+
+       Format: YYYY-MM-DDTHH:mm:ssTZD
+       Example: 2017-09-15T20:30:00Z
+
+   UTC with minute precision
+   **************************
+   .. code::
+
+       Format: YYYY-MM-DDTHH:mmTZD
+       Example: 2017-09-15T20:30Z
+
+
+Timezone with microseconds
+--------------------------
+
+   Format: YYYY-MM-DDTHH:mm:ssTZD
+   Example: 2017-09-15T12:30:00.456789-08:00, 2017-09-15T12:30:00.456789-0800
+
+   Timezone with milliseconds
+   ***************************
+   .. code::
+
+       Format: YYYY-MM-DDTHH:mm:ssTZD
+       Example: 2017-09-15T12:30:00.456-08:00, 2017-09-15T12:30:00.456-0800
+
+   Timezone without milliseconds
+   *******************************
+   .. code::
+
+       Format: YYYY-MM-DDTHH:mm:ssTZD
+       Example: 2017-09-15T12:30:00-08:00, 2017-09-15T12:30:00-0800
+
+   Timezone with minute precision
+   *******************************
+   .. code::
+
+       Format: YYYY-MM-DDTHH:mmTZD
+       Example: 2017-09-15T12:30-08:00, 2017-09-15T12:30-0800
+
+   Short date and time
+   ********************
+   The timezone for this date and time will be taken as UTC (Needs to be surrounded by single or double quotes)
+
+   .. code::
+
+       Format: 'YYYY-MM-DD HH:mm' or "YYYY-MM-DD HH:mm"
+       Example: '2017-09-15 17:25'
+
+   Date Only
+   **********
+   This date will be taken as midnight UTC of that day
+
+   .. code::
+
+       Format: YYYY-MM-DD
+       Example: 2017-09-15
+
+   Epoch seconds
+   **************
+   .. code::
+
+       Example: 1412195400
+
+
+Global Parameters
+=================
+
+Use "oci --help" for help on global parameters.
+
+"--auth-purpose", "--auth", "--cert-bundle", "--cli-auto-prompt", "--
+cli-rc-file", "--config-file", "--connection-timeout", "--debug", "--
+defaults-file", "--endpoint", "--generate-full-command-json-input", "
+--generate-param-json-input", "--help", "--latest-version", "--max-
+retries", "--no-retry", "--opc-client-request-id", "--opc-request-id",
+"--output", "--profile", "--proxy", "--query", "--raw-output", "--
+read-timeout", "--realm-specific-endpoint", "--region", "--release-
+info", "--request-id", "--version", "-?", "-d", "-h", "-i", "-v"
+
+
+Example using required parameter
+================================
+
+Copy the following CLI commands into a file named example.sh. Run the
+command by typing “bash example.sh” and replacing the example
+parameters with your own.
+
+Please note this sample will only work in the POSIX-compliant bash-
+like shell. You need to set up the OCI configuration and appropriate
+security policies before trying the examples.
+
+       export exadata_insight_id=<substitute-value-of-exadata_insight_id> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/opsi/exadata-insights/summarize-exadata-insight-resource-forecast-trend.html#cmdoption-exadata-insight-id
+       export resource_metric=<substitute-value-of-resource_metric> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/opsi/exadata-insights/summarize-exadata-insight-resource-forecast-trend.html#cmdoption-resource-metric
+       export resource_type=<substitute-value-of-resource_type> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/opsi/exadata-insights/summarize-exadata-insight-resource-forecast-trend.html#cmdoption-resource-type
+
+       oci opsi exadata-insights summarize-exadata-insight-resource-forecast-trend --exadata-insight-id $exadata_insight_id --resource-metric $resource_metric --resource-type $resource_type

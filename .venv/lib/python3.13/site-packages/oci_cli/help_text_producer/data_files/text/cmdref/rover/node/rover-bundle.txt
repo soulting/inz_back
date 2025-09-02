@@ -1,0 +1,16 @@
+rover-bundle
+************
+
+
+Description
+===========
+
+Rover Bundle for Node.
+
+
+Available Commands
+==================
+
+* copy-to-customer
+
+* get-status

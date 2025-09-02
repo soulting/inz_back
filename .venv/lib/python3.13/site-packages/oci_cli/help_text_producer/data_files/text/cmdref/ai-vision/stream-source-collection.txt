@@ -1,0 +1,14 @@
+stream-source-collection
+************************
+
+
+Description
+===========
+
+The results of a streamSource search.
+
+
+Available Commands
+==================
+
+* list-stream-sources

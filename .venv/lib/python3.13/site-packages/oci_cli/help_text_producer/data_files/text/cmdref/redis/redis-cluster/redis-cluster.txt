@@ -1,0 +1,27 @@
+redis-cluster
+*************
+
+
+Description
+===========
+
+An OCI Cache cluster is a memory-based storage solution. For more
+information, see OCI Cache.
+
+
+Available Commands
+==================
+
+* attach
+
+* change-compartment
+
+* create
+
+* delete
+
+* detach
+
+* get
+
+* update

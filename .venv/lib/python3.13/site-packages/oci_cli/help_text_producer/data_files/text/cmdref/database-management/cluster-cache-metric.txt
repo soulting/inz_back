@@ -1,0 +1,15 @@
+cluster-cache-metric
+********************
+
+
+Description
+===========
+
+The response containing the cluster cache metrics for the Oracle Real
+Application Clusters (Oracle RAC) database.
+
+
+Available Commands
+==================
+
+* get

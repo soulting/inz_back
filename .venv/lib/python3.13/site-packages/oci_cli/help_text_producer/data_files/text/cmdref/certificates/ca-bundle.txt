@@ -1,0 +1,16 @@
+ca-bundle
+*********
+
+
+Description
+===========
+
+The contents of the CA bundle (root and intermediate certificates),
+properties of the CA bundle, and user-provided contextual metadata for
+the CA bundle.
+
+
+Available Commands
+==================
+
+* get

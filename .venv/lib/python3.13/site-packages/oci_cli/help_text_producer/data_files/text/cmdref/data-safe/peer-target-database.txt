@@ -1,0 +1,26 @@
+peer-target-database
+********************
+
+
+Description
+===========
+
+The details of the peer target database in Data Safe.
+
+
+Available Commands
+==================
+
+* create
+
+* create-peer-target-database-database-cloud-service-details
+
+* delete
+
+* get
+
+* list
+
+* update
+
+* update-peer-target-database-database-cloud-service-details

@@ -1,0 +1,15 @@
+protected-database-collection
+*****************************
+
+
+Description
+===========
+
+Results of a protected database search operation. The results contain
+protected database summary and metadata information.
+
+
+Available Commands
+==================
+
+* list-protected-databases

@@ -1,0 +1,14 @@
+time-available-for-refresh
+**************************
+
+
+Description
+===========
+
+one available refresh time.
+
+
+Available Commands
+==================
+
+* list

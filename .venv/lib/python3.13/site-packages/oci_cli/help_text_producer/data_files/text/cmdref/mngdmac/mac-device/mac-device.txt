@@ -1,0 +1,16 @@
+mac-device
+**********
+
+
+Description
+===========
+
+Represents a MacDevice resource.
+
+
+Available Commands
+==================
+
+* get
+
+* terminate

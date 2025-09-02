@@ -1,0 +1,153 @@
+"generate-distributed-autonomous-database-gsm-certificate-signing-request"
+**************************************************************************
+
+* Description
+
+* Usage
+
+* Required Parameters
+
+* Optional Parameters
+
+* Global Parameters
+
+* Example using required parameter
+
+
+Description
+===========
+
+Generate the certificate signing request for GSM instances of the
+Globally distributed autonomous database. Once certificate signing
+request is generated, then customers can download the certificate
+signing request using ‘downloadGsmCertificateSigningRequest’ api call.
+
+
+Usage
+=====
+
+   oci distributed-database distributed-autonomous-db-service distributed-autonomous-database generate-distributed-autonomous-database-gsm-certificate-signing-request [OPTIONS]
+
+
+Required Parameters
+===================
+
+--ca-bundle-id [text]
+
+The ID of the Ca Bundle.
+
+--distributed-autonomous-database-id [text]
+
+Globally distributed autonomous database identifier
+
+
+Optional Parameters
+===================
+
+--from-json [text]
+
+Provide input to this command as a JSON document from a file using the
+file://path-to/file syntax.
+
+The "--generate-full-command-json-input" option can be used to
+generate a sample json file to be used with this command option. The
+key names are pre-populated and match the command option names
+(converted to camelCase format, e.g. compartment-id –> compartmentId),
+while the values of the keys need to be populated by the user before
+using the sample file as an input to this command. For any command
+option that accepts multiple values, the value of the key can be a
+JSON array.
+
+Options can still be provided on the command line. If an option exists
+in both the JSON document and the command line then the command line
+specified value will be used.
+
+For examples on usage of this option, please see our “using CLI with
+advanced JSON options” link: https://docs.cloud.oracle.com/iaas/Conte
+nt/API/SDKDocs/cliusing.htm#AdvancedJSONOptions
+
+--if-match [text]
+
+For optimistic concurrency control. In the PUT or DELETE call for a
+resource, set the *if-match* parameter to the value of the etag from a
+previous GET or POST response for that resource. The resource will be
+updated or deleted only if the etag you provide matches the resource’s
+current etag value.
+
+--max-wait-seconds [integer]
+
+The maximum time to wait for the work request to reach the state
+defined by "--wait-for-state". Defaults to 1200 seconds.
+
+--wait-for-state [text]
+
+This operation asynchronously creates, modifies or deletes a resource
+and uses a work request to track the progress of the operation.
+Specify this option to perform the action and then wait until the work
+request reaches a certain state. Multiple states can be specified,
+returning on the first state. For example, "--wait-for-state"
+SUCCEEDED "--wait-for-state" FAILED would return on whichever
+lifecycle state is reached first. If timeout is reached, a return code
+of 2 is returned. For any other error, a return code of 1 is returned.
+
+Accepted values are:
+
+   ACCEPTED, CANCELED, CANCELING, FAILED, IN_PROGRESS, NEEDS_ATTENTION, SUCCEEDED, WAITING
+
+--wait-interval-seconds [integer]
+
+Check every "--wait-interval-seconds" to see whether the work request
+has reached the state defined by "--wait-for-state". Defaults to 30
+seconds.
+
+
+Global Parameters
+=================
+
+Use "oci --help" for help on global parameters.
+
+"--auth-purpose", "--auth", "--cert-bundle", "--cli-auto-prompt", "--
+cli-rc-file", "--config-file", "--connection-timeout", "--debug", "--
+defaults-file", "--endpoint", "--generate-full-command-json-input", "
+--generate-param-json-input", "--help", "--latest-version", "--max-
+retries", "--no-retry", "--opc-client-request-id", "--opc-request-id",
+"--output", "--profile", "--proxy", "--query", "--raw-output", "--
+read-timeout", "--realm-specific-endpoint", "--region", "--release-
+info", "--request-id", "--version", "-?", "-d", "-h", "-i", "-v"
+
+
+Example using required parameter
+================================
+
+Copy and paste the following example into a JSON file, replacing the
+example parameters with your own.
+
+       oci distributed-database distributed-autonomous-db-service distributed-autonomous-database create --generate-param-json-input catalog-details > catalog-details.json
+       oci distributed-database distributed-autonomous-db-service distributed-autonomous-database create --generate-param-json-input private-endpoint-ids > private-endpoint-ids.json
+       oci distributed-database distributed-autonomous-db-service distributed-autonomous-database create --generate-param-json-input shard-details > shard-details.json
+
+Copy the following CLI commands into a file named example.sh. Run the
+command by typing “bash example.sh” and replacing the example
+parameters with your own.
+
+Please note this sample will only work in the POSIX-compliant bash-
+like shell. You need to set up the OCI configuration and appropriate
+security policies before trying the examples.
+
+       export character_set=<substitute-value-of-character_set> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/distributed-database/distributed-autonomous-db-service/distributed-autonomous-database/create.html#cmdoption-character-set
+       export compartment_id=<substitute-value-of-compartment_id> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/distributed-database/distributed-autonomous-db-service/distributed-autonomous-database/create.html#cmdoption-compartment-id
+       export database_version=<substitute-value-of-database_version> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/distributed-database/distributed-autonomous-db-service/distributed-autonomous-database/create.html#cmdoption-database-version
+       export db_deployment_type=<substitute-value-of-db_deployment_type> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/distributed-database/distributed-autonomous-db-service/distributed-autonomous-database/create.html#cmdoption-db-deployment-type
+       export db_workload=<substitute-value-of-db_workload> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/distributed-database/distributed-autonomous-db-service/distributed-autonomous-database/create.html#cmdoption-db-workload
+       export display_name=<substitute-value-of-display_name> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/distributed-database/distributed-autonomous-db-service/distributed-autonomous-database/create.html#cmdoption-display-name
+       export listener_port=<substitute-value-of-listener_port> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/distributed-database/distributed-autonomous-db-service/distributed-autonomous-database/create.html#cmdoption-listener-port
+       export ncharacter_set=<substitute-value-of-ncharacter_set> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/distributed-database/distributed-autonomous-db-service/distributed-autonomous-database/create.html#cmdoption-ncharacter-set
+       export ons_port_local=<substitute-value-of-ons_port_local> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/distributed-database/distributed-autonomous-db-service/distributed-autonomous-database/create.html#cmdoption-ons-port-local
+       export ons_port_remote=<substitute-value-of-ons_port_remote> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/distributed-database/distributed-autonomous-db-service/distributed-autonomous-database/create.html#cmdoption-ons-port-remote
+       export prefix=<substitute-value-of-prefix> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/distributed-database/distributed-autonomous-db-service/distributed-autonomous-database/create.html#cmdoption-prefix
+       export sharding_method=<substitute-value-of-sharding_method> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/distributed-database/distributed-autonomous-db-service/distributed-autonomous-database/create.html#cmdoption-sharding-method
+       export ca_bundle_id=<substitute-value-of-ca_bundle_id> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/distributed-database/distributed-autonomous-db-service/distributed-autonomous-database/generate-distributed-autonomous-database-gsm-certificate-signing-request.html#cmdoption-ca-bundle-id
+
+       distributed_autonomous_database_id=$(oci distributed-database distributed-autonomous-db-service distributed-autonomous-database create --catalog-details file://catalog-details.json --character-set $character_set --compartment-id $compartment_id --database-version $database_version --db-deployment-type $db_deployment_type --db-workload $db_workload --display-name $display_name --listener-port $listener_port --ncharacter-set $ncharacter_set --ons-port-local $ons_port_local --ons-port-remote $ons_port_remote --prefix $prefix --private-endpoint-ids file://private-endpoint-ids.json --shard-details file://shard-details.json --sharding-method $sharding_method --query data.id --raw-output)
+
+       oci distributed-database distributed-autonomous-db-service distributed-autonomous-database generate-distributed-autonomous-database-gsm-certificate-signing-request --ca-bundle-id $ca_bundle_id --distributed-autonomous-database-id $distributed_autonomous_database_id

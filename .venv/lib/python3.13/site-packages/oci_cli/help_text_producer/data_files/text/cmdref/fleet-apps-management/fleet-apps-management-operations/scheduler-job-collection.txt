@@ -1,0 +1,15 @@
+scheduler-job-collection
+************************
+
+
+Description
+===========
+
+Results of a schedulerJob search. Contains SchedulerJobSummary items
+and other information, such as metadata.
+
+
+Available Commands
+==================
+
+* list-scheduler-jobs

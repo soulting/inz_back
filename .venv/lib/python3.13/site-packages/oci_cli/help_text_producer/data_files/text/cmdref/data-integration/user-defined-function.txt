@@ -1,0 +1,23 @@
+user-defined-function
+*********************
+
+
+Description
+===========
+
+The user defined function type contains the audit summary information
+and the definition of the user defined function.
+
+
+Available Commands
+==================
+
+* create
+
+* delete
+
+* get
+
+* list
+
+* update

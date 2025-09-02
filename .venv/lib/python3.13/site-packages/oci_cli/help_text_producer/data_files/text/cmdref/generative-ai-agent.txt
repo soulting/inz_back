@@ -1,0 +1,157 @@
+generative-ai-agent
+*******************
+
+
+Description
+===========
+
+OCI Generative AI Agents is a fully managed service that combines the
+power of large language models (LLMs) with an intelligent retrieval
+system to create contextually relevant answers by searching your
+knowledge base, making your AI applications smart and efficient.
+
+OCI Generative AI Agents supports several ways to onboard your data
+and then allows you and your customers to interact with your data
+using a chat interface or CLI.
+
+Use the Generative AI Agents CLI to create and manage agents,
+knowledge bases, data sources, endpoints, data ingestion jobs, and
+work requests.
+
+For creating and managing client chat sessions see the [Generative AI
+Agents Client CLI].
+
+To learn more about the service, see the Generative AI Agents
+documentation.
+
+
+Available Commands
+==================
+
+* agent
+
+  * change-compartment
+
+  * create
+
+  * delete
+
+  * get
+
+  * list
+
+  * update
+
+* agent-endpoint
+
+  * change-compartment
+
+  * create
+
+  * delete
+
+  * get
+
+  * list
+
+  * update
+
+* data-ingestion-job
+
+  * create
+
+  * delete
+
+  * get
+
+  * get-log-content
+
+  * list
+
+* data-source
+
+  * create
+
+  * create-object-storage-ds
+
+  * delete
+
+  * get
+
+  * list
+
+  * update
+
+  * update-object-storage-ds
+
+* knowledge-base
+
+  * change-compartment
+
+  * create
+
+  * create-default-kb
+
+  * create-oci-database-kb
+
+  * create-oci-open-search-kb
+
+  * delete
+
+  * get
+
+  * list
+
+  * update
+
+  * update-oci-database-kb
+
+  * update-oci-open-search-kb
+
+* tool
+
+  * create
+
+  * create-tool-agent-tool-config
+
+  * create-tool-function-calling-tool-config
+
+  * create-tool-http-endpoint-tool-config
+
+  * create-tool-rag-tool-config
+
+  * create-tool-sql-tool-config
+
+  * delete
+
+  * get
+
+  * list
+
+  * update
+
+  * update-tool-agent-tool-config
+
+  * update-tool-function-calling-tool-config
+
+  * update-tool-http-endpoint-tool-config
+
+  * update-tool-rag-tool-config
+
+  * update-tool-sql-tool-config
+
+* work-request
+
+  * cancel
+
+  * get
+
+  * list
+
+* work-request-error
+
+  * list
+
+* work-request-log-entry
+
+  * list-logs

@@ -1,0 +1,16 @@
+subscribed-service
+******************
+
+
+Description
+===========
+
+Subscribed service contract details
+
+
+Available Commands
+==================
+
+* get
+
+* list

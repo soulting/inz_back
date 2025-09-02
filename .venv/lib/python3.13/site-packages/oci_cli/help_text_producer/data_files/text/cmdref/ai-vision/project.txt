@@ -1,0 +1,22 @@
+project
+*******
+
+
+Description
+===========
+
+A Vision Project containing models.
+
+
+Available Commands
+==================
+
+* change-compartment
+
+* create
+
+* delete
+
+* get
+
+* update

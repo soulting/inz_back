@@ -1,0 +1,18 @@
+media-asset-distribution-channel-attachment
+*******************************************
+
+
+Description
+===========
+
+Attachment between MediaAsset and streaming DistributionChannel.
+
+
+Available Commands
+==================
+
+* delete
+
+* get
+
+* list

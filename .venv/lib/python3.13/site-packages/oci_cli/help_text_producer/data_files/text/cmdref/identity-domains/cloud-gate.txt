@@ -1,0 +1,22 @@
+cloud-gate
+**********
+
+
+Description
+===========
+
+Resource representing a Cloud Gate
+
+
+Available Commands
+==================
+
+* create
+
+* delete
+
+* get
+
+* patch
+
+* put

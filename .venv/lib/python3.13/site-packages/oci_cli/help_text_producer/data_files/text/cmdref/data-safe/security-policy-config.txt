@@ -1,0 +1,23 @@
+security-policy-config
+**********************
+
+
+Description
+===========
+
+The Data Safe resource represents the common configurations
+corresponding to the associated security policy.
+
+
+Available Commands
+==================
+
+* change-compartment
+
+* create
+
+* delete
+
+* get
+
+* update

@@ -1,0 +1,54 @@
+osp-gateway
+***********
+
+
+Description
+===========
+
+This site describes all the Rest endpoints of OSP Gateway.
+
+
+Available Commands
+==================
+
+* address-rule-service
+
+  * address-rule
+
+    * get
+
+* address-service
+
+  * address
+
+    * get
+
+    * verify
+
+* invoice-service
+
+  * invoice
+
+    * download-pdf-content
+
+    * get
+
+    * list
+
+    * list-invoice-lines
+
+    * pay
+
+* subscription-service
+
+  * subscription
+
+    * authorize-subscription-payment
+
+    * get
+
+    * list
+
+    * pay
+
+    * update

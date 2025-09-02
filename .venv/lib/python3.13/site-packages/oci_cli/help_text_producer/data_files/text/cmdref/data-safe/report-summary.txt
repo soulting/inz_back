@@ -1,0 +1,14 @@
+report-summary
+**************
+
+
+Description
+===========
+
+Description of report.
+
+
+Available Commands
+==================
+
+* list-reports

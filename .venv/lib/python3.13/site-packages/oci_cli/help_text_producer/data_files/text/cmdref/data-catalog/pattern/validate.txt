@@ -1,0 +1,137 @@
+"validate"
+**********
+
+* Description
+
+* Usage
+
+* Required Parameters
+
+* Optional Parameters
+
+* Global Parameters
+
+* Example using required parameter
+
+
+Description
+===========
+
+Validate pattern by deriving file groups representing logical entities
+using the expression
+
+
+Usage
+=====
+
+   oci data-catalog pattern validate [OPTIONS]
+
+
+Required Parameters
+===================
+
+--catalog-id [text]
+
+Unique catalog identifier.
+
+--pattern-key [text]
+
+Unique pattern key.
+
+
+Optional Parameters
+===================
+
+--check-failure-limit [integer]
+
+The maximum number of UNMATCHED files, in checkFilePathList, above
+which the check fails. Optional, if checkFilePathList is provided.
+
+If provided with the request, this overrides the value which already
+exists as part of the pattern, if any.
+
+--check-file-path-list [complex type]
+
+List of file paths against which the pattern can be tried, as a check.
+This documents, for reference purposes, some example objects a pattern
+is meant to work with.
+
+If provided with the request,this overrides the list which already
+exists as part of the pattern, if any. This is a complex type whose
+value must be valid JSON. The value can be provided as a string on the
+command line or passed in as a file using the file://path/to/file
+syntax.
+
+The "--generate-param-json-input" option can be used to generate an
+example of the JSON which must be provided. We recommend storing this
+example in a file, modifying it as needed and then passing it back in
+via the file:// syntax.
+
+--expression [text]
+
+Input string which drives the selection process, allowing for fine-
+grained control using qualifiers. Refer to the user documentation for
+details of the format and examples. A pattern cannot include both a
+prefix and an expression.
+
+--file-path-prefix [text]
+
+Input string which drives the selection process. Refer to the user
+documentation for details of the format and examples. A pattern cannot
+include both a prefix and an expression.
+
+--from-json [text]
+
+Provide input to this command as a JSON document from a file using the
+file://path-to/file syntax.
+
+The "--generate-full-command-json-input" option can be used to
+generate a sample json file to be used with this command option. The
+key names are pre-populated and match the command option names
+(converted to camelCase format, e.g. compartment-id –> compartmentId),
+while the values of the keys need to be populated by the user before
+using the sample file as an input to this command. For any command
+option that accepts multiple values, the value of the key can be a
+JSON array.
+
+Options can still be provided on the command line. If an option exists
+in both the JSON document and the command line then the command line
+specified value will be used.
+
+For examples on usage of this option, please see our “using CLI with
+advanced JSON options” link: https://docs.cloud.oracle.com/iaas/Conte
+nt/API/SDKDocs/cliusing.htm#AdvancedJSONOptions
+
+
+Global Parameters
+=================
+
+Use "oci --help" for help on global parameters.
+
+"--auth-purpose", "--auth", "--cert-bundle", "--cli-auto-prompt", "--
+cli-rc-file", "--config-file", "--connection-timeout", "--debug", "--
+defaults-file", "--endpoint", "--generate-full-command-json-input", "
+--generate-param-json-input", "--help", "--latest-version", "--max-
+retries", "--no-retry", "--opc-client-request-id", "--opc-request-id",
+"--output", "--profile", "--proxy", "--query", "--raw-output", "--
+read-timeout", "--realm-specific-endpoint", "--region", "--release-
+info", "--request-id", "--version", "-?", "-d", "-h", "-i", "-v"
+
+
+Example using required parameter
+================================
+
+Copy the following CLI commands into a file named example.sh. Run the
+command by typing “bash example.sh” and replacing the example
+parameters with your own.
+
+Please note this sample will only work in the POSIX-compliant bash-
+like shell. You need to set up the OCI configuration and appropriate
+security policies before trying the examples.
+
+       export compartment_id=<substitute-value-of-compartment_id> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/data-catalog/catalog/create.html#cmdoption-compartment-id
+       export pattern_key=<substitute-value-of-pattern_key> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/data-catalog/pattern/validate.html#cmdoption-pattern-key
+
+       catalog_id=$(oci data-catalog catalog create --compartment-id $compartment_id --query data.id --raw-output)
+
+       oci data-catalog pattern validate --catalog-id $catalog_id --pattern-key $pattern_key

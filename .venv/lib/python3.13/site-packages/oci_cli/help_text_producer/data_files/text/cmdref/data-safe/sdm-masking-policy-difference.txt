@@ -1,0 +1,29 @@
+sdm-masking-policy-difference
+*****************************
+
+
+Description
+===========
+
+A resource that tracks the differences between sensitive columns in
+the sensitive data model and masking columns in the masking policy
+
+
+Available Commands
+==================
+
+* change-compartment
+
+* create
+
+* delete
+
+* get
+
+* list
+
+* list-difference-columns
+
+* patch-sdm-masking-policy-difference-columns
+
+* update

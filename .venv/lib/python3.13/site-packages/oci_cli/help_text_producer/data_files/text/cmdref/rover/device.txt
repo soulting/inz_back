@@ -1,0 +1,60 @@
+device
+******
+
+
+Description
+===========
+
+Rover Physical Device.
+
+
+Available Commands
+==================
+
+* data-sync
+
+  * task
+
+    * cancel
+
+    * get
+
+    * list
+
+    * start
+
+  * task-definition
+
+    * create
+
+    * delete
+
+    * get
+
+    * list
+
+    * update
+
+* diagnostics
+
+  * bundle
+
+    * cancel
+
+    * create
+
+    * get
+
+    * list
+
+    * view-summary
+
+* system-upgrade
+
+  * get-import-history
+
+  * get-import-status
+
+  * import-bundle
+
+  * upload-bundle

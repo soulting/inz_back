@@ -1,0 +1,80 @@
+host-insights
+*************
+
+
+Description
+===========
+
+Logical grouping used for Operations Insights host related operations.
+
+
+Available Commands
+==================
+
+* change
+
+* create-em-external-host
+
+* create-macs-cloud-host
+
+* create-macs-external-host
+
+* delete
+
+* disable
+
+* enable-em-external-host
+
+* enable-macs-cloud-host
+
+* enable-macs-external-host
+
+* get
+
+* ingest-host-configuration
+
+* ingest-host-metrics
+
+* list
+
+* list-host-configurations
+
+* list-hosted-entities
+
+* list-importable-agent-entities
+
+* list-macs-cloud-hosts
+
+* summarize-disk-statistics
+
+* summarize-host-insight-resource-capacity-trend
+
+* summarize-host-insight-resource-forecast-trend
+
+* summarize-host-insight-resource-statistics
+
+* summarize-host-insight-resource-usage
+
+* summarize-host-insight-resource-usage-trend
+
+* summarize-host-insight-resource-utilization-insight
+
+* summarize-host-recommendation
+
+* summarize-io-usage-trend
+
+* summarize-network-usage-trend
+
+* summarize-storage-usage-trend
+
+* summarize-top-processes-usage-trend
+
+* update-em-external-host
+
+* update-host-insight-update-pe-comanaged-host-insight-details
+
+* update-macs-cloud-host
+
+* update-macs-external-host
+
+* update-macs-managed-database-host-insight

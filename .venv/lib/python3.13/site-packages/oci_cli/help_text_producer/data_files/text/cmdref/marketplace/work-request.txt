@@ -1,0 +1,20 @@
+work-request
+************
+
+
+Description
+===========
+
+A description of workrequest
+
+
+Available Commands
+==================
+
+* get
+
+* list
+
+* list-work-request-errors
+
+* list-work-request-logs

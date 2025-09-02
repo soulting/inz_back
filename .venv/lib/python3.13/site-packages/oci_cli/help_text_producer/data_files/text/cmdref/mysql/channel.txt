@@ -1,0 +1,26 @@
+channel
+*******
+
+
+Description
+===========
+
+A Channel connecting a DB System to an external entity.
+
+
+Available Commands
+==================
+
+* create-from-mysql
+
+* delete
+
+* get
+
+* list
+
+* reset
+
+* resume
+
+* update-from-mysql

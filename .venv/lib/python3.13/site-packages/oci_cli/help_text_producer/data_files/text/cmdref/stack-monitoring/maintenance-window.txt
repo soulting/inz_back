@@ -1,0 +1,27 @@
+maintenance-window
+******************
+
+
+Description
+===========
+
+Maintenance Window object. It contains all the information of the
+Maintenance window. Used in the Create and Get operations.
+
+
+Available Commands
+==================
+
+* create
+
+* delete
+
+* get
+
+* list
+
+* retry-failed-maintenance-window-operation
+
+* stop
+
+* update

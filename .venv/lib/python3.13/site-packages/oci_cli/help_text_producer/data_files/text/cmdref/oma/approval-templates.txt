@@ -1,0 +1,15 @@
+approval-templates
+******************
+
+
+Description
+===========
+
+Results of approval template search. Contains both
+ApprovalTemplateSummary items and other information, such as metadata.
+
+
+Available Commands
+==================
+
+* list

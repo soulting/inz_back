@@ -1,0 +1,23 @@
+internal-occm-demand-signal-delivery
+************************************
+
+
+Description
+===========
+
+An internal model that contains information about the demand signal
+item delivery from OCI to customers.
+
+
+Available Commands
+==================
+
+* create
+
+* delete
+
+* get
+
+* list
+
+* update

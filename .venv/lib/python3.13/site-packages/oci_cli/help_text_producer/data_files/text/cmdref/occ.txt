@@ -1,0 +1,28 @@
+occ
+***
+
+
+Description
+===========
+
+OCI Control Center (OCC) service enables you to monitor the region-
+level cloud consumption and provides the region-level capacity data,
+in realms where OCC is available. Use the OCI Control Center (OCC) CLI
+to explore region-level capacity and utilization information about
+core services. For more information, see OCI Control Center.
+
+
+Available Commands
+==================
+
+* metric-data
+
+  * read
+
+* metric-property
+
+  * list
+
+* namespace
+
+  * list

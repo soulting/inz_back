@@ -1,0 +1,194 @@
+"list"
+******
+
+* Description
+
+* Usage
+
+* Optional Parameters
+
+* Global Parameters
+
+* Example using required parameter
+
+* Other Examples
+
+
+Description
+===========
+
+Lists the IPv6 objects based on one of these filters:
+
+   * Subnet OCID.   * VNIC OCID.   * Both IPv6 address and subnet
+     OCID: This lets you get an *Ipv6* object based on its private
+     IPv6 address (for example,
+     2001:0db8:0123:1111:abcd:ef01:2345:6789) and not its OCID. For
+     comparison,   GetIpv6 requires the OCID.
+
+
+Usage
+=====
+
+   oci network ipv6 list [OPTIONS]
+
+
+Optional Parameters
+===================
+
+--all
+
+Fetches all pages of results. If you provide this option, then you
+cannot provide the "--limit" option.
+
+--from-json [text]
+
+Provide input to this command as a JSON document from a file using the
+file://path-to/file syntax.
+
+The "--generate-full-command-json-input" option can be used to
+generate a sample json file to be used with this command option. The
+key names are pre-populated and match the command option names
+(converted to camelCase format, e.g. compartment-id –> compartmentId),
+while the values of the keys need to be populated by the user before
+using the sample file as an input to this command. For any command
+option that accepts multiple values, the value of the key can be a
+JSON array.
+
+Options can still be provided on the command line. If an option exists
+in both the JSON document and the command line then the command line
+specified value will be used.
+
+For examples on usage of this option, please see our “using CLI with
+advanced JSON options” link: https://docs.cloud.oracle.com/iaas/Conte
+nt/API/SDKDocs/cliusing.htm#AdvancedJSONOptions
+
+--ip-address [text]
+
+An IP address. This could be either IPv4 or IPv6, depending on the
+resource. Example: *10.0.3.3*
+
+--ip-state [text]
+
+State of the IP address. If an IP address is assigned to a VNIC it is
+ASSIGNED otherwise AVAILABLE
+
+--lifetime [text]
+
+Lifetime of the IP address. There are two types of IPs:  - Ephemeral
+- Reserved
+
+--limit [integer]
+
+For list pagination. The maximum number of results per page, or items
+to return in a paginated “List” call. For important details about how
+pagination works, see List Pagination.
+
+Example:
+
+   50
+
+--page [text]
+
+For list pagination. The value of the *opc-next-page* response header
+from the previous “List” call. For important details about how
+pagination works, see List Pagination.
+
+--page-size [integer]
+
+When fetching results, the number of results to fetch per call. Only
+valid when used with "--all" or "--limit", and ignored otherwise.
+
+--subnet-id [text]
+
+The OCID of the subnet.
+
+--vnic-id [text]
+
+The OCID of the VNIC.
+
+
+Global Parameters
+=================
+
+Use "oci --help" for help on global parameters.
+
+"--auth-purpose", "--auth", "--cert-bundle", "--cli-auto-prompt", "--
+cli-rc-file", "--config-file", "--connection-timeout", "--debug", "--
+defaults-file", "--endpoint", "--generate-full-command-json-input", "
+--generate-param-json-input", "--help", "--latest-version", "--max-
+retries", "--no-retry", "--opc-client-request-id", "--opc-request-id",
+"--output", "--profile", "--proxy", "--query", "--raw-output", "--
+read-timeout", "--realm-specific-endpoint", "--region", "--release-
+info", "--request-id", "--version", "-?", "-d", "-h", "-i", "-v"
+
+
+Example using required parameter
+================================
+
+Copy the following CLI commands into a file named example.sh. Run the
+command by typing “bash example.sh” and replacing the example
+parameters with your own.
+
+Please note this sample will only work in the POSIX-compliant bash-
+like shell. You need to set up the OCI configuration and appropriate
+security policies before trying the examples.
+
+       oci network ipv6 list
+
+
+Other Examples
+==============
+
+
+Description
+-----------
+
+Lists the IPv6 objects in a VNIC
+
+
+Command
+-------
+
+    oci network ipv6 list --vnic-id [OCID] [OPTIONS]
+
+
+Output
+------
+
+   "List of IPv6 OCIDs.    }
+
+
+Description
+-----------
+
+Lists the IPv6 objects in a Subnet
+
+
+Command
+-------
+
+    oci network ipv6 list --subnet-id [OCID] [OPTIONS]
+
+
+Output
+------
+
+   "List of IPv6 OCIDs.    }
+
+
+Description
+-----------
+
+List the IPv6 object based on Subnet and IPv6 address
+
+
+Command
+-------
+
+    oci network ipv6 list --subnet-id [OCID] --ip_address [IPv6 address] [OPTIONS]
+
+
+Output
+------
+
+   "List of IPv6 OCIDs.    }

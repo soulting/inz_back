@@ -1,0 +1,357 @@
+Oracle Cloud Infrastructure CLI Command Reference
+*************************************************
+
+Oracle Cloud Infrastructure (oci)
+
+
+Announcements
+*************
+
+
+Interactive Features
+====================
+
+OCI CLI offers interactive features to guide you through command
+usage.
+
+Enabling them allows:
+   * Suggestions and autocompletion to help compose commands;
+
+   * Color-coded suggestions to distinguish required parameters from
+     optional parameters where required parameters are also
+     highlighted with (*) for accessibility support; and
+
+   * Quick references display alongside suggestions to recognize
+     command and parameter purposes.
+
+Try the interactive features anytime with the "-i" option:
+
+   oci -i
+
+Read more on OCI Documentation.
+
+
+Available Service Commands
+==========================
+
+* Access Governance (access-governance-cp)
+
+* Analytics (analytics)
+
+* Announcements Service (announce)
+
+* API Gateway (api-gateway)
+
+* APM Availability Monitoring (apm-synthetics)
+
+* Application Dependency Management (adm)
+
+* Application Performance Monitoring Configuration (apm-config)
+
+* Application Performance Monitoring Control Plane (apm-control-plane)
+
+* Application Performance Monitoring Trace Explorer (apm-traces)
+
+* Artifacts and Container Images (artifacts)
+
+* Audit (audit)
+
+* Autoscaling (autoscaling)
+
+* Bastion (bastion)
+
+* Big Data Service (bds)
+
+* Block Volume Service (bv)
+
+* Blockchain Platform Control Plane (blockchain)
+
+* Budgets (budgets)
+
+* Certificates Service Management (certs-mgmt)
+
+* Certificates Service Retrieval (certificates)
+
+* Cloud Advisor (optimizer)
+
+* Cloud Guard and Security Zones (cloud-guard)
+
+* Cluster Placement Groups (cpg)
+
+* Compute Cloud@Customer (ccc)
+
+* Compute Instance Agent Service (instance-agent)
+
+* Compute Management Service (compute-management)
+
+* Compute Service (compute)
+
+* Connector Hub (sch)
+
+* Container Instance (container-instances)
+
+* Dashboards (dashboard-service)
+
+* Data Catalog (data-catalog)
+
+* Data Flow (data-flow)
+
+* Data Integration (data-integration)
+
+* Data Labeling (data-labeling-service-dataplane)
+
+* Data Labeling Management (data-labeling-service)
+
+* Data Safe (data-safe)
+
+* Data Science (data-science)
+
+* Database Management (database-management)
+
+* Database Migration (database-migration)
+
+* Database Service (db)
+
+* Database Tools (dbtools)
+
+* Dblm (dblm)
+
+* DevOps (devops)
+
+* Digital Assistant Service Instance (oda)
+
+* DNS (dns)
+
+* Document Understanding (ai-document)
+
+* EM Warehouse (em-warehouse)
+
+* Email Delivery (email)
+
+* Email Delivery Submission (email-data-plane)
+
+* Events (events)
+
+* Exadata Fleet Update service (fleet-software-update)
+
+* File Storage (fs)
+
+* File Storage with Lustre (lfs)
+
+* Fleet Application Management Service (fleet-apps-management)
+
+* Full Stack Disaster Recovery (disaster-recovery)
+
+* Functions Service (fn)
+
+* Fusion Applications Environment Management (fusion-apps)
+
+* Generative AI Agents Client (generative-ai-agent-runtime)
+
+* Generative AI Agents Management (generative-ai-agent)
+
+* Generative AI Service Inference (generative-ai-inference)
+
+* Generative AI Service Management (generative-ai)
+
+* Globally Distributed Database (distributed-database)
+
+* Globally Distributed Database (gdd)
+
+* GoldenGate (goldengate)
+
+* GovernanceRulesControlPlane (governance-rules-control-plane)
+
+* Health Checks (health-checks)
+
+* Identity and Access Management Service (iam)
+
+* Identity Domains (identity-domains)
+
+* Java Management Service Download (jms-java-downloads)
+
+* Java Management Service Fleets (jms)
+
+* Key Management (kms)
+
+* Kubernetes Engine (ce)
+
+* Language (ai)
+
+* License Manager (license-manager)
+
+* Load Balancing (lb)
+
+* LogAnalytics (log-analytics)
+
+* Logging Ingestion (logging-ingestion)
+
+* Logging Management (logging)
+
+* Logging Search (logging-search)
+
+* Managed Access (oma)
+
+* Management Agent (management-agent)
+
+* ManagementDashboard (management-dashboard)
+
+* Marketplace Service (marketplace)
+
+* MarketplacePrivateOffer (marketplace-private-offer)
+
+* MarketplacePublisherService (marketplace-publisher)
+
+* Media Services (media-services)
+
+* Model Deployment Data Plane (model-deployment)
+
+* Monitoring (monitoring)
+
+* MySQL Database Service (mysql)
+
+* Network Firewall (network-firewall)
+
+* Network Monitoring (vn-monitoring)
+
+* Networking Service (network)
+
+* NetworkLoadBalancer (nlb)
+
+* None (session)
+
+* NoSQL Database (nosql)
+
+* Notifications (ons)
+
+* Object Storage Service (os)
+
+* OCI Cache (redis)
+
+* OCI Control Center (occ)
+
+* OCI Control Center Capacity Management (capacity-management)
+
+* OCI Control Center Demand Signal (demand-signal)
+
+* OCI Managed Services for Mac (mngdmac)
+
+* OneSubscription  Billing Schedule (osub-billing-schedule)
+
+* OneSubscription  Subscription, Commitment and and Rate Card Details
+  (osub-subscription)
+
+* OneSubscription  Usage Computation (osub-usage)
+
+* OneSubscription (onesubscription)
+
+* OneSubscription Gateway  Organization’s Subscription (osub-
+  organization-subscription)
+
+* OpenSearch Service (opensearch)
+
+* OperatorAccessControl (opctl)
+
+* Ops Insights (opsi)
+
+* Oracle  Access Control (apiaccesscontrol)
+
+* Oracle Cloud Bridge (cloud-bridge)
+
+* Oracle Cloud Migrations (cloud-migrations)
+
+* Oracle Cloud VMware Solution (ocvs)
+
+* Oracle Content and Experience (oce)
+
+* Oracle Database Autonomous Recovery Service (recovery)
+
+* Oracle Database MultiCloud Data plane Integration (dbmulticloud)
+
+* Oracle Delegate Access Control (delegate-access-control)
+
+* Oracle Integration (integration)
+
+* Oracle Multicloud (multicloud)
+
+* Oracle Streaming with Apache Kafka (OSAK) (kafka)
+
+* Organizations (organizations)
+
+* OS Management Hub (os-management-hub)
+
+* OSP Gateway (osp-gateway)
+
+* P Control Plane (api-platform)
+
+* PGSQL Control Plane (psql)
+
+* Process Automation (opa)
+
+* Queue (queue)
+
+* Resource Discovery and Monitoring Control (appmgmt-control)
+
+* Resource Manager (resource-manager)
+
+* Resource Scheduler (resource-scheduler)
+
+* RoverCloudService (rover)
+
+* Scanning (vulnerability-scanning)
+
+* Search Service (search)
+
+* Secure Desktops (desktops)
+
+* Security Attribute (security-attribute)
+
+* Service Catalog (service-catalog)
+
+* Service Limits (limits)
+
+* Service Manager Proxy (service-manager-proxy)
+
+* Speech (speech)
+
+* Stack Monitoring (stack-monitoring)
+
+* Streaming (streaming)
+
+* Support Management (support)
+
+* Threat Intelligence (threat-intelligence)
+
+* Usage (usage-api)
+
+* Usage Proxy (usage)
+
+* Vault Secret Management (vault)
+
+* Vault Secret Retrieval (secrets)
+
+* VB Studio Controlplane Instance API (vbstudio)
+
+* Vision (ai-vision)
+
+* Visual Builder (visual-builder)
+
+* Web Application Acceleration (WAA) (waa)
+
+* Web Application Acceleration and Security Services (waas)
+
+* Web Application Firewall (WAF) (waf)
+
+* WebLogic Management Service (wlms)
+
+* Work Requests (work-requests)
+
+* Zero Trust Packet Routing Control Plane (zpr)
+
+
+Other Commands
+==============
+
+* Makes a raw request against an OCI service (raw-request)
+
+* None (setup)

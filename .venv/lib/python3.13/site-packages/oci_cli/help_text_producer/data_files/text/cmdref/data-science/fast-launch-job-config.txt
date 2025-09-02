@@ -1,0 +1,14 @@
+fast-launch-job-config
+**********************
+
+
+Description
+===========
+
+The shape config to launch a fast launch capable job instance
+
+
+Available Commands
+==================
+
+* list

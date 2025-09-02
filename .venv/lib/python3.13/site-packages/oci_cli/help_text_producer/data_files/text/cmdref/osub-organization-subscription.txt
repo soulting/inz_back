@@ -1,0 +1,17 @@
+osub-organization-subscription
+******************************
+
+
+Description
+===========
+
+CLI that returns data for the list of subscription ids returned from
+Organizations CLI
+
+
+Available Commands
+==================
+
+* subscription
+
+  * list-organization

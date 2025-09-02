@@ -1,0 +1,25 @@
+knowledge-base
+**************
+
+
+Description
+===========
+
+A knowledge base is a component of Application Dependency Management
+(ADM) service that provides access to vulnerabilities.
+
+
+Available Commands
+==================
+
+* change-compartment
+
+* create
+
+* delete
+
+* get
+
+* list
+
+* update

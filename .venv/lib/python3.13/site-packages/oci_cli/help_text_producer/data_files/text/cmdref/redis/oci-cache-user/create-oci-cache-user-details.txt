@@ -1,0 +1,18 @@
+create-oci-cache-user-details
+*****************************
+
+
+Description
+===========
+
+Details required to create a new OCI cache user.
+
+
+Available Commands
+==================
+
+* create-oci-cache-user
+
+* create-oci-cache-user-iam-authentication-mode
+
+* create-oci-cache-user-password-authentication-mode

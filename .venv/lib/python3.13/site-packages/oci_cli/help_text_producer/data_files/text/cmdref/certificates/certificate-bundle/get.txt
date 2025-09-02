@@ -1,0 +1,130 @@
+"get"
+*****
+
+* Description
+
+* Usage
+
+* Required Parameters
+
+* Optional Parameters
+
+* Global Parameters
+
+* Example using required parameter
+
+
+Description
+===========
+
+Gets a certificate bundle that matches either the specified *stage*,
+*versionName*, or *versionNumber* parameter. If none of these
+parameters are provided, the bundle for the certificate version marked
+as *CURRENT* will be returned.
+
+By default, the private key is not included in the query result, and a
+CertificateBundlePublicOnly is returned. If the private key is needed,
+use the CertificateBundleTypeQueryParam parameter to get a
+CertificateBundleWithPrivateKey response.
+
+
+Usage
+=====
+
+   oci certificates certificate-bundle get [OPTIONS]
+
+
+Required Parameters
+===================
+
+--certificate-id [text]
+
+The OCID of the certificate.
+
+
+Optional Parameters
+===================
+
+--bundle-type [text]
+
+The type of certificate bundle. By default, the private key fields are
+not returned. When querying for certificate bundles, to return results
+with certificate contents, the private key in PEM format, and the
+private key passphrase, specify the value of this parameter as
+*CERTIFICATE_CONTENT_WITH_PRIVATE_KEY*.
+
+Accepted values are:
+
+   CERTIFICATE_CONTENT_PUBLIC_ONLY, CERTIFICATE_CONTENT_WITH_PRIVATE_KEY
+
+--from-json [text]
+
+Provide input to this command as a JSON document from a file using the
+file://path-to/file syntax.
+
+The "--generate-full-command-json-input" option can be used to
+generate a sample json file to be used with this command option. The
+key names are pre-populated and match the command option names
+(converted to camelCase format, e.g. compartment-id –> compartmentId),
+while the values of the keys need to be populated by the user before
+using the sample file as an input to this command. For any command
+option that accepts multiple values, the value of the key can be a
+JSON array.
+
+Options can still be provided on the command line. If an option exists
+in both the JSON document and the command line then the command line
+specified value will be used.
+
+For examples on usage of this option, please see our “using CLI with
+advanced JSON options” link: https://docs.cloud.oracle.com/iaas/Conte
+nt/API/SDKDocs/cliusing.htm#AdvancedJSONOptions
+
+--stage [text]
+
+The rotation state of the certificate version.
+
+Accepted values are:
+
+   CURRENT, DEPRECATED, LATEST, PENDING, PREVIOUS
+
+--version-name [text]
+
+The name of the certificate. (This might be referred to as the name of
+the certificate version, as every certificate consists of at least one
+version.) Names are unique across versions of a given certificate.
+
+--version-number [integer]
+
+The version number of the certificate. The default value is 0, which
+means that this query parameter is ignored.
+
+
+Global Parameters
+=================
+
+Use "oci --help" for help on global parameters.
+
+"--auth-purpose", "--auth", "--cert-bundle", "--cli-auto-prompt", "--
+cli-rc-file", "--config-file", "--connection-timeout", "--debug", "--
+defaults-file", "--endpoint", "--generate-full-command-json-input", "
+--generate-param-json-input", "--help", "--latest-version", "--max-
+retries", "--no-retry", "--opc-client-request-id", "--opc-request-id",
+"--output", "--profile", "--proxy", "--query", "--raw-output", "--
+read-timeout", "--realm-specific-endpoint", "--region", "--release-
+info", "--request-id", "--version", "-?", "-d", "-h", "-i", "-v"
+
+
+Example using required parameter
+================================
+
+Copy the following CLI commands into a file named example.sh. Run the
+command by typing “bash example.sh” and replacing the example
+parameters with your own.
+
+Please note this sample will only work in the POSIX-compliant bash-
+like shell. You need to set up the OCI configuration and appropriate
+security policies before trying the examples.
+
+       export certificate_id=<substitute-value-of-certificate_id> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/certificates/certificate-bundle/get.html#cmdoption-certificate-id
+
+       oci certificates certificate-bundle get --certificate-id $certificate_id

@@ -1,0 +1,14 @@
+database-fleet-dataguard-metrics
+********************************
+
+
+Description
+===========
+
+The list of Oracle Data Guard-enabled databases in the fleet.
+
+
+Available Commands
+==================
+
+* get

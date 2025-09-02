@@ -1,0 +1,14 @@
+model-deployment-shape
+**********************
+
+
+Description
+===========
+
+The compute shape used to launch a model deployment compute instance.
+
+
+Available Commands
+==================
+
+* list

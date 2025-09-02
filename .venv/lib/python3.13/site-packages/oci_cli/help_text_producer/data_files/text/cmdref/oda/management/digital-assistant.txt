@@ -1,0 +1,32 @@
+digital-assistant
+*****************
+
+
+Description
+===========
+
+Digital Assistant metadata.
+
+
+Available Commands
+==================
+
+* create
+
+* create-digital-assistant-clone-digital-assistant-details
+
+* create-digital-assistant-create-digital-assistant-version-details
+
+* create-digital-assistant-create-new-digital-assistant-details
+
+* create-digital-assistant-extend-digital-assistant-details
+
+* delete
+
+* get
+
+* list
+
+* publish
+
+* update

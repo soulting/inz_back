@@ -1,0 +1,17 @@
+audit-event-summary
+*******************
+
+
+Description
+===========
+
+The resource represents the audit events collected from the target
+database by Oracle Data Safe.
+
+
+Available Commands
+==================
+
+* list-audit-event-analytics
+
+* list-audit-events

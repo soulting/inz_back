@@ -1,0 +1,25 @@
+resolver-endpoint
+*****************
+
+
+Description
+===========
+
+An OCI DNS resolver endpoint.
+
+**Warning:** Oracle recommends that you avoid using any confidential
+information when you supply string values using the API.
+
+
+Available Commands
+==================
+
+* create
+
+* delete
+
+* get
+
+* list
+
+* update

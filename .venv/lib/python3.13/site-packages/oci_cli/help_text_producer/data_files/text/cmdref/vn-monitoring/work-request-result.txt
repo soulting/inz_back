@@ -1,0 +1,14 @@
+work-request-result
+*******************
+
+
+Description
+===========
+
+Ephemeral data resulting from an asynchronous operation.
+
+
+Available Commands
+==================
+
+* list

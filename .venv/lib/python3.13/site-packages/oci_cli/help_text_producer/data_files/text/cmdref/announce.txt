@@ -1,0 +1,58 @@
+announce
+********
+
+
+Description
+===========
+
+Manage Oracle Cloud Infrastructure console announcements.
+
+
+Available Commands
+==================
+
+* announcement-subscription
+
+  * change-compartment
+
+  * create
+
+  * create-filter-group
+
+  * delete
+
+  * delete-filter-group
+
+  * get
+
+  * list
+
+  * update
+
+  * update-filter-group
+
+* announcements
+
+  * get
+
+  * list
+
+* announcements-preferences
+
+  * create
+
+  * get
+
+  * list
+
+  * update
+
+* service
+
+  * list
+
+* user-status
+
+  * get
+
+  * update

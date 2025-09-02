@@ -1,0 +1,278 @@
+"create-databricks-connection"
+******************************
+
+* Description
+
+* Usage
+
+* Required Parameters
+
+* Optional Parameters
+
+* Global Parameters
+
+* Example using required parameter
+
+
+Description
+===========
+
+Creates a new Connection.
+
+
+Usage
+=====
+
+   oci goldengate connection create-databricks-connection [OPTIONS]
+
+
+Required Parameters
+===================
+
+--authentication-type [text]
+
+Used authentication mechanism to access Databricks.
+
+--compartment-id, -c [text]
+
+The OCID of the compartment being referenced.
+
+--connection-url [text]
+
+Connection URL. e.g.: ‘jdbc:databricks://adb-33934.4.azuredatabricks.
+net:443/default;transportMode=http;ssl=1;httpPath=sql/protocolv1/o/33
+93########44/0##3-7-hlrb’
+
+--display-name [text]
+
+An object’s Display Name.
+
+--technology-type [text]
+
+The Databricks technology type.
+
+
+Optional Parameters
+===================
+
+--client-id [text]
+
+OAuth client id, only applicable for authenticationType == OAUTH_M2M
+
+--client-secret [text]
+
+OAuth client secret, only applicable for authenticationType ==
+OAUTH_M2M Deprecated: This field is deprecated and replaced by
+“clientSecretSecretId”. This field will be removed after February 15
+2026.
+
+--client-secret-secret-id [text]
+
+The OCID of the Secret where the client secret is stored. Only
+applicable for authenticationType == OAUTH_M2M. Note: When provided,
+‘clientSecret’ field must not be provided.
+
+--defined-tags [complex type]
+
+Tags defined for this resource. Each key is predefined and scoped to a
+namespace.
+
+Example:
+
+   {"foo-namespace": {"bar-key": "value"}}
+
+This is a complex type whose value must be valid JSON. The value can
+be provided as a string on the command line or passed in as a file
+using the file://path/to/file syntax.
+
+The "--generate-param-json-input" option can be used to generate an
+example of the JSON which must be provided. We recommend storing this
+example in a file, modifying it as needed and then passing it back in
+via the file:// syntax.
+
+--description [text]
+
+Metadata about this specific object.
+
+--does-use-secret-ids [boolean]
+
+Indicates that sensitive attributes are provided via Secrets.
+
+--freeform-tags [complex type]
+
+A simple key-value pair that is applied without any predefined name,
+type, or scope. Exists for cross-compatibility only.
+
+Example:
+
+   {"bar-key": "value"}
+
+This is a complex type whose value must be valid JSON. The value can
+be provided as a string on the command line or passed in as a file
+using the file://path/to/file syntax.
+
+The "--generate-param-json-input" option can be used to generate an
+example of the JSON which must be provided. We recommend storing this
+example in a file, modifying it as needed and then passing it back in
+via the file:// syntax.
+
+--from-json [text]
+
+Provide input to this command as a JSON document from a file using the
+file://path-to/file syntax.
+
+The "--generate-full-command-json-input" option can be used to
+generate a sample json file to be used with this command option. The
+key names are pre-populated and match the command option names
+(converted to camelCase format, e.g. compartment-id –> compartmentId),
+while the values of the keys need to be populated by the user before
+using the sample file as an input to this command. For any command
+option that accepts multiple values, the value of the key can be a
+JSON array.
+
+Options can still be provided on the command line. If an option exists
+in both the JSON document and the command line then the command line
+specified value will be used.
+
+For examples on usage of this option, please see our “using CLI with
+advanced JSON options” link: https://docs.cloud.oracle.com/iaas/Conte
+nt/API/SDKDocs/cliusing.htm#AdvancedJSONOptions
+
+--key-id [text]
+
+Refers to the customer’s master key OCID. If provided, it references a
+key to manage secrets. Customers must add policies to permit
+GoldenGate to use this key.
+
+--locks [complex type]
+
+Locks associated with this resource.
+
+This option is a JSON list with items of type AddResourceLockDetails.
+For documentation on AddResourceLockDetails please see our API
+reference: https://docs.cloud.oracle.com/api/#/en/goldengate/20200407
+/datatypes/AddResourceLockDetails. This is a complex type whose value
+must be valid JSON. The value can be provided as a string on the
+command line or passed in as a file using the file://path/to/file
+syntax.
+
+The "--generate-param-json-input" option can be used to generate an
+example of the JSON which must be provided. We recommend storing this
+example in a file, modifying it as needed and then passing it back in
+via the file:// syntax.
+
+--max-wait-seconds [integer]
+
+The maximum time to wait for the work request to reach the state
+defined by "--wait-for-state". Defaults to 1200 seconds.
+
+--nsg-ids [complex type]
+
+An array of Network Security Group OCIDs used to define network access
+for either Deployments or Connections. This is a complex type whose
+value must be valid JSON. The value can be provided as a string on the
+command line or passed in as a file using the file://path/to/file
+syntax.
+
+The "--generate-param-json-input" option can be used to generate an
+example of the JSON which must be provided. We recommend storing this
+example in a file, modifying it as needed and then passing it back in
+via the file:// syntax.
+
+--password [text]
+
+The password used to connect to Databricks. Only applicable for
+authenticationType == PERSONAL_ACCESS_TOKEN. Deprecated: This field is
+deprecated and replaced by “passwordSecretId”. This field will be
+removed after February 15 2026.
+
+--password-secret-id [text]
+
+The OCID of the Secret where the password is stored. Note: When
+provided, ‘password’ field must not be provided.
+
+--routing-method [text]
+
+Controls the network traffic direction to the target:
+SHARED_SERVICE_ENDPOINT: Traffic flows through the Goldengate
+Service’s network to public hosts. Cannot be used for private targets.
+SHARED_DEPLOYMENT_ENDPOINT: Network traffic flows from the assigned
+deployment’s private endpoint through the deployment’s subnet.
+DEDICATED_ENDPOINT: A dedicated private endpoint is created in the
+target VCN subnet for the connection. The subnetId is required when
+DEDICATED_ENDPOINT networking is selected.
+
+Accepted values are:
+
+   DEDICATED_ENDPOINT, SHARED_DEPLOYMENT_ENDPOINT, SHARED_SERVICE_ENDPOINT
+
+--storage-credential-name [text]
+
+Optional. External storage credential name to access files on object
+storage such as ADLS Gen2, S3 or GCS.
+
+--subnet-id [text]
+
+The OCID of the target subnet of the dedicated connection.
+
+--vault-id [text]
+
+Refers to the customer’s vault OCID. If provided, it references a
+vault where GoldenGate can manage secrets. Customers must add policies
+to permit GoldenGate to manage secrets contained within this vault.
+
+--wait-for-state [text]
+
+This operation asynchronously creates, modifies or deletes a resource
+and uses a work request to track the progress of the operation.
+Specify this option to perform the action and then wait until the work
+request reaches a certain state. Multiple states can be specified,
+returning on the first state. For example, "--wait-for-state"
+SUCCEEDED "--wait-for-state" FAILED would return on whichever
+lifecycle state is reached first. If timeout is reached, a return code
+of 2 is returned. For any other error, a return code of 1 is returned.
+
+Accepted values are:
+
+   ACCEPTED, CANCELED, FAILED, IN_PROGRESS, SUCCEEDED
+
+--wait-interval-seconds [integer]
+
+Check every "--wait-interval-seconds" to see whether the work request
+has reached the state defined by "--wait-for-state". Defaults to 30
+seconds.
+
+
+Global Parameters
+=================
+
+Use "oci --help" for help on global parameters.
+
+"--auth-purpose", "--auth", "--cert-bundle", "--cli-auto-prompt", "--
+cli-rc-file", "--config-file", "--connection-timeout", "--debug", "--
+defaults-file", "--endpoint", "--generate-full-command-json-input", "
+--generate-param-json-input", "--help", "--latest-version", "--max-
+retries", "--no-retry", "--opc-client-request-id", "--opc-request-id",
+"--output", "--profile", "--proxy", "--query", "--raw-output", "--
+read-timeout", "--realm-specific-endpoint", "--region", "--release-
+info", "--request-id", "--version", "-?", "-d", "-h", "-i", "-v"
+
+
+Example using required parameter
+================================
+
+Copy the following CLI commands into a file named example.sh. Run the
+command by typing “bash example.sh” and replacing the example
+parameters with your own.
+
+Please note this sample will only work in the POSIX-compliant bash-
+like shell. You need to set up the OCI configuration and appropriate
+security policies before trying the examples.
+
+       export authentication_type=<substitute-value-of-authentication_type> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/goldengate/connection/create-databricks-connection.html#cmdoption-authentication-type
+       export compartment_id=<substitute-value-of-compartment_id> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/goldengate/connection/create-databricks-connection.html#cmdoption-compartment-id
+       export connection_url=<substitute-value-of-connection_url> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/goldengate/connection/create-databricks-connection.html#cmdoption-connection-url
+       export display_name=<substitute-value-of-display_name> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/goldengate/connection/create-databricks-connection.html#cmdoption-display-name
+       export technology_type=<substitute-value-of-technology_type> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/goldengate/connection/create-databricks-connection.html#cmdoption-technology-type
+
+       oci goldengate connection create-databricks-connection --authentication-type $authentication_type --compartment-id $compartment_id --connection-url $connection_url --display-name $display_name --technology-type $technology_type

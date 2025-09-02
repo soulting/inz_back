@@ -1,0 +1,28 @@
+common
+******
+
+
+Description
+===========
+
+CLI for Oracle Cloud Bridge service.
+
+
+Available Commands
+==================
+
+* work-request
+
+  * cancel
+
+  * get
+
+  * list
+
+* work-request-error
+
+  * list
+
+* work-request-log-entry
+
+  * list

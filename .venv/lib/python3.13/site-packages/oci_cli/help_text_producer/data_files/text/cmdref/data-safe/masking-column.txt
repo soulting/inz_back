@@ -1,0 +1,32 @@
+masking-column
+**************
+
+
+Description
+===========
+
+A masking column is a resource corresponding to a database column that
+you want to mask. It’s a subresource of masking policy resource and is
+always associated with a masking policy. Note that only parent columns
+are managed as masking columns. The child columns are automatically
+managed using the childColumns attribute.
+
+
+Available Commands
+==================
+
+* create
+
+* delete
+
+* get
+
+* get-compatible-formats-for-data-types
+
+* get-compatible-formats-for-sensitive-types
+
+* list
+
+* patch
+
+* update

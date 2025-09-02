@@ -1,0 +1,52 @@
+opa
+***
+
+
+Description
+===========
+
+Process Automation helps you to rapidly design, automate, and manage
+business processes in the cloud. With the Process Automation design-
+time (Designer) and the runtime (Workspace) environments, you can
+easily create, develop, manage, test, and monitor process applications
+and their components.
+
+
+Available Commands
+==================
+
+* opa-instance
+
+  * change-compartment
+
+  * create
+
+  * delete
+
+  * get
+
+  * start
+
+  * stop
+
+  * update
+
+* opa-instance-collection
+
+  * list-opa-instances
+
+* work-request
+
+  * cancel
+
+  * get
+
+  * list
+
+* work-request-error
+
+  * list
+
+* work-request-log-entry
+
+  * list-work-request-logs

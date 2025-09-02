@@ -1,0 +1,33 @@
+library-masking-format
+**********************
+
+
+Description
+===========
+
+A library masking format is a masking format stored in an Oracle Cloud
+Infrastructure compartment and can be used in multiple masking
+policies. If you want to use the same masking logic for multiple
+masking columns or even in multiple masking policies, you can create a
+library masking format and assign it to masking columns as needed. It
+helps you avoid defining the same masking logic again and again.
+
+Oracle Data Safe provides a set of predefined library masking formats
+to mask common sensitive and personal data, such as names, national
+identifiers, credit card numbers, and phone numbers. To meet your
+specific requirements, you can easily create new library masking
+formats and use them in your masking policies.
+
+
+Available Commands
+==================
+
+* change-compartment
+
+* create
+
+* delete
+
+* get
+
+* update

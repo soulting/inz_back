@@ -1,0 +1,14 @@
+address-rule
+************
+
+
+Description
+===========
+
+Addres rule information
+
+
+Available Commands
+==================
+
+* get

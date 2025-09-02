@@ -1,0 +1,30 @@
+connection
+**********
+
+
+Description
+===========
+
+Represents the common details required for creating a new connection.
+
+
+Available Commands
+==================
+
+* change-compartment
+
+* connection-diagnostics
+
+* create-mysql-connection
+
+* create-oracle-connection
+
+* delete
+
+* get
+
+* list
+
+* update-mysql-connection
+
+* update-oracle-connection

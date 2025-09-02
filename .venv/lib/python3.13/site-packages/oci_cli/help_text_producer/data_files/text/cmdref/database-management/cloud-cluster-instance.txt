@@ -1,0 +1,18 @@
+cloud-cluster-instance
+**********************
+
+
+Description
+===========
+
+The details of a cloud cluster instance.
+
+
+Available Commands
+==================
+
+* get
+
+* list
+
+* update

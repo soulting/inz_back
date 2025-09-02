@@ -1,0 +1,14 @@
+cloud-database-collection
+*************************
+
+
+Description
+===========
+
+A collection of cloud databases.
+
+
+Available Commands
+==================
+
+* list-cloud-databases

@@ -1,0 +1,35 @@
+container-instance
+******************
+
+
+Description
+===========
+
+A container instance to host containers.
+
+If you delete a container instance, the record remains visible for a
+short period of time before being permanently removed.
+
+
+Available Commands
+==================
+
+* change-compartment
+
+* create
+
+* delete
+
+* get
+
+* list
+
+* list-shapes
+
+* restart
+
+* start
+
+* stop
+
+* update

@@ -1,0 +1,16 @@
+enrollment-status
+*****************
+
+
+Description
+===========
+
+The metadata associated with the enrollment status.
+
+
+Available Commands
+==================
+
+* get
+
+* update

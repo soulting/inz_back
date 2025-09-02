@@ -1,0 +1,14 @@
+indicator-summaries
+*******************
+
+
+Description
+===========
+
+List of indicator summary objects.
+
+
+Available Commands
+==================
+
+* list-indicators

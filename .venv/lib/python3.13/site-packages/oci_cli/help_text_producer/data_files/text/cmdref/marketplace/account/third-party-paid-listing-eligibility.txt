@@ -1,0 +1,14 @@
+third-party-paid-listing-eligibility
+************************************
+
+
+Description
+===========
+
+Tenant eligibility for using third party paid listings
+
+
+Available Commands
+==================
+
+* get

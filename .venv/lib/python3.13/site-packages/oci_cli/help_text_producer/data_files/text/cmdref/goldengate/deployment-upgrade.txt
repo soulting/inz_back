@@ -1,0 +1,28 @@
+deployment-upgrade
+******************
+
+
+Description
+===========
+
+A container for your OCI GoldenGate Upgrade information.
+
+
+Available Commands
+==================
+
+* cancel
+
+* cancel-snooze
+
+* get
+
+* list
+
+* reschedule
+
+* rollback
+
+* snooze
+
+* upgrade

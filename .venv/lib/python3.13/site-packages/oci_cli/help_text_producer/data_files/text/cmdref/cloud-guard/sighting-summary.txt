@@ -1,0 +1,14 @@
+sighting-summary
+****************
+
+
+Description
+===========
+
+Sighting summary definition.
+
+
+Available Commands
+==================
+
+* list-sightings

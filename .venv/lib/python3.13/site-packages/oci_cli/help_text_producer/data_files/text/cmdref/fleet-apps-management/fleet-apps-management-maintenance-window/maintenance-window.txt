@@ -1,0 +1,20 @@
+maintenance-window
+******************
+
+
+Description
+===========
+
+Details of Maintenance Window in Fleet Application Management.
+
+
+Available Commands
+==================
+
+* create
+
+* delete
+
+* get
+
+* update

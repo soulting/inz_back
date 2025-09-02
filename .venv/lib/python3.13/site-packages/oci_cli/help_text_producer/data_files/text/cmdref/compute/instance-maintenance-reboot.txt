@@ -1,0 +1,15 @@
+instance-maintenance-reboot
+***************************
+
+
+Description
+===========
+
+The maximum possible date and time that a maintenance reboot can be
+extended.
+
+
+Available Commands
+==================
+
+* get

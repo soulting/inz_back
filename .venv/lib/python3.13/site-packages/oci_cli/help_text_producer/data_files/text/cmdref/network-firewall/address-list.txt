@@ -1,0 +1,31 @@
+address-list
+************
+
+
+Description
+===========
+
+List of addresses with a reference name. The value of an entry is a
+list of IP addresses or prefixes in CIDR notation or FQDNs. The
+associated key is the identifier by which the IP address list is
+referenced.
+
+
+Available Commands
+==================
+
+* bulk-upload
+
+* create
+
+* delete
+
+* get
+
+* list
+
+* update
+
+* update-address-list-update-fqdn-address-list-details
+
+* update-address-list-update-ip-address-list-details

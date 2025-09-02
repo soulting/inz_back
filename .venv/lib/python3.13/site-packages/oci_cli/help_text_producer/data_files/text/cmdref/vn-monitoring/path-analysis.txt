@@ -1,0 +1,16 @@
+path-analysis
+*************
+
+
+Description
+===========
+
+Defines the configuration of the path analysis result.
+
+
+Available Commands
+==================
+
+* get-path-analysis-adhoc
+
+* get-path-analysis-persisted

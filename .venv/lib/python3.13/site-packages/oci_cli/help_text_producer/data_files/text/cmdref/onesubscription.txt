@@ -1,0 +1,74 @@
+onesubscription
+***************
+
+
+Description
+===========
+
+OneSubscription CLI
+
+
+Available Commands
+==================
+
+* billing-schedule
+
+  * billing-schedule-summary
+
+    * list-billing-schedules
+
+* commitment
+
+  * commitment
+
+    * get
+
+    * list
+
+* computed-usage
+
+  * aggregated-computed-usage-summary
+
+    * list-aggregated-computed-usages
+
+  * computed-usage
+
+    * get
+
+    * list
+
+* invoice-summary
+
+  * invoice
+
+    * list
+
+  * invoiceline-computed-usage
+
+    * list
+
+* organization-subscription
+
+  * organization-subscription
+
+    * list
+
+* ratecard
+
+  * rate-card
+
+    * list
+
+* subscribed-service
+
+  * subscribed-service
+
+    * get
+
+    * list
+
+* subscription
+
+  * subscription
+
+    * list

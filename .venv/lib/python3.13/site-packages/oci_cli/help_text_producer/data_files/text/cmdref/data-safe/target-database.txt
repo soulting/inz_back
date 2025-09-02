@@ -1,0 +1,40 @@
+target-database
+***************
+
+
+Description
+===========
+
+The details of the Data Safe target database.
+
+
+Available Commands
+==================
+
+* activate
+
+* change-compartment
+
+* create
+
+* deactivate
+
+* delete
+
+* download-privilege-script
+
+* get
+
+* list
+
+* list-columns
+
+* list-roles
+
+* list-schemas
+
+* list-tables
+
+* refresh
+
+* update

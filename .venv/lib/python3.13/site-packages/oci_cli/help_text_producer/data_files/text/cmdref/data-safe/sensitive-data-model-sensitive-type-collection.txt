@@ -1,0 +1,15 @@
+sensitive-data-model-sensitive-type-collection
+**********************************************
+
+
+Description
+===========
+
+A collection of sensitive types summary objects present in a sensitive
+data model.
+
+
+Available Commands
+==================
+
+* list-sensitive-data-model-sensitive-types

@@ -1,0 +1,258 @@
+stack-monitoring
+****************
+
+
+Description
+===========
+
+Stack Monitoring CLI.
+
+
+Available Commands
+==================
+
+* alarm-condition
+
+  * create
+
+  * delete
+
+  * get
+
+  * list
+
+  * update
+
+* baselineable-metric
+
+  * create
+
+  * delete
+
+  * evaluate
+
+  * get
+
+  * list
+
+  * update
+
+* config
+
+  * change-compartment
+
+  * create
+
+  * create-auto-promote-config
+
+  * create-compute-auto-activate-plugin-config
+
+  * create-license-auto-assign-config
+
+  * create-license-enterprise-extensibility-config
+
+  * create-onboard-config
+
+  * delete
+
+  * get
+
+  * list
+
+  * update
+
+  * update-auto-promote-config
+
+  * update-compute-auto-activate-plugin-config
+
+  * update-license-auto-assign-config
+
+  * update-license-enterprise-extensibility-config
+
+  * update-onboard-config
+
+* defined-mt
+
+  * list
+
+* discovery-job
+
+  * create
+
+  * delete
+
+  * get
+
+  * list
+
+  * list-logs
+
+* maintenance-window
+
+  * create
+
+  * delete
+
+  * get
+
+  * list
+
+  * retry-failed-maintenance-window-operation
+
+  * stop
+
+  * update
+
+* metric-extension
+
+  * change-compartment
+
+  * create
+
+  * create-http-metric-ext
+
+  * create-jmx-metric-ext
+
+  * create-os-cmd-metric-ext
+
+  * create-sql-metric-ext
+
+  * delete
+
+  * disable
+
+  * enable
+
+  * export
+
+  * get
+
+  * list
+
+  * publish
+
+  * summarize-metrics
+
+  * summarize-resources
+
+  * test
+
+  * update
+
+  * update-http-metric-ext
+
+  * update-jmx-metric-ext
+
+  * update-os-cmd-metric-ext
+
+  * update-sql-metric-ext
+
+* monitoring-template
+
+  * apply
+
+  * create
+
+  * delete
+
+  * export
+
+  * get
+
+  * list
+
+  * unapply
+
+  * update
+
+* process-set
+
+  * change-compartment
+
+  * create
+
+  * delete
+
+  * get
+
+  * list
+
+  * update
+
+* resource
+
+  * associate
+
+  * change-compartment
+
+  * create
+
+  * delete
+
+  * disable-external-database
+
+  * disassociate
+
+  * get
+
+  * list
+
+  * manage-license
+
+  * search
+
+  * search-associated-resources
+
+  * search-associations
+
+  * search-members
+
+  * summarize-count
+
+  * update
+
+  * update-and-propagate-tags
+
+* resource-task
+
+  * change-compartment
+
+  * create
+
+  * get
+
+  * import-telemetry-resources
+
+  * list
+
+  * update
+
+  * update-agent-receiver
+
+  * update-resource-type-configs
+
+* resource-type
+
+  * create
+
+  * create-system-format-resource-type
+
+  * delete
+
+  * get
+
+  * list
+
+  * update
+
+  * update-system-format-resource-type
+
+* work-request
+
+  * get
+
+  * list
+
+  * list-errors
+
+  * list-logs

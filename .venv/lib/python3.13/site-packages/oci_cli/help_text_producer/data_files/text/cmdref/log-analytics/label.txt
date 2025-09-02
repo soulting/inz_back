@@ -1,0 +1,28 @@
+label
+*****
+
+
+Description
+===========
+
+LogAnalytics label
+
+
+Available Commands
+==================
+
+* batch-get-basic-info
+
+* delete-label
+
+* get-label
+
+* get-label-summary
+
+* list-label-priorities
+
+* list-label-source-details
+
+* list-labels
+
+* upsert-label

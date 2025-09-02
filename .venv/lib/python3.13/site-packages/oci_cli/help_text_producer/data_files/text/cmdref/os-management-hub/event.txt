@@ -1,0 +1,30 @@
+event
+*****
+
+
+Description
+===========
+
+An event is an occurrence of something of interest on a managed
+instance, such as a kernel crash, software package update, or software
+source update.
+
+
+Available Commands
+==================
+
+* change-compartment
+
+* delete
+
+* delete-event-content
+
+* get
+
+* get-event-content
+
+* import-event-content
+
+* list
+
+* update

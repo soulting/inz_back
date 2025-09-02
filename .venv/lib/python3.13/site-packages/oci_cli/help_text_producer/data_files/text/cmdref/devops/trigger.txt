@@ -1,0 +1,46 @@
+trigger
+*******
+
+
+Description
+===========
+
+Trigger the deployment pipeline to deploy the artifact.
+
+
+Available Commands
+==================
+
+* create-bitbucket-cloud-trigger
+
+* create-bitbucket-server-trigger
+
+* create-devops-code-repo-trigger
+
+* create-github-trigger
+
+* create-gitlab-server-trigger
+
+* create-gitlab-trigger
+
+* create-vbs-trigger
+
+* delete
+
+* get
+
+* list
+
+* update-bitbucket-cloud-trigger
+
+* update-bitbucket-server-trigger
+
+* update-devops-code-repo-trigger
+
+* update-github-trigger
+
+* update-gitlab-server-trigger
+
+* update-gitlab-trigger
+
+* update-vbs-trigger

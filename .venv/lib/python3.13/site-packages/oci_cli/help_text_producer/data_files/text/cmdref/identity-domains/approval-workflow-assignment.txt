@@ -1,0 +1,18 @@
+approval-workflow-assignment
+****************************
+
+
+Description
+===========
+
+Schema for ApprovalWorkflowAssignment
+
+
+Available Commands
+==================
+
+* create
+
+* delete
+
+* get

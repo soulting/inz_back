@@ -1,0 +1,14 @@
+aggregated-snapshot
+*******************
+
+
+Description
+===========
+
+Aggregated snapshots of all spans.
+
+
+Available Commands
+==================
+
+* get

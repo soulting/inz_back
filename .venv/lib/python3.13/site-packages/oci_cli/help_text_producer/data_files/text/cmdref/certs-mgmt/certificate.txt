@@ -1,0 +1,37 @@
+certificate
+***********
+
+
+Description
+===========
+
+The details of the certificate. This object does not contain the
+certificate contents.
+
+
+Available Commands
+==================
+
+* cancel-deletion
+
+* change-compartment
+
+* create-by-importing-config
+
+* create-certificate-issued-by-internal-ca
+
+* create-certificate-managed-externally-issued-by-internal-ca
+
+* get
+
+* list
+
+* schedule-deletion
+
+* update
+
+* update-certificate-by-importing-config-details
+
+* update-certificate-managed-externally
+
+* update-certificate-managed-internally

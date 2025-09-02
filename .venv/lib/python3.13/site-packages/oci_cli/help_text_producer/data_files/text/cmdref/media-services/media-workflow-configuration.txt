@@ -1,0 +1,29 @@
+media-workflow-configuration
+****************************
+
+
+Description
+===========
+
+Resusable set of values that can be referenced either in a
+MediaWorkflow or when running a MediaWorkflowJob.
+
+
+Available Commands
+==================
+
+* add
+
+* change-compartment
+
+* create
+
+* delete
+
+* get
+
+* list
+
+* remove
+
+* update

@@ -1,0 +1,77 @@
+opctl
+*****
+
+
+Description
+===========
+
+Operator Access Control enables you to control the time duration and
+the actions an Oracle operator can perform on your Exadata
+Cloud@Customer infrastructure. Using logging service, you can view a
+near real-time audit report of all actions performed by an Oracle
+operator.
+
+Use the table of contents and search tool to explore the
+OperatorAccessControl CLI.
+
+
+Available Commands
+==================
+
+* access-request
+
+  * approve
+
+  * get
+
+  * interaction-request
+
+  * list
+
+  * list-access-request-histories
+
+  * list-interactions
+
+  * reject
+
+  * review
+
+  * revoke
+
+* operator-action
+
+  * get
+
+  * list
+
+* operator-control
+
+  * change-compartment
+
+  * create
+
+  * delete
+
+  * get
+
+  * list
+
+  * update
+
+* operator-control-assignment
+
+  * change-compartment
+
+  * create
+
+  * delete
+
+  * get
+
+  * get-assignment-validation-status
+
+  * list
+
+  * update
+
+  * validate-operator-assignment

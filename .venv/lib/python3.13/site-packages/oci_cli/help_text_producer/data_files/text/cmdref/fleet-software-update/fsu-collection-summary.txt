@@ -1,0 +1,14 @@
+fsu-collection-summary
+**********************
+
+
+Description
+===========
+
+List of FsuCollectionSummary objects.
+
+
+Available Commands
+==================
+
+* list

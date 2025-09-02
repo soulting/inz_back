@@ -1,0 +1,38 @@
+sensitive-type
+**************
+
+
+Description
+===========
+
+A sensitive type defines a particular type or class of sensitive data.
+It can be a basic sensitive type with regular expressions or a
+sensitive category. While sensitive types are used for data discovery,
+sensitive categories are used for logically grouping the related or
+similar sensitive types. Learn more.
+
+
+Available Commands
+==================
+
+* bulk-create
+
+* change-compartment
+
+* create
+
+* create-sensitive-type-create-sensitive-category-details
+
+* create-sensitive-type-create-sensitive-type-pattern-details
+
+* delete
+
+* get
+
+* list
+
+* update
+
+* update-sensitive-type-update-sensitive-category-details
+
+* update-sensitive-type-update-sensitive-type-pattern-details

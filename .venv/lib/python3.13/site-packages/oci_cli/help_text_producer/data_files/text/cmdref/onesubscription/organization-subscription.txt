@@ -1,0 +1,16 @@
+organization-subscription
+*************************
+
+
+Description
+===========
+
+OneSubscription CLI
+
+
+Available Commands
+==================
+
+* organization-subscription
+
+  * list

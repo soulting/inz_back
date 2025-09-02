@@ -1,0 +1,39 @@
+byoip-range
+***********
+
+
+Description
+===========
+
+Oracle offers the ability to Bring Your Own IP (BYOIP), importing
+public IP addresses or IPv6 addresses that you currently own to Oracle
+Cloud Infrastructure. A *ByoipRange* resource is a record of the
+imported address block (a BYOIP CIDR block) and also some associated
+metadata. The process used to Bring Your Own IP is explained in the
+documentation.
+
+
+Available Commands
+==================
+
+* advertise
+
+* change-compartment
+
+* create
+
+* delete
+
+* get
+
+* list
+
+* set-origin-asn
+
+* set-origin-asn-to-oracle
+
+* update
+
+* validate
+
+* withdraw

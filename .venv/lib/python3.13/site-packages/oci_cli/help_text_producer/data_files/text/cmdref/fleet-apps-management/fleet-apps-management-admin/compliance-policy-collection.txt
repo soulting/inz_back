@@ -1,0 +1,15 @@
+compliance-policy-collection
+****************************
+
+
+Description
+===========
+
+Results of a compliancePolicy search. Contains both
+CompliancePolicySummary items and other information, such as metadata.
+
+
+Available Commands
+==================
+
+* list-compliance-policies

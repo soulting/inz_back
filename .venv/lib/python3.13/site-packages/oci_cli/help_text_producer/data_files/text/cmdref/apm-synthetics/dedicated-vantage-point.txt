@@ -1,0 +1,20 @@
+dedicated-vantage-point
+***********************
+
+
+Description
+===========
+
+The information about a dedicated vantage point.
+
+
+Available Commands
+==================
+
+* create-with-oracle-rm-stack
+
+* delete
+
+* get
+
+* update-with-oracle-rm-stack

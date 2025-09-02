@@ -1,0 +1,14 @@
+billing-schedule-summary
+************************
+
+
+Description
+===========
+
+Billing schedule details related to Subscription Id
+
+
+Available Commands
+==================
+
+* list-billing-schedules

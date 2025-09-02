@@ -1,0 +1,18 @@
+occ-customer
+************
+
+
+Description
+===========
+
+The details about the customer.
+
+
+Available Commands
+==================
+
+* create
+
+* delete
+
+* update

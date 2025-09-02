@@ -1,0 +1,15 @@
+fleet-property-collection
+*************************
+
+
+Description
+===========
+
+Results of a fleetProperty search. Contains both FleetPropertySummary
+items and other information, such as metadata.
+
+
+Available Commands
+==================
+
+* list-fleet-properties

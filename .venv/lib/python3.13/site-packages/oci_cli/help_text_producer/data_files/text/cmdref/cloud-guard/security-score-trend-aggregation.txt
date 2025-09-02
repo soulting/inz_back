@@ -1,0 +1,17 @@
+security-score-trend-aggregation
+********************************
+
+
+Description
+===========
+
+Provides the dimensions and their corresponding time and security
+score.
+
+
+Available Commands
+==================
+
+* request-security-score-summarized-trend
+
+* request-summarized-trend-security-scores

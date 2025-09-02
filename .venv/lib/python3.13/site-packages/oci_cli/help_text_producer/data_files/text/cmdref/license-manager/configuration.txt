@@ -1,0 +1,16 @@
+configuration
+*************
+
+
+Description
+===========
+
+Details of the compartment-specific configuration.
+
+
+Available Commands
+==================
+
+* get
+
+* update

@@ -1,0 +1,16 @@
+apply-guardrails-result
+***********************
+
+
+Description
+===========
+
+The result of applying guardrails to the input text.
+
+
+Available Commands
+==================
+
+* apply-guardrails
+
+* apply-guardrails-guardrails-text-input

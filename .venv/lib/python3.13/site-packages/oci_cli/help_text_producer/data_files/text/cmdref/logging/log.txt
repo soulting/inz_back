@@ -1,0 +1,24 @@
+log
+***
+
+
+Description
+===========
+
+Represents a log object.
+
+
+Available Commands
+==================
+
+* change-log-group
+
+* create
+
+* delete
+
+* get
+
+* list
+
+* update

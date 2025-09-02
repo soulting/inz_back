@@ -1,0 +1,14 @@
+validations
+***********
+
+
+Description
+===========
+
+The result of validations conducted on the API.
+
+
+Available Commands
+==================
+
+* get

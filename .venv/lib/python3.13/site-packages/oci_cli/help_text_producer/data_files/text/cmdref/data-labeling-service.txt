@@ -1,0 +1,65 @@
+data-labeling-service
+*********************
+
+
+Description
+===========
+
+Use Data Labeling Management CLI to create, list, edit & delete
+datasets.
+
+
+Available Commands
+==================
+
+* annotation-format
+
+  * list
+
+* dataset
+
+  * add
+
+  * change-compartment
+
+  * create
+
+  * create-dataset-document-dataset-format-details
+
+  * create-dataset-image-dataset-format-details
+
+  * create-dataset-object-storage-source-details
+
+  * create-dataset-text-dataset-format-details
+
+  * delete
+
+  * generate-dataset-records
+
+  * get
+
+  * import-pre-annotated-data
+
+  * import-pre-annotated-data-object-storage-import-metadata-path
+
+  * remove
+
+  * rename-dataset-labels
+
+  * snapshot
+
+  * update
+
+* dataset-collection
+
+  * list-datasets
+
+* work-request
+
+  * get
+
+  * list
+
+  * list-work-request-errors
+
+  * list-work-request-logs

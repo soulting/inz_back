@@ -1,0 +1,315 @@
+"create"
+********
+
+* Description
+
+* Usage
+
+* Required Parameters
+
+* Optional Parameters
+
+* Global Parameters
+
+* Example using required parameter
+
+* Other Examples
+
+
+Description
+===========
+
+Creates a pre-authenticated request specific to the bucket.
+
+
+Usage
+=====
+
+   oci os preauth-request create [OPTIONS]
+
+
+Required Parameters
+===================
+
+--access-type [text]
+
+The operation that can be performed on this resource.
+
+Accepted values are:
+
+   AnyObjectRead, AnyObjectReadWrite, AnyObjectWrite, ObjectRead, ObjectReadWrite, ObjectWrite
+
+--bucket-name, -bn [text]
+
+The name of the bucket. Avoid entering confidential information.
+Example: *my-new-bucket1*
+
+--name [text]
+
+A user-specified name for the pre-authenticated request. Names can be
+helpful in managing pre-authenticated requests. Avoid entering
+confidential information.
+
+--time-expires [datetime]
+
+The expiration date for the pre-authenticated request as per RFC 3339.
+After this date the pre-authenticated request will no longer be valid.
+
+   The following datetime formats are supported:
+
+
+UTC with microseconds
+---------------------
+
+   Format: YYYY-MM-DDTHH:mm:ss.ssssssTZD
+   Example: 2017-09-15T20:30:00.123456Z
+
+   UTC with milliseconds
+   ***********************
+   .. code::
+
+       Format: YYYY-MM-DDTHH:mm:ss.sssTZD
+       Example: 2017-09-15T20:30:00.123Z
+
+   UTC without milliseconds
+   **************************
+   .. code::
+
+       Format: YYYY-MM-DDTHH:mm:ssTZD
+       Example: 2017-09-15T20:30:00Z
+
+   UTC with minute precision
+   **************************
+   .. code::
+
+       Format: YYYY-MM-DDTHH:mmTZD
+       Example: 2017-09-15T20:30Z
+
+
+Timezone with microseconds
+--------------------------
+
+   Format: YYYY-MM-DDTHH:mm:ssTZD
+   Example: 2017-09-15T12:30:00.456789-08:00, 2017-09-15T12:30:00.456789-0800
+
+   Timezone with milliseconds
+   ***************************
+   .. code::
+
+       Format: YYYY-MM-DDTHH:mm:ssTZD
+       Example: 2017-09-15T12:30:00.456-08:00, 2017-09-15T12:30:00.456-0800
+
+   Timezone without milliseconds
+   *******************************
+   .. code::
+
+       Format: YYYY-MM-DDTHH:mm:ssTZD
+       Example: 2017-09-15T12:30:00-08:00, 2017-09-15T12:30:00-0800
+
+   Timezone with minute precision
+   *******************************
+   .. code::
+
+       Format: YYYY-MM-DDTHH:mmTZD
+       Example: 2017-09-15T12:30-08:00, 2017-09-15T12:30-0800
+
+   Short date and time
+   ********************
+   The timezone for this date and time will be taken as UTC (Needs to be surrounded by single or double quotes)
+
+   .. code::
+
+       Format: 'YYYY-MM-DD HH:mm' or "YYYY-MM-DD HH:mm"
+       Example: '2017-09-15 17:25'
+
+   Date Only
+   **********
+   This date will be taken as midnight UTC of that day
+
+   .. code::
+
+       Format: YYYY-MM-DD
+       Example: 2017-09-15
+
+   Epoch seconds
+   **************
+   .. code::
+
+       Example: 1412195400
+
+
+Optional Parameters
+===================
+
+--bucket-listing-action [text]
+
+Specifies whether a list operation is allowed on a PAR with accessType
+“AnyObjectRead” or “AnyObjectReadWrite”. Deny: Prevents the user from
+performing a list operation. ListObjects: Authorizes the user to
+perform a list operation.
+
+--from-json [text]
+
+Provide input to this command as a JSON document from a file using the
+file://path-to/file syntax.
+
+The "--generate-full-command-json-input" option can be used to
+generate a sample json file to be used with this command option. The
+key names are pre-populated and match the command option names
+(converted to camelCase format, e.g. compartment-id –> compartmentId),
+while the values of the keys need to be populated by the user before
+using the sample file as an input to this command. For any command
+option that accepts multiple values, the value of the key can be a
+JSON array.
+
+Options can still be provided on the command line. If an option exists
+in both the JSON document and the command line then the command line
+specified value will be used.
+
+For examples on usage of this option, please see our “using CLI with
+advanced JSON options” link: https://docs.cloud.oracle.com/iaas/Conte
+nt/API/SDKDocs/cliusing.htm#AdvancedJSONOptions
+
+--namespace-name, --namespace, -ns [text]
+
+The Object Storage namespace used for the request. If not provided,
+this parameter will be obtained internally using a call to ‘oci os ns
+get’
+
+--object-name, -on [text]
+
+The name of the object that is being granted access to by the pre-
+authenticated request. Avoid entering confidential information. The
+object name can be null and if so, the pre-authenticated request
+grants access to the entire bucket if the access type allows that. The
+object name can be a prefix as well, in that case pre-authenticated
+request grants access to all the objects within the bucket starting
+with that prefix provided that we have the correct access type.
+
+
+Global Parameters
+=================
+
+Use "oci --help" for help on global parameters.
+
+"--auth-purpose", "--auth", "--cert-bundle", "--cli-auto-prompt", "--
+cli-rc-file", "--config-file", "--connection-timeout", "--debug", "--
+defaults-file", "--endpoint", "--generate-full-command-json-input", "
+--generate-param-json-input", "--help", "--latest-version", "--max-
+retries", "--no-retry", "--opc-client-request-id", "--opc-request-id",
+"--output", "--profile", "--proxy", "--query", "--raw-output", "--
+read-timeout", "--realm-specific-endpoint", "--region", "--release-
+info", "--request-id", "--version", "-?", "-d", "-h", "-i", "-v"
+
+
+Example using required parameter
+================================
+
+Copy the following CLI commands into a file named example.sh. Run the
+command by typing “bash example.sh” and replacing the example
+parameters with your own.
+
+Please note this sample will only work in the POSIX-compliant bash-
+like shell. You need to set up the OCI configuration and appropriate
+security policies before trying the examples.
+
+       export access_type=<substitute-value-of-access_type> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/os/preauth-request/create.html#cmdoption-access-type
+       export bucket_name=<substitute-value-of-bucket_name> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/os/preauth-request/create.html#cmdoption-bucket-name
+       export name=<substitute-value-of-name> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/os/preauth-request/create.html#cmdoption-name
+       export time_expires=<substitute-value-of-time_expires> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/os/preauth-request/create.html#cmdoption-time-expires
+
+       oci os preauth-request create --access-type $access_type --bucket-name $bucket_name --name $name --time-expires $time_expires
+
+
+Other Examples
+==============
+
+Creates a pre-authenticated request specific to the bucket with
+specified name and expiration datetime.
+
+    oci os preauth-request create -bn bucket-client --access-type AnyObjectRead --name new-preauth-request --time-expires 2022-11-23
+
+   {
+    "data": {
+         "access-type": "AnyObjectRead",
+         "access-uri": "/p/XRTduQ7RtO-iBy9zTzoPbajS3rYLMPS_-2iYWrII2UgzNXoLuTWpXg1aM-k8tsSF/n/bmcostests/b/bucket-client/o/",
+         "bucket-listing-action": "Deny",
+         "id": "nEWl5a8KzExZz55faioLMeFDcPXqlLHMwRAufcGxi3dAyZZim7S3OOv6fBhTFUmO",
+         "name": "new-preauth-request",
+         "object-name": null,
+         "time-created": "2022-11-22T12:38:42.787000+00:00",
+         "time-expires": "2022-11-23T00:00:00+00:00"
+    }
+   }
+
+Creates a pre-authenticated request specific to the bucket, with
+specified bucket listing action
+
+    oci os preauth-request create -bn bucket-client --access-type AnyObjectRead --name new-preauth-request --time-expires 2022-11-23 --bucket-listing-action ListObjects
+
+   {
+    "data": {
+         "access-type": "AnyObjectRead",
+         "access-uri": "/p/C9JSRajonB3TzBc5OxUHoAqRu3yA-vM48AouxrlIvZkiNbjyKkgFlC_D4j2VvgE_/n/bmcostests/b/bucket-client/o/",
+         "bucket-listing-action": "ListObjects",
+         "id": "YvXG0ZKZ6G+H/nGGoyOZ8OuOJNSm3k2rjIozb47ZQ0wi6MpWkXfkC/GwmlaJLMeE",
+         "name": "new-preauth-request",
+         "object-name": null,
+         "time-created": "2022-11-22T12:50:27.298000+00:00",
+         "time-expires": "2022-11-23T00:00:00+00:00"
+    }
+   }
+
+Creates a pre-authenticated request specific to the bucket in the
+specified namespace
+
+    oci os preauth-request create -bn bucket-client --access-type AnyObjectRead --name new-preauth-request --time-expires 2022-11-23 -ns bmcostests
+
+   {
+    "data": {
+         "access-type": "AnyObjectRead",
+         "access-uri": "/p/puBl4us9a84DxMU4y0_Cyx_73bgHv7oJmDTE1nlyWd4U1fx3sGYGPt61Ygl-PGeL/n/bmcostests/b/bucket-client/o/",
+         "bucket-listing-action": "Deny",
+         "id": "h1fF4fq+1/aSDWJAEtnqcBolbzjmQ5d1h+5WK5VAVt50f2YmVQW/SLoYuqA4djLE",
+         "name": "new-preauth-request",
+         "object-name": null,
+         "time-created": "2022-11-22T12:52:09.560000+00:00",
+         "time-expires": "2022-11-23T00:00:00+00:00"
+    }
+   }
+
+Creates a pre-authenticated request specific to the bucket for the
+specified object
+
+    oci os preauth-request create -bn bucket-client --access-type AnyObjectRead --name new-preauth-request --time-expires 2022-11-23 -on test.txt
+
+   {
+    "data": {
+         "access-type": "AnyObjectRead",
+         "access-uri": "/p/kutrddRZ9NwaVHNLl0YaLPbGW8BnAswVV2uDQlyw0ZOk598D1s8yAnX4gL3IpAxd/n/bmcostests/b/bucket-client/o/",
+         "bucket-listing-action": "Deny",
+         "id": "Yiq0FgAlVshUPr0UJPm9p1IHzZiUZltFgDTb2Lwzgt6ykFdCFrETsvTBcgoeNpn/",
+         "name": "new-preauth-request",
+         "object-name": "test.txt",
+         "time-created": "2022-11-22T12:53:29.527000+00:00",
+         "time-expires": "2022-11-23T00:00:00+00:00"
+    }
+   }
+
+Creates a pre-authenticated request specific to the bucket, with input
+from the specified JSON
+
+    oci os preauth-request create --from-json '{ "accessType": "AnyObjectReadWrite", "bucketListingAction": "ListObjects", "bucketName": "bucket-client", "name": "new-preauth-request", "namespace": "bmcostests", "objectName": "test.txt", "timeExpires": "2022-11-23T00:00:00+00:00" }'
+
+   {
+    "data": {
+         "access-type": "AnyObjectReadWrite",
+         "access-uri": "/p/viViJceinUXkdHSpHo5wooYLzmZ9RR9mugHJQk_GclCXe9IQ7v48g8GACsgWrAV2/n/bmcostests/b/bucket-client/o/",
+         "bucket-listing-action": "ListObjects",
+         "id": "iuR/4bY/qNrekZLJi+5NztwKNgwDNCGwBg5FLj0KVOk/guxGVXgW+yiuLde00XJS",
+         "name": "new-preauth-request",
+         "object-name": "test.txt",
+         "time-created": "2022-11-22T12:58:22.956000+00:00",
+         "time-expires": "2022-11-23T00:00:00+00:00"
+    }
+   }

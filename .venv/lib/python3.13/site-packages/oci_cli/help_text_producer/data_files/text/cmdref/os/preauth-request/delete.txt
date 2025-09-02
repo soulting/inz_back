@@ -1,0 +1,177 @@
+"delete"
+********
+
+* Description
+
+* Usage
+
+* Required Parameters
+
+* Optional Parameters
+
+* Global Parameters
+
+* Example using required parameter
+
+* Other Examples
+
+
+Description
+===========
+
+Deletes the pre-authenticated request for the bucket.
+
+
+Usage
+=====
+
+   oci os preauth-request delete [OPTIONS]
+
+
+Required Parameters
+===================
+
+--bucket-name, -bn [text]
+
+The name of the bucket. Avoid entering confidential information.
+Example: *my-new-bucket1*
+
+--par-id [text]
+
+The unique identifier for the pre-authenticated request. This can be
+used to manage operations against the pre-authenticated request, such
+as GET or DELETE.
+
+
+Optional Parameters
+===================
+
+--force
+
+Perform deletion without prompting for confirmation.
+
+--from-json [text]
+
+Provide input to this command as a JSON document from a file using the
+file://path-to/file syntax.
+
+The "--generate-full-command-json-input" option can be used to
+generate a sample json file to be used with this command option. The
+key names are pre-populated and match the command option names
+(converted to camelCase format, e.g. compartment-id –> compartmentId),
+while the values of the keys need to be populated by the user before
+using the sample file as an input to this command. For any command
+option that accepts multiple values, the value of the key can be a
+JSON array.
+
+Options can still be provided on the command line. If an option exists
+in both the JSON document and the command line then the command line
+specified value will be used.
+
+For examples on usage of this option, please see our “using CLI with
+advanced JSON options” link: https://docs.cloud.oracle.com/iaas/Conte
+nt/API/SDKDocs/cliusing.htm#AdvancedJSONOptions
+
+--namespace-name, --namespace, -ns [text]
+
+The Object Storage namespace used for the request. If not provided,
+this parameter will be obtained internally using a call to ‘oci os ns
+get’
+
+
+Global Parameters
+=================
+
+Use "oci --help" for help on global parameters.
+
+"--auth-purpose", "--auth", "--cert-bundle", "--cli-auto-prompt", "--
+cli-rc-file", "--config-file", "--connection-timeout", "--debug", "--
+defaults-file", "--endpoint", "--generate-full-command-json-input", "
+--generate-param-json-input", "--help", "--latest-version", "--max-
+retries", "--no-retry", "--opc-client-request-id", "--opc-request-id",
+"--output", "--profile", "--proxy", "--query", "--raw-output", "--
+read-timeout", "--realm-specific-endpoint", "--region", "--release-
+info", "--request-id", "--version", "-?", "-d", "-h", "-i", "-v"
+
+
+Example using required parameter
+================================
+
+Copy the following CLI commands into a file named example.sh. Run the
+command by typing “bash example.sh” and replacing the example
+parameters with your own.
+
+Please note this sample will only work in the POSIX-compliant bash-
+like shell. You need to set up the OCI configuration and appropriate
+security policies before trying the examples.
+
+       export bucket_name=<substitute-value-of-bucket_name> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/os/preauth-request/delete.html#cmdoption-bucket-name
+       export par_id=<substitute-value-of-par_id> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/os/preauth-request/delete.html#cmdoption-par-id
+
+       oci os preauth-request delete --bucket-name $bucket_name --par-id $par_id
+
+
+Other Examples
+==============
+
+
+Description
+-----------
+
+Deletes the specified pre-authenticated request for the bucket.
+
+
+Command
+-------
+
+    oci os preauth-request delete -bn bucket-client --par-id xRwUrBD/XrImvS5ztjS0WIJzItsOKcMiZ5yNBN50lHXorWbgbyuZdrfDcQsM4Lsp
+
+
+Output
+------
+
+   {
+    "output": "Are you sure you want to delete this resource? [y/N]:"
+   }
+
+
+Description
+-----------
+
+Deletes the specified pre-authenticated request for the bucket,
+without prompting for confirmation
+
+
+Command
+-------
+
+    oci os preauth-request delete -bn bucket-client --par-id nEWl5a8KzExZz55faioLMeFDcPXqlLHMwRAufcGxi3dAyZZim7S3OOv6fBhTFUmO --force
+
+
+Output
+------
+
+   {
+    "output": null
+   }
+
+
+Description
+-----------
+
+Deletes the specified pre-authenticated request for the bucket in the
+specified namespace
+
+
+Command
+-------
+
+    oci os preauth-request delete -bn bucket-client --par-id iuR/4bY/qNrekZLJi+5NztwKNgwDNCGwBg5FLj0KVOk/guxGVXgW+yiuLde00XJS -ns bmcostests
+
+
+Output
+------
+
+   {
+    "output": "Are you sure you want to delete this resource? [y/N]:"
+   }

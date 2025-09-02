@@ -1,0 +1,48 @@
+access-request
+**************
+
+
+Description
+===========
+
+An Oracle operator raises access request when they need access to any
+infrastructure resource governed by Operator Access Control. The
+access request identifies the target resource and the set of operator
+actions. Access request handling depends upon the Operator Control
+that governs the target resource, and the set of operator actions
+listed for approval in the access request. If all of the operator
+actions listed in the access request are in the pre-approved list in
+the Operator Control that governs the target resource, then the access
+request is automatically approved. If not, then the access request
+requires explicit approval from the approver group specified by the
+Operator Control governing the target resource.
+
+You can approve or reject an access request. You can also revoke the
+approval of an already approved access request. While creating an
+access request, the operator specifies the duration of access. You
+have the option to approve the entire duration or reduce or even
+increase the time duration. An operator can also request for an
+extension. The approval for such an extension is processed the same
+way the original access request was processed.
+
+
+Available Commands
+==================
+
+* approve
+
+* get
+
+* interaction-request
+
+* list
+
+* list-access-request-histories
+
+* list-interactions
+
+* reject
+
+* review
+
+* revoke

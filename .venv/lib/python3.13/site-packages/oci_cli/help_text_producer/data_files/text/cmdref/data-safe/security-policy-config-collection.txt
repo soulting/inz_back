@@ -1,0 +1,14 @@
+security-policy-config-collection
+*********************************
+
+
+Description
+===========
+
+Collection of security policy configuration summaries.
+
+
+Available Commands
+==================
+
+* list-security-policy-configs

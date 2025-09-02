@@ -1,0 +1,329 @@
+"list"
+******
+
+* Description
+
+* Usage
+
+* Optional Parameters
+
+* Global Parameters
+
+* Example using required parameter
+
+* Other Examples
+
+
+Description
+===========
+
+Returns a list of Compute Cloud@Customer infrastructures.
+
+
+Usage
+=====
+
+   oci ccc infrastructure list [OPTIONS]
+
+
+Optional Parameters
+===================
+
+--access-level [text]
+
+Valid values are RESTRICTED and ACCESSIBLE. Default is RESTRICTED.
+Setting this to ACCESSIBLE returns only those compartments for which
+the user has INSPECT permissions directly or indirectly (permissions
+can be on a resource in a subcompartment). When set to RESTRICTED
+permissions are checked and no partial results are displayed.
+
+Accepted values are:
+
+   ACCESSIBLE, RESTRICTED
+
+--all
+
+Fetches all pages of results. If you provide this option, then you
+cannot provide the "--limit" option.
+
+--compartment-id, -c [text]
+
+The OCID of the compartment in which to list resources.
+
+--compartment-id-in-subtree [boolean]
+
+Default is false. When set to true, the hierarchy of compartments is
+traversed and all compartments and sub-compartments in the tenancy are
+returned. Depends on the ‘accessLevel’ setting.
+
+--display-name [text]
+
+A filter to return only resources that match the entire display name
+given.
+
+--display-name-contains [text]
+
+A filter to return only resources whose display name contains the
+substring.
+
+--from-json [text]
+
+Provide input to this command as a JSON document from a file using the
+file://path-to/file syntax.
+
+The "--generate-full-command-json-input" option can be used to
+generate a sample json file to be used with this command option. The
+key names are pre-populated and match the command option names
+(converted to camelCase format, e.g. compartment-id –> compartmentId),
+while the values of the keys need to be populated by the user before
+using the sample file as an input to this command. For any command
+option that accepts multiple values, the value of the key can be a
+JSON array.
+
+Options can still be provided on the command line. If an option exists
+in both the JSON document and the command line then the command line
+specified value will be used.
+
+For examples on usage of this option, please see our “using CLI with
+advanced JSON options” link: https://docs.cloud.oracle.com/iaas/Conte
+nt/API/SDKDocs/cliusing.htm#AdvancedJSONOptions
+
+--from-json [text]
+
+Provide input to this command as a JSON document from a file using the
+file://path-to/file syntax.
+
+The "--generate-full-command-json-input" option can be used to
+generate a sample json file to be used with this command option. The
+key names are pre-populated and match the command option names
+(converted to camelCase format, e.g. compartment-id –> compartmentId),
+while the values of the keys need to be populated by the user before
+using the sample file as an input to this command. For any command
+option that accepts multiple values, the value of the key can be a
+JSON array.
+
+Options can still be provided on the command line. If an option exists
+in both the JSON document and the command line then the command line
+specified value will be used.
+
+For examples on usage of this option, please see our “using CLI with
+advanced JSON options” link: https://docs.cloud.oracle.com/iaas/Conte
+nt/API/SDKDocs/cliusing.htm#AdvancedJSONOptions
+
+--infrastructure-id [text]
+
+An OCID for a Compute Cloud@Customer Infrastructure.
+
+--lifecycle-state [text]
+
+A filter used to return only resources that match the given
+lifecycleState.
+
+Accepted values are:
+
+   ACTIVE, DELETED, FAILED, NEEDS_ATTENTION
+
+--limit [integer]
+
+The maximum number of items to return.
+
+--page [text]
+
+A token representing the position at which to start retrieving
+results. This must come from the *opc-next-page* header field of a
+previous response.
+
+--page-size [integer]
+
+When fetching results, the number of results to fetch per call. Only
+valid when used with "--all" or "--limit", and ignored otherwise.
+
+--sort-by [text]
+
+The field to sort by. Only one sort order may be provided. Default
+order for timeCreated is descending. Default order for displayName is
+ascending.
+
+Accepted values are:
+
+   displayName, timeCreated
+
+--sort-order [text]
+
+The sort order to use, either ‘ASC’ or ‘DESC’.
+
+Accepted values are:
+
+   ASC, DESC
+
+
+Global Parameters
+=================
+
+Use "oci --help" for help on global parameters.
+
+"--auth-purpose", "--auth", "--cert-bundle", "--cli-auto-prompt", "--
+cli-rc-file", "--config-file", "--connection-timeout", "--debug", "--
+defaults-file", "--endpoint", "--generate-full-command-json-input", "
+--generate-param-json-input", "--help", "--latest-version", "--max-
+retries", "--no-retry", "--opc-client-request-id", "--opc-request-id",
+"--output", "--profile", "--proxy", "--query", "--raw-output", "--
+read-timeout", "--realm-specific-endpoint", "--region", "--release-
+info", "--request-id", "--version", "-?", "-d", "-h", "-i", "-v"
+
+
+Example using required parameter
+================================
+
+Copy the following CLI commands into a file named example.sh. Run the
+command by typing “bash example.sh” and replacing the example
+parameters with your own.
+
+Please note this sample will only work in the POSIX-compliant bash-
+like shell. You need to set up the OCI configuration and appropriate
+security policies before trying the examples.
+
+       oci ccc infrastructure list
+
+
+Other Examples
+==============
+
+
+Description
+-----------
+
+Lists all Compute Cloud@Customer infrastructures in the specified
+compartment.
+
+
+Command
+-------
+
+    oci ccc infrastructure list -c <compartment_OCID> --all
+
+
+Output
+------
+
+   {
+    "data": {
+         "items": [
+              {
+                   "compartment-id": "<compartment_OCID>",
+                   "connection-state": "REJECT",
+                   "defined-tags": {
+                        "Oracle-Tags": {
+                             "CreatedBy": "user",
+                             "CreatedOn": "2023-07-28T12:53:26.934Z"
+                        }
+                   },
+                   "display-name": "TestInfrastructure",
+                   "freeform-tags": {},
+                   "id": "<infrastructure_OCID>",
+                   "lifecycle-state": "ACTIVE",
+                   "short-name": "<infrastructure_SHORTNAME>",
+                   "subnet-id": "<subnet_OCID>",
+                   "system-tags": {},
+                   "time-created": "2023-07-28T12:53:27.141000+00:00"
+              },
+              {
+                   "compartment-id": "<compartment_OCID>",
+                   "connection-state": "REJECT",
+                   "defined-tags": {
+                        "Oracle-Tags": {
+                             "CreatedBy": "user",
+                             "CreatedOn": "2023-07-18T08:39:53.201Z"
+                        }
+                   },
+                   "display-name": "some text",
+                   "freeform-tags": {},
+                   "id": "<infrastructure_OCID>",
+                   "lifecycle-state": "ACTIVE",
+                   "short-name": "<infrastructure_SHORTNAME>",
+                   "subnet-id": "<subnet_OCID>",
+                   "system-tags": {},
+                   "time-created": "2023-07-18T08:39:53.433000+00:00"
+              },
+              {
+                   "compartment-id": "<compartment_OCID>",
+                   "connection-state": "REJECT",
+                   "defined-tags": {
+                        "Oracle-Tags": {
+                             "CreatedBy": "user",
+                             "CreatedOn": "2023-06-28T08:44:42.165Z"
+                        }
+                   },
+                   "display-name": "TestInfrastructureUpgrade1",
+                   "freeform-tags": {},
+                   "id": "<infrastructure_OCID>",
+                   "lifecycle-state": "ACTIVE",
+                   "short-name": "i6rskydbg7q",
+                   "subnet-id": "<subnet_OCID>",
+                   "system-tags": {},
+                   "time-created": "2023-06-28T08:44:42.386000+00:00"
+              },
+              {
+                   "compartment-id": "<compartment_OCID>",
+                   "connection-state": "REJECT",
+                   "defined-tags": {
+                        "Oracle-Tags": {
+                             "CreatedBy": "user",
+                             "CreatedOn": "2023-06-21T16:16:18.391Z"
+                        }
+                   },
+                   "display-name": "some text",
+                   "freeform-tags": {},
+                   "id": "<infrastructure_OCID>",
+                   "lifecycle-state": "ACTIVE",
+                   "short-name": "<infrastructure_SHORTNAME>",
+                   "subnet-id": "<subnet_OCID>",
+                   "system-tags": {},
+                   "time-created": "2023-06-21T16:16:18.604000+00:00"
+              }
+         ]
+    }
+   }
+
+
+Description
+-----------
+
+Lists all Compute Cloud@Customer infrastructures with a specified
+display name.
+
+
+Command
+-------
+
+    oci ccc infrastructure list -c <compartment_OCID> --display-name 'TestInfrastructure'
+
+
+Output
+------
+
+   {
+    "data": {
+         "items": [
+              {
+                   "compartment-id": "<compartment_OCID>",
+                   "connection-state": "REJECT",
+                   "defined-tags": {
+                        "Oracle-Tags": {
+                             "CreatedBy": "user",
+                             "CreatedOn": "2023-07-28T12:53:26.934Z"
+                        }
+                   },
+                   "display-name": "TestInfrastructure",
+                   "freeform-tags": {},
+                   "id": "<infrastructure_OCID>",
+                   "lifecycle-state": "ACTIVE",
+                   "short-name": "<infrastructure_SHORTNAME>",
+                   "subnet-id": "<subnet_OCID>",
+                   "system-tags": {},
+                   "time-created": "2023-07-28T12:53:27.141000+00:00"
+              }
+         ]
+    },
+    "opc-next-page": "AAAAAAAAAAJleUpyYVdRaU9pSXhOVFlpTENKbGJtTWlPaUpCTWpVMlIwTk5JaXdpWVd4bklqb2laR2x5SW4wLi5KbUdseTd1bEZDTnhic1hhLmRhUEJDN3ItVGdBcDgwVlNvSFBNeVRfX2ZwR0N2d213QTVFVHFxbU9NcTNJVml4NDZzbDExX1lOdWJ0LTU1NTBhNlp5eDlnbjRPb1NqQnRTR2JTb0U4Mmg1eWtyd3g4R0g0d3UteXY0UFBVR2t0ZzhLQzB1T0x3YzZ5RU55N1c4WDdoeHpTN3p2ZWVWZGhHSDNQV3NjNDlNVVNSQlNwM21HSnMyWTFaQzlaRU5DUVhyZmNMelFxaDNDaWNQMUpwQkI1WnBmb1d1Y2p4SnFpbmFIV3hGejc1ZGt3ckhtOVM2ZFRfekpLdGFTZnRSZFRXOHlkMmJsTFJhSWt2MjRxMDlDUUo3djQxM1A3LUFvU2RnX3BMS281TjRFSkxwRnZ2RWZ2V29fZVdRdXdLYUU2WUxOYkI5c3dOXzN5VmdBb29md2ozSDQ1T2wwSkh3VXhkUUhDZkdQOTE2NUZRNGpDVFpwZUIxeVlqQTE4N1JubXQ4bXhGV0kwcExhS2VvcXdTQkhMdm1iZVF1Nk4xczVwUEhyRER5Wkx6RjVxU2JyNXBnWDVZLVo1TnhYTlZ5UURLcWtKWDZyN0ZkTC1KRG5wVjI1YkFKS2dRYTl2c29xcVAtQlYxekFVb1E2RHI1eEoxLUFTZGdRT1U5MzNCZi1hZ0RSbi1iWFJoNEd4YnR3QU1YRFpGdXdQTFFqYTZmRXNPYVJfWmZwUldJQjh0bm1VeFpPVW9RM3d4Z21rXzE4T3o5dDlBVjVFWHNXakJEVWlVeEFwY01GeXdlODE2ZVdyYlhCaWllbllQVVJMZ0t1OUoyOG1XeHZqYUdZazV5dlhvZDZPbHljeTFHR2RoMmlnNlktVjgtendWV3BseFlXWXgzM3RfYV9KWkZCUVdpbU9Ub003YTM3TWNaUV8xQk80WVFERmg3R2tNVXZjWDlaUS5RMEU5R05fTldjdmF1NmpXVjVIekRR"
+   }

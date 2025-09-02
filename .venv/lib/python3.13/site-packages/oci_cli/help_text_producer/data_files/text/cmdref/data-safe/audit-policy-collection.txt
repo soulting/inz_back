@@ -1,0 +1,14 @@
+audit-policy-collection
+***********************
+
+
+Description
+===========
+
+Collection of audit policy summary.
+
+
+Available Commands
+==================
+
+* list-audit-policies

@@ -1,0 +1,29 @@
+security-zone
+*************
+
+
+Description
+===========
+
+A security zone is associated with a security zone recipe and enforces
+all security zone policies in the recipe. Any actions in the zone’s
+compartment (and any subcompartments in the zone) that violate a
+policy are denied.
+
+
+Available Commands
+==================
+
+* add
+
+* change-compartment
+
+* create
+
+* delete
+
+* get
+
+* remove
+
+* update

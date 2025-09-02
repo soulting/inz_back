@@ -1,0 +1,31 @@
+outbound-connector
+******************
+
+
+Description
+===========
+
+Outbound connectors are used to help File Storage communicate with an
+external server, such as an LDAP server. An outbound connector
+contains all the information needed to connect, authenticate, and gain
+authorization to perform the account’s required functions.
+
+
+Available Commands
+==================
+
+* add
+
+* change-compartment
+
+* create_ldap_bind_connector
+
+* delete
+
+* get
+
+* list
+
+* remove
+
+* update

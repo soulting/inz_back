@@ -1,0 +1,22 @@
+scheduling-window
+*****************
+
+
+Description
+===========
+
+Details of a Scheduling Window.
+
+
+Available Commands
+==================
+
+* create
+
+* delete
+
+* get
+
+* list
+
+* update

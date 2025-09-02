@@ -1,0 +1,30 @@
+pipeline
+********
+
+
+Description
+===========
+
+A Pipeline to orchestrate and execute machine learning workflows.
+
+
+Available Commands
+==================
+
+* change-compartment
+
+* create
+
+* create-step-artifact
+
+* delete
+
+* get
+
+* get-step-artifact-content
+
+* head-step-artifact
+
+* list
+
+* update

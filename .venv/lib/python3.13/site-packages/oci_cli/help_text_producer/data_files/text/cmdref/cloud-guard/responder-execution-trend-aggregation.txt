@@ -1,0 +1,15 @@
+responder-execution-trend-aggregation
+*************************************
+
+
+Description
+===========
+
+Provides the timestamps and their corresponding number of
+remediations.
+
+
+Available Commands
+==================
+
+* request-summarized-trend-responder-executions

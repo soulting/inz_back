@@ -1,0 +1,14 @@
+excluded-object-summary
+***********************
+
+
+Description
+===========
+
+Excluded object summary line.
+
+
+Available Commands
+==================
+
+* list

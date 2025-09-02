@@ -1,0 +1,14 @@
+sensitive-type-group-summary
+****************************
+
+
+Description
+===========
+
+Summary of the sensitive type group.
+
+
+Available Commands
+==================
+
+* list-sensitive-type-groups

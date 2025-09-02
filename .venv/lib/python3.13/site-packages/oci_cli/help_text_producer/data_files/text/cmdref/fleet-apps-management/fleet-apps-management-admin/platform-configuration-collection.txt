@@ -1,0 +1,14 @@
+platform-configuration-collection
+*********************************
+
+
+Description
+===========
+
+Results of a platform configuration search.
+
+
+Available Commands
+==================
+
+* list-platform-configurations

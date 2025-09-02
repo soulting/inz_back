@@ -1,0 +1,167 @@
+bv
+**
+
+
+Description
+===========
+
+Block Volume Service CLI
+
+
+Available Commands
+==================
+
+* backup
+
+  * change-compartment
+
+  * copy
+
+  * create
+
+  * delete
+
+  * get
+
+  * list
+
+  * update
+
+* block-volume-replica
+
+  * get
+
+  * list
+
+* boot-volume
+
+  * change-compartment
+
+  * create
+
+  * create-boot-volume-boot-volume-source-from-boot-volume-replica-
+    details
+
+  * create-boot-volume-source-from-boot-volume-backup-delta
+
+  * delete
+
+  * get
+
+  * list
+
+  * update
+
+* boot-volume-backup
+
+  * change-compartment
+
+  * copy
+
+  * create
+
+  * delete
+
+  * get
+
+  * list
+
+  * update
+
+* boot-volume-kms-key
+
+  * delete
+
+  * get
+
+  * update
+
+* boot-volume-replica
+
+  * get
+
+  * list
+
+* volume
+
+  * change-compartment
+
+  * create
+
+  * create-volume-source-from-volume-backup-delta
+
+  * create-volume-volume-source-from-block-volume-replica-details
+
+  * delete
+
+  * get
+
+  * list
+
+  * update
+
+* volume-backup-policy
+
+  * create
+
+  * delete
+
+  * get
+
+  * list
+
+  * update
+
+* volume-backup-policy-assignment
+
+  * create
+
+  * delete
+
+  * get
+
+  * get-volume-backup-policy-asset-assignment
+
+* volume-group
+
+  * change-compartment
+
+  * create
+
+  * delete
+
+  * get
+
+  * list
+
+  * update
+
+* volume-group-backup
+
+  * change-compartment
+
+  * copy
+
+  * create
+
+  * delete
+
+  * get
+
+  * list
+
+  * update
+
+* volume-group-replica
+
+  * get
+
+  * list
+
+* volume-kms-key
+
+  * delete
+
+  * get
+
+  * update

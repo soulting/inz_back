@@ -1,0 +1,22 @@
+identity-provider
+*****************
+
+
+Description
+===========
+
+Federation trusted partner Identity Provider
+
+
+Available Commands
+==================
+
+* create
+
+* delete
+
+* get
+
+* patch
+
+* put

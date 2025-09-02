@@ -1,0 +1,16 @@
+database-view-access-entry
+**************************
+
+
+Description
+===========
+
+A DatabaseViewAccessEntry object is a resource corresponding to a row
+in view authorization report. It’s a subresource of Security Policy
+Report resource and is always associated with a SecurityPolicyReport.
+
+
+Available Commands
+==================
+
+* get

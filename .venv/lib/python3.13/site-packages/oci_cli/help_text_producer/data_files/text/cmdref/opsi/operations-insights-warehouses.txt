@@ -1,0 +1,30 @@
+operations-insights-warehouses
+******************************
+
+
+Description
+===========
+
+Logical grouping used for Ops Insights Warehouse operations.
+
+
+Available Commands
+==================
+
+* change
+
+* create
+
+* delete
+
+* download-warehouse-wallet
+
+* get
+
+* list
+
+* rotate-warehouse-wallet
+
+* summarize-operations-insights-warehouse-resource-usage
+
+* update

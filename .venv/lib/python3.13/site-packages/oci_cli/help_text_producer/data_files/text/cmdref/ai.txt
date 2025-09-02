@@ -1,0 +1,125 @@
+ai
+**
+
+
+Description
+===========
+
+OCI Language Service solutions can help enterprise customers integrate
+AI into their products immediately using our proven, pre-trained and
+custom models or containers, without a need to set up an house team of
+AI and ML experts. This allows enterprises to focus on business
+drivers and development work rather than AI and ML operations, which
+shortens the time to market.
+
+
+Available Commands
+==================
+
+* language
+
+  * batch-detect-entities
+
+  * batch-detect-health-entities
+
+  * batch-detect-key-phrases
+
+  * batch-detect-language
+
+  * batch-detect-pii-entities
+
+  * batch-detect-sentiments
+
+  * batch-detect-text-classification
+
+  * batch-language-translation
+
+  * detect-entities
+
+  * detect-key-phrases
+
+  * detect-language
+
+  * detect-sentiments
+
+  * detect-text-classification
+
+  * endpoint
+
+    * change-compartment
+
+    * create
+
+    * delete
+
+    * get
+
+    * list
+
+    * update
+
+  * evaluation-result
+
+    * list
+
+  * job
+
+    * cancel
+
+    * change-compartment
+
+    * create
+
+    * delete
+
+    * get
+
+    * list
+
+    * update
+
+  * model
+
+    * change-compartment
+
+    * create
+
+    * delete
+
+    * get
+
+    * list
+
+    * update
+
+  * model-type-info
+
+    * get
+
+  * project
+
+    * change-compartment
+
+    * create
+
+    * delete
+
+    * get
+
+    * list
+
+    * update
+
+  * work-request
+
+    * error
+
+      * list
+
+    * get
+
+    * list
+
+    * log
+
+      * list

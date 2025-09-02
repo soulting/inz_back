@@ -1,0 +1,14 @@
+role-grant-path-collection
+**************************
+
+
+Description
+===========
+
+A collection of role grant path summary objects.
+
+
+Available Commands
+==================
+
+* list-role-grant-paths

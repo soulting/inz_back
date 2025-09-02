@@ -1,0 +1,20 @@
+subscription-mapping
+********************
+
+
+Description
+===========
+
+Subscription mapping information.
+
+
+Available Commands
+==================
+
+* create
+
+* delete
+
+* get
+
+* list

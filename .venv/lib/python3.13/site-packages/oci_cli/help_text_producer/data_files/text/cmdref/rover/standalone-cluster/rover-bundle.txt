@@ -1,0 +1,16 @@
+rover-bundle
+************
+
+
+Description
+===========
+
+Rover Bundle for Cluster.
+
+
+Available Commands
+==================
+
+* copy-to-customer
+
+* get-status

@@ -1,0 +1,26 @@
+virtual-node-pool
+*****************
+
+
+Description
+===========
+
+A pool of virtual nodes attached to a cluster.
+
+
+Available Commands
+==================
+
+* create
+
+* delete
+
+* get
+
+* get-virtual-node
+
+* list
+
+* list-virtual-nodes
+
+* update

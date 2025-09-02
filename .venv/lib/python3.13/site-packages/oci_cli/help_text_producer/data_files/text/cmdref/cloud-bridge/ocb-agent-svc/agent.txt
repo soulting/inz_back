@@ -1,0 +1,24 @@
+agent
+*****
+
+
+Description
+===========
+
+Description of Agent.
+
+
+Available Commands
+==================
+
+* change-compartment
+
+* create
+
+* delete
+
+* get
+
+* list
+
+* update

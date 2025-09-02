@@ -1,0 +1,15 @@
+external-location-summaries-metadatum-summary-collection
+********************************************************
+
+
+Description
+===========
+
+External location summary information from OCI primitives to any CSP
+across all regions
+
+
+Available Commands
+==================
+
+* list-external-location-summaries-metadata

@@ -1,0 +1,30 @@
+cluster-placement-group
+***********************
+
+
+Description
+===========
+
+A cluster placement group, which is a logical grouping of resources
+that offer low latency within an availability domain by being placed
+in close physical proximity.
+
+
+Available Commands
+==================
+
+* activate
+
+* change-compartment
+
+* create
+
+* deactivate
+
+* delete
+
+* get
+
+* list
+
+* update

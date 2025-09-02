@@ -1,0 +1,50 @@
+config
+******
+
+
+Description
+===========
+
+A configuration item that, for example defines whether resources of a
+specific type should be discovered automatically.
+
+In this case, the ‘configType’ is set to ‘AUTO_PROMOTE’ and additional
+fields like ‘resourceType’ and ‘isEnabled’ determine if such resources
+are to be discovered automatically (also referred to as ‘Automatic
+Promotion’).
+
+
+Available Commands
+==================
+
+* change-compartment
+
+* create
+
+* create-auto-promote-config
+
+* create-compute-auto-activate-plugin-config
+
+* create-license-auto-assign-config
+
+* create-license-enterprise-extensibility-config
+
+* create-onboard-config
+
+* delete
+
+* get
+
+* list
+
+* update
+
+* update-auto-promote-config
+
+* update-compute-auto-activate-plugin-config
+
+* update-license-auto-assign-config
+
+* update-license-enterprise-extensibility-config
+
+* update-onboard-config

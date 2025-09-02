@@ -1,0 +1,14 @@
+launch-eligibility
+******************
+
+
+Description
+===========
+
+Tenant eligibility and other information for launching a PIC image
+
+
+Available Commands
+==================
+
+* get

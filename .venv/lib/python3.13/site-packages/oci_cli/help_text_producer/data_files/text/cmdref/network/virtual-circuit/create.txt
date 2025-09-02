@@ -1,0 +1,314 @@
+"create"
+********
+
+* Description
+
+* Usage
+
+* Required Parameters
+
+* Optional Parameters
+
+* Global Parameters
+
+* Example using required parameter
+
+
+Description
+===========
+
+Creates a new virtual circuit to use with Oracle Cloud Infrastructure
+FastConnect. For more information, see FastConnect Overview.
+
+For the purposes of access control, you must provide the OCID of the
+compartment where you want the virtual circuit to reside. If you’re
+not sure which compartment to use, put the virtual circuit in the same
+compartment with the DRG it’s using. For more information about
+compartments and access control, see Overview of the IAM Service. For
+information about OCIDs, see Resource Identifiers.
+
+You may optionally specify a *display name* for the virtual circuit.
+It does not have to be unique, and you can change it. Avoid entering
+confidential information.
+
+**Important:** When creating a virtual circuit, you specify a DRG for
+the traffic to flow through. Make sure you attach the DRG to your VCN
+and confirm the VCN’s routing sends traffic to the DRG. Otherwise
+traffic will not flow. For more information, see Route Tables.
+
+
+Usage
+=====
+
+   oci network virtual-circuit create [OPTIONS]
+
+
+Required Parameters
+===================
+
+--compartment-id, -c [text]
+
+The OCID of the compartment to contain the virtual circuit.
+
+--type [text]
+
+The type of IP addresses used in this virtual circuit. PRIVATE means
+RFC 1918 addresses (10.0.0.0/8, 172.16/12, and 192.168/16).
+
+Accepted values are:
+
+   PRIVATE, PUBLIC
+
+
+Optional Parameters
+===================
+
+--bandwidth-shape-name [text]
+
+The provisioned data rate of the connection. To get a list of the
+available bandwidth levels (that is, shapes), see
+ListFastConnectProviderServiceVirtualCircuitBandwidthShapes.
+
+Example:
+
+   10 Gbps
+
+--bgp-admin-state [text]
+
+Set to *ENABLED* (the default) to activate the BGP session of the
+virtual circuit, set to *DISABLED* to deactivate the virtual circuit.
+
+Accepted values are:
+
+   DISABLED, ENABLED
+
+--cross-connect-mappings [complex type]
+
+Create a *CrossConnectMapping* for each cross-connect or cross-connect
+group this virtual circuit will run on.
+
+This option is a JSON list with items of type CrossConnectMapping.
+For documentation on CrossConnectMapping please see our API reference:
+https://docs.cloud.oracle.com/api/#/en/iaas/20160918/datatypes/CrossC
+onnectMapping. This is a complex type whose value must be valid JSON.
+The value can be provided as a string on the command line or passed in
+as a file using the file://path/to/file syntax.
+
+The "--generate-param-json-input" option can be used to generate an
+example of the JSON which must be provided. We recommend storing this
+example in a file, modifying it as needed and then passing it back in
+via the file:// syntax.
+
+--customer-asn [integer]
+
+Your BGP ASN (either public or private). Provide this value only if
+there’s a BGP session that goes from your edge router to Oracle.
+Otherwise, leave this empty or null. Can be a 2-byte or 4-byte ASN.
+Uses “asplain” format.
+
+Example:
+
+   12345` (2-byte) or `1587232876` (4-byte)
+
+--customer-bgp-asn [integer]
+
+Deprecated. Instead use *customerAsn*. If you specify values for both,
+the request will be rejected.
+
+--defined-tags [complex type]
+
+Defined tags for this resource. Each key is predefined and scoped to a
+namespace. For more information, see Resource Tags.
+
+Example:
+
+   {"Operations": {"CostCenter": "42"}}
+
+This is a complex type whose value must be valid JSON. The value can
+be provided as a string on the command line or passed in as a file
+using the file://path/to/file syntax.
+
+The "--generate-param-json-input" option can be used to generate an
+example of the JSON which must be provided. We recommend storing this
+example in a file, modifying it as needed and then passing it back in
+via the file:// syntax.
+
+--display-name [text]
+
+A user-friendly name. Does not have to be unique, and it’s changeable.
+Avoid entering confidential information.
+
+--freeform-tags [complex type]
+
+Free-form tags for this resource. Each tag is a simple key-value pair
+with no predefined name, type, or namespace. For more information, see
+Resource Tags.
+
+Example:
+
+   {"Department": "Finance"}
+
+This is a complex type whose value must be valid JSON. The value can
+be provided as a string on the command line or passed in as a file
+using the file://path/to/file syntax.
+
+The "--generate-param-json-input" option can be used to generate an
+example of the JSON which must be provided. We recommend storing this
+example in a file, modifying it as needed and then passing it back in
+via the file:// syntax.
+
+--from-json [text]
+
+Provide input to this command as a JSON document from a file using the
+file://path-to/file syntax.
+
+The "--generate-full-command-json-input" option can be used to
+generate a sample json file to be used with this command option. The
+key names are pre-populated and match the command option names
+(converted to camelCase format, e.g. compartment-id –> compartmentId),
+while the values of the keys need to be populated by the user before
+using the sample file as an input to this command. For any command
+option that accepts multiple values, the value of the key can be a
+JSON array.
+
+Options can still be provided on the command line. If an option exists
+in both the JSON document and the command line then the command line
+specified value will be used.
+
+For examples on usage of this option, please see our “using CLI with
+advanced JSON options” link: https://docs.cloud.oracle.com/iaas/Conte
+nt/API/SDKDocs/cliusing.htm#AdvancedJSONOptions
+
+--gateway-id [text]
+
+For private virtual circuits only. The OCID of the dynamic routing
+gateway (DRG) that this virtual circuit uses.
+
+--ip-mtu [text]
+
+The layer 3 IP MTU to use with this virtual circuit.
+
+Accepted values are:
+
+   MTU_1500, MTU_9000
+
+--is-bfd-enabled [boolean]
+
+Set to *true* to enable BFD for IPv4 BGP peering, or set to *false* to
+disable BFD. If this is not set, the default is *false*.
+
+--is-transport-mode [boolean]
+
+Set to *true* for the virtual circuit to carry only encrypted traffic,
+or set to *false* for the virtual circuit to carry unencrypted
+traffic. If this is not set, the default is *false*.
+
+--max-wait-seconds [integer]
+
+The maximum time to wait for the resource to reach the lifecycle state
+defined by "--wait-for-state". Defaults to 1200 seconds.
+
+--provider-name [text]
+
+Deprecated. Instead use *providerServiceId*. To get a list of the
+provider names, see ListFastConnectProviderServices.
+
+--provider-service-id [text]
+
+The OCID of the service offered by the provider (if you’re connecting
+via a provider). To get a list of the available service offerings, see
+ListFastConnectProviderServices.
+
+--provider-service-key-name [text]
+
+The service key name offered by the provider (if the customer is
+connecting via a provider).
+
+--provider-service-name [text]
+
+Deprecated. Instead use *providerServiceId*. To get a list of the
+provider names, see ListFastConnectProviderServices.
+
+--public-prefixes [complex type]
+
+For a public virtual circuit. The public IP prefixes (CIDRs) the
+customer wants to advertise across the connection.
+
+This option is a JSON list with items of type
+CreateVirtualCircuitPublicPrefixDetails.  For documentation on
+CreateVirtualCircuitPublicPrefixDetails please see our API reference: 
+https://docs.cloud.oracle.com/api/#/en/iaas/20160918/datatypes/Create
+VirtualCircuitPublicPrefixDetails. This is a complex type whose value
+must be valid JSON. The value can be provided as a string on the
+command line or passed in as a file using the file://path/to/file
+syntax.
+
+The "--generate-param-json-input" option can be used to generate an
+example of the JSON which must be provided. We recommend storing this
+example in a file, modifying it as needed and then passing it back in
+via the file:// syntax.
+
+--routing-policy [text]
+
+The routing policy sets how routing information about the Oracle cloud
+is shared over a public virtual circuit. Policies available are:
+*ORACLE_SERVICE_NETWORK*, *REGIONAL*, *MARKET_LEVEL*, and *GLOBAL*.
+See Route Filtering for details. By default, routing information is
+shared for all routes in the same market.
+
+Accepted values are:
+
+   GLOBAL, MARKET_LEVEL, ORACLE_SERVICE_NETWORK, REGIONAL
+
+--wait-for-state [text]
+
+This operation creates, modifies or deletes a resource that has a
+defined lifecycle state. Specify this option to perform the action and
+then wait until the resource reaches a given lifecycle state. Multiple
+states can be specified, returning on the first state. For example, "
+--wait-for-state" SUCCEEDED "--wait-for-state" FAILED would return on
+whichever lifecycle state is reached first. If timeout is reached, a
+return code of 2 is returned. For any other error, a return code of 1
+is returned.
+
+Accepted values are:
+
+   FAILED, INACTIVE, PENDING_PROVIDER, PROVISIONED, PROVISIONING, TERMINATED, TERMINATING, VERIFYING
+
+--wait-interval-seconds [integer]
+
+Check every "--wait-interval-seconds" to see whether the resource has
+reached the lifecycle state defined by "--wait-for-state". Defaults to
+30 seconds.
+
+
+Global Parameters
+=================
+
+Use "oci --help" for help on global parameters.
+
+"--auth-purpose", "--auth", "--cert-bundle", "--cli-auto-prompt", "--
+cli-rc-file", "--config-file", "--connection-timeout", "--debug", "--
+defaults-file", "--endpoint", "--generate-full-command-json-input", "
+--generate-param-json-input", "--help", "--latest-version", "--max-
+retries", "--no-retry", "--opc-client-request-id", "--opc-request-id",
+"--output", "--profile", "--proxy", "--query", "--raw-output", "--
+read-timeout", "--realm-specific-endpoint", "--region", "--release-
+info", "--request-id", "--version", "-?", "-d", "-h", "-i", "-v"
+
+
+Example using required parameter
+================================
+
+Copy the following CLI commands into a file named example.sh. Run the
+command by typing “bash example.sh” and replacing the example
+parameters with your own.
+
+Please note this sample will only work in the POSIX-compliant bash-
+like shell. You need to set up the OCI configuration and appropriate
+security policies before trying the examples.
+
+       export compartment_id=<substitute-value-of-compartment_id> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/network/virtual-circuit/create.html#cmdoption-compartment-id
+       export type=<substitute-value-of-type> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/network/virtual-circuit/create.html#cmdoption-type
+
+       oci network virtual-circuit create --compartment-id $compartment_id --type $type

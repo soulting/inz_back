@@ -1,0 +1,27 @@
+key-store
+*********
+
+
+Description
+===========
+
+A key store to connect to an on-premise encryption key appliance like
+Oracle Key Vault.
+
+
+Available Commands
+==================
+
+* change-compartment
+
+* confirm-key-store-details-are-correct
+
+* create-oracle-key-vault-details
+
+* delete
+
+* get
+
+* list
+
+* update-oracle-key-vault-details

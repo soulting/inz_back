@@ -1,0 +1,15 @@
+recommended-scheduled-action-summary
+************************************
+
+
+Description
+===========
+
+Details of the scheduled action that is used in
+getRecommendedScheduledActions.
+
+
+Available Commands
+==================
+
+* list-recommended-scheduled-actions

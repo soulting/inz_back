@@ -1,0 +1,14 @@
+compute-gpu-memory-cluster-instance-summary
+*******************************************
+
+
+Description
+===========
+
+The customer facing GPU memory cluster instance object details.
+
+
+Available Commands
+==================
+
+* list-compute-gpu-memory-cluster-instances

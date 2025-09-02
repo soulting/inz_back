@@ -1,0 +1,20 @@
+grant
+*****
+
+
+Description
+===========
+
+Schema for Grant Resource
+
+
+Available Commands
+==================
+
+* create
+
+* delete
+
+* get
+
+* patch

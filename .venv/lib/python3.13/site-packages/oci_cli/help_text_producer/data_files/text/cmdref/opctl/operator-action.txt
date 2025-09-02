@@ -1,0 +1,30 @@
+operator-action
+***************
+
+
+Description
+===========
+
+Details of the operator action. Operator actions are a pre-defined set
+of commands available to the operator on different layers of the
+infrastructure. Although the groupings may differ depending on the
+infrastructure layers, the groups are designed to enable the operator
+access to commands to resolve a specific set of issues. The
+infrastructure layers controlled by the Operator Control include Dom0,
+CellServer, and Control Plane Server (CPS).
+
+There are five groups available to the operator. x-obmcs-top-level-
+enum: ‘#/definitions/OperatorActionCategories’ enum:
+>>*<<OPERATORACTIONCATEGORIES
+
+The following infrastructure layers are controlled by the operator
+actions x-obmcs-top-level-enum: ‘#/definitions/InfrastructureLayers’
+enum: >>*<<INFRASTRUCTURELAYERS
+
+
+Available Commands
+==================
+
+* get
+
+* list

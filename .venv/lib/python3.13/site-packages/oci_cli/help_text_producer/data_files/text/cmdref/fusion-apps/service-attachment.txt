@@ -1,0 +1,22 @@
+service-attachment
+******************
+
+
+Description
+===========
+
+Description of ServiceAttachment.
+
+
+Available Commands
+==================
+
+* create
+
+* delete
+
+* get
+
+* list
+
+* verify

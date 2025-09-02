@@ -1,0 +1,14 @@
+protected-branch-collection
+***************************
+
+
+Description
+===========
+
+Collection of protected branches
+
+
+Available Commands
+==================
+
+* list-protected-branches

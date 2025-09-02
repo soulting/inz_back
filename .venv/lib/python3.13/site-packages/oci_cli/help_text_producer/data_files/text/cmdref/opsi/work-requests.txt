@@ -1,0 +1,16 @@
+work-requests
+*************
+
+
+Description
+===========
+
+Logical grouping used for Ops Insights Work Request operations.
+
+
+Available Commands
+==================
+
+* get
+
+* list

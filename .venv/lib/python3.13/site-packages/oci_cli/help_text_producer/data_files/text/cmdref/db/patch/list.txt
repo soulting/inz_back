@@ -1,0 +1,17 @@
+list
+****
+
+
+Description
+===========
+
+Lists patches applicable to the requested Database Home. [Command
+Reference](listDbHomePatches)
+
+
+Available Commands
+==================
+
+* by-database
+
+* by-db-system

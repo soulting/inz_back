@@ -1,0 +1,587 @@
+"put"
+*****
+
+* Description
+
+* Usage
+
+* Required Parameters
+
+* Optional Parameters
+
+* Global Parameters
+
+* Example using required parameter
+
+* Other Examples
+
+
+Description
+===========
+
+Creates a new object or overwrites an existing one.
+
+The object can be uploaded as a single part or as multiple parts.
+Below are the rules for whether an object will be uploaded via single
+or multipart upload (listed in order of precedence):
+
+   * If the object is being uploaded from STDIN, it will be uploaded
+     as a multipart upload (if the object content is smaller than
+     –part-size, default for STDIN is 10 MiB, the multipart upload may
+     contain only one part, but it will still use the MultipartUpload
+     API)
+
+   * If the –no-multipart flag is specified, the object will be
+     uploaded as a single part regardless of size (specifying –no-
+     multipart when uploading from STDIN will result in an error)
+
+   * If the object is larger than –part-size, it will be uploaded as
+     multiple parts
+
+   * If the object is empty it will be uploaded as a single part
+
+Example:
+   oci os object put -ns mynamespace -bn mybucket –name myfile.txt
+   –file /Users/me/myfile.txt –metadata
+   ‘{“key1”:”value1”,”key2”:”value2”}’
+
+
+Usage
+=====
+
+   oci os object put [OPTIONS]
+
+
+Required Parameters
+===================
+
+-bn, --bucket-name [text]
+
+The name of the bucket.
+
+--file [filename]
+
+The file to load as the content of the object, or ‘-‘ to read from
+STDIN.
+
+
+Optional Parameters
+===================
+
+--cache-control [text]
+
+The optional Cache-Control header that defines the caching behavior
+value to be returned in GetObject and HeadObject responses. Specifying
+values for this header has no effect on Object Storage behavior.
+Programs that read the object determine what to do based on the value
+provided. For example, you could use this header to identify objects
+that require caching restrictions.
+
+--content-disposition [text]
+
+The optional Content-Disposition header that defines presentational
+information for the object to be returned in GetObject and HeadObject
+responses. Specifying values for this header has no effect on Object
+Storage behavior. Programs that read the object determine what to do
+based on the value provided. For example, you could use this header to
+let users download objects with custom filenames in a browser.
+
+--content-encoding [text]
+
+The optional Content-Encoding header that defines the content encoding
+of the object to be returned in GetObject and HeadObject responses.
+Specifying values for this header has no effect on Object Storage
+behavior. Programs that read the object determine what to do based on
+the value provided. For example, you could use this header to
+determine what decoding mechanisms need to be applied to obtain the
+media-type specified by the Content-Type header of the object.
+
+--content-language [text]
+
+The optional Content-Language header that defines the content language
+of the object to be returned in GetObject and HeadObject responses.
+Specifying values for this header has no effect on Object Storage
+behavior. Programs that read the object determine what to do based on
+the value provided. For example, you could use this header to identify
+and differentiate objects based on a particular language.
+
+--content-md5 [text]
+
+The optional base-64 header that defines the encoded MD5 hash of the
+body. If the optional Content-MD5 header is present, Object Storage
+performs an integrity check on the body of the HTTP request by
+computing the MD5 hash for the body and comparing it to the MD5 hash
+supplied in the header. If the two hashes do not match, the object is
+rejected and an HTTP-400 Unmatched Content MD5 error is returned with
+the message: “The computed MD5 of the request body (ACTUAL_MD5) does
+not match the Content-MD5 header (HEADER_MD5)”
+
+--content-type [text]
+
+The optional Content-Type header that defines the standard MIME type
+format of the object to be returned in GetObject and HeadObject
+responses. Content type defaults to ‘application/octet-stream’ if not
+specified. Specifying values for this header has no effect on Object
+Storage behavior. Programs that read the object determine what to do
+based on the value provided. For example, you could use this header to
+identify and perform special operations on text only objects.
+
+--disable-parallel-uploads
+
+If the object will be uploaded in multiple parts, this option disables
+those parts from being uploaded in parallel.
+
+--encryption-key-file [filename]
+
+A file containing the base64-encoded string of the AES-256 encryption
+key associated with the object.
+
+--force
+
+If the object name already exists, overwrite the existing object
+without a confirmation prompt.
+
+--from-json [text]
+
+Provide input to this command as a JSON document from a file using the
+file://path-to/file syntax.
+
+The "--generate-full-command-json-input" option can be used to
+generate a sample json file to be used with this command option. The
+key names are pre-populated and match the command option names
+(converted to camelCase format, e.g. compartment-id –> compartmentId),
+while the values of the keys need to be populated by the user before
+using the sample file as an input to this command. For any command
+option that accepts multiple values, the value of the key can be a
+JSON array.
+
+Options can still be provided on the command line. If an option exists
+in both the JSON document and the command line then the command line
+specified value will be used.
+
+For examples on usage of this option, please see our “using CLI with
+advanced JSON options” link: https://docs.cloud.oracle.com/iaas/Conte
+nt/API/SDKDocs/cliusing.htm#AdvancedJSONOptions
+
+--if-match [text]
+
+The entity tag to match.
+
+--metadata [text]
+
+Arbitrary string keys and values for user-defined metadata. This will
+be applied to all files being uploaded. Must be in JSON format.
+Example: ‘{“key1”:”value1”,”key2”:”value2”}’
+
+--name [text]
+
+The name of the object. Default value is the filename excluding the
+path. Required if reading object from STDIN.
+
+-ns, --namespace, --namespace-name [text]
+
+The top-level namespace used for the request. If not provided, this
+parameter will be obtained internally using a call to ‘oci os ns get’
+
+--no-multipart
+
+Do not transfer the file in multiple parts. By default, files above
+128 MiB will be transferred in multiple parts, then combined.
+
+--no-overwrite
+
+If the object name already exists, do not overwrite the existing
+object.
+
+--opc-checksum-algorithm [text]
+
+The optional checksum algorithm to use to compute and store the
+checksum of the body of the HTTP request (or the parts in case of
+multipart uploads), in addition to the default MD5 checksum.
+
+Accepted values are:
+
+   CRC32C, SHA256, SHA384
+
+--opc-content-crc32c [text]
+
+Applicable only if CRC32C is specified in the opc-checksum-algorithm
+request header.
+
+The optional header that defines the base64-encoded, 32-bit CRC32C
+(Castagnoli) checksum of the body. If the optional opc-content-crc32c
+header is present, Object Storage performs an integrity check on the
+body of the HTTP request by computing the CRC32C checksum for the body
+and comparing it to the CRC32C checksum supplied in the header. If the
+two checksums do not match, the object is rejected and an HTTP-400
+Unmatched Content CRC32C error is returned with the message:
+
+“The computed CRC32C of the request body (ACTUAL_CRC32C) does not
+match the opc-content-crc32c header (HEADER_CRC32C)”
+
+--opc-content-sha256 [text]
+
+Applicable only if SHA256 is specified in the opc-checksum-algorithm
+request header.
+
+The optional header that defines the base64-encoded SHA256 hash of the
+body. If the optional opc-content-sha256 header is present, Object
+Storage performs an integrity check on the body of the HTTP request by
+computing the SHA256 hash for the body and comparing it to the SHA256
+hash supplied in the header. If the two hashes do not match, the
+object is rejected and an HTTP-400 Unmatched Content SHA256 error is
+returned with the message:
+
+“The computed SHA256 of the request body (ACTUAL_SHA256) does not
+match the opc-content-sha256 header (HEADER_SHA256)”
+
+--opc-content-sha384 [text]
+
+Applicable only if SHA384 is specified in the opc-checksum-algorithm
+request header.
+
+The optional header that defines the base64-encoded SHA384 hash of the
+body. If the optional opc-content-sha384 header is present, Object
+Storage performs an integrity check on the body of the HTTP request by
+computing the SHA384 hash for the body and comparing it to the SHA384
+hash supplied in the header. If the two hashes do not match, the
+object is rejected and an HTTP-400 Unmatched Content SHA384 error is
+returned with the message:
+
+“The computed SHA384 of the request body (ACTUAL_SHA384) does not
+match the opc-content-sha384 header (HEADER_SHA384)”
+
+--opc-sse-kms-key-id [text]
+
+The OCID of a master encryption key used to call the Key Management
+Service to generate a data encryption key or to encrypt or decrypt a
+data encryption key.
+
+--parallel-upload-count [integer range]
+
+The number of parallel operations to perform. Decreasing this value
+will make the process less resource intensive but it may take longer.
+Increasing this value may decrease the time taken, but the process
+will consume more system resources and network bandwidth. The maximum
+is 1000.
+
+--part-size [integer]
+
+Part size (in MiB) to use when the file is split into multiple parts
+and then combined. Part size must be greater than 10 MiB and defaults
+to 128 MiB.
+
+--storage-tier [text]
+
+The storage tier that the objects should be stored in. If not
+specified, the objects will be stored in the same storage tier as the
+bucket.
+
+Accepted values are:
+
+   Archive, InfrequentAccess, Standard
+
+--verify-checksum
+
+Verify the checksum of the uploaded object with the local file.
+
+
+Global Parameters
+=================
+
+Use "oci --help" for help on global parameters.
+
+"--auth-purpose", "--auth", "--cert-bundle", "--cli-auto-prompt", "--
+cli-rc-file", "--config-file", "--connection-timeout", "--debug", "--
+defaults-file", "--endpoint", "--generate-full-command-json-input", "
+--generate-param-json-input", "--help", "--latest-version", "--max-
+retries", "--no-retry", "--opc-client-request-id", "--opc-request-id",
+"--output", "--profile", "--proxy", "--query", "--raw-output", "--
+read-timeout", "--realm-specific-endpoint", "--region", "--release-
+info", "--request-id", "--version", "-?", "-d", "-h", "-i", "-v"
+
+
+Example using required parameter
+================================
+
+Copy the following CLI commands into a file named example.sh. Run the
+command by typing “bash example.sh” and replacing the example
+parameters with your own.
+
+Please note this sample will only work in the POSIX-compliant bash-
+like shell. You need to set up the OCI configuration and appropriate
+security policies before trying the examples.
+
+       export bucket_name=<substitute-value-of-bucket_name> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/os/object/put.html#cmdoption-bucket-name
+       export file=<substitute-value-of-file> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/os/object/put.html#cmdoption-file
+
+       oci os object put --bucket-name $bucket_name --file $file
+
+
+Other Examples
+==============
+
+
+Description
+-----------
+
+This will upload the specified file
+
+
+Command
+-------
+
+    oci os object put -bn bucket-client --file test.txt
+
+
+Output
+------
+
+   {
+    "etag": "9b1e02c5-0710-4927-9f54-11022ea604e7",
+    "last-modified": "Thu, 27 Oct 2022 07:44:43 GMT",
+    "opc-content-md5": "1B2M2Y8AsgTpgAmY7PhCfg=="
+   }
+
+
+Description
+-----------
+
+This upload the object with specified cache-control method
+
+
+Command
+-------
+
+    oci os object put -bn bucket-client --file test.txt --cache-control no-cache
+
+
+Output
+------
+
+   {
+    "etag": "b7fa8ccb-a108-4857-b892-126d41462e79",
+    "last-modified": "Thu, 27 Oct 2022 07:54:59 GMT",
+    "opc-content-md5": "1B2M2Y8AsgTpgAmY7PhCfg=="
+   }
+
+
+Description
+-----------
+
+This upload the object with specified content-type
+
+
+Command
+-------
+
+    oci os object put -bn bucket-client --file test.txt --content-type text/plain
+
+
+Output
+------
+
+   {
+    "etag": "665f2dcd-a394-42c1-b176-f324903842c3",
+    "last-modified": "Thu, 27 Oct 2022 07:56:48 GMT",
+    "opc-content-md5": "1B2M2Y8AsgTpgAmY7PhCfg=="
+   }
+
+
+Description
+-----------
+
+This will override the already existing object without confirmation
+prompt, forcefully
+
+
+Command
+-------
+
+    oci os object put -bn bucket-client --file test.txt --force
+
+
+Output
+------
+
+   {
+    "etag": "0cb65907-9568-4c20-842f-936e10b6f0a0",
+    "last-modified": "Thu, 27 Oct 2022 07:57:39 GMT",
+    "opc-content-md5": "1B2M2Y8AsgTpgAmY7PhCfg=="
+   }
+
+
+Description
+-----------
+
+This will upload the object with user defined metadata
+
+
+Command
+-------
+
+     oci os object put -bn bucket-client --file test.txt --metadata '{''object-type':'Large''}'
+
+
+Output
+------
+
+   {
+    "etag": "79be26e1-550b-42fa-9f75-19aa43d98f55",
+    "last-modified": "Thu, 27 Oct 2022 08:29:59 GMT",
+    "opc-content-md5": "1B2M2Y8AsgTpgAmY7PhCfg=="
+   }
+
+
+Description
+-----------
+
+This will not upload the object, if object with same name already
+exists
+
+
+Command
+-------
+
+    oci os object put -bn bucket-client --file test.txt --no-overwrite
+
+
+Output
+------
+
+   {
+    "output": "The object already exists and was not overwritten"
+   }
+
+
+Description
+-----------
+
+This command will upload object with specified json
+
+
+Command
+-------
+
+    oci os object put -bn bucket-client --file test.txt --from-json '{'content-type':'plain/text'}'
+
+
+Output
+------
+
+   {
+    "etag": "60a87fe1-49c8-4dc8-8fe6-0ca75b4c4987",
+    "last-modified": "Thu, 27 Oct 2022 09:10:34 GMT",
+    "opc-content-md5": "1B2M2Y8AsgTpgAmY7PhCfg=="
+   }
+
+
+Description
+-----------
+
+This will upload the object with specified storage tier
+
+
+Command
+-------
+
+    oci os object put -bn bucket-client --file test.txt --storage-tier Archive
+
+
+Output
+------
+
+   {
+    "etag": "36cd287a-3911-42fd-b07e-b485cd343fb1",
+    "last-modified": "Thu, 27 Oct 2022 08:52:36 GMT",
+    "opc-content-md5": "1B2M2Y8AsgTpgAmY7PhCfg=="
+   }
+
+
+Description
+-----------
+
+This will upload the object and verify the checksum with local file
+
+
+Command
+-------
+
+    oci os object put -bn bucket-client --file test.txt --verify-checksum
+
+
+Output
+------
+
+   {
+    "etag": "0a4aae1c-0931-492e-b104-08f38785157b",
+    "last-modified": "Thu, 27 Oct 2022 08:54:24 GMT",
+    "opc-content-md5": "1B2M2Y8AsgTpgAmY7PhCfg=="
+   }
+
+
+Description
+-----------
+
+This will generate json which can be used with –from-json parameter
+
+
+Command
+-------
+
+    oci os object put -bn bucket-client --file test.txt --generate-full-command-json-input
+
+
+Output
+------
+
+   {
+    "bucketName": "string",
+    "cacheControl": "string",
+    "contentDisposition": "string",
+    "contentEncoding": "string",
+    "contentLanguage": "string",
+    "contentMd5": "string",
+    "contentType": "string",
+    "disableParallelUploads": "true",
+    "encryptionKeyFile": "/path/to/file",
+    "file": "/path/to/file",
+    "force": "true",
+    "ifMatch": "string",
+    "metadata": {
+         "string1": "string",
+         "string2": "string"
+    },
+    "name": "string",
+    "namespace": "string",
+    "namespaceName": "string",
+    "noMultipart": "true",
+    "noOverwrite": "true",
+    "opcSseKmsKeyId": "string",
+    "partSize": 0,
+    "storageTier": "Standard|InfrequentAccess|Archive",
+    "verifyChecksum": "true"
+   }
+
+
+Description
+-----------
+
+This will upload the object, taking input from stdin, EOF represent
+custom end of file symbol
+
+
+Command
+-------
+
+    oci os object put -bn bucket-client --name test.txt --file - << EOF heredoc> file content hereheredoc> EOF
+
+
+Output
+------
+
+   {
+    "etag": "36cd287a-3911-42fd-b07e-b485cd343fb1",
+    "last-modified": "Thu, 27 Oct 2022 08:52:36 GMT",
+    "opc-content-md5": "1B2M2Y8AsgTpgAmY7PhCfg=="
+   }

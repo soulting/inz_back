@@ -1,0 +1,14 @@
+model-type-info
+***************
+
+
+Description
+===========
+
+Model information like versions and capabilities
+
+
+Available Commands
+==================
+
+* get-model-type

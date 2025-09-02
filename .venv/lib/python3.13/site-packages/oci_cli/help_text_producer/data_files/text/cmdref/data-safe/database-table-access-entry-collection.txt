@@ -1,0 +1,14 @@
+database-table-access-entry-collection
+**************************************
+
+
+Description
+===========
+
+A collection of database table access summary objects.
+
+
+Available Commands
+==================
+
+* list-database-table-access-entries

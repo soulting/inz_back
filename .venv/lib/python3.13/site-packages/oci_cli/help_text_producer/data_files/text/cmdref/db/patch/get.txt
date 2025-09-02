@@ -1,0 +1,17 @@
+get
+***
+
+
+Description
+===========
+
+Gets information about a specified patch package. [Command
+Reference](getDbHomePatch)
+
+
+Available Commands
+==================
+
+* by-database
+
+* by-db-system

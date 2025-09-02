@@ -1,0 +1,49 @@
+fleet
+*****
+
+
+Description
+===========
+
+A Fleet is the primary collection with which users interact when using
+Java Management Service.
+
+
+Available Commands
+==================
+
+* change-compartment
+
+* create
+
+* create-drs-file
+
+* delete
+
+* disable-drs
+
+* enable-drs
+
+* generate-agent-deploy-script
+
+* generate-load-pipeline-script
+
+* get
+
+* list
+
+* request-crypto-analyses
+
+* request-deployed-application-migration-analyses
+
+* request-java-migration-analyses
+
+* request-jfr-recordings
+
+* request-performance-tuning-analyses
+
+* summarize-resource-inventory
+
+* update
+
+* update-drs-file

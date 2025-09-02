@@ -1,0 +1,22 @@
+property
+********
+
+
+Description
+===========
+
+Global metadata element details.
+
+
+Available Commands
+==================
+
+* change-compartment
+
+* create
+
+* delete
+
+* get
+
+* update

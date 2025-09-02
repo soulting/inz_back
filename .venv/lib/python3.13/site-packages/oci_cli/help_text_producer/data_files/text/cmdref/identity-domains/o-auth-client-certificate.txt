@@ -1,0 +1,18 @@
+o-auth-client-certificate
+*************************
+
+
+Description
+===========
+
+OAuth Client Certificate schema
+
+
+Available Commands
+==================
+
+* create
+
+* delete
+
+* get

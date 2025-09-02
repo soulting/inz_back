@@ -1,0 +1,291 @@
+"create-dns-sec-monitor"
+************************
+
+* Description
+
+* Usage
+
+* Required Parameters
+
+* Optional Parameters
+
+* Global Parameters
+
+* Example using required parameter
+
+
+Description
+===========
+
+Creates a new monitor.
+
+
+Usage
+=====
+
+   oci apm-synthetics monitor create-dns-sec-monitor [OPTIONS]
+
+
+Required Parameters
+===================
+
+--apm-domain-id [text]
+
+The APM domain ID the request is intended for.
+
+--display-name [text]
+
+Unique name that can be edited. The name should not contain any
+confidential information.
+
+--monitor-type [text]
+
+Type of monitor.
+
+Accepted values are:
+
+   BROWSER, DNS, FTP, NETWORK, REST, SCRIPTED_BROWSER, SCRIPTED_REST, SQL
+
+--repeat-interval-in-seconds [integer]
+
+Interval in seconds after the start time when the job should be
+repeated. Minimum repeatIntervalInSeconds should be 300 seconds for
+Scripted REST, Scripted Browser and Browser monitors, and 60 seconds
+for REST monitor.
+
+--vantage-points [complex type]
+
+A list of public and dedicated vantage points from which to execute
+the monitor. Use /publicVantagePoints to fetch public vantage points,
+and /dedicatedVantagePoints to fetch dedicated vantage points. This is
+a complex type whose value must be valid JSON. The value can be
+provided as a string on the command line or passed in as a file using
+the file://path/to/file syntax.
+
+The "--generate-param-json-input" option can be used to generate an
+example of the JSON which must be provided. We recommend storing this
+example in a file, modifying it as needed and then passing it back in
+via the file:// syntax.
+
+
+Optional Parameters
+===================
+
+--availability-configuration [complex type]
+
+This is a complex type whose value must be valid JSON. The value can
+be provided as a string on the command line or passed in as a file
+using the file://path/to/file syntax.
+
+The "--generate-param-json-input" option can be used to generate an
+example of the JSON which must be provided. We recommend storing this
+example in a file, modifying it as needed and then passing it back in
+via the file:// syntax.
+
+--batch-interval-in-seconds [integer]
+
+Time interval between two runs in round robin batch mode
+(SchedulingPolicy - BATCHED_ROUND_ROBIN).
+
+--defined-tags [complex type]
+
+Defined tags for this resource. Each key is predefined and scoped to a
+namespace. Example: *{“foo-namespace”: {“bar-key”: “value”}}* This is
+a complex type whose value must be valid JSON. The value can be
+provided as a string on the command line or passed in as a file using
+the file://path/to/file syntax.
+
+The "--generate-param-json-input" option can be used to generate an
+example of the JSON which must be provided. We recommend storing this
+example in a file, modifying it as needed and then passing it back in
+via the file:// syntax.
+
+--dns-configuration [complex type]
+
+This is a complex type whose value must be valid JSON. The value can
+be provided as a string on the command line or passed in as a file
+using the file://path/to/file syntax.
+
+The "--generate-param-json-input" option can be used to generate an
+example of the JSON which must be provided. We recommend storing this
+example in a file, modifying it as needed and then passing it back in
+via the file:// syntax.
+
+--freeform-tags [complex type]
+
+Simple key-value pair that is applied without any predefined name,
+type or scope. Exists for cross-compatibility only. Example: *{“bar-
+key”: “value”}* This is a complex type whose value must be valid JSON.
+The value can be provided as a string on the command line or passed in
+as a file using the file://path/to/file syntax.
+
+The "--generate-param-json-input" option can be used to generate an
+example of the JSON which must be provided. We recommend storing this
+example in a file, modifying it as needed and then passing it back in
+via the file:// syntax.
+
+--from-json [text]
+
+Provide input to this command as a JSON document from a file using the
+file://path-to/file syntax.
+
+The "--generate-full-command-json-input" option can be used to
+generate a sample json file to be used with this command option. The
+key names are pre-populated and match the command option names
+(converted to camelCase format, e.g. compartment-id –> compartmentId),
+while the values of the keys need to be populated by the user before
+using the sample file as an input to this command. For any command
+option that accepts multiple values, the value of the key can be a
+JSON array.
+
+Options can still be provided on the command line. If an option exists
+in both the JSON document and the command line then the command line
+specified value will be used.
+
+For examples on usage of this option, please see our “using CLI with
+advanced JSON options” link: https://docs.cloud.oracle.com/iaas/Conte
+nt/API/SDKDocs/cliusing.htm#AdvancedJSONOptions
+
+--is-failure-retried [boolean]
+
+If isFailureRetried is enabled, then a failed call will be retried.
+
+--is-ipv6 [boolean]
+
+If enabled, domain name will resolve to an IPv6 address.
+
+--is-run-now [boolean]
+
+If isRunNow is enabled, then the monitor will run immediately.
+
+--is-run-once [boolean]
+
+If runOnce is enabled, then the monitor will run once.
+
+--maintenance-window-schedule [complex type]
+
+This is a complex type whose value must be valid JSON. The value can
+be provided as a string on the command line or passed in as a file
+using the file://path/to/file syntax.
+
+The "--generate-param-json-input" option can be used to generate an
+example of the JSON which must be provided. We recommend storing this
+example in a file, modifying it as needed and then passing it back in
+via the file:// syntax.
+
+--record-type [text]
+
+DNS record type.
+
+Accepted values are:
+
+   A, AAAA, ANY, CNAME, DNSKEY, DS, MX, NS, NSEC, NULL_REC, PTR, RRSIG, SOA, TXT
+
+--scheduling-policy [text]
+
+Scheduling policy to decide the distribution of monitor executions on
+vantage points.
+
+Accepted values are:
+
+   ALL, BATCHED_ROUND_ROBIN, ROUND_ROBIN
+
+--script-id [text]
+
+The OCID of the script. scriptId is mandatory for creation of
+SCRIPTED_BROWSER and SCRIPTED_REST monitor types. For other monitor
+types, it should be set to null.
+
+--script-parameters [complex type]
+
+List of script parameters in the monitor. This is valid only for
+SCRIPTED_BROWSER and SCRIPTED_REST monitor types. For other monitor
+types, it should be set to null. Example: *[{“paramName”: “userid”,
+“paramValue”:”testuser”}]*
+
+This option is a JSON list with items of type MonitorScriptParameter.
+For documentation on MonitorScriptParameter please see our API
+reference: https://docs.cloud.oracle.com/api/#/en/apmsynthetic/202006
+30/datatypes/MonitorScriptParameter. This is a complex type whose
+value must be valid JSON. The value can be provided as a string on the
+command line or passed in as a file using the file://path/to/file
+syntax.
+
+The "--generate-param-json-input" option can be used to generate an
+example of the JSON which must be provided. We recommend storing this
+example in a file, modifying it as needed and then passing it back in
+via the file:// syntax.
+
+--status [text]
+
+Enables or disables the monitor.
+
+Accepted values are:
+
+   DISABLED, ENABLED, INVALID
+
+--target [text]
+
+Specify the endpoint on which to run the monitor. For BROWSER, REST,
+NETWORK, DNS and FTP monitor types, target is mandatory. If target is
+specified in the SCRIPTED_BROWSER monitor type, then the monitor will
+run the selected script (specified by scriptId in monitor) against the
+specified target endpoint. If target is not specified in the
+SCRIPTED_BROWSER monitor type, then the monitor will run the selected
+script as it is. For NETWORK monitor with TCP protocol, a port needs
+to be provided along with target. Example: 192.168.0.1:80.
+
+--timeout-in-seconds [integer]
+
+Timeout in seconds. If isFailureRetried is true, then timeout cannot
+be more than 30% of repeatIntervalInSeconds time for monitors. If
+isFailureRetried is false, then timeout cannot be more than 50% of
+repeatIntervalInSeconds time for monitors. Also, timeoutInSeconds
+should be a multiple of 60 for Scripted REST, Scripted Browser and
+Browser monitors. Monitor will be allowed to run only for
+timeoutInSeconds time. It would be terminated after that.
+
+--verify-response-content [text]
+
+Verify response content against regular expression based string. If
+response content does not match the verifyResponseContent value, then
+it will be considered a failure.
+
+
+Global Parameters
+=================
+
+Use "oci --help" for help on global parameters.
+
+"--auth-purpose", "--auth", "--cert-bundle", "--cli-auto-prompt", "--
+cli-rc-file", "--config-file", "--connection-timeout", "--debug", "--
+defaults-file", "--endpoint", "--generate-full-command-json-input", "
+--generate-param-json-input", "--help", "--latest-version", "--max-
+retries", "--no-retry", "--opc-client-request-id", "--opc-request-id",
+"--output", "--profile", "--proxy", "--query", "--raw-output", "--
+read-timeout", "--realm-specific-endpoint", "--region", "--release-
+info", "--request-id", "--version", "-?", "-d", "-h", "-i", "-v"
+
+
+Example using required parameter
+================================
+
+Copy and paste the following example into a JSON file, replacing the
+example parameters with your own.
+
+       oci apm-synthetics monitor create-dns-sec-monitor --generate-param-json-input vantage-points > vantage-points.json
+
+Copy the following CLI commands into a file named example.sh. Run the
+command by typing “bash example.sh” and replacing the example
+parameters with your own.
+
+Please note this sample will only work in the POSIX-compliant bash-
+like shell. You need to set up the OCI configuration and appropriate
+security policies before trying the examples.
+
+       export apm_domain_id=<substitute-value-of-apm_domain_id> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/apm-synthetics/monitor/create-dns-sec-monitor.html#cmdoption-apm-domain-id
+       export display_name=<substitute-value-of-display_name> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/apm-synthetics/monitor/create-dns-sec-monitor.html#cmdoption-display-name
+       export monitor_type=<substitute-value-of-monitor_type> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/apm-synthetics/monitor/create-dns-sec-monitor.html#cmdoption-monitor-type
+       export repeat_interval_in_seconds=<substitute-value-of-repeat_interval_in_seconds> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/apm-synthetics/monitor/create-dns-sec-monitor.html#cmdoption-repeat-interval-in-seconds
+
+       oci apm-synthetics monitor create-dns-sec-monitor --apm-domain-id $apm_domain_id --display-name $display_name --monitor-type $monitor_type --repeat-interval-in-seconds $repeat_interval_in_seconds --vantage-points file://vantage-points.json

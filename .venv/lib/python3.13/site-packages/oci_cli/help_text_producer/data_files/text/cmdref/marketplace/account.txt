@@ -1,0 +1,22 @@
+account
+*******
+
+
+Description
+===========
+
+Use the Marketplace CLI to manage applications in Oracle Cloud
+Infrastructure Marketplace. For more information, see Overview of
+Marketplace
+
+
+Available Commands
+==================
+
+* launch-eligibility
+
+  * get
+
+* third-party-paid-listing-eligibility
+
+  * get

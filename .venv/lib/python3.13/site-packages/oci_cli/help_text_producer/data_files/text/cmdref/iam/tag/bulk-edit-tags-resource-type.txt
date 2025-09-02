@@ -1,0 +1,14 @@
+bulk-edit-tags-resource-type
+****************************
+
+
+Description
+===========
+
+The list of resource types that support bulk editing of tags.
+
+
+Available Commands
+==================
+
+* list

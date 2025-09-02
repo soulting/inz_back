@@ -1,0 +1,170 @@
+"list-labels"
+*************
+
+* Description
+
+* Usage
+
+* Required Parameters
+
+* Optional Parameters
+
+* Global Parameters
+
+* Example using required parameter
+
+
+Description
+===========
+
+Returns a list of labels, containing detailed information about them.
+You may limit the number of results, provide sorting order, and filter
+by information such as label name, display name, description and
+priority.
+
+
+Usage
+=====
+
+   oci log-analytics label list-labels [OPTIONS]
+
+
+Required Parameters
+===================
+
+--namespace-name [text]
+
+The Logging Analytics namespace used for the request.
+
+
+Optional Parameters
+===================
+
+--all
+
+Fetches all pages of results. If you provide this option, then you
+cannot provide the "--limit" option.
+
+--from-json [text]
+
+Provide input to this command as a JSON document from a file using the
+file://path-to/file syntax.
+
+The "--generate-full-command-json-input" option can be used to
+generate a sample json file to be used with this command option. The
+key names are pre-populated and match the command option names
+(converted to camelCase format, e.g. compartment-id –> compartmentId),
+while the values of the keys need to be populated by the user before
+using the sample file as an input to this command. For any command
+option that accepts multiple values, the value of the key can be a
+JSON array.
+
+Options can still be provided on the command line. If an option exists
+in both the JSON document and the command line then the command line
+specified value will be used.
+
+For examples on usage of this option, please see our “using CLI with
+advanced JSON options” link: https://docs.cloud.oracle.com/iaas/Conte
+nt/API/SDKDocs/cliusing.htm#AdvancedJSONOptions
+
+--is-alias-pop [boolean]
+
+A flag indicating whether or not return the aliases used by each
+label.
+
+--is-count-pop [boolean]
+
+A flag indicating whether or not to count the label usage per source
+and per rule.
+
+--is-system [text]
+
+The system value used for filtering.  Only items with the specified
+system value will be returned.  Valid values are built in, custom (for
+user defined items), or all (for all items, regardless of system
+value).
+
+Accepted values are:
+
+   ALL, BUILT_IN, CUSTOM
+
+--label-display-text [text]
+
+The label display text used for filtering.  Only labels with the
+specified name or description will be returned.
+
+--label-name [text]
+
+The label name used for filtering.  Only items with, or associated
+with, the specified label name will be returned.
+
+--label-priority [text]
+
+The label priority used for filtering.  Only labels with the specified
+priority will be returned.
+
+Accepted values are:
+
+   HIGH, LOW, MEDIUM, NONE
+
+--label-sort-by [text]
+
+The attribute used to sort the returned labels
+
+Accepted values are:
+
+   name, priority, sourceUsing
+
+--limit [integer]
+
+The maximum number of items to return.
+
+--page [text]
+
+The page token representing the page at which to start retrieving
+results. This is usually retrieved from a previous list call.
+
+--page-size [integer]
+
+When fetching results, the number of results to fetch per call. Only
+valid when used with "--all" or "--limit", and ignored otherwise.
+
+--sort-order [text]
+
+The sort order to use, either ascending (*ASC*) or descending
+(*DESC*).
+
+Accepted values are:
+
+   ASC, DESC
+
+
+Global Parameters
+=================
+
+Use "oci --help" for help on global parameters.
+
+"--auth-purpose", "--auth", "--cert-bundle", "--cli-auto-prompt", "--
+cli-rc-file", "--config-file", "--connection-timeout", "--debug", "--
+defaults-file", "--endpoint", "--generate-full-command-json-input", "
+--generate-param-json-input", "--help", "--latest-version", "--max-
+retries", "--no-retry", "--opc-client-request-id", "--opc-request-id",
+"--output", "--profile", "--proxy", "--query", "--raw-output", "--
+read-timeout", "--realm-specific-endpoint", "--region", "--release-
+info", "--request-id", "--version", "-?", "-d", "-h", "-i", "-v"
+
+
+Example using required parameter
+================================
+
+Copy the following CLI commands into a file named example.sh. Run the
+command by typing “bash example.sh” and replacing the example
+parameters with your own.
+
+Please note this sample will only work in the POSIX-compliant bash-
+like shell. You need to set up the OCI configuration and appropriate
+security policies before trying the examples.
+
+       export namespace_name=<substitute-value-of-namespace_name> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/log-analytics/label/list-labels.html#cmdoption-namespace-name
+
+       oci log-analytics label list-labels --namespace-name $namespace_name

@@ -1,0 +1,14 @@
+log
+***
+
+
+Description
+===========
+
+Definition of a log object.
+
+
+Available Commands
+==================
+
+* get

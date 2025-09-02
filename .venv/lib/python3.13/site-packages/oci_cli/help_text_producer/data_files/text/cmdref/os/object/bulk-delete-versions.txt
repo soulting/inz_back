@@ -1,0 +1,249 @@
+"bulk-delete-versions"
+**********************
+
+* Description
+
+* Usage
+
+* Required Parameters
+
+* Optional Parameters
+
+* Global Parameters
+
+* Example using required parameter
+
+
+Description
+===========
+
+Deletes all object versions in a bucket which match the provided
+criteria.
+
+
+Usage
+=====
+
+   oci os object bulk-delete-versions [OPTIONS]
+
+
+Required Parameters
+===================
+
+-bn, --bucket-name [text]
+
+The name of the bucket.
+
+
+Optional Parameters
+===================
+
+--delimiter [text]
+
+When this parameter is set, only objects whose names do not contain
+the delimiter character (after an optionally specified prefix) are
+deleted. Scanned objects whose names contain the delimiter have part
+of their name up to the last occurrence of the delimiter (after the
+optional prefix) returned as a set of prefixes. Note: Only ‘/’ is a
+supported delimiter character at this time.
+
+--dry-run
+
+Displays a list of objects which would be deleted by this command, if
+it were run without –dry-run. If –dry-run is passed, no objects will
+actually be deleted.
+
+--exclude [text]
+
+Only process files which do not match the specified pattern. Patterns
+are applied relative to the current directory. This option can be
+specified multiple times to match on multiple patterns. Supported
+pattern symbols are: 
+
+*: Matches everything
+
+?: Matches any single character
+
+[sequence]: Matches any character in sequence
+
+[!sequence]: Matches any character not in sequence
+
+--force
+
+Do not ask for confirmation prior to performing the bulk delete.
+
+--from-json [text]
+
+Provide input to this command as a JSON document from a file using the
+file://path-to/file syntax.
+
+The "--generate-full-command-json-input" option can be used to
+generate a sample json file to be used with this command option. The
+key names are pre-populated and match the command option names
+(converted to camelCase format, e.g. compartment-id –> compartmentId),
+while the values of the keys need to be populated by the user before
+using the sample file as an input to this command. For any command
+option that accepts multiple values, the value of the key can be a
+JSON array.
+
+Options can still be provided on the command line. If an option exists
+in both the JSON document and the command line then the command line
+specified value will be used.
+
+For examples on usage of this option, please see our “using CLI with
+advanced JSON options” link: https://docs.cloud.oracle.com/iaas/Conte
+nt/API/SDKDocs/cliusing.htm#AdvancedJSONOptions
+
+--include [text]
+
+Only process files which match the specified pattern. Patterns are
+applied relative to the current directory. This option can be
+specified multiple times to match on multiple patterns. Supported
+pattern symbols are: 
+
+*: Matches everything
+
+?: Matches any single character
+
+[sequence]: Matches any character in sequence
+
+[!sequence]: Matches any character not in sequence
+
+-ns, --namespace, --namespace-name [text]
+
+The top-level namespace used for the request. If not provided, this
+parameter will be obtained internally using a call to ‘oci os ns get’
+
+--object-name [text]
+
+Delete all versions of the given objectName. Only one of prefix or
+objectName can be given as input. Omit this parameter to delete all
+objects in the bucket.
+
+--parallel-operations-count [integer]
+
+The number of parallel operations to perform. Decreasing this value
+will make the process less resource intensive but it may take longer.
+Increasing this value may decrease the time taken, but the process
+will consume more system resources and network bandwidth. The maximum
+is 1000. [default: 10]
+
+--prefix [text]
+
+Delete all object versions with the given prefix. Only one of prefix
+or objectName can be given as input. Omit this parameter to delete all
+objects in the bucket.
+
+   Examples
+
+======================================================================
+
+
+Deleting all object versions in the bucket
+------------------------------------------
+
+    oci os object bulk-delete-versions -ns mynamespace -bn mybucket
+
+
+Delete all object versions that match a given prefix
+----------------------------------------------------
+
+    oci os object bulk-delete-versions -ns mynamespace -bn mybucket --prefix level1/level2/ --prefix myprefix
+
+You can delete all object versions that match a given prefix by
+specifying the –prefix flag. In the above example, “–prefix myprefix”
+would match object names such as myprefix_textfile1.txt,
+myprefix_myImage.png etc.
+
+If you have named your objects so that they exist in Object Storage as
+a hierarchy, e.g. level1/level2/level3/myobject.txt, then you can
+delete objects at a given level (and all sub levels) by specifying a
+prefix:
+
+    oci os object bulk-delete-versions -ns mynamespace -bn mybucket --prefix level1/level2/
+
+This will delete all object versions of the form level1/level2/<object
+name>, level1/level2/leve3/<object name>,
+level1/level2/leve3/level4/<object name> etc.
+
+
+Limiting deleted objects using a prefix and delimiter
+-----------------------------------------------------
+
+    oci os object bulk-delete-versions -ns mynamespace -bn mybucket --prefix level1/level2/ --delimiter /
+
+If you have named your objects so that they exist in Object Storage as
+a hierarchy, e.g. level1/level2/level3/myobject.txt, and you only want
+to delete objects at a given level of the hierarchy, e.g. example
+everything of the form level1/level2/<object name> but not
+level1/level2/leve3/<object name> or any other sub-levels, you can
+specify a prefix and delimiter. Currently the only supported delimiter
+is /
+
+
+Deleting all object versions using object name
+----------------------------------------------
+
+    oci os object bulk-delete-versions -ns mynamespace -bn mybucket --object-name <object name>
+
+You can delete all object versions that match a given object name by
+specifying the –object-name flag. Both -object-name and -prefix cannot
+be given in the same command
+
+
+Previewing what would be deleted
+--------------------------------
+
+    oci os object bulk-delete-versions -ns mynamespace -bn mybucket --dry-run
+
+    oci os object bulk-delete-versions -ns mynamespace -bn mybucket --prefix level1/level2/ --dry-run
+
+    oci os object bulk-delete-versions -ns mynamespace -bn mybucket --prefix level1/level2/ --delimiter / --dry-run
+
+For any bulk-delete-versions command you can get a list of all object
+versions which would be deleted, but without actually deleting them,
+by using the –dry-run flag
+
+
+Do not prompt for delete
+------------------------
+
+    oci os object bulk-delete-versions -ns mynamespace -bn mybucket --force
+
+    oci os object bulk-delete-versions -ns mynamespace -bn mybucket --prefix level1/level2/ --force
+
+    oci os object bulk-delete-versions -ns mynamespace -bn mybucket --prefix level1/level2/ --delimiter / --force
+
+By default, the bulk-delete-versions command will prompt you prior to
+deleting objects. To suppress this prompt, pass the –force option.
+
+
+Global Parameters
+=================
+
+Use "oci --help" for help on global parameters.
+
+"--auth-purpose", "--auth", "--cert-bundle", "--cli-auto-prompt", "--
+cli-rc-file", "--config-file", "--connection-timeout", "--debug", "--
+defaults-file", "--endpoint", "--generate-full-command-json-input", "
+--generate-param-json-input", "--help", "--latest-version", "--max-
+retries", "--no-retry", "--opc-client-request-id", "--opc-request-id",
+"--output", "--profile", "--proxy", "--query", "--raw-output", "--
+read-timeout", "--realm-specific-endpoint", "--region", "--release-
+info", "--request-id", "--version", "-?", "-d", "-h", "-i", "-v"
+
+
+Example using required parameter
+================================
+
+Copy the following CLI commands into a file named example.sh. Run the
+command by typing “bash example.sh” and replacing the example
+parameters with your own.
+
+Please note this sample will only work in the POSIX-compliant bash-
+like shell. You need to set up the OCI configuration and appropriate
+security policies before trying the examples.
+
+       export bucket_name=<substitute-value-of-bucket_name> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/os/object/bulk-delete-versions.html#cmdoption-bucket-name
+
+       oci os object bulk-delete-versions --bucket-name $bucket_name

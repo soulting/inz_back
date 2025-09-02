@@ -1,0 +1,22 @@
+omhub-network-anchor
+********************
+
+
+Description
+===========
+
+Use the Oracle Multicloud CLI to retrieve resource anchors and network
+anchors, and the metadata mappings related a Cloud Service Provider.
+For more information, see <link to docs>.
+
+
+Available Commands
+==================
+
+* network-anchor
+
+  * get
+
+* network-anchor-collection
+
+  * list-network-anchors

@@ -1,0 +1,160 @@
+"migrate-vault-key"
+*******************
+
+* Description
+
+* Usage
+
+* Required Parameters
+
+* Optional Parameters
+
+* Global Parameters
+
+* Example using required parameter
+
+
+Description
+===========
+
+Changes encryption key management from customer-managed, using the
+Vault service, to Oracle-managed.
+
+
+Usage
+=====
+
+   oci db database migrate-vault-key [OPTIONS]
+
+
+Required Parameters
+===================
+
+--database-id [text]
+
+The database OCID.
+
+--kms-key-id [text]
+
+The OCID of the key container that is used as the master encryption
+key in database transparent data encryption (TDE) operations.
+
+
+Optional Parameters
+===================
+
+--admin-password [text]
+
+The existing admin password of the database.
+
+--from-json [text]
+
+Provide input to this command as a JSON document from a file using the
+file://path-to/file syntax.
+
+The "--generate-full-command-json-input" option can be used to
+generate a sample json file to be used with this command option. The
+key names are pre-populated and match the command option names
+(converted to camelCase format, e.g. compartment-id –> compartmentId),
+while the values of the keys need to be populated by the user before
+using the sample file as an input to this command. For any command
+option that accepts multiple values, the value of the key can be a
+JSON array.
+
+Options can still be provided on the command line. If an option exists
+in both the JSON document and the command line then the command line
+specified value will be used.
+
+For examples on usage of this option, please see our “using CLI with
+advanced JSON options” link: https://docs.cloud.oracle.com/iaas/Conte
+nt/API/SDKDocs/cliusing.htm#AdvancedJSONOptions
+
+--if-match [text]
+
+For optimistic concurrency control. In the PUT or DELETE call for a
+resource, set the *if-match* parameter to the value of the etag from a
+previous GET or POST response for that resource.  The resource will be
+updated or deleted only if the etag you provide matches the resource’s
+current etag value.
+
+--kms-key-version-id [text]
+
+The OCID of the key container version that is used in database
+transparent data encryption (TDE) operations KMS Key can have multiple
+key versions. If none is specified, the current key version (latest)
+of the Key Id is used for the operation. Autonomous Database
+Serverless does not use key versions, hence is not applicable for
+Autonomous Database Serverless instances.
+
+--max-wait-seconds [integer]
+
+The maximum time to wait for the resource to reach the lifecycle state
+defined by "--wait-for-state". Defaults to 1200 seconds.
+
+--tde-wallet-password [text]
+
+The existing TDE wallet password of the database.
+
+--vault-id [text]
+
+The OCID of the Oracle Cloud Infrastructure vault. This parameter and
+*secretId* are required for Customer Managed Keys.
+
+--wait-for-state [text]
+
+This operation creates, modifies or deletes a resource that has a
+defined lifecycle state. Specify this option to perform the action and
+then wait until the resource reaches a given lifecycle state. Multiple
+states can be specified, returning on the first state. For example, "
+--wait-for-state" SUCCEEDED "--wait-for-state" FAILED would return on
+whichever lifecycle state is reached first. If timeout is reached, a
+return code of 2 is returned. For any other error, a return code of 1
+is returned.
+
+Accepted values are:
+
+   AVAILABLE, BACKUP_IN_PROGRESS, CONVERTING, FAILED, PROVISIONING, RESTORE_FAILED, TERMINATED, TERMINATING, UPDATING, UPGRADING
+
+--wait-interval-seconds [integer]
+
+Check every "--wait-interval-seconds" to see whether the resource has
+reached the lifecycle state defined by "--wait-for-state". Defaults to
+30 seconds.
+
+
+Global Parameters
+=================
+
+Use "oci --help" for help on global parameters.
+
+"--auth-purpose", "--auth", "--cert-bundle", "--cli-auto-prompt", "--
+cli-rc-file", "--config-file", "--connection-timeout", "--debug", "--
+defaults-file", "--endpoint", "--generate-full-command-json-input", "
+--generate-param-json-input", "--help", "--latest-version", "--max-
+retries", "--no-retry", "--opc-client-request-id", "--opc-request-id",
+"--output", "--profile", "--proxy", "--query", "--raw-output", "--
+read-timeout", "--realm-specific-endpoint", "--region", "--release-
+info", "--request-id", "--version", "-?", "-d", "-h", "-i", "-v"
+
+
+Example using required parameter
+================================
+
+Copy the following CLI commands into a file named example.sh. Run the
+command by typing “bash example.sh” and replacing the example
+parameters with your own.
+
+Please note this sample will only work in the POSIX-compliant bash-
+like shell. You need to set up the OCI configuration and appropriate
+security policies before trying the examples.
+
+       export db_system_id=<substitute-value-of-db_system_id> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/db/db-home/create.html#cmdoption-db-system-id
+       export admin_password=<substitute-value-of-admin_password> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/db/database/create.html#cmdoption-admin-password
+       export db_name=<substitute-value-of-db_name> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/db/database/create.html#cmdoption-db-name
+       export kms_key_id=<substitute-value-of-kms_key_id> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/db/database/migrate-vault-key.html#cmdoption-kms-key-id
+
+       db_home_id=$(oci db db-home create --db-system-id $db_system_id --query data.id --raw-output)
+
+       database_id=$(oci db database create --admin-password $admin_password --db-home-id $db_home_id --db-name $db_name --db-system-id $db_system_id --query data.id --raw-output)
+
+       oci db database migrate-vault-key --database-id $database_id --kms-key-id $kms_key_id

@@ -1,0 +1,14 @@
+category-collection
+*******************
+
+
+Description
+===========
+
+Results of a category search. Contains the category items.
+
+
+Available Commands
+==================
+
+* list-categories

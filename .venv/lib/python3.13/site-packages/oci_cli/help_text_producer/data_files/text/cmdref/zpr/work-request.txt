@@ -1,0 +1,33 @@
+work-request
+************
+
+
+Description
+===========
+
+An asynchronous work request. Work requests help you monitor long-
+running operations. When you start a long-running operation, the
+service creates a work request. A work request is an activity log that
+lets you track each step in the operation’s progress. Each work
+request has an OCID that lets you interact with it programmatically
+and use it for automation.
+
+
+Available Commands
+==================
+
+* get-zpr-configuration
+
+* get-zpr-policy
+
+* list-zpr-configuration
+
+* list-zpr-configuration-errors
+
+* list-zpr-configuration-logs
+
+* list-zpr-policy
+
+* list-zpr-policy-errors
+
+* list-zpr-policy-logs

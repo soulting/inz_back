@@ -1,0 +1,14 @@
+job-shape
+*********
+
+
+Description
+===========
+
+The compute shape used to launch a job compute instance.
+
+
+Available Commands
+==================
+
+* list

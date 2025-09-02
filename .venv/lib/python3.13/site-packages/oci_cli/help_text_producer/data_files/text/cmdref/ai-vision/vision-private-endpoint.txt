@@ -1,0 +1,22 @@
+vision-private-endpoint
+***********************
+
+
+Description
+===========
+
+Vision private endpoint.
+
+
+Available Commands
+==================
+
+* change-compartment
+
+* create
+
+* delete
+
+* get
+
+* update

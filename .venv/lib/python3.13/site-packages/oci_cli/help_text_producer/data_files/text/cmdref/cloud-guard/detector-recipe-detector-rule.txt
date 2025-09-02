@@ -1,0 +1,25 @@
+detector-recipe-detector-rule
+*****************************
+
+
+Description
+===========
+
+A DetectorRecipeDetectorRule resource defines a single recipe rule in
+the collection for a DetectorRecipe resource.
+
+
+Available Commands
+==================
+
+* create
+
+* delete
+
+* delete-detector-recipe-detector-rule-data-source
+
+* get
+
+* list
+
+* update

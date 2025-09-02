@@ -1,0 +1,16 @@
+osub-billing-schedule
+*********************
+
+
+Description
+===========
+
+OneSubscription CLI for Billing Schedule information
+
+
+Available Commands
+==================
+
+* billing-schedule-summary
+
+  * list-billing-schedules

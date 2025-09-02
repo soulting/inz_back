@@ -1,0 +1,14 @@
+bare-metal-host
+***************
+
+
+Description
+===========
+
+A compute bare metal host.
+
+
+Available Commands
+==================
+
+* list

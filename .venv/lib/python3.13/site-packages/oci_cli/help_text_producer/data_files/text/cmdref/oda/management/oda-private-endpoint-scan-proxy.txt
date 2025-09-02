@@ -1,0 +1,21 @@
+oda-private-endpoint-scan-proxy
+*******************************
+
+
+Description
+===========
+
+Details pertaining to a scan proxy instance created for a scan
+listener FQDN/IPs
+
+
+Available Commands
+==================
+
+* create
+
+* delete
+
+* get
+
+* list

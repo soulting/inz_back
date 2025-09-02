@@ -1,0 +1,238 @@
+"update"
+********
+
+* Description
+
+* Usage
+
+* Required Parameters
+
+* Optional Parameters
+
+* Global Parameters
+
+* Example using required parameter
+
+
+Description
+===========
+
+Updates a specific data asset with default connection.
+
+
+Usage
+=====
+
+   oci data-integration data-asset update [OPTIONS]
+
+
+Required Parameters
+===================
+
+--data-asset-key [text]
+
+The data asset key.
+
+--key [text]
+
+Generated key that can be used in API calls to identify data asset.
+
+--model-type [text]
+
+The type of the data asset.
+
+Accepted values are:
+
+   AMAZON_S3_DATA_ASSET, FUSION_APP_DATA_ASSET, GENERIC_JDBC_DATA_ASSET, HDFS_DATA_ASSET, LAKE_DATA_ASSET, MYSQL_DATA_ASSET, MYSQL_HEATWAVE_DATA_ASSET, ORACLE_ADWC_DATA_ASSET, ORACLE_ATP_DATA_ASSET, ORACLE_DATA_ASSET, ORACLE_EBS_DATA_ASSET, ORACLE_OBJECT_STORAGE_DATA_ASSET, ORACLE_PEOPLESOFT_DATA_ASSET, ORACLE_SIEBEL_DATA_ASSET, REST_DATA_ASSET
+
+--object-version [integer]
+
+The version of the object that is used to track changes in the object
+instance.
+
+--workspace-id [text]
+
+The workspace ID.
+
+
+Optional Parameters
+===================
+
+--asset-properties [complex type]
+
+Additional properties for the data asset. This is a complex type whose
+value must be valid JSON. The value can be provided as a string on the
+command line or passed in as a file using the file://path/to/file
+syntax.
+
+The "--generate-param-json-input" option can be used to generate an
+example of the JSON which must be provided. We recommend storing this
+example in a file, modifying it as needed and then passing it back in
+via the file:// syntax.
+
+--credential-file-content [text]
+
+The credential file content from a Autonomous Data Warehouse wallet.
+
+--data-asset-type [text]
+
+The data asset type for the generic JDBC data asset.
+
+--default-connection [text]
+
+This is a complex type whose value must be valid JSON. The value can
+be provided as a string on the command line or passed in as a file
+using the file://path/to/file syntax.
+
+The "--generate-param-json-input" option can be used to generate an
+example of the JSON which must be provided. We recommend storing this
+example in a file, modifying it as needed and then passing it back in
+via the file:// syntax.
+
+--description [text]
+
+The user-defined description of the data asset.
+
+--driver-class [text]
+
+The Autonomous Data Warehouse driver class.
+
+--external-key [text]
+
+The external key for the object.
+
+--force
+
+Perform update without prompting for confirmation.
+
+--from-json [text]
+
+Provide input to this command as a JSON document from a file using the
+file://path-to/file syntax.
+
+The "--generate-full-command-json-input" option can be used to
+generate a sample json file to be used with this command option. The
+key names are pre-populated and match the command option names
+(converted to camelCase format, e.g. compartment-id –> compartmentId),
+while the values of the keys need to be populated by the user before
+using the sample file as an input to this command. For any command
+option that accepts multiple values, the value of the key can be a
+JSON array.
+
+Options can still be provided on the command line. If an option exists
+in both the JSON document and the command line then the command line
+specified value will be used.
+
+For examples on usage of this option, please see our “using CLI with
+advanced JSON options” link: https://docs.cloud.oracle.com/iaas/Conte
+nt/API/SDKDocs/cliusing.htm#AdvancedJSONOptions
+
+--host [text]
+
+The Oracle Database hostname.
+
+--identifier [text]
+
+Value can only contain upper case letters, underscore, and numbers. It
+should begin with upper case letter or underscore. The value can be
+modified.
+
+--if-match [text]
+
+For optimistic concurrency control. In the PUT or DELETE call for a
+resource, set the *if-match* parameter to the value of the *etag* from
+a previous GET or POST response for that resource. The resource will
+be updated or deleted only if the *etag* you provide matches the
+resource’s current *etag* value. When ‘if-match’ is provided and its
+value does not exactly match the ‘etag’ of the resource on the server,
+the request fails with the 412 response code.
+
+--model-version [text]
+
+The model version of an object.
+
+--name [text]
+
+Free form text without any restriction on permitted characters. Name
+can have letters, numbers, and special characters. The value is
+editable and is restricted to 1000 characters.
+
+--namespace [text]
+
+The namespace for the specified Oracle Object storage resource. You
+can find the namespace under Object Storage Settings in the Console.
+
+--object-status [integer]
+
+The status of an object that can be set to value 1 for shallow
+references across objects, other values reserved.
+
+--port [text]
+
+The Oracle Database port.
+
+--registry-metadata [complex type]
+
+This is a complex type whose value must be valid JSON. The value can
+be provided as a string on the command line or passed in as a file
+using the file://path/to/file syntax.
+
+The "--generate-param-json-input" option can be used to generate an
+example of the JSON which must be provided. We recommend storing this
+example in a file, modifying it as needed and then passing it back in
+via the file:// syntax.
+
+--service-name [text]
+
+The Autonomous Data Warehouse instance service name.
+
+--sid [text]
+
+The Oracle Database SID.
+
+--tenancy-id [text]
+
+The OCI tenancy OCID.
+
+--url [text]
+
+The Oracle Object storage URL.
+
+
+Global Parameters
+=================
+
+Use "oci --help" for help on global parameters.
+
+"--auth-purpose", "--auth", "--cert-bundle", "--cli-auto-prompt", "--
+cli-rc-file", "--config-file", "--connection-timeout", "--debug", "--
+defaults-file", "--endpoint", "--generate-full-command-json-input", "
+--generate-param-json-input", "--help", "--latest-version", "--max-
+retries", "--no-retry", "--opc-client-request-id", "--opc-request-id",
+"--output", "--profile", "--proxy", "--query", "--raw-output", "--
+read-timeout", "--realm-specific-endpoint", "--region", "--release-
+info", "--request-id", "--version", "-?", "-d", "-h", "-i", "-v"
+
+
+Example using required parameter
+================================
+
+Copy the following CLI commands into a file named example.sh. Run the
+command by typing “bash example.sh” and replacing the example
+parameters with your own.
+
+Please note this sample will only work in the POSIX-compliant bash-
+like shell. You need to set up the OCI configuration and appropriate
+security policies before trying the examples.
+
+       export compartment_id=<substitute-value-of-compartment_id> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/data-integration/workspace/create.html#cmdoption-compartment-id
+       export display_name=<substitute-value-of-display_name> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/data-integration/workspace/create.html#cmdoption-display-name
+       export is_private_network=<substitute-value-of-is_private_network> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/data-integration/workspace/create.html#cmdoption-is-private-network
+       export data_asset_key=<substitute-value-of-data_asset_key> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/data-integration/data-asset/update.html#cmdoption-data-asset-key
+       export key=<substitute-value-of-key> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/data-integration/data-asset/update.html#cmdoption-key
+       export model_type=<substitute-value-of-model_type> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/data-integration/data-asset/update.html#cmdoption-model-type
+       export object_version=<substitute-value-of-object_version> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/data-integration/data-asset/update.html#cmdoption-object-version
+
+       workspace_id=$(oci data-integration workspace create --compartment-id $compartment_id --display-name $display_name --is-private-network $is_private_network --query data.id --raw-output)
+
+       oci data-integration data-asset update --data-asset-key $data_asset_key --key $key --model-type $model_type --object-version $object_version --workspace-id $workspace_id

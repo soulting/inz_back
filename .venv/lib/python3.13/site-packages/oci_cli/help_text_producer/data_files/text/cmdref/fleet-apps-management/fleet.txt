@@ -1,0 +1,48 @@
+fleet
+*****
+
+
+Description
+===========
+
+A fleet is a collection or grouping of resources based on criteria.
+
+
+Available Commands
+==================
+
+* change-compartment
+
+* check-resource-tagging
+
+* confirm-targets
+
+* create
+
+* create-fleet-dynamic-resource-selection
+
+* create-fleet-environment-fleet-details
+
+* create-fleet-generic-fleet-details
+
+* create-fleet-group-fleet-details
+
+* create-fleet-manual-resource-selection
+
+* create-fleet-product-fleet-details
+
+* delete
+
+* generate-compliance-report
+
+* get
+
+* request-resource-validation
+
+* request-target-discovery
+
+* update
+
+* update-fleet-dynamic-resource-selection
+
+* update-fleet-manual-resource-selection

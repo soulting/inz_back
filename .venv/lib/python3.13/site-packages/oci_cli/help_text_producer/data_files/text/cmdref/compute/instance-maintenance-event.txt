@@ -1,0 +1,19 @@
+instance-maintenance-event
+**************************
+
+
+Description
+===========
+
+It is the event in which the maintenance action will be be performed
+on the customer instance on the scheduled date and time.
+
+
+Available Commands
+==================
+
+* get
+
+* list
+
+* update

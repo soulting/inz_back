@@ -1,0 +1,47 @@
+tool
+****
+
+
+Description
+===========
+
+The description of Tool.
+
+To use any of the API operations, you must be authorized in an IAM
+policy. If you’re not authorized, talk to an administrator. If you’re
+an administrator who needs to write policies to give users access, see
+Getting Started with Policies.
+
+
+Available Commands
+==================
+
+* create
+
+* create-tool-agent-tool-config
+
+* create-tool-function-calling-tool-config
+
+* create-tool-http-endpoint-tool-config
+
+* create-tool-rag-tool-config
+
+* create-tool-sql-tool-config
+
+* delete
+
+* get
+
+* list
+
+* update
+
+* update-tool-agent-tool-config
+
+* update-tool-function-calling-tool-config
+
+* update-tool-http-endpoint-tool-config
+
+* update-tool-rag-tool-config
+
+* update-tool-sql-tool-config

@@ -1,0 +1,140 @@
+"update"
+********
+
+* Description
+
+* Usage
+
+* Required Parameters
+
+* Optional Parameters
+
+* Global Parameters
+
+* Example using required parameter
+
+
+Description
+===========
+
+Updates the preferences of the tenancy regarding receiving
+announcements by email.
+
+This call is subject to an Announcements limit that applies to the
+total number of requests across all read or write operations.
+Announcements might throttle this call to reject an otherwise valid
+request when the total rate of operations exceeds 20 requests per
+second for a given user. The service might also throttle this call to
+reject an otherwise valid request when the total rate of operations
+exceeds 100 requests per second for a given tenancy.
+
+
+Usage
+=====
+
+   oci announce announcements-preferences update [OPTIONS]
+
+
+Required Parameters
+===================
+
+--preference-id [text]
+
+The ID of the preference.
+
+--preference-type [text]
+
+The string representing the user’s preference, whether to opt in to
+only required announcements, to opt in to all announcements, including
+informational announcements, or to opt out of all announcements.
+
+Accepted values are:
+
+   OPT_IN_TENANT_AND_INFORMATIONAL_ANNOUNCEMENTS, OPT_IN_TENANT_ANNOUNCEMENTS, OPT_OUT_ALL_ANNOUNCEMENTS
+
+--type [text]
+
+The entity type, which specifies a model that either creates new
+announcement email preferences or updates existing preferences.
+
+
+Optional Parameters
+===================
+
+--compartment-id, -c [text]
+
+The OCID of the compartment for which you want to manage announcement
+email preferences. (Specify the tenancy by providing the root
+compartment OCID.)
+
+--from-json [text]
+
+Provide input to this command as a JSON document from a file using the
+file://path-to/file syntax.
+
+The "--generate-full-command-json-input" option can be used to
+generate a sample json file to be used with this command option. The
+key names are pre-populated and match the command option names
+(converted to camelCase format, e.g. compartment-id –> compartmentId),
+while the values of the keys need to be populated by the user before
+using the sample file as an input to this command. For any command
+option that accepts multiple values, the value of the key can be a
+JSON array.
+
+Options can still be provided on the command line. If an option exists
+in both the JSON document and the command line then the command line
+specified value will be used.
+
+For examples on usage of this option, please see our “using CLI with
+advanced JSON options” link: https://docs.cloud.oracle.com/iaas/Conte
+nt/API/SDKDocs/cliusing.htm#AdvancedJSONOptions
+
+--if-match [text]
+
+The locking version, used for optimistic concurrency control.
+
+--is-unsubscribed [boolean]
+
+A Boolean value to indicate whether the specified compartment chooses
+to not to receive informational announcements by email. (Manage
+preferences for receiving announcements by email by specifying the
+*preferenceType* attribute instead.)
+
+--preferred-time-zone [text]
+
+The time zone in which the user prefers to receive announcements.
+Specify the preference with a value that uses the IANA Time Zone
+Database format (x-obmcs-time-zone). For example - America/Los_Angeles
+
+
+Global Parameters
+=================
+
+Use "oci --help" for help on global parameters.
+
+"--auth-purpose", "--auth", "--cert-bundle", "--cli-auto-prompt", "--
+cli-rc-file", "--config-file", "--connection-timeout", "--debug", "--
+defaults-file", "--endpoint", "--generate-full-command-json-input", "
+--generate-param-json-input", "--help", "--latest-version", "--max-
+retries", "--no-retry", "--opc-client-request-id", "--opc-request-id",
+"--output", "--profile", "--proxy", "--query", "--raw-output", "--
+read-timeout", "--realm-specific-endpoint", "--region", "--release-
+info", "--request-id", "--version", "-?", "-d", "-h", "-i", "-v"
+
+
+Example using required parameter
+================================
+
+Copy the following CLI commands into a file named example.sh. Run the
+command by typing “bash example.sh” and replacing the example
+parameters with your own.
+
+Please note this sample will only work in the POSIX-compliant bash-
+like shell. You need to set up the OCI configuration and appropriate
+security policies before trying the examples.
+
+       export preference_id=<substitute-value-of-preference_id> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/announce/announcements-preferences/update.html#cmdoption-preference-id
+       export preference_type=<substitute-value-of-preference_type> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/announce/announcements-preferences/update.html#cmdoption-preference-type
+       export type=<substitute-value-of-type> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/announce/announcements-preferences/update.html#cmdoption-type
+
+       oci announce announcements-preferences update --preference-id $preference_id --preference-type $preference_type --type $type

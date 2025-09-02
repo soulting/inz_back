@@ -1,0 +1,14 @@
+aggregated-computed-usage-summary
+*********************************
+
+
+Description
+===========
+
+Subscribed Service Contract details
+
+
+Available Commands
+==================
+
+* list-aggregated-computed-usages

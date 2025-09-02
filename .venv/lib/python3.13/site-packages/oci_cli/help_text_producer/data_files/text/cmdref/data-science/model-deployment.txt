@@ -1,0 +1,34 @@
+model-deployment
+****************
+
+
+Description
+===========
+
+Model deployments are used by data scientists to perform predictions
+from the model hosted on an HTTP server.
+
+
+Available Commands
+==================
+
+* activate
+
+* change-compartment
+
+* create
+
+* create-model-deployment-model-group-deployment-configuration-details
+
+* deactivate
+
+* delete
+
+* get
+
+* list
+
+* update
+
+* update-model-deployment-update-model-group-deployment-configuration-
+  details

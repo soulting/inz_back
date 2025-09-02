@@ -1,0 +1,37 @@
+capacity-topology
+*****************
+
+
+Description
+===========
+
+A compute capacity topology that allows you to query your bare metal
+hosts and their RDMA network topology.
+
+
+Available Commands
+==================
+
+* bare-metal-host
+
+  * list
+
+* change-compartment
+
+* create
+
+* delete
+
+* get
+
+* hpc-island
+
+  * list
+
+* list
+
+* network-block
+
+  * list
+
+* update

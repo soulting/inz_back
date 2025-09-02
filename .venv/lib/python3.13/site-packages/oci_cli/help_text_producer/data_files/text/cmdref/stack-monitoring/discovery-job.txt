@@ -1,0 +1,22 @@
+discovery-job
+*************
+
+
+Description
+===========
+
+The DiscoveryJob details.
+
+
+Available Commands
+==================
+
+* create
+
+* delete
+
+* get
+
+* list
+
+* list-logs

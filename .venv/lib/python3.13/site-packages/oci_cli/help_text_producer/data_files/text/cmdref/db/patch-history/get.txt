@@ -1,0 +1,17 @@
+get
+***
+
+
+Description
+===========
+
+Gets the patch history details for the specified patchHistoryEntryId
+[Command Reference](getDbHomePatchHistoryEntry)
+
+
+Available Commands
+==================
+
+* by-database
+
+* by-db-system

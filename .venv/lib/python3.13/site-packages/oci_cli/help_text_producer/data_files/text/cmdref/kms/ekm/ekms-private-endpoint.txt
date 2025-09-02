@@ -1,0 +1,23 @@
+ekms-private-endpoint
+*********************
+
+
+Description
+===========
+
+EKMS private endpoint created in customer subnet used to connect to
+external key manager system
+
+
+Available Commands
+==================
+
+* create
+
+* delete
+
+* get
+
+* list
+
+* update

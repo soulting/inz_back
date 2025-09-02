@@ -1,0 +1,15 @@
+runbook-collection
+******************
+
+
+Description
+===========
+
+Results of a runbook search. Contains RunbookSummary items and other
+information, such as metadata.
+
+
+Available Commands
+==================
+
+* list-runbooks

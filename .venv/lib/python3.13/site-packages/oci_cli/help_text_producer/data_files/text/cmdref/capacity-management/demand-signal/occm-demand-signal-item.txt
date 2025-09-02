@@ -1,0 +1,26 @@
+occm-demand-signal-item
+***********************
+
+
+Description
+===========
+
+An occm demand signal item is a resource that is used to communicate
+the forecasting need for a particular resource with OCI. It’s a sub-
+resource and need to be grouped inside a demand signal.
+
+
+Available Commands
+==================
+
+* bulk-create
+
+* create
+
+* delete
+
+* get
+
+* list
+
+* update

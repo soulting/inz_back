@@ -1,0 +1,20 @@
+on-premise-vantage-point
+************************
+
+
+Description
+===========
+
+The information about an On-premise vantage point.
+
+
+Available Commands
+==================
+
+* create
+
+* delete
+
+* get
+
+* update

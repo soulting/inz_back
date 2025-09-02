@@ -1,0 +1,16 @@
+detector-rule
+*************
+
+
+Description
+===========
+
+Information for a detector rule (DetectorRule object).
+
+
+Available Commands
+==================
+
+* get
+
+* list

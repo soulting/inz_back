@@ -1,0 +1,28 @@
+project
+*******
+
+
+Description
+===========
+
+A Document Project containing models.
+
+
+Available Commands
+==================
+
+* add
+
+* change-compartment
+
+* create
+
+* delete
+
+* get
+
+* list
+
+* remove
+
+* update

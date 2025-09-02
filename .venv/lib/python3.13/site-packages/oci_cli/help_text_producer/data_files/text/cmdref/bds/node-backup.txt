@@ -1,0 +1,14 @@
+node-backup
+***********
+
+
+Description
+===========
+
+The information about the Node’s backup.
+
+
+Available Commands
+==================
+
+* delete

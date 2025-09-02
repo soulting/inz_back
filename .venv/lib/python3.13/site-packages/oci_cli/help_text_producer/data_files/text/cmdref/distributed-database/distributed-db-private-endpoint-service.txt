@@ -1,0 +1,31 @@
+distributed-db-private-endpoint-service
+***************************************
+
+
+Description
+===========
+
+Use the Globally Distributed Database service CLI to create and manage
+the Globally distributed databases.
+
+
+Available Commands
+==================
+
+* distributed-database-private-endpoint
+
+  * change-compartment
+
+  * create
+
+  * delete
+
+  * get
+
+  * reinstate-proxy-instance
+
+  * update
+
+* distributed-database-private-endpoint-collection
+
+  * list-distributed-database-private-endpoints

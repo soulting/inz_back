@@ -1,0 +1,14 @@
+listing-collection
+******************
+
+
+Description
+===========
+
+Results of listing search. Contains Listing items.
+
+
+Available Commands
+==================
+
+* list-listings

@@ -1,0 +1,20 @@
+profile
+*******
+
+
+Description
+===========
+
+The metadata associated with the profile.
+
+
+Available Commands
+==================
+
+* create
+
+* delete
+
+* get
+
+* update

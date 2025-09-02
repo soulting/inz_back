@@ -1,0 +1,43 @@
+queue-admin
+***********
+
+
+Description
+===========
+
+Use the Queue CLI to produce and consume messages, create queues, and
+manage related items. For more information, see Queue.
+
+
+Available Commands
+==================
+
+* queue
+
+  * change-compartment
+
+  * create
+
+  * delete
+
+  * get
+
+  * list
+
+  * purge
+
+  * update
+
+* work-request
+
+  * get
+
+  * list
+
+* work-request-error
+
+  * list
+
+* work-request-log
+
+  * list

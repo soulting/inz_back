@@ -1,0 +1,561 @@
+"validate-source-extfield-details"
+**********************************
+
+* Description
+
+* Usage
+
+* Required Parameters
+
+* Optional Parameters
+
+* Global Parameters
+
+* Example using required parameter
+
+
+Description
+===========
+
+Checks if the specified input contains valid extended field
+definitions against the provided example content.
+
+
+Usage
+=====
+
+   oci log-analytics source validate-source-extfield-details [OPTIONS]
+
+
+Required Parameters
+===================
+
+--namespace-name [text]
+
+The Logging Analytics namespace used for the request.
+
+
+Optional Parameters
+===================
+
+--assoc-count [text]
+
+Association count
+
+--assoc-entity [text]
+
+Association entity
+
+--categories [complex type]
+
+An array of categories assigned to this source. The isSystem flag
+denotes if each category assignment is user-created or Oracle-defined.
+
+This option is a JSON list with items of type LogAnalyticsCategory.
+For documentation on LogAnalyticsCategory please see our API
+reference: https://docs.cloud.oracle.com/api/#/en/loganalytics/202006
+01/datatypes/LogAnalyticsCategory. This is a complex type whose value
+must be valid JSON. The value can be provided as a string on the
+command line or passed in as a file using the file://path/to/file
+syntax.
+
+The "--generate-param-json-input" option can be used to generate an
+example of the JSON which must be provided. We recommend storing this
+example in a file, modifying it as needed and then passing it back in
+via the file:// syntax.
+
+--data-filter-definitions [complex type]
+
+The data filter definitions.
+
+This option is a JSON list with items of type
+LogAnalyticsSourceDataFilter.  For documentation on
+LogAnalyticsSourceDataFilter please see our API reference: https://do
+cs.cloud.oracle.com/api/#/en/loganalytics/20200601/datatypes/LogAnaly
+ticsSourceDataFilter. This is a complex type whose value must be valid
+JSON. The value can be provided as a string on the command line or
+passed in as a file using the file://path/to/file syntax.
+
+The "--generate-param-json-input" option can be used to generate an
+example of the JSON which must be provided. We recommend storing this
+example in a file, modifying it as needed and then passing it back in
+via the file:// syntax.
+
+--database-credential [text]
+
+The database credential.
+
+--description [text]
+
+The source description.
+
+--display-name [text]
+
+The source display name.
+
+--edit-version [integer]
+
+The source edit version.
+
+--endpoints [complex type]
+
+An array of REST API endpoints for log collection.
+
+This option is a JSON list with items of type LogAnalyticsEndpoint.
+For documentation on LogAnalyticsEndpoint please see our API
+reference: https://docs.cloud.oracle.com/api/#/en/loganalytics/202006
+01/datatypes/LogAnalyticsEndpoint. This is a complex type whose value
+must be valid JSON. The value can be provided as a string on the
+command line or passed in as a file using the file://path/to/file
+syntax.
+
+The "--generate-param-json-input" option can be used to generate an
+example of the JSON which must be provided. We recommend storing this
+example in a file, modifying it as needed and then passing it back in
+via the file:// syntax.
+
+--entity-types [complex type]
+
+The entity types.
+
+This option is a JSON list with items of type
+LogAnalyticsSourceEntityType.  For documentation on
+LogAnalyticsSourceEntityType please see our API reference: https://do
+cs.cloud.oracle.com/api/#/en/loganalytics/20200601/datatypes/LogAnaly
+ticsSourceEntityType. This is a complex type whose value must be valid
+JSON. The value can be provided as a string on the command line or
+passed in as a file using the file://path/to/file syntax.
+
+The "--generate-param-json-input" option can be used to generate an
+example of the JSON which must be provided. We recommend storing this
+example in a file, modifying it as needed and then passing it back in
+via the file:// syntax.
+
+--event-types [complex type]
+
+An array of event types.
+
+This option is a JSON list with items of type EventType.  For
+documentation on EventType please see our API reference: https://docs
+.cloud.oracle.com/api/#/en/loganalytics/20200601/datatypes/EventType.
+This is a complex type whose value must be valid JSON. The value can
+be provided as a string on the command line or passed in as a file
+using the file://path/to/file syntax.
+
+The "--generate-param-json-input" option can be used to generate an
+example of the JSON which must be provided. We recommend storing this
+example in a file, modifying it as needed and then passing it back in
+via the file:// syntax.
+
+--extfield-defs [text]
+
+Extended Field Definitions
+
+--from-json [text]
+
+Provide input to this command as a JSON document from a file using the
+file://path-to/file syntax.
+
+The "--generate-full-command-json-input" option can be used to
+generate a sample json file to be used with this command option. The
+key names are pre-populated and match the command option names
+(converted to camelCase format, e.g. compartment-id –> compartmentId),
+while the values of the keys need to be populated by the user before
+using the sample file as an input to this command. For any command
+option that accepts multiple values, the value of the key can be a
+JSON array.
+
+Options can still be provided on the command line. If an option exists
+in both the JSON document and the command line then the command line
+specified value will be used.
+
+For examples on usage of this option, please see our “using CLI with
+advanced JSON options” link: https://docs.cloud.oracle.com/iaas/Conte
+nt/API/SDKDocs/cliusing.htm#AdvancedJSONOptions
+
+--functions [complex type]
+
+The source functions.
+
+This option is a JSON list with items of type
+LogAnalyticsSourceFunction.  For documentation on
+LogAnalyticsSourceFunction please see our API reference: https://docs
+.cloud.oracle.com/api/#/en/loganalytics/20200601/datatypes/LogAnalyti
+csSourceFunction. This is a complex type whose value must be valid
+JSON. The value can be provided as a string on the command line or
+passed in as a file using the file://path/to/file syntax.
+
+The "--generate-param-json-input" option can be used to generate an
+example of the JSON which must be provided. We recommend storing this
+example in a file, modifying it as needed and then passing it back in
+via the file:// syntax.
+
+--is-auto-assoc-enabled [text]
+
+Auto associaton enabled flag
+
+--is-auto-assoc-override [text]
+
+Auto associaton override flag
+
+--is-for-cloud [boolean]
+
+A flag indicating whether or not this is a cloud source.
+
+--is-secure-content [boolean]
+
+A flag indicating whether or not the source content is secure.
+
+--is-system [boolean]
+
+The system flag.  A value of false denotes a custom, or user defined
+object.  A value of true denotes a built in object.
+
+--is-timezone-override [boolean]
+
+A flag indicating whether or not the source has a time zone override.
+
+--label-conditions [complex type]
+
+The label alert conditions.
+
+This option is a JSON list with items of type
+LogAnalyticsSourceLabelCondition.  For documentation on
+LogAnalyticsSourceLabelCondition please see our API reference: https:
+//docs.cloud.oracle.com/api/#/en/loganalytics/20200601/datatypes/LogA
+nalyticsSourceLabelCondition. This is a complex type whose value must
+be valid JSON. The value can be provided as a string on the command
+line or passed in as a file using the file://path/to/file syntax.
+
+The "--generate-param-json-input" option can be used to generate an
+example of the JSON which must be provided. We recommend storing this
+example in a file, modifying it as needed and then passing it back in
+via the file:// syntax.
+
+--label-definitions [complex type]
+
+The labls used by the source.
+
+This option is a JSON list with items of type
+LogAnalyticsLabelDefinition.  For documentation on
+LogAnalyticsLabelDefinition please see our API reference: https://doc
+s.cloud.oracle.com/api/#/en/loganalytics/20200601/datatypes/LogAnalyt
+icsLabelDefinition. This is a complex type whose value must be valid
+JSON. The value can be provided as a string on the command line or
+passed in as a file using the file://path/to/file syntax.
+
+The "--generate-param-json-input" option can be used to generate an
+example of the JSON which must be provided. We recommend storing this
+example in a file, modifying it as needed and then passing it back in
+via the file:// syntax.
+
+--labels [complex type]
+
+The labels associated with the source.
+
+This option is a JSON list with items of type LogAnalyticsLabelView.
+For documentation on LogAnalyticsLabelView please see our API
+reference: https://docs.cloud.oracle.com/api/#/en/loganalytics/202006
+01/datatypes/LogAnalyticsLabelView. This is a complex type whose value
+must be valid JSON. The value can be provided as a string on the
+command line or passed in as a file using the file://path/to/file
+syntax.
+
+The "--generate-param-json-input" option can be used to generate an
+example of the JSON which must be provided. We recommend storing this
+example in a file, modifying it as needed and then passing it back in
+via the file:// syntax.
+
+--metadata-fields [complex type]
+
+The source metadata fields.
+
+This option is a JSON list with items of type
+LogAnalyticsSourceMetadataField.  For documentation on
+LogAnalyticsSourceMetadataField please see our API reference: https:/
+/docs.cloud.oracle.com/api/#/en/loganalytics/20200601/datatypes/LogAn
+alyticsSourceMetadataField. This is a complex type whose value must be
+valid JSON. The value can be provided as a string on the command line
+or passed in as a file using the file://path/to/file syntax.
+
+The "--generate-param-json-input" option can be used to generate an
+example of the JSON which must be provided. We recommend storing this
+example in a file, modifying it as needed and then passing it back in
+via the file:// syntax.
+
+--metric-definitions [complex type]
+
+The metric definitions.
+
+This option is a JSON list with items of type LogAnalyticsMetric.  For
+documentation on LogAnalyticsMetric please see our API reference: htt
+ps://docs.cloud.oracle.com/api/#/en/loganalytics/20200601/datatypes/L
+ogAnalyticsMetric. This is a complex type whose value must be valid
+JSON. The value can be provided as a string on the command line or
+passed in as a file using the file://path/to/file syntax.
+
+The "--generate-param-json-input" option can be used to generate an
+example of the JSON which must be provided. We recommend storing this
+example in a file, modifying it as needed and then passing it back in
+via the file:// syntax.
+
+--metrics [complex type]
+
+The metric source map.
+
+This option is a JSON list with items of type
+LogAnalyticsSourceMetric.  For documentation on
+LogAnalyticsSourceMetric please see our API reference: https://docs.c
+loud.oracle.com/api/#/en/loganalytics/20200601/datatypes/LogAnalytics
+SourceMetric. This is a complex type whose value must be valid JSON.
+The value can be provided as a string on the command line or passed in
+as a file using the file://path/to/file syntax.
+
+The "--generate-param-json-input" option can be used to generate an
+example of the JSON which must be provided. We recommend storing this
+example in a file, modifying it as needed and then passing it back in
+via the file:// syntax.
+
+--name [text]
+
+The source internal name.
+
+--oob-parsers [complex type]
+
+The built in parsers associated with source.
+
+This option is a JSON list with items of type LogAnalyticsParser.  For
+documentation on LogAnalyticsParser please see our API reference: htt
+ps://docs.cloud.oracle.com/api/#/en/loganalytics/20200601/datatypes/L
+ogAnalyticsParser. This is a complex type whose value must be valid
+JSON. The value can be provided as a string on the command line or
+passed in as a file using the file://path/to/file syntax.
+
+The "--generate-param-json-input" option can be used to generate an
+example of the JSON which must be provided. We recommend storing this
+example in a file, modifying it as needed and then passing it back in
+via the file:// syntax.
+
+--parameters [complex type]
+
+The source parameters.
+
+This option is a JSON list with items of type LogAnalyticsParameter.
+For documentation on LogAnalyticsParameter please see our API
+reference: https://docs.cloud.oracle.com/api/#/en/loganalytics/202006
+01/datatypes/LogAnalyticsParameter. This is a complex type whose value
+must be valid JSON. The value can be provided as a string on the
+command line or passed in as a file using the file://path/to/file
+syntax.
+
+The "--generate-param-json-input" option can be used to generate an
+example of the JSON which must be provided. We recommend storing this
+example in a file, modifying it as needed and then passing it back in
+via the file:// syntax.
+
+--parsers [complex type]
+
+The list of parsers used by the source.
+
+This option is a JSON list with items of type LogAnalyticsParser.  For
+documentation on LogAnalyticsParser please see our API reference: htt
+ps://docs.cloud.oracle.com/api/#/en/loganalytics/20200601/datatypes/L
+ogAnalyticsParser. This is a complex type whose value must be valid
+JSON. The value can be provided as a string on the command line or
+passed in as a file using the file://path/to/file syntax.
+
+The "--generate-param-json-input" option can be used to generate an
+example of the JSON which must be provided. We recommend storing this
+example in a file, modifying it as needed and then passing it back in
+via the file:// syntax.
+
+--pattern-count [integer]
+
+The pattern count.
+
+--patterns [complex type]
+
+The source patterns.
+
+This option is a JSON list with items of type
+LogAnalyticsSourcePattern.  For documentation on
+LogAnalyticsSourcePattern please see our API reference: https://docs.
+cloud.oracle.com/api/#/en/loganalytics/20200601/datatypes/LogAnalytic
+sSourcePattern. This is a complex type whose value must be valid JSON.
+The value can be provided as a string on the command line or passed in
+as a file using the file://path/to/file syntax.
+
+The "--generate-param-json-input" option can be used to generate an
+example of the JSON which must be provided. We recommend storing this
+example in a file, modifying it as needed and then passing it back in
+via the file:// syntax.
+
+--rule-id [integer]
+
+The rule unique identifier.
+
+--source-id [integer]
+
+The source unique identifier.
+
+--source-properties [complex type]
+
+A list of source properties.
+
+This option is a JSON list with items of type LogAnalyticsProperty.
+For documentation on LogAnalyticsProperty please see our API
+reference: https://docs.cloud.oracle.com/api/#/en/loganalytics/202006
+01/datatypes/LogAnalyticsProperty. This is a complex type whose value
+must be valid JSON. The value can be provided as a string on the
+command line or passed in as a file using the file://path/to/file
+syntax.
+
+The "--generate-param-json-input" option can be used to generate an
+example of the JSON which must be provided. We recommend storing this
+example in a file, modifying it as needed and then passing it back in
+via the file:// syntax.
+
+--time-updated [datetime]
+
+The last updated date.
+
+   The following datetime formats are supported:
+
+
+UTC with microseconds
+---------------------
+
+   Format: YYYY-MM-DDTHH:mm:ss.ssssssTZD
+   Example: 2017-09-15T20:30:00.123456Z
+
+   UTC with milliseconds
+   ***********************
+   .. code::
+
+       Format: YYYY-MM-DDTHH:mm:ss.sssTZD
+       Example: 2017-09-15T20:30:00.123Z
+
+   UTC without milliseconds
+   **************************
+   .. code::
+
+       Format: YYYY-MM-DDTHH:mm:ssTZD
+       Example: 2017-09-15T20:30:00Z
+
+   UTC with minute precision
+   **************************
+   .. code::
+
+       Format: YYYY-MM-DDTHH:mmTZD
+       Example: 2017-09-15T20:30Z
+
+
+Timezone with microseconds
+--------------------------
+
+   Format: YYYY-MM-DDTHH:mm:ssTZD
+   Example: 2017-09-15T12:30:00.456789-08:00, 2017-09-15T12:30:00.456789-0800
+
+   Timezone with milliseconds
+   ***************************
+   .. code::
+
+       Format: YYYY-MM-DDTHH:mm:ssTZD
+       Example: 2017-09-15T12:30:00.456-08:00, 2017-09-15T12:30:00.456-0800
+
+   Timezone without milliseconds
+   *******************************
+   .. code::
+
+       Format: YYYY-MM-DDTHH:mm:ssTZD
+       Example: 2017-09-15T12:30:00-08:00, 2017-09-15T12:30:00-0800
+
+   Timezone with minute precision
+   *******************************
+   .. code::
+
+       Format: YYYY-MM-DDTHH:mmTZD
+       Example: 2017-09-15T12:30-08:00, 2017-09-15T12:30-0800
+
+   Short date and time
+   ********************
+   The timezone for this date and time will be taken as UTC (Needs to be surrounded by single or double quotes)
+
+   .. code::
+
+       Format: 'YYYY-MM-DD HH:mm' or "YYYY-MM-DD HH:mm"
+       Example: '2017-09-15 17:25'
+
+   Date Only
+   **********
+   This date will be taken as midnight UTC of that day
+
+   .. code::
+
+       Format: YYYY-MM-DD
+       Example: 2017-09-15
+
+   Epoch seconds
+   **************
+   .. code::
+
+       Example: 1412195400
+
+--type-display-name [text]
+
+The source type name.
+
+--type-name [text]
+
+The source type internal name.
+
+--user-parsers [complex type]
+
+An array of custom parsers.
+
+This option is a JSON list with items of type LogAnalyticsParser.  For
+documentation on LogAnalyticsParser please see our API reference: htt
+ps://docs.cloud.oracle.com/api/#/en/loganalytics/20200601/datatypes/L
+ogAnalyticsParser. This is a complex type whose value must be valid
+JSON. The value can be provided as a string on the command line or
+passed in as a file using the file://path/to/file syntax.
+
+The "--generate-param-json-input" option can be used to generate an
+example of the JSON which must be provided. We recommend storing this
+example in a file, modifying it as needed and then passing it back in
+via the file:// syntax.
+
+--warning-config [integer]
+
+The source warning configuration.
+
+
+Global Parameters
+=================
+
+Use "oci --help" for help on global parameters.
+
+"--auth-purpose", "--auth", "--cert-bundle", "--cli-auto-prompt", "--
+cli-rc-file", "--config-file", "--connection-timeout", "--debug", "--
+defaults-file", "--endpoint", "--generate-full-command-json-input", "
+--generate-param-json-input", "--help", "--latest-version", "--max-
+retries", "--no-retry", "--opc-client-request-id", "--opc-request-id",
+"--output", "--profile", "--proxy", "--query", "--raw-output", "--
+read-timeout", "--realm-specific-endpoint", "--region", "--release-
+info", "--request-id", "--version", "-?", "-d", "-h", "-i", "-v"
+
+
+Example using required parameter
+================================
+
+Copy the following CLI commands into a file named example.sh. Run the
+command by typing “bash example.sh” and replacing the example
+parameters with your own.
+
+Please note this sample will only work in the POSIX-compliant bash-
+like shell. You need to set up the OCI configuration and appropriate
+security policies before trying the examples.
+
+       export namespace_name=<substitute-value-of-namespace_name> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/log-analytics/source/validate-source-extfield-details.html#cmdoption-namespace-name
+
+       oci log-analytics source validate-source-extfield-details --namespace-name $namespace_name

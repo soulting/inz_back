@@ -1,0 +1,24 @@
+governance-instance
+*******************
+
+
+Description
+===========
+
+The details of a GovenanceInstance.
+
+
+Available Commands
+==================
+
+* change-compartment
+
+* create
+
+* delete
+
+* get
+
+* update
+
+* update-governance-instance-configuration

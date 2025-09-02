@@ -1,0 +1,36 @@
+build-pipeline-stage
+********************
+
+
+Description
+===========
+
+A single node in a build pipeline. A stage takes a specific designated
+action. There are many types of stages such as ‘BUILD’ and
+‘DELIVER_ARTIFACT’.
+
+
+Available Commands
+==================
+
+* create-build-stage
+
+* create-deliver-artifact-stage
+
+* create-trigger-deployment-stage
+
+* create-wait-stage
+
+* delete
+
+* get
+
+* list
+
+* update-build-stage
+
+* update-deliver-artifact-stage
+
+* update-trigger-deployment-stage
+
+* update-wait-stage

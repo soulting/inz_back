@@ -1,0 +1,646 @@
+network
+*******
+
+
+Description
+===========
+
+Networking Service CLI
+
+
+Available Commands
+==================
+
+* allowed-ike-ip-sec-parameters
+
+  * get
+
+* byoasn
+
+  * change-compartment
+
+  * create
+
+  * delete
+
+  * get
+
+  * list
+
+  * update
+
+  * validate
+
+* byoip-allocated-range-summary
+
+  * list-byoip-allocated-ranges
+
+* byoip-range
+
+  * advertise
+
+  * change-compartment
+
+  * create
+
+  * delete
+
+  * get
+
+  * list
+
+  * set-origin-asn
+
+  * set-origin-asn-to-oracle
+
+  * update
+
+  * validate
+
+  * withdraw
+
+* capture-filter
+
+  * change-compartment
+
+  * create
+
+  * delete
+
+  * get
+
+  * list
+
+  * update
+
+* cpe
+
+  * change-compartment
+
+  * create
+
+  * delete
+
+  * get
+
+  * get-cpe-device-config-content
+
+  * list
+
+  * update
+
+* cpe-device-shape
+
+  * list
+
+* cpe-device-shape-detail
+
+  * get-cpe-device-shape
+
+* cross-connect
+
+  * change-compartment
+
+  * create
+
+  * delete
+
+  * get
+
+  * list
+
+  * update
+
+* cross-connect-group
+
+  * change-compartment
+
+  * create
+
+  * delete
+
+  * get
+
+  * list
+
+  * update
+
+* cross-connect-location
+
+  * list
+
+* cross-connect-mapping-details-collection
+
+  * list-cross-connect-mappings
+
+* cross-connect-port-speed-shape
+
+  * list
+
+* cross-connect-status
+
+  * get
+
+* dhcp-options
+
+  * change-compartment
+
+  * create
+
+  * delete
+
+  * get
+
+  * list
+
+  * update
+
+* drg
+
+  * change-compartment
+
+  * create
+
+  * delete
+
+  * get
+
+  * get-all-drg-attachments
+
+  * get-upgrade-status
+
+  * list
+
+  * update
+
+  * upgrade
+
+* drg-attachment
+
+  * create
+
+  * delete
+
+  * get
+
+  * list
+
+  * remove-export-route-distribution
+
+  * update
+
+* drg-redundancy-status
+
+  * get
+
+* drg-route-distribution
+
+  * create
+
+  * delete
+
+  * get
+
+  * list
+
+  * update
+
+* drg-route-distribution-statement
+
+  * add
+
+  * list
+
+  * remove
+
+  * update
+
+* drg-route-rule
+
+  * add
+
+  * list
+
+  * remove
+
+  * update
+
+* drg-route-table
+
+  * create
+
+  * delete
+
+  * get
+
+  * list
+
+  * remove-import-route-distribution
+
+  * update
+
+* fast-connect-provider-service
+
+  * get
+
+  * list
+
+  * virtual-circuit-bandwidth-shape
+
+    * list
+
+* fast-connect-provider-service-key
+
+  * get
+
+* internet-gateway
+
+  * change-compartment
+
+  * create
+
+  * delete
+
+  * get
+
+  * list
+
+  * update
+
+* ip-sec-connection
+
+  * change-compartment
+
+  * create
+
+  * delete
+
+  * get
+
+  * get-config
+
+  * get-ipsec-cpe-device-config-content
+
+  * get-status
+
+  * list
+
+  * update
+
+* ip-sec-connection-tunnel-error-details
+
+  * get-ip-sec-connection-tunnel-error
+
+* ip-sec-psk
+
+  * get
+
+  * update
+
+* ip-sec-tunnel
+
+  * get
+
+  * list
+
+  * update
+
+* ipam
+
+  * get-resource-ip-inventory
+
+  * get-subnet-cidr-utilization
+
+  * get-subnet-ip-inventory
+
+  * get-vcn-overlap
+
+  * list-ip-inventory
+
+* ipv6
+
+  * create
+
+  * delete
+
+  * get
+
+  * ipv6-vnic-detach
+
+  * list
+
+  * update
+
+* local-peering-gateway
+
+  * change-compartment
+
+  * connect
+
+  * create
+
+  * delete
+
+  * get
+
+  * list
+
+  * update
+
+* nat-gateway
+
+  * change-compartment
+
+  * create
+
+  * delete
+
+  * get
+
+  * list
+
+  * update
+
+* networking-topology
+
+  * get
+
+* nsg
+
+  * change-compartment
+
+  * create
+
+  * delete
+
+  * get
+
+  * list
+
+  * rules
+
+    * add
+
+    * list
+
+    * remove
+
+    * update
+
+  * update
+
+  * vnics
+
+    * list
+
+* private-ip
+
+  * create
+
+  * delete
+
+  * get
+
+  * list
+
+  * private-ip-vnic-detach
+
+  * update
+
+* public-ip
+
+  * change-compartment
+
+  * create
+
+  * delete
+
+  * get
+
+  * list
+
+  * update
+
+* public-ip-pool
+
+  * add
+
+  * change-compartment
+
+  * create
+
+  * delete
+
+  * get
+
+  * list
+
+  * remove
+
+  * update
+
+* remote-peering-connection
+
+  * change-compartment
+
+  * connect
+
+  * create
+
+  * delete
+
+  * get
+
+  * list
+
+  * update
+
+* route-table
+
+  * change-compartment
+
+  * create
+
+  * delete
+
+  * get
+
+  * list
+
+  * update
+
+* security-list
+
+  * change-compartment
+
+  * create
+
+  * delete
+
+  * get
+
+  * list
+
+  * update
+
+* service
+
+  * get
+
+  * list
+
+* service-gateway
+
+  * attach
+
+  * change-compartment
+
+  * create
+
+  * delete
+
+  * detach
+
+  * get
+
+  * list
+
+  * update
+
+* subnet
+
+  * add-ipv6-subnet-cidr
+
+  * change-compartment
+
+  * create
+
+  * delete
+
+  * get
+
+  * list
+
+  * remove-ipv6-subnet-cidr
+
+  * update
+
+* subnet-topology
+
+  * get
+
+* tunnel-cpe-device-config
+
+  * get
+
+  * get-tunnel-cpe-device-config-content
+
+  * update
+
+* tunnel-route
+
+  * list-ip-sec-connection
+
+* tunnel-security-association
+
+  * list-ip-sec-connection
+
+* vcn
+
+  * add-ipv6-vcn-cidr
+
+  * add-vcn-cidr
+
+  * change-compartment
+
+  * create
+
+  * delete
+
+  * get
+
+  * list
+
+  * modify-vcn-cidr
+
+  * remove-ipv6-vcn-cidr
+
+  * remove-vcn-cidr
+
+  * update
+
+* vcn-dns-resolver-association
+
+  * get
+
+* vcn-topology
+
+  * get
+
+* virtual-circuit
+
+  * change-compartment
+
+  * create
+
+  * delete
+
+  * get
+
+  * list
+
+  * update
+
+* virtual-circuit-associated-tunnel-details
+
+  * list-virtual-circuit-associated-tunnels
+
+* virtual-circuit-public-prefix
+
+  * bulk-add
+
+  * bulk-delete
+
+  * list
+
+* vlan
+
+  * change-compartment
+
+  * create
+
+  * delete
+
+  * get
+
+  * list
+
+  * update
+
+* vnic
+
+  * assign-ipv6
+
+  * assign-private-ip
+
+  * get
+
+  * unassign-ipv6
+
+  * unassign-private-ip
+
+  * update
+
+* vtap
+
+  * change-compartment
+
+  * create
+
+  * delete
+
+  * get
+
+  * list
+
+  * update

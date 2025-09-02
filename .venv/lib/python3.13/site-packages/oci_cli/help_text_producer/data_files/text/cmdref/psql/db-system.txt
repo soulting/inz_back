@@ -1,0 +1,46 @@
+db-system
+*********
+
+
+Description
+===========
+
+Information about a database system.
+
+
+Available Commands
+==================
+
+* change-compartment
+
+* create
+
+* create-db-system-backup-source-details
+
+* create-db-system-none-source-details
+
+* create-db-system-oci-optimized-storage-details
+
+* delete
+
+* failover
+
+* get
+
+* get-primary-db-instance
+
+* patch
+
+* reset-master-user-password
+
+* reset-master-user-password-plain-text-password-details
+
+* reset-master-user-password-vault-secret-password-details
+
+* restart-db-instance-in
+
+* restore
+
+* update
+
+* update-db-system-db-instance

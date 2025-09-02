@@ -1,0 +1,30 @@
+external-db-connector
+*********************
+
+
+Description
+===========
+
+An Oracle Cloud Infrastructure resource used to connect to an external
+Oracle Database. This resource stores the database connection string,
+user credentials, and related details that allow you to manage your
+external database using the Oracle Cloud Infrastructure Console and
+API interfaces.
+
+
+Available Commands
+==================
+
+* check-connection-status
+
+* create-macs-connector
+
+* delete
+
+* get
+
+* list
+
+* update
+
+* update-macs-connector

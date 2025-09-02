@@ -1,0 +1,14 @@
+trail-sequence-summary
+**********************
+
+
+Description
+===========
+
+Summary of the TrailSequences.
+
+
+Available Commands
+==================
+
+* list-trail-sequences

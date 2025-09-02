@@ -1,0 +1,196 @@
+"get-analytic-content"
+**********************
+
+* Description
+
+* Usage
+
+* Required Parameters
+
+* Optional Parameters
+
+* Global Parameters
+
+* Example using required parameter
+
+
+Description
+===========
+
+Returns a report of managed instances matching the given filters. You
+can select CSV, XML, or JSON format.
+
+
+Usage
+=====
+
+   oci os-management-hub managed-instance get-analytic-content [OPTIONS]
+
+
+Required Parameters
+===================
+
+--file [filename]
+
+The name of the file that will receive the response data, or ‘-‘ to
+write to STDOUT.
+
+
+Optional Parameters
+===================
+
+--bug-updates-eq [integer]
+
+A filter to return instances with number of available bug updates
+equals to the number specified.
+
+--bug-updates-gt [integer]
+
+A filter to return instances with number of available bug updates
+greater than the number specified.
+
+--compartment-id, -c [text]
+
+The OCID of the compartment. This filter returns only resources
+contained within the specified compartment.
+
+--display-name [text]
+
+A filter to return resources that match the given display names.
+
+--display-name-contains [text]
+
+A filter to return resources that may partially match the given
+display name.
+
+--from-json [text]
+
+Provide input to this command as a JSON document from a file using the
+file://path-to/file syntax.
+
+The "--generate-full-command-json-input" option can be used to
+generate a sample json file to be used with this command option. The
+key names are pre-populated and match the command option names
+(converted to camelCase format, e.g. compartment-id –> compartmentId),
+while the values of the keys need to be populated by the user before
+using the sample file as an input to this command. For any command
+option that accepts multiple values, the value of the key can be a
+JSON array.
+
+Options can still be provided on the command line. If an option exists
+in both the JSON document and the command line then the command line
+specified value will be used.
+
+For examples on usage of this option, please see our “using CLI with
+advanced JSON options” link: https://docs.cloud.oracle.com/iaas/Conte
+nt/API/SDKDocs/cliusing.htm#AdvancedJSONOptions
+
+--group-id [text]
+
+The OCID of the managed instance group for which to list resources.
+
+--is-managed-by-alx [boolean]
+
+Indicates whether to list only resources managed by the Autonomous
+Linux service.
+
+--lifecycle-env-id [text]
+
+The OCID of the lifecycle environment.
+
+--location [text]
+
+A filter to return only resources whose location matches the given
+value.
+
+Accepted values are:
+
+   AZURE, EC2, GCP, OCI_COMPUTE, ON_PREMISE
+
+--location-ne [text]
+
+A filter to return only resources whose location does not match the
+given value.
+
+Accepted values are:
+
+   AZURE, EC2, GCP, OCI_COMPUTE, ON_PREMISE
+
+--os-family [text]
+
+A filter to return only resources that match the given operating
+system family.
+
+Accepted values are:
+
+   ALL, ORACLE_LINUX_6, ORACLE_LINUX_7, ORACLE_LINUX_8, ORACLE_LINUX_9, WINDOWS_SERVER_2016, WINDOWS_SERVER_2019, WINDOWS_SERVER_2022
+
+--report-format [text]
+
+The format of the report to download. Default is CSV.
+
+Accepted values are:
+
+   csv, json, xml
+
+--report-type [text]
+
+The type of the report the user wants to download. Default is ALL.
+
+Accepted values are:
+
+   ACTIVITY, ALL, BUGFIX, SECURITY
+
+--security-updates-eq [integer]
+
+A filter to return instances with number of available security updates
+equals to the number specified.
+
+--security-updates-gt [integer]
+
+A filter to return instances with number of available security updates
+greater than the number specified.
+
+--stage-id [text]
+
+The OCID of the lifecycle stage for which to list resources.
+
+--status [text]
+
+A filter to return only managed instances whose status matches the
+status provided.
+
+Accepted values are:
+
+   DELETING, ERROR, NORMAL, ONBOARDING, REBOOTING, REGISTRATION_ERROR, UNREACHABLE, WARNING
+
+
+Global Parameters
+=================
+
+Use "oci --help" for help on global parameters.
+
+"--auth-purpose", "--auth", "--cert-bundle", "--cli-auto-prompt", "--
+cli-rc-file", "--config-file", "--connection-timeout", "--debug", "--
+defaults-file", "--endpoint", "--generate-full-command-json-input", "
+--generate-param-json-input", "--help", "--latest-version", "--max-
+retries", "--no-retry", "--opc-client-request-id", "--opc-request-id",
+"--output", "--profile", "--proxy", "--query", "--raw-output", "--
+read-timeout", "--realm-specific-endpoint", "--region", "--release-
+info", "--request-id", "--version", "-?", "-d", "-h", "-i", "-v"
+
+
+Example using required parameter
+================================
+
+Copy the following CLI commands into a file named example.sh. Run the
+command by typing “bash example.sh” and replacing the example
+parameters with your own.
+
+Please note this sample will only work in the POSIX-compliant bash-
+like shell. You need to set up the OCI configuration and appropriate
+security policies before trying the examples.
+
+       export file=<substitute-value-of-file> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/os-management-hub/managed-instance/get-analytic-content.html#cmdoption-file
+
+       oci os-management-hub managed-instance get-analytic-content --file $file

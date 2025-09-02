@@ -1,0 +1,22 @@
+imported-package
+****************
+
+
+Description
+===========
+
+An imported/instantiated package within an instance.
+
+
+Available Commands
+==================
+
+* create
+
+* delete
+
+* get
+
+* list
+
+* update

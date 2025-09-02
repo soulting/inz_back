@@ -1,0 +1,30 @@
+autonomous-exadata-infrastructure
+*********************************
+
+
+Description
+===========
+
+
+Available Commands
+==================
+
+* change-compartment
+
+* get
+
+* launch
+
+* list
+
+* rotate-ords-certs
+
+* rotate-ssl-certs
+
+* shape
+
+  * list
+
+* terminate
+
+* update

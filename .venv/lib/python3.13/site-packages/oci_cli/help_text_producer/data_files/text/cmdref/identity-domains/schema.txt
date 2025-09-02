@@ -1,0 +1,18 @@
+schema
+******
+
+
+Description
+===========
+
+SCIM schema
+
+
+Available Commands
+==================
+
+* get
+
+* patch
+
+* put

@@ -1,0 +1,16 @@
+external-exadata-storage-grid
+*****************************
+
+
+Description
+===========
+
+The details of the Exadata storage server grid.
+
+
+Available Commands
+==================
+
+* get
+
+* update

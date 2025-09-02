@@ -1,0 +1,28 @@
+stream-packaging-config
+***********************
+
+
+Description
+===========
+
+A stream packaging configuration for a Distribution Channel.
+
+
+Available Commands
+==================
+
+* add
+
+* create-stream-packaging-config-encryption-aes128
+
+* create-stream-packaging-config-encryption-none
+
+* delete
+
+* get
+
+* list
+
+* remove
+
+* update

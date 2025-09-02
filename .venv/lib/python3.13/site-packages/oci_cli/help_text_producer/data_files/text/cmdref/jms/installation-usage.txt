@@ -1,0 +1,16 @@
+installation-usage
+******************
+
+
+Description
+===========
+
+Installation usage during a specified time period. An installation is
+a collection of deployed instances of a specific Java Runtime that
+share the same install path.
+
+
+Available Commands
+==================
+
+* summarize

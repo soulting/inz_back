@@ -1,0 +1,21 @@
+fleet-property
+**************
+
+
+Description
+===========
+
+Property to manage fleet metadata details in Fleet Application
+Management.
+
+
+Available Commands
+==================
+
+* create
+
+* delete
+
+* get
+
+* update

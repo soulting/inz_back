@@ -1,0 +1,14 @@
+model-collection
+****************
+
+
+Description
+===========
+
+The results of a model search.
+
+
+Available Commands
+==================
+
+* list-models

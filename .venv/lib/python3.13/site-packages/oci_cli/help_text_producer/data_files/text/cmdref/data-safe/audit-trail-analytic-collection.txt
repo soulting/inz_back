@@ -1,0 +1,14 @@
+audit-trail-analytic-collection
+*******************************
+
+
+Description
+===========
+
+Details of audit trail analytic summary.
+
+
+Available Commands
+==================
+
+* list-audit-trail-analytics

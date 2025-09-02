@@ -1,0 +1,15 @@
+api-platform-instance-collection
+********************************
+
+
+Description
+===========
+
+Results of a search. Contains both InstanceSummary items and other
+information, such as metadata.
+
+
+Available Commands
+==================
+
+* list-api-platform-instances

@@ -1,0 +1,41 @@
+model-group
+***********
+
+
+Description
+===========
+
+Model group is a collection of the models. Model groups are
+represented by their associated metadata.
+
+
+Available Commands
+==================
+
+* activate
+
+* change-compartment
+
+* create
+
+* create-model-group-artifact
+
+* create-model-group-clone-model-group-details
+
+* create-model-group-create-model-group-details
+
+* deactivate
+
+* delete
+
+* get
+
+* get-model-group-artifact-content
+
+* head-model-group-artifact
+
+* list
+
+* list-model-group-models
+
+* update

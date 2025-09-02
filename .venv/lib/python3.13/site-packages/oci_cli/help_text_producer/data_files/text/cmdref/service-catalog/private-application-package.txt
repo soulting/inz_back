@@ -1,0 +1,18 @@
+private-application-package
+***************************
+
+
+Description
+===========
+
+A base object for all types of private application packages.
+
+
+Available Commands
+==================
+
+* download-config
+
+* get
+
+* list

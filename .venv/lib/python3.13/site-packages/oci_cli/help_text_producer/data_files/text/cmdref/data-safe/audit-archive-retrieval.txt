@@ -1,0 +1,27 @@
+audit-archive-retrieval
+***********************
+
+
+Description
+===========
+
+Represents the archive retrieve request for the audit data. You can
+retrieve audit data for a target database from the archive and store
+it online. For more information, see Retrieve Audit Data for a Target
+Database from the Archive.
+
+
+Available Commands
+==================
+
+* change-compartment
+
+* create
+
+* delete
+
+* get
+
+* list
+
+* update

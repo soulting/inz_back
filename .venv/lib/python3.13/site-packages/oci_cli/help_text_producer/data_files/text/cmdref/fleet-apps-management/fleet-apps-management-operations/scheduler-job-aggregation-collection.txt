@@ -1,0 +1,14 @@
+scheduler-job-aggregation-collection
+************************************
+
+
+Description
+===========
+
+An array of SchedulerJob objects.
+
+
+Available Commands
+==================
+
+* summarize-scheduler-job-counts

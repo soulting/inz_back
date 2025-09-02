@@ -1,0 +1,32 @@
+cloud-db-system
+***************
+
+
+Description
+===========
+
+The details of a cloud DB system.
+
+
+Available Commands
+==================
+
+* create
+
+* delete
+
+* disable-cloud-db-system-database-management
+
+* disable-cloud-db-system-stack-monitoring
+
+* enable-cloud-db-system-database-management
+
+* enable-cloud-db-system-stack-monitoring
+
+* get
+
+* list
+
+* summarize-cloud-db-system-availability-metrics
+
+* update

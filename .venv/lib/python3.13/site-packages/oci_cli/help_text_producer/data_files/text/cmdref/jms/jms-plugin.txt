@@ -1,0 +1,22 @@
+jms-plugin
+**********
+
+
+Description
+===========
+
+Information about a JmsPlugin that has been registered.
+
+
+Available Commands
+==================
+
+* create
+
+* delete
+
+* get
+
+* list
+
+* update

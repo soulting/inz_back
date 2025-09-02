@@ -1,0 +1,168 @@
+"list-desktops"
+***************
+
+* Description
+
+* Usage
+
+* Required Parameters
+
+* Optional Parameters
+
+* Global Parameters
+
+* Example using required parameter
+
+
+Description
+===========
+
+Returns a list of desktops within a given desktop pool. You can limit
+the results to an availability domain, desktop name, or desktop state.
+You can limit the number of results returned, sort the results by time
+or name, and sort in ascending or descending order.
+
+
+Usage
+=====
+
+   oci desktops desktop-pool list-desktops [OPTIONS]
+
+
+Required Parameters
+===================
+
+--compartment-id, -c [text]
+
+The OCID of the compartment of the desktop pool.
+
+--desktop-pool-id [text]
+
+The OCID of the desktop pool.
+
+
+Optional Parameters
+===================
+
+--all
+
+Fetches all pages of results. If you provide this option, then you
+cannot provide the "--limit" option.
+
+--availability-domain [text]
+
+The name of the availability domain.
+
+--display-name [text]
+
+A filter to return only results with the given displayName.
+
+--from-json [text]
+
+Provide input to this command as a JSON document from a file using the
+file://path-to/file syntax.
+
+The "--generate-full-command-json-input" option can be used to
+generate a sample json file to be used with this command option. The
+key names are pre-populated and match the command option names
+(converted to camelCase format, e.g. compartment-id –> compartmentId),
+while the values of the keys need to be populated by the user before
+using the sample file as an input to this command. For any command
+option that accepts multiple values, the value of the key can be a
+JSON array.
+
+Options can still be provided on the command line. If an option exists
+in both the JSON document and the command line then the command line
+specified value will be used.
+
+For examples on usage of this option, please see our “using CLI with
+advanced JSON options” link: https://docs.cloud.oracle.com/iaas/Conte
+nt/API/SDKDocs/cliusing.htm#AdvancedJSONOptions
+
+--id [text]
+
+A filter to return only results with the given OCID.
+
+--lifecycle-state [text]
+
+A filter to return only results with the given lifecycleState.
+
+--limit [integer]
+
+The maximum number of results to return.
+
+--page [text]
+
+For list pagination.
+
+--page-size [integer]
+
+When fetching results, the number of results to fetch per call. Only
+valid when used with "--all" or "--limit", and ignored otherwise.
+
+--sort-by [text]
+
+A field to sort by.
+
+Accepted values are:
+
+   DISPLAYNAME, TIMECREATED
+
+--sort-order [text]
+
+A field to indicate the sort order.
+
+Accepted values are:
+
+   ASC, DESC
+
+
+Global Parameters
+=================
+
+Use "oci --help" for help on global parameters.
+
+"--auth-purpose", "--auth", "--cert-bundle", "--cli-auto-prompt", "--
+cli-rc-file", "--config-file", "--connection-timeout", "--debug", "--
+defaults-file", "--endpoint", "--generate-full-command-json-input", "
+--generate-param-json-input", "--help", "--latest-version", "--max-
+retries", "--no-retry", "--opc-client-request-id", "--opc-request-id",
+"--output", "--profile", "--proxy", "--query", "--raw-output", "--
+read-timeout", "--realm-specific-endpoint", "--region", "--release-
+info", "--request-id", "--version", "-?", "-d", "-h", "-i", "-v"
+
+
+Example using required parameter
+================================
+
+Copy and paste the following example into a JSON file, replacing the
+example parameters with your own.
+
+       oci desktops desktop-pool create --generate-param-json-input availability-policy > availability-policy.json
+       oci desktops desktop-pool create --generate-param-json-input device-policy > device-policy.json
+       oci desktops desktop-pool create --generate-param-json-input image > image.json
+       oci desktops desktop-pool create --generate-param-json-input network-configuration > network-configuration.json
+
+Copy the following CLI commands into a file named example.sh. Run the
+command by typing “bash example.sh” and replacing the example
+parameters with your own.
+
+Please note this sample will only work in the POSIX-compliant bash-
+like shell. You need to set up the OCI configuration and appropriate
+security policies before trying the examples.
+
+       export are_privileged_users=<substitute-value-of-are_privileged_users> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/desktops/desktop-pool/create.html#cmdoption-are-privileged-users
+       export availability_domain=<substitute-value-of-availability_domain> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/desktops/desktop-pool/create.html#cmdoption-availability-domain
+       export compartment_id=<substitute-value-of-compartment_id> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/desktops/desktop-pool/create.html#cmdoption-compartment-id
+       export contact_details=<substitute-value-of-contact_details> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/desktops/desktop-pool/create.html#cmdoption-contact-details
+       export display_name=<substitute-value-of-display_name> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/desktops/desktop-pool/create.html#cmdoption-display-name
+       export is_storage_enabled=<substitute-value-of-is_storage_enabled> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/desktops/desktop-pool/create.html#cmdoption-is-storage-enabled
+       export maximum_size=<substitute-value-of-maximum_size> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/desktops/desktop-pool/create.html#cmdoption-maximum-size
+       export shape_name=<substitute-value-of-shape_name> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/desktops/desktop-pool/create.html#cmdoption-shape-name
+       export standby_size=<substitute-value-of-standby_size> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/desktops/desktop-pool/create.html#cmdoption-standby-size
+       export storage_backup_policy_id=<substitute-value-of-storage_backup_policy_id> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/desktops/desktop-pool/create.html#cmdoption-storage-backup-policy-id
+       export storage_size_in_gbs=<substitute-value-of-storage_size_in_gbs> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/desktops/desktop-pool/create.html#cmdoption-storage-size-in-gbs
+
+       desktop_pool_id=$(oci desktops desktop-pool create --are-privileged-users $are_privileged_users --availability-domain $availability_domain --availability-policy file://availability-policy.json --compartment-id $compartment_id --contact-details $contact_details --device-policy file://device-policy.json --display-name $display_name --image file://image.json --is-storage-enabled $is_storage_enabled --maximum-size $maximum_size --network-configuration file://network-configuration.json --shape-name $shape_name --standby-size $standby_size --storage-backup-policy-id $storage_backup_policy_id --storage-size-in-gbs $storage_size_in_gbs --query data.id --raw-output)
+
+       oci desktops desktop-pool list-desktops --compartment-id $compartment_id --desktop-pool-id $desktop_pool_id

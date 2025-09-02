@@ -1,0 +1,27 @@
+web-app-acceleration-policy
+***************************
+
+
+Description
+===========
+
+The details of WebAppAccelerationPolicy. A policy is comprised of
+rules, which allows enablement of Caching and Compression of HTTP
+response. Caching can be enabled for a particular path Compression is
+enabled at global level
+
+
+Available Commands
+==================
+
+* change-compartment
+
+* create
+
+* delete
+
+* get
+
+* list
+
+* update

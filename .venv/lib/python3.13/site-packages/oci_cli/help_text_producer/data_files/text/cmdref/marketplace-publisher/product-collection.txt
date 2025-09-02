@@ -1,0 +1,14 @@
+product-collection
+******************
+
+
+Description
+===========
+
+Results of a product search. Contains the product items.
+
+
+Available Commands
+==================
+
+* list-products

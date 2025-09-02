@@ -1,0 +1,23 @@
+alarm-condition
+***************
+
+
+Description
+===========
+
+The information about template condition in the same
+monitoringTemplate in a compartment.
+
+
+Available Commands
+==================
+
+* create
+
+* delete
+
+* get
+
+* list
+
+* update

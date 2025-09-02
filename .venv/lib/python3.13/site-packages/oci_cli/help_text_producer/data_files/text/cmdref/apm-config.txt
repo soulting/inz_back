@@ -1,0 +1,80 @@
+apm-config
+**********
+
+
+Description
+===========
+
+Use the Application Performance Monitoring Configuration CLI to query
+and set Application Performance Monitoring configuration. For more
+information, see Application Performance Monitoring.
+
+
+Available Commands
+==================
+
+* config
+
+  * create-agent
+
+  * create-apdex-rules
+
+  * create-macs-extension
+
+  * create-metric-group
+
+  * create-options
+
+  * create-span-filter
+
+  * delete
+
+  * get
+
+  * update-agent
+
+  * update-apdex-rules
+
+  * update-macs-extension
+
+  * update-metric-group
+
+  * update-options
+
+  * update-span-filter
+
+* config-collection
+
+  * list
+
+* export-configuration
+
+  * copy
+
+  * export
+
+* import-configuration
+
+  * import
+
+* match-agents-with-attribute-key
+
+  * get
+
+  * update
+
+* metric-group
+
+  * get-namespace-metrics
+
+  * get-namespaces
+
+* span-filter
+
+  * validate-pattern
+
+* test
+
+  * span-enrichment-group
+
+  * test

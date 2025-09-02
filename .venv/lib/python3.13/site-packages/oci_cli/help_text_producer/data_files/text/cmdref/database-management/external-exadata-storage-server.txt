@@ -1,0 +1,24 @@
+external-exadata-storage-server
+*******************************
+
+
+Description
+===========
+
+The details of the Exadata storage server.
+
+
+Available Commands
+==================
+
+* get
+
+* get-iorm-plan
+
+* get-open-alert-history
+
+* get-top-sql-cpu-activity
+
+* list
+
+* update

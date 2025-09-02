@@ -1,0 +1,14 @@
+record-analytics-aggregation-collection
+***************************************
+
+
+Description
+===========
+
+Collection of records aggregated.
+
+
+Available Commands
+==================
+
+* summarize-record-analytics

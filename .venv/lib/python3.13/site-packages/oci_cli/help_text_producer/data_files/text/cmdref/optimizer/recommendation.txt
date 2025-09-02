@@ -1,0 +1,18 @@
+recommendation
+**************
+
+
+Description
+===========
+
+The metadata associated with the recommendation.
+
+
+Available Commands
+==================
+
+* bulk-apply
+
+* get
+
+* update

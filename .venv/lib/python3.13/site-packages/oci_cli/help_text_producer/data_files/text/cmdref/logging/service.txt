@@ -1,0 +1,14 @@
+service
+*******
+
+
+Description
+===========
+
+Summary of services that are integrated with public logging.
+
+
+Available Commands
+==================
+
+* list

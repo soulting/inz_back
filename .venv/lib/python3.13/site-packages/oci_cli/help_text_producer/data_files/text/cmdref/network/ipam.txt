@@ -1,0 +1,22 @@
+ipam
+****
+
+
+Description
+===========
+
+The IP Inventory CIDR utilization details of a subnet.
+
+
+Available Commands
+==================
+
+* get-resource-ip-inventory
+
+* get-subnet-cidr-utilization
+
+* get-subnet-ip-inventory
+
+* get-vcn-overlap
+
+* list-ip-inventory

@@ -1,0 +1,22 @@
+authentication-provider
+***********************
+
+
+Description
+===========
+
+Settings for the Authentication Provider.
+
+
+Available Commands
+==================
+
+* create
+
+* delete
+
+* get
+
+* list
+
+* update

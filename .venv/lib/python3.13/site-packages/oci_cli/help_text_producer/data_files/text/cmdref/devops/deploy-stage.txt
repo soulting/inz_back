@@ -1,0 +1,98 @@
+deploy-stage
+************
+
+
+Description
+===========
+
+A single node in a pipeline. It is usually associated with some action
+on a specific set of OCI resources such as environments. For example,
+updating a Function or a Kubernetes cluster.
+
+
+Available Commands
+==================
+
+* create-compute-instance-group-blue-green-traffic-shift-stage
+
+* create-compute-instance-group-canary-approval-stage
+
+* create-compute-instance-group-canary-traffic-shift-stage
+
+* create-deploy-compute-instance-group-blue-green-stage
+
+* create-deploy-compute-instance-group-canary-stage
+
+* create-deploy-compute-instance-group-stage
+
+* create-deploy-function-stage
+
+* create-deploy-oke-blue-green-stage
+
+* create-deploy-oke-canary-stage
+
+* create-deploy-oke-stage
+
+* create-invoke-function-stage
+
+* create-load-balancer-traffic-shift-stage
+
+* create-manual-approval-stage
+
+* create-oke-blue-green-traffic-shift-stage
+
+* create-oke-canary-approval-stage
+
+* create-oke-canary-traffic-shift-stage
+
+* create-oke-helm-chart-stage
+
+* create-shell-stage
+
+* create-wait-stage
+
+* delete
+
+* get
+
+* list
+
+* update
+
+* update-compute-instance-group-blue-green-traffic-shift-stage
+
+* update-compute-instance-group-canary-approval-stage
+
+* update-compute-instance-group-canary-traffic-shift-stage
+
+* update-deploy-compute-instance-group-blue-green-stage
+
+* update-deploy-compute-instance-group-canary-stage
+
+* update-deploy-compute-instance-group-stage
+
+* update-deploy-function-stage
+
+* update-deploy-oke-blue-green-stage
+
+* update-deploy-oke-canary-stage
+
+* update-deploy-oke-stage
+
+* update-invoke-function-stage
+
+* update-load-balancer-traffic-shift-stage
+
+* update-manual-approval-stage
+
+* update-oke-blue-green-traffic-shift-stage
+
+* update-oke-canary-approval-stage
+
+* update-oke-canary-traffic-shift-stage
+
+* update-oke-helm-chart-stage
+
+* update-shell-stage
+
+* update-wait-stage

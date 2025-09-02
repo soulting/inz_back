@@ -1,0 +1,20 @@
+compute-gpu-memory-fabric
+*************************
+
+
+Description
+===========
+
+The customer facing object includes GPU memory fabric details.
+
+
+Available Commands
+==================
+
+* change-compartment
+
+* get
+
+* list
+
+* update

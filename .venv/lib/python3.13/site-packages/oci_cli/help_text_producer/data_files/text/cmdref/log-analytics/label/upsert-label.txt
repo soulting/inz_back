@@ -1,0 +1,171 @@
+"upsert-label"
+**************
+
+* Description
+
+* Usage
+
+* Required Parameters
+
+* Optional Parameters
+
+* Global Parameters
+
+* Example using required parameter
+
+
+Description
+===========
+
+Creates or updates a label that could be used to tag a log entry. You
+may optionally designate the label as a problem, and assign it a
+priority. You may also provide its related terms (aliases). To create
+a label, specify its display name. A name would be generated for the
+label. For subsequent calls to update the label, include the name
+attribute.
+
+
+Usage
+=====
+
+   oci log-analytics label upsert-label [OPTIONS]
+
+
+Required Parameters
+===================
+
+--namespace-name [text]
+
+The Logging Analytics namespace used for the request.
+
+
+Optional Parameters
+===================
+
+--aliases [complex type]
+
+The alias list.
+
+This option is a JSON list with items of type LogAnalyticsLabelAlias.
+For documentation on LogAnalyticsLabelAlias please see our API
+reference: https://docs.cloud.oracle.com/api/#/en/loganalytics/202006
+01/datatypes/LogAnalyticsLabelAlias. This is a complex type whose
+value must be valid JSON. The value can be provided as a string on the
+command line or passed in as a file using the file://path/to/file
+syntax.
+
+The "--generate-param-json-input" option can be used to generate an
+example of the JSON which must be provided. We recommend storing this
+example in a file, modifying it as needed and then passing it back in
+via the file:// syntax.
+
+--description [text]
+
+The label description.
+
+--display-name [text]
+
+The label display name.
+
+--edit-version [integer]
+
+The edit version.
+
+--from-json [text]
+
+Provide input to this command as a JSON document from a file using the
+file://path-to/file syntax.
+
+The "--generate-full-command-json-input" option can be used to
+generate a sample json file to be used with this command option. The
+key names are pre-populated and match the command option names
+(converted to camelCase format, e.g. compartment-id –> compartmentId),
+while the values of the keys need to be populated by the user before
+using the sample file as an input to this command. For any command
+option that accepts multiple values, the value of the key can be a
+JSON array.
+
+Options can still be provided on the command line. If an option exists
+in both the JSON document and the command line then the command line
+specified value will be used.
+
+For examples on usage of this option, please see our “using CLI with
+advanced JSON options” link: https://docs.cloud.oracle.com/iaas/Conte
+nt/API/SDKDocs/cliusing.htm#AdvancedJSONOptions
+
+--if-match [text]
+
+For optimistic concurrency control. In the PUT or DELETE call for a
+resource, set the *if-match* parameter to the value of the etag from a
+previous GET or POST response for that resource. The resource will be
+updated or deleted only if the etag you provide matches the resource’s
+current etag value.
+
+--impact [text]
+
+The label impact.
+
+--is-system [boolean]
+
+The system flag.  A value of false denotes a custom, or user defined
+label.  A value of true denotes a built in label.
+
+--name [text]
+
+The label name.
+
+--priority [text]
+
+The label priority. Valid values are (NONE, LOW, HIGH). NONE is
+default.
+
+Accepted values are:
+
+   HIGH, LOW, MEDIUM, NONE
+
+--recommendation [text]
+
+The label recommendation.
+
+--suggest-type [integer]
+
+suggest type
+
+--type [text]
+
+The label type. Valid values are (INFO, PROBLEM). INFO is default.
+
+Accepted values are:
+
+   INFO, PROBLEM
+
+
+Global Parameters
+=================
+
+Use "oci --help" for help on global parameters.
+
+"--auth-purpose", "--auth", "--cert-bundle", "--cli-auto-prompt", "--
+cli-rc-file", "--config-file", "--connection-timeout", "--debug", "--
+defaults-file", "--endpoint", "--generate-full-command-json-input", "
+--generate-param-json-input", "--help", "--latest-version", "--max-
+retries", "--no-retry", "--opc-client-request-id", "--opc-request-id",
+"--output", "--profile", "--proxy", "--query", "--raw-output", "--
+read-timeout", "--realm-specific-endpoint", "--region", "--release-
+info", "--request-id", "--version", "-?", "-d", "-h", "-i", "-v"
+
+
+Example using required parameter
+================================
+
+Copy the following CLI commands into a file named example.sh. Run the
+command by typing “bash example.sh” and replacing the example
+parameters with your own.
+
+Please note this sample will only work in the POSIX-compliant bash-
+like shell. You need to set up the OCI configuration and appropriate
+security policies before trying the examples.
+
+       export namespace_name=<substitute-value-of-namespace_name> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/log-analytics/label/upsert-label.html#cmdoption-namespace-name
+
+       oci log-analytics label upsert-label --namespace-name $namespace_name

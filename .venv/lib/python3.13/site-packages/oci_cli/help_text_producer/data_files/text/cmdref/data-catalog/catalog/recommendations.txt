@@ -1,0 +1,131 @@
+"recommendations"
+*****************
+
+* Description
+
+* Usage
+
+* Required Parameters
+
+* Optional Parameters
+
+* Global Parameters
+
+* Example using required parameter
+
+
+Description
+===========
+
+Returns a list of recommendations for the given object and
+recommendation type. By default, it will return inferred
+recommendations for review. The optional query param
+‘RecommendationStatus’ can be set, to return only recommendations
+having that status.
+
+
+Usage
+=====
+
+   oci data-catalog catalog recommendations [OPTIONS]
+
+
+Required Parameters
+===================
+
+--catalog-id [text]
+
+Unique catalog identifier.
+
+--recommendation-type [text]
+
+A filter used to return only recommendations of the specified type.
+
+Accepted values are:
+
+   LINK_GLOSSARY_TERM
+
+--source-object-key [text]
+
+A filter used to provide the unique identifier of the source object,
+for which a list of recommendations will be returned for review.
+
+--source-object-type [text]
+
+A filter used to provide the type of the source object, for which a
+list of recommendations will be returned for review.
+
+Accepted values are:
+
+   ATTRIBUTE, CATEGORY, DATA_ENTITY, TERM
+
+
+Optional Parameters
+===================
+
+--from-json [text]
+
+Provide input to this command as a JSON document from a file using the
+file://path-to/file syntax.
+
+The "--generate-full-command-json-input" option can be used to
+generate a sample json file to be used with this command option. The
+key names are pre-populated and match the command option names
+(converted to camelCase format, e.g. compartment-id –> compartmentId),
+while the values of the keys need to be populated by the user before
+using the sample file as an input to this command. For any command
+option that accepts multiple values, the value of the key can be a
+JSON array.
+
+Options can still be provided on the command line. If an option exists
+in both the JSON document and the command line then the command line
+specified value will be used.
+
+For examples on usage of this option, please see our “using CLI with
+advanced JSON options” link: https://docs.cloud.oracle.com/iaas/Conte
+nt/API/SDKDocs/cliusing.htm#AdvancedJSONOptions
+
+--recommendation-status [text]
+
+A filter used to return only recommendations having the requested
+status.
+
+Accepted values are:
+
+   ACCEPTED, INFERRED, REJECTED
+
+
+Global Parameters
+=================
+
+Use "oci --help" for help on global parameters.
+
+"--auth-purpose", "--auth", "--cert-bundle", "--cli-auto-prompt", "--
+cli-rc-file", "--config-file", "--connection-timeout", "--debug", "--
+defaults-file", "--endpoint", "--generate-full-command-json-input", "
+--generate-param-json-input", "--help", "--latest-version", "--max-
+retries", "--no-retry", "--opc-client-request-id", "--opc-request-id",
+"--output", "--profile", "--proxy", "--query", "--raw-output", "--
+read-timeout", "--realm-specific-endpoint", "--region", "--release-
+info", "--request-id", "--version", "-?", "-d", "-h", "-i", "-v"
+
+
+Example using required parameter
+================================
+
+Copy the following CLI commands into a file named example.sh. Run the
+command by typing “bash example.sh” and replacing the example
+parameters with your own.
+
+Please note this sample will only work in the POSIX-compliant bash-
+like shell. You need to set up the OCI configuration and appropriate
+security policies before trying the examples.
+
+       export compartment_id=<substitute-value-of-compartment_id> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/data-catalog/catalog/create.html#cmdoption-compartment-id
+       export recommendation_type=<substitute-value-of-recommendation_type> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/data-catalog/catalog/recommendations.html#cmdoption-recommendation-type
+       export source_object_key=<substitute-value-of-source_object_key> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/data-catalog/catalog/recommendations.html#cmdoption-source-object-key
+       export source_object_type=<substitute-value-of-source_object_type> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/data-catalog/catalog/recommendations.html#cmdoption-source-object-type
+
+       catalog_id=$(oci data-catalog catalog create --compartment-id $compartment_id --query data.id --raw-output)
+
+       oci data-catalog catalog recommendations --catalog-id $catalog_id --recommendation-type $recommendation_type --source-object-key $source_object_key --source-object-type $source_object_type

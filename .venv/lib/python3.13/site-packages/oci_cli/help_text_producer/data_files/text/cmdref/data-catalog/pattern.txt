@@ -1,0 +1,28 @@
+pattern
+*******
+
+
+Description
+===========
+
+A pattern is a data selector or filter which can provide a singular,
+logical entity view aggregating multiple physical data artifacts for
+ease of use.
+
+
+Available Commands
+==================
+
+* create
+
+* delete
+
+* get
+
+* list
+
+* list-derived-logical-entities
+
+* update
+
+* validate

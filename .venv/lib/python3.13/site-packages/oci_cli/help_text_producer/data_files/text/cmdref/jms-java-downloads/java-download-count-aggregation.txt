@@ -1,0 +1,14 @@
+java-download-count-aggregation
+*******************************
+
+
+Description
+===========
+
+Count of Java downloads aggregated by the specified type.
+
+
+Available Commands
+==================
+
+* request-summarized-java-download-counts

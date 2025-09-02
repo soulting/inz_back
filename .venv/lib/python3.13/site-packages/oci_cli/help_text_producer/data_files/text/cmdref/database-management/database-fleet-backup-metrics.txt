@@ -1,0 +1,14 @@
+database-fleet-backup-metrics
+*****************************
+
+
+Description
+===========
+
+The details of the backup metrics for the fleet of databases.
+
+
+Available Commands
+==================
+
+* get

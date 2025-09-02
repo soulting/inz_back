@@ -1,0 +1,14 @@
+sighting-impacted-resource-summary
+**********************************
+
+
+Description
+===========
+
+Summary of resources impacted by a sighting.
+
+
+Available Commands
+==================
+
+* list-sighting-impacted-resources

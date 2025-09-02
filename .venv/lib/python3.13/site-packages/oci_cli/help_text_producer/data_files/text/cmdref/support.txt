@@ -1,0 +1,37 @@
+support
+*******
+
+
+Description
+===========
+
+Use the Support Management CLI to manage support requests. For more
+information, see Getting Help and Contacting Support. **Note**: Before
+you can create service requests with this CLI, complete user
+registration at My Oracle Cloud Support and then ask your tenancy
+administrator to provide you authorization for the related user
+groups.
+
+
+Available Commands
+==================
+
+* incident
+
+  * create
+
+  * get
+
+  * list
+
+  * put-attachment
+
+  * update
+
+* incident-resource-type
+
+  * list
+
+* validation-response
+
+  * validate-user

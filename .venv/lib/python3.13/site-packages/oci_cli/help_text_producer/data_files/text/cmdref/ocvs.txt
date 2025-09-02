@@ -1,0 +1,87 @@
+ocvs
+****
+
+
+Description
+===========
+
+Use the Oracle Cloud VMware CLI to create SDDCs and manage ESXi hosts
+and software. For more information, see Oracle Cloud VMware Solution.
+
+
+Available Commands
+==================
+
+* cluster
+
+  * cluster
+
+    * create
+
+    * delete
+
+    * get
+
+    * update
+
+  * cluster-summary
+
+    * list-clusters
+
+* esxi-host
+
+  * create
+
+  * delete
+
+  * get
+
+  * inplace-upgrade
+
+  * list
+
+  * replace-host
+
+  * swap-billing
+
+  * update
+
+* sddc
+
+  * cancel-downgrade-hcx
+
+  * change-compartment
+
+  * create
+
+  * delete
+
+  * downgrade-hcx
+
+  * get
+
+  * list
+
+  * refresh-hcx-license-status
+
+  * retrieve-password
+
+  * update
+
+  * upgrade-hcx
+
+  * vmware-versions
+
+* work-request
+
+  * get
+
+  * list
+
+* work-request-error
+
+  * list-errors
+
+* work-request-log
+
+  * list

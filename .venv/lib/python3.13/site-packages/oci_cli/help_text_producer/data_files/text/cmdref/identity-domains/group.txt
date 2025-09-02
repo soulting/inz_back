@@ -1,0 +1,22 @@
+group
+*****
+
+
+Description
+===========
+
+The Group resource.
+
+
+Available Commands
+==================
+
+* create
+
+* delete
+
+* get
+
+* patch
+
+* put

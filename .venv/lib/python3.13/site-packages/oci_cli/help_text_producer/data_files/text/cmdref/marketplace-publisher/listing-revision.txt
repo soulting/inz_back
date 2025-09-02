@@ -1,0 +1,51 @@
+listing-revision
+****************
+
+
+Description
+===========
+
+The model for an Oracle Cloud Infrastructure Marketplace Publisher
+listing revision.
+
+
+Available Commands
+==================
+
+* cascading-delete
+
+* change-listing-revision-to-new-status
+
+* clone
+
+* create
+
+* create-listing-revision-create-lead-gen-listing-revision-details
+
+* create-listing-revision-create-oci-listing-revision-details
+
+* create-listing-revision-create-service-listing-revision-details
+
+* delete
+
+* get
+
+* get-listing-revision-icon-content
+
+* publish
+
+* publish-listing-revision-as-private
+
+* submit-listing-revision-for-review
+
+* update
+
+* update-listing-revision-icon-content
+
+* update-listing-revision-update-lead-gen-listing-revision-details
+
+* update-listing-revision-update-oci-listing-revision-details
+
+* update-listing-revision-update-service-listing-revision-details
+
+* withdraw

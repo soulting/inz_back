@@ -1,0 +1,16 @@
+configuration
+*************
+
+
+Description
+===========
+
+The configuration for service.
+
+
+Available Commands
+==================
+
+* get
+
+* update

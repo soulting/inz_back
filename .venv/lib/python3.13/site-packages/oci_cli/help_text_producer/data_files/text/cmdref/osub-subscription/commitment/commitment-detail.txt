@@ -1,0 +1,14 @@
+commitment-detail
+*****************
+
+
+Description
+===========
+
+Subscribed Service commitment summary
+
+
+Available Commands
+==================
+
+* get-commitment

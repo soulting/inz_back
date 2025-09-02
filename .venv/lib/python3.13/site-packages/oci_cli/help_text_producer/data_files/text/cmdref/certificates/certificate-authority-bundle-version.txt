@@ -1,0 +1,16 @@
+certificate-authority-bundle-version
+************************************
+
+
+Description
+===========
+
+The properties of a version of a bundle for a certificate authority
+(CA). Certificate authority bundle version summary objects do not
+include the actual contents of the certificate.
+
+
+Available Commands
+==================
+
+* list

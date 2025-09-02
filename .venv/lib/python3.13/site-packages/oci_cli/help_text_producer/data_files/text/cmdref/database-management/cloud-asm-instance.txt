@@ -1,0 +1,18 @@
+cloud-asm-instance
+******************
+
+
+Description
+===========
+
+The details of a cloud ASM instance.
+
+
+Available Commands
+==================
+
+* get
+
+* list
+
+* update

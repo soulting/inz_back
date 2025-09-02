@@ -1,0 +1,14 @@
+sql-collection-analytics
+************************
+
+
+Description
+===========
+
+SQL collection analytics collection.
+
+
+Available Commands
+==================
+
+* list

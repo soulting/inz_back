@@ -1,0 +1,22 @@
+task-definition
+***************
+
+
+Description
+===========
+
+Data Sync TaskDefinition CRUD operations.
+
+
+Available Commands
+==================
+
+* create
+
+* delete
+
+* get
+
+* list
+
+* update

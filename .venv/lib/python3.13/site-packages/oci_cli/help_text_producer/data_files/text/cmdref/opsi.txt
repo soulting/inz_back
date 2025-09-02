@@ -1,0 +1,508 @@
+opsi
+****
+
+
+Description
+===========
+
+Use the Ops Insights CLI to perform data extraction operations to
+obtain database resource utilization, performance statistics, and
+reference information. For more information, see About Oracle Cloud
+Infrastructure Ops Insights.
+
+
+Available Commands
+==================
+
+* awr-hub-objects
+
+  * delete
+
+  * get
+
+  * head
+
+  * list
+
+  * put
+
+* awr-hub-sources
+
+  * change
+
+  * create
+
+  * delete
+
+  * disable
+
+  * enable
+
+  * get
+
+  * list
+
+  * update
+
+* awr-hubs
+
+  * create
+
+  * delete
+
+  * get
+
+  * get-awr-database-report
+
+  * get-awr-database-sql-report
+
+  * get-awr-report
+
+  * list
+
+  * list-awr-database-snapshots
+
+  * list-awr-databases
+
+  * list-awr-snapshots
+
+  * summarize-awr-database-cpu-usages
+
+  * summarize-awr-database-metrics
+
+  * summarize-awr-database-parameter-changes
+
+  * summarize-awr-database-parameters
+
+  * summarize-awr-database-snapshot-ranges
+
+  * summarize-awr-database-sysstats
+
+  * summarize-awr-database-top-wait-events
+
+  * summarize-awr-database-wait-event-buckets
+
+  * summarize-awr-database-wait-events
+
+  * summarize-awr-sources-summaries
+
+  * update
+
+* database-insights
+
+  * change
+
+  * change-autonomous-database-insight-advanced-features-credential-
+    by-iam
+
+  * change-autonomous-database-insight-advanced-features-credential-
+    by-vault
+
+  * change-external-mysql
+
+  * change-macs-managed-autonomous-database-insight-connection-
+    credential-by-named-credentials
+
+  * change-macs-managed-autonomous-database-insight-connection-
+    credential-by-vault
+
+  * change-macs-managed-autonomous-database-insight-connection-
+    credentials-by-source
+
+  * change-macs-managed-cloud-database-insight-connection-credential-
+    by-iam
+
+  * change-macs-managed-cloud-database-insight-connection-credential-
+    by-named-credentials
+
+  * change-macs-managed-cloud-database-insight-connection-credential-
+    by-vault
+
+  * change-pe-comanaged-database-detail
+
+  * create-autonomous-database
+
+  * create-em-external-db
+
+  * create-external-mysql-database-insight
+
+  * create-macs-managed-autonomous-database-insight
+
+  * create-macs-managed-cloud-database-insight
+
+  * create-mds-my-sql-database
+
+  * create-pe-comanged-database
+
+  * delete
+
+  * disable
+
+  * disable-autonomous-database-insight-advanced-features
+
+  * enable-autonomous-database
+
+  * enable-autonomous-database-insight-advanced-features-credential-
+    by-iam
+
+  * enable-autonomous-database-insight-advanced-features-credential-
+    by-vault
+
+  * enable-em-external-db
+
+  * enable-external-mysql-database-insight
+
+  * enable-macs-managed-autonomous-database-insight
+
+  * enable-macs-managed-cloud-database-insight
+
+  * enable-mds-my-sql-database
+
+  * enable-pe-comanaged-database
+
+  * get
+
+  * ingest-addm-reports
+
+  * ingest-database-configuration
+
+  * ingest-my-sql-sql-stats
+
+  * ingest-my-sql-sql-text
+
+  * ingest-sql-bucket
+
+  * ingest-sql-plan-lines
+
+  * ingest-sql-stats
+
+  * ingest-sql-text
+
+  * list
+
+  * list-addm-db-finding-categories
+
+  * list-addm-db-findings-time-series
+
+  * list-addm-db-parameter-categories
+
+  * list-addm-db-recommendation-categories
+
+  * list-addm-db-recommendations-time-series
+
+  * list-addm-dbs
+
+  * list-database-configurations
+
+  * list-sql-plans
+
+  * list-sql-searches
+
+  * list-sql-texts
+
+  * summarize-addm-db-findings
+
+  * summarize-addm-db-parameter-changes
+
+  * summarize-addm-db-parameters
+
+  * summarize-addm-db-recommendations
+
+  * summarize-addm-db-schema-objects
+
+  * summarize-addm-db-sql-statements
+
+  * summarize-database-insight-resource-capacity-trend
+
+  * summarize-database-insight-resource-forecast-trend
+
+  * summarize-database-insight-resource-statistics
+
+  * summarize-database-insight-resource-usage
+
+  * summarize-database-insight-resource-usage-trend
+
+  * summarize-database-insight-resource-utilization-insight
+
+  * summarize-database-insight-tablespace-usage-trend
+
+  * summarize-sql-insights
+
+  * summarize-sql-plan-insights
+
+  * summarize-sql-response-time-distributions
+
+  * summarize-sql-statistics
+
+  * summarize-sql-statistics-time-series
+
+  * summarize-sql-statistics-time-series-by-plan
+
+  * synchronize-autonomous-database-to-exadata
+
+  * test-macs-managed-autonomous-database-insight-connection-
+    credential-by-named-credentials
+
+  * test-macs-managed-cloud-database-insight-connection-credential-by-
+    iam
+
+  * test-macs-managed-cloud-database-insight-connection-credential-by-
+    vault
+
+  * update-autonomous-db
+
+  * update-em-external-db
+
+  * update-external-mysql-database-insight
+
+  * update-macs-external-db
+
+  * update-macs-managed-autonomous-database-insight
+
+  * update-macs-managed-cloud-database-insight
+
+  * update-mds-my-sql-database
+
+  * update-pe-comanaged-database
+
+* enterprise-manager-bridges
+
+  * change
+
+  * create
+
+  * delete
+
+  * get
+
+  * list
+
+  * list-importable-enterprise-manager-entities
+
+  * update
+
+* exadata-insights
+
+  * add-em-external-exadata-members
+
+  * add-macs-managed-cloud-exadata-insight-members
+
+  * add-pe-comanaged-exadata-members
+
+  * change
+
+  * create-em-external-exadata
+
+  * create-macs-managed-cloud-exadata-insight
+
+  * create-pe-comanaged-exadata
+
+  * delete
+
+  * disable
+
+  * enable-em-external-exadata
+
+  * enable-macs-managed-cloud-exadata-insight
+
+  * enable-pe-comanaged-exadata
+
+  * get
+
+  * list
+
+  * list-exadata-configurations
+
+  * summarize-exadata-insight-resource-capacity-trend
+
+  * summarize-exadata-insight-resource-capacity-trend-aggregated
+
+  * summarize-exadata-insight-resource-forecast-trend
+
+  * summarize-exadata-insight-resource-forecast-trend-aggregated
+
+  * summarize-exadata-insight-resource-statistics
+
+  * summarize-exadata-insight-resource-usage
+
+  * summarize-exadata-insight-resource-usage-aggregated
+
+  * summarize-exadata-insight-resource-utilization-insight
+
+  * summarize-exadata-members
+
+  * update-em-external-exadata
+
+  * update-macs-managed-cloud-exadata-insight
+
+  * update-pe-comanaged-exadata
+
+* host-insights
+
+  * change
+
+  * create-em-external-host
+
+  * create-macs-cloud-host
+
+  * create-macs-external-host
+
+  * delete
+
+  * disable
+
+  * enable-em-external-host
+
+  * enable-macs-cloud-host
+
+  * enable-macs-external-host
+
+  * get
+
+  * ingest-host-configuration
+
+  * ingest-host-metrics
+
+  * list
+
+  * list-host-configurations
+
+  * list-hosted-entities
+
+  * list-importable-agent-entities
+
+  * list-macs-cloud-hosts
+
+  * summarize-disk-statistics
+
+  * summarize-host-insight-resource-capacity-trend
+
+  * summarize-host-insight-resource-forecast-trend
+
+  * summarize-host-insight-resource-statistics
+
+  * summarize-host-insight-resource-usage
+
+  * summarize-host-insight-resource-usage-trend
+
+  * summarize-host-insight-resource-utilization-insight
+
+  * summarize-host-recommendation
+
+  * summarize-io-usage-trend
+
+  * summarize-network-usage-trend
+
+  * summarize-storage-usage-trend
+
+  * summarize-top-processes-usage-trend
+
+  * update-em-external-host
+
+  * update-host-insight-update-pe-comanaged-host-insight-details
+
+  * update-macs-cloud-host
+
+  * update-macs-external-host
+
+  * update-macs-managed-database-host-insight
+
+* news-reports
+
+  * change
+
+  * create
+
+  * delete
+
+  * get
+
+  * list
+
+  * update
+
+* operations-insights-warehouse-users
+
+  * create
+
+  * delete
+
+  * get
+
+  * list
+
+  * update
+
+* operations-insights-warehouses
+
+  * change
+
+  * create
+
+  * delete
+
+  * download-warehouse-wallet
+
+  * get
+
+  * list
+
+  * rotate-warehouse-wallet
+
+  * summarize-operations-insights-warehouse-resource-usage
+
+  * update
+
+* opsi-configurations
+
+  * change
+
+  * create-opsi-ux-configuration-details
+
+  * delete
+
+  * get
+
+  * list
+
+  * summarize-configuration-items
+
+  * update-opsi-ux-configuration-details
+
+* opsi-data-objects
+
+  * get
+
+  * list
+
+  * query-data-standard-query
+
+  * query-data-templatized-query
+
+* opsi-private-endpoint
+
+  * change-compartment
+
+  * create
+
+  * delete
+
+  * get
+
+  * list
+
+  * update
+
+* opsi-warehouse-data-objects
+
+  * list
+
+  * query-warehouse-data-standard-query
+
+  * query-warehouse-data-templatized-query
+
+* work-requests
+
+  * get
+
+  * list

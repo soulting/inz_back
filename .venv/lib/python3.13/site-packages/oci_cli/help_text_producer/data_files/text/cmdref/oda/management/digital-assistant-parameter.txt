@@ -1,0 +1,20 @@
+digital-assistant-parameter
+***************************
+
+
+Description
+===========
+
+Metadata for a Digital Assistant Parameter.
+
+
+Available Commands
+==================
+
+* configure
+
+* get
+
+* list
+
+* update

@@ -1,0 +1,28 @@
+migration-asset
+***************
+
+
+Description
+===========
+
+Description of the migration asset.
+
+
+Available Commands
+==================
+
+* create
+
+* delete
+
+* get
+
+* get-replication-progress
+
+* list
+
+* refresh
+
+* start_replication
+
+* update

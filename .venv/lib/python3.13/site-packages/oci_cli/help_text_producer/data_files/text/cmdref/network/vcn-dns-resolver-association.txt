@@ -1,0 +1,14 @@
+vcn-dns-resolver-association
+****************************
+
+
+Description
+===========
+
+The information about the VCN and the DNS resolver in the association.
+
+
+Available Commands
+==================
+
+* get

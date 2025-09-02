@@ -1,0 +1,15 @@
+composite-state
+***************
+
+
+Description
+===========
+
+The composite state object provides information on the state of a task
+or schedule.
+
+
+Available Commands
+==================
+
+* get

@@ -1,0 +1,17 @@
+user-status
+***********
+
+
+Description
+===========
+
+An announcement’s status regarding whether it has been acknowledged by
+a user.
+
+
+Available Commands
+==================
+
+* get
+
+* update

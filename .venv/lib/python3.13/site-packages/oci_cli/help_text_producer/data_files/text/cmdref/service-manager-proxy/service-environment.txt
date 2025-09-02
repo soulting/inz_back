@@ -1,0 +1,18 @@
+service-environment
+*******************
+
+
+Description
+===========
+
+Detailed information about a service environment.
+
+**Note:** Service URL formats may vary from the provided example.
+
+
+Available Commands
+==================
+
+* get
+
+* list

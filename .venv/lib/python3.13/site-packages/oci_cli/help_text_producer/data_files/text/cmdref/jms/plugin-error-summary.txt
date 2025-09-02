@@ -1,0 +1,14 @@
+plugin-error-summary
+********************
+
+
+Description
+===========
+
+Entity that represents an error identified in a plugin.
+
+
+Available Commands
+==================
+
+* list-plugin-errors

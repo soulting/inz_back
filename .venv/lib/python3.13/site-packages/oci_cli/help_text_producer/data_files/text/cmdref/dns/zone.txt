@@ -1,0 +1,37 @@
+zone
+****
+
+
+Description
+===========
+
+A DNS zone.
+
+**Warning:** Oracle recommends that you avoid using any confidential
+information when you supply string values using the API.
+
+
+Available Commands
+==================
+
+* change-compartment
+
+* create
+
+* create-zone-from-zone-file
+
+* delete
+
+* get
+
+* get-zone-content
+
+* list
+
+* migrate-from-dynect
+
+* promote-zone-dnssec-key-version
+
+* stage-zone-dnssec-key-version
+
+* update

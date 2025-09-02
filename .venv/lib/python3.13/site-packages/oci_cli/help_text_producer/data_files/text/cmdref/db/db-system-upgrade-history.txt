@@ -1,0 +1,19 @@
+db-system-upgrade-history
+*************************
+
+
+Description
+===========
+
+The record of an OS upgrade action on a DB system.
+
+**Warning:** Oracle recommends that you avoid using any confidential
+information when you supply string values using the API.
+
+
+Available Commands
+==================
+
+* get
+
+* list

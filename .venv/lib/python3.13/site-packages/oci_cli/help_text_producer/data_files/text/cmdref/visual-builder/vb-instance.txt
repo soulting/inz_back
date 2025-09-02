@@ -1,0 +1,38 @@
+vb-instance
+***********
+
+
+Description
+===========
+
+Description of Vb Instance.
+
+
+Available Commands
+==================
+
+* change-compartment
+
+* create
+
+* create-vb-instance-private-endpoint-details
+
+* create-vb-instance-public-endpoint-details
+
+* delete
+
+* get
+
+* list
+
+* reconfigure-private-endpoint
+
+* start
+
+* stop
+
+* update
+
+* update-vb-instance-update-private-endpoint-details
+
+* update-vb-instance-update-public-endpoint-details

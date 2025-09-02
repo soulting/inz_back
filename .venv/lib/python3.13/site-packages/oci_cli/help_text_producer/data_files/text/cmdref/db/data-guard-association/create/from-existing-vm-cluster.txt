@@ -1,0 +1,193 @@
+"from-existing-vm-cluster"
+**************************
+
+* Description
+
+* Usage
+
+* Required Parameters
+
+* Optional Parameters
+
+* Global Parameters
+
+* Example using required parameter
+
+
+Description
+===========
+
+Creates a new Data Guard association.  A Data Guard association
+represents the replication relationship between the specified database
+and a peer database. For more information, see Using Oracle Data
+Guard.
+
+All Oracle Cloud Infrastructure resources, including Data Guard
+associations, get an Oracle-assigned, unique ID called an Oracle Cloud
+Identifier (OCID). When you create a resource, you can find its OCID
+in the response. You can also retrieve a resource’s OCID by using a
+List API operation on that resource type, or by viewing the resource
+in the Console. For more information, see Resource Identifiers.
+
+
+Usage
+=====
+
+   oci db data-guard-association create from-existing-vm-cluster [OPTIONS]
+
+
+Required Parameters
+===================
+
+--database-admin-password [text]
+
+A strong password for the *SYS*, *SYSTEM*, and *PDB Admin* users to
+apply during standby creation.
+
+The password must contain no fewer than nine characters and include:
+
+* At least two uppercase characters.
+
+* At least two lowercase characters.
+
+* At least two numeric characters.
+
+* At least two special characters. Valid special characters include
+  “_”, “#”, and “-” only.
+
+**The password MUST be the same as the primary admin password.**
+
+--database-id [text]
+
+The database OCID.
+
+--peer-vm-cluster-id [text]
+
+The OCID of the VM Cluster in which to create the standby database.
+You must supply this value if creationType is *ExistingVmCluster*.
+
+--protection-mode [text]
+
+The protection mode to set up between the primary and standby
+databases. For more information, see Oracle Data Guard Protection
+Modes in the Oracle Data Guard documentation.
+
+**IMPORTANT** - The only protection mode currently supported by the
+Database service is MAXIMUM_PERFORMANCE.
+
+Accepted values are:
+
+   MAXIMUM_AVAILABILITY, MAXIMUM_PERFORMANCE, MAXIMUM_PROTECTION
+
+--transport-type [text]
+
+The redo transport type to use for this Data Guard association.  Valid
+values depend on the specified *protectionMode*:
+
+* MAXIMUM_AVAILABILITY - SYNC or FASTSYNC * MAXIMUM_PERFORMANCE -
+  ASYNC * MAXIMUM_PROTECTION - SYNC
+
+For more information, see Redo Transport Services in the Oracle Data
+Guard documentation.
+
+**IMPORTANT** - The only transport type currently supported by the
+Database service is ASYNC.
+
+Accepted values are:
+
+   ASYNC, FASTSYNC, SYNC
+
+
+Optional Parameters
+===================
+
+--database-software-image-id [text]
+
+The database software image OCID
+
+--from-json [text]
+
+Provide input to this command as a JSON document from a file using the
+file://path-to/file syntax.
+
+The "--generate-full-command-json-input" option can be used to
+generate a sample json file to be used with this command option. The
+key names are pre-populated and match the command option names
+(converted to camelCase format, e.g. compartment-id –> compartmentId),
+while the values of the keys need to be populated by the user before
+using the sample file as an input to this command. For any command
+option that accepts multiple values, the value of the key can be a
+JSON array.
+
+Options can still be provided on the command line. If an option exists
+in both the JSON document and the command line then the command line
+specified value will be used.
+
+For examples on usage of this option, please see our “using CLI with
+advanced JSON options” link: https://docs.cloud.oracle.com/iaas/Conte
+nt/API/SDKDocs/cliusing.htm#AdvancedJSONOptions
+
+--hsm-password [text]
+
+Provide the HSM password as you would in RDBMS for External HSM.
+
+--is-active-data-guard-enabled [boolean]
+
+True if active Data Guard is enabled.
+
+--is-active-data-guard-enabled [boolean]
+
+True if active Data Guard is enabled.
+
+--peer-db-home-id [text]
+
+The OCID of the DB Home to create the standby database on.
+
+--peer-db-unique-name [text]
+
+Specifies the *DB_UNIQUE_NAME* of the peer database to be created.
+
+--peer-sid-prefix [text]
+
+Specifies a prefix for the *Oracle SID* of the database to be created.
+
+
+Global Parameters
+=================
+
+Use "oci --help" for help on global parameters.
+
+"--auth-purpose", "--auth", "--cert-bundle", "--cli-auto-prompt", "--
+cli-rc-file", "--config-file", "--connection-timeout", "--debug", "--
+defaults-file", "--endpoint", "--generate-full-command-json-input", "
+--generate-param-json-input", "--help", "--latest-version", "--max-
+retries", "--no-retry", "--opc-client-request-id", "--opc-request-id",
+"--output", "--profile", "--proxy", "--query", "--raw-output", "--
+read-timeout", "--realm-specific-endpoint", "--region", "--release-
+info", "--request-id", "--version", "-?", "-d", "-h", "-i", "-v"
+
+
+Example using required parameter
+================================
+
+Copy the following CLI commands into a file named example.sh. Run the
+command by typing “bash example.sh” and replacing the example
+parameters with your own.
+
+Please note this sample will only work in the POSIX-compliant bash-
+like shell. You need to set up the OCI configuration and appropriate
+security policies before trying the examples.
+
+       export db_system_id=<substitute-value-of-db_system_id> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/db/db-home/create.html#cmdoption-db-system-id
+       export admin_password=<substitute-value-of-admin_password> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/db/database/create.html#cmdoption-admin-password
+       export db_name=<substitute-value-of-db_name> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/db/database/create.html#cmdoption-db-name
+       export database_admin_password=<substitute-value-of-database_admin_password> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/db/data-guard-association/create/from-existing-vm-cluster.html#cmdoption-database-admin-password
+       export peer_vm_cluster_id=<substitute-value-of-peer_vm_cluster_id> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/db/data-guard-association/create/from-existing-vm-cluster.html#cmdoption-peer-vm-cluster-id
+       export protection_mode=<substitute-value-of-protection_mode> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/db/data-guard-association/create/from-existing-vm-cluster.html#cmdoption-protection-mode
+       export transport_type=<substitute-value-of-transport_type> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/db/data-guard-association/create/from-existing-vm-cluster.html#cmdoption-transport-type
+
+       db_home_id=$(oci db db-home create --db-system-id $db_system_id --query data.id --raw-output)
+
+       database_id=$(oci db database create --admin-password $admin_password --db-home-id $db_home_id --db-name $db_name --db-system-id $db_system_id --query data.id --raw-output)
+
+       oci db data-guard-association create from-existing-vm-cluster --database-admin-password $database_admin_password --database-id $database_id --peer-vm-cluster-id $peer_vm_cluster_id --protection-mode $protection_mode --transport-type $transport_type

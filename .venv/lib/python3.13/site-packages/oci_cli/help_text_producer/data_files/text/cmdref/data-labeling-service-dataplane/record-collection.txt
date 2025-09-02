@@ -1,0 +1,15 @@
+record-collection
+*****************
+
+
+Description
+===========
+
+The results of a record search. It contains RecordSummary items and
+other data.
+
+
+Available Commands
+==================
+
+* list-records

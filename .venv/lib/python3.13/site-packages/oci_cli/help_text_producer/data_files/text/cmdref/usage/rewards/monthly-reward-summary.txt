@@ -1,0 +1,15 @@
+monthly-reward-summary
+**********************
+
+
+Description
+===========
+
+Object describing the monthly rewards summary for the requested
+subscription ID.
+
+
+Available Commands
+==================
+
+* list-rewards

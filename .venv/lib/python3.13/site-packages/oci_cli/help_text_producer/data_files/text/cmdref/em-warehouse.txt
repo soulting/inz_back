@@ -1,0 +1,52 @@
+em-warehouse
+************
+
+
+Description
+===========
+
+Use the EM Warehouse CLI to manage EM Warehouse data collection.
+
+
+Available Commands
+==================
+
+* em-warehouse
+
+  * change-compartment
+
+  * create
+
+  * delete
+
+  * get
+
+  * update
+
+* em-warehouse-collection
+
+  * list-em-warehouses
+
+* etl-run-collection
+
+  * list-etl-runs
+
+* resource-usage
+
+  * get-em-warehouse
+
+* work-request
+
+  * cancel
+
+  * get
+
+  * list
+
+* work-request-error
+
+  * list
+
+* work-request-log-entry
+
+  * list-work-request-logs

@@ -1,0 +1,40 @@
+pipeline
+********
+
+
+Description
+===========
+
+Represents the metadata details of a pipeline in the same compartment.
+
+
+Available Commands
+==================
+
+* change-compartment
+
+* collect-diagnostic
+
+* create-zero-etl-pipeline
+
+* delete
+
+* get
+
+* list
+
+* list-initialization-steps
+
+* list-running-processes
+
+* list-schema-tables
+
+* list-schemas
+
+* start
+
+* stop
+
+* test-connection
+
+* update-zero-etl-pipeline

@@ -1,0 +1,28 @@
+runbook
+*******
+
+
+Description
+===========
+
+Runbook definition. Runbooks allow you to capture procedural tasks for
+handling a workflow. Only active versions of runbook will be available
+for executions.
+
+
+Available Commands
+==================
+
+* change-compartment
+
+* create
+
+* delete
+
+* get
+
+* publish
+
+* set-default
+
+* update

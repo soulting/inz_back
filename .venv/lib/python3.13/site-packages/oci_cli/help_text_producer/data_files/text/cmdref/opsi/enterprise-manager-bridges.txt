@@ -1,0 +1,27 @@
+enterprise-manager-bridges
+**************************
+
+
+Description
+===========
+
+Logical grouping used for Ops Insights Enterprise Manager Bridge
+operations.
+
+
+Available Commands
+==================
+
+* change
+
+* create
+
+* delete
+
+* get
+
+* list
+
+* list-importable-enterprise-manager-entities
+
+* update

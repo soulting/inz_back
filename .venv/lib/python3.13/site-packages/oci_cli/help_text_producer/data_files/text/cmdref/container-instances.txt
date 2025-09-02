@@ -1,0 +1,54 @@
+container-instances
+*******************
+
+
+Description
+===========
+
+A description of the Container Instance CLI
+
+
+Available Commands
+==================
+
+* container
+
+  * get
+
+  * list
+
+  * retrieve-logs
+
+  * update
+
+* container-instance
+
+  * change-compartment
+
+  * create
+
+  * delete
+
+  * get
+
+  * list
+
+  * list-shapes
+
+  * restart
+
+  * start
+
+  * stop
+
+  * update
+
+* work-request
+
+  * get
+
+  * list
+
+  * list-errors
+
+  * list-logs

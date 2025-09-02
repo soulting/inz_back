@@ -1,0 +1,139 @@
+"delete"
+********
+
+* Description
+
+* Usage
+
+* Required Parameters
+
+* Optional Parameters
+
+* Global Parameters
+
+* Example using required parameter
+
+
+Description
+===========
+
+Deletes all records at the specified zone and domain.
+
+When the zone name is provided as a path parameter and *PRIVATE* is
+used for the scope query parameter then the viewId query parameter is
+required.
+
+
+Usage
+=====
+
+   oci dns record domain delete [OPTIONS]
+
+
+Required Parameters
+===================
+
+--domain [text]
+
+The target fully-qualified domain name (FQDN) within the target zone.
+
+--zone-name-or-id [text]
+
+The name or OCID of the target zone.
+
+
+Optional Parameters
+===================
+
+--compartment-id, -c [text]
+
+The OCID of the compartment the zone belongs to.
+
+This parameter is deprecated and should be omitted.
+
+--force
+
+Perform deletion without prompting for confirmation.
+
+--from-json [text]
+
+Provide input to this command as a JSON document from a file using the
+file://path-to/file syntax.
+
+The "--generate-full-command-json-input" option can be used to
+generate a sample json file to be used with this command option. The
+key names are pre-populated and match the command option names
+(converted to camelCase format, e.g. compartment-id –> compartmentId),
+while the values of the keys need to be populated by the user before
+using the sample file as an input to this command. For any command
+option that accepts multiple values, the value of the key can be a
+JSON array.
+
+Options can still be provided on the command line. If an option exists
+in both the JSON document and the command line then the command line
+specified value will be used.
+
+For examples on usage of this option, please see our “using CLI with
+advanced JSON options” link: https://docs.cloud.oracle.com/iaas/Conte
+nt/API/SDKDocs/cliusing.htm#AdvancedJSONOptions
+
+--if-match [text]
+
+The *If-Match* header field makes the request method conditional on
+the existence of at least one current representation of the target
+resource, when the field-value is ***, or having a current
+representation of the target resource that has an entity-tag matching
+a member of the list of entity-tags provided in the field-value.
+
+--if-unmodified-since [text]
+
+The *If-Unmodified-Since* header field makes the request method
+conditional on the selected representation’s last modification date
+being earlier than or equal to the date provided in the field-value.
+This field accomplishes the same purpose as If-Match for cases where
+the user agent does not have an entity-tag for the representation.
+
+--scope [text]
+
+Specifies to operate only on resources that have a matching DNS scope.
+
+Accepted values are:
+
+   GLOBAL, PRIVATE
+
+--view-id [text]
+
+The OCID of the view the zone is associated with. Required when
+accessing a private zone by name.
+
+
+Global Parameters
+=================
+
+Use "oci --help" for help on global parameters.
+
+"--auth-purpose", "--auth", "--cert-bundle", "--cli-auto-prompt", "--
+cli-rc-file", "--config-file", "--connection-timeout", "--debug", "--
+defaults-file", "--endpoint", "--generate-full-command-json-input", "
+--generate-param-json-input", "--help", "--latest-version", "--max-
+retries", "--no-retry", "--opc-client-request-id", "--opc-request-id",
+"--output", "--profile", "--proxy", "--query", "--raw-output", "--
+read-timeout", "--realm-specific-endpoint", "--region", "--release-
+info", "--request-id", "--version", "-?", "-d", "-h", "-i", "-v"
+
+
+Example using required parameter
+================================
+
+Copy the following CLI commands into a file named example.sh. Run the
+command by typing “bash example.sh” and replacing the example
+parameters with your own.
+
+Please note this sample will only work in the POSIX-compliant bash-
+like shell. You need to set up the OCI configuration and appropriate
+security policies before trying the examples.
+
+       export domain=<substitute-value-of-domain> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/dns/record/domain/delete.html#cmdoption-domain
+       export zone_name_or_id=<substitute-value-of-zone_name_or_id> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/dns/record/domain/delete.html#cmdoption-zone-name-or-id
+
+       oci dns record domain delete --domain $domain --zone-name-or-id $zone_name_or_id

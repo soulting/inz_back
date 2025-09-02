@@ -1,0 +1,16 @@
+protected-branch
+****************
+
+
+Description
+===========
+
+Holds information used to restrict certain actions on branches
+
+
+Available Commands
+==================
+
+* create-or-update
+
+* delete

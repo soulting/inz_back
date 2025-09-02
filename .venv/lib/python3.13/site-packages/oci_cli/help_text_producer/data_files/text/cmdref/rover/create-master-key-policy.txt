@@ -1,0 +1,77 @@
+"create-master-key-policy"
+**************************
+
+* Description
+
+* Usage
+
+* Required Parameters
+
+* Optional Parameters
+
+* Global Parameters
+
+* Example using required parameter
+
+
+Description
+===========
+
+Create Policy for Master key
+
+
+Usage
+=====
+
+   oci rover create-master-key-policy [OPTIONS]
+
+
+Required Parameters
+===================
+
+--master-key-id [text]
+
+Unique RoverStandalone Cluster identifier
+
+
+Optional Parameters
+===================
+
+--policy-compartment-id [text]
+
+Compartment ID where the policy should be created
+
+--policy-name [text]
+
+Display name for the policy to be created
+
+
+Global Parameters
+=================
+
+Use "oci --help" for help on global parameters.
+
+"--auth-purpose", "--auth", "--cert-bundle", "--cli-auto-prompt", "--
+cli-rc-file", "--config-file", "--connection-timeout", "--debug", "--
+defaults-file", "--endpoint", "--generate-full-command-json-input", "
+--generate-param-json-input", "--help", "--latest-version", "--max-
+retries", "--no-retry", "--opc-client-request-id", "--opc-request-id",
+"--output", "--profile", "--proxy", "--query", "--raw-output", "--
+read-timeout", "--realm-specific-endpoint", "--region", "--release-
+info", "--request-id", "--version", "-?", "-d", "-h", "-i", "-v"
+
+
+Example using required parameter
+================================
+
+Copy the following CLI commands into a file named example.sh. Run the
+command by typing “bash example.sh” and replacing the example
+parameters with your own.
+
+Please note this sample will only work in the POSIX-compliant bash-
+like shell. You need to set up the OCI configuration and appropriate
+security policies before trying the examples.
+
+       export master_key_id=<substitute-value-of-master_key_id> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/rover/create-master-key-policy.html#cmdoption-master-key-id
+
+       oci rover create-master-key-policy --master-key-id $master_key_id

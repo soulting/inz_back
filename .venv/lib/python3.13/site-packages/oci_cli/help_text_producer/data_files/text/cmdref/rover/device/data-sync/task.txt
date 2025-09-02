@@ -1,0 +1,20 @@
+task
+****
+
+
+Description
+===========
+
+Data Sync Task Execution.
+
+
+Available Commands
+==================
+
+* cancel
+
+* get
+
+* list
+
+* start

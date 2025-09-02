@@ -1,0 +1,55 @@
+deployment
+**********
+
+
+Description
+===========
+
+A container for your OCI GoldenGate resources, such as the OCI
+GoldenGate deployment console.
+
+
+Available Commands
+==================
+
+* add-deployment-local-peer
+
+* add-lock
+
+* change-compartment
+
+* collect-diagnostics
+
+* create
+
+* delete
+
+* export-wallet
+
+* generate-library-url
+
+* generate-log-reader-component-library-url
+
+* get
+
+* import-wallet
+
+* list
+
+* remove-deployment-local-peer
+
+* remove-lock
+
+* start
+
+* stop
+
+* switchover-deployment-peer
+
+* update
+
+* upgrade
+
+* upgrade-to
+
+* wallet-exists

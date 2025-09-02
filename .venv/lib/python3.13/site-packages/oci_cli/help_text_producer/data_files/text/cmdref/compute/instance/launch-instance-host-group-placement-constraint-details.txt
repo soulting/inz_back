@@ -1,0 +1,567 @@
+"launch-instance-host-group-placement-constraint-details"
+*********************************************************
+
+* Description
+
+* Usage
+
+* Required Parameters
+
+* Optional Parameters
+
+* Global Parameters
+
+* Example using required parameter
+
+
+Description
+===========
+
+Creates a new instance in the specified compartment and the specified
+availability domain. For general information about instances, see
+Overview of the Compute Service.
+
+For information about access control and compartments, see Overview of
+the IAM Service.
+
+For information about availability domains, see Regions and
+Availability Domains. To get a list of availability domains, use the
+*ListAvailabilityDomains* operation in the Identity and Access
+Management Service API.
+
+All Oracle Cloud Infrastructure resources, including instances, get an
+Oracle-assigned, unique ID called an Oracle Cloud Identifier (OCID).
+When you create a resource, you can find its OCID in the response. You
+can also retrieve a resource’s OCID by using a List API operation on
+that resource type, or by viewing the resource in the Console.
+
+To launch an instance using an image or a boot volume use the
+*sourceDetails* parameter in LaunchInstanceDetails.
+
+When you launch an instance, it is automatically attached to a virtual
+network interface card (VNIC), called the *primary VNIC*. The VNIC has
+a private IP address from the subnet’s CIDR. You can either assign a
+private IP address of your choice or let Oracle automatically assign
+one. You can choose whether the instance has a public IP address. To
+retrieve the addresses, use the ListVnicAttachments operation to get
+the VNIC ID for the instance, and then call GetVnic with the VNIC ID.
+
+You can later add secondary VNICs to an instance. For more
+information, see Virtual Network Interface Cards (VNICs).
+
+To launch an instance from a Marketplace image listing, you must
+provide the image ID of the listing resource version that you want,
+but you also must subscribe to the listing before you try to launch
+the instance. To subscribe to the listing, use the
+GetAppCatalogListingAgreements operation to get the signature for the
+terms of use agreement for the desired listing resource version. Then,
+call CreateAppCatalogSubscription with the signature. To get the image
+ID for the LaunchInstance operation, call
+GetAppCatalogListingResourceVersion.
+
+When launching an instance, you may provide the *securityAttributes*
+parameter in LaunchInstanceDetails to manage security attributes via
+the instance, or in the embedded CreateVnicDetails to manage security
+attributes via the VNIC directly, but not both.  Providing
+*securityAttributes* in both locations will return a 400 Bad Request
+response.
+
+To determine whether capacity is available for a specific shape before
+you create an instance, use the CreateComputeCapacityReport operation.
+
+
+Usage
+=====
+
+   oci compute instance launch-instance-host-group-placement-constraint-details [OPTIONS]
+
+
+Required Parameters
+===================
+
+--availability-domain [text]
+
+The availability domain of the instance.
+
+Example:
+
+   Uocm:PHX-AD-1
+
+--compartment-id, -c [text]
+
+The OCID of the compartment.
+
+--placement-constraint-details-compute-host-group-id [text]
+
+The OCID of the compute host group. This is only available for
+dedicated capacity customers.
+
+
+Optional Parameters
+===================
+
+--agent-config [complex type]
+
+This is a complex type whose value must be valid JSON. The value can
+be provided as a string on the command line or passed in as a file
+using the file://path/to/file syntax.
+
+The "--generate-param-json-input" option can be used to generate an
+example of the JSON which must be provided. We recommend storing this
+example in a file, modifying it as needed and then passing it back in
+via the file:// syntax.
+
+--availability-config [complex type]
+
+This is a complex type whose value must be valid JSON. The value can
+be provided as a string on the command line or passed in as a file
+using the file://path/to/file syntax.
+
+The "--generate-param-json-input" option can be used to generate an
+example of the JSON which must be provided. We recommend storing this
+example in a file, modifying it as needed and then passing it back in
+via the file:// syntax.
+
+--capacity-reservation-id [text]
+
+The OCID of the compute capacity reservation this instance is launched
+under. You can opt out of all default reservations by specifying an
+empty string as input for this field. For more information, see
+Capacity Reservations.
+
+--cluster-placement-group-id [text]
+
+The OCID of the cluster placement group of the instance.
+
+--compute-cluster-id [text]
+
+The OCID of the compute cluster that the instance will be created in.
+
+--create-vnic-details [complex type]
+
+This is a complex type whose value must be valid JSON. The value can
+be provided as a string on the command line or passed in as a file
+using the file://path/to/file syntax.
+
+The "--generate-param-json-input" option can be used to generate an
+example of the JSON which must be provided. We recommend storing this
+example in a file, modifying it as needed and then passing it back in
+via the file:// syntax.
+
+--dedicated-vm-host-id [text]
+
+The OCID of the dedicated virtual machine host to place the instance
+on.
+
+--defined-tags [complex type]
+
+Defined tags for this resource. Each key is predefined and scoped to a
+namespace. For more information, see Resource Tags.
+
+Example:
+
+   {"Operations": {"CostCenter": "42"}}
+
+This is a complex type whose value must be valid JSON. The value can
+be provided as a string on the command line or passed in as a file
+using the file://path/to/file syntax.
+
+The "--generate-param-json-input" option can be used to generate an
+example of the JSON which must be provided. We recommend storing this
+example in a file, modifying it as needed and then passing it back in
+via the file:// syntax.
+
+--display-name [text]
+
+A user-friendly name. Does not have to be unique, and it’s changeable.
+Avoid entering confidential information.
+
+--extended-metadata [complex type]
+
+Additional metadata key/value pairs that you provide. They serve the
+same purpose and functionality as fields in the *metadata* object.
+
+They are distinguished from *metadata* fields in that these can be
+nested JSON objects (whereas *metadata* fields are string/string maps
+only).
+
+The combined size of the *metadata* and *extendedMetadata* objects can
+be a maximum of 32,000 bytes. This is a complex type whose value must
+be valid JSON. The value can be provided as a string on the command
+line or passed in as a file using the file://path/to/file syntax.
+
+The "--generate-param-json-input" option can be used to generate an
+example of the JSON which must be provided. We recommend storing this
+example in a file, modifying it as needed and then passing it back in
+via the file:// syntax.
+
+--fault-domain [text]
+
+A fault domain is a grouping of hardware and infrastructure within an
+availability domain. Each availability domain contains three fault
+domains. Fault domains let you distribute your instances so that they
+are not on the same physical hardware within a single availability
+domain. A hardware failure or Compute hardware maintenance that
+affects one fault domain does not affect instances in other fault
+domains.
+
+If you do not specify the fault domain, the system selects one for
+you.
+
+   To get a list of fault domains, use the ListFaultDomains operation
+   in the Identity and Access Management Service API.
+
+Example:
+
+   FAULT-DOMAIN-1
+
+--freeform-tags [complex type]
+
+Free-form tags for this resource. Each tag is a simple key-value pair
+with no predefined name, type, or namespace. For more information, see
+Resource Tags.
+
+Example:
+
+   {"Department": "Finance"}
+
+This is a complex type whose value must be valid JSON. The value can
+be provided as a string on the command line or passed in as a file
+using the file://path/to/file syntax.
+
+The "--generate-param-json-input" option can be used to generate an
+example of the JSON which must be provided. We recommend storing this
+example in a file, modifying it as needed and then passing it back in
+via the file:// syntax.
+
+--from-json [text]
+
+Provide input to this command as a JSON document from a file using the
+file://path-to/file syntax.
+
+The "--generate-full-command-json-input" option can be used to
+generate a sample json file to be used with this command option. The
+key names are pre-populated and match the command option names
+(converted to camelCase format, e.g. compartment-id –> compartmentId),
+while the values of the keys need to be populated by the user before
+using the sample file as an input to this command. For any command
+option that accepts multiple values, the value of the key can be a
+JSON array.
+
+Options can still be provided on the command line. If an option exists
+in both the JSON document and the command line then the command line
+specified value will be used.
+
+For examples on usage of this option, please see our “using CLI with
+advanced JSON options” link: https://docs.cloud.oracle.com/iaas/Conte
+nt/API/SDKDocs/cliusing.htm#AdvancedJSONOptions
+
+--hostname-label [text]
+
+Deprecated. Instead use *hostnameLabel* in CreateVnicDetails. If you
+provide both, the values must match.
+
+--image-id [text]
+
+Deprecated. Use *sourceDetails* with InstanceSourceViaImageDetails
+source type instead. If you specify values for both, the values must
+match.
+
+--instance-configuration-id [text]
+
+The OCID of the Instance Configuration containing instance launch
+details. Any other fields supplied in this instance launch request
+will override the details stored in the Instance Configuration for
+this instance launch.
+
+--instance-options [complex type]
+
+This is a complex type whose value must be valid JSON. The value can
+be provided as a string on the command line or passed in as a file
+using the file://path/to/file syntax.
+
+The "--generate-param-json-input" option can be used to generate an
+example of the JSON which must be provided. We recommend storing this
+example in a file, modifying it as needed and then passing it back in
+via the file:// syntax.
+
+--ipxe-script-file [filename]
+
+This is an advanced option.
+
+When a bare metal or virtual machine instance boots, the iPXE firmware
+that runs on the instance is configured to run an iPXE script to
+continue the boot process.
+
+If you want more control over the boot process, you can provide your
+own custom iPXE script that will run when the instance boots. Be aware
+that the same iPXE script will run every time an instance boots, not
+only after the initial LaunchInstance call.
+
+The default iPXE script connects to the instance’s local boot volume
+over iSCSI and performs a network boot. If you use a custom iPXE
+script and want to network-boot from the instance’s local boot volume
+over iSCSI the same way as the default iPXE script, use the following
+iSCSI IP address: 169.254.0.2, and boot volume IQN:
+iqn.2015-02.oracle.boot.
+
+If your instance boot volume attachment type is paravirtualized, the
+boot volume is attached to the instance through virtio-scsi and no
+iPXE script is used. If your instance boot volume attachment type is
+paravirtualized and you use custom iPXE to network boot into your
+instance, the primary boot volume is attached as a data volume through
+virtio-scsi drive.
+
+For more information about the Bring Your Own Image feature of Oracle
+Cloud Infrastructure, see Bring Your Own Image.
+
+For more information about iPXE, see http://ipxe.org.
+
+--is-pv-encryption-in-transit-enabled [boolean]
+
+Whether to enable in-transit encryption for the data volume’s
+paravirtualized attachment. This field applies to both block volumes
+and boot volumes. The default value is false.
+
+--launch-options [complex type]
+
+This is a complex type whose value must be valid JSON. The value can
+be provided as a string on the command line or passed in as a file
+using the file://path/to/file syntax.
+
+The "--generate-param-json-input" option can be used to generate an
+example of the JSON which must be provided. We recommend storing this
+example in a file, modifying it as needed and then passing it back in
+via the file:// syntax.
+
+--launch-volume-attachments [complex type]
+
+Volume attachments to create as part of the launch instance operation.
+
+This option is a JSON list with items of type
+LaunchAttachVolumeDetails.  For documentation on
+LaunchAttachVolumeDetails please see our API reference: https://docs.
+cloud.oracle.com/api/#/en/iaas/20160918/datatypes/LaunchAttachVolumeD
+etails. This is a complex type whose value must be valid JSON. The
+value can be provided as a string on the command line or passed in as
+a file using the file://path/to/file syntax.
+
+The "--generate-param-json-input" option can be used to generate an
+example of the JSON which must be provided. We recommend storing this
+example in a file, modifying it as needed and then passing it back in
+via the file:// syntax.
+
+--licensing-configs [complex type]
+
+List of licensing configurations associated with target launch values.
+
+This option is a JSON list with items of type
+LaunchInstanceLicensingConfig.  For documentation on
+LaunchInstanceLicensingConfig please see our API reference: https://d
+ocs.cloud.oracle.com/api/#/en/iaas/20160918/datatypes/LaunchInstanceL
+icensingConfig. This is a complex type whose value must be valid JSON.
+The value can be provided as a string on the command line or passed in
+as a file using the file://path/to/file syntax.
+
+The "--generate-param-json-input" option can be used to generate an
+example of the JSON which must be provided. We recommend storing this
+example in a file, modifying it as needed and then passing it back in
+via the file:// syntax.
+
+--max-wait-seconds [integer]
+
+The maximum time to wait for the resource to reach the lifecycle state
+defined by "--wait-for-state". Defaults to 1200 seconds.
+
+--metadata [complex type]
+
+Custom metadata key/value pairs that you provide, such as the SSH
+public key required to connect to the instance.
+
+A metadata service runs on every launched instance. The service is an
+HTTP endpoint listening on 169.254.169.254. You can use the service
+to:
+
+* Provide information to Cloud-Init   to be used for various system
+  initialization tasks.
+
+* Get information about the instance, including the custom metadata
+  that you   provide when you launch the instance.
+
+   **Providing Cloud-Init Metadata**
+
+   You can use the following metadata key names to provide information
+   to  Cloud-Init:
+
+   **“ssh_authorized_keys”** - Provide one or more public SSH keys to
+   be  included in the *~/.ssh/authorized_keys* file for the default
+   user on the  instance. Use a newline character to separate multiple
+   keys. The SSH  keys must be in the format necessary for the
+   *authorized_keys* file, as shown  in the example below.
+
+   **“user_data”** - Provide your own base64-encoded data to be used
+   by  Cloud-Init to run custom scripts or provide custom Cloud-Init
+   configuration. For  information about how to take advantage of user
+   data, see the  Cloud-Init Documentation.
+
+   **Metadata Example**
+
+      “metadata” : {          “quake_bot_level” : “Severe”,
+      “ssh_authorized_keys” : “ssh-rsa <your_public_SSH_key>== rsa-
+      key-20160227”,          “user_data” : “<your_public_SSH_key>==”
+      }  **Getting Metadata on the Instance**
+
+   To get information about your instance, connect to the instance
+   using SSH and issue any of the  following GET requests:
+
+      curl -H “Authorization: Bearer Oracle”
+      http://169.254.169.254/opc/v2/instance/      curl -H
+      “Authorization: Bearer Oracle”
+      http://169.254.169.254/opc/v2/instance/metadata/      curl -H
+      “Authorization: Bearer Oracle”
+      http://169.254.169.254/opc/v2/instance/metadata/<any-key-name>
+
+   You’ll get back a response that includes all the instance
+   information; only the metadata information; or  the metadata
+   information for the specified key name, respectively.
+
+   The combined size of the *metadata* and *extendedMetadata* objects
+   can be a maximum of 32,000 bytes.
+
+This is a complex type whose value must be valid JSON. The value can
+be provided as a string on the command line or passed in as a file
+using the file://path/to/file syntax.
+
+The "--generate-param-json-input" option can be used to generate an
+example of the JSON which must be provided. We recommend storing this
+example in a file, modifying it as needed and then passing it back in
+via the file:// syntax.
+
+--platform-config [complex type]
+
+This is a complex type whose value must be valid JSON. The value can
+be provided as a string on the command line or passed in as a file
+using the file://path/to/file syntax.
+
+The "--generate-param-json-input" option can be used to generate an
+example of the JSON which must be provided. We recommend storing this
+example in a file, modifying it as needed and then passing it back in
+via the file:// syntax.
+
+--preemptible-instance-config [complex type]
+
+This is a complex type whose value must be valid JSON. The value can
+be provided as a string on the command line or passed in as a file
+using the file://path/to/file syntax.
+
+The "--generate-param-json-input" option can be used to generate an
+example of the JSON which must be provided. We recommend storing this
+example in a file, modifying it as needed and then passing it back in
+via the file:// syntax.
+
+--security-attributes [complex type]
+
+Security attributes are labels for a resource that can be referenced
+in a Zero Trust Packet Routing (ZPR) policy to control access to ZPR-
+supported resources.
+
+Example:
+
+   {"Oracle-DataSecurity-ZPR": {"MaxEgressCount": {"value":"42","mode":"audit"}}}
+
+This is a complex type whose value must be valid JSON. The value can
+be provided as a string on the command line or passed in as a file
+using the file://path/to/file syntax.
+
+The "--generate-param-json-input" option can be used to generate an
+example of the JSON which must be provided. We recommend storing this
+example in a file, modifying it as needed and then passing it back in
+via the file:// syntax.
+
+--shape [text]
+
+The shape of an instance. The shape determines the number of CPUs,
+amount of memory, and other resources allocated to the instance.
+
+You can enumerate all available shapes by calling ListShapes.
+
+--shape-config [complex type]
+
+This is a complex type whose value must be valid JSON. The value can
+be provided as a string on the command line or passed in as a file
+using the file://path/to/file syntax.
+
+The "--generate-param-json-input" option can be used to generate an
+example of the JSON which must be provided. We recommend storing this
+example in a file, modifying it as needed and then passing it back in
+via the file:// syntax.
+
+--source-details [complex type]
+
+This is a complex type whose value must be valid JSON. The value can
+be provided as a string on the command line or passed in as a file
+using the file://path/to/file syntax.
+
+The "--generate-param-json-input" option can be used to generate an
+example of the JSON which must be provided. We recommend storing this
+example in a file, modifying it as needed and then passing it back in
+via the file:// syntax.
+
+--subnet-id [text]
+
+Deprecated. Instead use *subnetId* in CreateVnicDetails. At least one
+of them is required; if you provide both, the values must match.
+
+--wait-for-state [text]
+
+This operation creates, modifies or deletes a resource that has a
+defined lifecycle state. Specify this option to perform the action and
+then wait until the resource reaches a given lifecycle state. Multiple
+states can be specified, returning on the first state. For example, "
+--wait-for-state" SUCCEEDED "--wait-for-state" FAILED would return on
+whichever lifecycle state is reached first. If timeout is reached, a
+return code of 2 is returned. For any other error, a return code of 1
+is returned.
+
+Accepted values are:
+
+   CREATING_IMAGE, MOVING, PROVISIONING, RUNNING, STARTING, STOPPED, STOPPING, TERMINATED, TERMINATING
+
+--wait-interval-seconds [integer]
+
+Check every "--wait-interval-seconds" to see whether the resource has
+reached the lifecycle state defined by "--wait-for-state". Defaults to
+30 seconds.
+
+
+Global Parameters
+=================
+
+Use "oci --help" for help on global parameters.
+
+"--auth-purpose", "--auth", "--cert-bundle", "--cli-auto-prompt", "--
+cli-rc-file", "--config-file", "--connection-timeout", "--debug", "--
+defaults-file", "--endpoint", "--generate-full-command-json-input", "
+--generate-param-json-input", "--help", "--latest-version", "--max-
+retries", "--no-retry", "--opc-client-request-id", "--opc-request-id",
+"--output", "--profile", "--proxy", "--query", "--raw-output", "--
+read-timeout", "--realm-specific-endpoint", "--region", "--release-
+info", "--request-id", "--version", "-?", "-d", "-h", "-i", "-v"
+
+
+Example using required parameter
+================================
+
+Copy the following CLI commands into a file named example.sh. Run the
+command by typing “bash example.sh” and replacing the example
+parameters with your own.
+
+Please note this sample will only work in the POSIX-compliant bash-
+like shell. You need to set up the OCI configuration and appropriate
+security policies before trying the examples.
+
+       export availability_domain=<substitute-value-of-availability_domain> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/compute/instance/launch-instance-host-group-placement-constraint-details.html#cmdoption-availability-domain
+       export compartment_id=<substitute-value-of-compartment_id> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/compute/instance/launch-instance-host-group-placement-constraint-details.html#cmdoption-compartment-id
+       export placement_constraint_details_compute_host_group_id=<substitute-value-of-placement_constraint_details_compute_host_group_id> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/compute/instance/launch-instance-host-group-placement-constraint-details.html#cmdoption-placement-constraint-details-compute-host-group-id
+
+       oci compute instance launch-instance-host-group-placement-constraint-details --availability-domain $availability_domain --compartment-id $compartment_id --placement-constraint-details-compute-host-group-id $placement_constraint_details_compute_host_group_id

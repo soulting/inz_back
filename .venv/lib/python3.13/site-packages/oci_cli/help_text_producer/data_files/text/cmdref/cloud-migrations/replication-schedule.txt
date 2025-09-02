@@ -1,0 +1,24 @@
+replication-schedule
+********************
+
+
+Description
+===========
+
+Replication schedule.
+
+
+Available Commands
+==================
+
+* change-compartment
+
+* create
+
+* delete
+
+* get
+
+* list
+
+* update

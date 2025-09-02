@@ -1,0 +1,15 @@
+script-collection
+*****************
+
+
+Description
+===========
+
+The results of a script search, which contains both ScriptSummary
+items and other data in an APM domain.
+
+
+Available Commands
+==================
+
+* list-scripts

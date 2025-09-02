@@ -1,0 +1,50 @@
+zpr
+***
+
+
+Description
+===========
+
+Use the Zero Trust Packet Routing Control Plane CLI to manage ZPR
+configuration and policy. See the Zero Trust Packet Routing
+documentation for more information.
+
+
+Available Commands
+==================
+
+* configuration
+
+  * create
+
+  * get
+
+* work-request
+
+  * get-zpr-configuration
+
+  * get-zpr-policy
+
+  * list-zpr-configuration
+
+  * list-zpr-configuration-errors
+
+  * list-zpr-configuration-logs
+
+  * list-zpr-policy
+
+  * list-zpr-policy-errors
+
+  * list-zpr-policy-logs
+
+* zpr-policy
+
+  * create
+
+  * delete
+
+  * get
+
+  * list
+
+  * update

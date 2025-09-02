@@ -1,0 +1,18 @@
+transcription-task
+******************
+
+
+Description
+===========
+
+Description of Transcription Task.
+
+
+Available Commands
+==================
+
+* cancel
+
+* get
+
+* list

@@ -1,0 +1,43 @@
+deploy-artifact
+***************
+
+
+Description
+===========
+
+Artifacts are deployment manifests that are referenced in a pipeline
+stage for automated deployment to the target environment.  DevOps
+artifacts can be an OCI Container image repository, Kubernetes
+manifest, an Artifact Registry artifact, or defined inline.
+
+
+Available Commands
+==================
+
+* create-generic-artifact
+
+* create-helm-command-spec
+
+* create-helm-repository-artifact
+
+* create-inline-artifact
+
+* create-ocir-artifact
+
+* delete
+
+* get
+
+* list
+
+* update
+
+* update-generic-artifact
+
+* update-helm-command-spec
+
+* update-helm-repository-artifact
+
+* update-inline-artifact
+
+* update-ocir-artifact

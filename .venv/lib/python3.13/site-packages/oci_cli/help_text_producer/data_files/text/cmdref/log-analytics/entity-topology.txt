@@ -1,0 +1,14 @@
+entity-topology
+***************
+
+
+Description
+===========
+
+Summary of a log analytics entity.
+
+
+Available Commands
+==================
+
+* list

@@ -1,0 +1,20 @@
+managed-database
+****************
+
+
+Description
+===========
+
+The details of a Managed Database.
+
+
+Available Commands
+==================
+
+* list-alert-logs
+
+* list-attention-logs
+
+* summarize-alert-log-counts
+
+* summarize-attention-log-counts

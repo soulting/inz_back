@@ -1,0 +1,48 @@
+dr-plan-execution
+*****************
+
+
+Description
+===========
+
+The details of a DR plan execution.
+
+
+Available Commands
+==================
+
+* cancel
+
+* create
+
+* create-failover
+
+* create-failover-precheck
+
+* create-start-drill
+
+* create-start-drill-precheck
+
+* create-stop-drill
+
+* create-stop-drill-precheck
+
+* create-switchover
+
+* create-switchover-precheck
+
+* delete
+
+* get
+
+* ignore
+
+* list
+
+* pause
+
+* resume
+
+* retry
+
+* update

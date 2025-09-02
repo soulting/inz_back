@@ -1,0 +1,481 @@
+data-integration
+****************
+
+
+Description
+===========
+
+Use the Data Integration CLI to organize your data integration
+projects, create data flows, pipelines and tasks, and then publish,
+schedule, and run tasks that extract, transform, and load data. For
+more information, see Data Integration.
+
+
+Available Commands
+==================
+
+* application
+
+  * create
+
+  * create-patch
+
+  * delete
+
+  * delete-patch
+
+  * get
+
+  * get-dependent-object
+
+  * get-patch
+
+  * get-published-object
+
+  * list
+
+  * list-dependent-objects
+
+  * list-patch-changes
+
+  * list-patches
+
+  * list-published-objects
+
+  * update
+
+* composite-state
+
+  * get
+
+* connection
+
+  * create
+
+  * create-connection-create-connection-from-bip
+
+  * delete
+
+  * get
+
+  * list
+
+  * update
+
+  * update-connection-update-connection-from-bip
+
+* connection-validation
+
+  * create
+
+  * create-connection-validation-create-connection-from-bip
+
+  * delete
+
+  * get
+
+  * list
+
+* copy-object-request
+
+  * create
+
+  * get
+
+* copy-object-request-summary-collection
+
+  * list-copy-object-requests
+
+* data-asset
+
+  * create
+
+  * delete
+
+  * get
+
+  * list
+
+  * update
+
+* data-entity
+
+  * create-entity-shape-create-entity-shape-from-object
+
+  * create-entity-shape-from-file
+
+  * create-entity-shape-from-sql
+
+  * get
+
+  * list
+
+* data-flow
+
+  * create
+
+  * delete
+
+  * get
+
+  * list
+
+  * update
+
+* data-flow-validation
+
+  * create
+
+  * delete
+
+  * get
+
+  * list
+
+* detailed-description
+
+  * create-application
+
+  * create-dis-application
+
+  * delete-application
+
+  * delete-dis-application
+
+  * get-application
+
+  * get-dis-application
+
+  * update-application
+
+  * update-dis-application
+
+* dis-application
+
+  * change-compartment
+
+  * create
+
+  * delete
+
+  * get
+
+  * list
+
+  * update
+
+* export-request
+
+  * create
+
+  * get
+
+* export-request-summary-collection
+
+  * list-export-requests
+
+* external-publication
+
+  * create
+
+  * delete
+
+  * get
+
+  * list
+
+  * update
+
+* external-publication-validation
+
+  * create
+
+  * delete
+
+  * get
+
+  * list
+
+* folder
+
+  * create
+
+  * delete
+
+  * get
+
+  * list
+
+  * update
+
+* function-library
+
+  * create
+
+  * delete
+
+  * get
+
+  * list
+
+  * update
+
+* import-request
+
+  * create
+
+  * get
+
+* import-request-summary-collection
+
+  * list-import-requests
+
+* pipeline
+
+  * create
+
+  * delete
+
+  * get
+
+  * list
+
+  * update
+
+* pipeline-validation
+
+  * create
+
+  * delete
+
+  * get
+
+  * list
+
+* project
+
+  * create
+
+  * delete
+
+  * get
+
+  * get-count-statistic
+
+  * list
+
+  * update
+
+* reference
+
+  * get
+
+  * list
+
+  * update
+
+* runtime-operator
+
+  * get
+
+* runtime-operators
+
+  * list-runtime-operators
+
+* runtime-pipeline
+
+  * get
+
+* runtime-pipelines
+
+  * list-runtime-pipelines
+
+* schedule
+
+  * create
+
+  * create-custom-frequency
+
+  * create-daily-frequency
+
+  * create-hourly-frequency
+
+  * create-monthly-frequency
+
+  * create-monthly-rule-frequency
+
+  * create-weekly-frequency
+
+  * delete
+
+  * get
+
+  * list
+
+  * update
+
+  * update-custom-frequency
+
+  * update-daily-frequency
+
+  * update-hourly-frequency
+
+  * update-monthly-frequency
+
+  * update-monthly-rule-frequency
+
+  * update-weekly-frequency
+
+* schema
+
+  * get
+
+  * list
+
+* task
+
+  * create-data-loader-task
+
+  * create-integration-task
+
+  * create-pipeline-task
+
+  * create-task-from-dataflow-task
+
+  * create-task-from-rest-task
+
+  * create-task-from-sql-task
+
+  * delete
+
+  * get
+
+  * list
+
+  * update-data-loader-task
+
+  * update-integration-task
+
+  * update-pipeline-task
+
+  * update-task-from-dataflow-task
+
+  * update-task-from-rest-task
+
+  * update-task-from-sql-task
+
+* task-run
+
+  * create
+
+  * delete
+
+  * get
+
+  * list
+
+  * update
+
+* task-run-lineage
+
+  * list-task-run-lineages
+
+  * list_taskrun_lineages
+
+* task-run-log
+
+  * list
+
+* task-schedule
+
+  * create
+
+  * delete
+
+  * get
+
+  * list
+
+  * update
+
+* task-validation
+
+  * create-from-data-loader-task
+
+  * create-from-integration-task
+
+  * create-from-pipeline-task
+
+  * delete
+
+  * get
+
+  * list
+
+* template
+
+  * get
+
+  * list
+
+* user-defined-function
+
+  * create
+
+  * delete
+
+  * get
+
+  * list
+
+  * update
+
+* user-defined-function-validation
+
+  * create
+
+  * delete
+
+  * get
+
+  * list
+
+* work-request
+
+  * get
+
+  * list
+
+  * list-work-request-errors
+
+  * list-work-request-logs
+
+* workspace
+
+  * change-compartment
+
+  * create
+
+  * delete
+
+  * delete-copy-object-request
+
+  * delete-export-request
+
+  * delete-import-request
+
+  * get
+
+  * list
+
+  * start
+
+  * stop
+
+  * update
+
+  * update-copy-object-request
+
+  * update-export-request
+
+  * update-import-request

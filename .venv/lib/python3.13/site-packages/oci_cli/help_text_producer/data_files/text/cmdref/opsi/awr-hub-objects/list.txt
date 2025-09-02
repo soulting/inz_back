@@ -1,0 +1,155 @@
+"list"
+******
+
+* Description
+
+* Usage
+
+* Required Parameters
+
+* Optional Parameters
+
+* Global Parameters
+
+* Example using required parameter
+
+
+Description
+===========
+
+Gets a list of Awr Hub objects. Awr Hub id needs to specified.
+
+
+Usage
+=====
+
+   oci opsi awr-hub-objects list [OPTIONS]
+
+
+Required Parameters
+===================
+
+--awr-hub-source-id [text]
+
+Unique Awr Hub Source identifier
+
+
+Optional Parameters
+===================
+
+--all
+
+Fetches all pages of results. If you provide this option, then you
+cannot provide the "--limit" option.
+
+--delimiter [text]
+
+When this parameter is set, only objects whose names do not contain
+the delimiter character (after an optionally specified prefix) are
+returned in the Awr Hub list objects key of the response body. Scanned
+objects whose names contain the delimiter have the part of their name
+up to the first occurrence of the delimiter (including the optional
+prefix) returned as a set of prefixes. Note that only ‘/’ is a
+supported delimiter character at this time.
+
+--end [text]
+
+Object names returned by Awr Hub list objects query must be strictly
+less than this parameter.
+
+--fields [text]
+
+By default all the fields are returned. Use this parameter to fetch
+specific fields ‘size’, ‘etag’, ‘md5’, ‘timeCreated’, ‘timeModified’,
+‘storageTier’ and ‘archivalState’ fields. List the names of those
+fields in a comma-separated, case-insensitive list as the value of
+this parameter. For example:
+‘name,etag,timeCreated,md5,timeModified,storageTier,archivalState’.
+
+Accepted values are:
+
+   archivalState, etag, md5, name, size, storageTier, timeCreated, timeModified
+
+--from-json [text]
+
+Provide input to this command as a JSON document from a file using the
+file://path-to/file syntax.
+
+The "--generate-full-command-json-input" option can be used to
+generate a sample json file to be used with this command option. The
+key names are pre-populated and match the command option names
+(converted to camelCase format, e.g. compartment-id –> compartmentId),
+while the values of the keys need to be populated by the user before
+using the sample file as an input to this command. For any command
+option that accepts multiple values, the value of the key can be a
+JSON array.
+
+Options can still be provided on the command line. If an option exists
+in both the JSON document and the command line then the command line
+specified value will be used.
+
+For examples on usage of this option, please see our “using CLI with
+advanced JSON options” link: https://docs.cloud.oracle.com/iaas/Conte
+nt/API/SDKDocs/cliusing.htm#AdvancedJSONOptions
+
+--limit [integer]
+
+For list pagination. The maximum number of results per page, or items
+to return in a paginated “List” call. For important details about how
+pagination works, see List Pagination. Example: *50*
+
+--page [text]
+
+For list pagination. The value of the *opc-next-page* response header
+from the previous “List” call. For important details about how
+pagination works, see List Pagination.
+
+--page-size [integer]
+
+When fetching results, the number of results to fetch per call. Only
+valid when used with "--all" or "--limit", and ignored otherwise.
+
+--prefix [text]
+
+The string to use for matching against the start of object names in a
+Awr Hub list objects query.
+
+--start [text]
+
+Object names returned by Awr Hub list objects query must be greater or
+equal to this parameter.
+
+--start-after [text]
+
+Awr Hub Object name after which remaining objects are listed
+
+
+Global Parameters
+=================
+
+Use "oci --help" for help on global parameters.
+
+"--auth-purpose", "--auth", "--cert-bundle", "--cli-auto-prompt", "--
+cli-rc-file", "--config-file", "--connection-timeout", "--debug", "--
+defaults-file", "--endpoint", "--generate-full-command-json-input", "
+--generate-param-json-input", "--help", "--latest-version", "--max-
+retries", "--no-retry", "--opc-client-request-id", "--opc-request-id",
+"--output", "--profile", "--proxy", "--query", "--raw-output", "--
+read-timeout", "--realm-specific-endpoint", "--region", "--release-
+info", "--request-id", "--version", "-?", "-d", "-h", "-i", "-v"
+
+
+Example using required parameter
+================================
+
+Copy the following CLI commands into a file named example.sh. Run the
+command by typing “bash example.sh” and replacing the example
+parameters with your own.
+
+Please note this sample will only work in the POSIX-compliant bash-
+like shell. You need to set up the OCI configuration and appropriate
+security policies before trying the examples.
+
+       export awr_hub_source_id=<substitute-value-of-awr_hub_source_id> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/opsi/awr-hub-objects/list.html#cmdoption-awr-hub-source-id
+
+       oci opsi awr-hub-objects list --awr-hub-source-id $awr_hub_source_id

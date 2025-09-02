@@ -1,0 +1,28 @@
+product-license
+***************
+
+
+Description
+===========
+
+The product license details.
+
+
+Available Commands
+==================
+
+* create
+
+* delete
+
+* get
+
+* list
+
+* list-product-license-consumers
+
+* list-top-utilized-product-licenses
+
+* list-top-utilized-resources
+
+* update

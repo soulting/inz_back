@@ -1,0 +1,562 @@
+"bulk-upload"
+*************
+
+* Description
+
+* Usage
+
+* Required Parameters
+
+* Optional Parameters
+
+* Global Parameters
+
+* Example using required parameter
+
+* Other Examples
+
+
+Description
+===========
+
+Uploads all files in a given directory and all subdirectories.
+
+
+Usage
+=====
+
+   oci os object bulk-upload [OPTIONS]
+
+
+Required Parameters
+===================
+
+-bn, --bucket-name [text]
+
+The name of the bucket.
+
+--src-dir [text]
+
+The directory which contains files to upload. Files in the directory
+and all subdirectories will be uploaded.
+
+
+Optional Parameters
+===================
+
+--cache-control [text]
+
+The optional Cache-Control header that defines the caching behavior
+value to be returned in GetObject and HeadObject responses. Specifying
+values for this header has no effect on Object Storage behavior.
+Programs that read the object determine what to do based on the value
+provided. For example, you could use this header to identify objects
+that require caching restrictions.
+
+--content-disposition [text]
+
+The optional Content-Disposition header that defines presentational
+information for the object to be returned in GetObject and HeadObject
+responses. Specifying values for this header has no effect on Object
+Storage behavior. Programs that read the object determine what to do
+based on the value provided. For example, you could use this header to
+let users download objects with custom filenames in a browser.
+
+--content-encoding [text]
+
+The optional Content-Encoding header that defines the content encoding
+of the object to be returned in GetObject and HeadObject responses.
+Specifying values for this header has no effect on Object Storage
+behavior. Programs that read the object determine what to do based on
+the value provided. For example, you could use this header to
+determine what decoding mechanisms need to be applied to obtain the
+media-type specified by the Content-Type header of the object.
+
+--content-language [text]
+
+The optional Content-Language header that defines the content language
+of the object to be returned in GetObject and HeadObject responses.
+Specifying values for this header has no effect on Object Storage
+behavior. Programs that read the object determine what to do based on
+the value provided. For example, you could use this header to identify
+and differentiate objects based on a particular language.
+
+--content-type [text]
+
+The optional Content-Type header that defines the standard MIME type
+format of the object to be returned in GetObject and HeadObject
+responses. Content type defaults to ‘application/octet-stream’ if not
+specified. Specifying values for this header has no effect on Object
+Storage behavior. Programs that read the object determine what to do
+based on the value provided. For example, you could use this header to
+identify and perform special operations on text only objects.
+
+--disable-parallel-uploads
+
+[DEPRECATED] This option is no longer used. If a file in the directory
+will be uploaded in multiple parts, this option disables those parts
+from being uploaded in parallel. This applies to all files being
+uploaded in multiple parts
+
+--dry-run
+
+Prints the list of files to be uploaded.
+
+--encryption-key-file [filename]
+
+A file containing the base64-encoded string of the AES-256 encryption
+key associated with the object.
+
+--exclude [text]
+
+Only process files which do not match the specified pattern. Patterns
+are applied relative to the current directory. This option can be
+specified multiple times to match on multiple patterns. Supported
+pattern symbols are: 
+
+*: Matches everything
+
+?: Matches any single character
+
+[sequence]: Matches any character in sequence
+
+[!sequence]: Matches any character not in sequence
+
+--from-json [text]
+
+Provide input to this command as a JSON document from a file using the
+file://path-to/file syntax.
+
+The "--generate-full-command-json-input" option can be used to
+generate a sample json file to be used with this command option. The
+key names are pre-populated and match the command option names
+(converted to camelCase format, e.g. compartment-id –> compartmentId),
+while the values of the keys need to be populated by the user before
+using the sample file as an input to this command. For any command
+option that accepts multiple values, the value of the key can be a
+JSON array.
+
+Options can still be provided on the command line. If an option exists
+in both the JSON document and the command line then the command line
+specified value will be used.
+
+For examples on usage of this option, please see our “using CLI with
+advanced JSON options” link: https://docs.cloud.oracle.com/iaas/Conte
+nt/API/SDKDocs/cliusing.htm#AdvancedJSONOptions
+
+--include [text]
+
+Only process files which match the specified pattern. Patterns are
+applied relative to the current directory. This option can be
+specified multiple times to match on multiple patterns. Supported
+pattern symbols are: 
+
+*: Matches everything
+
+?: Matches any single character
+
+[sequence]: Matches any character in sequence
+
+[!sequence]: Matches any character not in sequence
+
+--metadata [text]
+
+Arbitrary string keys and values for user-defined metadata. This will
+be applied to all files being uploaded. Must be in JSON format.
+Example: ‘{“key1”:”value1”,”key2”:”value2”}’
+
+-ns, --namespace, --namespace-name [text]
+
+Object Storage namespace. If not provided, this parameter will be
+obtained internally using a call to ‘oci os ns get’
+
+--no-follow-symlinks
+
+Symbolic links will be ignored while traversing the local filesystem.
+
+--no-multipart
+
+Do not transfer the file in multiple parts. By default, files above
+128 MiB will be transferred in multiple parts, then combined.
+
+--no-overwrite
+
+If a file being uploaded already exists in Object Storage with the
+same name, do not overwite the object. If neither this flag nor
+–overwrite is specified, you will be prompted each time an object with
+the same name would be overwritten.
+
+--prefix, --object-prefix [text]
+
+A prefix to apply to the names of all files being uploaded
+
+--opc-sse-kms-key-id [text]
+
+The OCID of a master encryption key used to call the Key Management
+Service to generate a data encryption key or to encrypt or decrypt a
+data encryption key.
+
+--overwrite
+
+If a file being uploaded already exists in Object Storage with the
+same name, overwrite the existing object in Object Storage without a
+confirmation prompt. If neither this flag nor –no-overwrite is
+specified, you will be prompted each time an object with the same name
+would be overwritten.
+
+Specifying this flag will also allow for faster uploads as the CLI
+will not initially check whether or not the files with the same name
+already exist in Object Storage.
+
+--parallel-upload-count [integer range]
+
+The number of parallel operations to perform. Decreasing this value
+will make the process less resource intensive but it may take longer.
+Increasing this value may decrease the time taken, but the process
+will consume more system resources and network bandwidth. The maximum
+is 1000. [default: 10]
+
+--part-size [integer]
+
+Part size (in MiB) to use when the file is split into multiple parts
+and then combined. Part size must be greater than 10 MiB and defaults
+to 128 MiB.
+
+--storage-tier [text]
+
+The storage tier that the objects should be stored in. If not
+specified, the objects will be stored in the same storage tier as the
+bucket.
+
+Accepted values are:
+
+   Archive, InfrequentAccess, Standard
+
+--verify-checksum
+
+Verify the checksum of the uploaded object with the local file.
+
+   Examples
+
+======================================================================
+
+
+Upload all files from a given directory
+----------------------------------------
+
+   oci os object bulk-upload -ns mynamespace -bn mybucket --src-dir path/to/upload/directory
+
+
+Forcing object overwrite to resolve object name collision
+---------------------------------------------------------
+
+If a file being uploaded already exists in Object Storage, it can be
+overwritten without a prompt by using the "--overwrite" flag.
+
+   oci os object bulk-upload -ns mynamespace -bn mybucket --src-dir path/to/upload/directory --overwrite
+
+
+Prevent object overwrite to resolve object name collision
+---------------------------------------------------------
+
+If a file being uploaded already exists in Object Storage, it can be
+preserved (not overwritten) without a prompt by using the "--no-
+overwrite" flag.
+
+   oci os object bulk-upload -ns mynamespace -bn mybucket --src-dir path/to/upload/directory --no-overwrite
+
+
+Applying metadata
+-----------------
+
+Metadata can be applied when the files are put into Object Storage by
+specifying the "--metadata" flag and passing metadata either via a
+file or as a string on the command line.
+
+Note:
+
+  The same metadata will be applied to **all** uploaded files.
+
+   oci os object bulk-upload -ns mynamespace -bn mybucket --src-dir path/to/upload/directory --metadata '{"key1":"value1","key2":"value2"}'
+   oci os object bulk-upload -ns mynamespace -bn mybucket --src-dir path/to/upload/directory --metadata file://path/to/my/metadata.json
+
+
+Global Parameters
+=================
+
+Use "oci --help" for help on global parameters.
+
+"--auth-purpose", "--auth", "--cert-bundle", "--cli-auto-prompt", "--
+cli-rc-file", "--config-file", "--connection-timeout", "--debug", "--
+defaults-file", "--endpoint", "--generate-full-command-json-input", "
+--generate-param-json-input", "--help", "--latest-version", "--max-
+retries", "--no-retry", "--opc-client-request-id", "--opc-request-id",
+"--output", "--profile", "--proxy", "--query", "--raw-output", "--
+read-timeout", "--realm-specific-endpoint", "--region", "--release-
+info", "--request-id", "--version", "-?", "-d", "-h", "-i", "-v"
+
+
+Example using required parameter
+================================
+
+Copy the following CLI commands into a file named example.sh. Run the
+command by typing “bash example.sh” and replacing the example
+parameters with your own.
+
+Please note this sample will only work in the POSIX-compliant bash-
+like shell. You need to set up the OCI configuration and appropriate
+security policies before trying the examples.
+
+       export bucket_name=<substitute-value-of-bucket_name> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/os/object/bulk-upload.html#cmdoption-bucket-name
+       export src_dir=<substitute-value-of-src_dir> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/os/object/bulk-upload.html#cmdoption-src-dir
+
+       oci os object bulk-upload --bucket-name $bucket_name --src-dir $src_dir
+
+
+Other Examples
+==============
+
+
+Description
+-----------
+
+upload all objects in the bucket excluding ‘.cache’ directory.
+
+
+Command
+-------
+
+    oci os object bulk-upload -bn "cli-test" --src-dir ~/cliDirectory --exclude '.cache/*'
+
+
+Output
+------
+
+   {
+    "data": [
+         {
+              "skipped-objects": [],
+              "upload-failures": {},
+              "uploaded-objects": {
+                   "text.txt": {
+                        "etag": "cd7a12ad-683c-4a76-a846-f7cb6544428f",
+                        "last-modified": "Tue, 29 Sep 2020 17:35:54 GMT",
+                        "opc-content-md5": "1B2M2Y8AsgTpgAmY7PhCfg=="
+                   }
+              }
+         }
+    ]
+   }
+
+
+Description
+-----------
+
+Uploads all files in a given directory and all subdirectories.
+
+
+Command
+-------
+
+    oci os object bulk-upload -bn bucket-client --src-dir my_folder
+
+
+Output
+------
+
+   {
+    "skipped-objects": [],
+    "upload-failures": {},
+    "uploaded-objects": {
+         "a_text.txt": {
+              "etag": "e2bb3457-77c1-4611-aa1b-ab2b73460ed8",
+              "last-modified": "Tue, 20 Dec 2022 08:59:11 GMT",
+              "opc-content-md5": "1B2M2Y8AsgTpgAmY7PhCfg=="
+         },
+         "b_text.txt": {
+              "etag": "da972aea-ebbf-4a59-a023-c0407110b31b",
+              "last-modified": "Tue, 20 Dec 2022 08:59:10 GMT",
+              "opc-content-md5": "1B2M2Y8AsgTpgAmY7PhCfg=="
+         }
+    }
+   }
+
+
+Description
+-----------
+
+Uploads all files in a given directory and all subdirectories with
+specified cache control method.
+
+
+Command
+-------
+
+    oci os object bulk-upload -bn bucket-client --src-dir my_folder --cache-control no-cache
+
+
+Output
+------
+
+   {
+    "skipped-objects": [],
+    "upload-failures": {},
+    "uploaded-objects": {
+         "a_text.txt": {
+              "etag": "299f7a3e-e296-48d5-afd1-72f7774e420b",
+              "last-modified": "Tue, 20 Dec 2022 09:04:21 GMT",
+              "opc-content-md5": "1B2M2Y8AsgTpgAmY7PhCfg=="
+         },
+         "b_text.txt": {
+              "etag": "83e257a5-4441-4f17-ac0d-1e0c4a752231",
+              "last-modified": "Tue, 20 Dec 2022 09:04:21 GMT",
+              "opc-content-md5": "1B2M2Y8AsgTpgAmY7PhCfg=="
+         }
+    }
+   }
+
+
+Description
+-----------
+
+Uploads all files in a given directory and all subdirectories with
+specified content type.
+
+
+Command
+-------
+
+    oci os object bulk-upload -bn bucket-client --src-dir my_folder --content-type text/plain
+
+
+Output
+------
+
+   {
+    "skipped-objects": [],
+    "upload-failures": {},
+    "uploaded-objects": {
+         "a_text.txt": {
+              "etag": "6d149f4a-7412-4f81-b98c-d1e8686d8c0e",
+              "last-modified": "Tue, 20 Dec 2022 09:05:15 GMT",
+              "opc-content-md5": "1B2M2Y8AsgTpgAmY7PhCfg=="
+         },
+         "b_text.txt": {
+              "etag": "58a5423a-5d42-430b-a695-d2ec2a117c71",
+              "last-modified": "Tue, 20 Dec 2022 09:05:14 GMT",
+              "opc-content-md5": "1B2M2Y8AsgTpgAmY7PhCfg=="
+         }
+    }
+   }
+
+
+Description
+-----------
+
+Prints the list of files to be uploaded.
+
+
+Command
+-------
+
+    oci os object bulk-upload -bn bucket-client --src-dir my_folder --dry-run
+
+
+Output
+------
+
+   {
+    "output": "my_folder/a_text.txt \nmy_folder/b_text.txt"
+   }
+
+
+Description
+-----------
+
+Uploads all files in a given directory and all subdirectories which do
+not matches the specified pattern.
+
+
+Command
+-------
+
+    oci os object bulk-upload -bn bucket-client --src-dir my_folder --exclude 'a*'
+
+
+Output
+------
+
+   {
+    "skipped-objects": [],
+    "upload-failures": {},
+    "uploaded-objects": {
+         "b_text.txt": {
+              "etag": "db320457-3be1-4376-b382-e36871e577ae",
+              "last-modified": "Tue, 20 Dec 2022 09:10:12 GMT",
+              "opc-content-md5": "1B2M2Y8AsgTpgAmY7PhCfg=="
+         }
+    }
+   }
+
+
+Description
+-----------
+
+Uploads all files in a given directory and all subdirectories which
+matches the specified pattern.
+
+
+Command
+-------
+
+    oci os object bulk-upload -bn bucket-client --src-dir my_folder --include 'a*'
+
+
+Output
+------
+
+   {
+    "skipped-objects": [],
+    "upload-failures": {},
+    "uploaded-objects": {
+         "a_text.txt": {
+              "etag": "33713add-5ef9-4909-bc99-5602f01aa76a",
+              "last-modified": "Tue, 20 Dec 2022 09:10:53 GMT",
+              "opc-content-md5": "1B2M2Y8AsgTpgAmY7PhCfg=="
+         }
+    }
+   }
+
+
+Description
+-----------
+
+Uploads all files in a given directory and all subdirectories with
+user specified metadata.
+
+
+Command
+-------
+
+    oci os object bulk-upload -bn bucket-client --src-dir my_folder --metadata '{"object-type":"Large"}'
+
+
+Output
+------
+
+   {
+    "skipped-objects": [],
+    "upload-failures": {},
+    "uploaded-objects": {
+         "a_text.txt": {
+              "etag": "50968516-303e-440b-a1e5-776d94838c84",
+              "last-modified": "Tue, 20 Dec 2022 09:13:14 GMT",
+              "opc-content-md5": "1B2M2Y8AsgTpgAmY7PhCfg=="
+         },
+         "b_text.txt": {
+              "etag": "30db02ce-34cb-4f2e-81ac-54ee79ccdeaf",
+              "last-modified": "Tue, 20 Dec 2022 09:13:21 GMT",
+              "opc-content-md5": "1B2M2Y8AsgTpgAmY7PhCfg=="
+         }
+    }
+   }

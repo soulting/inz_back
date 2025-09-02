@@ -1,0 +1,14 @@
+fsu-job-summary
+***************
+
+
+Description
+===========
+
+Exadata Fleet Update Job resource.
+
+
+Available Commands
+==================
+
+* list

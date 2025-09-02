@@ -1,0 +1,28 @@
+managed-database-group
+**********************
+
+
+Description
+===========
+
+The details of a Managed Database Group.
+
+
+Available Commands
+==================
+
+* add
+
+* change-compartment
+
+* create
+
+* delete
+
+* get
+
+* list
+
+* remove
+
+* update

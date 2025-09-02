@@ -1,0 +1,44 @@
+project
+*******
+
+
+Description
+===========
+
+DevOps project groups resources needed to implement the CI/CD
+workload. DevOps resources include artifacts, pipelines, and
+environments.
+
+
+Available Commands
+==================
+
+* cancel-cascading-delete
+
+* change-compartment
+
+* create
+
+* delete
+
+* delete-project-settings
+
+* get
+
+* get-notification-preference
+
+* get-project-settings
+
+* list
+
+* list-project-analytics-authors
+
+* schedule-cascading-delete
+
+* summarize-project-analytics
+
+* update
+
+* update-notification-preference
+
+* update-project-settings

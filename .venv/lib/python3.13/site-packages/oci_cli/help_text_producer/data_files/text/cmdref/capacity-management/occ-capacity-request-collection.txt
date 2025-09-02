@@ -1,0 +1,16 @@
+occ-capacity-request-collection
+*******************************
+
+
+Description
+===========
+
+A list of capacity requests.
+
+
+Available Commands
+==================
+
+* list
+
+* list-internal

@@ -1,0 +1,15 @@
+instance
+********
+
+
+Description
+===========
+
+Condensed instance data when listing instances in a compute capacity
+reservation.
+
+
+Available Commands
+==================
+
+* list

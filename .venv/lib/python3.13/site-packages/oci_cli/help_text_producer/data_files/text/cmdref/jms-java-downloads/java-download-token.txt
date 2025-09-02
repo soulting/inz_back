@@ -1,0 +1,24 @@
+java-download-token
+*******************
+
+
+Description
+===========
+
+A JavaDownloadToken is a primary resource for the script friendly
+URLs. The value of this token serves as the authorization token for
+the download.
+
+
+Available Commands
+==================
+
+* create
+
+* delete
+
+* get
+
+* list
+
+* update

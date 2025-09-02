@@ -1,0 +1,41 @@
+api
+***
+
+
+Description
+===========
+
+An API is simple container for an API Specification. For more
+information, see API Gateway Concepts.
+
+
+Available Commands
+==================
+
+* add-lock
+
+* change-compartment
+
+* content
+
+  * get
+
+* create
+
+* delete
+
+* deployment-specification
+
+  * get
+
+* get
+
+* list
+
+* remove-lock
+
+* update
+
+* validations
+
+  * get

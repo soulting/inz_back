@@ -1,0 +1,22 @@
+dkim
+****
+
+
+Description
+===========
+
+The properties that define a DKIM.
+
+
+Available Commands
+==================
+
+* create
+
+* delete
+
+* get
+
+* list
+
+* update

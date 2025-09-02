@@ -1,0 +1,26 @@
+job-run
+*******
+
+
+Description
+===========
+
+A job run.
+
+
+Available Commands
+==================
+
+* cancel
+
+* change-compartment
+
+* create
+
+* delete
+
+* get
+
+* list
+
+* update

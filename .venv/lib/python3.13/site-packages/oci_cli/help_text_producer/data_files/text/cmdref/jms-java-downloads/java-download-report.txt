@@ -1,0 +1,24 @@
+java-download-report
+********************
+
+
+Description
+===========
+
+Details about a Java download report in a tenancy. The report is a
+file in Object Storage. It contains the download records in a specific
+format.
+
+
+Available Commands
+==================
+
+* create
+
+* delete
+
+* get
+
+* get-java-download-report-content
+
+* list

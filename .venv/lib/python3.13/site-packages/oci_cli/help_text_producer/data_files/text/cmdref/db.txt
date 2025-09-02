@@ -1,0 +1,1105 @@
+db
+**
+
+
+Description
+===========
+
+The CLI for the Database Service. Use this CLI to manage resources
+such as databases and DB Systems. For more information, see Overview
+of the Database Service.
+
+
+Available Commands
+==================
+
+* action-param-values-summary
+
+  * list-params-for-action-type
+
+* application-vip
+
+  * create
+
+  * delete
+
+  * get
+
+  * list
+
+* autonomous-container-database
+
+  * add
+
+  * change-compartment
+
+  * change-dataguard-role
+
+  * convert-standby
+
+  * create
+
+  * create-autonomous-container-database-create-autonomous-container-
+    database-details
+
+  * create-autonomous-container-database-create-autonomous-container-
+    database-from-backup-details
+
+  * edit-autonomous-container-database-dataguard
+
+  * failover-autonomous-container-database-dataguard
+
+  * get
+
+  * get-autonomous-container-database-resource-usage
+
+  * list
+
+  * reinstate-autonomous-container-database-dataguard
+
+  * restart
+
+  * rotate-key
+
+  * switchover-autonomous-container-database-dataguard
+
+  * terminate
+
+  * update
+
+* autonomous-container-database-backup
+
+  * list
+
+* autonomous-container-database-dataguard
+
+  * create
+
+  * failover
+
+  * get
+
+  * list
+
+  * migrate
+
+  * reinstate
+
+  * switchover
+
+  * update
+
+* autonomous-container-database-version
+
+  * list
+
+* autonomous-database
+
+  * change-autonomous-database-subscription
+
+  * change-compartment
+
+  * change-disaster-recovery-configuration
+
+  * configure-key
+
+  * configure-saas-admin-user
+
+  * create
+
+  * create-adb-cross-region-data-guard-details
+
+  * create-autonomous-database-create-cross-region-disaster-recovery-
+    details
+
+  * create-autonomous-database-undelete-autonomous-database-details
+
+  * create-cross-tenancy-disaster-recovery-details
+
+  * create-from-backup-id
+
+  * create-from-backup-timestamp
+
+  * create-from-clone
+
+  * create-refreshable-clone
+
+  * data-safe
+
+    * deregister
+
+    * register
+
+  * delete
+
+  * disable-autonomous-database-management
+
+  * disable-operations-insights
+
+  * enable-autonomous-database-management
+
+  * enable-operations-insights
+
+  * fail-over
+
+  * generate-wallet
+
+  * get
+
+  * list
+
+  * list-autonomous-database-peers
+
+  * list-clones
+
+  * list-refreshable-clones
+
+  * list-resource-pool-members
+
+  * manual-refresh
+
+  * resource-pool-shapes
+
+  * restart
+
+  * restore
+
+  * rotate-key
+
+  * saas-admin-user-status
+
+  * shrink
+
+  * start
+
+  * stop
+
+  * switchover
+
+  * update
+
+* autonomous-database-backup
+
+  * create
+
+  * delete
+
+  * get
+
+  * list
+
+  * update
+
+* autonomous-database-character-sets
+
+  * list
+
+* autonomous-database-dataguard
+
+  * get
+
+  * list
+
+* autonomous-database-software-image
+
+  * change-compartment
+
+  * create
+
+  * delete
+
+  * get
+
+  * list
+
+  * update
+
+* autonomous-database-wallet
+
+  * get-metadata
+
+  * get-regional-wallet-metadata
+
+  * rotate
+
+  * rotate-regional-wallet
+
+* autonomous-db-preview-version
+
+  * list
+
+* autonomous-db-version
+
+  * list
+
+* autonomous-exadata-infrastructure
+
+  * change-compartment
+
+  * get
+
+  * launch
+
+  * list
+
+  * rotate-ords-certs
+
+  * rotate-ssl-certs
+
+  * shape
+
+    * list
+
+  * terminate
+
+  * update
+
+* autonomous-patch
+
+  * get
+
+  * list-container-database-patches
+
+* autonomous-virtual-machine
+
+  * get
+
+  * list
+
+* autonomous-vm-cluster
+
+  * change-compartment
+
+  * create
+
+  * delete
+
+  * get
+
+  * get-autonomous-vm-cluster-resource-usage
+
+  * list
+
+  * list-autonomous-vm-cluster-acd-resource-usage
+
+  * rotate-autonomous-vm-cluster-ords-certs
+
+  * rotate-autonomous-vm-cluster-ssl-certs
+
+  * update
+
+* backup
+
+  * cancel
+
+  * create
+
+  * delete
+
+  * get
+
+  * list
+
+  * update
+
+* backup-destination
+
+  * change-compartment
+
+  * create-nfs-details
+
+  * create-recovery-appliance-details
+
+  * delete
+
+  * get
+
+  * update
+
+* cloud-autonomous-vm-cluster
+
+  * change-cloud-autonomous-vm-cluster-subscription
+
+  * change-compartment
+
+  * create
+
+  * delete
+
+  * get
+
+  * get-cloud-autonomous-vm-cluster-resource-usage
+
+  * list
+
+  * list-cloud-autonomous-vm-cluster-acd-resource-usage
+
+  * rotate-cloud-autonomous-vm-cluster-ords-certs
+
+  * rotate-cloud-autonomous-vm-cluster-ssl-certs
+
+  * update
+
+* cloud-exa-infra
+
+  * add-storage
+
+  * change-cloud-exadata-infrastructure-subscription
+
+  * change-compartment
+
+  * create
+
+  * delete
+
+  * get
+
+  * get-cloud-exadata-infrastructure-unallocated-resources
+
+  * list
+
+  * update
+
+* cloud-vm-cluster
+
+  * add
+
+  * change-cloud-vm-cluster-subscription
+
+  * change-compartment
+
+  * create
+
+  * delete
+
+  * get
+
+  * get-exadata-iorm-config
+
+  * get-update
+
+  * get-update-history
+
+  * list
+
+  * list-update-histories
+
+  * list-updates
+
+  * register-cloud-vm-cluster-pkcs
+
+  * remove
+
+  * unregister-cloud-vm-cluster-pkcs
+
+  * update
+
+  * update-exadata-iorm-config
+
+* console-connection
+
+  * create
+
+  * delete
+
+  * get
+
+  * list
+
+  * update
+
+* console-history
+
+  * create
+
+  * delete
+
+  * get
+
+  * get-console-history-content
+
+  * list
+
+  * update
+
+* data-guard-association
+
+  * create
+
+    * from-existing-db-system
+
+    * from-existing-vm-cluster
+
+    * with-new-db-system
+
+  * create-data-guard-association-azure-encryption-key-details
+
+  * create-data-guard-association-external-hsm-encryption-details
+
+  * failover
+
+  * get
+
+  * list
+
+  * migrate-to-multiple-standby-model
+
+  * reinstate
+
+  * switchover
+
+  * update
+
+* database
+
+  * change-encryption-key-location-azure-encryption-key-details
+
+  * change-key-store-type
+
+  * change-to-external-hsm-key-location
+
+  * convert-to-new-pdb
+
+  * convert-to-new-pdb-precheck
+
+  * convert-to-pdb-sync
+
+  * convert-to-pdb-sync-rollback
+
+  * convert-to-standalone
+
+  * create
+
+  * create-database-create-stand-by-database-details
+
+  * create-database-from-backup
+
+  * create-from-backup
+
+  * create-from-database
+
+  * create-standby-database
+
+  * delete
+
+  * disable-database-management
+
+  * enable-database-management
+
+  * failover-data-guard
+
+  * get
+
+  * list
+
+  * list-pdb-conversion-history
+
+  * list-upgrade-history
+
+  * migrate-vault-key
+
+  * modify-database-management
+
+  * patch
+
+  * reinstate-data-guard
+
+  * restore
+
+  * rotate-vault-key
+
+  * set-oci-db-key-version
+
+  * switch-over-data-guard
+
+  * update
+
+  * update-data-guard
+
+  * upgrade
+
+  * upgrade-rollback
+
+  * upgrade-with-database-software-image
+
+  * upgrade-with-db-home
+
+  * upgrade-with-db-version
+
+* database-software-image
+
+  * change-compartment
+
+  * create
+
+  * delete
+
+  * get
+
+  * list
+
+  * update
+
+* db-home
+
+  * create
+
+  * delete
+
+  * get
+
+  * list
+
+  * update
+
+* db-server
+
+  * get
+
+  * list
+
+* db-system-upgrade-history
+
+  * get
+
+  * list
+
+* db-system-upgrade-summary
+
+  * list-db-system-upgrades
+
+* exadata-infrastructure
+
+  * activate
+
+  * add-storage-capacity
+
+  * change-compartment
+
+  * configure-exascale
+
+  * create
+
+  * delete
+
+  * download-config-file
+
+  * generate-recommended-vm-cluster-network
+
+  * get
+
+  * get-compute-units
+
+  * list
+
+  * update
+
+* exadata-infrastructure-un-allocated-resources
+
+  * get
+
+* exadb-vm-cluster
+
+  * change-compartment
+
+  * change-exadb-vm-cluster-subscription
+
+  * create
+
+  * delete
+
+  * get
+
+  * get-update
+
+  * get-update-history
+
+  * list
+
+  * list-update-histories
+
+  * list-updates
+
+  * remove
+
+  * update
+
+* exascale-db-storage-vault
+
+  * change-compartment
+
+  * change-exascale-db-storage-vault-subscription
+
+  * create
+
+  * delete
+
+  * get
+
+  * list
+
+  * update
+
+* execution-action
+
+  * create
+
+  * delete
+
+  * get
+
+  * list
+
+  * move-execution-action-member
+
+  * update
+
+* execution-window
+
+  * cancel
+
+  * create
+
+  * delete
+
+  * get
+
+  * list
+
+  * reorder-execution-actions
+
+  * update
+
+* external-backup-job
+
+  * complete
+
+  * create
+
+  * get
+
+* external-cdb
+
+  * change-compartment
+
+  * create
+
+  * delete
+
+  * disable-db-management
+
+  * disable-external-container-database-stack-monitoring
+
+  * enable-db-management
+
+  * enable-external-container-database-stack-monitoring
+
+  * get
+
+  * list
+
+  * list-external-pdbs
+
+  * scan-pluggable-databases
+
+  * update
+
+* external-db-connector
+
+  * check-connection-status
+
+  * create-macs-connector
+
+  * delete
+
+  * get
+
+  * list
+
+  * update
+
+  * update-macs-connector
+
+* external-non-cdb
+
+  * change-compartment
+
+  * create
+
+  * delete
+
+  * disable-db-management
+
+  * disable-external-non-container-database-stack-monitoring
+
+  * disable-operations-insights
+
+  * enable-db-management
+
+  * enable-external-non-container-database-stack-monitoring
+
+  * enable-operations-insights
+
+  * get
+
+  * list
+
+  * update
+
+* external-pdb
+
+  * change-compartment
+
+  * create
+
+  * delete
+
+  * disable-db-management
+
+  * disable-external-pluggable-database-stack-monitoring
+
+  * disable-operations-insights
+
+  * enable-db-management
+
+  * enable-external-pluggable-database-stack-monitoring
+
+  * enable-operations-insights
+
+  * get
+
+  * update
+
+* flex-component
+
+  * list
+
+* gi-minor-version-summary
+
+  * list
+
+* gi-version
+
+  * list
+
+* infrastructure-target-version
+
+  * get
+
+* key-store
+
+  * change-compartment
+
+  * confirm-key-store-details-are-correct
+
+  * create-oracle-key-vault-details
+
+  * delete
+
+  * get
+
+  * list
+
+  * update-oracle-key-vault-details
+
+* maintenance-run
+
+  * create
+
+  * get
+
+  * list
+
+  * update
+
+* maintenance-run-history
+
+  * get
+
+  * list
+
+* node
+
+  * get
+
+  * list
+
+  * reset
+
+  * soft-reset
+
+  * start
+
+  * stop
+
+  * update
+
+* oneoff-patch
+
+  * change-compartment
+
+  * create
+
+  * delete
+
+  * download
+
+  * get
+
+  * list
+
+  * update
+
+* patch
+
+  * get
+
+    * by-database
+
+    * by-db-system
+
+  * get-db-home
+
+  * get-vm-cluster
+
+  * list
+
+    * by-database
+
+    * by-db-system
+
+  * list-db-home
+
+  * list-vm-cluster
+
+* patch-history
+
+  * get
+
+    * by-database
+
+    * by-db-system
+
+  * get-db-home
+
+  * get-vm-cluster
+
+  * list
+
+    * by-database
+
+    * by-db-system
+
+  * list-db-home
+
+  * list-vm-cluster
+
+* pdb-conversion-history
+
+  * get
+
+* pluggable-database
+
+  * convert-to-regular
+
+  * create
+
+  * create-local-clone
+
+  * create-remote-clone
+
+  * create-snapshot
+
+  * delete
+
+  * delete-snapshot
+
+  * disable-pluggable-database-management
+
+  * enable-pluggable-database-management
+
+  * get
+
+  * get-snapshot
+
+  * list
+
+  * list-snapshots
+
+  * local-clone
+
+  * modify-pluggable-database-management
+
+  * refresh
+
+  * relocate-pdb
+
+  * remote-clone
+
+  * rotate-encryption-key
+
+  * set-oci-pdb-key-version
+
+  * start
+
+  * stop
+
+  * update
+
+* recommended-scheduled-action-summary
+
+  * list-recommended-scheduled-actions
+
+* scheduled-action
+
+  * create
+
+  * delete
+
+  * get
+
+  * list
+
+  * update
+
+* scheduling-plan
+
+  * cascading-delete
+
+  * change-compartment
+
+  * create
+
+  * delete
+
+  * get
+
+  * list
+
+  * reorder-scheduled-actions
+
+* scheduling-policy
+
+  * change-compartment
+
+  * create
+
+  * delete
+
+  * get
+
+  * list
+
+  * update
+
+* scheduling-window
+
+  * create
+
+  * delete
+
+  * get
+
+  * list
+
+  * update
+
+* system
+
+  * change-compartment
+
+  * get
+
+  * get-exadata-iorm-config
+
+  * launch
+
+  * launch-from-backup
+
+  * launch-from-database
+
+  * launch-from-db-system
+
+  * list
+
+  * list-db-system-compute-performances
+
+  * list-db-system-storage-performances
+
+  * patch
+
+  * switch
+
+  * terminate
+
+  * update
+
+  * update-exadata-iorm-config
+
+  * upgrade
+
+* system-minor-version
+
+  * list
+
+* system-shape
+
+  * list
+
+* system-version
+
+  * list
+
+* upgrade-history
+
+  * get
+
+* version
+
+  * list
+
+* vm-cluster
+
+  * add
+
+  * change-compartment
+
+  * create
+
+  * delete
+
+  * get
+
+  * get-update
+
+  * get-update-history
+
+  * list
+
+  * list-update-histories
+
+  * list-updates
+
+  * remove
+
+  * update
+
+* vm-cluster-network
+
+  * create
+
+  * delete
+
+  * download-validation-report
+
+  * download-vm-cluster-network-config-file
+
+  * get
+
+  * list
+
+  * resize
+
+  * update
+
+  * validate

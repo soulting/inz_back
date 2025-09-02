@@ -1,0 +1,195 @@
+fleet-software-update
+*********************
+
+
+Description
+===========
+
+Use the Exadata Fleet Update service to patch large collections of
+components directly, as a single entity, orchestrating the maintenance
+actions to update all chosen components in the stack in a single
+cycle.
+
+
+Available Commands
+==================
+
+* fsu-action
+
+  * cancel
+
+  * change-compartment
+
+  * create
+
+  * create-apply
+
+  * create-cleanup
+
+  * create-fsu-action-create-rollback-cycle-apply-action-details
+
+  * create-precheck
+
+  * create-rollback
+
+  * create-stage
+
+  * delete
+
+  * get
+
+  * get-output-content
+
+  * resume
+
+  * update
+
+  * update-apply
+
+  * update-cleanup
+
+  * update-fsu-action-update-rollback-cycle-action-details
+
+  * update-precheck
+
+  * update-rollback
+
+  * update-stage
+
+* fsu-action-summary
+
+  * list
+
+* fsu-collection
+
+  * add-targets
+
+  * change-compartment
+
+  * create
+
+  * create-db
+
+  * create-gi
+
+  * delete
+
+  * delete-fsu-collection-target
+
+  * get
+
+  * remove
+
+  * remove-targets
+
+  * update
+
+* fsu-collection-summary
+
+  * list
+
+* fsu-collection-target
+
+  * get
+
+* fsu-cycle
+
+  * change-compartment
+
+  * clone
+
+  * create
+
+  * create-fsu-cycle-create-upgrade-fsu-cycle
+
+  * create-patch
+
+  * delete
+
+  * get
+
+  * update
+
+  * update-fifty-batch
+
+  * update-fsu-cycle-update-upgrade-fsu-cycle
+
+  * update-image-id-target
+
+  * update-non-rolling-batch
+
+  * update-none-batch
+
+  * update-patch
+
+  * update-saf-batch
+
+  * update-sequential-batch
+
+  * update-version-target
+
+* fsu-cycle-summary
+
+  * list
+
+* fsu-discovery
+
+  * abort
+
+  * change-compartment
+
+  * create
+
+  * create-db
+
+  * create-gi
+
+  * delete
+
+  * get
+
+  * update
+
+* fsu-discovery-summary
+
+  * list
+
+* fsu-job
+
+  * delete
+
+  * get
+
+  * get-output-content
+
+  * retry
+
+  * update
+
+* fsu-job-output-summary
+
+  * list
+
+* fsu-job-summary
+
+  * list
+
+* target-summary-collection
+
+  * list-collection
+
+  * list-discovery
+
+* work-request
+
+  * get
+
+  * list
+
+* work-request-error
+
+  * list
+
+* work-request-log-entry
+
+  * list

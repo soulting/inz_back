@@ -1,0 +1,15 @@
+my-authentication-factors-remover
+*********************************
+
+
+Description
+===========
+
+This schema defines the attributes of Authentication Factors Remover
+call.
+
+
+Available Commands
+==================
+
+* create

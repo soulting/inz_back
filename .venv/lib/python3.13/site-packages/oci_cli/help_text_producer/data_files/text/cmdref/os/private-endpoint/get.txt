@@ -1,0 +1,114 @@
+"get"
+*****
+
+* Description
+
+* Usage
+
+* Required Parameters
+
+* Optional Parameters
+
+* Global Parameters
+
+* Example using required parameter
+
+
+Description
+===========
+
+Gets the current representation of the given Private Endpoint in the
+given Object Storage namespace.
+
+
+Usage
+=====
+
+   oci os private-endpoint get [OPTIONS]
+
+
+Required Parameters
+===================
+
+--pe-name [text]
+
+The name of the private endpoint. Avoid entering confidential
+information. Example: *my-new-pe-1*
+
+
+Optional Parameters
+===================
+
+--from-json [text]
+
+Provide input to this command as a JSON document from a file using the
+file://path-to/file syntax.
+
+The "--generate-full-command-json-input" option can be used to
+generate a sample json file to be used with this command option. The
+key names are pre-populated and match the command option names
+(converted to camelCase format, e.g. compartment-id –> compartmentId),
+while the values of the keys need to be populated by the user before
+using the sample file as an input to this command. For any command
+option that accepts multiple values, the value of the key can be a
+JSON array.
+
+Options can still be provided on the command line. If an option exists
+in both the JSON document and the command line then the command line
+specified value will be used.
+
+For examples on usage of this option, please see our “using CLI with
+advanced JSON options” link: https://docs.cloud.oracle.com/iaas/Conte
+nt/API/SDKDocs/cliusing.htm#AdvancedJSONOptions
+
+--if-match [text]
+
+The entity tag (ETag) to match with the ETag of an existing resource.
+If the specified ETag matches the ETag of the existing resource, GET
+and HEAD requests will return the resource and PUT and POST requests
+will upload the resource.
+
+--if-none-match [text]
+
+The entity tag (ETag) to avoid matching. Wildcards (‘*’) are not
+allowed. If the specified ETag does not match the ETag of the existing
+resource, the request returns the expected response. If the ETag
+matches the ETag of the existing resource, the request returns an HTTP
+304 status without a response body.
+
+--namespace-name [text]
+
+The Object Storage namespace used for the request. If not provided,
+this parameter will be obtained internally using a call to ‘oci os ns
+get’
+
+
+Global Parameters
+=================
+
+Use "oci --help" for help on global parameters.
+
+"--auth-purpose", "--auth", "--cert-bundle", "--cli-auto-prompt", "--
+cli-rc-file", "--config-file", "--connection-timeout", "--debug", "--
+defaults-file", "--endpoint", "--generate-full-command-json-input", "
+--generate-param-json-input", "--help", "--latest-version", "--max-
+retries", "--no-retry", "--opc-client-request-id", "--opc-request-id",
+"--output", "--profile", "--proxy", "--query", "--raw-output", "--
+read-timeout", "--realm-specific-endpoint", "--region", "--release-
+info", "--request-id", "--version", "-?", "-d", "-h", "-i", "-v"
+
+
+Example using required parameter
+================================
+
+Copy the following CLI commands into a file named example.sh. Run the
+command by typing “bash example.sh” and replacing the example
+parameters with your own.
+
+Please note this sample will only work in the POSIX-compliant bash-
+like shell. You need to set up the OCI configuration and appropriate
+security policies before trying the examples.
+
+       export pe_name=<substitute-value-of-pe_name> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/os/private-endpoint/get.html#cmdoption-pe-name
+
+       oci os private-endpoint get --pe-name $pe_name

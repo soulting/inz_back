@@ -1,0 +1,42 @@
+vault
+*****
+
+
+Description
+===========
+
+A logical entity where Key Management creates and stores your keys
+
+
+Available Commands
+==================
+
+* backup
+
+* cancel-deletion
+
+* change-compartment
+
+* create
+
+* create-vault-replica
+
+* delete-vault-replica
+
+* get
+
+* list
+
+* list-vault-replicas
+
+* restore
+
+* restore-from-file
+
+* schedule-deletion
+
+* update
+
+* usage
+
+  * get

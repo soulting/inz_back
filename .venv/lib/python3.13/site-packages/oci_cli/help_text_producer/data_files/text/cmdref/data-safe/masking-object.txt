@@ -1,0 +1,14 @@
+masking-object
+**************
+
+
+Description
+===========
+
+A collection of masking object summary objects.
+
+
+Available Commands
+==================
+
+* list

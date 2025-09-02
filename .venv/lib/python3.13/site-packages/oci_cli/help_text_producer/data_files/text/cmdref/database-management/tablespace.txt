@@ -1,0 +1,48 @@
+tablespace
+**********
+
+
+Description
+===========
+
+The details of a tablespace.
+
+
+Available Commands
+==================
+
+* add
+
+* create
+
+* drop
+
+* drop-tablespace-database-named-credential-details
+
+* drop-tablespace-database-password-credential-details
+
+* drop-tablespace-database-secret-credential-details
+
+* drop-with-pwd
+
+* drop-with-secret
+
+* get
+
+* list
+
+* remove
+
+* remove-data-file-database-named-credential-details
+
+* remove-data-file-database-password-credential-details
+
+* remove-data-file-database-secret-credential-details
+
+* remove-datafile-with-pwd
+
+* remove-datafile-with-secret
+
+* resize-data-file
+
+* update

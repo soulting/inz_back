@@ -1,0 +1,62 @@
+container
+*********
+
+
+Description
+===========
+
+Container registry.
+
+
+Available Commands
+==================
+
+* configuration
+
+  * get
+
+  * update
+
+* image
+
+  * delete
+
+  * get
+
+  * list
+
+  * remove-version
+
+  * restore
+
+  * update
+
+* image-signature
+
+  * create
+
+  * delete
+
+  * get
+
+  * get-verify
+
+  * list
+
+  * sign-upload
+
+  * update
+
+* repository
+
+  * change-compartment
+
+  * create
+
+  * delete
+
+  * get
+
+  * list
+
+  * update

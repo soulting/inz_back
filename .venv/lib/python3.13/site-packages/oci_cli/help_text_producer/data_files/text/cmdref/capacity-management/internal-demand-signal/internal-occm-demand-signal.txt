@@ -1,0 +1,18 @@
+internal-occm-demand-signal
+***************************
+
+
+Description
+===========
+
+An internal model describing the demand signal.
+
+
+Available Commands
+==================
+
+* get
+
+* list
+
+* update

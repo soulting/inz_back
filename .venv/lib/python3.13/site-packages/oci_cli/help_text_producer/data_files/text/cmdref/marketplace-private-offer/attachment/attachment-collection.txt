@@ -1,0 +1,14 @@
+attachment-collection
+*********************
+
+
+Description
+===========
+
+Results of a offers search. Contains boh AttachmentSummary items.
+
+
+Available Commands
+==================
+
+* list-attachments

@@ -1,0 +1,22 @@
+awr-hub-objects
+***************
+
+
+Description
+===========
+
+Logical grouping used for Awr Hub Object operations.
+
+
+Available Commands
+==================
+
+* delete
+
+* get
+
+* head
+
+* list
+
+* put

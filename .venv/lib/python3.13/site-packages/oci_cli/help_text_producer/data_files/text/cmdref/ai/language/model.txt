@@ -1,0 +1,24 @@
+model
+*****
+
+
+Description
+===========
+
+Description of the a Model.
+
+
+Available Commands
+==================
+
+* change-compartment
+
+* create
+
+* delete
+
+* get
+
+* list
+
+* update

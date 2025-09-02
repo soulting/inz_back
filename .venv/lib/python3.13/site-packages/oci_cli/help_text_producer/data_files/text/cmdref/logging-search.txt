@@ -1,0 +1,14 @@
+logging-search
+**************
+
+
+Description
+===========
+
+Search for logs in your compartments, log groups, and log objects.
+
+
+Available Commands
+==================
+
+* search-logs

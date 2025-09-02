@@ -1,0 +1,16 @@
+java-license
+************
+
+
+Description
+===========
+
+Details about a license type for Java.
+
+
+Available Commands
+==================
+
+* get
+
+* list

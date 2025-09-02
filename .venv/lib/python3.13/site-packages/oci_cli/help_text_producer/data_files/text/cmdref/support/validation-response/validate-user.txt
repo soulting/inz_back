@@ -1,0 +1,106 @@
+"validate-user"
+***************
+
+* Description
+
+* Usage
+
+* Optional Parameters
+
+* Global Parameters
+
+
+Description
+===========
+
+Checks whether the requested user is valid. For more information, see
+[Validating a User].
+
+
+Usage
+=====
+
+   oci support validation-response validate-user [OPTIONS]
+
+
+Optional Parameters
+===================
+
+--bearertoken [text]
+
+Token that provided by multi cloud provider, which help to validate
+the email.
+
+--bearertokentype [text]
+
+Token type that determine which cloud provider the request come from.
+
+--csi [text]
+
+The Customer Support Identifier (CSI) number associated with the
+support account. The CSI is optional for all support request types.
+
+--domainid [text]
+
+The OCID of identity domain. DomainID is mandatory if the user is part
+of Non Default Identity domain.
+
+--from-json [text]
+
+Provide input to this command as a JSON document from a file using the
+file://path-to/file syntax.
+
+The "--generate-full-command-json-input" option can be used to
+generate a sample json file to be used with this command option. The
+key names are pre-populated and match the command option names
+(converted to camelCase format, e.g. compartment-id –> compartmentId),
+while the values of the keys need to be populated by the user before
+using the sample file as an input to this command. For any command
+option that accepts multiple values, the value of the key can be a
+JSON array.
+
+Options can still be provided on the command line. If an option exists
+in both the JSON document and the command line then the command line
+specified value will be used.
+
+For examples on usage of this option, please see our “using CLI with
+advanced JSON options” link: https://docs.cloud.oracle.com/iaas/Conte
+nt/API/SDKDocs/cliusing.htm#AdvancedJSONOptions
+
+--homeregion [text]
+
+The region of the tenancy.
+
+--idtoken [text]
+
+IdToken that provided by multi cloud provider, which help to validate
+the email.
+
+--ocid [text]
+
+User OCID for Oracle Identity Cloud Service (IDCS) users who also have
+a federated Oracle Cloud Infrastructure account. User OCID is
+mandatory for OCI Users and optional for Multicloud users.
+
+--problem-type [text]
+
+The kind of support request.
+
+Accepted values are:
+
+   ACCOUNT, LEGACY_LIMIT, LIMIT, TAXONOMY, TECH
+
+
+Global Parameters
+=================
+
+Use "oci --help" for help on global parameters.
+
+"--auth-purpose", "--auth", "--cert-bundle", "--cli-auto-prompt", "--
+cli-rc-file", "--config-file", "--connection-timeout", "--debug", "--
+defaults-file", "--endpoint", "--generate-full-command-json-input", "
+--generate-param-json-input", "--help", "--latest-version", "--max-
+retries", "--no-retry", "--opc-client-request-id", "--opc-request-id",
+"--output", "--profile", "--proxy", "--query", "--raw-output", "--
+read-timeout", "--realm-specific-endpoint", "--region", "--release-
+info", "--request-id", "--version", "-?", "-d", "-h", "-i", "-v"

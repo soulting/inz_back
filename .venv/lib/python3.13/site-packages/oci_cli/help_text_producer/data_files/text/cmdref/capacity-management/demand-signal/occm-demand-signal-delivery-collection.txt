@@ -1,0 +1,15 @@
+occm-demand-signal-delivery-collection
+**************************************
+
+
+Description
+===========
+
+A list containing detailed delivery information about different
+resource demanded as part of the demand signal.
+
+
+Available Commands
+==================
+
+* list

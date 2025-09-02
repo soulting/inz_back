@@ -1,0 +1,17 @@
+worker-nodes
+************
+
+
+Description
+===========
+
+Increases the size (scales out) a cluster by adding worker
+nodes(data/compute). The added worker nodes will have the same shape
+and will have the same amount of attached block storage as other
+worker nodes in the cluster. [Command Reference](addWorkerNodes)
+
+
+Available Commands
+==================
+
+* add

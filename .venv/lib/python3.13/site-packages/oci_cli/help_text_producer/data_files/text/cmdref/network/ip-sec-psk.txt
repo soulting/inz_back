@@ -1,0 +1,16 @@
+ip-sec-psk
+**********
+
+
+Description
+===========
+
+The tunnel’s shared secret (pre-shared key).
+
+
+Available Commands
+==================
+
+* get
+
+* update

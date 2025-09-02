@@ -1,0 +1,79 @@
+opensearch
+**********
+
+
+Description
+===========
+
+The OpenSearch service CLI provides access to OCI Search Service with
+OpenSearch.
+
+
+Available Commands
+==================
+
+* backup
+
+  * delete
+
+  * get
+
+  * list
+
+  * update
+
+* cluster
+
+  * backup
+
+  * configureoutboundcluster
+
+  * create
+
+  * delete
+
+  * get
+
+  * list
+
+  * list-versions
+
+  * resizehorizontal
+
+  * resizevertical
+
+  * restore
+
+  * shapes-details
+
+    * list
+
+  * update
+
+  * upgrade
+
+  * work-request
+
+    * get
+
+    * list
+
+  * work-request-error
+
+    * list
+
+  * work-request-log-entry
+
+    * list
+
+* pipeline
+
+  * create
+
+  * delete
+
+  * get
+
+  * list
+
+  * update

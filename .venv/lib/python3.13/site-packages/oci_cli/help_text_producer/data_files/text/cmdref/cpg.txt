@@ -1,0 +1,46 @@
+cpg
+***
+
+
+Description
+===========
+
+CLI for managing cluster placement groups.
+
+
+Available Commands
+==================
+
+* cluster-placement-group
+
+  * activate
+
+  * change-compartment
+
+  * create
+
+  * deactivate
+
+  * delete
+
+  * get
+
+  * list
+
+  * update
+
+* work-request
+
+  * cancel
+
+  * get
+
+  * list
+
+* work-request-error
+
+  * list
+
+* work-request-log-entry
+
+  * list

@@ -1,0 +1,27 @@
+discovery-job
+*************
+
+
+Description
+===========
+
+A data discovery job. It helps track job’s metadata as well as result
+statistics.
+
+
+Available Commands
+==================
+
+* change-compartment
+
+* create
+
+* delete
+
+* get
+
+* list
+
+* list-discovery-job-results
+
+* patch-discovery-job-results

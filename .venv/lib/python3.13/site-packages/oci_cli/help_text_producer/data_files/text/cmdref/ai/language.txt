@@ -1,0 +1,118 @@
+language
+********
+
+
+Description
+===========
+
+Language group
+
+
+Available Commands
+==================
+
+* batch-detect-entities
+
+* batch-detect-health-entities
+
+* batch-detect-key-phrases
+
+* batch-detect-language
+
+* batch-detect-pii-entities
+
+* batch-detect-sentiments
+
+* batch-detect-text-classification
+
+* batch-language-translation
+
+* detect-entities
+
+* detect-key-phrases
+
+* detect-language
+
+* detect-sentiments
+
+* detect-text-classification
+
+* endpoint
+
+  * change-compartment
+
+  * create
+
+  * delete
+
+  * get
+
+  * list
+
+  * update
+
+* evaluation-result
+
+  * list
+
+* job
+
+  * cancel
+
+  * change-compartment
+
+  * create
+
+  * delete
+
+  * get
+
+  * list
+
+  * update
+
+* model
+
+  * change-compartment
+
+  * create
+
+  * delete
+
+  * get
+
+  * list
+
+  * update
+
+* model-type-info
+
+  * get
+
+* project
+
+  * change-compartment
+
+  * create
+
+  * delete
+
+  * get
+
+  * list
+
+  * update
+
+* work-request
+
+  * error
+
+    * list
+
+  * get
+
+  * list
+
+  * log
+
+    * list

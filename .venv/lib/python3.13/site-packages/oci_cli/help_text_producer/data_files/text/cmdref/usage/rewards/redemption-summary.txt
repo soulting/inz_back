@@ -1,0 +1,15 @@
+redemption-summary
+******************
+
+
+Description
+===========
+
+The redemption summary for the requested subscription ID and date
+range.
+
+
+Available Commands
+==================
+
+* list-redemptions

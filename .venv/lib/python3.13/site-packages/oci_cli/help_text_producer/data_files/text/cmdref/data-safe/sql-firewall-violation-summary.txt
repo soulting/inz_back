@@ -1,0 +1,17 @@
+sql-firewall-violation-summary
+******************************
+
+
+Description
+===========
+
+The resource represents the SQL violations collected from the target
+database by Oracle Data Safe.
+
+
+Available Commands
+==================
+
+* list-sql-firewall-violation-analytics
+
+* list-sql-firewall-violations

@@ -1,0 +1,25 @@
+desktop
+*******
+
+
+Description
+===========
+
+Provides information about a desktop including name, state, id,
+configuration, owner, and time created.
+
+
+Available Commands
+==================
+
+* delete
+
+* get
+
+* list
+
+* start
+
+* stop
+
+* update

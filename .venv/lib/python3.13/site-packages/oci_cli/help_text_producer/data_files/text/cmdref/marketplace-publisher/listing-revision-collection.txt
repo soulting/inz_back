@@ -1,0 +1,14 @@
+listing-revision-collection
+***************************
+
+
+Description
+===========
+
+Results of listing revision search. Contains Listing revision items.
+
+
+Available Commands
+==================
+
+* list-listing-revisions

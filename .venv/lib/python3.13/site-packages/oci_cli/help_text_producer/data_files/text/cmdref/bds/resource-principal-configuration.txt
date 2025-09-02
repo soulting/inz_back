@@ -1,0 +1,14 @@
+resource-principal-configuration
+********************************
+
+
+Description
+===========
+
+Resource Principal Session Token Details.
+
+
+Available Commands
+==================
+
+* remove

@@ -1,0 +1,48 @@
+job
+***
+
+
+Description
+===========
+
+The properties of a job. A job performs the actions that are defined
+in your Terraform configuration. For instructions on managing jobs,
+see Managing Jobs. For more information about jobs, see Key Concepts.
+
+
+Available Commands
+==================
+
+* cancel
+
+* create
+
+* create-apply-job
+
+* create-apply-rollback-job
+
+* create-destroy-job
+
+* create-import-tf-state-job
+
+* create-plan-job
+
+* create-plan-rollback-job
+
+* get
+
+* get-detailed-log-content
+
+* get-job-logs
+
+* get-job-logs-content
+
+* get-job-tf-config
+
+* get-job-tf-plan
+
+* get-job-tf-state
+
+* list
+
+* update

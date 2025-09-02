@@ -1,0 +1,482 @@
+log-analytics
+*************
+
+
+Description
+===========
+
+The LogAnalytics CLI for the LogAnalytics service.
+
+
+Available Commands
+==================
+
+* assoc
+
+  * delete-assocs
+
+  * get-assoc-summary
+
+  * list-associated-entities
+
+  * list-entity-source-assocs
+
+  * list-source-assocs
+
+  * upsert-assocs
+
+  * validate-assoc-params
+
+* category
+
+  * get
+
+  * list
+
+  * list-resource-category
+
+  * remove-resource-category
+
+  * update-resource-category
+
+* char-encoding-collection
+
+  * list-supported-encodings
+
+* config-work-request
+
+  * get-config-work-request
+
+  * list-config-work-requests
+
+* content-export
+
+  * export-custom-content
+
+* content-import
+
+  * import-custom-content
+
+* em-bridge
+
+  * change-compartment
+
+  * create
+
+  * delete
+
+  * get
+
+  * list
+
+  * summary
+
+  * update
+
+* entity
+
+  * add-associations
+
+  * change-compartment
+
+  * create
+
+  * delete
+
+  * get
+
+  * list
+
+  * list-associations
+
+  * remove-associations
+
+  * summary
+
+  * update
+
+  * upload-discovery-data
+
+* entity-topology
+
+  * list
+
+* entity-type
+
+  * create
+
+  * delete
+
+  * get
+
+  * list
+
+  * update
+
+* field
+
+  * delete-field
+
+  * get-field
+
+  * get-fields-summary
+
+  * get-usages
+
+  * list-fields
+
+  * upsert-field
+
+* ingest-time-rule
+
+  * change-compartment
+
+  * create
+
+  * delete
+
+  * disable
+
+  * enable
+
+  * get
+
+  * list
+
+  * update
+
+* label
+
+  * batch-get-basic-info
+
+  * delete-label
+
+  * get-label
+
+  * get-label-summary
+
+  * list-label-priorities
+
+  * list-label-source-details
+
+  * list-labels
+
+  * upsert-label
+
+* log-group
+
+  * change-compartment
+
+  * create
+
+  * delete
+
+  * get
+
+  * get-log-analytics-log-groups-summary
+
+  * list
+
+  * update
+
+* lookup
+
+  * append-data
+
+  * change-compartment
+
+  * delete
+
+  * get
+
+  * get-summary
+
+  * list
+
+  * register-lookup
+
+  * update
+
+  * update-data
+
+* namespace
+
+  * get
+
+  * list
+
+  * offboard
+
+  * onboard
+
+* object-collection-rule
+
+  * change-compartment
+
+  * create
+
+  * delete
+
+  * get
+
+  * list
+
+  * update
+
+* parser
+
+  * delete-parser
+
+  * extract-structured-log-field-paths
+
+  * extract-structured-log-header-paths
+
+  * get-parser
+
+  * get-parser-summary
+
+  * list-parser-actions
+
+  * list-parser-functions
+
+  * list-parser-meta-plugins
+
+  * list-parsers
+
+  * test-parser
+
+  * upsert-parser
+
+* preference
+
+  * get
+
+  * remove
+
+  * update
+
+* property
+
+  * list-effective-properties
+
+  * list-properties-metadata
+
+* query
+
+  * compare-content
+
+  * export
+
+  * filter
+
+  * get-query-result
+
+  * parse
+
+  * search
+
+  * suggest
+
+* query-work-request
+
+  * background
+
+  * cancel
+
+  * get
+
+  * list
+
+* rule
+
+  * get-rules-summary
+
+  * list
+
+* scheduled-task
+
+  * change-compartment
+
+  * clean
+
+  * create-acceleration-task
+
+  * create-standard-task
+
+  * delete
+
+  * get
+
+  * list
+
+  * pause
+
+  * resume
+
+  * run
+
+  * update
+
+  * verify
+
+* source
+
+  * add-event-types
+
+  * delete-source
+
+  * disable-auto-assoc
+
+  * disable-event-types
+
+  * enable-auto-assoc
+
+  * enable-event-types
+
+  * get-column-names
+
+  * get-source
+
+  * get-source-summary
+
+  * list-associable-entities
+
+  * list-auto-assocs
+
+  * list-event-types
+
+  * list-meta-source-types
+
+  * list-source-extfield-defs
+
+  * list-source-functions
+
+  * list-source-label-operators
+
+  * list-source-patterns
+
+  * list-sources
+
+  * remove-event-types
+
+  * upsert-source
+
+  * validate-label-condition
+
+  * validate-log-endpoint
+
+  * validate-loglist-endpoint
+
+  * validate-source
+
+  * validate-source-extfield-details
+
+* storage
+
+  * assign-encryption-key
+
+  * disable-archiving
+
+  * enable-archiving
+
+  * estimate-purge-data-size
+
+  * estimate-recall-data-size
+
+  * estimate-release-data-size
+
+  * get
+
+  * get-log-sets-count
+
+  * get-recall-count
+
+  * get-recalled-data-size
+
+  * get-storage-usage
+
+  * get-storage-work-request
+
+  * list-encryption-key-info
+
+  * list-log-sets
+
+  * list-overlapping-recalls
+
+  * list-recalled-data
+
+  * list-recalled-info
+
+  * list-storage-work-request-errors
+
+  * list-storage-work-requests
+
+  * purge-storage-data
+
+  * recall-archived-data
+
+  * release-recalled-data
+
+  * update
+
+* template
+
+  * get
+
+  * list
+
+* timezone-collection
+
+  * list-supported-timezones
+
+* upload
+
+  * delete
+
+  * delete-upload-file
+
+  * delete-upload-warning
+
+  * get
+
+  * get-unprocessed-bucket
+
+  * list
+
+  * list-upload-files
+
+  * list-upload-warnings
+
+  * set-unprocessed-bucket
+
+  * upload-log-events-file
+
+  * upload-log-file
+
+  * upload-otlp-logs
+
+  * validate-file
+
+  * validate-source-mapping
+
+* warning
+
+  * list
+
+  * suppress
+
+  * unsuppress
+
+* work-request
+
+  * get
+
+  * list
+
+* work-request-error
+
+  * list
+
+* work-request-log
+
+  * list

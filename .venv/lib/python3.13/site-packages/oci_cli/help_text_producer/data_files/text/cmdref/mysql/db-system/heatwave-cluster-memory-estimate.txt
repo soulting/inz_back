@@ -1,0 +1,19 @@
+heatwave-cluster-memory-estimate
+********************************
+
+
+Description
+===========
+
+HeatWave cluster memory estimate that can be used to determine a
+suitable HeatWave cluster size. For each MySQL user table the
+estimated memory footprint when the table is loaded to the HeatWave
+cluster memory is returned.
+
+
+Available Commands
+==================
+
+* generate
+
+* get

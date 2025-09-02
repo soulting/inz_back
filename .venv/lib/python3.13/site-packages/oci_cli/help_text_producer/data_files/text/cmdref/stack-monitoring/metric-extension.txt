@@ -1,0 +1,54 @@
+metric-extension
+****************
+
+
+Description
+===========
+
+Detailed information of the Metric Extension resource
+
+
+Available Commands
+==================
+
+* change-compartment
+
+* create
+
+* create-http-metric-ext
+
+* create-jmx-metric-ext
+
+* create-os-cmd-metric-ext
+
+* create-sql-metric-ext
+
+* delete
+
+* disable
+
+* enable
+
+* export
+
+* get
+
+* list
+
+* publish
+
+* summarize-metrics
+
+* summarize-resources
+
+* test
+
+* update
+
+* update-http-metric-ext
+
+* update-jmx-metric-ext
+
+* update-os-cmd-metric-ext
+
+* update-sql-metric-ext

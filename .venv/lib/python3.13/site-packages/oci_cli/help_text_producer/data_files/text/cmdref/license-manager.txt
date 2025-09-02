@@ -1,0 +1,59 @@
+license-manager
+***************
+
+
+Description
+===========
+
+Use the License Manager CLI to manage product licenses and license
+records. For more information, see License Manager Overview.
+
+
+Available Commands
+==================
+
+* bulk-upload-template
+
+  * get
+
+* configuration
+
+  * get
+
+  * update
+
+* license-metric
+
+  * get
+
+* license-record
+
+  * create
+
+  * delete
+
+  * get
+
+  * import-licenses
+
+  * list
+
+  * update
+
+* product-license
+
+  * create
+
+  * delete
+
+  * get
+
+  * list
+
+  * list-product-license-consumers
+
+  * list-top-utilized-product-licenses
+
+  * list-top-utilized-resources
+
+  * update

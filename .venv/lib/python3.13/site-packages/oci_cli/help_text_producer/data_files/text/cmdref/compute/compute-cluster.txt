@@ -1,0 +1,34 @@
+compute-cluster
+***************
+
+
+Description
+===========
+
+A remote direct memory access (RDMA) network group.
+
+A cluster network on a compute cluster is a group of high performance
+computing (HPC), GPU, or optimized instances that are connected with
+an ultra low-latency network.
+
+Use compute clusters when you want to manage instances in the cluster
+individually in the RDMA network group.
+
+For details about cluster networks that use instance pools to manage
+groups of identical instances, see ClusterNetwork.
+
+
+Available Commands
+==================
+
+* change-compartment
+
+* create
+
+* delete
+
+* get
+
+* list
+
+* update

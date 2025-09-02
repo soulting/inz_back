@@ -1,0 +1,21 @@
+drg-route-distribution-statement
+********************************
+
+
+Description
+===========
+
+A single statement within a route distribution. All match criteria in
+a statement must be met for the action to take place.
+
+
+Available Commands
+==================
+
+* add
+
+* list
+
+* remove
+
+* update

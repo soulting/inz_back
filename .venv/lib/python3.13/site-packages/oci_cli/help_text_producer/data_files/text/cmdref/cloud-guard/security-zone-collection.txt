@@ -1,0 +1,14 @@
+security-zone-collection
+************************
+
+
+Description
+===========
+
+A collection of security zones. Results of a security zone search.
+
+
+Available Commands
+==================
+
+* list-security-zones

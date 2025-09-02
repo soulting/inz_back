@@ -1,0 +1,38 @@
+dedicated-vm-host
+*****************
+
+
+Description
+===========
+
+A dedicated virtual machine host lets you host multiple VM instances
+on a dedicated server that is not shared with other tenancies.
+
+
+Available Commands
+==================
+
+* change-compartment
+
+* create
+
+* create-dedicated-vm-host-compute-bare-metal-host-placement-
+  constraint-details
+
+* create-dedicated-vm-host-host-group-placement-constraint-details
+
+* delete
+
+* get
+
+* host-shape
+
+  * list
+
+* instance-shape
+
+  * list
+
+* list
+
+* update

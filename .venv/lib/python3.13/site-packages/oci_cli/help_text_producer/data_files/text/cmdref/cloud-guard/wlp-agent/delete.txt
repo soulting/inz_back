@@ -1,0 +1,122 @@
+"delete"
+********
+
+* Description
+
+* Usage
+
+* Required Parameters
+
+* Optional Parameters
+
+* Global Parameters
+
+* Example using required parameter
+
+
+Description
+===========
+
+Deletes and unregisters the WLP agent for an on-premise resource. x
+-obmcs-splat: routing:   strategy: route-to-any-ad serviceList: [
+‘cloudguard-cp-SPLAT_ENV’ ] resources:   wlpAgent:
+serviceResourceName: WlpAgent     targetCompartmentId:
+downstream.getOr404(‘cloudguard-cp-SPLAT_ENV’, ‘GetWlpAgent’,
+request.resourceId).compartmentId     actionKind: delete
+resourceOcid: request.resourceId     reconciliationCanStartAfterSecs:
+30     permissions: [ “WLP_AGENT_DELETE” ] authorization:   mode:
+automated   check:
+resources[‘wlpAgent’].grantedPermissions.contains(‘WLP_AGENT_DELETE’)
+allowCrossTenancy: true tagStore:   mode: automated
+maximumAttemptCount: 3 throttling:   perUserLimit:     rpsLimit: 15
+perTenantLimit:     rpsLimit: 30 quotas:   mode: automated search:
+mode: backfilling   operationResourceName: wlpAgent lock:   mode: test
+operationResourceName: wlpAgent
+
+
+Usage
+=====
+
+   oci cloud-guard wlp-agent delete [OPTIONS]
+
+
+Required Parameters
+===================
+
+--wlp-agent-id [text]
+
+WLP agent OCID.
+
+
+Optional Parameters
+===================
+
+--force
+
+Perform deletion without prompting for confirmation.
+
+--from-json [text]
+
+Provide input to this command as a JSON document from a file using the
+file://path-to/file syntax.
+
+The "--generate-full-command-json-input" option can be used to
+generate a sample json file to be used with this command option. The
+key names are pre-populated and match the command option names
+(converted to camelCase format, e.g. compartment-id –> compartmentId),
+while the values of the keys need to be populated by the user before
+using the sample file as an input to this command. For any command
+option that accepts multiple values, the value of the key can be a
+JSON array.
+
+Options can still be provided on the command line. If an option exists
+in both the JSON document and the command line then the command line
+specified value will be used.
+
+For examples on usage of this option, please see our “using CLI with
+advanced JSON options” link: https://docs.cloud.oracle.com/iaas/Conte
+nt/API/SDKDocs/cliusing.htm#AdvancedJSONOptions
+
+--if-match [text]
+
+For optimistic concurrency control. In the PUT or DELETE call for a
+resource, set the *if-match* parameter to the value of the etag from a
+previous GET or POST response for that resource. The resource will be
+updated or deleted only if the etag you provide matches the resource’s
+current etag value.
+
+
+Global Parameters
+=================
+
+Use "oci --help" for help on global parameters.
+
+"--auth-purpose", "--auth", "--cert-bundle", "--cli-auto-prompt", "--
+cli-rc-file", "--config-file", "--connection-timeout", "--debug", "--
+defaults-file", "--endpoint", "--generate-full-command-json-input", "
+--generate-param-json-input", "--help", "--latest-version", "--max-
+retries", "--no-retry", "--opc-client-request-id", "--opc-request-id",
+"--output", "--profile", "--proxy", "--query", "--raw-output", "--
+read-timeout", "--realm-specific-endpoint", "--region", "--release-
+info", "--request-id", "--version", "-?", "-d", "-h", "-i", "-v"
+
+
+Example using required parameter
+================================
+
+Copy the following CLI commands into a file named example.sh. Run the
+command by typing “bash example.sh” and replacing the example
+parameters with your own.
+
+Please note this sample will only work in the POSIX-compliant bash-
+like shell. You need to set up the OCI configuration and appropriate
+security policies before trying the examples.
+
+       export agent_version=<substitute-value-of-agent_version> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/cloud-guard/wlp-agent/create.html#cmdoption-agent-version
+       export certificate_signed_request=<substitute-value-of-certificate_signed_request> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/cloud-guard/wlp-agent/create.html#cmdoption-certificate-signed-request
+       export compartment_id=<substitute-value-of-compartment_id> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/cloud-guard/wlp-agent/create.html#cmdoption-compartment-id
+       export os_info=<substitute-value-of-os_info> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/cloud-guard/wlp-agent/create.html#cmdoption-os-info
+
+       wlp_agent_id=$(oci cloud-guard wlp-agent create --agent-version $agent_version --certificate-signed-request $certificate_signed_request --compartment-id $compartment_id --os-info $os_info --query data.id --raw-output)
+
+       oci cloud-guard wlp-agent delete --wlp-agent-id $wlp_agent_id

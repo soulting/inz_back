@@ -1,0 +1,18 @@
+monitored-instance
+******************
+
+
+Description
+===========
+
+Description of Monitored Instance.
+
+
+Available Commands
+==================
+
+* activate-plugin
+
+* get
+
+* publish-top-processes

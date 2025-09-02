@@ -1,0 +1,20 @@
+adhoc-query
+***********
+
+
+Description
+===========
+
+Details of a adhoc query.
+
+
+Available Commands
+==================
+
+* create
+
+* delete
+
+* get
+
+* list

@@ -1,0 +1,365 @@
+"create-task-from-rest-task"
+****************************
+
+* Description
+
+* Usage
+
+* Required Parameters
+
+* Optional Parameters
+
+* Global Parameters
+
+* Example using required parameter
+
+
+Description
+===========
+
+Creates a new task ready for performing data integrations. There are
+specialized types of tasks that include data loader and integration
+tasks.
+
+
+Usage
+=====
+
+   oci data-integration task create-task-from-rest-task [OPTIONS]
+
+
+Required Parameters
+===================
+
+--identifier [text]
+
+Value can only contain upper case letters, underscore, and numbers. It
+should begin with upper case letter or underscore. The value can be
+modified.
+
+--name [text]
+
+Free form text without any restriction on permitted characters. Name
+can have letters, numbers, and special characters. The value is
+editable and is restricted to 1000 characters.
+
+--registry-metadata [complex type]
+
+This is a complex type whose value must be valid JSON. The value can
+be provided as a string on the command line or passed in as a file
+using the file://path/to/file syntax.
+
+The "--generate-param-json-input" option can be used to generate an
+example of the JSON which must be provided. We recommend storing this
+example in a file, modifying it as needed and then passing it back in
+via the file:// syntax.
+
+--workspace-id [text]
+
+The workspace ID.
+
+
+Optional Parameters
+===================
+
+--api-call-mode [text]
+
+The REST invocation pattern to use. ASYNC_OCI_WORKREQUEST is being
+deprecated as well as cancelEndpoint/MethodType.
+
+Accepted values are:
+
+   ASYNC_GENERIC, ASYNC_OCI_WORKREQUEST, SYNCHRONOUS
+
+--apiendpoint [complex type]
+
+This is a complex type whose value must be valid JSON. The value can
+be provided as a string on the command line or passed in as a file
+using the file://path/to/file syntax.
+
+The "--generate-param-json-input" option can be used to generate an
+example of the JSON which must be provided. We recommend storing this
+example in a file, modifying it as needed and then passing it back in
+via the file:// syntax.
+
+--auth-config [complex type]
+
+This is a complex type whose value must be valid JSON. The value can
+be provided as a string on the command line or passed in as a file
+using the file://path/to/file syntax.
+
+The "--generate-param-json-input" option can be used to generate an
+example of the JSON which must be provided. We recommend storing this
+example in a file, modifying it as needed and then passing it back in
+via the file:// syntax.
+
+--auth-details [complex type]
+
+This is a complex type whose value must be valid JSON. The value can
+be provided as a string on the command line or passed in as a file
+using the file://path/to/file syntax.
+
+The "--generate-param-json-input" option can be used to generate an
+example of the JSON which must be provided. We recommend storing this
+example in a file, modifying it as needed and then passing it back in
+via the file:// syntax.
+
+--cancel-endpoint [complex type]
+
+This is a complex type whose value must be valid JSON. The value can
+be provided as a string on the command line or passed in as a file
+using the file://path/to/file syntax.
+
+The "--generate-param-json-input" option can be used to generate an
+example of the JSON which must be provided. We recommend storing this
+example in a file, modifying it as needed and then passing it back in
+via the file:// syntax.
+
+--cancel-method-type [text]
+
+The REST method to use for canceling the original request.
+
+Accepted values are:
+
+   DELETE, GET, PATCH, POST, PUT
+
+--cancel-rest-config [complex type]
+
+This is a complex type whose value must be valid JSON. The value can
+be provided as a string on the command line or passed in as a file
+using the file://path/to/file syntax.
+
+The "--generate-param-json-input" option can be used to generate an
+example of the JSON which must be provided. We recommend storing this
+example in a file, modifying it as needed and then passing it back in
+via the file:// syntax.
+
+--config-provider-delegate [complex type]
+
+This is a complex type whose value must be valid JSON. The value can
+be provided as a string on the command line or passed in as a file
+using the file://path/to/file syntax.
+
+The "--generate-param-json-input" option can be used to generate an
+example of the JSON which must be provided. We recommend storing this
+example in a file, modifying it as needed and then passing it back in
+via the file:// syntax.
+
+--description [text]
+
+Detailed description for the object.
+
+--execute-rest-config [complex type]
+
+This is a complex type whose value must be valid JSON. The value can
+be provided as a string on the command line or passed in as a file
+using the file://path/to/file syntax.
+
+The "--generate-param-json-input" option can be used to generate an
+example of the JSON which must be provided. We recommend storing this
+example in a file, modifying it as needed and then passing it back in
+via the file:// syntax.
+
+--from-json [text]
+
+Provide input to this command as a JSON document from a file using the
+file://path-to/file syntax.
+
+The "--generate-full-command-json-input" option can be used to
+generate a sample json file to be used with this command option. The
+key names are pre-populated and match the command option names
+(converted to camelCase format, e.g. compartment-id –> compartmentId),
+while the values of the keys need to be populated by the user before
+using the sample file as an input to this command. For any command
+option that accepts multiple values, the value of the key can be a
+JSON array.
+
+Options can still be provided on the command line. If an option exists
+in both the JSON document and the command line then the command line
+specified value will be used.
+
+For examples on usage of this option, please see our “using CLI with
+advanced JSON options” link: https://docs.cloud.oracle.com/iaas/Conte
+nt/API/SDKDocs/cliusing.htm#AdvancedJSONOptions
+
+--headers [complex type]
+
+Headers data for the request. This is a complex type whose value must
+be valid JSON. The value can be provided as a string on the command
+line or passed in as a file using the file://path/to/file syntax.
+
+The "--generate-param-json-input" option can be used to generate an
+example of the JSON which must be provided. We recommend storing this
+example in a file, modifying it as needed and then passing it back in
+via the file:// syntax.
+
+--input-ports [complex type]
+
+An array of input ports.
+
+This option is a JSON list with items of type InputPort.  For
+documentation on InputPort please see our API reference: https://docs
+.cloud.oracle.com/api/#/en/dataintegration/20200430/datatypes/InputPo
+rt. This is a complex type whose value must be valid JSON. The value
+can be provided as a string on the command line or passed in as a file
+using the file://path/to/file syntax.
+
+The "--generate-param-json-input" option can be used to generate an
+example of the JSON which must be provided. We recommend storing this
+example in a file, modifying it as needed and then passing it back in
+via the file:// syntax.
+
+--is-concurrent-allowed [boolean]
+
+Whether the same task can be executed concurrently.
+
+--json-data [text]
+
+JSON data for payload body. This property is deprecated, use
+ExecuteRestCallConfig’s payload config param instead.
+
+--key [text]
+
+Generated key that can be used in API calls to identify task. On
+scenarios where reference to the task is needed, a value can be passed
+in create.
+
+--method-type [text]
+
+The REST method to use. This property is deprecated, use
+ExecuteRestCallConfig’s methodType property instead.
+
+Accepted values are:
+
+   DELETE, GET, PATCH, POST, PUT
+
+--model-version [text]
+
+The object’s model version.
+
+--object-status [integer]
+
+The status of an object that can be set to value 1 for shallow
+references across objects, other values reserved.
+
+--op-config-values [complex type]
+
+This is a complex type whose value must be valid JSON. The value can
+be provided as a string on the command line or passed in as a file
+using the file://path/to/file syntax.
+
+The "--generate-param-json-input" option can be used to generate an
+example of the JSON which must be provided. We recommend storing this
+example in a file, modifying it as needed and then passing it back in
+via the file:// syntax.
+
+--output-ports [complex type]
+
+An array of output ports.
+
+This option is a JSON list with items of type OutputPort.  For
+documentation on OutputPort please see our API reference: https://doc
+s.cloud.oracle.com/api/#/en/dataintegration/20200430/datatypes/Output
+Port. This is a complex type whose value must be valid JSON. The value
+can be provided as a string on the command line or passed in as a file
+using the file://path/to/file syntax.
+
+The "--generate-param-json-input" option can be used to generate an
+example of the JSON which must be provided. We recommend storing this
+example in a file, modifying it as needed and then passing it back in
+via the file:// syntax.
+
+--parameters [complex type]
+
+An array of parameters.
+
+This option is a JSON list with items of type Parameter.  For
+documentation on Parameter please see our API reference: https://docs
+.cloud.oracle.com/api/#/en/dataintegration/20200430/datatypes/Paramet
+er. This is a complex type whose value must be valid JSON. The value
+can be provided as a string on the command line or passed in as a file
+using the file://path/to/file syntax.
+
+The "--generate-param-json-input" option can be used to generate an
+example of the JSON which must be provided. We recommend storing this
+example in a file, modifying it as needed and then passing it back in
+via the file:// syntax.
+
+--parent-ref [complex type]
+
+This is a complex type whose value must be valid JSON. The value can
+be provided as a string on the command line or passed in as a file
+using the file://path/to/file syntax.
+
+The "--generate-param-json-input" option can be used to generate an
+example of the JSON which must be provided. We recommend storing this
+example in a file, modifying it as needed and then passing it back in
+via the file:// syntax.
+
+--poll-rest-call-config [complex type]
+
+This is a complex type whose value must be valid JSON. The value can
+be provided as a string on the command line or passed in as a file
+using the file://path/to/file syntax.
+
+The "--generate-param-json-input" option can be used to generate an
+example of the JSON which must be provided. We recommend storing this
+example in a file, modifying it as needed and then passing it back in
+via the file:// syntax.
+
+--typed-expressions [complex type]
+
+List of typed expressions.
+
+This option is a JSON list with items of type TypedExpression.  For
+documentation on TypedExpression please see our API reference: https:
+//docs.cloud.oracle.com/api/#/en/dataintegration/20200430/datatypes/T
+ypedExpression. This is a complex type whose value must be valid JSON.
+The value can be provided as a string on the command line or passed in
+as a file using the file://path/to/file syntax.
+
+The "--generate-param-json-input" option can be used to generate an
+example of the JSON which must be provided. We recommend storing this
+example in a file, modifying it as needed and then passing it back in
+via the file:// syntax.
+
+
+Global Parameters
+=================
+
+Use "oci --help" for help on global parameters.
+
+"--auth-purpose", "--auth", "--cert-bundle", "--cli-auto-prompt", "--
+cli-rc-file", "--config-file", "--connection-timeout", "--debug", "--
+defaults-file", "--endpoint", "--generate-full-command-json-input", "
+--generate-param-json-input", "--help", "--latest-version", "--max-
+retries", "--no-retry", "--opc-client-request-id", "--opc-request-id",
+"--output", "--profile", "--proxy", "--query", "--raw-output", "--
+read-timeout", "--realm-specific-endpoint", "--region", "--release-
+info", "--request-id", "--version", "-?", "-d", "-h", "-i", "-v"
+
+
+Example using required parameter
+================================
+
+Copy and paste the following example into a JSON file, replacing the
+example parameters with your own.
+
+       oci data-integration task create-task-from-rest-task --generate-param-json-input registry-metadata > registry-metadata.json
+
+Copy the following CLI commands into a file named example.sh. Run the
+command by typing “bash example.sh” and replacing the example
+parameters with your own.
+
+Please note this sample will only work in the POSIX-compliant bash-
+like shell. You need to set up the OCI configuration and appropriate
+security policies before trying the examples.
+
+       export compartment_id=<substitute-value-of-compartment_id> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/data-integration/workspace/create.html#cmdoption-compartment-id
+       export display_name=<substitute-value-of-display_name> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/data-integration/workspace/create.html#cmdoption-display-name
+       export is_private_network=<substitute-value-of-is_private_network> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/data-integration/workspace/create.html#cmdoption-is-private-network
+       export identifier=<substitute-value-of-identifier> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/data-integration/task/create-task-from-rest-task.html#cmdoption-identifier
+
+       workspace_id=$(oci data-integration workspace create --compartment-id $compartment_id --display-name $display_name --is-private-network $is_private_network --query data.id --raw-output)
+
+       oci data-integration task create-task-from-rest-task --identifier $identifier --name $name --registry-metadata file://registry-metadata.json --workspace-id $workspace_id

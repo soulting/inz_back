@@ -1,0 +1,56 @@
+distributed-autonomous-db-service
+*********************************
+
+
+Description
+===========
+
+Use the Globally Distributed Database service CLI to create and manage
+the Globally distributed databases.
+
+
+Available Commands
+==================
+
+* distributed-autonomous-database
+
+  * add
+
+  * change-compartment
+
+  * configure-distributed-autonomous-database-gsms
+
+  * configure-distributed-autonomous-database-sharding
+
+  * create
+
+  * delete
+
+  * download-distributed-autonomous-database-gsm-certificate-signing-
+    request
+
+  * generate-distributed-autonomous-database-gsm-certificate-signing-
+    request
+
+  * generate-distributed-autonomous-database-wallet
+
+  * get
+
+  * patch
+
+  * rotate-distributed-autonomous-database-passwords
+
+  * start
+
+  * stop
+
+  * update
+
+  * upload-distributed-autonomous-database-signed-certificate-and-
+    generate-wallet
+
+  * validate-distributed-autonomous-database-network
+
+* distributed-autonomous-database-collection
+
+  * list-distributed-autonomous-databases

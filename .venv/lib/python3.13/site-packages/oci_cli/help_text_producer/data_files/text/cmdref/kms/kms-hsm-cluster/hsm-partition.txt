@@ -1,0 +1,16 @@
+hsm-partition
+*************
+
+
+Description
+===========
+
+Dedicated KMS-HSM Partition Management
+
+
+Available Commands
+==================
+
+* get
+
+* list

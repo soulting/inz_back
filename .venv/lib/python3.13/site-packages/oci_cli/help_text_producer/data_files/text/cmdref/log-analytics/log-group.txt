@@ -1,0 +1,26 @@
+log-group
+*********
+
+
+Description
+===========
+
+Summary of an Log-Analytics log group.
+
+
+Available Commands
+==================
+
+* change-compartment
+
+* create
+
+* delete
+
+* get
+
+* get-log-analytics-log-groups-summary
+
+* list
+
+* update

@@ -1,0 +1,37 @@
+drg-route-table
+***************
+
+
+Description
+===========
+
+All routing inside the DRG is driven by the contents of DRG route
+tables. DRG route tables contain rules which route packets to a
+particular network destination, represented as a DRG attachment. The
+routing decision for a packet entering a DRG is determined by the
+rules in the DRG route table assigned to the attachment-of-entry.
+
+Each DRG attachment can inject routes in any DRG route table, provided
+there is a statement corresponding to the attachment in the route
+table’s *importDrgRouteDistribution*. You can also insert static
+routes into the DRG route tables.
+
+The DRG route table is always in the same compartment as the DRG.
+There must always be a default DRG route table for each attachment
+type.
+
+
+Available Commands
+==================
+
+* create
+
+* delete
+
+* get
+
+* list
+
+* remove-import-route-distribution
+
+* update

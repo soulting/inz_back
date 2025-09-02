@@ -1,0 +1,15 @@
+provision-collection
+********************
+
+
+Description
+===========
+
+Results of a famProvision search. Contains both FamProvisionSummary
+items and other information, such as metadata.
+
+
+Available Commands
+==================
+
+* list-provisions

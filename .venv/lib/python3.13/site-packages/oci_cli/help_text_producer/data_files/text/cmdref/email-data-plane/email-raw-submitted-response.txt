@@ -1,0 +1,15 @@
+email-raw-submitted-response
+****************************
+
+
+Description
+===========
+
+Response object that is returned to sender upon successfully
+submitting the email request.
+
+
+Available Commands
+==================
+
+* submit-raw-email

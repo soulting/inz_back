@@ -1,0 +1,14 @@
+plugin-error-aggregation
+************************
+
+
+Description
+===========
+
+Aggregation of PluginErrors
+
+
+Available Commands
+==================
+
+* summarize-plugin-errors

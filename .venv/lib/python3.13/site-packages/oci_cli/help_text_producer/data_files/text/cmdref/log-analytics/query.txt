@@ -1,0 +1,28 @@
+query
+*****
+
+
+Description
+===========
+
+Input arguments for running a log anlaytics query. If the request is
+set to run in asynchronous mode then shouldIncludeColumns and
+shouldIncludeFields can be overwritten when retrieving the results.
+
+
+Available Commands
+==================
+
+* compare-content
+
+* export
+
+* filter
+
+* get-query-result
+
+* parse
+
+* search
+
+* suggest

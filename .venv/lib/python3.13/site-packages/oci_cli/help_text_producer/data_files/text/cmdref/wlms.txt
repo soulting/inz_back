@@ -1,0 +1,114 @@
+wlms
+****
+
+
+Description
+===========
+
+WebLogic Management Service is an OCI service that enables a unified
+view and management of WebLogic domains in Oracle Cloud
+Infrastructure. Features include on-demand patching of WebLogic
+domains, rollback of the last applied patch, discovery and management
+of WebLogic instances on a compute host.
+
+
+Available Commands
+==================
+
+* agreement
+
+  * get
+
+* configuration
+
+  * get
+
+  * update
+
+* managed-instance
+
+  * get
+
+  * get-server
+
+  * list
+
+  * list-scan-results
+
+  * list-server-installed-patches
+
+  * list-servers
+
+  * scan
+
+  * update
+
+* required-policy-collection
+
+  * list-required-policies
+
+* resource-inventory
+
+  * summarize
+
+* wls-domain
+
+  * change-compartment
+
+  * create-agreement-record
+
+  * delete
+
+  * get
+
+  * get-credential
+
+  * get-server
+
+  * get-server-backup
+
+  * get-server-backup-content
+
+  * install-latest-patches
+
+  * list
+
+  * list-agreement-records
+
+  * list-applicable-patches
+
+  * list-credentials
+
+  * list-scan-results
+
+  * list-server-backups
+
+  * list-server-installed-patches
+
+  * list-servers
+
+  * restart
+
+  * restore
+
+  * scan
+
+  * set-restart-order
+
+  * start
+
+  * stop
+
+  * update
+
+  * update-credential
+
+* work-request
+
+  * get
+
+  * list
+
+  * list-work-request-errors
+
+  * list-work-request-logs

@@ -1,0 +1,20 @@
+link
+****
+
+
+Description
+===========
+
+Use the Organizations CLI to consolidate multiple OCI tenancies into
+an organization, and centrally manage your tenancies and organization
+resources. For more information, see Organization Management Overview.
+
+
+Available Commands
+==================
+
+* delete
+
+* get
+
+* list

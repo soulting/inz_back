@@ -1,0 +1,14 @@
+governance-instance-collection
+******************************
+
+
+Description
+===========
+
+Results of a GovernanceInstance search.
+
+
+Available Commands
+==================
+
+* list-governance-instances

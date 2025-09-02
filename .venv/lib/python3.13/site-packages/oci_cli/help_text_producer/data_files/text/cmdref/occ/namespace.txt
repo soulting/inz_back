@@ -1,0 +1,15 @@
+namespace
+*********
+
+
+Description
+===========
+
+The list of source services called namespaces emitting metrics that
+you can explore using OCI Control Center.
+
+
+Available Commands
+==================
+
+* list

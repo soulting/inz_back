@@ -1,0 +1,59 @@
+storage
+*******
+
+
+Description
+===========
+
+This is the storage configuration and status of a tenancy in Logging
+Analytics application
+
+
+Available Commands
+==================
+
+* assign-encryption-key
+
+* disable-archiving
+
+* enable-archiving
+
+* estimate-purge-data-size
+
+* estimate-recall-data-size
+
+* estimate-release-data-size
+
+* get
+
+* get-log-sets-count
+
+* get-recall-count
+
+* get-recalled-data-size
+
+* get-storage-usage
+
+* get-storage-work-request
+
+* list-encryption-key-info
+
+* list-log-sets
+
+* list-overlapping-recalls
+
+* list-recalled-data
+
+* list-recalled-info
+
+* list-storage-work-request-errors
+
+* list-storage-work-requests
+
+* purge-storage-data
+
+* recall-archived-data
+
+* release-recalled-data
+
+* update

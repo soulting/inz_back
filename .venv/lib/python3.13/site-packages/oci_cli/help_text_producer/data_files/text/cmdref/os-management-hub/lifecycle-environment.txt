@@ -1,0 +1,25 @@
+lifecycle-environment
+*********************
+
+
+Description
+===========
+
+Defines the lifecycle environment, including the associated versioned
+software sources, lifecycle stages, and managed instances.
+
+
+Available Commands
+==================
+
+* change-compartment
+
+* create
+
+* delete
+
+* get
+
+* list
+
+* update

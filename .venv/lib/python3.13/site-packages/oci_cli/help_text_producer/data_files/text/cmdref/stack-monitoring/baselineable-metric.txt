@@ -1,0 +1,24 @@
+baselineable-metric
+*******************
+
+
+Description
+===========
+
+Summary for the baseline-able metric
+
+
+Available Commands
+==================
+
+* create
+
+* delete
+
+* evaluate
+
+* get
+
+* list
+
+* update

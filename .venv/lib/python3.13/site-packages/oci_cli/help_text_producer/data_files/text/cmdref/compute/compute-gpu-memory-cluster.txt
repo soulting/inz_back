@@ -1,0 +1,24 @@
+compute-gpu-memory-cluster
+**************************
+
+
+Description
+===========
+
+The customer facing object includes GPU memory cluster details.
+
+
+Available Commands
+==================
+
+* change-compartment
+
+* create
+
+* delete
+
+* get
+
+* list
+
+* update

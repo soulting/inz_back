@@ -1,0 +1,22 @@
+em-warehouse
+************
+
+
+Description
+===========
+
+Description of EmWarehouse.
+
+
+Available Commands
+==================
+
+* change-compartment
+
+* create
+
+* delete
+
+* get
+
+* update

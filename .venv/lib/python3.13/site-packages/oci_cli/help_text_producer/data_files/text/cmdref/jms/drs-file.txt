@@ -1,0 +1,20 @@
+drs-file
+********
+
+
+Description
+===========
+
+A Deployment Rule Set(DRS) is a JAR (Java ARchive) file used in Java
+applications to enforce security and manage compatibility between
+different versions of Java applets and web start applications (https:
+//docs.oracle.com/javase/8/docs/technotes/guides/deploy/deployment_ru
+les.html).
+
+
+Available Commands
+==================
+
+* delete
+
+* get

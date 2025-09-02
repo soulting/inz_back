@@ -1,0 +1,30 @@
+audit-trail
+***********
+
+
+Description
+===========
+
+An audit trail represents the source of audit records that provides
+documentary evidence of the sequence of activities in the target
+database. Configuring audit trails in Data Safe, and enabling audit
+data collection on the audit trails copies the audit records from the
+target database’s audit trail into the Data Safe repository.
+
+
+Available Commands
+==================
+
+* delete
+
+* get
+
+* list
+
+* resume
+
+* start
+
+* stop
+
+* update

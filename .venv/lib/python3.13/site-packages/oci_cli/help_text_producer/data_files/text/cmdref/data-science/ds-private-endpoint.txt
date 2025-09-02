@@ -1,0 +1,24 @@
+ds-private-endpoint
+*******************
+
+
+Description
+===========
+
+Data Science private endpoint.
+
+
+Available Commands
+==================
+
+* change-compartment
+
+* create
+
+* delete
+
+* get
+
+* list
+
+* update

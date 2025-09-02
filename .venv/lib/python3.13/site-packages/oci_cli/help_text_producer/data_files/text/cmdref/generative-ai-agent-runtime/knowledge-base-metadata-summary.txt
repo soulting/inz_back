@@ -1,0 +1,15 @@
+knowledge-base-metadata-summary
+*******************************
+
+
+Description
+===========
+
+Represents metadata about a field including its name, type, supported
+operations, and possible values.
+
+
+Available Commands
+==================
+
+* retrieve-metadata

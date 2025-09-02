@@ -1,0 +1,14 @@
+shape-summary
+*************
+
+
+Description
+===========
+
+Summary of the database system shape.
+
+
+Available Commands
+==================
+
+* list-shapes

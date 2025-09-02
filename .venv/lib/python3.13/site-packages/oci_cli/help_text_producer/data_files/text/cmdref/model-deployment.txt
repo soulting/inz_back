@@ -1,0 +1,25 @@
+model-deployment
+****************
+
+
+Description
+===========
+
+Model deployments are a managed resource in the OCI Data Science
+service to use to deploy machine learning models as HTTP endpoints in
+OCI. Deploying machine learning models as web applications (HTTP CLI
+endpoints) serving predictions in real time is the most common way
+that models are productionized. HTTP endpoints are flexible and can
+serve requests for model predictions.
+
+For more information, see Model Deployments
+
+
+Available Commands
+==================
+
+* inference-result
+
+  * predict
+
+  * predict-with-response-stream

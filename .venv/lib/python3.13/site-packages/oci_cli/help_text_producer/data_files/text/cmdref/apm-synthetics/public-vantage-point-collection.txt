@@ -1,0 +1,15 @@
+public-vantage-point-collection
+*******************************
+
+
+Description
+===========
+
+The results of a public vantage point search, which contains
+PublicVantagePointSummary items and other data in an APM domain.
+
+
+Available Commands
+==================
+
+* list-public-vantage-points

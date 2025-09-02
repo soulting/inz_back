@@ -1,0 +1,29 @@
+subscriber
+**********
+
+
+Description
+===========
+
+A subscriber, which encapsulates a number of clients and usage plans
+that they are subscribed to.
+
+
+Available Commands
+==================
+
+* add-lock
+
+* change-compartment
+
+* create
+
+* delete
+
+* get
+
+* list
+
+* remove-lock
+
+* update

@@ -1,0 +1,14 @@
+category-summary
+****************
+
+
+Description
+===========
+
+The metadata associated with the category summary.
+
+
+Available Commands
+==================
+
+* list

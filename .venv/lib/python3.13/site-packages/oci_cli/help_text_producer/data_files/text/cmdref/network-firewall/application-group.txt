@@ -1,0 +1,24 @@
+application-group
+*****************
+
+
+Description
+===========
+
+A group of applications.
+
+
+Available Commands
+==================
+
+* bulk-upload
+
+* create
+
+* delete
+
+* get
+
+* list
+
+* update

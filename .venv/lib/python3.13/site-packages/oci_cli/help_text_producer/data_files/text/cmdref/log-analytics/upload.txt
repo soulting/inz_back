@@ -1,0 +1,41 @@
+upload
+******
+
+
+Description
+===========
+
+Upload is a container that can be used to put all the relevant and
+related on-demand upload based log files together.
+
+
+Available Commands
+==================
+
+* delete
+
+* delete-upload-file
+
+* delete-upload-warning
+
+* get
+
+* get-unprocessed-bucket
+
+* list
+
+* list-upload-files
+
+* list-upload-warnings
+
+* set-unprocessed-bucket
+
+* upload-log-events-file
+
+* upload-log-file
+
+* upload-otlp-logs
+
+* validate-file
+
+* validate-source-mapping

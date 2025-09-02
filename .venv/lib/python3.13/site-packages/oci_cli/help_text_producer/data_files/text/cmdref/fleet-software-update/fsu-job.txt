@@ -1,0 +1,22 @@
+fsu-job
+*******
+
+
+Description
+===========
+
+Exadata Fleet Update Job resource.
+
+
+Available Commands
+==================
+
+* delete
+
+* get
+
+* get-output-content
+
+* retry
+
+* update

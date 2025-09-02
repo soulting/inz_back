@@ -1,0 +1,14 @@
+work-request-log-entry
+**********************
+
+
+Description
+===========
+
+Details about the log entity.
+
+
+Available Commands
+==================
+
+* list

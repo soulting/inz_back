@@ -1,0 +1,16 @@
+suggest-results
+***************
+
+
+Description
+===========
+
+The list of potential matches returned from the suggest operation for
+the given input text. The size of the list will be determined by the
+limit parameter.
+
+
+Available Commands
+==================
+
+* suggest-matches

@@ -1,0 +1,177 @@
+"import"
+********
+
+* Description
+
+* Usage
+
+* Required Parameters
+
+* Optional Parameters
+
+* Global Parameters
+
+* Examples
+
+
+Description
+===========
+
+Imports an array of dashboards and their saved searches. Here’s an
+example of how you can use CLI to import a dashboard. For information
+on the details that must be passed to IMPORT, you can use the EXPORT
+API to obtain the Import.json file: *oci management-dashboard
+dashboard export –query data –export-dashboard-id
+“{“dashboardIds”:[“ocid1.managementdashboard.oc1..dashboardId1”]}”  >
+Import.json*. Note that import API updates the resource if it already
+exists, and creates a new resource if it does not exist. To import to
+a different compartment, edit and change the compartmentId to the
+desired compartment OCID. Here’s an example of how you can use CLI to
+import: *oci management-dashboard dashboard import –from-json
+file://Import.json*
+
+
+Usage
+=====
+
+   oci management-dashboard dashboard import [OPTIONS]
+
+
+Required Parameters
+===================
+
+--dashboards [complex type]
+
+Array of dashboards. This is a complex type whose value must be valid
+JSON. The value can be provided as a string on the command line or
+passed in as a file using the file://path/to/file syntax.
+
+The "--generate-param-json-input" option can be used to generate an
+example of the JSON which must be provided. We recommend storing this
+example in a file, modifying it as needed and then passing it back in
+via the file:// syntax.
+
+
+Optional Parameters
+===================
+
+--defined-tags [complex type]
+
+Defined tags for this resource. Each key is predefined and scoped to a
+namespace. Example: *{“foo-namespace”: {“bar-key”: “value”}}* This is
+a complex type whose value must be valid JSON. The value can be
+provided as a string on the command line or passed in as a file using
+the file://path/to/file syntax.
+
+The "--generate-param-json-input" option can be used to generate an
+example of the JSON which must be provided. We recommend storing this
+example in a file, modifying it as needed and then passing it back in
+via the file:// syntax.
+
+--freeform-tags [complex type]
+
+Simple key-value pair that is applied without any predefined name,
+type or scope. Exists for cross-compatibility only. Example: *{“bar-
+key”: “value”}* This is a complex type whose value must be valid JSON.
+The value can be provided as a string on the command line or passed in
+as a file using the file://path/to/file syntax.
+
+The "--generate-param-json-input" option can be used to generate an
+example of the JSON which must be provided. We recommend storing this
+example in a file, modifying it as needed and then passing it back in
+via the file:// syntax.
+
+--from-json [text]
+
+Provide input to this command as a JSON document from a file using the
+file://path-to/file syntax.
+
+The "--generate-full-command-json-input" option can be used to
+generate a sample json file to be used with this command option. The
+key names are pre-populated and match the command option names
+(converted to camelCase format, e.g. compartment-id –> compartmentId),
+while the values of the keys need to be populated by the user before
+using the sample file as an input to this command. For any command
+option that accepts multiple values, the value of the key can be a
+JSON array.
+
+Options can still be provided on the command line. If an option exists
+in both the JSON document and the command line then the command line
+specified value will be used.
+
+For examples on usage of this option, please see our “using CLI with
+advanced JSON options” link: https://docs.cloud.oracle.com/iaas/Conte
+nt/API/SDKDocs/cliusing.htm#AdvancedJSONOptions
+
+--if-match [text]
+
+For optimistic concurrency control. In the PUT or DELETE call for a
+resource, set the *if-match* parameter to the value of the etag from a
+previous GET or POST response for that resource. The resource will be
+updated or deleted only if the etag you provide matches the resource’s
+current etag value.
+
+--override-dashboard-compartment-ocid [text]
+
+If this attribute is set, the dashboard resources are created or
+updated in the compartment specified by OCID. If this attribute is not
+set, the compartment specified in the JSON metadata is used.
+
+--override-same-name [text]
+
+By default, if a resource with the same OCID exists in the target
+compartment, it is updated during the import process, otherwise, a new
+resource is created. However, if this attribute is set to true, then
+during the import process if a resource with the same displayName
+exists in the compartment, then it is updated even if the OCIDs are
+different. This is useful when importing the same resource multiple
+times. If the compartment and displayName remain the same, the
+resource is only updated and multiple copies of a resource are not
+created.
+
+--override-saved-search-compartment-ocid [text]
+
+If this attribute is set, the saved search resources are created or
+updated in the compartment specified by OCID. If this attribute is not
+set, the compartment specified in the JSON metadata is used.
+
+
+Global Parameters
+=================
+
+Use "oci --help" for help on global parameters.
+
+"--auth-purpose", "--auth", "--cert-bundle", "--cli-auto-prompt", "--
+cli-rc-file", "--config-file", "--connection-timeout", "--debug", "--
+defaults-file", "--endpoint", "--generate-full-command-json-input", "
+--generate-param-json-input", "--help", "--latest-version", "--max-
+retries", "--no-retry", "--opc-client-request-id", "--opc-request-id",
+"--output", "--profile", "--proxy", "--query", "--raw-output", "--
+read-timeout", "--realm-specific-endpoint", "--region", "--release-
+info", "--request-id", "--version", "-?", "-d", "-h", "-i", "-v"
+
+
+Examples
+========
+
+
+Description
+-----------
+
+Import the “dashboards.json”, which is usually generated from the
+export command. Make sure the comparment OCIDs of dashboard and saved
+searches are correctly specified in the dashboards.json.
+
+
+Command
+-------
+
+    oci management-dashboard dashboard import --from-json file://dashboards.json
+
+
+Output
+------
+
+   {
+    "result": "No output from this command when succeed."
+   }

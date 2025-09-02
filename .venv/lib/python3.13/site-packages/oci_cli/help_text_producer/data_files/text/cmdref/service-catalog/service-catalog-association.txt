@@ -1,0 +1,22 @@
+service-catalog-association
+***************************
+
+
+Description
+===========
+
+The detailed model for service catalog association.
+
+
+Available Commands
+==================
+
+* bulk-replace
+
+* create
+
+* delete
+
+* get
+
+* list

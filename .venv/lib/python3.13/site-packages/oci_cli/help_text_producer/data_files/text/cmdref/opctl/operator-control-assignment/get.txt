@@ -1,0 +1,108 @@
+"get"
+*****
+
+* Description
+
+* Usage
+
+* Required Parameters
+
+* Optional Parameters
+
+* Global Parameters
+
+* Example using required parameter
+
+
+Description
+===========
+
+Gets the details of an Operator Control Assignment of the specified
+ID.
+
+
+Usage
+=====
+
+   oci opctl operator-control-assignment get [OPTIONS]
+
+
+Required Parameters
+===================
+
+--operator-control-assignment-id [text]
+
+unique OperatorControl identifier
+
+
+Optional Parameters
+===================
+
+--from-json [text]
+
+Provide input to this command as a JSON document from a file using the
+file://path-to/file syntax.
+
+The "--generate-full-command-json-input" option can be used to
+generate a sample json file to be used with this command option. The
+key names are pre-populated and match the command option names
+(converted to camelCase format, e.g. compartment-id –> compartmentId),
+while the values of the keys need to be populated by the user before
+using the sample file as an input to this command. For any command
+option that accepts multiple values, the value of the key can be a
+JSON array.
+
+Options can still be provided on the command line. If an option exists
+in both the JSON document and the command line then the command line
+specified value will be used.
+
+For examples on usage of this option, please see our “using CLI with
+advanced JSON options” link: https://docs.cloud.oracle.com/iaas/Conte
+nt/API/SDKDocs/cliusing.htm#AdvancedJSONOptions
+
+
+Global Parameters
+=================
+
+Use "oci --help" for help on global parameters.
+
+"--auth-purpose", "--auth", "--cert-bundle", "--cli-auto-prompt", "--
+cli-rc-file", "--config-file", "--connection-timeout", "--debug", "--
+defaults-file", "--endpoint", "--generate-full-command-json-input", "
+--generate-param-json-input", "--help", "--latest-version", "--max-
+retries", "--no-retry", "--opc-client-request-id", "--opc-request-id",
+"--output", "--profile", "--proxy", "--query", "--raw-output", "--
+read-timeout", "--realm-specific-endpoint", "--region", "--release-
+info", "--request-id", "--version", "-?", "-d", "-h", "-i", "-v"
+
+
+Example using required parameter
+================================
+
+Copy and paste the following example into a JSON file, replacing the
+example parameters with your own.
+
+       oci opctl operator-control create --generate-param-json-input approver-groups-list > approver-groups-list.json
+
+Copy the following CLI commands into a file named example.sh. Run the
+command by typing “bash example.sh” and replacing the example
+parameters with your own.
+
+Please note this sample will only work in the POSIX-compliant bash-
+like shell. You need to set up the OCI configuration and appropriate
+security policies before trying the examples.
+
+       export compartment_id=<substitute-value-of-compartment_id> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/opctl/operator-control/create.html#cmdoption-compartment-id
+       export is_fully_pre_approved=<substitute-value-of-is_fully_pre_approved> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/opctl/operator-control/create.html#cmdoption-is-fully-pre-approved
+       export operator_control_name=<substitute-value-of-operator_control_name> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/opctl/operator-control/create.html#cmdoption-operator-control-name
+       export resource_type=<substitute-value-of-resource_type> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/opctl/operator-control/create.html#cmdoption-resource-type
+       export is_enforced_always=<substitute-value-of-is_enforced_always> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/opctl/operator-control-assignment/create.html#cmdoption-is-enforced-always
+       export resource_compartment_id=<substitute-value-of-resource_compartment_id> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/opctl/operator-control-assignment/create.html#cmdoption-resource-compartment-id
+       export resource_id=<substitute-value-of-resource_id> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/opctl/operator-control-assignment/create.html#cmdoption-resource-id
+       export resource_name=<substitute-value-of-resource_name> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/opctl/operator-control-assignment/create.html#cmdoption-resource-name
+
+       operator_control_id=$(oci opctl operator-control create --approver-groups-list file://approver-groups-list.json --compartment-id $compartment_id --is-fully-pre-approved $is_fully_pre_approved --operator-control-name $operator_control_name --resource-type $resource_type --query data.id --raw-output)
+
+       operator_control_assignment_id=$(oci opctl operator-control-assignment create --compartment-id $compartment_id --is-enforced-always $is_enforced_always --operator-control-id $operator_control_id --resource-compartment-id $resource_compartment_id --resource-id $resource_id --resource-name $resource_name --resource-type $resource_type --query data.id --raw-output)
+
+       oci opctl operator-control-assignment get --operator-control-assignment-id $operator_control_assignment_id

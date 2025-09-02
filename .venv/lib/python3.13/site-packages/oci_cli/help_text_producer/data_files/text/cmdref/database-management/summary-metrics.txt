@@ -1,0 +1,15 @@
+summary-metrics
+***************
+
+
+Description
+===========
+
+The response containing the metric collection for a specific Managed
+Database.
+
+
+Available Commands
+==================
+
+* get

@@ -1,0 +1,34 @@
+external-pdb
+************
+
+
+Description
+===========
+
+an external Oracle pluggable database.
+
+
+Available Commands
+==================
+
+* change-compartment
+
+* create
+
+* delete
+
+* disable-db-management
+
+* disable-external-pluggable-database-stack-monitoring
+
+* disable-operations-insights
+
+* enable-db-management
+
+* enable-external-pluggable-database-stack-monitoring
+
+* enable-operations-insights
+
+* get
+
+* update

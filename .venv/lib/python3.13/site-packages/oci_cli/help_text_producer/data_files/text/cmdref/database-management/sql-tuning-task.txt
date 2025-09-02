@@ -1,0 +1,42 @@
+sql-tuning-task
+***************
+
+
+Description
+===========
+
+sql Tuning Tasks
+
+
+Available Commands
+==================
+
+* clone
+
+* clone-with-pwd
+
+* clone-with-secret
+
+* drop
+
+* drop-with-pwd
+
+* drop-with-secret
+
+* get-exec-plan-stats-compare
+
+* get-sql-exec-plan
+
+* get-summary-report
+
+* list-findings
+
+* list-recommendations
+
+* list-tasks
+
+* start
+
+* start-with-pwd
+
+* start-with-secret

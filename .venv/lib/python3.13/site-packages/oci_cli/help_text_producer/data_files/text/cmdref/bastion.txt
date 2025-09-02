@@ -1,0 +1,63 @@
+bastion
+*******
+
+
+Description
+===========
+
+Use the Bastion CLI to provide restricted and time-limited access to
+target resources that don’t have public endpoints. Bastions let
+authorized users connect from specific IP addresses to target
+resources using Secure Shell (SSH) sessions. For more information, see
+the Bastion documentation.
+
+
+Available Commands
+==================
+
+* bastion
+
+  * change-compartment
+
+  * create
+
+  * delete
+
+  * get
+
+  * list
+
+  * update
+
+* session
+
+  * create
+
+  * create-managed-ssh
+
+  * create-port-forwarding
+
+  * create-session-create-dynamic-port-forwarding-session-target-
+    resource-details
+
+  * delete
+
+  * get
+
+  * list
+
+  * update
+
+* work-request
+
+  * get
+
+  * list
+
+* work-request-error
+
+  * list
+
+* work-request-log-entry
+
+  * list-work-request-logs

@@ -1,0 +1,23 @@
+network-perimeter
+*****************
+
+
+Description
+===========
+
+NetworkPerimeter resource. A unit that captures a NetworkPerimeter as
+a collection of IP Addresses.
+
+
+Available Commands
+==================
+
+* create
+
+* delete
+
+* get
+
+* patch
+
+* put

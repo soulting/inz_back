@@ -1,0 +1,34 @@
+generic
+*******
+
+
+Description
+===========
+
+Generic metadata.
+
+
+Available Commands
+==================
+
+* artifact
+
+  * delete
+
+  * delete-by-path
+
+  * download
+
+  * download-by-path
+
+  * get
+
+  * get-by-path
+
+  * list
+
+  * update
+
+  * update-by-path
+
+  * upload-by-path

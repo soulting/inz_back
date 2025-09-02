@@ -1,0 +1,25 @@
+service
+*******
+
+
+Description
+===========
+
+A Service which can be used to identify the running service. It uses
+port & protocol information.
+
+
+Available Commands
+==================
+
+* bulk-upload
+
+* create
+
+* delete
+
+* get
+
+* list
+
+* update

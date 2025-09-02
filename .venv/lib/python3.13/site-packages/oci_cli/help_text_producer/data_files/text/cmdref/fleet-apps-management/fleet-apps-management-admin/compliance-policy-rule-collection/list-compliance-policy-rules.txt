@@ -1,0 +1,150 @@
+"list-compliance-policy-rules"
+******************************
+
+* Description
+
+* Usage
+
+* Optional Parameters
+
+* Global Parameters
+
+* Example using required parameter
+
+
+Description
+===========
+
+Gets a list of Compliance policy rules in a compartment.
+
+
+Usage
+=====
+
+   oci fleet-apps-management fleet-apps-management-admin compliance-policy-rule-collection list-compliance-policy-rules [OPTIONS]
+
+
+Optional Parameters
+===================
+
+--all
+
+Fetches all pages of results. If you provide this option, then you
+cannot provide the "--limit" option.
+
+--compartment-id, -c [text]
+
+The ID of the compartment in which to list resources. Empty only if
+the resource OCID query param is not specified.
+
+--compliance-policy-id [text]
+
+unique CompliancePolicy identifier.
+
+--display-name [text]
+
+A filter to return only resources that match the entire display name
+given.
+
+--from-json [text]
+
+Provide input to this command as a JSON document from a file using the
+file://path-to/file syntax.
+
+The "--generate-full-command-json-input" option can be used to
+generate a sample json file to be used with this command option. The
+key names are pre-populated and match the command option names
+(converted to camelCase format, e.g. compartment-id –> compartmentId),
+while the values of the keys need to be populated by the user before
+using the sample file as an input to this command. For any command
+option that accepts multiple values, the value of the key can be a
+JSON array.
+
+Options can still be provided on the command line. If an option exists
+in both the JSON document and the command line then the command line
+specified value will be used.
+
+For examples on usage of this option, please see our “using CLI with
+advanced JSON options” link: https://docs.cloud.oracle.com/iaas/Conte
+nt/API/SDKDocs/cliusing.htm#AdvancedJSONOptions
+
+--id [text]
+
+Unique identifier or OCID for listing a single Compliance Policy Rule
+by id. Either compartmentId or id must be provided.
+
+--lifecycle-state [text]
+
+A filter to return only resources that match the given lifecycle
+state. The state value is case-insensitive.
+
+Accepted values are:
+
+   ACTIVE, CREATING, DELETED, DELETING, FAILED, UPDATING
+
+--limit [integer]
+
+The maximum number of items to return.
+
+--page [text]
+
+A token representing the position at which to start retrieving
+results. This must come from the *opc-next-page* header field of a
+previous response.
+
+--page-size [integer]
+
+When fetching results, the number of results to fetch per call. Only
+valid when used with "--all" or "--limit", and ignored otherwise.
+
+--patch-name [text]
+
+A filter to return only resources that match the patch selection
+against the given patch name.
+
+--sort-by [text]
+
+The field to sort by. Only one sort order may be provided. Default
+order for timeCreated is descending. Default order for displayName is
+ascending.
+
+Accepted values are:
+
+   displayName, timeCreated
+
+--sort-order [text]
+
+The sort order to use, either ‘ASC’ or ‘DESC’.
+
+Accepted values are:
+
+   ASC, DESC
+
+
+Global Parameters
+=================
+
+Use "oci --help" for help on global parameters.
+
+"--auth-purpose", "--auth", "--cert-bundle", "--cli-auto-prompt", "--
+cli-rc-file", "--config-file", "--connection-timeout", "--debug", "--
+defaults-file", "--endpoint", "--generate-full-command-json-input", "
+--generate-param-json-input", "--help", "--latest-version", "--max-
+retries", "--no-retry", "--opc-client-request-id", "--opc-request-id",
+"--output", "--profile", "--proxy", "--query", "--raw-output", "--
+read-timeout", "--realm-specific-endpoint", "--region", "--release-
+info", "--request-id", "--version", "-?", "-d", "-h", "-i", "-v"
+
+
+Example using required parameter
+================================
+
+Copy the following CLI commands into a file named example.sh. Run the
+command by typing “bash example.sh” and replacing the example
+parameters with your own.
+
+Please note this sample will only work in the POSIX-compliant bash-
+like shell. You need to set up the OCI configuration and appropriate
+security policies before trying the examples.
+
+       oci fleet-apps-management fleet-apps-management-admin compliance-policy-rule-collection list-compliance-policy-rules

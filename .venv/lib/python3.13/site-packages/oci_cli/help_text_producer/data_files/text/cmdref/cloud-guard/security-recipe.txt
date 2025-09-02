@@ -1,0 +1,25 @@
+security-recipe
+***************
+
+
+Description
+===========
+
+A security zone recipe (SecurityRecipe resource) is a collection of
+security zone policies (SecurityPolicy resources). Oracle Cloud
+Infrastructure enforces these policies on security zones that use the
+recipe.
+
+
+Available Commands
+==================
+
+* change-compartment
+
+* create
+
+* delete
+
+* get
+
+* update

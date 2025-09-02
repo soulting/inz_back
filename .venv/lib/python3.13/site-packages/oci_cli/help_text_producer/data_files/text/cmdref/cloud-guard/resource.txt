@@ -1,0 +1,16 @@
+resource
+********
+
+
+Description
+===========
+
+Details of cloud guard resource
+
+
+Available Commands
+==================
+
+* get
+
+* list

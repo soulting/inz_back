@@ -1,0 +1,14 @@
+addon-option
+************
+
+
+Description
+===========
+
+The properties that define addon summary.
+
+
+Available Commands
+==================
+
+* list

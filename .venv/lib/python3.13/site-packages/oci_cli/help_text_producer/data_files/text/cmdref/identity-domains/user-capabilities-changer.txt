@@ -1,0 +1,14 @@
+user-capabilities-changer
+*************************
+
+
+Description
+===========
+
+User Capabilities Changer
+
+
+Available Commands
+==================
+
+* put

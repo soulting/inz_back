@@ -1,0 +1,14 @@
+java-download-record
+********************
+
+
+Description
+===========
+
+A record of Java artifact download in a tenancy.
+
+
+Available Commands
+==================
+
+* list

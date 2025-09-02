@@ -1,0 +1,18 @@
+my-request
+**********
+
+
+Description
+===========
+
+Request resource
+
+
+Available Commands
+==================
+
+* create
+
+* get
+
+* patch

@@ -1,0 +1,15 @@
+masking-policy-referential-relation-summary
+*******************************************
+
+
+Description
+===========
+
+A referential relation is a resource corresponding to database
+columns. It is always associated with a masking policy.
+
+
+Available Commands
+==================
+
+* list-masking-policy-referential-relations

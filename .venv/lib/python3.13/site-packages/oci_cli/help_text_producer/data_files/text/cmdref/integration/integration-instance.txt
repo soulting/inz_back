@@ -1,0 +1,47 @@
+integration-instance
+********************
+
+
+Description
+===========
+
+Description of Integration Instance.
+
+
+Available Commands
+==================
+
+* add-oracle-managed-custom-endpoint
+
+* change-compartment
+
+* change-network-endpoint
+
+* change-private-endpoint-outbound-connection
+
+* change-private-endpoint-outbound-connection-none-outbound-connection
+
+* change-private-endpoint-outbound-connection-private-endpoint-
+  outbound-connection
+
+* create
+
+* delete
+
+* disaster-recovery-failover
+
+* enable-process-automation
+
+* extend-data-retention
+
+* get
+
+* list
+
+* remove
+
+* start
+
+* stop
+
+* update

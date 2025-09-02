@@ -1,0 +1,25 @@
+ca-bundle
+*********
+
+
+Description
+===========
+
+CA bundle metadata. This object does not contain the CA bundle
+certificates.
+
+
+Available Commands
+==================
+
+* change-compartment
+
+* create
+
+* delete
+
+* get
+
+* list
+
+* update

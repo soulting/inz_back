@@ -1,0 +1,14 @@
+metric-data
+***********
+
+
+Description
+===========
+
+A list of aggregated metric data objects with properties.
+
+
+Available Commands
+==================
+
+* read

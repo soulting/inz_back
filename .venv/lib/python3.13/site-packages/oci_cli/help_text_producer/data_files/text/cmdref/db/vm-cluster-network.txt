@@ -1,0 +1,30 @@
+vm-cluster-network
+******************
+
+
+Description
+===========
+
+The VM cluster network.
+
+
+Available Commands
+==================
+
+* create
+
+* delete
+
+* download-validation-report
+
+* download-vm-cluster-network-config-file
+
+* get
+
+* list
+
+* resize
+
+* update
+
+* validate

@@ -1,0 +1,53 @@
+vn-monitoring
+*************
+
+
+Description
+===========
+
+Use the Network Monitoring CLI to troubleshoot routing and security
+issues for resources such as virtual cloud networks (VCNs) and compute
+instances. For more information, see the console documentation for the
+Network Path Analyzer tool.
+
+
+Available Commands
+==================
+
+* path-analysis
+
+  * get-path-analysis-adhoc
+
+  * get-path-analysis-persisted
+
+* path-analyzer-test
+
+  * change-compartment
+
+  * create
+
+  * delete
+
+  * get
+
+  * list
+
+  * update
+
+* work-request
+
+  * get
+
+  * list
+
+* work-request-error
+
+  * list
+
+* work-request-log
+
+  * list
+
+* work-request-result
+
+  * list

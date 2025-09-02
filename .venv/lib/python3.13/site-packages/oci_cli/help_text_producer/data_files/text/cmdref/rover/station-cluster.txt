@@ -1,0 +1,34 @@
+station-cluster
+***************
+
+
+Description
+===========
+
+Description of RoverStation.
+
+
+Available Commands
+==================
+
+* add-workload
+
+* change-compartment
+
+* create
+
+* delete
+
+* delete-workload
+
+* get-certificate
+
+* list-workloads
+
+* request-approval
+
+* set-secrets
+
+* show
+
+* update

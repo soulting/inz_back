@@ -1,0 +1,16 @@
+occ-availability-catalog-collection
+***********************************
+
+
+Description
+===========
+
+A list of availability catalogs.
+
+
+Available Commands
+==================
+
+* list
+
+* list-internal

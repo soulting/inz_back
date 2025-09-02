@@ -1,0 +1,38 @@
+domain
+******
+
+
+Description
+===========
+
+(For tenancies that support identity domains) Properties for an
+identity domain. An identity domain is used to manage users and
+groups, integration standards, external identities, and secure
+application integration through Oracle Single Sign-on (SSO)
+configuration.
+
+
+Available Commands
+==================
+
+* activate
+
+* change-compartment
+
+* change-domain-license-type
+
+* create
+
+* deactivate
+
+* delete
+
+* enable-replication-to-region
+
+* get
+
+* list
+
+* list-license-types
+
+* update

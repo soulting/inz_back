@@ -1,0 +1,14 @@
+embed-text-result
+*****************
+
+
+Description
+===========
+
+The generated embedded result to return.
+
+
+Available Commands
+==================
+
+* embed-text

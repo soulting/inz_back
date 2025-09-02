@@ -1,0 +1,61 @@
+masking-policy
+**************
+
+
+Description
+===========
+
+A masking policy defines the approach to mask data in a target
+database. It’s basically a collection of columns to be masked, called
+masking columns, and the associated masking formats to be used to mask
+these columns. A masking policy can be used to mask multiple databases
+provided that they have the same schema design. For more information,
+see <a href=”https://docs.oracle.com/en/cloud/paas/data-safe/udscs
+/masking-policies.html”>Masking Policies </a> in the Oracle Data Safe
+documentation.
+
+
+Available Commands
+==================
+
+* add
+
+* apply-sdm-masking-policy-difference
+
+* change-compartment
+
+* create
+
+* create-masking-policy-create-column-source-from-sdm-details
+
+* create-masking-policy-create-column-source-from-target-details
+
+* delete
+
+* download
+
+* download-masking-log
+
+* download-masking-report
+
+* generate-masking-policy-for-download
+
+* generate-masking-report-for-download
+
+* get
+
+* list
+
+* list-masking-analytics
+
+* list-masking-reports
+
+* mask-data
+
+* update
+
+* update-masking-policy-update-column-source-sdm-details
+
+* update-masking-policy-update-column-source-target-details
+
+* upload

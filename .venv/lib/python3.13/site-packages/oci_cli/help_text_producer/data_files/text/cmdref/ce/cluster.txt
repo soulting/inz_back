@@ -1,0 +1,48 @@
+cluster
+*******
+
+
+Description
+===========
+
+A Kubernetes cluster. Avoid entering confidential information.
+
+
+Available Commands
+==================
+
+* cluster-migrate-to-native-vcn
+
+* complete-credential-rotation
+
+* create
+
+* create-kubeconfig
+
+* delete
+
+* disable-addon
+
+* generate-token
+
+* get
+
+* get-addon
+
+* install-addon
+
+* list
+
+* list-addons
+
+* reboot-cluster-node
+
+* replace-boot-volume-cluster-node
+
+* start-credential-rotation
+
+* update
+
+* update-addon
+
+* update-endpoint-config

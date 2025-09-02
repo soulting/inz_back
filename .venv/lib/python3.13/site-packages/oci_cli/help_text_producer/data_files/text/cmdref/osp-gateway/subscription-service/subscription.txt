@@ -1,0 +1,22 @@
+subscription
+************
+
+
+Description
+===========
+
+Subscription details object which extends the SubscriptionSummary
+
+
+Available Commands
+==================
+
+* authorize-subscription-payment
+
+* get
+
+* list
+
+* pay
+
+* update

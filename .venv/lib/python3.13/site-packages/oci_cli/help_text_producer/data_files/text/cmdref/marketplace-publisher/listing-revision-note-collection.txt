@@ -1,0 +1,14 @@
+listing-revision-note-collection
+********************************
+
+
+Description
+===========
+
+Results of note search. Contains listing revision note items.
+
+
+Available Commands
+==================
+
+* list-listing-revision-notes

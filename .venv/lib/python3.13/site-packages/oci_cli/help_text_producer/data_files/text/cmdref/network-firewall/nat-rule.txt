@@ -1,0 +1,25 @@
+nat-rule
+********
+
+
+Description
+===========
+
+A Nat Rule is used to define to which traffic NAT should be applied by
+the firewall.
+
+
+Available Commands
+==================
+
+* bulk-upload
+
+* create
+
+* delete
+
+* get
+
+* list
+
+* update

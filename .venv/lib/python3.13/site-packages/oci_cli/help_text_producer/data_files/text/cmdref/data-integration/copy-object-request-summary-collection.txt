@@ -1,0 +1,14 @@
+copy-object-request-summary-collection
+**************************************
+
+
+Description
+===========
+
+This is the collection of copy object requests.
+
+
+Available Commands
+==================
+
+* list-copy-object-requests

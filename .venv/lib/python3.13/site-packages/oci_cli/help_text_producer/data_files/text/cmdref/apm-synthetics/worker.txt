@@ -1,0 +1,20 @@
+worker
+******
+
+
+Description
+===========
+
+The information about an On-premise VP worker.
+
+
+Available Commands
+==================
+
+* create
+
+* delete
+
+* get
+
+* update

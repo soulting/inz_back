@@ -1,0 +1,15 @@
+register-model-artifact-reference-details
+*****************************************
+
+
+Description
+===========
+
+Parameters that are required to register a model artifact reference
+collection.
+
+
+Available Commands
+==================
+
+* register-model-artifact-reference

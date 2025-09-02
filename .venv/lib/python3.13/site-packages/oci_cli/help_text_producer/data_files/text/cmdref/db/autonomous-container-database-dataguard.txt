@@ -1,0 +1,29 @@
+autonomous-container-database-dataguard
+***************************************
+
+
+Description
+===========
+
+The properties that define Autonomous Data Guard association between
+two different Autonomous Container Databases.
+
+
+Available Commands
+==================
+
+* create
+
+* failover
+
+* get
+
+* list
+
+* migrate
+
+* reinstate
+
+* switchover
+
+* update

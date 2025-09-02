@@ -1,0 +1,1065 @@
+"update"
+********
+
+* Description
+
+* Usage
+
+* Required Parameters
+
+* Optional Parameters
+
+* Global Parameters
+
+* Example using required parameter
+
+
+Description
+===========
+
+Updates one or more attributes of the specified Autonomous Database.
+See the UpdateAutonomousDatabaseDetails resource for a full list of
+attributes that can be updated.
+
+
+Usage
+=====
+
+   oci db autonomous-database update [OPTIONS]
+
+
+Required Parameters
+===================
+
+--autonomous-database-id [text]
+
+The database OCID.
+
+
+Optional Parameters
+===================
+
+--admin-password [text]
+
+The password must be between 12 and 30 characters long, and must
+contain at least 1 uppercase, 1 lowercase, and 1 numeric character. It
+cannot contain the double quote symbol (“) or the username “admin”,
+regardless of casing. It must be different from the last four
+passwords and it must not be a password used within the last 24 hours.
+
+This cannot be used in conjunction with with OCI vault secrets
+(secretId).
+
+This cannot be updated in parallel with any of the following:
+licenseModel, dbEdition, whitelistedIps, openMode, permissionLevel,
+dbWorkload, privateEndpointLabel, nsgIds, dbVersion, isRefreshable,
+dbName, or isFreeTier.
+
+--are-primary-whitelisted-ips-used [boolean]
+
+This field will be null if the Autonomous Database is not Data Guard
+enabled or Access Control is disabled. *TRUE* if the Autonomous
+Database has Data Guard and Access Control enabled, and the Autonomous
+Database uses the primary’s IP access control list (ACL) for standby.
+*FALSE* if the Autonomous Database has Data Guard and Access Control
+enabled, and the Autonomous Database uses a different IP access
+control list (ACL) for standby compared to primary.
+
+--auto-refresh-frequency-in-seconds [integer]
+
+The frequency a refreshable clone is refreshed after auto-refresh is
+enabled. The minimum is 1 hour. The maximum is 7 days. The date and
+time that auto-refresh is enabled is controlled by the
+*timeOfAutoRefreshStart* parameter.
+
+--auto-refresh-point-lag-in-seconds [integer]
+
+The time, in seconds, the data of the refreshable clone lags the
+primary database at the point of refresh. The minimum is 0 minutes (0
+mins means refresh to the latest available timestamp). The maximum is
+7 days. The lag time increases after refreshing until the next data
+refresh happens.
+
+--autonomous-maintenance-schedule-type [text]
+
+The maintenance schedule type of the Autonomous Database Serverless.
+An EARLY maintenance schedule follows a schedule applying patches
+prior to the REGULAR schedule. A REGULAR maintenance schedule follows
+the normal cycle
+
+Accepted values are:
+
+   EARLY, REGULAR
+
+--backup-retention-period-in-days [integer]
+
+Retention period, in days, for long-term backups
+
+--byol-compute-count-limit [float]
+
+The maximum number of CPUs allowed with a Bring Your Own License
+(BYOL), including those used for auto-scaling, disaster recovery,
+tools, etc. Any CPU usage above this limit is considered as License
+Included and billed.
+
+--compute-count [float]
+
+The compute amount (CPUs) available to the database. Minimum and
+maximum values depend on the compute model and whether the database is
+an Autonomous Database Serverless instance or an Autonomous Database
+on Dedicated Exadata Infrastructure. The ‘ECPU’ compute model requires
+a minimum value of one, for databases in the elastic resource pool and
+minimum value of two, otherwise. Required when using the
+*computeModel* parameter. When using *cpuCoreCount* parameter, it is
+an error to specify computeCount to a non-null value. Providing
+*computeModel* and *computeCount* is the preferred method for both
+OCPU and ECPU.
+
+This cannot be updated in parallel with any of the following:
+licenseModel, databaseEdition, whitelistedIps,
+isMTLSConnectionRequired, openMode, permissionLevel,
+privateEndpointLabel, nsgIds, dbVersion, isRefreshable, dbName,
+scheduledOperations, dbToolsDetails, or isFreeTier.
+
+--compute-model [text]
+
+The compute model of the Autonomous Database. This is required if
+using the *computeCount* parameter. If using *cpuCoreCount* then it is
+an error to specify *computeModel* to a non-null value. ECPU compute
+model is the recommended model and OCPU compute model is legacy.
+
+Accepted values are:
+
+   ECPU, OCPU
+
+--cpu-core-count [integer]
+
+The number of CPUs to be made available to the Autonomous
+Database.<br> For Autonomous Databases on Dedicated Exadata
+Infrastructure: - The CPU type (OCPUs or ECPUs) is determined by the
+parent Autonomous Exadata VM Cluster’s compute model. - It is
+suggested to use ‘computeCount’ parameter if you want to use
+fractional value to provision less than 1 core.
+
+**Note:** This parameter cannot be used with the *ocpuCount* or
+*computeCount* parameter.
+
+This cannot be updated in parallel with any of the following:
+licenseModel, databaseEdition, whitelistedIps,
+isMTLSConnectionRequired, openMode, permissionLevel,
+privateEndpointLabel, nsgIds, dbVersion, isRefreshable, dbName,
+scheduledOperations, dbToolsDetails, or isFreeTier.
+
+--customer-contacts [complex type]
+
+Customer Contacts. Setting this to an empty list removes all customer
+contacts of an Oracle
+
+This cannot be updated in parallel with any of the following:
+isMTLSConnectionRequired, scheduledOperations, or dbToolsDetails.
+
+This option is a JSON list with items of type CustomerContact.  For
+documentation on CustomerContact please see our API reference: https:
+//docs.cloud.oracle.com/api/#/en/database/20160918/datatypes/Customer
+Contact. This is a complex type whose value must be valid JSON. The
+value can be provided as a string on the command line or passed in as
+a file using the file://path/to/file syntax.
+
+The "--generate-param-json-input" option can be used to generate an
+example of the JSON which must be provided. We recommend storing this
+example in a file, modifying it as needed and then passing it back in
+via the file:// syntax.
+
+--data-storage-size-in-gbs [integer]
+
+Applies to dedicated Exadata infrastructure only.
+
+The size, in gigabytes, of the data volume that will be created and
+attached to the database. The maximum storage value depends on the
+system shape. See Characteristics of Infrastructure Shapes for shape
+details.
+
+**Note:** This parameter cannot be used with the
+*dataStorageSizeInTBs* parameter.
+
+--data-storage-size-in-tbs [integer]
+
+The size, in terabytes, of the data volume that will be created and
+attached to the database. For Autonomous Databases on dedicated
+Exadata infrastructure, the maximum storage value is determined by the
+infrastructure shape. See Characteristics of Infrastructure Shapes for
+shape details. A full Exadata service is allocated when the Autonomous
+Database size is set to the upper limit (384 TB).
+
+**Note:** This parameter cannot be used with the
+*dataStorageSizeInGBs* parameter.
+
+This cannot be updated in parallel with any of the following:
+licenseModel, databaseEdition, whitelistedIps,
+isMTLSConnectionRequired, openMode, permissionLevel,
+privateEndpointLabel, nsgIds, dbVersion, isRefreshable, dbName,
+scheduledOperations, dbToolsDetails, or isFreeTier.
+
+--database-edition [text]
+
+The Oracle Database Edition that applies to the Autonomous databases.
+This parameter accepts options *STANDARD_EDITION* and
+*ENTERPRISE_EDITION*.
+
+This cannot be updated in parallel with any of the following:
+cpuCoreCount, computeCount, computeModel, adminPassword,
+whitelistedIps, isMTLSConnectionRequired, dbWorkload,
+privateEndpointLabel, nsgIds, dbVersion, dbName, scheduledOperations,
+dbToolsDetails, or isFreeTier.
+
+--db-name [text]
+
+New name for this Autonomous Database. For Autonomous Databases on
+Dedicated Exadata Infrastructure, the name must begin with an
+alphabetic character, and can contain a maximum of eight alphanumeric
+characters. Special characters are not permitted. For Autonomous
+Database Serverless instances, the name must begin with an alphabetic
+character, and can contain a maximum of 30 alphanumeric characters.
+Special characters are not permitted. The database name must be unique
+in the tenancy.
+
+This cannot be updated in parallel with any of the following:
+licenseModel, dbEdition, cpuCoreCount, computeCount, computeModel,
+adminPassword, whitelistedIps, isMTLSConnectionRequired, openMode,
+permissionLevel, dbWorkload, privateEndpointLabel, nsgIds, dbVersion,
+isRefreshable, dbName, scheduledOperations, dbToolsDetails.
+
+--db-tools-details [complex type]
+
+The list of database tools details.
+
+This cannot be updated in parallel with any of the following:
+licenseModel, dbEdition, cpuCoreCount, computeCount, computeModel,
+whitelistedIps, isMTLSConnectionRequired, openMode, permissionLevel,
+dbWorkload, privateEndpointLabel, nsgIds, dbVersion, isRefreshable,
+dbName, scheduledOperations, isLocalDataGuardEnabled, or isFreeTier.
+
+This option is a JSON list with items of type DatabaseTool.  For
+documentation on DatabaseTool please see our API reference: https://d
+ocs.cloud.oracle.com/api/#/en/database/20160918/datatypes/DatabaseToo
+l. This is a complex type whose value must be valid JSON. The value
+can be provided as a string on the command line or passed in as a file
+using the file://path/to/file syntax.
+
+The "--generate-param-json-input" option can be used to generate an
+example of the JSON which must be provided. We recommend storing this
+example in a file, modifying it as needed and then passing it back in
+via the file:// syntax.
+
+--db-version [text]
+
+A valid Oracle Database version for Autonomous Database.
+
+--db-workload [text]
+
+The Autonomous Database workload type. The following values are valid:
+
+* OLTP - indicates an Autonomous Transaction Processing database - DW
+  - indicates an Autonomous Data Warehouse database - AJD - indicates
+  an Autonomous JSON Database - APEX - indicates an Autonomous
+  Database with the Oracle APEX Application Development workload type.
+
+This cannot be updated in parallel with any of the following:
+licenseModel, dbEdition, cpuCoreCount, computeCount, computeModel,
+adminPassword, whitelistedIps, isMTLSConnectionRequired,
+privateEndpointLabel, nsgIds, dbVersion, isRefreshable, dbName,
+scheduledOperations, dbToolsDetails, isLocalDataGuardEnabled, or
+isFreeTier.
+
+Accepted values are:
+
+   AJD, APEX, DW, OLTP
+
+--defined-tags [complex type]
+
+Defined tags for this resource. Each key is predefined and scoped to a
+namespace. For more information, see Resource Tags. This is a complex
+type whose value must be valid JSON. The value can be provided as a
+string on the command line or passed in as a file using the
+file://path/to/file syntax.
+
+The "--generate-param-json-input" option can be used to generate an
+example of the JSON which must be provided. We recommend storing this
+example in a file, modifying it as needed and then passing it back in
+via the file:// syntax.
+
+--display-name [text]
+
+The user-friendly name for the Autonomous Database. The name does not
+have to be unique. The display name can only be updated for Autonomous
+Databases using dedicated Exadata Infrastructure. This parameter may
+not be updated in parallel with dbVersion.
+
+--encryption-key [complex type]
+
+This is a complex type whose value must be valid JSON. The value can
+be provided as a string on the command line or passed in as a file
+using the file://path/to/file syntax.
+
+The "--generate-param-json-input" option can be used to generate an
+example of the JSON which must be provided. We recommend storing this
+example in a file, modifying it as needed and then passing it back in
+via the file:// syntax.
+
+--force
+
+Perform update without prompting for confirmation.
+
+--freeform-tags [complex type]
+
+Free-form tags for this resource. Each tag is a simple key-value pair
+with no predefined name, type, or namespace. For more information, see
+Resource Tags.
+
+Example:
+
+   {"Department": "Finance"}
+
+This is a complex type whose value must be valid JSON. The value can
+be provided as a string on the command line or passed in as a file
+using the file://path/to/file syntax.
+
+The "--generate-param-json-input" option can be used to generate an
+example of the JSON which must be provided. We recommend storing this
+example in a file, modifying it as needed and then passing it back in
+via the file:// syntax.
+
+--from-json [text]
+
+Provide input to this command as a JSON document from a file using the
+file://path-to/file syntax.
+
+The "--generate-full-command-json-input" option can be used to
+generate a sample json file to be used with this command option. The
+key names are pre-populated and match the command option names
+(converted to camelCase format, e.g. compartment-id –> compartmentId),
+while the values of the keys need to be populated by the user before
+using the sample file as an input to this command. For any command
+option that accepts multiple values, the value of the key can be a
+JSON array.
+
+Options can still be provided on the command line. If an option exists
+in both the JSON document and the command line then the command line
+specified value will be used.
+
+For examples on usage of this option, please see our “using CLI with
+advanced JSON options” link: https://docs.cloud.oracle.com/iaas/Conte
+nt/API/SDKDocs/cliusing.htm#AdvancedJSONOptions
+
+--if-match [text]
+
+For optimistic concurrency control. In the PUT or DELETE call for a
+resource, set the *if-match* parameter to the value of the etag from a
+previous GET or POST response for that resource.  The resource will be
+updated or deleted only if the etag you provide matches the resource’s
+current etag value.
+
+--in-memory-percentage [integer]
+
+The percentage of the System Global Area(SGA) assigned to In-Memory
+tables in Autonomous Database. This property is applicable only to
+Autonomous Databases on the Exadata Cloud@Customer platform.
+
+--is-acl-enabled [boolean]
+
+Indicates if the database-level access control is enabled. If
+disabled, database access is defined by the network security rules. If
+enabled, database access is restricted to the IP addresses defined by
+the rules specified with the *whitelistedIps* property. While
+specifying *whitelistedIps* rules is optional,  if database-level
+access control is enabled and no rules are specified, the database
+will become inaccessible. The rules can be added later using the
+*UpdateAutonomousDatabase* API operation or edit option in console.
+When creating a database clone, the desired access control setting
+should be specified. By default, database-level access control will be
+disabled for the clone.
+
+This property is applicable only to Autonomous Databases on the
+Exadata Cloud@Customer platform.
+
+--is-auto-scaling-enabled [boolean]
+
+Indicates whether auto scaling is enabled for the Autonomous Database
+CPU core count. Setting to *TRUE* enables auto scaling. Setting to
+*FALSE* disables auto scaling. The default value is *TRUE*. Auto
+scaling is only available for Autonomous Database Serverless
+instances.
+
+--is-auto-scaling-for-storage-enabled [boolean]
+
+Indicates if auto scaling is enabled for the Autonomous Database
+storage. The default value is *FALSE*.
+
+--is-backup-retention-locked [boolean]
+
+True if the Autonomous Database is backup retention locked.
+
+--is-data-guard-enabled [boolean]
+
+** Deprecated. ** Indicates whether the Autonomous Database has a
+local (in-region) standby database. Not applicable when creating a
+cross-region Autonomous Data Guard associations, or to Autonomous
+Databases using dedicated Exadata infrastructure or Exadata
+Cloud@Customer infrastructure.
+
+To create a local standby, set to *TRUE*. To delete a local standby,
+set to *FALSE*. For more information on using Autonomous Data Guard on
+an Autonomous Database Serverless instance (local and cross-region) ,
+see About Standby Databases
+
+To enable cross-region Autonomous Data Guard on an Autonomous Database
+Serverless instance, see Enable Autonomous Data Guard.
+
+To delete a cross-region standby database, provide the *peerDbId* for
+the standby database in a remote region, and set *isDataGuardEnabled*
+to *FALSE*.
+
+--is-dev-tier [boolean]
+
+Autonomous Database for Developers are fixed-shape Autonomous
+Databases that developers can use to build and test new applications.
+On Serverless, these are low-cost and billed per instance, on
+Dedicated and Cloud@Customer there is no additional cost to create
+Developer databases. Developer databases come with limited resources
+and is not intended for large-scale testing and production
+deployments. When you need more compute or storage resources, you may
+upgrade to a full paid production database.
+
+--is-disable-db-version-upgrade-schedule [boolean]
+
+True if user wants to disable Autonomous Database scheduled upgrade to
+23ai.
+
+--is-disconnect-peer [boolean]
+
+If true, this will disconnect the Autonomous Database from its peer
+and the Autonomous Database can work permanently as a standalone
+database.
+
+To disconnect a cross region standby, please also provide the OCID of
+the standby database in the *peerDbId* parameter.
+
+--is-free-tier [boolean]
+
+Indicates if this is an Always Free resource. The default value is
+false. Note that Always Free Autonomous Databases have 1 CPU and 20GB
+of memory. For Always Free databases, memory and CPU cannot be scaled.
+
+This cannot be updated in parallel with any of the following:
+licenseModel, dbEdition, cpuCoreCount, computeCount, computeModel,
+adminPassword, whitelistedIps, isMTLSConnectionRequired, openMode,
+permissionLevel, privateEndpointLabel, nsgIds, dbVersion,
+isRefreshable, dbName, scheduledOperations, dbToolsDetails, or
+isLocalDataGuardEnabled
+
+--is-local-data-guard-enabled [boolean]
+
+Indicates whether the Autonomous Database has a local (in-region)
+standby database. Not applicable when creating a cross-region
+Autonomous Data Guard associations, or to Autonomous Databases using
+dedicated Exadata infrastructure or Exadata Cloud@Customer
+infrastructure.
+
+To create a local standby, set to *TRUE*. To delete a local standby,
+set to *FALSE*. For more information on using Autonomous Data Guard on
+an Autonomous Database Serverless instance (local and cross-region) ,
+see About Standby Databases
+
+To enable cross-region Autonomous Data Guard on an Autonomous Database
+Serverless instance, see Enable Autonomous Data Guard.
+
+This cannot be updated in parallel with any of the following:
+isMTLSRequired, dbWorkload, dbVersion, isRefreshable, dbName,
+scheduledOperations, dbToolsDetails, or isFreeTier.
+
+--is-mtls-connection-required [boolean]
+
+Specifies if the Autonomous Database requires mTLS connections.
+
+This may not be updated in parallel with any of the following:
+licenseModel, databaseEdition, cpuCoreCount, computeCount,
+dataStorageSizeInTBs, whitelistedIps, openMode, permissionLevel, db-
+workload, privateEndpointLabel, nsgIds, customerContacts, dbVersion,
+scheduledOperations, dbToolsDetails, isLocalDataGuardEnabled, or
+isFreeTier.
+
+Service Change: The default value of the isMTLSConnectionRequired
+attribute will change from true to false on July 1, 2023 in the
+following APIs: - CreateAutonomousDatabase - GetAutonomousDatabase -
+UpdateAutonomousDatabase Details: Prior to the July 1, 2023 change,
+the isMTLSConnectionRequired attribute default value was true. This
+applies to Autonomous Database Serverless. Does this impact me? If you
+use or maintain custom scripts or Terraform scripts referencing the
+CreateAutonomousDatabase, GetAutonomousDatabase, or
+UpdateAutonomousDatabase APIs, you want to check, and possibly modify,
+the scripts for the changed default value of the attribute. Should you
+choose not to leave your scripts unchanged, the API calls containing
+this attribute will continue to work, but the default value will
+switch from true to false. How do I make this change? Using either OCI
+SDKs or command line tools, update your custom scripts to explicitly
+set the isMTLSConnectionRequired attribute to true.
+
+--is-refreshable-clone [boolean]
+
+Indicates if the Autonomous Database is a refreshable clone.
+
+This cannot be updated in parallel with any of the following:
+cpuCoreCount, computeCount, computeModel, adminPassword,
+whitelistedIps, openMode, permissionLevel, dbWorkload,
+privateEndpointLabel, nsgIds, dbVersion, dbName, scheduledOperations,
+dbToolsDetails, isLocalDataGuardEnabled, or isFreeTier.
+
+--is-schedule-db-version-upgrade-to-earliest [boolean]
+
+True if user wants to schedule Autonomous Database upgrade to the
+earliest available time.
+
+--license-model [text]
+
+The Oracle license model that applies to the Oracle Autonomous
+Database. Bring your own license (BYOL) allows you to apply your
+current on-premises Oracle software licenses to equivalent, highly
+automated Oracle services in the cloud. License Included allows you to
+subscribe to new Oracle Database software licenses and the Oracle
+Database service. Note that when provisioning an Autonomous Database
+on dedicated Exadata infrastructure, this attribute must be null. It
+is already set at the Autonomous Exadata Infrastructure level. When
+provisioning an Autonomous Database Serverless  database, if a value
+is not specified, the system defaults the value to
+*BRING_YOUR_OWN_LICENSE*. Bring your own license (BYOL) also allows
+you to select the DB edition using the optional parameter.
+
+This cannot be updated in parallel with any of the following:
+cpuCoreCount, computeCount, dataStorageSizeInTBs, adminPassword,
+isMTLSConnectionRequired, dbWorkload, privateEndpointLabel, nsgIds,
+dbVersion, dbName, scheduledOperations, dbToolsDetails, or isFreeTier.
+
+Accepted values are:
+
+   BRING_YOUR_OWN_LICENSE, LICENSE_INCLUDED
+
+--local-adg-auto-failover-max-data-loss-limit [integer]
+
+Parameter that allows users to select an acceptable maximum data loss
+limit in seconds, up to which Automatic Failover will be triggered
+when necessary for a Local Autonomous Data Guard
+
+--long-term-backup-schedule [complex type]
+
+This is a complex type whose value must be valid JSON. The value can
+be provided as a string on the command line or passed in as a file
+using the file://path/to/file syntax.
+
+The "--generate-param-json-input" option can be used to generate an
+example of the JSON which must be provided. We recommend storing this
+example in a file, modifying it as needed and then passing it back in
+via the file:// syntax.
+
+--max-wait-seconds [integer]
+
+The maximum time to wait for the resource to reach the lifecycle state
+defined by "--wait-for-state". Defaults to 1200 seconds.
+
+--nsg-ids [complex type]
+
+The list of OCIDs for the network security groups (NSGs) to which this
+resource belongs. Setting this to an empty list removes all resources
+from all NSGs. For more information about NSGs, see Security Rules.
+**NsgIds restrictions:** - A network security group (NSG) is optional
+for Autonomous Databases with private access. The nsgIds list can be
+empty. This is a complex type whose value must be valid JSON. The
+value can be provided as a string on the command line or passed in as
+a file using the file://path/to/file syntax.
+
+The "--generate-param-json-input" option can be used to generate an
+example of the JSON which must be provided. We recommend storing this
+example in a file, modifying it as needed and then passing it back in
+via the file:// syntax.
+
+--ocpu-count [float]
+
+The number of OCPU cores to be made available to the Autonomous
+Database.
+
+For Autonomous Databases on Dedicated Exadata Infrastructure, you can
+specify a fractional value for this parameter. Fractional values are
+not supported for Autonomous Database Serverless instances. For
+Autonomous Database Serverless instances, this parameter is not used.
+
+To provision less than 1 core, enter a fractional value in an
+increment of 0.1. To provision 1 or more cores, you must enter an
+integer between 1 and the maximum number of cores available to the
+infrastructure shape. For example, you can provision 0.3 or 0.4 cores,
+but not 0.35 cores. Likewise, you can provision 2 cores or 3 cores,
+but not 2.5 cores. The maximum number of cores is determined by the
+infrastructure shape. See Characteristics of Infrastructure Shapes for
+shape details.
+
+**Note:** This parameter cannot be used with the *cpuCoreCount*
+parameter.
+
+--opc-dry-run [boolean]
+
+Indicates that the request is a dry run, if set to “true”. A dry run
+request does not actually creating or updating a resource and is used
+only to perform validation on the submitted data.
+
+--open-mode [text]
+
+Indicates the Autonomous Database mode. The database can be opened in
+*READ_ONLY* or *READ_WRITE* mode.
+
+This cannot be updated in parallel with any of the following:
+cpuCoreCount, computeCount, computeModel, adminPassword,
+whitelistedIps, isMTLSConnectionRequired, dbVersion, isRefreshable,
+dbName, scheduledOperations, dbToolsDetails, or isFreeTier.
+
+Accepted values are:
+
+   READ_ONLY, READ_WRITE
+
+--peer-db-id [text]
+
+The database OCID(/Content/General/Concepts/identifiers.htm) of the
+Disaster Recovery peer (source Primary) database, which is located in
+a different (remote) region from the current peer database.
+
+To create or delete a local (in-region) standby, see the
+*isDataGuardEnabled* parameter.
+
+--permission-level [text]
+
+The Autonomous Database permission level. Restricted mode allows
+access only by admin users.
+
+This cannot be updated in parallel with any of the following:
+cpuCoreCount, computeCount, computeModel, adminPassword,
+whitelistedIps, isMTLSConnectionRequired, nsgIds, dbVersion,
+isRefreshable, dbName, scheduledOperations, dbToolsDetails, or
+isFreeTier.
+
+Accepted values are:
+
+   RESTRICTED, UNRESTRICTED
+
+--private-endpoint-ip [text]
+
+The private endpoint Ip address for the resource.
+
+--private-endpoint-label [text]
+
+The resource’s private endpoint label. - Setting the endpoint label to
+a non-empty string creates a private endpoint database. - Resetting
+the endpoint label to an empty string, after the creation of the
+private endpoint database, changes the private endpoint database to a
+public endpoint database. - Setting the endpoint label to a non-empty
+string value, updates to a new private endpoint database, when the
+database is disabled and re-enabled.
+
+This setting cannot be updated in parallel with any of the following:
+licenseModel, dbEdition, cpuCoreCount, computeCount, computeModel,
+adminPassword, whitelistedIps, isMTLSConnectionRequired, dbWorkload,
+dbVersion, isRefreshable, dbName, scheduledOperations, dbToolsDetails,
+or isFreeTier.
+
+--refreshable-mode [text]
+
+The refresh mode of the clone. AUTOMATIC indicates that the clone is
+automatically being refreshed with data from the source Autonomous
+Database.
+
+Accepted values are:
+
+   AUTOMATIC, MANUAL
+
+--resource-pool-leader-id [text]
+
+The unique identifier for leader autonomous database OCID OCID.
+
+--resource-pool-summary [complex type]
+
+This is a complex type whose value must be valid JSON. The value can
+be provided as a string on the command line or passed in as a file
+using the file://path/to/file syntax.
+
+The "--generate-param-json-input" option can be used to generate an
+example of the JSON which must be provided. We recommend storing this
+example in a file, modifying it as needed and then passing it back in
+via the file:// syntax.
+
+--scheduled-operations [complex type]
+
+The list of scheduled operations. Consists of values such as
+dayOfWeek, scheduledStartTime, scheduledStopTime.
+
+This cannot be updated in parallel with any of the following:
+licenseModel, dbEdition, cpuCoreCount, computeCount, computeModel,
+whitelistedIps, isMTLSConnectionRequired, openMode, permissionLevel,
+dbWorkload, privateEndpointLabel, nsgIds, dbVersion, isRefreshable,
+dbName, dbToolsDetails, isLocalDataGuardEnabled, or isFreeTier.
+
+This option is a JSON list with items of type
+ScheduledOperationDetails.  For documentation on
+ScheduledOperationDetails please see our API reference: https://docs.
+cloud.oracle.com/api/#/en/database/20160918/datatypes/ScheduledOperat
+ionDetails. This is a complex type whose value must be valid JSON. The
+value can be provided as a string on the command line or passed in as
+a file using the file://path/to/file syntax.
+
+The "--generate-param-json-input" option can be used to generate an
+example of the JSON which must be provided. We recommend storing this
+example in a file, modifying it as needed and then passing it back in
+via the file:// syntax.
+
+--secret-id [text]
+
+The OCI vault secret [/Content/General/Concepts/identifiers.htm]OCID.
+This cannot be used in conjunction with adminPassword.
+
+--secret-version-number [integer]
+
+The version of the vault secret. If no version is specified, the
+latest version will be used.
+
+--security-attributes [complex type]
+
+Security Attributes for this resource. Each key is predefined and
+scoped to a namespace. For more information, see Resource Tags.
+Example: *{“Oracle-ZPR”: {“MaxEgressCount”: {“value”: “42”, “mode”:
+“audit”}}}* This is a complex type whose value must be valid JSON. The
+value can be provided as a string on the command line or passed in as
+a file using the file://path/to/file syntax.
+
+The "--generate-param-json-input" option can be used to generate an
+example of the JSON which must be provided. We recommend storing this
+example in a file, modifying it as needed and then passing it back in
+via the file:// syntax.
+
+--standby-whitelisted-ips [complex type]
+
+The client IP access control list (ACL). This feature is available for
+Autonomous Database Serverless  and on Exadata Cloud@Customer. Only
+clients connecting from an IP address included in the ACL may access
+the Autonomous Database instance. If *arePrimaryWhitelistedIpsUsed* is
+‘TRUE’ then Autonomous Database uses this primary’s IP access control
+list (ACL) for the disaster recovery peer called
+*standbywhitelistedips*.
+
+For Autonomous Database Serverless, this is an array of CIDR
+(classless inter-domain routing) notations for a subnet or VCN OCID
+(virtual cloud network Oracle Cloud ID). Multiple IPs and VCN OCIDs
+should be separate strings separated by commas, but if it’s other
+configurations that need multiple pieces of information then its each
+piece is connected with semicolon (;) as a delimiter. Example: *[“1.1
+.1.1”,”1.1.1.0/24”,”ocid1.vcn.oc1.sea.<unique_id>”,”ocid1.vcn.oc1.sea
+.<unique_id1>;1.1.1.1”,”ocid1.vcn.oc1.sea.<unique_id2>;1.1.0.0/16”]*
+For Exadata Cloud@Customer, this is an array of IP addresses or CIDR
+notations. Example: *[“1.1.1.1”,”1.1.1.0/24”,”1.1.2.25”]*
+
+For an update operation, if you want to delete all the IPs in the ACL,
+use an array with a single empty string entry.
+
+This cannot be updated in parallel with any of the following:
+licenseModel, dbEdition, cpuCoreCount, computeCount, computeModel,
+adminPassword, isMTLSConnectionRequired, openMode, permissionLevel,
+dbWorkload, dbVersion, isRefreshable, dbName, scheduledOperations,
+dbToolsDetails, isLocalDataGuardEnabled, or isFreeTier. This is a
+complex type whose value must be valid JSON. The value can be provided
+as a string on the command line or passed in as a file using the
+file://path/to/file syntax.
+
+The "--generate-param-json-input" option can be used to generate an
+example of the JSON which must be provided. We recommend storing this
+example in a file, modifying it as needed and then passing it back in
+via the file:// syntax.
+
+--subnet-id [text]
+
+The OCID of the subnet the resource is associated with.
+
+**Subnet Restrictions:** - For bare metal DB systems and for single
+node virtual machine DB systems, do not use a subnet that overlaps
+with 192.168.16.16/28. - For Exadata and virtual machine 2-node RAC
+systems, do not use a subnet that overlaps with 192.168.128.0/20. -
+For Autonomous Database, setting this will disable public secure
+access to the database.
+
+These subnets are used by the Oracle Clusterware private interconnect
+on the database instance. Specifying an overlapping subnet will cause
+the private interconnect to malfunction. This restriction applies to
+both the client subnet and the backup subnet.
+
+--time-of-auto-refresh-start [datetime]
+
+The the date and time that auto-refreshing will begin for an
+Autonomous Database refreshable clone. This value controls only the
+start time for the first refresh operation. Subsequent (ongoing)
+refresh operations have start times controlled by the value of the
+*autoRefreshFrequencyInSeconds* parameter.
+
+   The following datetime formats are supported:
+
+
+UTC with microseconds
+---------------------
+
+   Format: YYYY-MM-DDTHH:mm:ss.ssssssTZD
+   Example: 2017-09-15T20:30:00.123456Z
+
+   UTC with milliseconds
+   ***********************
+   .. code::
+
+       Format: YYYY-MM-DDTHH:mm:ss.sssTZD
+       Example: 2017-09-15T20:30:00.123Z
+
+   UTC without milliseconds
+   **************************
+   .. code::
+
+       Format: YYYY-MM-DDTHH:mm:ssTZD
+       Example: 2017-09-15T20:30:00Z
+
+   UTC with minute precision
+   **************************
+   .. code::
+
+       Format: YYYY-MM-DDTHH:mmTZD
+       Example: 2017-09-15T20:30Z
+
+
+Timezone with microseconds
+--------------------------
+
+   Format: YYYY-MM-DDTHH:mm:ssTZD
+   Example: 2017-09-15T12:30:00.456789-08:00, 2017-09-15T12:30:00.456789-0800
+
+   Timezone with milliseconds
+   ***************************
+   .. code::
+
+       Format: YYYY-MM-DDTHH:mm:ssTZD
+       Example: 2017-09-15T12:30:00.456-08:00, 2017-09-15T12:30:00.456-0800
+
+   Timezone without milliseconds
+   *******************************
+   .. code::
+
+       Format: YYYY-MM-DDTHH:mm:ssTZD
+       Example: 2017-09-15T12:30:00-08:00, 2017-09-15T12:30:00-0800
+
+   Timezone with minute precision
+   *******************************
+   .. code::
+
+       Format: YYYY-MM-DDTHH:mmTZD
+       Example: 2017-09-15T12:30-08:00, 2017-09-15T12:30-0800
+
+   Short date and time
+   ********************
+   The timezone for this date and time will be taken as UTC (Needs to be surrounded by single or double quotes)
+
+   .. code::
+
+       Format: 'YYYY-MM-DD HH:mm' or "YYYY-MM-DD HH:mm"
+       Example: '2017-09-15 17:25'
+
+   Date Only
+   **********
+   This date will be taken as midnight UTC of that day
+
+   .. code::
+
+       Format: YYYY-MM-DD
+       Example: 2017-09-15
+
+   Epoch seconds
+   **************
+   .. code::
+
+       Example: 1412195400
+
+--time-scheduled-db-version-upgrade [datetime]
+
+The date and time the Autonomous Database scheduled to upgrade to
+23ai.
+
+   The following datetime formats are supported:
+
+
+UTC with microseconds
+---------------------
+
+   Format: YYYY-MM-DDTHH:mm:ss.ssssssTZD
+   Example: 2017-09-15T20:30:00.123456Z
+
+   UTC with milliseconds
+   ***********************
+   .. code::
+
+       Format: YYYY-MM-DDTHH:mm:ss.sssTZD
+       Example: 2017-09-15T20:30:00.123Z
+
+   UTC without milliseconds
+   **************************
+   .. code::
+
+       Format: YYYY-MM-DDTHH:mm:ssTZD
+       Example: 2017-09-15T20:30:00Z
+
+   UTC with minute precision
+   **************************
+   .. code::
+
+       Format: YYYY-MM-DDTHH:mmTZD
+       Example: 2017-09-15T20:30Z
+
+
+Timezone with microseconds
+--------------------------
+
+   Format: YYYY-MM-DDTHH:mm:ssTZD
+   Example: 2017-09-15T12:30:00.456789-08:00, 2017-09-15T12:30:00.456789-0800
+
+   Timezone with milliseconds
+   ***************************
+   .. code::
+
+       Format: YYYY-MM-DDTHH:mm:ssTZD
+       Example: 2017-09-15T12:30:00.456-08:00, 2017-09-15T12:30:00.456-0800
+
+   Timezone without milliseconds
+   *******************************
+   .. code::
+
+       Format: YYYY-MM-DDTHH:mm:ssTZD
+       Example: 2017-09-15T12:30:00-08:00, 2017-09-15T12:30:00-0800
+
+   Timezone with minute precision
+   *******************************
+   .. code::
+
+       Format: YYYY-MM-DDTHH:mmTZD
+       Example: 2017-09-15T12:30-08:00, 2017-09-15T12:30-0800
+
+   Short date and time
+   ********************
+   The timezone for this date and time will be taken as UTC (Needs to be surrounded by single or double quotes)
+
+   .. code::
+
+       Format: 'YYYY-MM-DD HH:mm' or "YYYY-MM-DD HH:mm"
+       Example: '2017-09-15 17:25'
+
+   Date Only
+   **********
+   This date will be taken as midnight UTC of that day
+
+   .. code::
+
+       Format: YYYY-MM-DD
+       Example: 2017-09-15
+
+   Epoch seconds
+   **************
+   .. code::
+
+       Example: 1412195400
+
+--wait-for-state [text]
+
+This operation creates, modifies or deletes a resource that has a
+defined lifecycle state. Specify this option to perform the action and
+then wait until the resource reaches a given lifecycle state. Multiple
+states can be specified, returning on the first state. For example, "
+--wait-for-state" SUCCEEDED "--wait-for-state" FAILED would return on
+whichever lifecycle state is reached first. If timeout is reached, a
+return code of 2 is returned. For any other error, a return code of 1
+is returned.
+
+Accepted values are:
+
+   AVAILABLE, AVAILABLE_NEEDS_ATTENTION, BACKUP_IN_PROGRESS, INACCESSIBLE, MAINTENANCE_IN_PROGRESS, PROVISIONING, RECREATING, RESTARTING, RESTORE_FAILED, RESTORE_IN_PROGRESS, ROLE_CHANGE_IN_PROGRESS, SCALE_IN_PROGRESS, STANDBY, STARTING, STOPPED, STOPPING, TERMINATED, TERMINATING, UNAVAILABLE, UPDATING, UPGRADING
+
+--wait-interval-seconds [integer]
+
+Check every "--wait-interval-seconds" to see whether the resource has
+reached the lifecycle state defined by "--wait-for-state". Defaults to
+30 seconds.
+
+--whitelisted-ips [complex type]
+
+The client IP access control list (ACL). This feature is available for
+Autonomous Database Serverless  and on Exadata Cloud@Customer. Only
+clients connecting from an IP address included in the ACL may access
+the Autonomous Database instance. If *arePrimaryWhitelistedIpsUsed* is
+‘TRUE’ then Autonomous Database uses this primary’s IP access control
+list (ACL) for the disaster recovery peer called
+*standbywhitelistedips*.
+
+For Autonomous Database Serverless, this is an array of CIDR
+(classless inter-domain routing) notations for a subnet or VCN OCID
+(virtual cloud network Oracle Cloud ID). Multiple IPs and VCN OCIDs
+should be separate strings separated by commas, but if it’s other
+configurations that need multiple pieces of information then its each
+piece is connected with semicolon (;) as a delimiter. Example: *[“1.1
+.1.1”,”1.1.1.0/24”,”ocid1.vcn.oc1.sea.<unique_id>”,”ocid1.vcn.oc1.sea
+.<unique_id1>;1.1.1.1”,”ocid1.vcn.oc1.sea.<unique_id2>;1.1.0.0/16”]*
+For Exadata Cloud@Customer, this is an array of IP addresses or CIDR
+notations. Example: *[“1.1.1.1”,”1.1.1.0/24”,”1.1.2.25”]*
+
+For an update operation, if you want to delete all the IPs in the ACL,
+use an array with a single empty string entry.
+
+This cannot be updated in parallel with any of the following:
+licenseModel, dbEdition, cpuCoreCount, computeCount, computeModel,
+adminPassword, isMTLSConnectionRequired, openMode, permissionLevel,
+dbWorkload, dbVersion, isRefreshable, dbName, scheduledOperations,
+dbToolsDetails, isLocalDataGuardEnabled, or isFreeTier. This is a
+complex type whose value must be valid JSON. The value can be provided
+as a string on the command line or passed in as a file using the
+file://path/to/file syntax.
+
+The "--generate-param-json-input" option can be used to generate an
+example of the JSON which must be provided. We recommend storing this
+example in a file, modifying it as needed and then passing it back in
+via the file:// syntax.
+
+
+Global Parameters
+=================
+
+Use "oci --help" for help on global parameters.
+
+"--auth-purpose", "--auth", "--cert-bundle", "--cli-auto-prompt", "--
+cli-rc-file", "--config-file", "--connection-timeout", "--debug", "--
+defaults-file", "--endpoint", "--generate-full-command-json-input", "
+--generate-param-json-input", "--help", "--latest-version", "--max-
+retries", "--no-retry", "--opc-client-request-id", "--opc-request-id",
+"--output", "--profile", "--proxy", "--query", "--raw-output", "--
+read-timeout", "--realm-specific-endpoint", "--region", "--release-
+info", "--request-id", "--version", "-?", "-d", "-h", "-i", "-v"
+
+
+Example using required parameter
+================================
+
+Copy the following CLI commands into a file named example.sh. Run the
+command by typing “bash example.sh” and replacing the example
+parameters with your own.
+
+Please note this sample will only work in the POSIX-compliant bash-
+like shell. You need to set up the OCI configuration and appropriate
+security policies before trying the examples.
+
+       export compartment_id=<substitute-value-of-compartment_id> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/db/autonomous-database/create.html#cmdoption-compartment-id
+       export db_name=<substitute-value-of-db_name> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/db/autonomous-database/create.html#cmdoption-db-name
+
+       autonomous_database_id=$(oci db autonomous-database create --compartment-id $compartment_id --db-name $db_name --query data.id --raw-output)
+
+       oci db autonomous-database update --autonomous-database-id $autonomous_database_id

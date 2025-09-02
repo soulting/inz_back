@@ -1,0 +1,29 @@
+model
+*****
+
+
+Description
+===========
+
+You can create a custom model by using your dataset to fine-tune an
+out-of-the-box text generation base model. Have your dataset ready
+before you create a custom model. See Training Data Requirements.
+
+To use any of the API operations, you must be authorized in an IAM
+policy. If you’re not authorized, talk to an administrator who gives
+OCI resource access to users. See Getting Started with Policies and
+Getting Access to Generative AI Resources.
+
+
+Available Commands
+==================
+
+* change-compartment
+
+* create
+
+* delete
+
+* get
+
+* update

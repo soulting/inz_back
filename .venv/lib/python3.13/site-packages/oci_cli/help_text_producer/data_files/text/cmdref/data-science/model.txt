@@ -1,0 +1,72 @@
+model
+*****
+
+
+Description
+===========
+
+Models are mathematical representations of the relationships between
+data. Models are represented by their associated metadata and
+artifacts.
+
+
+Available Commands
+==================
+
+* activate
+
+* change-compartment
+
+* create
+
+* create-model-artifact
+
+* create-model-custom-metadatum-artifact
+
+* create-model-defined-metadatum-artifact
+
+* create-model-provenance
+
+* deactivate
+
+* delete
+
+* delete-model-custom-metadatum-artifact
+
+* delete-model-defined-metadatum-artifact
+
+* export-model-artifact
+
+* export-model-artifact-artifact-export-details-object-storage
+
+* get
+
+* get-artifact-content
+
+* get-model-custom-metadatum-artifact-content
+
+* get-model-defined-metadatum-artifact-content
+
+* get-model-provenance
+
+* head-model-artifact
+
+* head-model-custom-metadatum-artifact
+
+* head-model-defined-metadatum-artifact
+
+* import-model-artifact
+
+* import-model-artifact-artifact-import-details-object-storage
+
+* list
+
+* restore-archived-model-artifact
+
+* update
+
+* update-model-custom-metadatum-artifact
+
+* update-model-defined-metadatum-artifact
+
+* update-model-provenance

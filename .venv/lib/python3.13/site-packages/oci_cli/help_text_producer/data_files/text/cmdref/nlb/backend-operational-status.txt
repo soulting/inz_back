@@ -1,0 +1,14 @@
+backend-operational-status
+**************************
+
+
+Description
+===========
+
+The operational status of the specified backend server.
+
+
+Available Commands
+==================
+
+* get

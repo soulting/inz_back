@@ -1,0 +1,14 @@
+sql-firewall-allowed-sql-analytics
+**********************************
+
+
+Description
+===========
+
+SQL Firewall allowed SQL analytics collection.
+
+
+Available Commands
+==================
+
+* list

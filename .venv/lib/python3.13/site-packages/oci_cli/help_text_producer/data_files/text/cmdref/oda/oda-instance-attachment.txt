@@ -1,0 +1,20 @@
+oda-instance-attachment
+***********************
+
+
+Description
+===========
+
+Description of an ODA instance attachment.
+
+
+Available Commands
+==================
+
+* create
+
+* delete
+
+* get
+
+* update

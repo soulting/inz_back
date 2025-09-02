@@ -1,0 +1,15 @@
+application
+***********
+
+
+Description
+===========
+
+Result of listing VbInstance’s applications. Contains
+ApplicationSummary items.
+
+
+Available Commands
+==================
+
+* list

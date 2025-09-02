@@ -1,0 +1,32 @@
+dashboard
+*********
+
+
+Description
+===========
+
+Properties of a dashboard, including dashboard ID.
+
+
+Available Commands
+==================
+
+* change-compartment
+
+* create
+
+* delete
+
+* export
+
+* get
+
+* get-oob
+
+* import
+
+* list
+
+* list-oob
+
+* update

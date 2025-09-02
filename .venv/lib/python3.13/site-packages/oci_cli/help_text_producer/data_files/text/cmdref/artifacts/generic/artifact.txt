@@ -1,0 +1,32 @@
+artifact
+********
+
+
+Description
+===========
+
+The metadata of the artifact.
+
+
+Available Commands
+==================
+
+* delete
+
+* delete-by-path
+
+* download
+
+* download-by-path
+
+* get
+
+* get-by-path
+
+* list
+
+* update
+
+* update-by-path
+
+* upload-by-path

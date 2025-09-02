@@ -1,0 +1,22 @@
+scheduled-action
+****************
+
+
+Description
+===========
+
+Details of a Scheduled Action.
+
+
+Available Commands
+==================
+
+* create
+
+* delete
+
+* get
+
+* list
+
+* update

@@ -1,0 +1,14 @@
+supported-cloud-regions
+***********************
+
+
+Description
+===========
+
+Summary of the supported cloud region.
+
+
+Available Commands
+==================
+
+* list

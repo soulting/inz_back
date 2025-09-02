@@ -1,0 +1,14 @@
+zone-transfer-server
+********************
+
+
+Description
+===========
+
+An OCI nameserver that transfers zone data with external nameservers.
+
+
+Available Commands
+==================
+
+* list

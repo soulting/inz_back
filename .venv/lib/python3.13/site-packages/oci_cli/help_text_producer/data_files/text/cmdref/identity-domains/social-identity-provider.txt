@@ -1,0 +1,22 @@
+social-identity-provider
+************************
+
+
+Description
+===========
+
+Social Identity Provider
+
+
+Available Commands
+==================
+
+* create
+
+* delete
+
+* get
+
+* patch
+
+* put

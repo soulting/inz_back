@@ -1,0 +1,19 @@
+access-request
+**************
+
+
+Description
+===========
+
+An access request to a customer’s resource. An access request is a
+subsidiary resource of the Lockbox entity.
+
+
+Available Commands
+==================
+
+* create
+
+* get
+
+* handle

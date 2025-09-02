@@ -1,0 +1,14 @@
+restore-oci-console-policy
+**************************
+
+
+Description
+===========
+
+Schema to restoring OCI Console Policy to Factory Defaults.
+
+
+Available Commands
+==================
+
+* create

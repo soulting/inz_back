@@ -1,0 +1,21 @@
+service-provider-action
+***********************
+
+
+Description
+===========
+
+Details of the Service Provider Action. Service provider actions are a
+pre-defined set of commands available to the support operator on
+different layers of the infrastructure. Although the groupings may
+differ depending on the infrastructure layers, the groups are designed
+to enable the support operator access to commands to resolve a
+specific set of issues.
+
+
+Available Commands
+==================
+
+* get
+
+* list

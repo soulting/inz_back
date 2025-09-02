@@ -1,0 +1,23 @@
+auto-scale-config
+*****************
+
+
+Description
+===========
+
+Add an autoscale configuration to the cluster. [Command
+Reference](addAutoScalingConfiguration)
+
+
+Available Commands
+==================
+
+* create
+
+* delete
+
+* edit
+
+* get
+
+* list

@@ -1,0 +1,48 @@
+autonomous-container-database
+*****************************
+
+
+Description
+===========
+
+
+Available Commands
+==================
+
+* add
+
+* change-compartment
+
+* change-dataguard-role
+
+* convert-standby
+
+* create
+
+* create-autonomous-container-database-create-autonomous-container-
+  database-details
+
+* create-autonomous-container-database-create-autonomous-container-
+  database-from-backup-details
+
+* edit-autonomous-container-database-dataguard
+
+* failover-autonomous-container-database-dataguard
+
+* get
+
+* get-autonomous-container-database-resource-usage
+
+* list
+
+* reinstate-autonomous-container-database-dataguard
+
+* restart
+
+* rotate-key
+
+* switchover-autonomous-container-database-dataguard
+
+* terminate
+
+* update

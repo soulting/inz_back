@@ -1,0 +1,148 @@
+dns
+***
+
+
+Description
+===========
+
+CLI for the DNS service. Use this CLI to manage DNS zones, records,
+and other DNS resources. For more information, see Overview of the DNS
+Service.
+
+
+Available Commands
+==================
+
+* record
+
+  * domain
+
+    * delete
+
+    * get
+
+    * patch
+
+    * update
+
+  * rrset
+
+    * delete
+
+    * get
+
+    * patch
+
+    * update
+
+  * zone
+
+    * get
+
+    * patch
+
+    * update
+
+* resolver
+
+  * change-compartment
+
+  * get
+
+  * list
+
+  * update
+
+* resolver-endpoint
+
+  * create
+
+  * delete
+
+  * get
+
+  * list
+
+  * update
+
+* steering-policy
+
+  * change-compartment
+
+  * create
+
+  * delete
+
+  * get
+
+  * list
+
+  * update
+
+* steering-policy-attachment
+
+  * create
+
+  * delete
+
+  * get
+
+  * list
+
+  * update
+
+* tsig-key
+
+  * change-compartment
+
+  * create
+
+  * delete
+
+  * get
+
+  * list
+
+  * update
+
+* view
+
+  * change-compartment
+
+  * create
+
+  * delete
+
+  * get
+
+  * list
+
+  * update
+
+* zone
+
+  * change-compartment
+
+  * create
+
+  * create-zone-from-zone-file
+
+  * delete
+
+  * get
+
+  * get-zone-content
+
+  * list
+
+  * migrate-from-dynect
+
+  * promote-zone-dnssec-key-version
+
+  * stage-zone-dnssec-key-version
+
+  * update
+
+* zone-transfer-server
+
+  * list

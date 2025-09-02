@@ -1,0 +1,14 @@
+activity-problem-aggregation
+****************************
+
+
+Description
+===========
+
+Provides the parameters and their corresponding count.
+
+
+Available Commands
+==================
+
+* request-summarized-activity-problems

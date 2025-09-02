@@ -1,0 +1,15 @@
+model-collection
+****************
+
+
+Description
+===========
+
+Results of a model search. Contains ModelSummary items and other
+information such as metadata.
+
+
+Available Commands
+==================
+
+* list-models

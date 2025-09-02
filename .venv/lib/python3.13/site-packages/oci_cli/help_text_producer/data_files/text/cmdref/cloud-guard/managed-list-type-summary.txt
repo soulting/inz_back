@@ -1,0 +1,15 @@
+managed-list-type-summary
+*************************
+
+
+Description
+===========
+
+A managed list type summary (ManagedListTypeSummary object) contains
+summary information for a managed list type (ManagedListType object).
+
+
+Available Commands
+==================
+
+* list-managed-list-types

@@ -1,0 +1,23 @@
+external-publication
+********************
+
+
+Description
+===========
+
+The external published object contains the audit summary information
+and the definition of the task.
+
+
+Available Commands
+==================
+
+* create
+
+* delete
+
+* get
+
+* list
+
+* update

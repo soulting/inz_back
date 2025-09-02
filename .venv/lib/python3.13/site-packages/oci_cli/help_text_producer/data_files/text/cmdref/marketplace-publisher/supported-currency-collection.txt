@@ -1,0 +1,15 @@
+supported-currency-collection
+*****************************
+
+
+Description
+===========
+
+Result set consisting of list of currencies supported by the
+Marketplace Publisher Service.
+
+
+Available Commands
+==================
+
+* list-supported-currencies

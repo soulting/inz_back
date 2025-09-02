@@ -1,0 +1,14 @@
+market
+******
+
+
+Description
+===========
+
+The model for the market details.
+
+
+Available Commands
+==================
+
+* get

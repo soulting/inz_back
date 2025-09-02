@@ -1,0 +1,53 @@
+sch
+***
+
+
+Description
+===========
+
+Use the Connector Hub CLI to transfer data between services in Oracle
+Cloud Infrastructure. For more information about Connector Hub, see
+the Connector Hub documentation. Connector Hub is formerly known as
+Service Connector Hub.
+
+
+Available Commands
+==================
+
+* connector-plugins
+
+  * get
+
+  * list
+
+* service-connector
+
+  * activate
+
+  * change-compartment
+
+  * create
+
+  * deactivate
+
+  * delete
+
+  * get
+
+  * list
+
+  * update
+
+* work-request
+
+  * get
+
+  * list
+
+* work-request-error
+
+  * list
+
+* work-request-log-entry
+
+  * list-work-request-logs

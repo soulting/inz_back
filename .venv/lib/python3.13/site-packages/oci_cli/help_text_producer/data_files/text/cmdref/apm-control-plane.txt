@@ -1,0 +1,54 @@
+apm-control-plane
+*****************
+
+
+Description
+===========
+
+Use the Application Performance Monitoring Control Plane CLI to
+perform operations such as creating, updating, deleting and listing
+APM domains and monitoring the progress of these operations using the
+work request CLI. For more information, see Application Performance
+Monitoring.
+
+
+Available Commands
+==================
+
+* apm-domain
+
+  * change-compartment
+
+  * create
+
+  * delete
+
+  * get
+
+  * list
+
+  * update
+
+* data-key
+
+  * generate
+
+  * list
+
+  * remove
+
+* work-request
+
+  * get
+
+  * list
+
+  * list-apm-domain
+
+* work-request-error
+
+  * list
+
+* work-request-log-entry
+
+  * list-work-request-logs

@@ -1,0 +1,477 @@
+cloud-guard
+***********
+
+
+Description
+===========
+
+Use the Cloud Guard and Security Zones CLI to automate processes that
+you would otherwise perform through the Cloud Guard Console or the
+Security Zones Console. For more information on these services, see
+the Cloud Guard and Security Zones documentation.
+
+**Note:** For Cloud Guard, you can perform Create, Update, and Delete
+operations only from the reporting region of your Cloud Guard tenancy.
+You can perform Read operations from any region.
+
+
+Available Commands
+==================
+
+* activity-problem-aggregation
+
+  * request-summarized-activity-problems
+
+* adhoc-query
+
+  * create
+
+  * delete
+
+  * get
+
+  * list
+
+* adhoc-query-result-collection
+
+  * get-adhoc-query-result-content
+
+  * list-adhoc-query-results
+
+* condition-metadata-type
+
+  * get
+
+  * list
+
+* configuration
+
+  * get
+
+  * update
+
+* data-mask-rule
+
+  * create
+
+  * create-for-all-targets
+
+  * create-for-services
+
+  * create-for-targets
+
+  * delete
+
+  * get
+
+  * list
+
+  * update
+
+  * update-for-all-targets
+
+  * update-for-services
+
+  * update-for-targets
+
+* data-source
+
+  * change-compartment
+
+  * create
+
+  * create-data-source-logging-query-data-source-details
+
+  * create-data-source-scheduled-query-data-source-obj-details
+
+  * delete
+
+  * get
+
+  * list
+
+  * list-data-source-events
+
+  * update
+
+  * update-data-source-logging-query-data-source-details
+
+  * update-data-source-scheduled-query-data-source-obj-details
+
+* detector
+
+  * get
+
+  * list
+
+* detector-recipe
+
+  * change-compartment
+
+  * create
+
+  * delete
+
+  * get
+
+  * list
+
+  * update
+
+* detector-recipe-detector-rule
+
+  * create
+
+  * delete
+
+  * delete-detector-recipe-detector-rule-data-source
+
+  * get
+
+  * list
+
+  * update
+
+* detector-rule
+
+  * get
+
+  * list
+
+* impacted-resource-summary
+
+  * list-impacted-resources
+
+* managed-list
+
+  * change-compartment
+
+  * create
+
+  * delete
+
+  * get
+
+  * list
+
+  * update
+
+* managed-list-type-summary
+
+  * list-managed-list-types
+
+* policy-summary
+
+  * list-policies
+
+* problem
+
+  * get
+
+  * list
+
+  * list-problem-entities
+
+  * list-problem-histories
+
+  * trigger-responder
+
+  * update-bulk-problem-status
+
+  * update-problem-status
+
+* problem-aggregation
+
+  * request-summarized-problems
+
+* problem-endpoint-summary
+
+  * list-problem-endpoints
+
+* problem-trend-aggregation
+
+  * request-summarized-trend-problems
+
+* recommendation-summary
+
+  * list-recommendations
+
+* resource
+
+  * get
+
+  * list
+
+* resource-port-collection
+
+  * list-resource-ports
+
+* resource-profile
+
+  * get
+
+* resource-profile-endpoint-summary
+
+  * list-resource-profile-endpoints
+
+* resource-profile-impacted-resource-summary
+
+  * list-resource-profile-impacted-resources
+
+* resource-profile-risk-score-aggregation-summary
+
+  * request-summarized-top-trend-resource-profile-risk-scores
+
+* resource-profile-summary
+
+  * list-resource-profiles
+
+* resource-risk-score-aggregation
+
+  * request-summarized-trend-resource-risk-scores
+
+* resource-type-summary
+
+  * list-resource-types
+
+* resource-vulnerability
+
+  * get
+
+* resource-vulnerability-collection
+
+  * list-resource-vulnerabilities
+
+* responder-activity-summary
+
+  * list-responder-activities
+
+* responder-execution
+
+  * execute
+
+  * get
+
+  * skip
+
+  * skip-bulk
+
+* responder-execution-aggregation
+
+  * request-summarized-responder-executions
+
+* responder-execution-summary
+
+  * list-responder-executions
+
+* responder-execution-trend-aggregation
+
+  * request-summarized-trend-responder-executions
+
+* responder-recipe
+
+  * change-compartment
+
+  * create
+
+  * delete
+
+  * get
+
+  * list
+
+  * update
+
+* responder-recipe-responder-rule
+
+  * get
+
+  * list
+
+  * update
+
+* responder-rule
+
+  * get
+
+  * list
+
+* risk-score-aggregation
+
+  * request-risk-scores
+
+  * request-summarized-risk-scores
+
+* saved-query
+
+  * change-compartment
+
+  * create
+
+  * delete
+
+  * get
+
+  * list
+
+  * update
+
+* security-policy
+
+  * get
+
+* security-policy-collection
+
+  * list-security-policies
+
+* security-recipe
+
+  * change-compartment
+
+  * create
+
+  * delete
+
+  * get
+
+  * update
+
+* security-recipe-collection
+
+  * list-security-recipes
+
+* security-score-aggregation
+
+  * request-security-scores
+
+  * request-summarized-security-scores
+
+* security-score-trend-aggregation
+
+  * request-security-score-summarized-trend
+
+  * request-summarized-trend-security-scores
+
+* security-zone
+
+  * add
+
+  * change-compartment
+
+  * create
+
+  * delete
+
+  * get
+
+  * remove
+
+  * update
+
+* security-zone-collection
+
+  * list-security-zones
+
+* sighting
+
+  * get
+
+* sighting-endpoint-summary
+
+  * list-sighting-endpoints
+
+* sighting-impacted-resource-summary
+
+  * list-sighting-impacted-resources
+
+* sighting-summary
+
+  * list-sightings
+
+* tactic-summary
+
+  * list-tactics
+
+* target
+
+  * create
+
+  * delete
+
+  * get
+
+  * list
+
+  * update
+
+* target-detector-recipe
+
+  * create
+
+  * delete
+
+  * get
+
+  * list
+
+  * update
+
+* target-detector-recipe-detector-rule
+
+  * get
+
+  * list
+
+  * update
+
+* target-responder-recipe
+
+  * create
+
+  * delete
+
+  * get
+
+  * list
+
+  * update
+
+* target-responder-recipe-responder-rule
+
+  * get
+
+  * list
+
+  * update
+
+* technique-summary
+
+  * list-techniques
+
+* wlp-agent
+
+  * create
+
+  * delete
+
+  * get
+
+  * list
+
+  * update
+
+* work-request
+
+  * cancel
+
+  * get
+
+  * list
+
+* work-request-error
+
+  * list
+
+* work-request-log-entry
+
+  * list-work-request-logs

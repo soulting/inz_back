@@ -1,0 +1,15 @@
+target-database-group-summary
+*****************************
+
+
+Description
+===========
+
+Summary of the target database group used in list operations. Contains
+essential information without matching criteria.
+
+
+Available Commands
+==================
+
+* list-target-database-groups

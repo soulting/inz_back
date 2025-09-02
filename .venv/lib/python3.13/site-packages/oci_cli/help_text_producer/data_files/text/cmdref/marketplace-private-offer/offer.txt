@@ -1,0 +1,29 @@
+offer
+*****
+
+
+Description
+===========
+
+Use the Marketplace Publisher CLI to manage the publishing of
+applications in Oracle Cloud Infrastructure Marketplace.
+
+
+Available Commands
+==================
+
+* offer
+
+  * create
+
+  * delete
+
+  * get
+
+  * get-offer-internal-detail
+
+  * update
+
+* offer-collection
+
+  * list-offers

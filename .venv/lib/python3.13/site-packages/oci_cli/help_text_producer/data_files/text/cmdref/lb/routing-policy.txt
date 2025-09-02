@@ -1,0 +1,25 @@
+routing-policy
+**************
+
+
+Description
+===========
+
+A named ordered list of routing rules that is applied to a listener.
+
+**Warning:** Oracle recommends that you avoid using any confidential
+information when you supply string values using the API.
+
+
+Available Commands
+==================
+
+* create
+
+* delete
+
+* get
+
+* list
+
+* update

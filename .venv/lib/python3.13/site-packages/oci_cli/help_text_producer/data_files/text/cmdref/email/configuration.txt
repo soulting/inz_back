@@ -1,0 +1,14 @@
+configuration
+*************
+
+
+Description
+===========
+
+Tenancy level customer email configuration details.
+
+
+Available Commands
+==================
+
+* get-email

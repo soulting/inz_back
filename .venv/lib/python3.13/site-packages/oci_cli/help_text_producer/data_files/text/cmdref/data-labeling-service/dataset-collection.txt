@@ -1,0 +1,14 @@
+dataset-collection
+******************
+
+
+Description
+===========
+
+Results of a dataset list operation. Contains DatasetSummary items.
+
+
+Available Commands
+==================
+
+* list-datasets

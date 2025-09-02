@@ -1,0 +1,24 @@
+drg-route-rule
+**************
+
+
+Description
+===========
+
+A DRG route rule is a mapping between a destination IP address range
+and a DRG attachment. The map is used to route matching packets.
+Traffic will be routed across the attachments using Equal-cost multi-
+path routing (ECMP) if there are multiple rules with identical
+destinations and none of the rules conflict.
+
+
+Available Commands
+==================
+
+* add
+
+* list
+
+* remove
+
+* update

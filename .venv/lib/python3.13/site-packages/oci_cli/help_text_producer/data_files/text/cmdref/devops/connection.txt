@@ -1,0 +1,44 @@
+connection
+**********
+
+
+Description
+===========
+
+The properties that define a connection to external repositories.
+
+
+Available Commands
+==================
+
+* create-bitbucket-cloud-connection
+
+* create-bitbucket-server-connection
+
+* create-github-connection
+
+* create-gitlab-connection
+
+* create-gitlab-server-connection
+
+* create-vbs-connection
+
+* delete
+
+* get
+
+* list
+
+* update-bitbucket-cloud-connection
+
+* update-bitbucket-server-connection
+
+* update-github-connection
+
+* update-gitlab-connection
+
+* update-gitlab-server-connection
+
+* update-vbs-connection
+
+* validate

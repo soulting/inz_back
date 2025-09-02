@@ -1,0 +1,26 @@
+asset
+*****
+
+
+Description
+===========
+
+Description of an asset.
+
+
+Available Commands
+==================
+
+* change-compartment
+
+* change-tags
+
+* create
+
+* delete
+
+* get
+
+* list
+
+* update

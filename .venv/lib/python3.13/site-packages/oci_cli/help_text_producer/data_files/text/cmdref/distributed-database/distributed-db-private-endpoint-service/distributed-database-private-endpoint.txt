@@ -1,0 +1,24 @@
+distributed-database-private-endpoint
+*************************************
+
+
+Description
+===========
+
+DistributedDatabasePrivateEndpoint resource.
+
+
+Available Commands
+==================
+
+* change-compartment
+
+* create
+
+* delete
+
+* get
+
+* reinstate-proxy-instance
+
+* update

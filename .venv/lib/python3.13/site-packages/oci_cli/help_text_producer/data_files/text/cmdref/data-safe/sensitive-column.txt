@@ -1,0 +1,28 @@
+sensitive-column
+****************
+
+
+Description
+===========
+
+A sensitive column is a resource corresponding to a database column
+that is considered sensitive. It’s a subresource of sensitive data
+model resource and is always associated with a sensitive data model.
+Note that referential relationships are also managed as part of
+sensitive columns.
+
+
+Available Commands
+==================
+
+* create
+
+* delete
+
+* get
+
+* list
+
+* patch
+
+* update

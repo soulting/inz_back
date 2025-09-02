@@ -1,0 +1,30 @@
+cloud-db-system-connector
+*************************
+
+
+Description
+===========
+
+The details of a cloud DB system connector.
+
+
+Available Commands
+==================
+
+* check-cloud-db-system-connector-connection-status
+
+* create
+
+* create-cloud-db-system-connector-create-cloud-db-system-macs-
+  connector-details
+
+* delete
+
+* get
+
+* list
+
+* update
+
+* update-cloud-db-system-connector-update-cloud-db-system-macs-
+  connector-details

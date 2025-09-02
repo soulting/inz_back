@@ -1,0 +1,84 @@
+jms-java-downloads
+******************
+
+
+Description
+===========
+
+The CLI for the <a href=”https://docs.oracle.com/en-us/iaas/jms/doc
+/java-download.html”>Java Download</a> feature of Java Management
+Service.
+
+
+Available Commands
+==================
+
+* download-url
+
+  * generate-artifact
+
+* java-download-count-aggregation
+
+  * request-summarized-java-download-counts
+
+* java-download-record
+
+  * list
+
+* java-download-report
+
+  * create
+
+  * delete
+
+  * get
+
+  * get-java-download-report-content
+
+  * list
+
+* java-download-token
+
+  * create
+
+  * delete
+
+  * get
+
+  * list
+
+  * update
+
+* java-license
+
+  * get
+
+  * list
+
+* java-license-acceptance-record
+
+  * create
+
+  * delete
+
+  * get
+
+  * list
+
+  * update
+
+* work-request
+
+  * cancel
+
+  * get
+
+  * list
+
+* work-request-error
+
+  * list
+
+* work-request-log-entry
+
+  * list-work-request-logs

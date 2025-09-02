@@ -1,0 +1,154 @@
+"list-inclusion-criteria"
+*************************
+
+* Description
+
+* Usage
+
+* Required Parameters
+
+* Optional Parameters
+
+* Global Parameters
+
+* Example using required parameter
+
+
+Description
+===========
+
+List inclusion criteria associated with a governance rule. Governance
+rule id must be supplied. An optional inclusion criterion id or a
+lifecycle state can also be supplied.
+
+
+Usage
+=====
+
+   oci governance-rules-control-plane governance-rule inclusion-criterion list-inclusion-criteria [OPTIONS]
+
+
+Required Parameters
+===================
+
+--governance-rule-id [text]
+
+Unique governance rule identifier.
+
+
+Optional Parameters
+===================
+
+--all
+
+Fetches all pages of results. If you provide this option, then you
+cannot provide the "--limit" option.
+
+--from-json [text]
+
+Provide input to this command as a JSON document from a file using the
+file://path-to/file syntax.
+
+The "--generate-full-command-json-input" option can be used to
+generate a sample json file to be used with this command option. The
+key names are pre-populated and match the command option names
+(converted to camelCase format, e.g. compartment-id –> compartmentId),
+while the values of the keys need to be populated by the user before
+using the sample file as an input to this command. For any command
+option that accepts multiple values, the value of the key can be a
+JSON array.
+
+Options can still be provided on the command line. If an option exists
+in both the JSON document and the command line then the command line
+specified value will be used.
+
+For examples on usage of this option, please see our “using CLI with
+advanced JSON options” link: https://docs.cloud.oracle.com/iaas/Conte
+nt/API/SDKDocs/cliusing.htm#AdvancedJSONOptions
+
+--inclusion-criterion-id [text]
+
+Unique inclusion criterion identifier.
+
+--lifecycle-state [text]
+
+A filter to return only resources when their lifecycle state matches
+the given lifecycle state.
+
+Accepted values are:
+
+   ACTIVE, DELETED
+
+--limit [integer]
+
+The maximum number of items to return.
+
+--page [text]
+
+A token representing the position at which to start retrieving
+results. This must come from the *opc-next-page* header field of a
+previous response.
+
+--page-size [integer]
+
+When fetching results, the number of results to fetch per call. Only
+valid when used with "--all" or "--limit", and ignored otherwise.
+
+--sort-by [text]
+
+The field to sort by. Only one sort order may be provided. Default
+order for timeCreated is descending. Default order for displayName is
+ascending.
+
+Accepted values are:
+
+   displayName, timeCreated
+
+--sort-order [text]
+
+The sort order to use, either ‘ASC’ or ‘DESC’.
+
+Accepted values are:
+
+   ASC, DESC
+
+
+Global Parameters
+=================
+
+Use "oci --help" for help on global parameters.
+
+"--auth-purpose", "--auth", "--cert-bundle", "--cli-auto-prompt", "--
+cli-rc-file", "--config-file", "--connection-timeout", "--debug", "--
+defaults-file", "--endpoint", "--generate-full-command-json-input", "
+--generate-param-json-input", "--help", "--latest-version", "--max-
+retries", "--no-retry", "--opc-client-request-id", "--opc-request-id",
+"--output", "--profile", "--proxy", "--query", "--raw-output", "--
+read-timeout", "--realm-specific-endpoint", "--region", "--release-
+info", "--request-id", "--version", "-?", "-d", "-h", "-i", "-v"
+
+
+Example using required parameter
+================================
+
+Copy and paste the following example into a JSON file, replacing the
+example parameters with your own.
+
+       oci governance-rules-control-plane governance-rule governance-rule create --generate-param-json-input template > template.json
+
+Copy the following CLI commands into a file named example.sh. Run the
+command by typing “bash example.sh” and replacing the example
+parameters with your own.
+
+Please note this sample will only work in the POSIX-compliant bash-
+like shell. You need to set up the OCI configuration and appropriate
+security policies before trying the examples.
+
+       export compartment_id=<substitute-value-of-compartment_id> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/governance-rules-control-plane/governance-rule/governance-rule/create.html#cmdoption-compartment-id
+       export creation_option=<substitute-value-of-creation_option> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/governance-rules-control-plane/governance-rule/governance-rule/create.html#cmdoption-creation-option
+       export display_name=<substitute-value-of-display_name> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/governance-rules-control-plane/governance-rule/governance-rule/create.html#cmdoption-display-name
+       export type=<substitute-value-of-type> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/governance-rules-control-plane/governance-rule/governance-rule/create.html#cmdoption-type
+
+       governance_rule_id=$(oci governance-rules-control-plane governance-rule governance-rule create --compartment-id $compartment_id --creation-option $creation_option --display-name $display_name --template file://template.json --type $type --query data.id --raw-output)
+
+       oci governance-rules-control-plane governance-rule inclusion-criterion list-inclusion-criteria --governance-rule-id $governance_rule_id

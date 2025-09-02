@@ -1,0 +1,26 @@
+onboarding
+**********
+
+
+Description
+===========
+
+Fleet Application Management onboarding resource. The onboarding
+process lets Fleet Application Management create a few required
+policies that you need to start using it and its features.
+
+
+Available Commands
+==================
+
+* create
+
+* delete
+
+* enable-latest-policy
+
+* get
+
+* manage-settings
+
+* update

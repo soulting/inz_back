@@ -1,0 +1,22 @@
+email-return-path
+*****************
+
+
+Description
+===========
+
+The properties that define a Email Return Path
+
+
+Available Commands
+==================
+
+* create
+
+* delete
+
+* get
+
+* list
+
+* update

@@ -1,0 +1,22 @@
+approval-workflow
+*****************
+
+
+Description
+===========
+
+Schema for ApprovalWorkflow
+
+
+Available Commands
+==================
+
+* create
+
+* delete
+
+* get
+
+* patch
+
+* put

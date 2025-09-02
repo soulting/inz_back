@@ -1,0 +1,57 @@
+security-attribute
+******************
+
+
+Description
+===========
+
+Use the Security Attributes CLI to manage security attributes and
+security attribute namespaces. For more information, see the
+documentation for Security Attributes and Security Attribute
+Namespaces.
+
+
+Available Commands
+==================
+
+* security-attribute
+
+  * bulk-delete
+
+  * bulk-edit
+
+  * create
+
+  * delete
+
+  * get
+
+  * list
+
+  * update
+
+* security-attribute-namespace
+
+  * cascade-delete
+
+  * change-compartment
+
+  * create
+
+  * delete
+
+  * get
+
+  * list
+
+  * update
+
+* work-request
+
+  * get
+
+  * list
+
+  * list-errors
+
+  * list-logs

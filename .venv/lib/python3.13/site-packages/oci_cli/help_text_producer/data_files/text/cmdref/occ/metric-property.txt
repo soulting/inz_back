@@ -1,0 +1,15 @@
+metric-property
+***************
+
+
+Description
+===========
+
+A list of available metrics and their associated properties such as
+dimensions.
+
+
+Available Commands
+==================
+
+* list

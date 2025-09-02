@@ -1,0 +1,20 @@
+responder-execution
+*******************
+
+
+Description
+===========
+
+Attributes for a responder execution (ResponderExecution resource).
+
+
+Available Commands
+==================
+
+* execute
+
+* get
+
+* skip
+
+* skip-bulk

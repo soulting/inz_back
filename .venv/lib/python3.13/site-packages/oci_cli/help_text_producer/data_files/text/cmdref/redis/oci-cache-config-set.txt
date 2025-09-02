@@ -1,0 +1,33 @@
+oci-cache-config-set
+********************
+
+
+Description
+===========
+
+Use the OCI Cache CLI to create and manage clusters. A cluster is a
+memory-based storage solution. For more information, see OCI Cache.
+
+
+Available Commands
+==================
+
+* associated-oci-cache-cluster-summary
+
+  * list-associated-oci-cache-clusters
+
+* oci-cache-config-set
+
+  * change-compartment
+
+  * create
+
+  * delete
+
+  * get
+
+  * update
+
+* oci-cache-config-set-summary
+
+  * list-oci-cache-config-sets

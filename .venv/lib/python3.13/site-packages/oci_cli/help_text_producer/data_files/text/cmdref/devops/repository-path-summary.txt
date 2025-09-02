@@ -1,0 +1,15 @@
+repository-path-summary
+***********************
+
+
+Description
+===========
+
+Object containing information about files and directories in a
+repository.
+
+
+Available Commands
+==================
+
+* list-paths

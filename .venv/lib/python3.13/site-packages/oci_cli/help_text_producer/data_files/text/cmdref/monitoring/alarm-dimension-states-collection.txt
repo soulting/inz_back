@@ -1,0 +1,15 @@
+alarm-dimension-states-collection
+*********************************
+
+
+Description
+===========
+
+The list of current alarm state entries for each metric stream that
+matches the filters.
+
+
+Available Commands
+==================
+
+* retrieve-dimension-states

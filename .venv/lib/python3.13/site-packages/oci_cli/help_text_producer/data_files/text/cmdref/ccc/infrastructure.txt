@@ -1,0 +1,26 @@
+infrastructure
+**************
+
+
+Description
+===========
+
+The Oracle Cloud Infrastructure resource representing the connection
+to the hardware and software located in a customer’s data center
+running the Compute Cloud@Customer IaaS services.
+
+
+Available Commands
+==================
+
+* change-compartment
+
+* create
+
+* delete
+
+* get
+
+* list
+
+* update

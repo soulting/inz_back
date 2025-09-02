@@ -1,0 +1,36 @@
+scheduled-task
+**************
+
+
+Description
+===========
+
+Log analytics scheduled task resource.
+
+
+Available Commands
+==================
+
+* change-compartment
+
+* clean
+
+* create-acceleration-task
+
+* create-standard-task
+
+* delete
+
+* get
+
+* list
+
+* pause
+
+* resume
+
+* run
+
+* update
+
+* verify

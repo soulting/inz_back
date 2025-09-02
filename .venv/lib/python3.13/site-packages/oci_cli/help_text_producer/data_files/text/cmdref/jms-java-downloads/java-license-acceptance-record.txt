@@ -1,0 +1,22 @@
+java-license-acceptance-record
+******************************
+
+
+Description
+===========
+
+User acceptance record for a Java license.
+
+
+Available Commands
+==================
+
+* create
+
+* delete
+
+* get
+
+* list
+
+* update

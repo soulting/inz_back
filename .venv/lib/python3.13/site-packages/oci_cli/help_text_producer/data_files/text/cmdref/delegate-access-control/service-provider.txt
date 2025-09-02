@@ -1,0 +1,17 @@
+service-provider
+****************
+
+
+Description
+===========
+
+Details of the Service Provider. Service provider offers services to
+the customer to support the delegated resources.
+
+
+Available Commands
+==================
+
+* get
+
+* list

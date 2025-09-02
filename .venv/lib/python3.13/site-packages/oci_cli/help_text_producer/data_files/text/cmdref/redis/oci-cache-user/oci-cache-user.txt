@@ -1,0 +1,24 @@
+oci-cache-user
+**************
+
+
+Description
+===========
+
+An OCI cache user is required to connect to an OCI cache cluster.
+
+
+Available Commands
+==================
+
+* change-compartment
+
+* delete
+
+* get
+
+* update
+
+* update-oci-cache-user-iam-authentication-mode
+
+* update-oci-cache-user-password-authentication-mode

@@ -1,0 +1,15 @@
+problem-trend-aggregation
+*************************
+
+
+Description
+===========
+
+Provides aggregated information on trends for counts of problems by
+specified parameters.
+
+
+Available Commands
+==================
+
+* request-summarized-trend-problems

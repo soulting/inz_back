@@ -1,0 +1,177 @@
+"list"
+******
+
+* Description
+
+* Usage
+
+* Required Parameters
+
+* Optional Parameters
+
+* Global Parameters
+
+* Example using required parameter
+
+
+Description
+===========
+
+Gets a list of the database software images in the specified
+compartment.
+
+
+Usage
+=====
+
+   oci db database-software-image list [OPTIONS]
+
+
+Required Parameters
+===================
+
+--compartment-id, -c [text]
+
+The compartment OCID.
+
+
+Optional Parameters
+===================
+
+--all
+
+Fetches all pages of results. If you provide this option, then you
+cannot provide the "--limit" option.
+
+--db-system-id [text]
+
+The DB system OCID. If provided, filters the results to the set of
+database versions which are supported for the DB system.
+
+--display-name [text]
+
+A filter to return only resources that match the entire display name
+given. The match is not case sensitive.
+
+--from-json [text]
+
+Provide input to this command as a JSON document from a file using the
+file://path-to/file syntax.
+
+The "--generate-full-command-json-input" option can be used to
+generate a sample json file to be used with this command option. The
+key names are pre-populated and match the command option names
+(converted to camelCase format, e.g. compartment-id –> compartmentId),
+while the values of the keys need to be populated by the user before
+using the sample file as an input to this command. For any command
+option that accepts multiple values, the value of the key can be a
+JSON array.
+
+Options can still be provided on the command line. If an option exists
+in both the JSON document and the command line then the command line
+specified value will be used.
+
+For examples on usage of this option, please see our “using CLI with
+advanced JSON options” link: https://docs.cloud.oracle.com/iaas/Conte
+nt/API/SDKDocs/cliusing.htm#AdvancedJSONOptions
+
+--image-shape-family [text]
+
+A filter to return only resources that match the given image shape
+family exactly.
+
+Accepted values are:
+
+   EXACC_SHAPE, EXADATA_SHAPE, EXADBXS_SHAPE, VM_BM_SHAPE
+
+--image-type [text]
+
+A filter to return only resources that match the given image type
+exactly.
+
+Accepted values are:
+
+   DATABASE_IMAGE, GRID_IMAGE
+
+--is-upgrade-supported [boolean]
+
+If provided, filters the results to the set of database versions which
+are supported for Upgrade.
+
+--lifecycle-state [text]
+
+A filter to return only resources that match the given lifecycle state
+exactly.
+
+Accepted values are:
+
+   AVAILABLE, DELETED, DELETING, FAILED, PROVISIONING, TERMINATED, TERMINATING, UPDATING
+
+--limit [integer]
+
+The maximum number of items to return per page.
+
+--page [text]
+
+The pagination token to continue listing from.
+
+--page-size [integer]
+
+When fetching results, the number of results to fetch per call. Only
+valid when used with "--all" or "--limit", and ignored otherwise.
+
+--patch-set-greater-than-or-equal-to [text]
+
+A filter to return only resources with *patchSet* greater than or
+equal to given value.
+
+--sort-by [text]
+
+The field to sort by.  You can provide one sort order (*sortOrder*).
+Default order for TIMECREATED is descending.  Default order for
+DISPLAYNAME is ascending. The DISPLAYNAME sort order is case
+sensitive. Default order for PATCHSET is descending.
+
+Accepted values are:
+
+   DISPLAYNAME, PATCHSET, TIMECREATED
+
+--sort-order [text]
+
+The sort order to use, either ascending (*ASC*) or descending
+(*DESC*).
+
+Accepted values are:
+
+   ASC, DESC
+
+
+Global Parameters
+=================
+
+Use "oci --help" for help on global parameters.
+
+"--auth-purpose", "--auth", "--cert-bundle", "--cli-auto-prompt", "--
+cli-rc-file", "--config-file", "--connection-timeout", "--debug", "--
+defaults-file", "--endpoint", "--generate-full-command-json-input", "
+--generate-param-json-input", "--help", "--latest-version", "--max-
+retries", "--no-retry", "--opc-client-request-id", "--opc-request-id",
+"--output", "--profile", "--proxy", "--query", "--raw-output", "--
+read-timeout", "--realm-specific-endpoint", "--region", "--release-
+info", "--request-id", "--version", "-?", "-d", "-h", "-i", "-v"
+
+
+Example using required parameter
+================================
+
+Copy the following CLI commands into a file named example.sh. Run the
+command by typing “bash example.sh” and replacing the example
+parameters with your own.
+
+Please note this sample will only work in the POSIX-compliant bash-
+like shell. You need to set up the OCI configuration and appropriate
+security policies before trying the examples.
+
+       export compartment_id=<substitute-value-of-compartment_id> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/db/database-software-image/list.html#cmdoption-compartment-id
+
+       oci db database-software-image list --compartment-id $compartment_id

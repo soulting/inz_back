@@ -1,0 +1,25 @@
+build-run
+*********
+
+
+Description
+===========
+
+Each time you attempt to run a build pipeline you create one build
+run. A build can be running currently, or it can be a record of the
+run that happened in the past. The set of build runs constitutes a
+build pipeline’s history.
+
+
+Available Commands
+==================
+
+* cancel
+
+* create
+
+* get
+
+* list
+
+* update

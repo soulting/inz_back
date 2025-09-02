@@ -1,0 +1,184 @@
+"upload-log-file"
+*****************
+
+* Description
+
+* Usage
+
+* Required Parameters
+
+* Optional Parameters
+
+* Global Parameters
+
+* Example using required parameter
+
+
+Description
+===========
+
+Accepts log data for processing by Logging Analytics.
+
+
+Usage
+=====
+
+   oci log-analytics upload upload-log-file [OPTIONS]
+
+
+Required Parameters
+===================
+
+--file [text]
+
+Log data file. Example: –file /Users/me/myfile.txt
+
+--filename [text]
+
+The name of the file being uploaded. The extension of the filename
+part will be used to detect the type of file (like zip, tar).
+
+--log-source-name [text]
+
+Name of the log source that will be used to process the files being
+uploaded.
+
+--namespace-name, --namespace, -ns [text]
+
+The Logging Analytics namespace used for the request.
+
+--opc-meta-loggrpid [text]
+
+The log group OCID to which the log data in this upload will be mapped
+to.
+
+
+Optional Parameters
+===================
+
+--char-encoding [text]
+
+Character encoding to be used to detect the encoding type of file(s)
+being uploaded. When this property is not specified, system detected
+character encoding will be used.
+
+--content-md5 [text]
+
+The base-64 encoded MD5 hash of the body. If the Content-MD5 header is
+present, Logging Analytics performs an integrity check on the body of
+the HTTP request by computing the MD5 hash for the body and comparing
+it to the MD5 hash supplied in the header. If the two hashes do not
+match, the log data is rejected and an HTTP-400 Unmatched Content MD5
+error is returned with the message:
+
+“The computed MD5 of the request body (ACTUAL_MD5) does not match the
+Content-MD5 header (HEADER_MD5)”
+
+--content-type [text]
+
+The content type of the log data.
+
+--date-format [text]
+
+This property is used to specify the format of the date. This is to be
+used for ambiguous dates like 12/11/10. This property can take any of
+the following values -  MONTH_DAY_YEAR, DAY_MONTH_YEAR,
+YEAR_MONTH_DAY, MONTH_DAY, DAY_MONTH.
+
+--date-year [text]
+
+Used to indicate the year where the log entries timestamp do not
+mention year (Ex: Nov  8 20:45:56).
+
+--entity-id [text]
+
+The entity OCID.
+
+--expect [text]
+
+A value of *100-continue* requests preliminary verification of the
+request method, path, and headers before the request body is sent. If
+no error results from such verification, the server will send a 100
+(Continue) interim response to indicate readiness for the request
+body. The only allowed value for this parameter is “100-Continue”
+(case-insensitive).
+
+--from-json [text]
+
+Provide input to this command as a JSON document from a file using the
+file://path-to/file syntax.
+
+The "--generate-full-command-json-input" option can be used to
+generate a sample json file to be used with this command option. The
+key names are pre-populated and match the command option names
+(converted to camelCase format, e.g. compartment-id –> compartmentId),
+while the values of the keys need to be populated by the user before
+using the sample file as an input to this command. For any command
+option that accepts multiple values, the value of the key can be a
+JSON array.
+
+Options can still be provided on the command line. If an option exists
+in both the JSON document and the command line then the command line
+specified value will be used.
+
+For examples on usage of this option, please see our “using CLI with
+advanced JSON options” link: https://docs.cloud.oracle.com/iaas/Conte
+nt/API/SDKDocs/cliusing.htm#AdvancedJSONOptions
+
+--invalidate-cache [boolean]
+
+This property can be used to reset configuration cache in case of an
+issue with the upload.
+
+--log-set [text]
+
+The log set that gets associated with the uploaded logs.
+
+--timezone [text]
+
+Timezone to be used when processing log entries whose timestamps do
+not include an explicit timezone. When this property is not specified,
+the timezone of the entity specified is used. If the entity is also
+not specified or do not have a valid timezone then UTC is used
+
+--upload-name [text]
+
+The name of the upload. This can be considered as a container name
+where different kind of logs will be collected and searched together.
+This upload name/id can further be used for retrieving the details of
+the upload, including its status or deleting the upload.
+
+
+Global Parameters
+=================
+
+Use "oci --help" for help on global parameters.
+
+"--auth-purpose", "--auth", "--cert-bundle", "--cli-auto-prompt", "--
+cli-rc-file", "--config-file", "--connection-timeout", "--debug", "--
+defaults-file", "--endpoint", "--generate-full-command-json-input", "
+--generate-param-json-input", "--help", "--latest-version", "--max-
+retries", "--no-retry", "--opc-client-request-id", "--opc-request-id",
+"--output", "--profile", "--proxy", "--query", "--raw-output", "--
+read-timeout", "--realm-specific-endpoint", "--region", "--release-
+info", "--request-id", "--version", "-?", "-d", "-h", "-i", "-v"
+
+
+Example using required parameter
+================================
+
+Copy the following CLI commands into a file named example.sh. Run the
+command by typing “bash example.sh” and replacing the example
+parameters with your own.
+
+Please note this sample will only work in the POSIX-compliant bash-
+like shell. You need to set up the OCI configuration and appropriate
+security policies before trying the examples.
+
+       export file=<substitute-value-of-file> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/log-analytics/upload/upload-log-file.html#cmdoption-file
+       export filename=<substitute-value-of-filename> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/log-analytics/upload/upload-log-file.html#cmdoption-filename
+       export log_source_name=<substitute-value-of-log_source_name> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/log-analytics/upload/upload-log-file.html#cmdoption-log-source-name
+       export namespace_name=<substitute-value-of-namespace_name> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/log-analytics/upload/upload-log-file.html#cmdoption-namespace-name
+       export opc_meta_loggrpid=<substitute-value-of-opc_meta_loggrpid> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/log-analytics/upload/upload-log-file.html#cmdoption-opc-meta-loggrpid
+
+       oci log-analytics upload upload-log-file --file $file --filename $filename --log-source-name $log_source_name --namespace-name $namespace_name --opc-meta-loggrpid $opc_meta_loggrpid

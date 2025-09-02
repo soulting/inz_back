@@ -1,0 +1,14 @@
+recommendation-strategy-summary
+*******************************
+
+
+Description
+===========
+
+The metadata associated with the recommendation strategy.
+
+
+Available Commands
+==================
+
+* list-recommendation-strategies

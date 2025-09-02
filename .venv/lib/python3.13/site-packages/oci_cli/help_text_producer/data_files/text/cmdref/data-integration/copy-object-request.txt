@@ -1,0 +1,16 @@
+copy-object-request
+*******************
+
+
+Description
+===========
+
+Copy metadata object request.
+
+
+Available Commands
+==================
+
+* create
+
+* get

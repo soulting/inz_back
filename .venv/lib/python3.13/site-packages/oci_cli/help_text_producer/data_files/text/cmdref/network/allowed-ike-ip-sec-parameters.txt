@@ -1,0 +1,14 @@
+allowed-ike-ip-sec-parameters
+*****************************
+
+
+Description
+===========
+
+Lists the current allowed and default IPSec tunnel parameters.
+
+
+Available Commands
+==================
+
+* get

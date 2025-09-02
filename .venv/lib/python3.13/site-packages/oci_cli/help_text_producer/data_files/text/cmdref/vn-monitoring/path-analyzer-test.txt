@@ -1,0 +1,26 @@
+path-analyzer-test
+******************
+
+
+Description
+===========
+
+Defines the details saved in a *PathAnalyzerTest* resource. These
+configuration details are used to run a Network Path Analyzer
+analysis.
+
+
+Available Commands
+==================
+
+* change-compartment
+
+* create
+
+* delete
+
+* get
+
+* list
+
+* update

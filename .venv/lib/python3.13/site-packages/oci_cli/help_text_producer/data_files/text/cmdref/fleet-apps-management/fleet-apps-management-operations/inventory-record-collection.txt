@@ -1,0 +1,14 @@
+inventory-record-collection
+***************************
+
+
+Description
+===========
+
+Results of an inventory search.
+
+
+Available Commands
+==================
+
+* list-inventory-records

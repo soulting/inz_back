@@ -1,0 +1,261 @@
+"oci"
+*****
+
+* Description
+
+* Usage
+
+* Optional Parameters
+
+
+Description
+===========
+
+Oracle Cloud Infrastructure command line interface
+
+
+Usage
+=====
+
+   oci
+
+
+Optional Parameters
+===================
+
+--auth [text]
+
+The type of auth to use for the API request. By default the API key in
+your config file will be used.  This value can also be provided in the
+OCI_CLI_AUTH environment variable.
+
+Accepted values are:
+
+   api_key, instance_obo_user, instance_principal, oke_workload_identity, resource_principal, security_token
+
+--auth-purpose [text]
+
+The The auth purpose which can be used in conjunction with –auth.
+
+--cert-bundle [text]
+
+The full path to a CA certificate bundle to be used for SSL
+verification. This will override the default CA certificate bundle.
+
+-i, --cli-auto-prompt
+
+Use the interactive features for autocompletion and quick view of
+command reference.
+
+For information on interactive features, see
+https://docs.oracle.com/iaas/Content/API/SDKDocs/cliusing_topic-
+Using_Interactive_Mode.htm.
+
+--cli-rc-file, --defaults-file [text]
+
+The path to the OCI CLI-specific configuration file, containing
+parameter default values and other configuration information such as
+command aliases and predefined queries.
+
+The –defaults-file option is deprecated and you should use the –cli-
+rc-file option instead.
+
+For more information about the cli configuration file, see
+https://docs.oracle.com/iaas/Content/API/SDKDocs/cliconfigure.htm.
+
+--config-file [text]
+
+The path to the config file.
+
+--connection-timeout [integer]
+
+The value of the connection timeout in seconds to make establish
+connection from sdk to services. This will override the default
+connection timeout value of 10 secs.
+
+-d, --debug
+
+Show additional debug information.
+
+--endpoint [text]
+
+The value to use as the service endpoint, including any required API
+version path. For example: “https://iaas.us-
+phoenix-1.oracle.com/20160918”. This will override the default service
+endpoint / API version path. Note: The –region parameter is the
+recommended way of targeting different regions.
+
+--generate-full-command-json-input
+
+Prints out a JSON document which represents all possible options that
+can be provided to this command.
+
+This JSON document can be saved to a file, modified with the
+appropriate option values, and then passed back via the –from-json
+option. This provides an alternative to typing options out on the
+command line. Example:
+
+   oci os bucket get --generate-full-command-json-input  > example.json
+   cat example.json
+
+Output:
+
+   {
+     "bucketName": "string",
+     "fields": [
+       "approximateCount|approximateSize|autoTiering"
+     ],
+     "ifMatch": "string",
+     "ifNoneMatch": "string",
+     "name": "string",
+     "namespace": "string",
+     "namespaceName": "string"
+   }
+
+Edit the example.json file with correct values and use it as below
+
+   oci os bucket get --from-json file://example.json
+
+--generate-param-json-input [text]
+
+Complex input, such as arrays and objects, are passed in JSON format.
+
+When passed the name of an option which takes complex input, this will
+print out example JSON of what needs to be passed to that option.
+Example:
+
+   oci compute instance launch --generate-param-json-input agent-config > example.json
+
+   cat example.json
+
+Output:
+
+   {
+     "areAllPluginsDisabled": true,
+     "isManagementDisabled": true,
+     "isMonitoringDisabled": true,
+     "pluginsConfig": [
+       {
+         "desiredState": "string",
+         "name": "string"
+       },
+       {
+         "desiredState": "string",
+         "name": "string"
+       }
+     ]
+   }
+
+Edit the example.json file with correct values and use it as below
+
+   oci compute instance launch --agent-config file://example.json
+
+-?, -h, --help
+
+For detailed help on the individual OCI CLI command, enter <command>
+–help.
+
+--latest-version
+
+Prints latest released version.
+
+--max-retries [integer]
+
+Maximum number of retry calls to be made to the service. For most
+commands, 5 attempts will be made. For operations with binary bodies,
+retries are disabled
+
+--no-retry
+
+Disable retry logic for calls to services.
+
+--output [text]
+
+The output format. [Default is json]
+
+Accepted values are:
+
+   json, table
+
+--profile [text]
+
+The profile in the config file to load. This profile will also be used
+to locate any default parameter values which have been specified in
+the OCI CLI-specific configuration file.  [default: DEFAULT]
+
+--proxy [text]
+
+If the environment the CLI runs in requires use of a proxy server for
+HTTP requests, the details of the proxy server to use. Examples:
+
+http://proxy.example.org:3128/ (uses proxy.example.org on port 3128) 
+http://user:pass@proxy.example.org:3128/ (if your proxy requires a
+username and password to authenticate)
+
+--query [text]
+
+JMESPath query [http://jmespath.org/] to run on the response JSON
+before output.
+
+Queries can be entered directly on the command line or referenced from
+the [OCI_CLI_COMMAND_ALIASES] section of your configuration file by
+using the syntax query://<query_name>, for example
+query://get_id_and_name
+
+For more information, see the Using Queries section at https://docs.o
+racle.com/iaas/Content/API/SDKDocs/cliusing.htm#Managing_CLI_Input_an
+d_Output
+
+--raw-output
+
+If the output of a given query is a single string value, this will
+return the string without surrounding quotes
+
+--read-timeout [integer]
+
+The value of the read timeout in seconds to wait for service calls to
+send response to sdk. This will override the default read timeout
+value of 60 secs.
+
+--realm-specific-endpoint
+
+Use a realm-specific endpoint, instead of the default region-wide
+endpoint.
+
+Example::
+   oci os ns get –realm-specific-endpoint
+
+With this flag, your request will be made to a realm-specific service
+endpoint, such as, “https://mynamespace.objectstorage.us-phoenix-1.oci
+.customer-oci.com”. Use the –debug option to identify which endpoint
+is used for your request.
+
+This flag has priority over the environment variable
+OCI_REALM_SPECIFIC_SERVICE_ENDPOINT_TEMPLATE_ENABLED.
+
+To use this flag by default, set this flag to true in your OCI CLI-
+specific configuration file. For more information, see
+https://docs.oracle.com/en-
+us/iaas/Content/API/SDKDocs/cliconfigure.htm
+
+If the flag is used for a service that does not support such feature,
+the default region-wide endpoint will be used.
+
+--region [text]
+
+The region to make calls against.  For a list of valid region names
+use the command: “oci iam region list”.
+
+--release-info
+
+Prints ChangeLog difference between current installed version and
+latest released version. Please visit https://github.com/oracle/oci-
+cli/blob/master/CHANGELOG.rst for more info
+
+--opc-request-id, --opc-client-request-id, --request-id [text]
+
+The request id to use for tracking the request.
+
+-v, --version
+
+Show the version and exit.

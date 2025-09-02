@@ -1,0 +1,33 @@
+management-station
+******************
+
+
+Description
+===========
+
+Provides information about the management station, including name,
+state, and configuration.
+
+
+Available Commands
+==================
+
+* change-compartment
+
+* create
+
+* delete
+
+* get
+
+* list
+
+* list-mirrors
+
+* refresh-management-station-config
+
+* sync-mirrors
+
+* sync-single-mirrors
+
+* update

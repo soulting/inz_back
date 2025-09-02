@@ -1,0 +1,24 @@
+subscription-service
+********************
+
+
+Description
+===========
+
+This site describes all the Rest endpoints of OSP Gateway.
+
+
+Available Commands
+==================
+
+* subscription
+
+  * authorize-subscription-payment
+
+  * get
+
+  * list
+
+  * pay
+
+  * update

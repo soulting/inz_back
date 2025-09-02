@@ -1,0 +1,16 @@
+subscription
+************
+
+
+Description
+===========
+
+OneSubscription CLI
+
+
+Available Commands
+==================
+
+* subscription
+
+  * list

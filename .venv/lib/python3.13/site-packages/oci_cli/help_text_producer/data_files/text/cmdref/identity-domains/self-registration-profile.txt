@@ -1,0 +1,22 @@
+self-registration-profile
+*************************
+
+
+Description
+===========
+
+Self Registration Profile
+
+
+Available Commands
+==================
+
+* create
+
+* delete
+
+* get
+
+* patch
+
+* put

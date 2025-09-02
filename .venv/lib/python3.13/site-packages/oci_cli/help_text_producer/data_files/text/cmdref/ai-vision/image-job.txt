@@ -1,0 +1,20 @@
+image-job
+*********
+
+
+Description
+===========
+
+The job details for a batch image analysis.
+
+
+Available Commands
+==================
+
+* cancel
+
+* create
+
+* create-image-job-object-list-inline-input-location
+
+* get

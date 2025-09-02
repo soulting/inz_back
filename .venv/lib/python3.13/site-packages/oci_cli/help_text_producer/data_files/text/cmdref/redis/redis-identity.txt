@@ -1,0 +1,17 @@
+redis-identity
+**************
+
+
+Description
+===========
+
+Use the OCI Cache CLI to create and manage clusters. A cluster is a
+memory-based storage solution. For more information, see OCI Cache.
+
+
+Available Commands
+==================
+
+* create-identity-token-details
+
+  * create-identity-token

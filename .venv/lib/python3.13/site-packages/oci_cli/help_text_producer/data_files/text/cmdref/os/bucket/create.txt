@@ -1,0 +1,516 @@
+"create"
+********
+
+* Description
+
+* Usage
+
+* Required Parameters
+
+* Optional Parameters
+
+* Global Parameters
+
+* Example using required parameter
+
+* Other Examples
+
+
+Description
+===========
+
+Creates a bucket in the given namespace with a bucket name and
+optional user-defined metadata. Avoid entering confidential
+information in bucket names.
+
+
+Usage
+=====
+
+   oci os bucket create [OPTIONS]
+
+
+Required Parameters
+===================
+
+--compartment-id, -c [text]
+
+The ID of the compartment in which to create the bucket.
+
+--name [text]
+
+The name of the bucket. Valid characters are uppercase or lowercase
+letters, numbers, hyphens, underscores, and periods. Bucket names must
+be unique within an Object Storage namespace. Avoid entering
+confidential information. example: Example: my-new-bucket1
+
+
+Optional Parameters
+===================
+
+--auto-tiering [text]
+
+Set the auto tiering status on the bucket. By default, a bucket is
+created with auto tiering *Disabled*. Use this option to enable auto
+tiering during bucket creation. Objects in a bucket with auto tiering
+set to *InfrequentAccess* are transitioned automatically between the
+‘Standard’ and ‘InfrequentAccess’ tiers based on the access pattern of
+the objects.
+
+--defined-tags [complex type]
+
+Defined tags for this resource. Each key is predefined and scoped to a
+namespace. For more information, see Resource Tags. Example:
+*{“Operations”: {“CostCenter”: “42”}}* This is a complex type whose
+value must be valid JSON. The value can be provided as a string on the
+command line or passed in as a file using the file://path/to/file
+syntax.
+
+The "--generate-param-json-input" option can be used to generate an
+example of the JSON which must be provided. We recommend storing this
+example in a file, modifying it as needed and then passing it back in
+via the file:// syntax.
+
+--freeform-tags [complex type]
+
+Free-form tags for this resource. Each tag is a simple key-value pair
+with no predefined name, type, or namespace. For more information, see
+Resource Tags. Example: *{“Department”: “Finance”}* This is a complex
+type whose value must be valid JSON. The value can be provided as a
+string on the command line or passed in as a file using the
+file://path/to/file syntax.
+
+The "--generate-param-json-input" option can be used to generate an
+example of the JSON which must be provided. We recommend storing this
+example in a file, modifying it as needed and then passing it back in
+via the file:// syntax.
+
+--from-json [text]
+
+Provide input to this command as a JSON document from a file using the
+file://path-to/file syntax.
+
+The "--generate-full-command-json-input" option can be used to
+generate a sample json file to be used with this command option. The
+key names are pre-populated and match the command option names
+(converted to camelCase format, e.g. compartment-id –> compartmentId),
+while the values of the keys need to be populated by the user before
+using the sample file as an input to this command. For any command
+option that accepts multiple values, the value of the key can be a
+JSON array.
+
+Options can still be provided on the command line. If an option exists
+in both the JSON document and the command line then the command line
+specified value will be used.
+
+For examples on usage of this option, please see our “using CLI with
+advanced JSON options” link: https://docs.cloud.oracle.com/iaas/Conte
+nt/API/SDKDocs/cliusing.htm#AdvancedJSONOptions
+
+--kms-key-id [text]
+
+The OCID of a master encryption key used to call the Key Management
+service to generate a data encryption key or to encrypt or decrypt a
+data encryption key.
+
+--metadata [complex type]
+
+Arbitrary string, up to 4KB, of keys and values for user-defined
+metadata. This is a complex type whose value must be valid JSON. The
+value can be provided as a string on the command line or passed in as
+a file using the file://path/to/file syntax.
+
+The "--generate-param-json-input" option can be used to generate an
+example of the JSON which must be provided. We recommend storing this
+example in a file, modifying it as needed and then passing it back in
+via the file:// syntax.
+
+--namespace-name, --namespace, -ns [text]
+
+The Object Storage namespace used for the request. If not provided,
+this parameter will be obtained internally using a call to ‘oci os ns
+get’
+
+--object-events-enabled [boolean]
+
+Whether or not events are emitted for object state changes in this
+bucket. By default, *objectEventsEnabled* is set to *false*. Set
+*objectEventsEnabled* to *true* to emit events for object state
+changes. For more information about events, see Overview of Events.
+
+--public-access-type [text]
+
+The type of public access enabled on this bucket. A bucket is set to
+*NoPublicAccess* by default, which only allows an authenticated caller
+to access the bucket and its contents. When *ObjectRead* is enabled on
+the bucket, public access is allowed for the *GetObject*,
+*HeadObject*, and *ListObjects* operations. When
+*ObjectReadWithoutList* is enabled on the bucket, public access is
+allowed for the *GetObject* and *HeadObject* operations.
+
+Accepted values are:
+
+   NoPublicAccess, ObjectRead, ObjectReadWithoutList
+
+--storage-tier [text]
+
+The type of storage tier of this bucket. A bucket is set to ‘Standard’
+tier by default, which means the bucket will be put in the standard
+storage tier. When ‘Archive’ tier type is set explicitly, the bucket
+is put in the Archive Storage tier. The ‘storageTier’ property is
+immutable after bucket is created.
+
+Accepted values are:
+
+   Archive, Standard
+
+--versioning [text]
+
+Set the versioning status on the bucket. By default, a bucket is
+created with versioning *Disabled*. Use this option to enable
+versioning during bucket creation. Objects in a version enabled bucket
+are protected from overwrites and deletions. Previous versions of the
+same object will be available in the bucket.
+
+Accepted values are:
+
+   Disabled, Enabled
+
+
+Global Parameters
+=================
+
+Use "oci --help" for help on global parameters.
+
+"--auth-purpose", "--auth", "--cert-bundle", "--cli-auto-prompt", "--
+cli-rc-file", "--config-file", "--connection-timeout", "--debug", "--
+defaults-file", "--endpoint", "--generate-full-command-json-input", "
+--generate-param-json-input", "--help", "--latest-version", "--max-
+retries", "--no-retry", "--opc-client-request-id", "--opc-request-id",
+"--output", "--profile", "--proxy", "--query", "--raw-output", "--
+read-timeout", "--realm-specific-endpoint", "--region", "--release-
+info", "--request-id", "--version", "-?", "-d", "-h", "-i", "-v"
+
+
+Example using required parameter
+================================
+
+Copy the following CLI commands into a file named example.sh. Run the
+command by typing “bash example.sh” and replacing the example
+parameters with your own.
+
+Please note this sample will only work in the POSIX-compliant bash-
+like shell. You need to set up the OCI configuration and appropriate
+security policies before trying the examples.
+
+       export compartment_id=<substitute-value-of-compartment_id> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/os/bucket/create.html#cmdoption-compartment-id
+       export name=<substitute-value-of-name> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/os/bucket/create.html#cmdoption-name
+
+       oci os bucket create --compartment-id $compartment_id --name $name
+
+
+Other Examples
+==============
+
+
+Description
+-----------
+
+Creates the bucket in the specified compartment id
+
+
+Command
+-------
+
+    oci os bucket create --name bucket-client --compartment-id ocid1.compartment.oc1..aaaaaaaa3ffjane6aoullgob4daj6xw2bzkm7maswctna2zgoxfny4smpoha
+
+
+Output
+------
+
+   {
+    "data": {
+         "approximate-count": null,
+         "approximate-size": null,
+         "auto-tiering": null,
+         "compartment-id": "ocid1.compartment.oc1..aaaaaaaa3ffjane6aoullgob4daj6xw2bzkm7maswctna2zgoxfny4smpoha",
+         "created-by": "ocid1.user.oc1..aaaaaaaatflstw5i7x3pb5ukijuanrhdgijymtiqwlkexuzar2aoyaluqcdq",
+         "defined-tags": {},
+         "etag": "d12f9228-cfe4-43c1-8c0d-b2e19d0dd967",
+         "freeform-tags": {},
+         "id": "ocid1.bucket.oc1.phx.aaaaaaaar6mv5ezap4jm5tldxk337ij7x7exn7auilygcqf2k5bexw7c63ra",
+         "is-read-only": false,
+         "kms-key-id": null,
+         "metadata": {},
+         "name": "bucket-client",
+         "namespace": "bmcostests",
+         "object-events-enabled": false,
+         "object-lifecycle-policy-etag": null,
+         "public-access-type": "NoPublicAccess",
+         "replication-enabled": false,
+         "storage-tier": "Standard",
+         "time-created": "2022-11-18T07:15:17.704000+00:00",
+         "versioning": "Disabled"
+    },
+    "etag": "d12f9228-cfe4-43c1-8c0d-b2e19d0dd967"
+   }
+
+
+Description
+-----------
+
+Creates the bucket with specified auto tiering status
+
+
+Command
+-------
+
+    oci os bucket create --name bucket-client --compartment-id ocid1.compartment.oc1..aaaaaaaa3ffjane6aoullgob4daj6xw2bzkm7maswctna2zgoxfny4smpoha --auto-tiering InfrequentAccess
+
+
+Output
+------
+
+   {
+    "data": {
+         "approximate-count": null,
+         "approximate-size": null,
+         "auto-tiering": "InfrequentAccess",
+         "compartment-id": "ocid1.compartment.oc1..aaaaaaaa3ffjane6aoullgob4daj6xw2bzkm7maswctna2zgoxfny4smpoha",
+         "created-by": "ocid1.user.oc1..aaaaaaaatflstw5i7x3pb5ukijuanrhdgijymtiqwlkexuzar2aoyaluqcdq",
+         "defined-tags": {},
+         "etag": "8ed47fa3-50b0-4653-84ae-d176ce12e08b",
+         "freeform-tags": {},
+         "id": "ocid1.bucket.oc1.phx.aaaaaaaage3jqz5r7hb3u2g5clx42ey2tk3at2p7hom3hcm2ozak3n5a5n2q",
+         "is-read-only": false,
+         "kms-key-id": null,
+         "metadata": {},
+         "name": "bucket-client",
+         "namespace": "bmcostests",
+         "object-events-enabled": false,
+         "object-lifecycle-policy-etag": null,
+         "public-access-type": "NoPublicAccess",
+         "replication-enabled": false,
+         "storage-tier": "Standard",
+         "time-created": "2022-11-18T07:34:46.868000+00:00",
+         "versioning": "Disabled"
+    },
+    "etag": "8ed47fa3-50b0-4653-84ae-d176ce12e08b"
+   }
+
+
+Description
+-----------
+
+Creates the bucket with specified metadata
+
+
+Command
+-------
+
+    oci os bucket create --name bucket-client --compartment-id ocid1.compartment.oc1..aaaaaaaa3ffjane6aoullgob4daj6xw2bzkm7maswctna2zgoxfny4smpoha --metadata '{"client":"xyz"}'
+
+
+Output
+------
+
+   {
+    "data": {
+         "approximate-count": null,
+         "approximate-size": null,
+         "auto-tiering": "InfrequentAccess",
+         "compartment-id": "ocid1.compartment.oc1..aaaaaaaa3ffjane6aoullgob4daj6xw2bzkm7maswctna2zgoxfny4smpoha",
+         "created-by": "ocid1.user.oc1..aaaaaaaatflstw5i7x3pb5ukijuanrhdgijymtiqwlkexuzar2aoyaluqcdq",
+         "defined-tags": {},
+         "etag": "3b73dbe5-0e17-4e6e-9eed-622374fd8e08",
+         "freeform-tags": {},
+         "id": "ocid1.bucket.oc1.phx.aaaaaaaa7d5thakkv7p5z4o5jmt5nu325dshec5m2udpkg52hfdmfc5rgqva",
+         "is-read-only": false,
+         "kms-key-id": null,
+         "metadata": {
+              "client": "xyz"
+         },
+         "name": "bucket-client",
+         "namespace": "bmcostests",
+         "object-events-enabled": false,
+         "object-lifecycle-policy-etag": null,
+         "public-access-type": "NoPublicAccess",
+         "replication-enabled": false,
+         "storage-tier": "Standard",
+         "time-created": "2022-11-18T08:37:08.075000+00:00",
+         "versioning": "Disabled"
+    },
+    "etag": "3b73dbe5-0e17-4e6e-9eed-622374fd8e08"
+   }
+
+
+Description
+-----------
+
+Creates the bucket with object event enabled
+
+
+Command
+-------
+
+    oci os bucket create --name bucket-client --compartment-id ocid1.compartment.oc1..aaaaaaaa3ffjane6aoullgob4daj6xw2bzkm7maswctna2zgoxfny4smpoha --object-events-enabled True
+
+
+Output
+------
+
+   {
+    "data": {
+         "approximate-count": null,
+         "approximate-size": null,
+         "auto-tiering": null,
+         "compartment-id": "ocid1.compartment.oc1..aaaaaaaa3ffjane6aoullgob4daj6xw2bzkm7maswctna2zgoxfny4smpoha",
+         "created-by": "ocid1.user.oc1..aaaaaaaatflstw5i7x3pb5ukijuanrhdgijymtiqwlkexuzar2aoyaluqcdq",
+         "defined-tags": {},
+         "etag": "2d74cc1c-6c8c-470b-b243-db0f6efc4a4d",
+         "freeform-tags": {},
+         "id": "ocid1.bucket.oc1.phx.aaaaaaaa6phmgi4qu7camuyd3omuvhdti46dmzilrgk4572ua3wcvytdfxka",
+         "is-read-only": false,
+         "kms-key-id": null,
+         "metadata": {},
+         "name": "bucket-client",
+         "namespace": "bmcostests",
+         "object-events-enabled": true,
+         "object-lifecycle-policy-etag": null,
+         "public-access-type": "NoPublicAccess",
+         "replication-enabled": false,
+         "storage-tier": "Standard",
+         "time-created": "2022-11-18T08:39:16.279000+00:00",
+         "versioning": "Disabled"
+    },
+    "etag": "2d74cc1c-6c8c-470b-b243-db0f6efc4a4d"
+   }
+
+
+Description
+-----------
+
+Creates the bucket with specified public access type
+
+
+Command
+-------
+
+    oci os bucket create --name bucket-client --compartment-id ocid1.compartment.oc1..aaaaaaaa3ffjane6aoullgob4daj6xw2bzkm7maswctna2zgoxfny4smpoha --public-access-type NoPublicAccess
+
+
+Output
+------
+
+   {
+    "data": {
+         "approximate-count": null,
+         "approximate-size": null,
+         "auto-tiering": null,
+         "compartment-id": "ocid1.compartment.oc1..aaaaaaaa3ffjane6aoullgob4daj6xw2bzkm7maswctna2zgoxfny4smpoha",
+         "created-by": "ocid1.user.oc1..aaaaaaaatflstw5i7x3pb5ukijuanrhdgijymtiqwlkexuzar2aoyaluqcdq",
+         "defined-tags": {},
+         "etag": "09cdf6ee-a705-4cb8-bc8d-2964333079f4",
+         "freeform-tags": {},
+         "id": "ocid1.bucket.oc1.phx.aaaaaaaa5jbqd23fbhunugh6ipskffaqng4micknkvb5lhhemgbt26klmzsa",
+         "is-read-only": false,
+         "kms-key-id": null,
+         "metadata": {},
+         "name": "bucket-client",
+         "namespace": "bmcostests",
+         "object-events-enabled": false,
+         "object-lifecycle-policy-etag": null,
+         "public-access-type": "NoPublicAccess",
+         "replication-enabled": false,
+         "storage-tier": "Standard",
+         "time-created": "2022-11-18T09:07:03.863000+00:00",
+         "versioning": "Disabled"
+    },
+    "etag": "09cdf6ee-a705-4cb8-bc8d-2964333079f4"
+   }
+
+
+Description
+-----------
+
+Creates the bucket with specified storage tier
+
+
+Command
+-------
+
+    oci os bucket create --name bucket-client --compartment-id ocid1.compartment.oc1..aaaaaaaa3ffjane6aoullgob4daj6xw2bzkm7maswctna2zgoxfny4smpoha --storage-tier Archive
+
+
+Output
+------
+
+   {
+    "data": {
+         "approximate-count": null,
+         "approximate-size": null,
+         "auto-tiering": null,
+         "compartment-id": "ocid1.compartment.oc1..aaaaaaaa3ffjane6aoullgob4daj6xw2bzkm7maswctna2zgoxfny4smpoha",
+         "created-by": "ocid1.user.oc1..aaaaaaaatflstw5i7x3pb5ukijuanrhdgijymtiqwlkexuzar2aoyaluqcdq",
+         "defined-tags": {},
+         "etag": "72c4dcac-030b-4a2e-823d-a82ecdee76b9",
+         "freeform-tags": {},
+         "id": "ocid1.bucket.oc1.phx.aaaaaaaamjvr52g5c4eo64t2g4ymbkvvhxomu7o262psp7brays54iolkktq",
+         "is-read-only": false,
+         "kms-key-id": null,
+         "metadata": {},
+         "name": "bucket-client",
+         "namespace": "bmcostests",
+         "object-events-enabled": false,
+         "object-lifecycle-policy-etag": null,
+         "public-access-type": "NoPublicAccess",
+         "replication-enabled": false,
+         "storage-tier": "Archive",
+         "time-created": "2022-11-18T09:08:03.224000+00:00",
+         "versioning": "Disabled"
+    },
+    "etag": "72c4dcac-030b-4a2e-823d-a82ecdee76b9"
+   }
+
+
+Description
+-----------
+
+Creates the bucket with versioning enabled
+
+
+Command
+-------
+
+    oci os bucket create --name bucket-client --compartment-id ocid1.compartment.oc1..aaaaaaaa3ffjane6aoullgob4daj6xw2bzkm7maswctna2zgoxfny4smpoha --versioning Enabled
+
+
+Output
+------
+
+   {
+    "data": {
+         "approximate-count": null,
+         "approximate-size": null,
+         "auto-tiering": null,
+         "compartment-id": "ocid1.compartment.oc1..aaaaaaaa3ffjane6aoullgob4daj6xw2bzkm7maswctna2zgoxfny4smpoha",
+         "created-by": "ocid1.user.oc1..aaaaaaaatflstw5i7x3pb5ukijuanrhdgijymtiqwlkexuzar2aoyaluqcdq",
+         "defined-tags": {},
+         "etag": "72c4dcac-030b-4a2e-823d-a82ecdee76b9",
+         "freeform-tags": {},
+         "id": "ocid1.bucket.oc1.phx.aaaaaaaamjvr52g5c4eo64t2g4ymbkvvhxomu7o262psp7brays54iolkktq",
+         "is-read-only": false,
+         "kms-key-id": null,
+         "metadata": {},
+         "name": "bucket-client",
+         "namespace": "bmcostests",
+         "object-events-enabled": false,
+         "object-lifecycle-policy-etag": null,
+         "public-access-type": "NoPublicAccess",
+         "replication-enabled": false,
+         "storage-tier": "Archive",
+         "time-created": "2022-11-18T09:08:03.224000+00:00",
+         "versioning": "Disabled"
+    },
+    "etag": "72c4dcac-030b-4a2e-823d-a82ecdee76b9"
+   }

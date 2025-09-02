@@ -1,0 +1,24 @@
+external-exadata-storage-connector
+**********************************
+
+
+Description
+===========
+
+The details of the Exadata storage server connector.
+
+
+Available Commands
+==================
+
+* check
+
+* create
+
+* delete
+
+* get
+
+* list
+
+* update

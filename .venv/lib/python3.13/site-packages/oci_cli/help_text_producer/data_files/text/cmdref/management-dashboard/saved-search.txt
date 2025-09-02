@@ -1,0 +1,28 @@
+saved-search
+************
+
+
+Description
+===========
+
+Properties of a saved search.
+
+
+Available Commands
+==================
+
+* change-compartment
+
+* create
+
+* delete
+
+* get
+
+* get-oob
+
+* list
+
+* list-oob
+
+* update

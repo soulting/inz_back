@@ -1,0 +1,136 @@
+fleet-apps-management-admin
+***************************
+
+
+Description
+===========
+
+Fleet Application Management provides a centralized platform to help
+you automate resource management tasks, validate patch compliance, and
+enhance operational efficiency across an enterprise.
+
+
+Available Commands
+==================
+
+* compliance-policy
+
+  * get
+
+* compliance-policy-collection
+
+  * list-compliance-policies
+
+* compliance-policy-rule
+
+  * create
+
+  * create-compliance-policy-rule-patch-level-selection-details
+
+  * create-compliance-policy-rule-patch-name-selection-details
+
+  * create-compliance-policy-rule-patch-release-date-selection-details
+
+  * delete
+
+  * get
+
+  * update
+
+  * update-compliance-policy-rule-patch-level-selection-details
+
+  * update-compliance-policy-rule-patch-name-selection-details
+
+  * update-compliance-policy-rule-patch-release-date-selection-details
+
+* compliance-policy-rule-collection
+
+  * list-compliance-policy-rules
+
+* onboarding
+
+  * create
+
+  * delete
+
+  * enable-latest-policy
+
+  * get
+
+  * manage-settings
+
+  * update
+
+* onboarding-collection
+
+  * list-onboardings
+
+* onboarding-policy-collection
+
+  * list-onboarding-policies
+
+* platform-configuration
+
+  * change-compartment
+
+  * create
+
+  * create-platform-configuration-credential-config-category-details
+
+  * create-platform-configuration-environment-config-category-details
+
+  * create-platform-configuration-lifecycle-operation-config-category-
+    details
+
+  * create-platform-configuration-patch-type-config-category-details
+
+  * create-platform-configuration-product-config-category-details
+
+  * create-platform-configuration-product-stack-config-category-
+    details
+
+  * create-platform-configuration-self-hosted-instance-config-
+    category-details
+
+  * delete
+
+  * get
+
+  * update
+
+  * update-platform-configuration-credential-config-category-details
+
+  * update-platform-configuration-environment-config-category-details
+
+  * update-platform-configuration-lifecycle-operation-config-category-
+    details
+
+  * update-platform-configuration-patch-type-config-category-details
+
+  * update-platform-configuration-product-config-category-details
+
+  * update-platform-configuration-product-stack-config-category-
+    details
+
+  * update-platform-configuration-self-hosted-instance-config-
+    category-details
+
+* platform-configuration-collection
+
+  * list-platform-configurations
+
+* property
+
+  * change-compartment
+
+  * create
+
+  * delete
+
+  * get
+
+  * update
+
+* property-collection
+
+  * list-properties

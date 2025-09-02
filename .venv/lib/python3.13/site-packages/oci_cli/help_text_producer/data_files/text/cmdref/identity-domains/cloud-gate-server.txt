@@ -1,0 +1,22 @@
+cloud-gate-server
+*****************
+
+
+Description
+===========
+
+Resource representing a Cloud Gate server block
+
+
+Available Commands
+==================
+
+* create
+
+* delete
+
+* get
+
+* patch
+
+* put

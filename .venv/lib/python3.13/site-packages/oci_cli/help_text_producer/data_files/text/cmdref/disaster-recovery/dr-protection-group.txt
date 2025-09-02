@@ -1,0 +1,30 @@
+dr-protection-group
+*******************
+
+
+Description
+===========
+
+The details of a DR protection group.
+
+
+Available Commands
+==================
+
+* associate
+
+* change-compartment
+
+* create
+
+* delete
+
+* disassociate
+
+* get
+
+* list
+
+* update
+
+* update-role

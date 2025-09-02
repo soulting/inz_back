@@ -1,0 +1,26 @@
+sql-endpoint
+************
+
+
+Description
+===========
+
+The description of a SQL Endpoint.
+
+
+Available Commands
+==================
+
+* change-compartment
+
+* create
+
+* delete
+
+* get
+
+* start
+
+* stop
+
+* update

@@ -1,0 +1,14 @@
+sighting
+********
+
+
+Description
+===========
+
+Sighting details.
+
+
+Available Commands
+==================
+
+* get

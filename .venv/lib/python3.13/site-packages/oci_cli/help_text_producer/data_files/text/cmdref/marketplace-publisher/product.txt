@@ -1,0 +1,14 @@
+product
+*******
+
+
+Description
+===========
+
+The model for the product details.
+
+
+Available Commands
+==================
+
+* get

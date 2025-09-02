@@ -1,0 +1,30 @@
+remediation-recipe
+******************
+
+
+Description
+===========
+
+An Application Dependency Management (ADM) remediation recipe contains
+the basic configuration and the details of each of the remediation
+stages (Detect, Recommend, Verify, and Apply).
+
+
+Available Commands
+==================
+
+* activate
+
+* change-compartment
+
+* create
+
+* deactivate
+
+* delete
+
+* get
+
+* list
+
+* update

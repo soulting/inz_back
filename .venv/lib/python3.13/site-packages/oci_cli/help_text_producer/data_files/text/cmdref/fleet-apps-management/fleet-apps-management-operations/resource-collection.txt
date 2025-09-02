@@ -1,0 +1,14 @@
+resource-collection
+*******************
+
+
+Description
+===========
+
+Results of a ResourceSummary Search.
+
+
+Available Commands
+==================
+
+* list-resources

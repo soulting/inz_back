@@ -1,0 +1,179 @@
+"terminate"
+***********
+
+* Description
+
+* Usage
+
+* Required Parameters
+
+* Optional Parameters
+
+* Global Parameters
+
+* Example using required parameter
+
+
+Description
+===========
+
+Permanently terminates (deletes) the specified instance. Any attached
+VNICs and volumes are automatically detached when the instance
+terminates.
+
+To preserve the boot volume associated with the instance, specify
+*true* for *PreserveBootVolumeQueryParam*. To delete the boot volume
+when the instance is deleted, specify *false* or do not specify a
+value for *PreserveBootVolumeQueryParam*.
+
+To preserve data volumes created with the instance, specify *true* or
+do not specify a value for *PreserveDataVolumesQueryParam*. To delete
+the data volumes when the instance itself is deleted, specify *false*
+for *PreserveDataVolumesQueryParam*.
+
+This is an asynchronous operation. The instance’s *lifecycleState*
+changes to TERMINATING temporarily until the instance is completely
+deleted. After the instance is deleted, the record remains visible in
+the list of instances with the state TERMINATED for at least 12 hours,
+but no further action is needed.
+
+
+Usage
+=====
+
+   oci compute instance terminate [OPTIONS]
+
+
+Required Parameters
+===================
+
+--instance-id [text]
+
+The OCID of the instance.
+
+
+Optional Parameters
+===================
+
+--force
+
+Perform deletion without prompting for confirmation.
+
+--from-json [text]
+
+Provide input to this command as a JSON document from a file using the
+file://path-to/file syntax.
+
+The "--generate-full-command-json-input" option can be used to
+generate a sample json file to be used with this command option. The
+key names are pre-populated and match the command option names
+(converted to camelCase format, e.g. compartment-id –> compartmentId),
+while the values of the keys need to be populated by the user before
+using the sample file as an input to this command. For any command
+option that accepts multiple values, the value of the key can be a
+JSON array.
+
+Options can still be provided on the command line. If an option exists
+in both the JSON document and the command line then the command line
+specified value will be used.
+
+For examples on usage of this option, please see our “using CLI with
+advanced JSON options” link: https://docs.cloud.oracle.com/iaas/Conte
+nt/API/SDKDocs/cliusing.htm#AdvancedJSONOptions
+
+--if-match [text]
+
+For optimistic concurrency control. In the PUT or DELETE call for a
+resource, set the *if-match* parameter to the value of the etag from a
+previous GET or POST response for that resource. The resource will be
+updated or deleted only if the etag you provide matches the resource’s
+current etag value.
+
+--max-wait-seconds [integer]
+
+The maximum time to wait for the resource to reach the lifecycle state
+defined by "--wait-for-state". Defaults to 1200 seconds.
+
+--preserve-boot-volume [boolean]
+
+Specifies whether to delete or preserve the boot volume when
+terminating an instance. When set to *true*, the boot volume is
+preserved. The default value is *false*.
+
+--preserve-data-volumes-created-at-launch [boolean]
+
+Specifies whether to delete or preserve the data volumes created
+during launch when terminating an instance. When set to *true*, the
+data volumes are preserved. The default value is *true*.
+
+--recycle-level [text]
+
+This optional parameter overrides recycle level for hosts. The
+parameter can be used when hosts are associated with a Capacity
+Reservation. * *FULL_RECYCLE* - Does not skip host wipe. This is the
+default behavior.
+
+Accepted values are:
+
+   FULL_RECYCLE
+
+--wait-for-state [text]
+
+This operation creates, modifies or deletes a resource that has a
+defined lifecycle state. Specify this option to perform the action and
+then wait until the resource reaches a given lifecycle state. Multiple
+states can be specified, returning on the first state. For example, "
+--wait-for-state" SUCCEEDED "--wait-for-state" FAILED would return on
+whichever lifecycle state is reached first. If timeout is reached, a
+return code of 2 is returned. For any other error, a return code of 1
+is returned.
+
+Accepted values are:
+
+   CREATING_IMAGE, MOVING, PROVISIONING, RUNNING, STARTING, STOPPED, STOPPING, TERMINATED, TERMINATING
+
+--wait-interval-seconds [integer]
+
+Check every "--wait-interval-seconds" to see whether the resource has
+reached the lifecycle state defined by "--wait-for-state". Defaults to
+30 seconds.
+
+
+Global Parameters
+=================
+
+Use "oci --help" for help on global parameters.
+
+"--auth-purpose", "--auth", "--cert-bundle", "--cli-auto-prompt", "--
+cli-rc-file", "--config-file", "--connection-timeout", "--debug", "--
+defaults-file", "--endpoint", "--generate-full-command-json-input", "
+--generate-param-json-input", "--help", "--latest-version", "--max-
+retries", "--no-retry", "--opc-client-request-id", "--opc-request-id",
+"--output", "--profile", "--proxy", "--query", "--raw-output", "--
+read-timeout", "--realm-specific-endpoint", "--region", "--release-
+info", "--request-id", "--version", "-?", "-d", "-h", "-i", "-v"
+
+
+Example using required parameter
+================================
+
+Copy the following CLI commands into a file named example.sh. Run the
+command by typing “bash example.sh” and replacing the example
+parameters with your own.
+
+Please note this sample will only work in the POSIX-compliant bash-
+like shell. You need to set up the OCI configuration and appropriate
+security policies before trying the examples.
+
+       export cidr_block=<substitute-value-of-cidr_block> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/network/vcn/create.html#cmdoption-cidr-block
+       export compartment_id=<substitute-value-of-compartment_id> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/network/vcn/create.html#cmdoption-compartment-id
+       export availability_domain=<substitute-value-of-availability_domain> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/compute/instance/launch.html#cmdoption-availability-domain
+       export image_id=<substitute-value-of-image_id> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/compute/instance/launch.html#cmdoption-image-id
+
+       vcn_id=$(oci network vcn create --cidr-block $cidr_block --compartment-id $compartment_id --query data.id --raw-output)
+
+       subnet_id=$(oci network subnet create --cidr-block $cidr_block --compartment-id $compartment_id --vcn-id $vcn_id --query data.id --raw-output)
+
+       instance_id=$(oci compute instance launch --availability-domain $availability_domain --compartment-id $compartment_id --image-id $image_id --subnet-id $subnet_id --query data.id --raw-output)
+
+       oci compute instance terminate --instance-id $instance_id

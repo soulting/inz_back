@@ -1,0 +1,24 @@
+scheduler-job
+*************
+
+
+Description
+===========
+
+A SchedulerJob resource.
+
+
+Available Commands
+==================
+
+* delete
+
+* get
+
+* manage-job-execution
+
+* manage-job-execution-action-group-based-user-action-details
+
+* manage-job-execution-step-based-user-action-details
+
+* update

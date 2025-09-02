@@ -1,0 +1,14 @@
+vision-private-endpoint-collection
+**********************************
+
+
+Description
+===========
+
+The results of a visionPrivateEndpoint search.
+
+
+Available Commands
+==================
+
+* list-vision-private-endpoints

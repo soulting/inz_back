@@ -1,0 +1,98 @@
+management-agent
+****************
+
+
+Description
+===========
+
+Use the Management Agent CLI to manage your infrastructure’s
+management agents, including their plugins and install keys. For more
+information, see Management Agent.
+
+
+Available Commands
+==================
+
+* agent
+
+  * create-prometheus-datasource
+
+  * delete
+
+  * delete-data-source
+
+  * delete-named-credential
+
+  * deploy-plugins
+
+  * get
+
+  * get-auto-upgradable-config
+
+  * get-data-source
+
+  * get-named-credential
+
+  * list
+
+  * list-availability-histories
+
+  * list-data-sources
+
+  * set-auto-upgradable-config
+
+  * summarize-agent-counts
+
+  * summarize-plugin-counts
+
+  * update
+
+  * update-named-credential
+
+  * update-prometheus-datasource
+
+* agent-image
+
+  * list
+
+* install-key
+
+  * create
+
+  * delete
+
+  * get
+
+  * get-install-key-content
+
+  * list
+
+  * update
+
+* named-credential
+
+  * create
+
+  * get-named-cred-metadata
+
+  * list
+
+* plugin
+
+  * list
+
+* work-request
+
+  * delete
+
+  * get
+
+  * list
+
+* work-request-error
+
+  * list
+
+* work-request-log-entry
+
+  * list-work-request-logs

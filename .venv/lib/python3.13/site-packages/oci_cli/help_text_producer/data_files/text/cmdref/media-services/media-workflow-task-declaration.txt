@@ -1,0 +1,15 @@
+media-workflow-task-declaration
+*******************************
+
+
+Description
+===========
+
+Results of the ListMediaWorkflowTaskDeclaration operation, a list of
+MediaWorkflowTaskDeclarations.
+
+
+Available Commands
+==================
+
+* list

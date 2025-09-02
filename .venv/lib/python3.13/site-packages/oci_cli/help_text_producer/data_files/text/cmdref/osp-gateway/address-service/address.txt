@@ -1,0 +1,16 @@
+address
+*******
+
+
+Description
+===========
+
+Address details model.
+
+
+Available Commands
+==================
+
+* get
+
+* verify

@@ -1,0 +1,14 @@
+listing-revision-package-collection
+***********************************
+
+
+Description
+===========
+
+Results of package search. Contains Package items.
+
+
+Available Commands
+==================
+
+* list-listing-revision-packages

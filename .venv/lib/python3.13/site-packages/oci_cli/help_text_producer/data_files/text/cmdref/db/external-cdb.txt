@@ -1,0 +1,37 @@
+external-cdb
+************
+
+
+Description
+===========
+
+An Oracle Cloud Infrastructure resource that allows you to manage an
+external container database.
+
+
+Available Commands
+==================
+
+* change-compartment
+
+* create
+
+* delete
+
+* disable-db-management
+
+* disable-external-container-database-stack-monitoring
+
+* enable-db-management
+
+* enable-external-container-database-stack-monitoring
+
+* get
+
+* list
+
+* list-external-pdbs
+
+* scan-pluggable-databases
+
+* update

@@ -1,0 +1,20 @@
+users
+*****
+
+
+Description
+===========
+
+The SCIM protocol defines a standard set of query parameters that can
+be used to filter, sort, and paginate to return zero or more resources
+in a query response. Queries MAY be made against a single resource or
+a resource type endpoint (e.g., /Users), or the service provider Base
+URI.
+
+
+Available Commands
+==================
+
+* list
+
+* search

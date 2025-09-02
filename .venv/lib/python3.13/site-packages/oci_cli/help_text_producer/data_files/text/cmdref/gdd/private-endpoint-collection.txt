@@ -1,0 +1,14 @@
+private-endpoint-collection
+***************************
+
+
+Description
+===========
+
+Collection of private endpoints.
+
+
+Available Commands
+==================
+
+* list-private-endpoints

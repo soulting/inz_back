@@ -1,0 +1,29 @@
+catalog-private-endpoint
+************************
+
+
+Description
+===========
+
+A private network reverse connection creates a connection from service
+to customer subnet over a private network.
+
+
+Available Commands
+==================
+
+* add
+
+* change-compartment
+
+* create
+
+* delete
+
+* get
+
+* list
+
+* remove
+
+* update

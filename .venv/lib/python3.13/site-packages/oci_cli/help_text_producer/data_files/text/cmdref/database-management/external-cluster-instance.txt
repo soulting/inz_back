@@ -1,0 +1,18 @@
+external-cluster-instance
+*************************
+
+
+Description
+===========
+
+The details of an external cluster instance.
+
+
+Available Commands
+==================
+
+* get
+
+* list
+
+* update

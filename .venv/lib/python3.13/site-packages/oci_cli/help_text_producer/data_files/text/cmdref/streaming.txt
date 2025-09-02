@@ -1,0 +1,82 @@
+streaming
+*********
+
+
+Description
+===========
+
+Use the Streaming CLI to produce and consume messages, create streams
+and stream pools, and manage related items. For more information, see
+Streaming.
+
+
+Available Commands
+==================
+
+* admin
+
+  * connect-harness
+
+    * change-compartment
+
+    * create
+
+    * delete
+
+    * get
+
+    * list
+
+    * update
+
+  * stream
+
+    * change-compartment
+
+    * create
+
+    * delete
+
+    * get
+
+    * list
+
+    * update
+
+  * stream-pool
+
+    * change-compartment
+
+    * create
+
+    * delete
+
+    * get
+
+    * list
+
+    * update
+
+* stream
+
+  * cursor
+
+    * create-cursor
+
+    * create-group-cursor
+
+  * group
+
+    * commit
+
+    * get
+
+    * heartbeat
+
+    * update
+
+  * message
+
+    * get
+
+    * put

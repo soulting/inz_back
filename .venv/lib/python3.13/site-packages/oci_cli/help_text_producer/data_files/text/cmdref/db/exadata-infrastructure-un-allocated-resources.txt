@@ -1,0 +1,15 @@
+exadata-infrastructure-un-allocated-resources
+*********************************************
+
+
+Description
+===========
+
+Un allocated resources details of the Exadata Cloud@Customer
+infrastructure. Applies to Exadata Cloud@Customer instances only.
+
+
+Available Commands
+==================
+
+* get

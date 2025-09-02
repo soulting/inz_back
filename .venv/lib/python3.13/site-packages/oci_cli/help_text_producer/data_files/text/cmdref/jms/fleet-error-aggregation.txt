@@ -1,0 +1,14 @@
+fleet-error-aggregation
+***********************
+
+
+Description
+===========
+
+Aggregation of FleetErrors
+
+
+Available Commands
+==================
+
+* summarize-fleet-errors

@@ -1,0 +1,205 @@
+"delete"
+********
+
+* Description
+
+* Usage
+
+* Required Parameters
+
+* Optional Parameters
+
+* Global Parameters
+
+* Example using required parameter
+
+* Other Examples
+
+
+Description
+===========
+
+Deletes an object.
+
+
+Usage
+=====
+
+   oci os object delete [OPTIONS]
+
+
+Required Parameters
+===================
+
+--bucket-name, -bn [text]
+
+The name of the bucket. Avoid entering confidential information.
+Example: *my-new-bucket1*
+
+--object-name, --name [text]
+
+The name of the object. Avoid entering confidential information.
+Example: *test/object1.log*
+
+
+Optional Parameters
+===================
+
+--force
+
+Perform deletion without prompting for confirmation.
+
+--from-json [text]
+
+Provide input to this command as a JSON document from a file using the
+file://path-to/file syntax.
+
+The "--generate-full-command-json-input" option can be used to
+generate a sample json file to be used with this command option. The
+key names are pre-populated and match the command option names
+(converted to camelCase format, e.g. compartment-id –> compartmentId),
+while the values of the keys need to be populated by the user before
+using the sample file as an input to this command. For any command
+option that accepts multiple values, the value of the key can be a
+JSON array.
+
+Options can still be provided on the command line. If an option exists
+in both the JSON document and the command line then the command line
+specified value will be used.
+
+For examples on usage of this option, please see our “using CLI with
+advanced JSON options” link: https://docs.cloud.oracle.com/iaas/Conte
+nt/API/SDKDocs/cliusing.htm#AdvancedJSONOptions
+
+--if-match [text]
+
+The entity tag (ETag) to match with the ETag of an existing resource.
+If the specified ETag matches the ETag of the existing resource, GET
+and HEAD requests will return the resource and PUT and POST requests
+will upload the resource.
+
+--namespace-name, --namespace, -ns [text]
+
+The Object Storage namespace used for the request. If not provided,
+this parameter will be obtained internally using a call to ‘oci os ns
+get’
+
+--version-id [text]
+
+VersionId used to identify a particular version of the object
+
+
+Global Parameters
+=================
+
+Use "oci --help" for help on global parameters.
+
+"--auth-purpose", "--auth", "--cert-bundle", "--cli-auto-prompt", "--
+cli-rc-file", "--config-file", "--connection-timeout", "--debug", "--
+defaults-file", "--endpoint", "--generate-full-command-json-input", "
+--generate-param-json-input", "--help", "--latest-version", "--max-
+retries", "--no-retry", "--opc-client-request-id", "--opc-request-id",
+"--output", "--profile", "--proxy", "--query", "--raw-output", "--
+read-timeout", "--realm-specific-endpoint", "--region", "--release-
+info", "--request-id", "--version", "-?", "-d", "-h", "-i", "-v"
+
+
+Example using required parameter
+================================
+
+Copy the following CLI commands into a file named example.sh. Run the
+command by typing “bash example.sh” and replacing the example
+parameters with your own.
+
+Please note this sample will only work in the POSIX-compliant bash-
+like shell. You need to set up the OCI configuration and appropriate
+security policies before trying the examples.
+
+       export bucket_name=<substitute-value-of-bucket_name> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/os/object/delete.html#cmdoption-bucket-name
+       export object_name=<substitute-value-of-object_name> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/os/object/delete.html#cmdoption-object-name
+
+       oci os object delete --bucket-name $bucket_name --object-name $object_name
+
+
+Other Examples
+==============
+
+
+Description
+-----------
+
+This command deletes an object, with confirmation prompt
+
+
+Command
+-------
+
+    oci os object delete -bn bucket-client --name test.txt
+
+
+Output
+------
+
+   {
+    "output": "Are you sure you want to delete this resource? [y/N]:"
+   }
+
+
+Description
+-----------
+
+This command deletes an object, without confirmation prompt
+
+
+Command
+-------
+
+    oci os object delete -bn bucket-client --name test.txt --force
+
+
+Output
+------
+
+   {
+    "output": null
+   }
+
+
+Description
+-----------
+
+This command deletes an object with given version id
+
+
+Command
+-------
+
+    oci os object delete -bn bucket-client --name test.txt --version-id 93b22a10-29e4-417c-b574-d2fe7dd2c310
+
+
+Output
+------
+
+   {
+    "output": "Are you sure you want to delete this resource? [y/N]:"
+   }
+
+
+Description
+-----------
+
+This command deletes an object, if the provided etag matches
+
+
+Command
+-------
+
+    oci os object delete -bn bucket-client --name test.txt --if-match e2021ab9-cee5-4b45-a1d3-46b49eeba4a
+
+
+Output
+------
+
+   {
+    "output": "Are you sure you want to delete this resource? [y/N]:"
+   }

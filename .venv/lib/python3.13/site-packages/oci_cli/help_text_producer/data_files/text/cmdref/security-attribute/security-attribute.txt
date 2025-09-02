@@ -1,0 +1,32 @@
+security-attribute
+******************
+
+
+Description
+===========
+
+A security attribute that belongs to a specific security attribute
+namespace. Security attributes must be created in a tenancy before a
+user can apply them to resources. For more information, see Managing
+Security Attributes.
+
+**Warning:** Oracle recommends that you avoid using any confidential
+information when you supply string values using the API.
+
+
+Available Commands
+==================
+
+* bulk-delete
+
+* bulk-edit
+
+* create
+
+* delete
+
+* get
+
+* list
+
+* update

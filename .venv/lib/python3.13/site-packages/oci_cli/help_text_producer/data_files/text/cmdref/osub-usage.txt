@@ -1,0 +1,23 @@
+osub-usage
+**********
+
+
+Description
+===========
+
+OneSubscription CLI Common set of Subscription Plan Management (SPM)
+Usage Computation resources
+
+
+Available Commands
+==================
+
+* computed-usage
+
+  * get
+
+  * list
+
+* computed-usage-aggregated-summary
+
+  * list-computed-usage-aggregateds

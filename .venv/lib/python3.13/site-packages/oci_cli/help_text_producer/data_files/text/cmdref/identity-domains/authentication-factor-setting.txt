@@ -1,0 +1,16 @@
+authentication-factor-setting
+*****************************
+
+
+Description
+===========
+
+Multi Factor Authentication Settings for Tenant
+
+
+Available Commands
+==================
+
+* get
+
+* put

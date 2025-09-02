@@ -1,0 +1,17 @@
+standard-tag-namespace-template
+*******************************
+
+
+Description
+===========
+
+The template of the standard tag namespace. This object includes
+necessary details to create the provided standard tag namespace.
+
+
+Available Commands
+==================
+
+* get-standard-tag-template
+
+* list-standard-tag-namespaces

@@ -1,0 +1,26 @@
+url-list
+********
+
+
+Description
+===========
+
+URL pattern lists of the policy. The value of an entry is a list of
+URL patterns. The associated key/name is the identifier by which the
+URL pattern list is referenced.
+
+
+Available Commands
+==================
+
+* bulk-upload
+
+* create
+
+* delete
+
+* get
+
+* list
+
+* update

@@ -1,0 +1,23 @@
+approval-template
+*****************
+
+
+Description
+===========
+
+Group/User OCIDs of those who can approve/deny/revoke operator’s
+request to access associated resources.
+
+
+Available Commands
+==================
+
+* change-compartment
+
+* create
+
+* delete
+
+* get
+
+* update

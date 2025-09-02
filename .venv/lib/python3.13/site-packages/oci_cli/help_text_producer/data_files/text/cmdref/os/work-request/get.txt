@@ -1,0 +1,152 @@
+"get"
+*****
+
+* Description
+
+* Usage
+
+* Required Parameters
+
+* Optional Parameters
+
+* Global Parameters
+
+* Example using required parameter
+
+* Other Examples
+
+
+Description
+===========
+
+Gets the status of the work request for the given ID.
+
+
+Usage
+=====
+
+   oci os work-request get [OPTIONS]
+
+
+Required Parameters
+===================
+
+--work-request-id [text]
+
+The ID of the asynchronous request.
+
+
+Optional Parameters
+===================
+
+--from-json [text]
+
+Provide input to this command as a JSON document from a file using the
+file://path-to/file syntax.
+
+The "--generate-full-command-json-input" option can be used to
+generate a sample json file to be used with this command option. The
+key names are pre-populated and match the command option names
+(converted to camelCase format, e.g. compartment-id –> compartmentId),
+while the values of the keys need to be populated by the user before
+using the sample file as an input to this command. For any command
+option that accepts multiple values, the value of the key can be a
+JSON array.
+
+Options can still be provided on the command line. If an option exists
+in both the JSON document and the command line then the command line
+specified value will be used.
+
+For examples on usage of this option, please see our “using CLI with
+advanced JSON options” link: https://docs.cloud.oracle.com/iaas/Conte
+nt/API/SDKDocs/cliusing.htm#AdvancedJSONOptions
+
+
+Global Parameters
+=================
+
+Use "oci --help" for help on global parameters.
+
+"--auth-purpose", "--auth", "--cert-bundle", "--cli-auto-prompt", "--
+cli-rc-file", "--config-file", "--connection-timeout", "--debug", "--
+defaults-file", "--endpoint", "--generate-full-command-json-input", "
+--generate-param-json-input", "--help", "--latest-version", "--max-
+retries", "--no-retry", "--opc-client-request-id", "--opc-request-id",
+"--output", "--profile", "--proxy", "--query", "--raw-output", "--
+read-timeout", "--realm-specific-endpoint", "--region", "--release-
+info", "--request-id", "--version", "-?", "-d", "-h", "-i", "-v"
+
+
+Example using required parameter
+================================
+
+Copy the following CLI commands into a file named example.sh. Run the
+command by typing “bash example.sh” and replacing the example
+parameters with your own.
+
+Please note this sample will only work in the POSIX-compliant bash-
+like shell. You need to set up the OCI configuration and appropriate
+security policies before trying the examples.
+
+       export work_request_id=<substitute-value-of-work_request_id> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/os/work-request/get.html#cmdoption-work-request-id
+
+       oci os work-request get --work-request-id $work_request_id
+
+
+Other Examples
+==============
+
+
+Description
+-----------
+
+Gets the status of the work request for the given ID.
+
+
+Command
+-------
+
+    oci os work-request get --work-request-id ff2307cf-a641-4649-ace2-c81f68001b84
+
+
+Output
+------
+
+   {
+    "data": {
+         "compartment-id": "ocid1.compartment.oc1..aaaaaaaa3ffjane6aoullgob4daj6xw2bzkm7maswctna2zgoxfny4smpoha",
+         "id": "ff2307cf-a641-4649-ace2-c81f68001b84",
+         "operation-type": "COPY_OBJECT",
+         "percent-complete": 0.0,
+         "resources": [
+              {
+                   "action-type": "READ",
+                   "entity-type": "object",
+                   "entity-uri": "/n/bmcostests/b/bucket-client/o/1.1G",
+                   "identifier": null,
+                   "metadata": {
+                        "BUCKET": "bucket-client",
+                        "NAMESPACE": "bmcostests",
+                        "OBJECT": "1.1G",
+                        "REGION": "us-phoenix-1"
+                   }
+              },
+              {
+                   "action-type": "WRITTEN",
+                   "entity-type": "object",
+                   "entity-uri": "/n/bmcostests/b/hnagdive-test/o/1.1G",
+                   "identifier": null,
+                   "metadata": {
+                        "BUCKET": "hnagdive-test",
+                        "NAMESPACE": "bmcostests",
+                        "OBJECT": "1.1G",
+                        "REGION": "us-phoenix-1"
+                   }
+              }
+         ],
+         "status": "IN_PROGRESS",
+         "time-accepted": "2022-12-19T10:20:38+00:00",
+         "time-finished": null,
+         "time-started": "2022-12-19T10:20:38+00:00"
+    }
+   }

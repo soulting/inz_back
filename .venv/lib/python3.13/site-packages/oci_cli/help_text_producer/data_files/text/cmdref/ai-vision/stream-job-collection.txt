@@ -1,0 +1,14 @@
+stream-job-collection
+*********************
+
+
+Description
+===========
+
+The results of a stream job search.
+
+
+Available Commands
+==================
+
+* list-stream-jobs

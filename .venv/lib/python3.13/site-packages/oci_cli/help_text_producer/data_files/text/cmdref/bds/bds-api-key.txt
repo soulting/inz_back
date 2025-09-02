@@ -1,0 +1,22 @@
+bds-api-key
+***********
+
+
+Description
+===========
+
+The API key information.
+
+
+Available Commands
+==================
+
+* create
+
+* delete
+
+* get
+
+* list
+
+* test-bds-object-storage-connection

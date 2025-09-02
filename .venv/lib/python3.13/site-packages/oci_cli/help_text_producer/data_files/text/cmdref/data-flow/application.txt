@@ -1,0 +1,26 @@
+application
+***********
+
+
+Description
+===========
+
+A Data Flow application object.
+
+
+Available Commands
+==================
+
+* cascading-delete
+
+* change-compartment
+
+* create
+
+* delete
+
+* get
+
+* list
+
+* update

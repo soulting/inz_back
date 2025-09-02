@@ -1,0 +1,24 @@
+target
+******
+
+
+Description
+===========
+
+A target defines the scope of resources that Cloud Guard monitors and
+the rules to be enforced in that monitoring. A Target resource
+contains the settings for a specific target.
+
+
+Available Commands
+==================
+
+* create
+
+* delete
+
+* get
+
+* list
+
+* update

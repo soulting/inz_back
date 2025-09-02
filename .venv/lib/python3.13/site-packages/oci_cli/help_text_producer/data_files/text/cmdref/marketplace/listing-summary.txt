@@ -1,0 +1,19 @@
+listing-summary
+***************
+
+
+Description
+===========
+
+The model for a summary of an Oracle Cloud Infrastructure Marketplace
+listing.
+
+
+Available Commands
+==================
+
+* search-listings
+
+* search-listings-free-text
+
+* search-listings-structured

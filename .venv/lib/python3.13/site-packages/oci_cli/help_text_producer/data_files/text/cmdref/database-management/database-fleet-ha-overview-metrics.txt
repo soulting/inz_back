@@ -1,0 +1,14 @@
+database-fleet-ha-overview-metrics
+**********************************
+
+
+Description
+===========
+
+The details of the HA metrics for the fleet of databases.
+
+
+Available Commands
+==================
+
+* get

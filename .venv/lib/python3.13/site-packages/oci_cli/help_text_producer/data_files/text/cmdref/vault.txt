@@ -1,0 +1,48 @@
+vault
+*****
+
+
+Description
+===========
+
+Use the Secret Management CLI to manage secrets and secret versions.
+For more information, see Managing Secrets. To retrieve secrets from
+vaults, see >>`<<Vault Service Secret Retrieval (secrets)
+<https://docs.cloud.oracle.com/iaas/tools/oci-
+cli/latest/oci_cli_docs/cmdref/secrets.html>
+
+
+Available Commands
+==================
+
+* secret
+
+  * cancel-secret-deletion
+
+  * cancel-secret-rotation
+
+  * change-compartment
+
+  * create-base64
+
+  * get
+
+  * list
+
+  * rotate
+
+  * schedule-secret-deletion
+
+  * update
+
+  * update-base64
+
+* secret-version
+
+  * cancel-deletion
+
+  * get
+
+  * list
+
+  * schedule-deletion

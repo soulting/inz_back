@@ -1,0 +1,16 @@
+db-server
+*********
+
+
+Description
+===========
+
+Details of the Db server resource.
+
+
+Available Commands
+==================
+
+* get
+
+* list

@@ -1,0 +1,37 @@
+budgets
+*******
+
+
+Description
+===========
+
+Use the Budgets CLI to manage budgets and budget alerts. For more
+information, see Budgets Overview.
+
+
+Available Commands
+==================
+
+* alert-rule
+
+  * create
+
+  * delete
+
+  * get
+
+  * list
+
+  * update
+
+* budget
+
+  * create
+
+  * delete
+
+  * get
+
+  * list
+
+  * update

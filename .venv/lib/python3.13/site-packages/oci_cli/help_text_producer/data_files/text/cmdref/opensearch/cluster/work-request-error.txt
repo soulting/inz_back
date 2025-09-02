@@ -1,0 +1,15 @@
+work-request-error
+******************
+
+
+Description
+===========
+
+The list of work request errors returned in a work request error
+search.
+
+
+Available Commands
+==================
+
+* list

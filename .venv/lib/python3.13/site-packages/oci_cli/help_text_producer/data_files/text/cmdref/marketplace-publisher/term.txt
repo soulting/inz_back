@@ -1,0 +1,22 @@
+term
+****
+
+
+Description
+===========
+
+Base model object for the term.
+
+
+Available Commands
+==================
+
+* change-compartment
+
+* create
+
+* delete
+
+* get
+
+* update

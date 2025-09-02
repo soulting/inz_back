@@ -1,0 +1,20 @@
+video-job
+*********
+
+
+Description
+===========
+
+Job details for a video analysis.
+
+
+Available Commands
+==================
+
+* cancel
+
+* create
+
+* create-video-job-object-list-inline-input-location
+
+* get

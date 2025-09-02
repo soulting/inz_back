@@ -1,0 +1,14 @@
+compliance-record-aggregation-collection
+****************************************
+
+
+Description
+===========
+
+An array of ComplianceRecord objects
+
+
+Available Commands
+==================
+
+* summarize-compliance-record-counts

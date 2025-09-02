@@ -1,0 +1,24 @@
+scheduling-policy
+*****************
+
+
+Description
+===========
+
+Details of a Scheduling Policy.
+
+
+Available Commands
+==================
+
+* change-compartment
+
+* create
+
+* delete
+
+* get
+
+* list
+
+* update

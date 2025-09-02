@@ -1,0 +1,18 @@
+work-request
+************
+
+
+Description
+===========
+
+The workrequest status details.
+
+
+Available Commands
+==================
+
+* cancel
+
+* get
+
+* list

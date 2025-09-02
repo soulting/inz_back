@@ -1,0 +1,22 @@
+dynamic-resource-group
+**********************
+
+
+Description
+===========
+
+Schema for DynamicResourceGroup resource.
+
+
+Available Commands
+==================
+
+* create
+
+* delete
+
+* get
+
+* patch
+
+* put

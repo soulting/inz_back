@@ -1,0 +1,22 @@
+chat-result
+***********
+
+
+Description
+===========
+
+The response to the chat conversation.
+
+
+Available Commands
+==================
+
+* chat
+
+* chat-cohere-chat-request
+
+* chat-dedicated-serving-mode
+
+* chat-generic-chat-request
+
+* chat-on-demand-serving-mode

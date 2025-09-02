@@ -1,0 +1,27 @@
+recovery-service-subnet
+***********************
+
+
+Description
+===========
+
+The details of a recovery service subnet. Recovery service subnets
+allows Recovery Service to access protected databases in each VCN.
+Each recovery service subnet uses a single private endpoint on a
+subnet of your choice within a VCN. The private endpoint need not be
+on the same subnet as the Oracle Cloud Database, although, it must be
+on a subnet that can communicate with the Oracle Cloud Database.
+
+
+Available Commands
+==================
+
+* change-compartment
+
+* create
+
+* delete
+
+* get
+
+* update

@@ -1,0 +1,15 @@
+annotation-collection
+*********************
+
+
+Description
+===========
+
+The results of an annotations search. It contains AnnotationSummary
+items and other information, such as metadata.
+
+
+Available Commands
+==================
+
+* list-annotations

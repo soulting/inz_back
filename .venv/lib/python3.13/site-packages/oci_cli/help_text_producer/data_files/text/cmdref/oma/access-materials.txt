@@ -1,0 +1,14 @@
+access-materials
+****************
+
+
+Description
+===========
+
+Access materials details.
+
+
+Available Commands
+==================
+
+* get

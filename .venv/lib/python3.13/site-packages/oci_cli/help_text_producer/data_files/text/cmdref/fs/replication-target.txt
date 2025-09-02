@@ -1,0 +1,29 @@
+replication-target
+******************
+
+
+Description
+===========
+
+Replication targets are associated with a primary resource called a
+>>``<<Replication`
+<https://docs.cloud.oracle.com/api/#/en/iaas/latest/Replication>`__
+located in another availability domain in the same or different
+region. The replication retrieves the delta of data between two
+snapshots of a source file system and sends it to the associated
+*ReplicationTarget*,  which applies it to the target file system. All
+operations (except *DELETE*) must be done using the associated
+replication resource. Deleting a *ReplicationTarget* allows the target
+file system to be exported. Deleting a *ReplicationTarget* does not
+delete the associated *Replication* resource, but places it in a
+*FAILED* state. For more information, see File System Replication.
+
+
+Available Commands
+==================
+
+* delete
+
+* get
+
+* list

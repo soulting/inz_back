@@ -1,0 +1,64 @@
+visual-builder
+**************
+
+
+Description
+===========
+
+Oracle Visual Builder enables developers to quickly build web and
+mobile applications. With a visual development environment that makes
+it easy to connect to Oracle data and third-party REST services,
+developers can build modern, consumer-grade applications in a fraction
+of the time it would take in other tools. The Visual Builder Instance
+Management CLI allows users to create and manage a Visual Builder
+instance.
+
+
+Available Commands
+==================
+
+* application
+
+  * list
+
+* vb-instance
+
+  * change-compartment
+
+  * create
+
+  * create-vb-instance-private-endpoint-details
+
+  * create-vb-instance-public-endpoint-details
+
+  * delete
+
+  * get
+
+  * list
+
+  * reconfigure-private-endpoint
+
+  * start
+
+  * stop
+
+  * update
+
+  * update-vb-instance-update-private-endpoint-details
+
+  * update-vb-instance-update-public-endpoint-details
+
+* work-request
+
+  * get
+
+  * list
+
+* work-request-error
+
+  * list
+
+* work-request-log-entry
+
+  * list

@@ -1,0 +1,19 @@
+connector-plugins
+*****************
+
+
+Description
+===========
+
+Example connector plugins include the Queue source and the
+Notifications target. For more information about flows defined by
+connectors, see Overview of Connector Hub. For configuration
+instructions, see Creating a Connector.
+
+
+Available Commands
+==================
+
+* get
+
+* list

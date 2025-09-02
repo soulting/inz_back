@@ -1,0 +1,25 @@
+private-endpoint
+****************
+
+
+Description
+===========
+
+A Database Management private endpoint allows Database Management to
+connect to databases in a Virtual Cloud Network (VCN).
+
+
+Available Commands
+==================
+
+* change-compartment
+
+* create
+
+* delete
+
+* get
+
+* list
+
+* update

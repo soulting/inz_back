@@ -1,0 +1,452 @@
+"bulk-download"
+***************
+
+* Description
+
+* Usage
+
+* Required Parameters
+
+* Optional Parameters
+
+* Global Parameters
+
+* Example using required parameter
+
+* Other Examples
+
+
+Description
+===========
+
+Downloads all objects which match the given prefix to a given
+directory.
+
+
+Usage
+=====
+
+   oci os object bulk-download [OPTIONS]
+
+
+Required Parameters
+===================
+
+-bn, --bucket-name [text]
+
+The name of the bucket.
+
+--dest-dir, --download-dir [text]
+
+The directory where retrieved objects will be placed as files. This
+directory will be created if it does not exist.
+
+
+Optional Parameters
+===================
+
+--delimiter [text]
+
+When this parameter is set, only objects whose names do not contain
+the delimiter character (after an optionally specified prefix) are
+returned. Scanned objects whose names contain the delimiter have part
+of their name up to the last occurrence of the delimiter (after the
+optional prefix) returned as a set of prefixes. Note: Only ‘/’ is a
+supported delimiter character at this time.
+
+--dry-run
+
+Prints the list of files to be downloaded.
+
+--encryption-key-file [filename]
+
+A file containing the base64-encoded string of the AES-256 encryption
+key associated with the object.
+
+--exclude [text]
+
+Only process files which do not match the specified pattern. Patterns
+are applied relative to the current directory. This option can be
+specified multiple times to match on multiple patterns. Supported
+pattern symbols are: 
+
+*: Matches everything
+
+?: Matches any single character
+
+[sequence]: Matches any character in sequence
+
+[!sequence]: Matches any character not in sequence
+
+--from-json [text]
+
+Provide input to this command as a JSON document from a file using the
+file://path-to/file syntax.
+
+The "--generate-full-command-json-input" option can be used to
+generate a sample json file to be used with this command option. The
+key names are pre-populated and match the command option names
+(converted to camelCase format, e.g. compartment-id –> compartmentId),
+while the values of the keys need to be populated by the user before
+using the sample file as an input to this command. For any command
+option that accepts multiple values, the value of the key can be a
+JSON array.
+
+Options can still be provided on the command line. If an option exists
+in both the JSON document and the command line then the command line
+specified value will be used.
+
+For examples on usage of this option, please see our “using CLI with
+advanced JSON options” link: https://docs.cloud.oracle.com/iaas/Conte
+nt/API/SDKDocs/cliusing.htm#AdvancedJSONOptions
+
+--include [text]
+
+Only process files which match the specified pattern. Patterns are
+applied relative to the current directory. This option can be
+specified multiple times to match on multiple patterns. Supported
+pattern symbols are: 
+
+*: Matches everything
+
+?: Matches any single character
+
+[sequence]: Matches any character in sequence
+
+[!sequence]: Matches any character not in sequence
+
+--multipart-download-threshold [integer range]
+
+Objects larger than this size (in MiB) will be downloaded in multiple
+parts. The minimum allowable threshold is 128 MiB.
+
+-ns, --namespace, --namespace-name [text]
+
+The top-level namespace used for the request. If not provided, this
+parameter will be obtained internally using a call to ‘oci os ns get’
+
+--no-multipart
+
+Do not transfer the file in multiple parts. By default, files above
+128 MiB will be transferred in multiple parts, then combined.
+
+--no-overwrite
+
+If a file with the same name as an object already exists in the
+download directory, do not overwite it. If neither this flag nor
+–overwrite is specified, you will be prompted each time a file would
+be overwritten
+
+--overwrite
+
+If a file with the same name as an object already exists in the
+download directory, overwrite it. If neither this flag nor –no-
+overwrite is specified, you will be prompted each time a file would be
+overwritten.
+
+--parallel-operations-count [integer range]
+
+The number of parallel operations to perform. Decreasing this value
+will make the process less resource intensive but it may take longer.
+Increasing this value may decrease the time taken, but the process
+will consume more system resources and network bandwidth. The maximum
+is 1000. [default: 10]
+
+--part-size [integer range]
+
+Part size (in MiB) to use when the file is split into multiple parts
+and then combined. Part size must be greater than 10 MiB and defaults
+to 128 MiB.
+
+--prefix [text]
+
+Retrieve all objects with the given prefix. Omit this parameter to get
+all objects in the bucket
+
+   Examples
+
+======================================================================
+
+
+Download all objects in the bucket
+----------------------------------
+
+    oci os object bulk-download -ns mynamespace -bn mybucket --download-dir path/to/download/directory
+
+
+Download all objects that match a given prefix
+----------------------------------------------
+
+    oci os object bulk-download -ns mynamespace -bn mybucket --download-dir path/to/download/directory --prefix myprefix
+
+You can download all objects that match a given prefix by specifying
+the –prefix flag. In the above example, “–prefix myprefix” would match
+object names such as myPrefix_textfile1.txt, myPrefix_myImage.png etc.
+
+If you have named your objects so that they exist in Object Storage as
+a hierarchy, e.g. level1/level2/level3/myobject.txt, then you can
+download objects at a given level (and all sub levels) by specifying a
+prefix:
+
+    oci os object bulk-download -ns mynamespace -bn mybucket --download-dir path/to/download/directory --prefix level1/level2/
+
+This will download all objects of the form level1/level2/<object
+name>, level1/level2/leve3/<object name>,
+level1/level2/leve3/level4/<object name> etc.
+
+
+Limiting downloaded objects using a prefix and delimiter
+--------------------------------------------------------
+
+    oci os object bulk-download -ns mynamespace -bn mybucket --download-dir path/to/download/directory --prefix level1/level2/ --delimiter /
+
+If you have named your objects so that they exist in Object Storage as
+a hierarchy, e.g. level1/level2/level3/myobject.txt, and you only want
+to download objects at a given level of the hierarchy, e.g. example
+everything of the form level1/level2/<object name> but not
+level1/level2/leve3/<object name> or any other sub-levels, you can
+specify a prefix and delimiter. Currently the only supported delimiter
+is /
+
+
+Overwriting or skipping files
+-----------------------------
+
+    oci os object bulk-download -ns mynamespace -bn mybucket --download-dir path/to/download/directory --overwrite
+    oci os object bulk-download -ns mynamespace -bn mybucket --download-dir path/to/download/directory --no-overwrite
+
+If files with the same name as the objects being downloaded already
+exist in the download directory, you can opt to overwrite them with
+the –overwrite option, or preserve them with the –no-overwrite option.
+
+
+Global Parameters
+=================
+
+Use "oci --help" for help on global parameters.
+
+"--auth-purpose", "--auth", "--cert-bundle", "--cli-auto-prompt", "--
+cli-rc-file", "--config-file", "--connection-timeout", "--debug", "--
+defaults-file", "--endpoint", "--generate-full-command-json-input", "
+--generate-param-json-input", "--help", "--latest-version", "--max-
+retries", "--no-retry", "--opc-client-request-id", "--opc-request-id",
+"--output", "--profile", "--proxy", "--query", "--raw-output", "--
+read-timeout", "--realm-specific-endpoint", "--region", "--release-
+info", "--request-id", "--version", "-?", "-d", "-h", "-i", "-v"
+
+
+Example using required parameter
+================================
+
+Copy the following CLI commands into a file named example.sh. Run the
+command by typing “bash example.sh” and replacing the example
+parameters with your own.
+
+Please note this sample will only work in the POSIX-compliant bash-
+like shell. You need to set up the OCI configuration and appropriate
+security policies before trying the examples.
+
+       export bucket_name=<substitute-value-of-bucket_name> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/os/object/bulk-download.html#cmdoption-bucket-name
+       export download_dir=<substitute-value-of-download_dir> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/os/object/bulk-download.html#cmdoption-download-dir
+
+       oci os object bulk-download --bucket-name $bucket_name --download-dir $download_dir
+
+
+Other Examples
+==============
+
+
+Description
+-----------
+
+Download all objects in the bucket excluding ‘.cache’ directory.
+
+
+Command
+-------
+
+    oci os object bulk-download -bn "cli-test" --download-dir ~/cliDirectory --exclude '.cache/*'
+
+
+Output
+------
+
+   {
+    "data": [
+         {
+              "download-failures": {},
+              "skipped-objects": []
+         }
+    ]
+   }
+
+
+Description
+-----------
+
+Downloads all objects in the bucket to the specified directory
+
+
+Command
+-------
+
+    oci os object bulk-download -bn bucket-client --dest-dir my_download_folder
+
+
+Output
+------
+
+   {
+    "download-failures": {},
+    "downloaded-objects": [
+         "b_text.txt",
+         "a_text.txt"
+    ],
+    "skipped-objects": []
+   }
+
+
+Description
+-----------
+
+Prints the list of files to be downloaded.
+
+
+Command
+-------
+
+    oci os object bulk-download -bn bucket-client --dest-dir my_download_folder --dry-run
+
+
+Output
+------
+
+   {
+    "output": "a_text.txt \n b_text.txt"
+   }
+
+
+Description
+-----------
+
+Downloads all objects in the bucket which do not match the specified
+pattern
+
+
+Command
+-------
+
+    oci os object bulk-download -bn bucket-client --dest-dir my_download_folder --exclude 'a*'
+
+
+Output
+------
+
+   {
+    "download-failures": {},
+    "downloaded-objects": [
+         "b_text.txt"
+    ],
+    "skipped-objects": []
+   }
+
+
+Description
+-----------
+
+Downloads all objects in the bucket which matches the specified
+pattern
+
+
+Command
+-------
+
+    oci os object bulk-download -bn bucket-client --dest-dir my_download_folder --include 'a*'
+
+
+Output
+------
+
+   {
+    "download-failures": {},
+    "downloaded-objects": [
+         "a_text.txt"
+    ],
+    "skipped-objects": []
+   }
+
+
+Description
+-----------
+
+Downloads all objects in the bucket and will not overwrite local files
+having same name, without showing confirmation prompt
+
+
+Command
+-------
+
+    oci os object bulk-download -bn bucket-client --dest-dir my_download_folder --no-overwrite
+
+
+Output
+------
+
+   {
+    "download-failures": {},
+    "downloaded-objects": [],
+    "skipped-objects": [
+         "a_text.txt",
+         "b_text.txt"
+    ]
+   }
+
+
+Description
+-----------
+
+Downloads all objects in the bucket and will overwrite local files
+having same name, without showing confirmation prompt
+
+
+Command
+-------
+
+    oci os object bulk-download -bn bucket-client --dest-dir my_download_folder --overwrite
+
+
+Output
+------
+
+   {
+    "download-failures": {},
+    "downloaded-objects": [
+         "a_text.txt",
+         "b_text.txt"
+    ],
+    "skipped-objects": []
+   }
+
+
+Description
+-----------
+
+Downloads all objects in the bucket with specified prefix
+
+
+Command
+-------
+
+    oci os object bulk-download -bn bucket-client --dest-dir my_download_folder --prefix a
+
+
+Output
+------
+
+   {
+    "download-failures": {},
+    "downloaded-objects": [
+         "a_text.txt"
+    ],
+    "skipped-objects": []
+   }

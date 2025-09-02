@@ -1,0 +1,16 @@
+endpoint-service
+****************
+
+
+Description
+===========
+
+Description of Database Tools Endpoint Service.
+
+
+Available Commands
+==================
+
+* get
+
+* list

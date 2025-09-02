@@ -1,0 +1,26 @@
+queue
+*****
+
+
+Description
+===========
+
+A detailed representation of a queue and its configuration.
+
+
+Available Commands
+==================
+
+* change-compartment
+
+* create
+
+* delete
+
+* get
+
+* list
+
+* purge
+
+* update

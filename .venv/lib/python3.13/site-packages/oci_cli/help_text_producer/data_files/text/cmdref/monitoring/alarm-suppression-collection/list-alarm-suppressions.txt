@@ -1,0 +1,218 @@
+"list-alarm-suppressions"
+*************************
+
+* Description
+
+* Usage
+
+* Optional Parameters
+
+* Global Parameters
+
+* Example using required parameter
+
+
+Description
+===========
+
+Lists alarm suppressions for the specified alarm. For more
+information, see Listing Alarm Suppressions.
+
+For important limits information, see Limits on Monitoring.
+
+This call is subject to a Monitoring limit that applies to the total
+number of requests across all alarm operations. Monitoring might
+throttle this call to reject an otherwise valid request when the total
+rate of alarm operations exceeds 10 requests, or transactions, per
+second (TPS) for a given tenancy.
+
+
+Usage
+=====
+
+   oci monitoring alarm-suppression-collection list-alarm-suppressions [OPTIONS]
+
+
+Optional Parameters
+===================
+
+--alarm-id [text]
+
+The OCID of the alarm that is the target of the alarm suppression.
+
+--all
+
+Fetches all pages of results. If you provide this option, then you
+cannot provide the "--limit" option.
+
+--compartment-id, -c [text]
+
+The OCID of the compartment for searching. Use the tenancy OCID to
+search in the root compartment.
+
+If targetType is not specified, searches all suppressions defined
+under the compartment. If targetType is *COMPARTMENT*, searches
+suppressions in the specified compartment only.
+
+Example:
+
+   ocid1.compartment.oc1..exampleuniqueID
+
+--compartment-id-in-subtree [boolean]
+
+When true, returns resources from all compartments and
+subcompartments. The parameter can only be set to true when
+compartmentId is the tenancy OCID (the tenancy is the root
+compartment). A true value requires the user to have tenancy-level
+permissions. If this requirement is not met, then the call is
+rejected. When false, returns resources from only the compartment
+specified in compartmentId. Default is false.
+
+--display-name [text]
+
+A filter to return only resources that match the given display name
+exactly. Use this filter to list an alarm suppression by name.
+Alternatively, when you know the alarm suppression OCID, use the
+GetAlarmSuppression operation.
+
+--from-json [text]
+
+Provide input to this command as a JSON document from a file using the
+file://path-to/file syntax.
+
+The "--generate-full-command-json-input" option can be used to
+generate a sample json file to be used with this command option. The
+key names are pre-populated and match the command option names
+(converted to camelCase format, e.g. compartment-id –> compartmentId),
+while the values of the keys need to be populated by the user before
+using the sample file as an input to this command. For any command
+option that accepts multiple values, the value of the key can be a
+JSON array.
+
+Options can still be provided on the command line. If an option exists
+in both the JSON document and the command line then the command line
+specified value will be used.
+
+For examples on usage of this option, please see our “using CLI with
+advanced JSON options” link: https://docs.cloud.oracle.com/iaas/Conte
+nt/API/SDKDocs/cliusing.htm#AdvancedJSONOptions
+
+--is-all-suppressions [boolean]
+
+Setting this parameter to true requires the query to specify the alarm
+(*alarmId*).
+
+When true, lists all alarm suppressions that affect the specified
+alarm, including suppressions that target the corresponding
+compartment or tenancy. When false, lists only the alarm suppressions
+that target the specified alarm.
+
+Default is false.
+
+--level [text]
+
+The level of this alarm suppression. *ALARM* indicates a suppression
+of the entire alarm, regardless of dimension. *DIMENSION* indicates a
+suppression configured for specified dimensions.
+
+Accepted values are:
+
+   ALARM, DIMENSION
+
+--lifecycle-state [text]
+
+A filter to return only resources that match the given lifecycle state
+exactly. When not specified, only resources in the ACTIVE lifecycle
+state are listed.
+
+Accepted values are:
+
+   ACTIVE, DELETED
+
+--limit [integer]
+
+For list pagination. The maximum number of results per page, or items
+to return in a paginated “List” call. For important details about how
+pagination works, see List Pagination.
+
+Default: 1000
+
+Example:
+
+   500
+
+--page [text]
+
+For list pagination. The value of the *opc-next-page* response header
+from the previous “List” call. For important details about how
+pagination works, see List Pagination.
+
+--page-size [integer]
+
+When fetching results, the number of results to fetch per call. Only
+valid when used with "--all" or "--limit", and ignored otherwise.
+
+--sort-by [text]
+
+The field to use when sorting returned alarm suppressions. Only one
+sorting level is provided.
+
+Example:
+
+   timeCreated
+
+Accepted values are:
+
+   displayName, timeCreated, timeSuppressFrom
+
+--sort-order [text]
+
+The sort order to use when sorting returned alarm suppressions.
+Ascending (ASC) or descending (DESC).
+
+Example:
+
+   ASC
+
+Accepted values are:
+
+   ASC, DESC
+
+--target-type [text]
+
+The target type to use when listing alarm suppressions. *ALARM* lists
+all suppression records for the specified alarm. *COMPARTMENT* lists
+all suppression records for the specified compartment or tenancy.
+
+Accepted values are:
+
+   ALARM, COMPARTMENT
+
+
+Global Parameters
+=================
+
+Use "oci --help" for help on global parameters.
+
+"--auth-purpose", "--auth", "--cert-bundle", "--cli-auto-prompt", "--
+cli-rc-file", "--config-file", "--connection-timeout", "--debug", "--
+defaults-file", "--endpoint", "--generate-full-command-json-input", "
+--generate-param-json-input", "--help", "--latest-version", "--max-
+retries", "--no-retry", "--opc-client-request-id", "--opc-request-id",
+"--output", "--profile", "--proxy", "--query", "--raw-output", "--
+read-timeout", "--realm-specific-endpoint", "--region", "--release-
+info", "--request-id", "--version", "-?", "-d", "-h", "-i", "-v"
+
+
+Example using required parameter
+================================
+
+Copy the following CLI commands into a file named example.sh. Run the
+command by typing “bash example.sh” and replacing the example
+parameters with your own.
+
+Please note this sample will only work in the POSIX-compliant bash-
+like shell. You need to set up the OCI configuration and appropriate
+security policies before trying the examples.
+
+       oci monitoring alarm-suppression-collection list-alarm-suppressions

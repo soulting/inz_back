@@ -1,0 +1,14 @@
+appliance-image
+***************
+
+
+Description
+===========
+
+Results of an ApplianceImage search.
+
+
+Available Commands
+==================
+
+* list-appliance-images

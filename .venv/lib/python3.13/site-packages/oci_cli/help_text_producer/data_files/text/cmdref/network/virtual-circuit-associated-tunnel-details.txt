@@ -1,0 +1,14 @@
+virtual-circuit-associated-tunnel-details
+*****************************************
+
+
+Description
+===========
+
+Detailed private tunnel info associated with the virtual circuit.
+
+
+Available Commands
+==================
+
+* list-virtual-circuit-associated-tunnels

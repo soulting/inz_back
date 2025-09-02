@@ -1,0 +1,24 @@
+diagnostics
+***********
+
+
+Description
+===========
+
+Rover Diagnostic Service.
+
+
+Available Commands
+==================
+
+* bundle
+
+  * cancel
+
+  * create
+
+  * get
+
+  * list
+
+  * view-summary

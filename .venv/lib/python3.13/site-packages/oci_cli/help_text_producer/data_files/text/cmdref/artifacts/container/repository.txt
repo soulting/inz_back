@@ -1,0 +1,24 @@
+repository
+**********
+
+
+Description
+===========
+
+Container repository metadata.
+
+
+Available Commands
+==================
+
+* change-compartment
+
+* create
+
+* delete
+
+* get
+
+* list
+
+* update

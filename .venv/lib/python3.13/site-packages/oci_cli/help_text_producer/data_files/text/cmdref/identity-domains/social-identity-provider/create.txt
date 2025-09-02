@@ -1,0 +1,565 @@
+"create"
+********
+
+* Description
+
+* Usage
+
+* Required Parameters
+
+* Optional Parameters
+
+* Global Parameters
+
+* Example using required parameter
+
+
+Description
+===========
+
+Create a Social Identity Provider
+
+The top level –endpoint parameter must be supplied for this operation.
+
+
+Usage
+=====
+
+   oci identity-domains social-identity-provider create [OPTIONS]
+
+
+Required Parameters
+===================
+
+--account-linking-enabled [boolean]
+
+Whether account linking is enabled
+
+**SCIM++ Properties:**  - caseExact: true  - idcsSearchable: true  -
+multiValued: false  - mutability: readWrite  - required: true  -
+returned: default  - type: boolean  - uniqueness: none
+
+--consumer-key [text]
+
+Social IDP Client Application Client ID
+
+**SCIM++ Properties:**  - caseExact: true  - idcsSearchable: false  -
+multiValued: false  - mutability: readWrite  - required: true  -
+returned: default  - type: string  - uniqueness: none
+
+--consumer-secret [text]
+
+Social IDP Client Application Client Secret
+
+**SCIM++ Properties:**  - caseExact: true  - idcsSearchable: false  -
+idcsSensitive: encrypt  - multiValued: false  - mutability: readWrite
+- required: true  - returned: default  - type: string  - uniqueness:
+none
+
+--enabled [boolean]
+
+Whether the IDP is enabled or not
+
+**SCIM++ Properties:**  - caseExact: true  - idcsSearchable: true  -
+multiValued: false  - mutability: readWrite  - required: true  -
+returned: default  - type: boolean  - uniqueness: none
+
+--name [text]
+
+Social provider name
+
+**SCIM++ Properties:**  - caseExact: false  - idcsSearchable: true  -
+multiValued: false  - mutability: readWrite  - required: true  -
+returned: always  - type: string  - uniqueness: global
+
+--registration-enabled [boolean]
+
+Whether registration is enabled
+
+**SCIM++ Properties:**  - caseExact: true  - idcsSearchable: true  -
+multiValued: false  - mutability: readWrite  - required: true  -
+returned: default  - type: boolean  - uniqueness: none
+
+--schemas [complex type]
+
+REQUIRED. The schemas attribute is an array of Strings which allows
+introspection of the supported schema version for a SCIM
+representation as well any schema extensions supported by that
+representation. Each String value must be a unique URI. This
+specification defines URIs for User, Group, and a standard
+“enterprise” extension. All representations of SCIM schema MUST
+include a non-zero value array with value(s) of the URIs supported by
+that representation. Duplicate values MUST NOT be included. Value
+order is not specified and MUST not impact behavior.
+
+**SCIM++ Properties:**  - caseExact: false  - idcsSearchable: false  -
+multiValued: true  - mutability: readWrite  - required: true  -
+returned: default  - type: string  - uniqueness: none This is a
+complex type whose value must be valid JSON. The value can be provided
+as a string on the command line or passed in as a file using the
+file://path/to/file syntax.
+
+The "--generate-param-json-input" option can be used to generate an
+example of the JSON which must be provided. We recommend storing this
+example in a file, modifying it as needed and then passing it back in
+via the file:// syntax.
+
+--service-provider-name [text]
+
+Service Provider Name
+
+**SCIM++ Properties:**  - caseExact: true  - idcsSearchable: true  -
+multiValued: false  - mutability: immutable  - required: true  -
+returned: default  - type: string  - uniqueness: none
+
+--show-on-login [boolean]
+
+Whether show on login
+
+**SCIM++ Properties:**  - caseExact: true  - idcsSearchable: true  -
+multiValued: false  - mutability: readWrite  - required: true  -
+returned: default  - type: boolean  - uniqueness: none
+
+
+Optional Parameters
+===================
+
+--access-token-url [text]
+
+Social IDP Access token URL
+
+**SCIM++ Properties:**  - caseExact: true  - idcsSearchable: false  -
+multiValued: false  - mutability: readWrite  - required: false  -
+returned: default  - type: string  - uniqueness: none
+
+--admin-scope [complex type]
+
+Admin scope to request
+
+**SCIM++ Properties:**  - caseExact: true  - idcsSearchable: false  -
+multiValued: true  - mutability: readWrite  - required: false  -
+returned: default  - type: string  - uniqueness: none This is a
+complex type whose value must be valid JSON. The value can be provided
+as a string on the command line or passed in as a file using the
+file://path/to/file syntax.
+
+The "--generate-param-json-input" option can be used to generate an
+example of the JSON which must be provided. We recommend storing this
+example in a file, modifying it as needed and then passing it back in
+via the file:// syntax.
+
+--authorization [text]
+
+The Authorization field value consists of credentials containing the
+authentication information of the user agent for the realm of the
+resource being requested.
+
+--authz-url [text]
+
+Social IDP Authorization URL
+
+**SCIM++ Properties:**  - caseExact: true  - idcsSearchable: false  -
+multiValued: false  - mutability: readWrite  - required: false  -
+returned: default  - type: string  - uniqueness: none
+
+--auto-redirect-enabled [boolean]
+
+Whether social auto redirect is enabled. The IDP policy should be
+configured with only one Social IDP, and without username/password
+selected.
+
+**Added In:** 2310202314
+
+**SCIM++ Properties:**  - caseExact: true  - idcsSearchable: true  -
+multiValued: false  - mutability: readWrite  - required: false  -
+returned: default  - type: boolean  - uniqueness: none
+
+--client-credential-in-payload [boolean]
+
+Whether the client credential is contained in payload
+
+**Added In:** 18.4.2
+
+**SCIM++ Properties:**  - caseExact: true  - idcsSearchable: false  -
+multiValued: false  - mutability: readWrite  - required: false  -
+returned: default  - type: boolean  - uniqueness: none
+
+--clock-skew-in-seconds [integer]
+
+Social IDP allowed clock skew time
+
+**SCIM++ Properties:**  - idcsSearchable: false  - multiValued: false
+- mutability: readWrite  - required: false  - returned: default  -
+type: integer  - uniqueness: none
+
+--compartment-ocid [text]
+
+OCI Compartment Id (ocid) in which the resource lives.
+
+**SCIM++ Properties:**  - caseExact: false  - idcsSearchable: false  -
+multiValued: false  - mutability: readOnly  - required: false  -
+returned: default  - type: string  - uniqueness: none
+
+--delete-in-progress [boolean]
+
+A boolean flag indicating this resource in the process of being
+deleted. Usually set to true when synchronous deletion of the resource
+would take too long.
+
+**SCIM++ Properties:**  - caseExact: false  - idcsSearchable: true  -
+multiValued: false  - mutability: readOnly  - required: false  -
+returned: default  - type: boolean  - uniqueness: none
+
+--description [text]
+
+Social IDP description
+
+**SCIM++ Properties:**  - caseExact: false  - idcsSearchable: true  -
+multiValued: false  - mutability: readWrite  - required: false  -
+returned: default  - type: string  - uniqueness: none
+
+--discovery-url [text]
+
+Discovery URL
+
+**Added In:** 17.4.6
+
+**SCIM++ Properties:**  - caseExact: true  - idcsSearchable: false  -
+multiValued: false  - mutability: readWrite  - required: false  -
+returned: default  - type: string  - uniqueness: none
+
+--domain-ocid [text]
+
+OCI Domain Id (ocid) in which the resource lives.
+
+**SCIM++ Properties:**  - caseExact: false  - idcsSearchable: false  -
+multiValued: false  - mutability: readOnly  - required: false  -
+returned: default  - type: string  - uniqueness: none
+
+--from-json [text]
+
+Provide input to this command as a JSON document from a file using the
+file://path-to/file syntax.
+
+The "--generate-full-command-json-input" option can be used to
+generate a sample json file to be used with this command option. The
+key names are pre-populated and match the command option names
+(converted to camelCase format, e.g. compartment-id –> compartmentId),
+while the values of the keys need to be populated by the user before
+using the sample file as an input to this command. For any command
+option that accepts multiple values, the value of the key can be a
+JSON array.
+
+Options can still be provided on the command line. If an option exists
+in both the JSON document and the command line then the command line
+specified value will be used.
+
+For examples on usage of this option, please see our “using CLI with
+advanced JSON options” link: https://docs.cloud.oracle.com/iaas/Conte
+nt/API/SDKDocs/cliusing.htm#AdvancedJSONOptions
+
+--icon-url [text]
+
+ICON URL for social idp
+
+**Added In:** 17.4.6
+
+**SCIM++ Properties:**  - caseExact: true  - idcsSearchable: false  -
+multiValued: false  - mutability: readWrite  - required: false  -
+returned: default  - type: string  - uniqueness: none
+
+--id [text]
+
+Unique identifier for the SCIM Resource as defined by the Service
+Provider. Each representation of the Resource MUST include a non-empty
+id value. This identifier MUST be unique across the Service Provider’s
+entire set of Resources. It MUST be a stable, non-reassignable
+identifier that does not change when the same Resource is returned in
+subsequent requests. The value of the id attribute is always issued by
+the Service Provider and MUST never be specified by the Service
+Consumer. bulkId: is a reserved keyword and MUST NOT be used in the
+unique identifier.
+
+**SCIM++ Properties:**  - caseExact: false  - idcsSearchable: true  -
+multiValued: false  - mutability: readOnly  - required: false  -
+returned: always  - type: string  - uniqueness: global
+
+--id-attribute [text]
+
+Id attribute used for account linking
+
+**SCIM++ Properties:**  - caseExact: true  - idcsSearchable: false  -
+multiValued: false  - mutability: immutable  - required: false  -
+returned: default  - type: string  - uniqueness: none
+
+--idcs-created-by [complex type]
+
+This is a complex type whose value must be valid JSON. The value can
+be provided as a string on the command line or passed in as a file
+using the file://path/to/file syntax.
+
+The "--generate-param-json-input" option can be used to generate an
+example of the JSON which must be provided. We recommend storing this
+example in a file, modifying it as needed and then passing it back in
+via the file:// syntax.
+
+--idcs-last-modified-by [complex type]
+
+This is a complex type whose value must be valid JSON. The value can
+be provided as a string on the command line or passed in as a file
+using the file://path/to/file syntax.
+
+The "--generate-param-json-input" option can be used to generate an
+example of the JSON which must be provided. We recommend storing this
+example in a file, modifying it as needed and then passing it back in
+via the file:// syntax.
+
+--idcs-last-upgraded-in-release [text]
+
+The release number when the resource was upgraded.
+
+**SCIM++ Properties:**  - caseExact: false  - idcsSearchable: false  -
+multiValued: false  - mutability: readOnly  - required: false  -
+returned: request  - type: string  - uniqueness: none
+
+--idcs-prevented-operations [text]
+
+Each value of this attribute specifies an operation that only an
+internal client may perform on this particular resource.
+
+**SCIM++ Properties:**  - idcsSearchable: false  - multiValued: true
+- mutability: readOnly  - required: false  - returned: request  -
+type: string  - uniqueness: none
+
+Accepted values are:
+
+   delete, replace, update
+
+--jit-prov-assigned-groups [complex type]
+
+Lists the groups each social JIT-provisioned user is a member. Just-
+in-Time user-provisioning applies this static list when
+jitProvGroupStaticListEnabled:true.
+
+**Added In:** 2309290043
+
+**SCIM++ Properties:**  - idcsCompositeKey: [value]  - idcsSearchable:
+false  - multiValued: true  - mutability: readWrite  - required: false
+- returned: default  - type: complex  - uniqueness: none
+
+This option is a JSON list with items of type
+SocialIdentityProviderJitProvAssignedGroups.  For documentation on
+SocialIdentityProviderJitProvAssignedGroups please see our API
+reference: https://docs.cloud.oracle.com/api/#/en/identitydomains/v1/
+datatypes/SocialIdentityProviderJitProvAssignedGroups. This is a
+complex type whose value must be valid JSON. The value can be provided
+as a string on the command line or passed in as a file using the
+file://path/to/file syntax.
+
+The "--generate-param-json-input" option can be used to generate an
+example of the JSON which must be provided. We recommend storing this
+example in a file, modifying it as needed and then passing it back in
+via the file:// syntax.
+
+--jit-prov-group-static-list-enabled [boolean]
+
+Set to true to indicate Social JIT User Provisioning Groups should be
+assigned from a static list
+
+**Added In:** 2309290043
+
+**SCIM++ Properties:**  - caseExact: false  - idcsSearchable: false  -
+multiValued: false  - mutability: readWrite  - required: false  -
+returned: default  - type: boolean  - uniqueness: none
+
+--meta [complex type]
+
+This is a complex type whose value must be valid JSON. The value can
+be provided as a string on the command line or passed in as a file
+using the file://path/to/file syntax.
+
+The "--generate-param-json-input" option can be used to generate an
+example of the JSON which must be provided. We recommend storing this
+example in a file, modifying it as needed and then passing it back in
+via the file:// syntax.
+
+--ocid [text]
+
+Unique OCI identifier for the SCIM Resource.
+
+**SCIM++ Properties:**  - caseExact: true  - idcsSearchable: true  -
+multiValued: false  - mutability: immutable  - required: false  -
+returned: default  - type: string  - uniqueness: global
+
+--profile-url [text]
+
+Social IDP User profile URL
+
+**SCIM++ Properties:**  - caseExact: true  - idcsSearchable: false  -
+multiValued: false  - mutability: readWrite  - required: false  -
+returned: default  - type: string  - uniqueness: none
+
+--redirect-url [text]
+
+redirect URL for social idp
+
+**SCIM++ Properties:**  - caseExact: true  - idcsSearchable: false  -
+multiValued: false  - mutability: readWrite  - required: false  -
+returned: default  - type: string  - uniqueness: none
+
+--refresh-token-url [text]
+
+Social IDP Refresh token URL
+
+**Added In:** 19.1.4
+
+**SCIM++ Properties:**  - caseExact: true  - idcsSearchable: false  -
+multiValued: false  - mutability: readWrite  - required: false  -
+returned: default  - type: string  - uniqueness: none
+
+--relay-idp-param-mappings [complex type]
+
+Relay Param variable for Social IDP
+
+**Added In:** 2305190132
+
+**SCIM++ Properties:**  - idcsCompositeKey: [relayParamKey]  -
+idcsSearchable: true  - multiValued: true  - mutability: readWrite  -
+required: false  - returned: default  - type: complex  - uniqueness:
+none
+
+This option is a JSON list with items of type
+SocialIdentityProviderRelayIdpParamMappings.  For documentation on
+SocialIdentityProviderRelayIdpParamMappings please see our API
+reference: https://docs.cloud.oracle.com/api/#/en/identitydomains/v1/
+datatypes/SocialIdentityProviderRelayIdpParamMappings. This is a
+complex type whose value must be valid JSON. The value can be provided
+as a string on the command line or passed in as a file using the
+file://path/to/file syntax.
+
+The "--generate-param-json-input" option can be used to generate an
+example of the JSON which must be provided. We recommend storing this
+example in a file, modifying it as needed and then passing it back in
+via the file:// syntax.
+
+--resource-type-schema-version [text]
+
+An endpoint-specific schema version number to use in the Request.
+Allowed version values are Earliest Version or Latest Version as
+specified in each REST API endpoint description, or any sequential
+number inbetween. All schema attributes/body parameters are a part of
+version 1. After version 1, any attributes added or deprecated will be
+tagged with the version that they were added to or deprecated in. If
+no version is provided, the latest schema version is returned.
+
+--scope [complex type]
+
+Scope to request
+
+**SCIM++ Properties:**  - caseExact: true  - idcsSearchable: false  -
+multiValued: true  - mutability: readWrite  - required: false  -
+returned: default  - type: string  - uniqueness: none This is a
+complex type whose value must be valid JSON. The value can be provided
+as a string on the command line or passed in as a file using the
+file://path/to/file syntax.
+
+The "--generate-param-json-input" option can be used to generate an
+example of the JSON which must be provided. We recommend storing this
+example in a file, modifying it as needed and then passing it back in
+via the file:// syntax.
+
+--social-jit-provisioning-enabled [boolean]
+
+Whether Social JIT Provisioning is enabled
+
+**Added In:** 2307282043
+
+**SCIM++ Properties:**  - caseExact: true  - idcsSearchable: true  -
+multiValued: false  - mutability: readWrite  - required: false  -
+returned: default  - type: boolean  - uniqueness: none
+
+--status [text]
+
+Status
+
+**Added In:** 17.4.6
+
+**SCIM++ Properties:**  - caseExact: true  - idcsSearchable: true  -
+multiValued: false  - mutability: readWrite  - required: false  -
+returned: default  - type: string  - uniqueness: none
+
+Accepted values are:
+
+   created, deleted
+
+--tags [complex type]
+
+A list of tags on this resource.
+
+**SCIM++ Properties:**  - idcsCompositeKey: [key, value]  -
+idcsSearchable: true  - multiValued: true  - mutability: readWrite  -
+required: false  - returned: request  - type: complex  - uniqueness:
+none
+
+This option is a JSON list with items of type Tags.  For documentation
+on tags please see our API reference: https://docs.cloud.oracle.com/a
+pi/#/en/identitydomains/v1/datatypes/Tags. This is a complex type
+whose value must be valid JSON. The value can be provided as a string
+on the command line or passed in as a file using the
+file://path/to/file syntax.
+
+The "--generate-param-json-input" option can be used to generate an
+example of the JSON which must be provided. We recommend storing this
+example in a file, modifying it as needed and then passing it back in
+via the file:// syntax.
+
+--tenancy-ocid [text]
+
+OCI Tenant Id (ocid) in which the resource lives.
+
+**SCIM++ Properties:**  - caseExact: false  - idcsSearchable: false  -
+multiValued: false  - mutability: readOnly  - required: false  -
+returned: default  - type: string  - uniqueness: none
+
+
+Global Parameters
+=================
+
+Use "oci --help" for help on global parameters.
+
+"--auth-purpose", "--auth", "--cert-bundle", "--cli-auto-prompt", "--
+cli-rc-file", "--config-file", "--connection-timeout", "--debug", "--
+defaults-file", "--endpoint", "--generate-full-command-json-input", "
+--generate-param-json-input", "--help", "--latest-version", "--max-
+retries", "--no-retry", "--opc-client-request-id", "--opc-request-id",
+"--output", "--profile", "--proxy", "--query", "--raw-output", "--
+read-timeout", "--realm-specific-endpoint", "--region", "--release-
+info", "--request-id", "--version", "-?", "-d", "-h", "-i", "-v"
+
+
+Example using required parameter
+================================
+
+Copy and paste the following example into a JSON file, replacing the
+example parameters with your own.
+
+       oci identity-domains social-identity-provider create --generate-param-json-input schemas > schemas.json
+
+Copy the following CLI commands into a file named example.sh. Run the
+command by typing “bash example.sh” and replacing the example
+parameters with your own.
+
+Please note this sample will only work in the POSIX-compliant bash-
+like shell. You need to set up the OCI configuration and appropriate
+security policies before trying the examples.
+
+       export account_linking_enabled=<substitute-value-of-account_linking_enabled> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/identity-domains/social-identity-provider/create.html#cmdoption-account-linking-enabled
+       export consumer_key=<substitute-value-of-consumer_key> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/identity-domains/social-identity-provider/create.html#cmdoption-consumer-key
+       export consumer_secret=<substitute-value-of-consumer_secret> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/identity-domains/social-identity-provider/create.html#cmdoption-consumer-secret
+       export enabled=<substitute-value-of-enabled> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/identity-domains/social-identity-provider/create.html#cmdoption-enabled
+       export name=<substitute-value-of-name> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/identity-domains/social-identity-provider/create.html#cmdoption-name
+       export registration_enabled=<substitute-value-of-registration_enabled> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/identity-domains/social-identity-provider/create.html#cmdoption-registration-enabled
+       export service_provider_name=<substitute-value-of-service_provider_name> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/identity-domains/social-identity-provider/create.html#cmdoption-service-provider-name
+       export show_on_login=<substitute-value-of-show_on_login> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/identity-domains/social-identity-provider/create.html#cmdoption-show-on-login
+
+       oci identity-domains social-identity-provider create --account-linking-enabled $account_linking_enabled --consumer-key $consumer_key --consumer-secret $consumer_secret --enabled $enabled --name $name --registration-enabled $registration_enabled --schemas file://schemas.json --service-provider-name $service_provider_name --show-on-login $show_on_login

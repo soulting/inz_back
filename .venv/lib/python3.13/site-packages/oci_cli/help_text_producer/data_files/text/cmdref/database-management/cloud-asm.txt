@@ -1,0 +1,26 @@
+cloud-asm
+*********
+
+
+Description
+===========
+
+The details of a cloud ASM.
+
+
+Available Commands
+==================
+
+* get
+
+* get-cloud-asm-configuration
+
+* list
+
+* list-cloud-asm-disk-groups
+
+* list-cloud-asm-users
+
+* summarize-cloud-asm-metrics
+
+* update

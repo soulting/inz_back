@@ -1,0 +1,80 @@
+waf
+***
+
+
+Description
+===========
+
+CLI for the Web Application Firewall service. Use this CLI to manage
+regional Web App Firewalls and corresponding policies for protecting
+HTTP services.
+
+
+Available Commands
+==================
+
+* network-address-list
+
+  * change-compartment
+
+  * create-addresses-list
+
+  * create-vcn-addresses-list
+
+  * delete
+
+  * get
+
+  * list
+
+  * update-addresses-list
+
+  * update-vcn-addresses-list
+
+* protection-capability
+
+  * list
+
+  * list-protection-capability-group-tags
+
+* web-app-firewall
+
+  * change-compartment
+
+  * create-for-load-balancer
+
+  * delete
+
+  * get
+
+  * list
+
+  * update-for-load-balancer
+
+* web-app-firewall-policy
+
+  * change-compartment
+
+  * create
+
+  * delete
+
+  * get
+
+  * list
+
+  * update
+
+* work-request
+
+  * get
+
+  * list
+
+* work-request-error
+
+  * list
+
+* work-request-log
+
+  * list

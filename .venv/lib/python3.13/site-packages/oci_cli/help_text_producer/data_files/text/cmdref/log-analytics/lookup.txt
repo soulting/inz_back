@@ -1,0 +1,30 @@
+lookup
+******
+
+
+Description
+===========
+
+LogAnalyticsLookup
+
+
+Available Commands
+==================
+
+* append-data
+
+* change-compartment
+
+* delete
+
+* get
+
+* get-summary
+
+* list
+
+* register-lookup
+
+* update
+
+* update-data

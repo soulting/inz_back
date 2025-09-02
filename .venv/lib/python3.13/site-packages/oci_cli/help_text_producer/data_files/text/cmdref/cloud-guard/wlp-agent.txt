@@ -1,0 +1,28 @@
+wlp-agent
+*********
+
+
+Description
+===========
+
+Details of WLP agent. Example: *{“id”:
+“ocid1.wlpagent.oc1..exampleawwcufihrc62gpbcvbjizswgoj4w7rg5q4fwbg”,
+“compartmentId”: “ocid1.compartment.oc1..exampleawwcufihrc62gpbcvbjiz
+swgoj4w7rg5q4fwbg2fauxvlcxbtliaa”,           “agentVersion”: “1.0.11”,
+“certificateId”: “ocid1.certificate.oc1..exampleawwcufihrc62gpbcvbjiz
+swgoj4w7oj4w7rg5q4fwbg2fauxv”           “certificateSignedRequest”:
+“MIIGwjCCBaqgAwIBAgIVAK8hJCS/5Hu0dEMQ2ud”}*
+
+
+Available Commands
+==================
+
+* create
+
+* delete
+
+* get
+
+* list
+
+* update

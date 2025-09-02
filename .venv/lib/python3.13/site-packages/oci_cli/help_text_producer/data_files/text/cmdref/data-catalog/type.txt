@@ -1,0 +1,23 @@
+type
+****
+
+
+Description
+===========
+
+Full data catalog type definition. Fully defines a type of the data
+catalog. All types are statically defined in the system and are
+immutable. It isn’t possible to create new types or update existing
+types via the API.
+
+
+Available Commands
+==================
+
+* associate-custom-properties
+
+* disassociate-custom-properties
+
+* get
+
+* list

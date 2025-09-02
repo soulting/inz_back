@@ -1,0 +1,54 @@
+platform-configuration
+**********************
+
+
+Description
+===========
+
+Fleet Application Management Platform Configuration .
+
+
+Available Commands
+==================
+
+* change-compartment
+
+* create
+
+* create-platform-configuration-credential-config-category-details
+
+* create-platform-configuration-environment-config-category-details
+
+* create-platform-configuration-lifecycle-operation-config-category-
+  details
+
+* create-platform-configuration-patch-type-config-category-details
+
+* create-platform-configuration-product-config-category-details
+
+* create-platform-configuration-product-stack-config-category-details
+
+* create-platform-configuration-self-hosted-instance-config-category-
+  details
+
+* delete
+
+* get
+
+* update
+
+* update-platform-configuration-credential-config-category-details
+
+* update-platform-configuration-environment-config-category-details
+
+* update-platform-configuration-lifecycle-operation-config-category-
+  details
+
+* update-platform-configuration-patch-type-config-category-details
+
+* update-platform-configuration-product-config-category-details
+
+* update-platform-configuration-product-stack-config-category-details
+
+* update-platform-configuration-self-hosted-instance-config-category-
+  details

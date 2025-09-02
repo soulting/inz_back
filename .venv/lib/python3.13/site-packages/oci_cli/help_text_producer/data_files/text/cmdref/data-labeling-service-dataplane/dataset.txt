@@ -1,0 +1,17 @@
+dataset
+*******
+
+
+Description
+===========
+
+A dataset is a logical collection of records. The dataset contains all
+the information necessary to describe a record’s source, format, the
+type of annotations allowed for the record, and the labels allowed on
+annotations.
+
+
+Available Commands
+==================
+
+* get

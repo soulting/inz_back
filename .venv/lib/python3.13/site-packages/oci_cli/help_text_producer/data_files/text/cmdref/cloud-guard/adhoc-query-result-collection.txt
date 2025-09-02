@@ -1,0 +1,16 @@
+adhoc-query-result-collection
+*****************************
+
+
+Description
+===========
+
+Aggregated results for an adhoc query request
+
+
+Available Commands
+==================
+
+* get-adhoc-query-result-content
+
+* list-adhoc-query-results

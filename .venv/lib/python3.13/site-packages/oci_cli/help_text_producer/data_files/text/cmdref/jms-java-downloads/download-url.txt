@@ -1,0 +1,14 @@
+download-url
+************
+
+
+Description
+===========
+
+Download Url object for the Java artifact.
+
+
+Available Commands
+==================
+
+* generate-artifact

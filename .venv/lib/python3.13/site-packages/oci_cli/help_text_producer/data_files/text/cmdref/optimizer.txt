@@ -1,0 +1,101 @@
+optimizer
+*********
+
+
+Description
+===========
+
+Use the Cloud Advisor CLI to find potential inefficiencies in your
+tenancy and address them. Cloud Advisor can help you save money,
+improve performance, strengthen system resilience, and improve
+security. For more information, see Cloud Advisor.
+
+
+Available Commands
+==================
+
+* category
+
+  * get
+
+* category-summary
+
+  * list
+
+* enrollment-status
+
+  * get
+
+  * update
+
+* enrollment-status-summary
+
+  * list
+
+* history-summary
+
+  * list
+
+* profile
+
+  * create
+
+  * delete
+
+  * get
+
+  * update
+
+* profile-level-summary
+
+  * list-profile-levels
+
+* profile-summary
+
+  * list
+
+* queryable-field-summary
+
+  * list-resource-action-queryable-fields
+
+* recommendation
+
+  * bulk-apply
+
+  * get
+
+  * update
+
+* recommendation-strategy-summary
+
+  * list-recommendation-strategies
+
+* recommendation-summary
+
+  * list
+
+* resource-action
+
+  * get
+
+  * update
+
+* resource-action-summary
+
+  * filter-resource-actions
+
+  * list
+
+* work-request
+
+  * get
+
+  * list
+
+* work-request-error
+
+  * list
+
+* work-request-log-entry
+
+  * list

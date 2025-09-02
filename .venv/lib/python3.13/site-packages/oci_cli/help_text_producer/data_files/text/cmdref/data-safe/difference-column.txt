@@ -1,0 +1,20 @@
+difference-column
+*****************
+
+
+Description
+===========
+
+A SDM masking policy difference column. It can be one of the following
+three types: NEW: A new column in the sensitive data model that is not
+in the masking policy. DELETED: A column that is present in the
+masking policy but has been deleted from the sensitive data model.
+MODIFIED: A column that is present in the masking policy as well as
+the sensitive data model but some of its attributes have been
+modified.
+
+
+Available Commands
+==================
+
+* get

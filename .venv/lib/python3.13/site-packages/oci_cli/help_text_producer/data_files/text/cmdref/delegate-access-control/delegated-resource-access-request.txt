@@ -1,0 +1,49 @@
+delegated-resource-access-request
+*********************************
+
+
+Description
+===========
+
+A support operator raises Delegated Resource Access Request when they
+need access to any infrastructure resource governed by Delegation
+Control. The Delegated Resource Access Request identifies the target
+resource and the set of Service Provider Actions. Delegated Resource
+Access Request handling depends upon the Delegation Control that
+governs the target resource, and the set of Service Provider Actions
+listed for approval in the Delegated Resource Access Request. If all
+of the Service Provider Actions listed in the Delegated Resource
+Access Request are in the pre-approved list in the Delegation Control
+that governs the target resource, then the Delegated Resource Access
+Request is automatically approved. If not, then the Delegated Resource
+Access Request requires explicit approval from the approver group
+specified by the Delegation Control governing the target resource.
+
+You can approve or reject a Delegated Resource Access Request. You can
+also revoke the approval of an already approved Delegated Resource
+Access Request. While creating a Delegated Resource Access Request,
+the support operator specifies the duration of access. You have the
+option to approve the entire duration or reduce or even increase the
+time duration. A support operator can also request for an extension.
+The approval for such an extension is processed the same way the
+original Delegated Resource Access Request was processed.
+
+
+Available Commands
+==================
+
+* approve
+
+* get
+
+* list
+
+* list-delegated-resource-access-request-histories
+
+* list-service-provider-interactions
+
+* reject
+
+* revoke
+
+* service-provider-interaction-request

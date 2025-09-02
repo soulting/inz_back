@@ -1,0 +1,23 @@
+operations-insights-warehouse-users
+***********************************
+
+
+Description
+===========
+
+Logical grouping used for Operations Insights Warehouse User
+operations.
+
+
+Available Commands
+==================
+
+* create
+
+* delete
+
+* get
+
+* list
+
+* update

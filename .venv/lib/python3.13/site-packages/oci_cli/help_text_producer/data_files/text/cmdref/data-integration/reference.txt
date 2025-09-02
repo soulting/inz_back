@@ -1,0 +1,18 @@
+reference
+*********
+
+
+Description
+===========
+
+Reference contains application configuration information.
+
+
+Available Commands
+==================
+
+* get
+
+* list
+
+* update

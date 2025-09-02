@@ -1,0 +1,22 @@
+query
+*****
+
+
+Description
+===========
+
+Use the Application Performance Monitoring Trace Explorer CLI to query
+traces and associated spans in Trace Explorer. For more information,
+see Application Performance Monitoring.
+
+
+Available Commands
+==================
+
+* query-response
+
+  * run-query
+
+* quick-picks
+
+  * list

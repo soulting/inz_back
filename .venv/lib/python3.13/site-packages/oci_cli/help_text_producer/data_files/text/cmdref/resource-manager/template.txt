@@ -1,0 +1,32 @@
+template
+********
+
+
+Description
+===========
+
+The properties that define a template. A template is a pre-built
+Terraform configuration that provisions a set of resources used in a
+common scenario.
+
+
+Available Commands
+==================
+
+* change-compartment
+
+* create
+
+* delete
+
+* get
+
+* get-template-logo
+
+* get-template-tf-config
+
+* list
+
+* list-template-categories
+
+* update

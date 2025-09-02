@@ -1,0 +1,47 @@
+cloud-vm-cluster
+****************
+
+
+Description
+===========
+
+Details of the cloud VM cluster. Applies to Exadata Cloud Service
+instances only.
+
+
+Available Commands
+==================
+
+* add
+
+* change-cloud-vm-cluster-subscription
+
+* change-compartment
+
+* create
+
+* delete
+
+* get
+
+* get-exadata-iorm-config
+
+* get-update
+
+* get-update-history
+
+* list
+
+* list-update-histories
+
+* list-updates
+
+* register-cloud-vm-cluster-pkcs
+
+* remove
+
+* unregister-cloud-vm-cluster-pkcs
+
+* update
+
+* update-exadata-iorm-config

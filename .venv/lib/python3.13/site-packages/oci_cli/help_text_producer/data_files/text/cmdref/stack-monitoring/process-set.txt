@@ -1,0 +1,24 @@
+process-set
+***********
+
+
+Description
+===========
+
+The Process Set details.
+
+
+Available Commands
+==================
+
+* change-compartment
+
+* create
+
+* delete
+
+* get
+
+* list
+
+* update

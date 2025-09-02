@@ -1,0 +1,29 @@
+private-application
+*******************
+
+
+Description
+===========
+
+Full details of an application or a solution, which lives inside the
+tenancy and may be included into service catalogs.
+
+
+Available Commands
+==================
+
+* change-compartment
+
+* create
+
+* create-with-stack-package
+
+* delete
+
+* download-logo
+
+* get
+
+* list
+
+* update

@@ -1,0 +1,15 @@
+problem-aggregation
+*******************
+
+
+Description
+===========
+
+Provides aggregated information on counts of problems by specified
+parameters.
+
+
+Available Commands
+==================
+
+* request-summarized-problems

@@ -1,0 +1,14 @@
+trace
+*****
+
+
+Description
+===========
+
+Definition of a trace object.
+
+
+Available Commands
+==================
+
+* get

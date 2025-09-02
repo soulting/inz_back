@@ -1,0 +1,203 @@
+"summarize-analytics"
+*********************
+
+* Description
+
+* Usage
+
+* Required Parameters
+
+* Optional Parameters
+
+* Global Parameters
+
+* Example using required parameter
+
+
+Description
+===========
+
+Returns a list of user specified metrics for a collection of managed
+instances.
+
+
+Usage
+=====
+
+   oci os-management-hub managed-instance summarize-analytics [OPTIONS]
+
+
+Required Parameters
+===================
+
+--metric-names [text]
+
+A filter to return only metrics whose name matches the given metric
+names.
+
+Accepted values are:
+
+   DELETING_INSTANCE_COUNT, ERROR_INSTANCE_COUNT, INSTANCE_BUGFIX_ADVISORY_COUNT, INSTANCE_BUGFIX_UPDATES_COUNT, INSTANCE_SECURITY_ADVISORY_COUNT, INSTANCE_SECURITY_UPDATES_COUNT, INSTANCE_WITH_AVAILABLE_BUGFIX_UPDATES_COUNT, INSTANCE_WITH_AVAILABLE_SECURITY_UPDATES_COUNT, NEEDS_REBOOTING_INSTANCE_COUNT, NORMAL_INSTANCE_COUNT, ONBOARDING_INSTANCE_COUNT, REBOOTING_INSTANCE_COUNT, REGISTRATION_FAILED_INSTANCE_COUNT, TOTAL_INSTANCE_COUNT, UNREACHABLE_INSTANCE_COUNT, WARNING_INSTANCE_COUNT
+
+
+Optional Parameters
+===================
+
+--compartment-id, -c [text]
+
+The OCID of the compartment. This filter returns only resources
+contained within the specified compartment.
+
+--display-name [text]
+
+A filter to return resources that match the given display names.
+
+--display-name-contains [text]
+
+A filter to return resources that may partially match the given
+display name.
+
+--from-json [text]
+
+Provide input to this command as a JSON document from a file using the
+file://path-to/file syntax.
+
+The "--generate-full-command-json-input" option can be used to
+generate a sample json file to be used with this command option. The
+key names are pre-populated and match the command option names
+(converted to camelCase format, e.g. compartment-id –> compartmentId),
+while the values of the keys need to be populated by the user before
+using the sample file as an input to this command. For any command
+option that accepts multiple values, the value of the key can be a
+JSON array.
+
+Options can still be provided on the command line. If an option exists
+in both the JSON document and the command line then the command line
+specified value will be used.
+
+For examples on usage of this option, please see our “using CLI with
+advanced JSON options” link: https://docs.cloud.oracle.com/iaas/Conte
+nt/API/SDKDocs/cliusing.htm#AdvancedJSONOptions
+
+--group-id [text]
+
+The OCID of the managed instance group for which to list resources.
+
+--is-managed-by-alx [boolean]
+
+Indicates whether to list only resources managed by the Autonomous
+Linux service.
+
+--lifecycle-env-id [text]
+
+The OCID of the lifecycle environment.
+
+--limit [integer]
+
+For list pagination. The maximum number of results per page, or items
+to return in a paginated “List” call. For important details about how
+pagination works, see List Pagination.
+
+Example:
+
+   50
+
+--location [text]
+
+A filter to return only resources whose location matches the given
+value.
+
+Accepted values are:
+
+   AZURE, EC2, GCP, OCI_COMPUTE, ON_PREMISE
+
+--location-ne [text]
+
+A filter to return only resources whose location does not match the
+given value.
+
+Accepted values are:
+
+   AZURE, EC2, GCP, OCI_COMPUTE, ON_PREMISE
+
+--os-family [text]
+
+A filter to return only resources that match the given operating
+system family.
+
+Accepted values are:
+
+   ALL, ORACLE_LINUX_6, ORACLE_LINUX_7, ORACLE_LINUX_8, ORACLE_LINUX_9, WINDOWS_SERVER_2016, WINDOWS_SERVER_2019, WINDOWS_SERVER_2022
+
+--page [text]
+
+For list pagination. The value of the *opc-next-page* response header
+from the previous “List” call. For important details about how
+pagination works, see List Pagination.
+
+Example:
+
+   3
+
+--sort-by [text]
+
+The field to sort by. Only one sort order may be provided. The default
+is to sort in ascending order by metricName (previously name, which is
+now depricated). You can also sort by displayName (default is
+ascending order).
+
+Accepted values are:
+
+   displayName, metricName, name
+
+--sort-order [text]
+
+The sort order to use, either ‘ASC’ or ‘DESC’.
+
+Accepted values are:
+
+   ASC, DESC
+
+--stage-id [text]
+
+The OCID of the lifecycle stage for which to list resources.
+
+--status [text]
+
+A filter to return only managed instances whose status matches the
+status provided.
+
+Accepted values are:
+
+   DELETING, ERROR, NORMAL, ONBOARDING, REBOOTING, REGISTRATION_ERROR, UNREACHABLE, WARNING
+
+
+Global Parameters
+=================
+
+Use "oci --help" for help on global parameters.
+
+"--auth-purpose", "--auth", "--cert-bundle", "--cli-auto-prompt", "--
+cli-rc-file", "--config-file", "--connection-timeout", "--debug", "--
+defaults-file", "--endpoint", "--generate-full-command-json-input", "
+--generate-param-json-input", "--help", "--latest-version", "--max-
+retries", "--no-retry", "--opc-client-request-id", "--opc-request-id",
+"--output", "--profile", "--proxy", "--query", "--raw-output", "--
+read-timeout", "--realm-specific-endpoint", "--region", "--release-
+info", "--request-id", "--version", "-?", "-d", "-h", "-i", "-v"
+
+
+Example using required parameter
+================================
+
+Copy the following CLI commands into a file named example.sh. Run the
+command by typing “bash example.sh” and replacing the example
+parameters with your own.
+
+Please note this sample will only work in the POSIX-compliant bash-
+like shell. You need to set up the OCI configuration and appropriate
+security policies before trying the examples.
+
+       export metric_names=<substitute-value-of-metric_names> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/os-management-hub/managed-instance/summarize-analytics.html#cmdoption-metric-names
+
+       oci os-management-hub managed-instance summarize-analytics --metric-names $metric_names

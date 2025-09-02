@@ -1,0 +1,19 @@
+blocklist
+*********
+
+
+Description
+===========
+
+The blocklist record to prevent a target resource from certain
+operation with reason.
+
+
+Available Commands
+==================
+
+* create
+
+* delete
+
+* list

@@ -1,0 +1,22 @@
+usage-carbon-emissions-query
+****************************
+
+
+Description
+===========
+
+The carbon emissions usage saved query to filter and aggregate.
+
+
+Available Commands
+==================
+
+* create
+
+* delete
+
+* get
+
+* list
+
+* update

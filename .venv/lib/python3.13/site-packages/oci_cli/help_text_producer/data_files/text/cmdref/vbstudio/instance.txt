@@ -1,0 +1,22 @@
+instance
+********
+
+
+Description
+===========
+
+Visual Builder Studio service instance
+
+
+Available Commands
+==================
+
+* create
+
+* delete
+
+* get
+
+* list
+
+* update

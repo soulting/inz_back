@@ -1,0 +1,14 @@
+fsu-discovery-summary
+*********************
+
+
+Description
+===========
+
+Exadata Fleet Update Discovery Resource.
+
+
+Available Commands
+==================
+
+* list

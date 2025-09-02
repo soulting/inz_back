@@ -1,0 +1,14 @@
+listing-revision-attachment-collection
+**************************************
+
+
+Description
+===========
+
+Results of the listing attachments search. Contains attachment items.
+
+
+Available Commands
+==================
+
+* list-listing-revision-attachments

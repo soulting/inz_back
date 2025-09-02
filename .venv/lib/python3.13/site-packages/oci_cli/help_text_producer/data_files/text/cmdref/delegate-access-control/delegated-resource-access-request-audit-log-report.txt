@@ -1,0 +1,14 @@
+delegated-resource-access-request-audit-log-report
+**************************************************
+
+
+Description
+===========
+
+The audit log report details.
+
+
+Available Commands
+==================
+
+* get

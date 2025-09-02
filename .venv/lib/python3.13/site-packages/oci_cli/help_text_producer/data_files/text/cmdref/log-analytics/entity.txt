@@ -1,0 +1,34 @@
+entity
+******
+
+
+Description
+===========
+
+Description of a log analytics entity.
+
+
+Available Commands
+==================
+
+* add-associations
+
+* change-compartment
+
+* create
+
+* delete
+
+* get
+
+* list
+
+* list-associations
+
+* remove-associations
+
+* summary
+
+* update
+
+* upload-discovery-data

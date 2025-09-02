@@ -1,0 +1,24 @@
+ml-app
+******
+
+
+Description
+===========
+
+Resource representing a definition of an AI/ML use-case
+
+
+Available Commands
+==================
+
+* change-compartment
+
+* create
+
+* delete
+
+* get
+
+* list
+
+* update

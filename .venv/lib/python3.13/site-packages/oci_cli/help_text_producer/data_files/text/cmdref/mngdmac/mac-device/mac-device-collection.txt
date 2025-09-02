@@ -1,0 +1,15 @@
+mac-device-collection
+*********************
+
+
+Description
+===========
+
+Results of a MacDevice search. Contains both MacDeviceSummary items
+and other information, such as metadata.
+
+
+Available Commands
+==================
+
+* list-mac-devices

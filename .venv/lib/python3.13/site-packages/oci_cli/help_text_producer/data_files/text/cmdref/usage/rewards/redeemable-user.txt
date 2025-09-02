@@ -1,0 +1,16 @@
+redeemable-user
+***************
+
+
+Description
+===========
+
+The summary of a user that can redeem rewards.
+
+
+Available Commands
+==================
+
+* create
+
+* delete

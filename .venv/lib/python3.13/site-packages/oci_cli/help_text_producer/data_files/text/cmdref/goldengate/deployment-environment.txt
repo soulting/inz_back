@@ -1,0 +1,14 @@
+deployment-environment
+**********************
+
+
+Description
+===========
+
+The list of DeploymentEnvironmentDescriptor objects.
+
+
+Available Commands
+==================
+
+* list

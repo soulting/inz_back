@@ -1,0 +1,15 @@
+defined-mt
+**********
+
+
+Description
+===========
+
+Summary information about defined Monitoring Template for specified
+resourceType.
+
+
+Available Commands
+==================
+
+* list

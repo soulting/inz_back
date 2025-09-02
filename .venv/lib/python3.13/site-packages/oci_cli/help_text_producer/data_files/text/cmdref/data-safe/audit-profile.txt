@@ -1,0 +1,42 @@
+audit-profile
+*************
+
+
+Description
+===========
+
+The resource represents audit profile settings and audit
+configurations for the database target, and helps evaluate the initial
+audit data volume for configuring collection in Data Safe. The
+resource is also responsible for auto-discovery of audit trails in the
+database target during target’s registration.
+
+
+Available Commands
+==================
+
+* calculate-audit-volume-available
+
+* calculate-audit-volume-collected
+
+* change-compartment
+
+* change-retention
+
+* create
+
+* delete
+
+* discover-audit-trails
+
+* get
+
+* list
+
+* list-available-audit-volumes
+
+* list-collected-audit-volumes
+
+* list-target-overrides
+
+* update

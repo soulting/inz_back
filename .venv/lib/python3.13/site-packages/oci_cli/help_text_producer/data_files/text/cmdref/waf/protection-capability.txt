@@ -1,0 +1,17 @@
+protection-capability
+*********************
+
+
+Description
+===========
+
+References an OCI-managed protection capability. Checks if HTTP
+requests/responses are malicious.
+
+
+Available Commands
+==================
+
+* list
+
+* list-protection-capability-group-tags

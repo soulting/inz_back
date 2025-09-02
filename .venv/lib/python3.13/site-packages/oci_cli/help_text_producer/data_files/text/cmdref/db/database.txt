@@ -1,0 +1,93 @@
+database
+********
+
+
+Description
+===========
+
+An Oracle database on a bare metal or virtual machine DB system. For
+more information, see Bare Metal and Virtual Machine DB Systems. To
+use any of the API operations, you must be authorized in an IAM
+policy. If you’re not authorized, talk to an administrator. If you’re
+an administrator who needs to write policies to give users access, see
+Getting Started with Policies. **Warning:** Oracle recommends that you
+avoid using any confidential information when you supply string values
+using the API.
+
+
+Available Commands
+==================
+
+* change-encryption-key-location-azure-encryption-key-details
+
+* change-key-store-type
+
+* change-to-external-hsm-key-location
+
+* convert-to-new-pdb
+
+* convert-to-new-pdb-precheck
+
+* convert-to-pdb-sync
+
+* convert-to-pdb-sync-rollback
+
+* convert-to-standalone
+
+* create
+
+* create-database-create-stand-by-database-details
+
+* create-database-from-backup
+
+* create-from-backup
+
+* create-from-database
+
+* create-standby-database
+
+* delete
+
+* disable-database-management
+
+* enable-database-management
+
+* failover-data-guard
+
+* get
+
+* list
+
+* list-pdb-conversion-history
+
+* list-upgrade-history
+
+* migrate-vault-key
+
+* modify-database-management
+
+* patch
+
+* reinstate-data-guard
+
+* restore
+
+* rotate-vault-key
+
+* set-oci-db-key-version
+
+* switch-over-data-guard
+
+* update
+
+* update-data-guard
+
+* upgrade
+
+* upgrade-rollback
+
+* upgrade-with-database-software-image
+
+* upgrade-with-db-home
+
+* upgrade-with-db-version

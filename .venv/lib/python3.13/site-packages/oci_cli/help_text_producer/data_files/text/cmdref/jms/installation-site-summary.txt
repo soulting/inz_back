@@ -1,0 +1,19 @@
+installation-site-summary
+*************************
+
+
+Description
+===========
+
+Installation site of a Java Runtime. An installation site is a Java
+Runtime installed at a specific path on a managed instance.
+
+
+Available Commands
+==================
+
+* add
+
+* list-installation-sites
+
+* remove

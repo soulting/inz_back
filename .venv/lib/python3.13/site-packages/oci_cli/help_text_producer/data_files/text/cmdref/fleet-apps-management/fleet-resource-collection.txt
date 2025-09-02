@@ -1,0 +1,15 @@
+fleet-resource-collection
+*************************
+
+
+Description
+===========
+
+Results of a fleetResource search. Contains both FleetResourceSummary
+items and other information, such as metadata.
+
+
+Available Commands
+==================
+
+* list-fleet-resources

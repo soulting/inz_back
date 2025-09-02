@@ -1,0 +1,14 @@
+resource-profile-endpoint-summary
+*********************************
+
+
+Description
+===========
+
+Summary information for resource profile endpoints.
+
+
+Available Commands
+==================
+
+* list-resource-profile-endpoints

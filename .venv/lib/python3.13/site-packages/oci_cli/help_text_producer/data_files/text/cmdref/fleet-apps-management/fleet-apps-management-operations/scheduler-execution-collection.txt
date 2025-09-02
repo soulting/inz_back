@@ -1,0 +1,15 @@
+scheduler-execution-collection
+******************************
+
+
+Description
+===========
+
+Results of a schedulerExecution search. Contains
+SchedulerExecutionSummary items.
+
+
+Available Commands
+==================
+
+* list-scheduler-executions

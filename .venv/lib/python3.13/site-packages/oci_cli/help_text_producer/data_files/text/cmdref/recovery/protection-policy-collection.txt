@@ -1,0 +1,15 @@
+protection-policy-collection
+****************************
+
+
+Description
+===========
+
+Results of a Protection Policy search. Contains both Protection Policy
+Summary items and other information, such as metadata.
+
+
+Available Commands
+==================
+
+* list-protection-policies

@@ -5,9 +5,11 @@ import os
 
 import bcrypt
 from flask import Blueprint, request, jsonify, render_template
+
+from app.services.exceptions import EmailAlreadyTakenError
 from app.services.supabase_client import supabase
 from postgrest.exceptions import APIError
-from app.services.mail_service import send_activation_email, send_welcome_email
+from app.services.mail_service import send_activation_email, send_to_amanda
 
 auth_bp = Blueprint('auth', __name__)
 
@@ -26,7 +28,7 @@ def register():
         return jsonify({"error": "Email, password and name are required"}), 400
 
     try:
-        # Sprawdzenie, czy email lub name już istnieje
+
         existing_user = (
             supabase.table("users")
             .select("id, email, name")

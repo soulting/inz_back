@@ -1,0 +1,22 @@
+workload-mapping
+****************
+
+
+Description
+===========
+
+The properties that define an workloadMapping.
+
+
+Available Commands
+==================
+
+* create
+
+* delete
+
+* get
+
+* list
+
+* update

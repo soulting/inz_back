@@ -1,0 +1,22 @@
+entity-type
+***********
+
+
+Description
+===========
+
+Description of log analytics entity type.
+
+
+Available Commands
+==================
+
+* create
+
+* delete
+
+* get
+
+* list
+
+* update

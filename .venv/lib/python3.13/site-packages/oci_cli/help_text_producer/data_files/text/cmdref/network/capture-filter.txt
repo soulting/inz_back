@@ -1,0 +1,32 @@
+capture-filter
+**************
+
+
+Description
+===========
+
+A capture filter contains a set of *`rules <https://docs.cloud.oracle
+.com/api/#/en/iaas/latest/datatypes/CaptureFilterRuleDetails>`__*
+governing what traffic is mirrored for a *`VTAP
+<https://docs.cloud.oracle.com/api/#/en/iaas/latest/Vtap>`__* or
+captured for a *`VCN Flow Log
+<https://docs.cloud.oracle.com/iaas/Content/Network/Concepts/vcn-flow-
+logs.htm>`__*. The capture filter is created with no rules defined,
+and it must have at least one rule to mirror traffic for the VTAP or
+collect VCN flow logs.
+
+
+Available Commands
+==================
+
+* change-compartment
+
+* create
+
+* delete
+
+* get
+
+* list
+
+* update

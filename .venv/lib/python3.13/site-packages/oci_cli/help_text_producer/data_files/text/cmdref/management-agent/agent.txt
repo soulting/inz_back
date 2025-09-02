@@ -1,0 +1,49 @@
+agent
+*****
+
+
+Description
+===========
+
+The details of the Management Agent inventory including the associated
+plugins.
+
+
+Available Commands
+==================
+
+* create-prometheus-datasource
+
+* delete
+
+* delete-data-source
+
+* delete-named-credential
+
+* deploy-plugins
+
+* get
+
+* get-auto-upgradable-config
+
+* get-data-source
+
+* get-named-credential
+
+* list
+
+* list-availability-histories
+
+* list-data-sources
+
+* set-auto-upgradable-config
+
+* summarize-agent-counts
+
+* summarize-plugin-counts
+
+* update
+
+* update-named-credential
+
+* update-prometheus-datasource

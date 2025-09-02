@@ -1,0 +1,48 @@
+blockchain-platform
+*******************
+
+
+Description
+===========
+
+Blockchain Platform Instance Description.
+
+
+Available Commands
+==================
+
+* change-compartment
+
+* create
+
+* create-osn
+
+* create-peer
+
+* delete
+
+* delete-osn
+
+* delete-peer
+
+* get
+
+* list
+
+* list-blockchain-platform-patches
+
+* preview-scale
+
+* scale
+
+* start
+
+* stop
+
+* update
+
+* update-osn
+
+* update-peer
+
+* upgrade

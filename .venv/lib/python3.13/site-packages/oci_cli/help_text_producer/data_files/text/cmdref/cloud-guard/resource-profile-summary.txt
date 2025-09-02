@@ -1,0 +1,14 @@
+resource-profile-summary
+************************
+
+
+Description
+===========
+
+Summary information for a resource profile.
+
+
+Available Commands
+==================
+
+* list-resource-profiles

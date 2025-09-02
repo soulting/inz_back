@@ -1,0 +1,14 @@
+span
+****
+
+
+Description
+===========
+
+Definition of a span object.
+
+
+Available Commands
+==================
+
+* get

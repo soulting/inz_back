@@ -1,0 +1,14 @@
+notification-collection
+***********************
+
+
+Description
+===========
+
+Collection of notifications for new CVEs and CPUs.
+
+
+Available Commands
+==================
+
+* list-notifications

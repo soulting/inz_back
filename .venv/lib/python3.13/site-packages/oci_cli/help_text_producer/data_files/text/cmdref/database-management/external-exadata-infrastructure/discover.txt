@@ -1,0 +1,152 @@
+"discover"
+**********
+
+* Description
+
+* Usage
+
+* Required Parameters
+
+* Optional Parameters
+
+* Global Parameters
+
+* Example using required parameter
+
+
+Description
+===========
+
+Completes the Exadata system prechecking on the following:
+
+* Verifies if the DB systems are valid RAC DB systems or return 400
+  status code with NON_RAC_DATABASE_SYSTEM error code. - Verifies if
+  the ASM connector defined for each DB system or return 400 status
+  code with CONNECTOR_NOT_DEFINED error code. - Verifies if the agents
+  associated with ASM are valid and could be used for the Exadata
+  storage servers or return 400 status code with INVALID_AGENT error
+  code. - Verifies if it is an Exadata system or return 400 status
+  code with INVALID_EXADATA_SYSTEM error code.
+
+Starts the discovery process for the Exadata system infrastructure.
+The following resources/components are discovered
+
+* Exadata storage servers from each DB systems - Exadata storage grid
+  for all Exadata storage servers - Exadata infrastructure
+
+The same API covers both new discovery and rediscovery cases.   For
+the new discovery case, new managed resources/sub-resources are
+created or the existing ones are overridden.   For rediscovery case,
+the existing managed resources/sub-resources are checked to find out
+which ones should be added or which ones should be     removed based
+on the unique key defined for each resource/sub-resource.
+
+
+Usage
+=====
+
+   oci database-management external-exadata-infrastructure discover [OPTIONS]
+
+
+Required Parameters
+===================
+
+--compartment-id, -c [text]
+
+The OCID of the compartment.
+
+--db-system-ids [complex type]
+
+The list of the DB system identifiers. This is a complex type whose
+value must be valid JSON. The value can be provided as a string on the
+command line or passed in as a file using the file://path/to/file
+syntax.
+
+The "--generate-param-json-input" option can be used to generate an
+example of the JSON which must be provided. We recommend storing this
+example in a file, modifying it as needed and then passing it back in
+via the file:// syntax.
+
+--discovery-type [text]
+
+The type of discovery.
+
+Accepted values are:
+
+   NEW, OVERRIDE
+
+
+Optional Parameters
+===================
+
+--exadata-infrastructure-id [text]
+
+The OCID of the Exadata infrastructure. This is applicable for
+rediscovery only.
+
+--from-json [text]
+
+Provide input to this command as a JSON document from a file using the
+file://path-to/file syntax.
+
+The "--generate-full-command-json-input" option can be used to
+generate a sample json file to be used with this command option. The
+key names are pre-populated and match the command option names
+(converted to camelCase format, e.g. compartment-id –> compartmentId),
+while the values of the keys need to be populated by the user before
+using the sample file as an input to this command. For any command
+option that accepts multiple values, the value of the key can be a
+JSON array.
+
+Options can still be provided on the command line. If an option exists
+in both the JSON document and the command line then the command line
+specified value will be used.
+
+For examples on usage of this option, please see our “using CLI with
+advanced JSON options” link: https://docs.cloud.oracle.com/iaas/Conte
+nt/API/SDKDocs/cliusing.htm#AdvancedJSONOptions
+
+--if-match [text]
+
+For optimistic concurrency control. In the PUT or DELETE call for a
+resource, set the *if-match* parameter to the value of the etag from a
+previous GET or POST response for that resource. The resource will be
+updated or deleted only if the etag you provide matches the resource’s
+current etag value.
+
+
+Global Parameters
+=================
+
+Use "oci --help" for help on global parameters.
+
+"--auth-purpose", "--auth", "--cert-bundle", "--cli-auto-prompt", "--
+cli-rc-file", "--config-file", "--connection-timeout", "--debug", "--
+defaults-file", "--endpoint", "--generate-full-command-json-input", "
+--generate-param-json-input", "--help", "--latest-version", "--max-
+retries", "--no-retry", "--opc-client-request-id", "--opc-request-id",
+"--output", "--profile", "--proxy", "--query", "--raw-output", "--
+read-timeout", "--realm-specific-endpoint", "--region", "--release-
+info", "--request-id", "--version", "-?", "-d", "-h", "-i", "-v"
+
+
+Example using required parameter
+================================
+
+Copy and paste the following example into a JSON file, replacing the
+example parameters with your own.
+
+       oci database-management external-exadata-infrastructure discover --generate-param-json-input db-system-ids > db-system-ids.json
+
+Copy the following CLI commands into a file named example.sh. Run the
+command by typing “bash example.sh” and replacing the example
+parameters with your own.
+
+Please note this sample will only work in the POSIX-compliant bash-
+like shell. You need to set up the OCI configuration and appropriate
+security policies before trying the examples.
+
+       export compartment_id=<substitute-value-of-compartment_id> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/database-management/external-exadata-infrastructure/discover.html#cmdoption-compartment-id
+       export discovery_type=<substitute-value-of-discovery_type> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/database-management/external-exadata-infrastructure/discover.html#cmdoption-discovery-type
+
+       oci database-management external-exadata-infrastructure discover --compartment-id $compartment_id --db-system-ids file://db-system-ids.json --discovery-type $discovery_type

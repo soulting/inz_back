@@ -1,0 +1,17 @@
+inference-result
+****************
+
+
+Description
+===========
+
+A model used in x-related-resource for grouping actions with no
+returned body.
+
+
+Available Commands
+==================
+
+* predict
+
+* predict-with-response-stream

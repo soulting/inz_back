@@ -1,0 +1,16 @@
+my-pending-approval
+*******************
+
+
+Description
+===========
+
+Schema for MyPendingApproval and MyCompletedApproval
+
+
+Available Commands
+==================
+
+* get
+
+* patch

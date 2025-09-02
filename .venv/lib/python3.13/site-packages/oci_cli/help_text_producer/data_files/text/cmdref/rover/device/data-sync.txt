@@ -1,0 +1,34 @@
+data-sync
+*********
+
+
+Description
+===========
+
+Data Sync Service CLI.
+
+
+Available Commands
+==================
+
+* task
+
+  * cancel
+
+  * get
+
+  * list
+
+  * start
+
+* task-definition
+
+  * create
+
+  * delete
+
+  * get
+
+  * list
+
+  * update

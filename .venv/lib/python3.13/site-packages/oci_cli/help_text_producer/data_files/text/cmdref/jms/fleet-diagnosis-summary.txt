@@ -1,0 +1,14 @@
+fleet-diagnosis-summary
+***********************
+
+
+Description
+===========
+
+Diagnosis of a resource needed by the fleet.
+
+
+Available Commands
+==================
+
+* list-fleet-diagnoses

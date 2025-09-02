@@ -1,0 +1,71 @@
+data-labeling-service-dataplane
+*******************************
+
+
+Description
+===========
+
+Use Data Labeling CLI to create Annotations on Images, Texts &
+Documents, and generate snapshots.
+
+
+Available Commands
+==================
+
+* annotation
+
+  * create
+
+  * delete
+
+  * get
+
+  * update
+
+* annotation-analytics-aggregation-collection
+
+  * summarize-annotation-analytics
+
+* annotation-collection
+
+  * list-annotations
+
+* dataset
+
+  * get
+
+* record
+
+  * create
+
+  * create-record-create-object-storage-source-details
+
+  * create-record-document-metadata
+
+  * create-record-image-metadata
+
+  * create-record-text-metadata
+
+  * delete
+
+  * get
+
+  * get-record-content
+
+  * get-record-preview-content
+
+  * update
+
+  * update-record-document-metadata
+
+  * update-record-image-metadata
+
+  * update-record-text-metadata
+
+* record-analytics-aggregation-collection
+
+  * summarize-record-analytics
+
+* record-collection
+
+  * list-records

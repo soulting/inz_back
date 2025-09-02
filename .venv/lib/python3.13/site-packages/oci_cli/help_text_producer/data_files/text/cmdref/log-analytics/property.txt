@@ -1,0 +1,16 @@
+property
+********
+
+
+Description
+===========
+
+A property represented as a name-value pair.
+
+
+Available Commands
+==================
+
+* list-effective-properties
+
+* list-properties-metadata

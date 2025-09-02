@@ -1,0 +1,16 @@
+historical-metric
+*****************
+
+
+Description
+===========
+
+Metric details.
+
+
+Available Commands
+==================
+
+* list
+
+* submit

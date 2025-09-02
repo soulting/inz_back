@@ -1,0 +1,14 @@
+default-configuration
+*********************
+
+
+Description
+===========
+
+Default configurations for PostgreSQL database systems.
+
+
+Available Commands
+==================
+
+* get

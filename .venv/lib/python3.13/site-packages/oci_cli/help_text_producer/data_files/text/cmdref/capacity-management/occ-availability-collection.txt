@@ -1,0 +1,14 @@
+occ-availability-collection
+***************************
+
+
+Description
+===========
+
+A list of capacity constraints.
+
+
+Available Commands
+==================
+
+* list

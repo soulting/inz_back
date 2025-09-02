@@ -1,0 +1,30 @@
+dedicated-ai-cluster
+********************
+
+
+Description
+===========
+
+Dedicated AI clusters are compute resources that you can use for fine-
+tuning custom models or for hosting endpoints for custom models. The
+clusters are dedicated to your models and not shared with users in
+other tenancies.
+
+To use any of the API operations, you must be authorized in an IAM
+policy. If you’re not authorized, talk to an administrator who gives
+OCI resource access to users. See Getting Started with Policies and
+Getting Access to Generative AI Resources.
+
+
+Available Commands
+==================
+
+* change-compartment
+
+* create
+
+* delete
+
+* get
+
+* update

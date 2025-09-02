@@ -1,0 +1,14 @@
+resource-port-collection
+************************
+
+
+Description
+===========
+
+List of CloudGuardResourcePortSummary.
+
+
+Available Commands
+==================
+
+* list-resource-ports

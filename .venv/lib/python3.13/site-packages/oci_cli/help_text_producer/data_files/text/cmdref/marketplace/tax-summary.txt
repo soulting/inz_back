@@ -1,0 +1,15 @@
+tax-summary
+***********
+
+
+Description
+===========
+
+Tax implication that current tenant may be eligible while using
+specific listing
+
+
+Available Commands
+==================
+
+* list-taxes

@@ -1,0 +1,19 @@
+export-set
+**********
+
+
+Description
+===========
+
+A set of file systems to export through one or more mount targets.
+Composed of zero or more export resources.
+
+
+Available Commands
+==================
+
+* get
+
+* list
+
+* update

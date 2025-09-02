@@ -1,0 +1,46 @@
+lfs
+***
+
+
+Description
+===========
+
+Use the File Storage with Lustre CLI to manage Lustre file systems and
+related resources. For more information, see [File Storage with
+Lustre].
+
+
+Available Commands
+==================
+
+* lustre-file-system
+
+  * change-compartment
+
+  * create
+
+  * delete
+
+  * get
+
+  * update
+
+* lustre-file-system-collection
+
+  * list-lustre-file-systems
+
+* work-request
+
+  * cancel
+
+  * get
+
+  * list
+
+* work-request-error
+
+  * list
+
+* work-request-log-entry
+
+  * list-work-request-logs

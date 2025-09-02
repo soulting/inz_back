@@ -1,0 +1,14 @@
+fsu-action-summary
+******************
+
+
+Description
+===========
+
+List of FsuActionSummary objects.
+
+
+Available Commands
+==================
+
+* list

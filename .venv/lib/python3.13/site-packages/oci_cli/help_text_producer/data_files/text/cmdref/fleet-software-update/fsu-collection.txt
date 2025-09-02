@@ -1,0 +1,34 @@
+fsu-collection
+**************
+
+
+Description
+===========
+
+Exadata Fleet Update Collection Resource.
+
+
+Available Commands
+==================
+
+* add-targets
+
+* change-compartment
+
+* create
+
+* create-db
+
+* create-gi
+
+* delete
+
+* delete-fsu-collection-target
+
+* get
+
+* remove
+
+* remove-targets
+
+* update

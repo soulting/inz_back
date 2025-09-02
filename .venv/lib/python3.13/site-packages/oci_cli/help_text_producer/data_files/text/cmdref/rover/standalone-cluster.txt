@@ -1,0 +1,50 @@
+standalone-cluster
+******************
+
+
+Description
+===========
+
+Description of RoverCluster.
+
+
+Available Commands
+==================
+
+* add-workload
+
+* change-compartment
+
+* create
+
+* delete
+
+* delete-workload
+
+* get-certificate
+
+* list
+
+* list-workloads
+
+* request-approval
+
+* rover-bundle
+
+  * copy-to-customer
+
+  * get-status
+
+* rover-bundle-request
+
+  * list
+
+* rover-bundle-version
+
+  * get
+
+* set-secrets
+
+* show
+
+* update

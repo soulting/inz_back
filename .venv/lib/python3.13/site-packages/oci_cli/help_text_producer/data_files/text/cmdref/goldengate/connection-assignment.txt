@@ -1,0 +1,24 @@
+connection-assignment
+*********************
+
+
+Description
+===========
+
+Represents the metadata description of a connection assignment. Before
+you can use a connection as a GoldenGate source or target, you must
+assign it to a deployment.
+
+
+Available Commands
+==================
+
+* create
+
+* delete
+
+* get
+
+* list
+
+* test

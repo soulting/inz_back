@@ -1,0 +1,124 @@
+"get-file-diff"
+***************
+
+* Description
+
+* Usage
+
+* Required Parameters
+
+* Optional Parameters
+
+* Global Parameters
+
+* Example using required parameter
+
+
+Description
+===========
+
+Gets the line-by-line difference between file on different commits.
+This API will be deprecated on Wed, 29 Mar 2023 01:00:00 GMT as it
+does not get recognized when filePath has ‘/’. This will be replaced
+by “/repositories/{repositoryId}/file/diffs”
+
+
+Usage
+=====
+
+   oci devops repository get-file-diff [OPTIONS]
+
+
+Required Parameters
+===================
+
+--base-version [text]
+
+The branch to compare changes against.
+
+--file-path [text]
+
+Path to a file within a repository.
+
+--repository-id [text]
+
+Unique repository identifier.
+
+--target-version [text]
+
+The branch where changes are coming from.
+
+
+Optional Parameters
+===================
+
+--from-json [text]
+
+Provide input to this command as a JSON document from a file using the
+file://path-to/file syntax.
+
+The "--generate-full-command-json-input" option can be used to
+generate a sample json file to be used with this command option. The
+key names are pre-populated and match the command option names
+(converted to camelCase format, e.g. compartment-id –> compartmentId),
+while the values of the keys need to be populated by the user before
+using the sample file as an input to this command. For any command
+option that accepts multiple values, the value of the key can be a
+JSON array.
+
+Options can still be provided on the command line. If an option exists
+in both the JSON document and the command line then the command line
+specified value will be used.
+
+For examples on usage of this option, please see our “using CLI with
+advanced JSON options” link: https://docs.cloud.oracle.com/iaas/Conte
+nt/API/SDKDocs/cliusing.htm#AdvancedJSONOptions
+
+--is-comparison-from-merge-base [boolean]
+
+Boolean to indicate whether to use merge base or most recent revision.
+
+
+Global Parameters
+=================
+
+Use "oci --help" for help on global parameters.
+
+"--auth-purpose", "--auth", "--cert-bundle", "--cli-auto-prompt", "--
+cli-rc-file", "--config-file", "--connection-timeout", "--debug", "--
+defaults-file", "--endpoint", "--generate-full-command-json-input", "
+--generate-param-json-input", "--help", "--latest-version", "--max-
+retries", "--no-retry", "--opc-client-request-id", "--opc-request-id",
+"--output", "--profile", "--proxy", "--query", "--raw-output", "--
+read-timeout", "--realm-specific-endpoint", "--region", "--release-
+info", "--request-id", "--version", "-?", "-d", "-h", "-i", "-v"
+
+
+Example using required parameter
+================================
+
+Copy and paste the following example into a JSON file, replacing the
+example parameters with your own.
+
+       oci devops project create --generate-param-json-input notification-config > notification-config.json
+
+Copy the following CLI commands into a file named example.sh. Run the
+command by typing “bash example.sh” and replacing the example
+parameters with your own.
+
+Please note this sample will only work in the POSIX-compliant bash-
+like shell. You need to set up the OCI configuration and appropriate
+security policies before trying the examples.
+
+       export compartment_id=<substitute-value-of-compartment_id> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/devops/project/create.html#cmdoption-compartment-id
+       export name=<substitute-value-of-name> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/devops/project/create.html#cmdoption-name
+       export repository_type=<substitute-value-of-repository_type> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/devops/repository/create.html#cmdoption-repository-type
+       export base_version=<substitute-value-of-base_version> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/devops/repository/get-file-diff.html#cmdoption-base-version
+       export file_path=<substitute-value-of-file_path> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/devops/repository/get-file-diff.html#cmdoption-file-path
+       export target_version=<substitute-value-of-target_version> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/devops/repository/get-file-diff.html#cmdoption-target-version
+
+       project_id=$(oci devops project create --compartment-id $compartment_id --name $name --notification-config file://notification-config.json --query data.id --raw-output)
+
+       repository_id=$(oci devops repository create --name $name --project-id $project_id --repository-type $repository_type --query data.id --raw-output)
+
+       oci devops repository get-file-diff --base-version $base_version --file-path $file_path --repository-id $repository_id --target-version $target_version

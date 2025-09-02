@@ -1,0 +1,22 @@
+custom-property
+***************
+
+
+Description
+===========
+
+Custom Property Definition
+
+
+Available Commands
+==================
+
+* create
+
+* delete
+
+* get
+
+* list
+
+* update

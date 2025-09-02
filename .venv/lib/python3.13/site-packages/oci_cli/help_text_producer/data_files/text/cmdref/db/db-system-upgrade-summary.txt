@@ -1,0 +1,15 @@
+db-system-upgrade-summary
+*************************
+
+
+Description
+===========
+
+It describes the various upgrade properties such as component,
+osversion, giversion for any VM DB system.
+
+
+Available Commands
+==================
+
+* list-db-system-upgrades

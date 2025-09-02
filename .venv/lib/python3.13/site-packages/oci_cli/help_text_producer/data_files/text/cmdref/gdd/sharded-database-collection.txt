@@ -1,0 +1,14 @@
+sharded-database-collection
+***************************
+
+
+Description
+===========
+
+Collection of sharded databases.
+
+
+Available Commands
+==================
+
+* list-sharded-databases

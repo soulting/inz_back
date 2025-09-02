@@ -1,0 +1,15 @@
+dedicated-vantage-point-collection
+**********************************
+
+
+Description
+===========
+
+The results of a dedicated vantage point search, which contains
+DedicatedVantagePointSummary items and other data in an APM domain.
+
+
+Available Commands
+==================
+
+* list-dedicated-vantage-points

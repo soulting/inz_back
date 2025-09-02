@@ -1,0 +1,15 @@
+task-record-collection
+**********************
+
+
+Description
+===========
+
+Results of a task record search. Contains boh TaskRecordSummary items
+and other information, such as metadata.
+
+
+Available Commands
+==================
+
+* list-task-records

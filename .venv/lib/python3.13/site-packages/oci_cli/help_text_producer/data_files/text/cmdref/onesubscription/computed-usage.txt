@@ -1,0 +1,22 @@
+computed-usage
+**************
+
+
+Description
+===========
+
+OneSubscription CLI
+
+
+Available Commands
+==================
+
+* aggregated-computed-usage-summary
+
+  * list-aggregated-computed-usages
+
+* computed-usage
+
+  * get
+
+  * list

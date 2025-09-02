@@ -1,0 +1,24 @@
+publication
+***********
+
+
+Description
+===========
+
+The model for an Oracle Cloud Infrastructure Marketplace publication.
+
+
+Available Commands
+==================
+
+* change-compartment
+
+* create
+
+* create-publication-create-image-publication-package
+
+* delete
+
+* get
+
+* update

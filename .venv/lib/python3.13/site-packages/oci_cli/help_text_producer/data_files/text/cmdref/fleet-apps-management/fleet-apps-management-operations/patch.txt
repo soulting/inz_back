@@ -1,0 +1,30 @@
+patch
+*****
+
+
+Description
+===========
+
+Patch metadata for Custom and Oracle patches.
+
+
+Available Commands
+==================
+
+* change-compartment
+
+* create
+
+* create-patch-generic-artifact-details
+
+* create-patch-platform-specific-artifact-details
+
+* delete
+
+* get
+
+* update
+
+* update-patch-generic-artifact-details
+
+* update-patch-platform-specific-artifact-details

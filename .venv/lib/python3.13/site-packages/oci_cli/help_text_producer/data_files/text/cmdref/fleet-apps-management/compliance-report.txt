@@ -1,0 +1,14 @@
+compliance-report
+*****************
+
+
+Description
+===========
+
+Compliance details for a fleet in Fleet Application Management.
+
+
+Available Commands
+==================
+
+* get

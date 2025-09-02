@@ -1,0 +1,51 @@
+resource-scheduler
+******************
+
+
+Description
+===========
+
+Use the Resource scheduler CLI to manage schedules, to perform actions
+on a collection of resources.
+
+
+Available Commands
+==================
+
+* resource-type-collection
+
+  * list-resource-types
+
+* schedule
+
+  * activate
+
+  * change-compartment
+
+  * create
+
+  * deactivate
+
+  * delete
+
+  * get
+
+  * list
+
+  * update
+
+* work-request
+
+  * cancel
+
+  * get
+
+  * list
+
+* work-request-error
+
+  * list
+
+* work-request-log-entry
+
+  * list-work-request-logs

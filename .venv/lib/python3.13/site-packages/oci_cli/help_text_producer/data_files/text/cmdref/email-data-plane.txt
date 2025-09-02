@@ -1,0 +1,22 @@
+email-data-plane
+****************
+
+
+Description
+===========
+
+Use the Email Delivery CLI to send high-volume and application-
+generated emails. For more information, see Overview of the Email
+Delivery Service.
+
+
+Available Commands
+==================
+
+* email-raw-submitted-response
+
+  * submit-raw-email
+
+* email-submitted-response
+
+  * submit-email

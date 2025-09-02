@@ -1,0 +1,28 @@
+fleet-apps-management-work-request
+**********************************
+
+
+Description
+===========
+
+Fleet Application Management provides a centralized platform to help
+you automate resource management tasks, validate patch compliance, and
+enhance operational efficiency across an enterprise.
+
+
+Available Commands
+==================
+
+* work-request
+
+  * get
+
+  * list
+
+* work-request-error
+
+  * list
+
+* work-request-log-entry
+
+  * list-work-request-logs

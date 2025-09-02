@@ -1,0 +1,17 @@
+access-requests
+***************
+
+
+Description
+===========
+
+Results of access request search. Contains both AccessRequestSummary
+items and other information, such as metadata.
+
+
+Available Commands
+==================
+
+* export-access-requests
+
+* list

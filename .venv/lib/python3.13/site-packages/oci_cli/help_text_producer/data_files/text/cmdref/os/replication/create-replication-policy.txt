@@ -1,0 +1,210 @@
+"create-replication-policy"
+***************************
+
+* Description
+
+* Usage
+
+* Required Parameters
+
+* Optional Parameters
+
+* Global Parameters
+
+* Example using required parameter
+
+* Other Examples
+
+
+Description
+===========
+
+Creates a replication policy for the specified bucket.
+
+
+Usage
+=====
+
+   oci os replication create-replication-policy [OPTIONS]
+
+
+Required Parameters
+===================
+
+--bucket-name, --bucket, -bn [text]
+
+The name of the bucket. Avoid entering confidential information.
+Example: *my-new-bucket1*
+
+--destination-bucket [text]
+
+The bucket to replicate to in the destination region. Replication
+policy creation does not automatically create a destination bucket.
+Create the destination bucket before creating the policy.
+
+--destination-region [text]
+
+The destination region to replicate to, for example “us-ashburn-1”.
+
+--name [text]
+
+The name of the policy. Avoid entering confidential information.
+
+
+Optional Parameters
+===================
+
+--from-json [text]
+
+Provide input to this command as a JSON document from a file using the
+file://path-to/file syntax.
+
+The "--generate-full-command-json-input" option can be used to
+generate a sample json file to be used with this command option. The
+key names are pre-populated and match the command option names
+(converted to camelCase format, e.g. compartment-id –> compartmentId),
+while the values of the keys need to be populated by the user before
+using the sample file as an input to this command. For any command
+option that accepts multiple values, the value of the key can be a
+JSON array.
+
+Options can still be provided on the command line. If an option exists
+in both the JSON document and the command line then the command line
+specified value will be used.
+
+For examples on usage of this option, please see our “using CLI with
+advanced JSON options” link: https://docs.cloud.oracle.com/iaas/Conte
+nt/API/SDKDocs/cliusing.htm#AdvancedJSONOptions
+
+--namespace-name, --namespace, -ns [text]
+
+The Object Storage namespace used for the request. If not provided,
+this parameter will be obtained internally using a call to ‘oci os ns
+get’
+
+
+Global Parameters
+=================
+
+Use "oci --help" for help on global parameters.
+
+"--auth-purpose", "--auth", "--cert-bundle", "--cli-auto-prompt", "--
+cli-rc-file", "--config-file", "--connection-timeout", "--debug", "--
+defaults-file", "--endpoint", "--generate-full-command-json-input", "
+--generate-param-json-input", "--help", "--latest-version", "--max-
+retries", "--no-retry", "--opc-client-request-id", "--opc-request-id",
+"--output", "--profile", "--proxy", "--query", "--raw-output", "--
+read-timeout", "--realm-specific-endpoint", "--region", "--release-
+info", "--request-id", "--version", "-?", "-d", "-h", "-i", "-v"
+
+
+Example using required parameter
+================================
+
+Copy the following CLI commands into a file named example.sh. Run the
+command by typing “bash example.sh” and replacing the example
+parameters with your own.
+
+Please note this sample will only work in the POSIX-compliant bash-
+like shell. You need to set up the OCI configuration and appropriate
+security policies before trying the examples.
+
+       export bucket_name=<substitute-value-of-bucket_name> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/os/replication/create-replication-policy.html#cmdoption-bucket-name
+       export destination_bucket=<substitute-value-of-destination_bucket> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/os/replication/create-replication-policy.html#cmdoption-destination-bucket
+       export destination_region=<substitute-value-of-destination_region> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/os/replication/create-replication-policy.html#cmdoption-destination-region
+       export name=<substitute-value-of-name> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/os/replication/create-replication-policy.html#cmdoption-name
+
+       oci os replication create-replication-policy --bucket-name $bucket_name --destination-bucket $destination_bucket --destination-region $destination_region --name $name
+
+
+Other Examples
+==============
+
+
+Description
+-----------
+
+Creates a replication policy for the specified bucket.
+
+
+Command
+-------
+
+    oci os replication create-replication-policy -bn bucket-client --destination-region us-phoenix-1 --destination-bucket cli-test --name replication-policy-1
+
+
+Output
+------
+
+   {
+    "data": {
+         "destination-bucket-name": "cli-test",
+         "destination-region-name": "us-phoenix-1",
+         "id": "dd3052ce-aac4-4fd4-9604-7a944ca11f02",
+         "name": "replication-policy-1",
+         "status": "ACTIVE",
+         "status-message": "The policy is active.",
+         "time-created": "2022-12-22T08:12:14+00:00",
+         "time-last-sync": null
+    }
+   }
+
+
+Description
+-----------
+
+Creates a replication policy for the specified bucket in specified
+namespace.
+
+
+Command
+-------
+
+    oci os replication create-replication-policy -bn bucket-client --destination-region us-phoenix-1 --destination-bucket cli-test-2 --name replication-policy-2 -ns bmcostests
+
+
+Output
+------
+
+   {
+    "data": {
+         "destination-bucket-name": "cli-test",
+         "destination-region-name": "us-phoenix-1",
+         "id": "dd3052ce-aac4-4fd4-9604-7a944ca11f02",
+         "name": "replication-policy-1",
+         "status": "ACTIVE",
+         "status-message": "The policy is active.",
+         "time-created": "2022-12-22T08:12:14+00:00",
+         "time-last-sync": null
+    }
+   }
+
+
+Description
+-----------
+
+Creates a replication policy for the specified bucket with specified
+name.
+
+
+Command
+-------
+
+    oci os replication create-replication-policy  --destination-region us-phoenix-1 --destination-bucket cli-test --from-json '{"bucket":"bucket-client","name":"replication-policy","namespace":"bmcostests"}'
+
+
+Output
+------
+
+   {
+    "data": {
+         "destination-bucket-name": "cli-test",
+         "destination-region-name": "us-phoenix-1",
+         "id": "629fc277-3010-4fc4-bce1-72ca2f812c5b",
+         "name": "replication-policy",
+         "status": "ACTIVE",
+         "status-message": "The policy is active.",
+         "time-created": "2022-12-22T08:24:28+00:00",
+         "time-last-sync": null
+    }
+   }

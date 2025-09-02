@@ -1,0 +1,20 @@
+external-cluster
+****************
+
+
+Description
+===========
+
+The details of an external cluster.
+
+
+Available Commands
+==================
+
+* get
+
+* list
+
+* summarize-external-cluster-metrics
+
+* update

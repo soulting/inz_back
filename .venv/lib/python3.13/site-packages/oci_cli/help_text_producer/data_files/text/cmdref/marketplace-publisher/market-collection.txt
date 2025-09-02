@@ -1,0 +1,14 @@
+market-collection
+*****************
+
+
+Description
+===========
+
+Results of a market search. Contains the market items.
+
+
+Available Commands
+==================
+
+* list-markets

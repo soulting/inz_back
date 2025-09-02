@@ -1,0 +1,16 @@
+notification-setting
+********************
+
+
+Description
+===========
+
+Notification resource.
+
+
+Available Commands
+==================
+
+* get
+
+* put

@@ -1,0 +1,42 @@
+ccc
+***
+
+
+Description
+===========
+
+Use the Compute Cloud@Customer CLI to manage Compute Cloud@Customer
+infrastructures and upgrade schedules. For more information see
+Compute Cloud@Customer documentation.
+
+
+Available Commands
+==================
+
+* infrastructure
+
+  * change-compartment
+
+  * create
+
+  * delete
+
+  * get
+
+  * list
+
+  * update
+
+* upgrade-schedule
+
+  * change-compartment
+
+  * create
+
+  * delete
+
+  * get
+
+  * list
+
+  * update

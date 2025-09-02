@@ -1,0 +1,135 @@
+ce
+**
+
+
+Description
+===========
+
+CLI for the Kubernetes Engine service (also known as the Container
+Engine for Kubernetes service). Use this CLI to build, deploy, and
+manage cloud-native applications. For more information, see Overview
+of Kubernetes Engine.
+
+
+Available Commands
+==================
+
+* addon-option
+
+  * list
+
+* cluster
+
+  * cluster-migrate-to-native-vcn
+
+  * complete-credential-rotation
+
+  * create
+
+  * create-kubeconfig
+
+  * delete
+
+  * disable-addon
+
+  * generate-token
+
+  * get
+
+  * get-addon
+
+  * install-addon
+
+  * list
+
+  * list-addons
+
+  * reboot-cluster-node
+
+  * replace-boot-volume-cluster-node
+
+  * start-credential-rotation
+
+  * update
+
+  * update-addon
+
+  * update-endpoint-config
+
+* cluster-migrate-to-native-vcn-status
+
+  * get
+
+* cluster-options
+
+  * get
+
+* credential-rotation-status
+
+  * get
+
+* node-pool
+
+  * create
+
+  * delete
+
+  * delete-node
+
+  * get
+
+  * list
+
+  * update
+
+* node-pool-options
+
+  * get
+
+* pod-shape
+
+  * list
+
+* virtual-node-pool
+
+  * create
+
+  * delete
+
+  * get
+
+  * get-virtual-node
+
+  * list
+
+  * list-virtual-nodes
+
+  * update
+
+* work-request
+
+  * delete
+
+  * get
+
+  * list
+
+* work-request-error
+
+  * list
+
+* work-request-log-entry
+
+  * list
+
+* workload-mapping
+
+  * create
+
+  * delete
+
+  * get
+
+  * list
+
+  * update

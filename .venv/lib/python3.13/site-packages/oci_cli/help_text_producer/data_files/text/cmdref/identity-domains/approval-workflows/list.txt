@@ -1,0 +1,189 @@
+"list"
+******
+
+* Description
+
+* Usage
+
+* Optional Parameters
+
+* Global Parameters
+
+* Example using required parameter
+
+
+Description
+===========
+
+Search ApprovalWorkflow
+
+The top level –endpoint parameter must be supplied for this operation.
+
+
+Usage
+=====
+
+   oci identity-domains approval-workflows list [OPTIONS]
+
+
+Optional Parameters
+===================
+
+--all
+
+Fetches all pages of results. If you provide this option, then you
+cannot provide the "--limit" option.
+
+--attribute-sets [text]
+
+A multi-valued list of strings indicating the return type of attribute
+definition. The specified set of attributes can be fetched by the
+return type of the attribute. One or more values can be given together
+to fetch more than one group of attributes. If ‘attributes’ query
+parameter is also available, union of the two is fetched. Valid values
+- all, always, never, request, default. Values are case-insensitive.
+
+Accepted values are:
+
+   all, always, default, never, request
+
+--attributes [text]
+
+A comma-delimited string that specifies the names of resource
+attributes that should be returned in the response. By default, a
+response that contains resource attributes contains only attributes
+that are defined in the schema for that resource type as
+returned=always or returned=default. An attribute that is defined as
+returned=request is returned in a response only if the request
+specifies its name in the value of this query parameter. If a request
+specifies this query parameter, the response contains the attributes
+that this query parameter specifies, as well as any attribute that is
+defined as returned=always.
+
+--authorization [text]
+
+The Authorization field value consists of credentials containing the
+authentication information of the user agent for the realm of the
+resource being requested.
+
+--count [integer]
+
+OPTIONAL. An integer that indicates the desired maximum number of
+query results per page. 1000 is the largest value that you can use.
+See the Pagination section of the System for Cross-Domain Identity
+Management Protocol specification for more information. (Section
+3.4.2.4).
+
+--filter [text]
+
+OPTIONAL. The filter string that is used to request a subset of
+resources. The filter string MUST be a valid filter expression. See
+the Filtering section of the SCIM specification for more information
+(Section 3.4.2.2). The string should contain at least one condition
+that each item must match in order to be returned in the search
+results. Each condition specifies an attribute, an operator, and a
+value. Conditions within a filter can be connected by logical
+operators (such as AND and OR). Sets of conditions can be grouped
+together using parentheses.
+
+--from-json [text]
+
+Provide input to this command as a JSON document from a file using the
+file://path-to/file syntax.
+
+The "--generate-full-command-json-input" option can be used to
+generate a sample json file to be used with this command option. The
+key names are pre-populated and match the command option names
+(converted to camelCase format, e.g. compartment-id –> compartmentId),
+while the values of the keys need to be populated by the user before
+using the sample file as an input to this command. For any command
+option that accepts multiple values, the value of the key can be a
+JSON array.
+
+Options can still be provided on the command line. If an option exists
+in both the JSON document and the command line then the command line
+specified value will be used.
+
+For examples on usage of this option, please see our “using CLI with
+advanced JSON options” link: https://docs.cloud.oracle.com/iaas/Conte
+nt/API/SDKDocs/cliusing.htm#AdvancedJSONOptions
+
+--limit [integer]
+
+The maximum number of items to return in a paginated ‘List’ call.
+
+--page [text]
+
+The value of the *opc-next-page* response header from the previous
+‘List’ call.
+
+--page-size [integer]
+
+When fetching results, the number of results to fetch per call. Only
+valid when used with "--all" or "--limit", and ignored otherwise.
+
+--resource-type-schema-version [text]
+
+An endpoint-specific schema version number to use in the Request.
+Allowed version values are Earliest Version or Latest Version as
+specified in each REST API endpoint description, or any sequential
+number inbetween. All schema attributes/body parameters are a part of
+version 1. After version 1, any attributes added or deprecated will be
+tagged with the version that they were added to or deprecated in. If
+no version is provided, the latest schema version is returned.
+
+--sort-by [text]
+
+OPTIONAL. A string that indicates the attribute whose value SHALL be
+used to order the returned responses. The sortBy attribute MUST be in
+standard attribute notation form. See the Attribute Notation section
+of the SCIM specification for more information (Section 3.10). Also,
+see the Sorting section of the SCIM specification for more information
+(Section 3.4.2.3).
+
+--sort-order [text]
+
+A string that indicates the order in which the sortBy parameter is
+applied. Allowed values are ‘ascending’ and ‘descending’. See (Sorting
+Section). OPTIONAL.
+
+Accepted values are:
+
+   ASCENDING, DESCENDING
+
+--start-index [integer]
+
+OPTIONAL. An integer that indicates the 1-based index of the first
+query result. See the Pagination section of the SCIM specification for
+more information. (Section 3.4.2.4). The number of results pages to
+return. The first page is 1. Specify 2 to access the second page of
+results, and so on.
+
+
+Global Parameters
+=================
+
+Use "oci --help" for help on global parameters.
+
+"--auth-purpose", "--auth", "--cert-bundle", "--cli-auto-prompt", "--
+cli-rc-file", "--config-file", "--connection-timeout", "--debug", "--
+defaults-file", "--endpoint", "--generate-full-command-json-input", "
+--generate-param-json-input", "--help", "--latest-version", "--max-
+retries", "--no-retry", "--opc-client-request-id", "--opc-request-id",
+"--output", "--profile", "--proxy", "--query", "--raw-output", "--
+read-timeout", "--realm-specific-endpoint", "--region", "--release-
+info", "--request-id", "--version", "-?", "-d", "-h", "-i", "-v"
+
+
+Example using required parameter
+================================
+
+Copy the following CLI commands into a file named example.sh. Run the
+command by typing “bash example.sh” and replacing the example
+parameters with your own.
+
+Please note this sample will only work in the POSIX-compliant bash-
+like shell. You need to set up the OCI configuration and appropriate
+security policies before trying the examples.
+
+       oci identity-domains approval-workflows list

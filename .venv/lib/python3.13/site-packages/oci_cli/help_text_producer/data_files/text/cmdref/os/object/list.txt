@@ -1,0 +1,475 @@
+"list"
+******
+
+* Description
+
+* Usage
+
+* Required Parameters
+
+* Optional Parameters
+
+* Global Parameters
+
+* Example using required parameter
+
+* Other Examples
+
+
+Description
+===========
+
+Lists the objects in a bucket.
+
+Example:
+   oci os object list -ns mynamespace -bn mybucket –fields
+   name,size,timeCreated
+
+
+Usage
+=====
+
+   oci os object list [OPTIONS]
+
+
+Required Parameters
+===================
+
+-bn, --bucket-name [text]
+
+The name of the bucket.
+
+
+Optional Parameters
+===================
+
+--all
+
+Fetches all pages of results. If you provide this option, then you
+cannot provide the "--limit" option.
+
+--delimiter [text]
+
+When this parameter is set, only objects whose names do not contain
+the delimiter character (after an optionally specified prefix) are
+returned. Scanned objects whose names contain the delimiter have part
+of their name up to the last occurrence of the delimiter (after the
+optional prefix) returned as a set of prefixes. Note: Only ‘/’ is a
+supported delimiter character at this time.
+
+--end [text]
+
+Only object names less than this parameter will be returned.
+
+--fields [text]
+
+Object summary in list of objects includes the ‘name’ field. This
+parameter may also include ‘size’ (object size in bytes), ‘md5’,
+‘timeCreated’ (object creation date and time), ‘timeModified’ (object
+modification date and time), ‘storageTier’ and ‘archivalState’ fields.
+Value of this parameter should be a comma separated, case-insensitive
+list of those field names. [default:
+name,size,etag,md5,timeCreated,timeModified,storageTier,archivalState]
+
+--from-json [text]
+
+Provide input to this command as a JSON document from a file using the
+file://path-to/file syntax.
+
+The "--generate-full-command-json-input" option can be used to
+generate a sample json file to be used with this command option. The
+key names are pre-populated and match the command option names
+(converted to camelCase format, e.g. compartment-id –> compartmentId),
+while the values of the keys need to be populated by the user before
+using the sample file as an input to this command. For any command
+option that accepts multiple values, the value of the key can be a
+JSON array.
+
+Options can still be provided on the command line. If an option exists
+in both the JSON document and the command line then the command line
+specified value will be used.
+
+For examples on usage of this option, please see our “using CLI with
+advanced JSON options” link: https://docs.cloud.oracle.com/iaas/Conte
+nt/API/SDKDocs/cliusing.htm#AdvancedJSONOptions
+
+--limit [integer]
+
+The maximum number of items to return. [default: 100]
+
+-ns, --namespace, --namespace-name [text]
+
+The top-level namespace used for the request. If not provided, this
+parameter will be obtained internally using a call to ‘oci os ns get’
+
+--page-size [integer]
+
+When fetching results, the number of results to fetch per call. Only
+valid when used with "--all" or "--limit", and ignored otherwise.
+
+--prefix [text]
+
+Only object names that begin with this prefix will be returned.
+
+--start [text]
+
+Only object names greater or equal to this parameter will be returned.
+
+--stream-output
+
+Print output to stdout as it is fetched so the full response is not
+stored in memory. This only works with "--all".
+
+
+Global Parameters
+=================
+
+Use "oci --help" for help on global parameters.
+
+"--auth-purpose", "--auth", "--cert-bundle", "--cli-auto-prompt", "--
+cli-rc-file", "--config-file", "--connection-timeout", "--debug", "--
+defaults-file", "--endpoint", "--generate-full-command-json-input", "
+--generate-param-json-input", "--help", "--latest-version", "--max-
+retries", "--no-retry", "--opc-client-request-id", "--opc-request-id",
+"--output", "--profile", "--proxy", "--query", "--raw-output", "--
+read-timeout", "--realm-specific-endpoint", "--region", "--release-
+info", "--request-id", "--version", "-?", "-d", "-h", "-i", "-v"
+
+
+Example using required parameter
+================================
+
+Copy the following CLI commands into a file named example.sh. Run the
+command by typing “bash example.sh” and replacing the example
+parameters with your own.
+
+Please note this sample will only work in the POSIX-compliant bash-
+like shell. You need to set up the OCI configuration and appropriate
+security policies before trying the examples.
+
+       export bucket_name=<substitute-value-of-bucket_name> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/os/object/list.html#cmdoption-bucket-name
+
+       oci os object list --bucket-name $bucket_name
+
+
+Other Examples
+==============
+
+
+Description
+-----------
+
+List objects in a bucket
+
+
+Command
+-------
+
+    oci os object list --bucket-name CLITest
+
+
+Output
+------
+
+   {
+    "data": [
+         {
+              "md5": "55sYrq31fJ1VgHfEGIh2hg==",
+              "name": "test/FileOne.json",
+              "size": 1785862,
+              "time-created": "2019-08-13T23:31:02.981000+00:00"
+         },
+         {
+              "md5": "uzobT/eOYWpieAdIu1lc2w==",
+              "name": "test/FileTwo.json",
+              "size": 466,
+              "time-created": "2019-08-13T20:09:54.148000+00:00"
+         },
+         {
+              "md5": "uzobT/eOYWpieAdIu1lc2w==",
+              "name": "FileThree.json",
+              "size": 468,
+              "time-created": "2019-08-13T22:09:54.148000+00:00"
+         }
+    ],
+    "prefixes": []
+   }
+
+
+Description
+-----------
+
+List objects in a bucket with common prefix
+
+
+Command
+-------
+
+    oci os object list --bucket-name CLITest --prefix test
+
+
+Output
+------
+
+   {
+    "data": [
+         {
+              "md5": "55sYrq31fJ1VgHfEGIh2hg==",
+              "name": "test/FileOne.json",
+              "size": 1785862,
+              "time-created": "2019-08-13T23:31:02.981000+00:00"
+         },
+         {
+              "md5": "uzobT/eOYWpieAdIu1lc2w==",
+              "name": "test/FileTwo.json",
+              "size": 466,
+              "time-created": "2019-08-13T20:09:54.148000+00:00"
+         }
+    ],
+    "prefixes": []
+   }
+
+
+Description
+-----------
+
+List all the objects in the bucket
+
+
+Command
+-------
+
+    oci os object list --bucket-name bucket-client --all
+
+
+Output
+------
+
+   {
+    "data": [
+         {
+              "archival-state": "null",
+              "etag": "ca834519-4af9-49d6-991c-d5e57604805e",
+              "md5": "3fEfRGtHscXnERhbvm3oMw==",
+              "name": "new_test.txt",
+              "size": 23,
+              "storage-tier": "Standard"
+         },
+         {
+              "archival-state": "null",
+              "etag": "38ffcfda-1200-4e9f-a7c7-4ff307032c44",
+              "md5": "3fEfRGtHscXnERhbvm3oMw==",
+              "name": "test.txt",
+              "size": 23,
+              "storage-tier": "Standard"
+         }
+    ],
+    "prefixes": []
+   }
+
+
+Description
+-----------
+
+List specified number of objects
+
+
+Command
+-------
+
+    oci os object list --bucket-name bucket-client --limit 1
+
+
+Output
+------
+
+   {
+    "data": [
+         {
+              "archival-state": "null",
+              "etag": "ca834519-4af9-49d6-991c-d5e57604805e",
+              "md5": "3fEfRGtHscXnERhbvm3oMw==",
+              "name": "new_test.txt",
+              "size": 23,
+              "storage-tier": "Standard",
+              "time-created": "2022-10-26T10:19:09.078000+00:00",
+              "time-modified": "2022-10-26T10:19:09.078000+00:00"
+         }
+    ],
+    "next-start-with": "test.txt",
+    "prefixes": []
+   }
+
+
+Description
+-----------
+
+List only object names alphabetically greater or equal to specified
+start text.
+
+
+Command
+-------
+
+    oci os object list --bucket-name bucket-client --start news
+
+
+Output
+------
+
+   {
+    "data": [
+         {
+              "archival-state": "null",
+              "etag": "38ffcfda-1200-4e9f-a7c7-4ff307032c44",
+              "md5": "3fEfRGtHscXnERhbvm3oMw==",
+              "name": "test.txt",
+              "size": 23,
+              "storage-tier": "Standard",
+              "time-created": "2022-10-26T11:15:42.148000+00:00",
+              "time-modified": "2022-10-26T11:15:42.148000+00:00"
+         }
+    ],
+    "prefixes": []
+   }
+
+
+Description
+-----------
+
+List object summary with specified fields, others fields will not have
+any value
+
+
+Command
+-------
+
+    oci os object list --bucket-name bucket-client --fields name,md5
+
+
+Output
+------
+
+   {
+    "data": [
+         {
+              "archival-state": "null",
+              "etag": "null",
+              "md5": "3fEfRGtHscXnERhbvm3oMw==",
+              "name": "new_test.txt",
+              "size": "null",
+              "storage-tier": "null",
+              "time-created": "null",
+              "time-modified": "null"
+         },
+         {
+              "archival-state": "null",
+              "etag": "null",
+              "md5": "3fEfRGtHscXnERhbvm3oMw==",
+              "name": "test.txt",
+              "size": "null",
+              "storage-tier": "null",
+              "time-created": "null",
+              "time-modified": "null"
+         }
+    ],
+    "prefixes": []
+   }
+
+
+Description
+-----------
+
+Lists scanned objects whose names contain the delimiter or have part
+of their name up to the last occurrence of the delimiter (after the
+optional prefix) returned as a set of prefixes.
+
+
+Command
+-------
+
+    oci os object list --bucket-name bucket-client --delimiter '/'
+
+
+Output
+------
+
+   {
+    "data": [
+         {
+              "archival-state": "null",
+              "etag": "ca834519-4af9-49d6-991c-d5e57604805e",
+              "md5": "3fEfRGtHscXnERhbvm3oMw==",
+              "name": "new_test.txt",
+              "size": 23,
+              "storage-tier": "Standard",
+              "time-created": "2022-10-26T10:19:09.078000+00:00",
+              "time-modified": "2022-10-26T10:19:09.078000+00:00"
+         },
+         {
+              "archival-state": "null",
+              "etag": "38ffcfda-1200-4e9f-a7c7-4ff307032c44",
+              "md5": "3fEfRGtHscXnERhbvm3oMw==",
+              "name": "test.txt",
+              "size": 23,
+              "storage-tier": "Standard",
+              "time-created": "2022-10-26T11:15:42.148000+00:00",
+              "time-modified": "2022-10-26T11:15:42.148000+00:00"
+         }
+    ],
+    "prefixes": [
+         "abc/"
+    ]
+   }
+
+
+Description
+-----------
+
+Fetches the specified number of object summary per call
+
+
+Command
+-------
+
+    oci os object list --bucket-name bucket-client  --page-size 2 --all
+
+
+Output
+------
+
+   {
+    "data": [
+         {
+              "archival-state": "null",
+              "etag": "b535baa0-5900-4d00-bc60-d488398eb723",
+              "md5": "3fEfRGtHscXnERhbvm3oMw==",
+              "name": "abc/prefix/xyztest.txt",
+              "size": 23,
+              "storage-tier": "Standard",
+              "time-created": "2022-10-26T11:51:00.218000+00:00",
+              "time-modified": "2022-10-26T11:51:00.218000+00:00"
+         },
+         {
+              "archival-state": "null",
+              "etag": "ca834519-4af9-49d6-991c-d5e57604805e",
+              "md5": "3fEfRGtHscXnERhbvm3oMw==",
+              "name": "new_test.txt",
+              "size": 23,
+              "storage-tier": "Standard",
+              "time-created": "2022-10-26T10:19:09.078000+00:00",
+              "time-modified": "2022-10-26T10:19:09.078000+00:00"
+         },
+         {
+              "archival-state": "null",
+              "etag": "38ffcfda-1200-4e9f-a7c7-4ff307032c44",
+              "md5": "3fEfRGtHscXnERhbvm3oMw==",
+              "name": "test.txt",
+              "size": 23,
+              "storage-tier": "Standard",
+              "time-created": "2022-10-26T11:15:42.148000+00:00",
+              "time-modified": "2022-10-26T11:15:42.148000+00:00"
+         }
+    ],
+    "prefixes": []
+   }

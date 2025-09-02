@@ -1,0 +1,14 @@
+fleet-error-summary
+*******************
+
+
+Description
+===========
+
+The summary of a fleet error.
+
+
+Available Commands
+==================
+
+* list-fleet-errors

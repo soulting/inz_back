@@ -1,0 +1,14 @@
+node-replace-configuration
+**************************
+
+
+Description
+===========
+
+The information about the NodeReplaceConfiguration.
+
+
+Available Commands
+==================
+
+* remove

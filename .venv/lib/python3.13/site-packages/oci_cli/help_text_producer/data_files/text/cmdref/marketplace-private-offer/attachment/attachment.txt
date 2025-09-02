@@ -1,0 +1,20 @@
+attachment
+**********
+
+
+Description
+===========
+
+Description of Attachment.
+
+
+Available Commands
+==================
+
+* create
+
+* delete
+
+* get
+
+* get-attachment-content

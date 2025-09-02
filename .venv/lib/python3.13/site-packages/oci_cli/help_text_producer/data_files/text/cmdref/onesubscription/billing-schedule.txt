@@ -1,0 +1,16 @@
+billing-schedule
+****************
+
+
+Description
+===========
+
+OneSubscription CLI
+
+
+Available Commands
+==================
+
+* billing-schedule-summary
+
+  * list-billing-schedules

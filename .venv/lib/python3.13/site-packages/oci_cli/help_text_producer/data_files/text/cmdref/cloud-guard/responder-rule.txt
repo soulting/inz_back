@@ -1,0 +1,23 @@
+responder-rule
+**************
+
+
+Description
+===========
+
+A ResponderRule resource contains the default settings for a single
+responder rule that Cloud Guard provides.
+
+A ResponderRule resource: * Is used as the original source for a rule
+in an Oracle-managed responder of the specified type. * Is not
+directly visible in the Cloud Guard UI. * Can’t be modified by users,
+programmatically or through the UI. * May be modified from time to
+time by Cloud Guard.
+
+
+Available Commands
+==================
+
+* get
+
+* list

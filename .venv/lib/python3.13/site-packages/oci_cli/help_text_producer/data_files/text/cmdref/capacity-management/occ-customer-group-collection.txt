@@ -1,0 +1,14 @@
+occ-customer-group-collection
+*****************************
+
+
+Description
+===========
+
+A list of customer groups.
+
+
+Available Commands
+==================
+
+* list

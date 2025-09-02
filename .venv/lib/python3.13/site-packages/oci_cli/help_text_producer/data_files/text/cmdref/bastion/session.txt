@@ -1,0 +1,31 @@
+session
+*******
+
+
+Description
+===========
+
+A bastion session resource. A bastion session lets authorized users
+connect to a target resource using a Secure Shell (SSH) for a
+predetermined amount of time.
+
+
+Available Commands
+==================
+
+* create
+
+* create-managed-ssh
+
+* create-port-forwarding
+
+* create-session-create-dynamic-port-forwarding-session-target-
+  resource-details
+
+* delete
+
+* get
+
+* list
+
+* update

@@ -1,0 +1,14 @@
+audit-profile-analytic-collection
+*********************************
+
+
+Description
+===========
+
+Details of audit profile analytic summary.
+
+
+Available Commands
+==================
+
+* list-audit-profile-analytics

@@ -1,0 +1,35 @@
+access-governance-cp
+********************
+
+
+Description
+===========
+
+Use the Oracle Access Governance CLI to create, view, and manage
+GovernanceInstances.
+
+
+Available Commands
+==================
+
+* governance-instance
+
+  * change-compartment
+
+  * create
+
+  * delete
+
+  * get
+
+  * update
+
+  * update-governance-instance-configuration
+
+* governance-instance-collection
+
+  * list-governance-instances
+
+* governance-instance-configuration
+
+  * get

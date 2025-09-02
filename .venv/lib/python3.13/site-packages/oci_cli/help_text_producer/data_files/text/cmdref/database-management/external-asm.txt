@@ -1,0 +1,26 @@
+external-asm
+************
+
+
+Description
+===========
+
+The details of an external ASM.
+
+
+Available Commands
+==================
+
+* get
+
+* get-external-asm-configuration
+
+* list
+
+* list-external-asm-disk-groups
+
+* list-external-asm-users
+
+* summarize-external-asm-metrics
+
+* update

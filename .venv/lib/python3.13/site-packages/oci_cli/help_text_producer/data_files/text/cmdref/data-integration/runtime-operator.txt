@@ -1,0 +1,15 @@
+runtime-operator
+****************
+
+
+Description
+===========
+
+Runtime operator model which holds the runtime metadata of the task
+operator executed.
+
+
+Available Commands
+==================
+
+* get

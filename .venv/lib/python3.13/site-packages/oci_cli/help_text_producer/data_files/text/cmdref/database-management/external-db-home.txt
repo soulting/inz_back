@@ -1,0 +1,18 @@
+external-db-home
+****************
+
+
+Description
+===========
+
+The details of an external database home.
+
+
+Available Commands
+==================
+
+* get
+
+* list
+
+* update

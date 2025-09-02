@@ -1,0 +1,88 @@
+repository
+**********
+
+
+Description
+===========
+
+Repositories containing the source code to build and deploy.
+
+
+Available Commands
+==================
+
+* create
+
+* create-or-update-git-branch-details
+
+* create-or-update-git-tag-details
+
+* delete
+
+* delete-git-ref
+
+* delete-ref
+
+* delete-repository-settings
+
+* get
+
+* get-commit
+
+* get-commit-diff
+
+* get-file-diff
+
+* get-mirror-record
+
+* get-object
+
+* get-object-content
+
+* get-ref
+
+* get-repo-file-diff
+
+* get-repo-file-lines
+
+* get-repository-archive-content
+
+* get-repository-file-lines
+
+* get-repository-notification-preference
+
+* get-repository-settings
+
+* list
+
+* list-authors
+
+* list-commit-diffs
+
+* list-commits
+
+* list-fork-sync-statuses
+
+* list-mirror-records
+
+* list-pull-request-authors
+
+* list-refs
+
+* list-repository-analytics-authors
+
+* mirror
+
+* put-repository-ref-branch-details
+
+* put-repository-ref-tag-details
+
+* summarize-repository-analytics
+
+* sync
+
+* update
+
+* update-repository-notification-preference
+
+* update-repository-settings

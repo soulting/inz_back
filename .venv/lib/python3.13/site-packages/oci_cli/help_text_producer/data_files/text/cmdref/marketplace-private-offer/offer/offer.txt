@@ -1,0 +1,22 @@
+offer
+*****
+
+
+Description
+===========
+
+Description of Offer.
+
+
+Available Commands
+==================
+
+* create
+
+* delete
+
+* get
+
+* get-offer-internal-detail
+
+* update

@@ -1,0 +1,14 @@
+channels
+********
+
+
+Description
+===========
+
+List of IDs of non-empty channels.
+
+
+Available Commands
+==================
+
+* list-channels

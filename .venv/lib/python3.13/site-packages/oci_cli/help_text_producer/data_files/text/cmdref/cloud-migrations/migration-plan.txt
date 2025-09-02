@@ -1,0 +1,32 @@
+migration-plan
+**************
+
+
+Description
+===========
+
+Description of the migration plan.
+
+
+Available Commands
+==================
+
+* change-compartment
+
+* create
+
+* delete
+
+* execute
+
+* export
+
+* get
+
+* import
+
+* list
+
+* refresh
+
+* update

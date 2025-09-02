@@ -1,0 +1,15 @@
+evaluation-result
+*****************
+
+
+Description
+===========
+
+Results of a model evaluation analysis search. Contains
+EvaluationResultSummary items.
+
+
+Available Commands
+==================
+
+* list

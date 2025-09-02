@@ -1,0 +1,15 @@
+trigger
+*******
+
+
+Description
+===========
+
+Results of a Trigger search. Contains boh TriggerSummary items and
+other information, such as metadata.
+
+
+Available Commands
+==================
+
+* list

@@ -1,0 +1,14 @@
+responder-activity-summary
+**************************
+
+
+Description
+===========
+
+Responder activity summary definition.
+
+
+Available Commands
+==================
+
+* list-responder-activities

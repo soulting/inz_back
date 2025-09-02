@@ -1,0 +1,23 @@
+api-platform-instance
+*********************
+
+
+Description
+===========
+
+A Logical Entity that can be used to create, manage, secure, and
+advertise APIs to connect to new or existing services
+
+
+Available Commands
+==================
+
+* change-compartment
+
+* create
+
+* delete
+
+* get
+
+* update

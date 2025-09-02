@@ -1,0 +1,14 @@
+distributed-database-private-endpoint-collection
+************************************************
+
+
+Description
+===========
+
+Collection of private endpoints.
+
+
+Available Commands
+==================
+
+* list-distributed-database-private-endpoints

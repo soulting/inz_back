@@ -1,0 +1,16 @@
+occ-handover-resource-block-detail-collection
+*********************************************
+
+
+Description
+===========
+
+A list of occResourceHandoverDetails.
+
+
+Available Commands
+==================
+
+* list
+
+* list-internal

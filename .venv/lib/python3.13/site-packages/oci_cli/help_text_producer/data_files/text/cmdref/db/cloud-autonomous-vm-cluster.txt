@@ -1,0 +1,34 @@
+cloud-autonomous-vm-cluster
+***************************
+
+
+Description
+===========
+
+Details of the cloud Autonomous VM cluster.
+
+
+Available Commands
+==================
+
+* change-cloud-autonomous-vm-cluster-subscription
+
+* change-compartment
+
+* create
+
+* delete
+
+* get
+
+* get-cloud-autonomous-vm-cluster-resource-usage
+
+* list
+
+* list-cloud-autonomous-vm-cluster-acd-resource-usage
+
+* rotate-cloud-autonomous-vm-cluster-ords-certs
+
+* rotate-cloud-autonomous-vm-cluster-ssl-certs
+
+* update

@@ -1,0 +1,24 @@
+dis-application
+***************
+
+
+Description
+===========
+
+DIS Application is container for runtime objects.
+
+
+Available Commands
+==================
+
+* change-compartment
+
+* create
+
+* delete
+
+* get
+
+* list
+
+* update

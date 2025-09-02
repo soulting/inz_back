@@ -1,0 +1,22 @@
+replica
+*******
+
+
+Description
+===========
+
+A DB System read replica.
+
+
+Available Commands
+==================
+
+* create
+
+* delete
+
+* get
+
+* list
+
+* update

@@ -1,0 +1,24 @@
+apm-domain
+**********
+
+
+Description
+===========
+
+Details of an APM domain.
+
+
+Available Commands
+==================
+
+* change-compartment
+
+* create
+
+* delete
+
+* get
+
+* list
+
+* update

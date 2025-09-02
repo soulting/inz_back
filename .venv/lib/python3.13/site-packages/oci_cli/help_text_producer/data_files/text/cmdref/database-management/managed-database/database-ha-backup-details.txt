@@ -1,0 +1,14 @@
+database-ha-backup-details
+**************************
+
+
+Description
+===========
+
+The database HA and backup details.
+
+
+Available Commands
+==================
+
+* get

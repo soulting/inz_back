@@ -1,0 +1,26 @@
+decryption-rule
+***************
+
+
+Description
+===========
+
+Decryption Rule used in the firewall policy rules. A Decryption Rule
+is used to define which traffic should be decrypted by the firewall,
+and how it should do so.
+
+
+Available Commands
+==================
+
+* bulk-upload
+
+* create
+
+* delete
+
+* get
+
+* list
+
+* update

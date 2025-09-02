@@ -1,0 +1,20 @@
+oci-console-sign-on-policy-consent
+**********************************
+
+
+Description
+===========
+
+The “Security Policy for OCI Console” sign-on policy consent resource
+used to record consents. The schema to record the “Security Policy for
+OCI Console” sign-on policy consent.
+
+
+Available Commands
+==================
+
+* get
+
+* list
+
+* search

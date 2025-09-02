@@ -1,0 +1,14 @@
+supported-shape-collection
+**************************
+
+
+Description
+===========
+
+The list of shapes that can be used to create a database system.
+
+
+Available Commands
+==================
+
+* list-supported-shapes

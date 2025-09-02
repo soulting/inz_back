@@ -1,0 +1,33 @@
+compliance-policy-rule
+**********************
+
+
+Description
+===========
+
+Set of rules that are used to calculate the compliance status of the
+product. Specific rules will take precedence over broader rules.
+
+
+Available Commands
+==================
+
+* create
+
+* create-compliance-policy-rule-patch-level-selection-details
+
+* create-compliance-policy-rule-patch-name-selection-details
+
+* create-compliance-policy-rule-patch-release-date-selection-details
+
+* delete
+
+* get
+
+* update
+
+* update-compliance-policy-rule-patch-level-selection-details
+
+* update-compliance-policy-rule-patch-name-selection-details
+
+* update-compliance-policy-rule-patch-release-date-selection-details

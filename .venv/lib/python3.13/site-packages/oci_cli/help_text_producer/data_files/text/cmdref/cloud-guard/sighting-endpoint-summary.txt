@@ -1,0 +1,14 @@
+sighting-endpoint-summary
+*************************
+
+
+Description
+===========
+
+A summary of sighting endpoints.
+
+
+Available Commands
+==================
+
+* list-sighting-endpoints

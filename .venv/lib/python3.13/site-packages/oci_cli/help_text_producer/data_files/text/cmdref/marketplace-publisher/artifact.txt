@@ -1,0 +1,40 @@
+artifact
+********
+
+
+Description
+===========
+
+Base model object for the artifacts.
+
+
+Available Commands
+==================
+
+* change-compartment
+
+* create
+
+* create-artifact-create-container-image-artifact-details
+
+* create-artifact-create-kubernetes-image-artifact-details
+
+* create-artifact-create-machine-image-artifact-details
+
+* create-artifact-create-stack-artifact-details
+
+* delete
+
+* get
+
+* update
+
+* update-artifact-update-container-image-artifact-details
+
+* update-artifact-update-kubernetes-image-artifact-details
+
+* update-artifact-update-machine-image-artifact-details
+
+* update-artifact-update-stack-artifact-details
+
+* validate-and-publish

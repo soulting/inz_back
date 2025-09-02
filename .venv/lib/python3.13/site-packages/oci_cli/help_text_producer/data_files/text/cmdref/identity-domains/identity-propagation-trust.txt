@@ -1,0 +1,22 @@
+identity-propagation-trust
+**************************
+
+
+Description
+===========
+
+Schema used for Identity Propagation Trust.
+
+
+Available Commands
+==================
+
+* create
+
+* delete
+
+* get
+
+* patch
+
+* put

@@ -1,0 +1,28 @@
+job
+***
+
+
+Description
+===========
+
+Job details which contain input document details on which prediction
+need to run, features (which and all language services ) need to run
+and where to store results
+
+
+Available Commands
+==================
+
+* cancel
+
+* change-compartment
+
+* create
+
+* delete
+
+* get
+
+* list
+
+* update

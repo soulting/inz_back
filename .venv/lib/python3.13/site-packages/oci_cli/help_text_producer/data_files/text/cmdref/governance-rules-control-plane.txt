@@ -1,0 +1,84 @@
+governance-rules-control-plane
+******************************
+
+
+Description
+===========
+
+A description of the GovernanceRulesControlPlane CLI
+
+
+Available Commands
+==================
+
+* governance-rule
+
+  * enforced-governance-rule
+
+    * get
+
+    * list
+
+  * governance-rule
+
+    * create
+
+    * create-governance-rule-allowed-regions-template
+
+    * create-governance-rule-quota-template
+
+    * create-governance-rule-tag-template
+
+    * delete
+
+    * get
+
+    * list
+
+    * retry
+
+    * update
+
+    * update-governance-rule-allowed-regions-template
+
+    * update-governance-rule-quota-template
+
+    * update-governance-rule-tag-template
+
+  * inclusion-criterion
+
+    * create
+
+    * create-inclusion-criterion-tenancy-association
+
+    * delete
+
+    * get
+
+    * list-inclusion-criteria
+
+  * tenancy-attachment
+
+    * get
+
+    * list
+
+    * retry
+
+* work-request
+
+  * work-request
+
+    * cancel
+
+    * get
+
+    * list
+
+  * work-request-error
+
+    * list-errors
+
+  * work-request-log-entry
+
+    * list-logs

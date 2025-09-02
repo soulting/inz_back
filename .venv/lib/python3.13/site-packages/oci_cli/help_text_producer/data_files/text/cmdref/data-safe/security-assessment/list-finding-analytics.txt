@@ -1,0 +1,231 @@
+"list-finding-analytics"
+************************
+
+* Description
+
+* Usage
+
+* Required Parameters
+
+* Optional Parameters
+
+* Global Parameters
+
+* Example using required parameter
+
+
+Description
+===========
+
+Gets a list of findings aggregated details in the specified
+compartment. This provides information about the overall state of
+security assessment findings. You can use groupBy to get the count of
+findings under a certain risk level and with a certain findingKey, and
+as well as get the list of the targets that match the condition. This
+data is especially useful content for the statistic chart or to
+support analytics.
+
+When you perform the ListFindingAnalytics operation, if the parameter
+compartmentIdInSubtree is set to “true,” and if the parameter
+accessLevel is set to ACCESSIBLE, then the operation returns
+statistics from the compartments in which the requestor has INSPECT
+permissions on at least one resource, directly or indirectly (in
+subcompartments). If the operation is performed at the root
+compartment and the requestor does not have access to at least one
+subcompartment of the compartment specified by compartmentId, then
+“Not Authorized” is returned.
+
+
+Usage
+=====
+
+   oci data-safe security-assessment list-finding-analytics [OPTIONS]
+
+
+Required Parameters
+===================
+
+--compartment-id, -c [text]
+
+A filter to return only resources that match the specified compartment
+OCID.
+
+
+Optional Parameters
+===================
+
+--access-level [text]
+
+Valid values are RESTRICTED and ACCESSIBLE. Default is RESTRICTED.
+Setting this to ACCESSIBLE returns only those compartments for which
+the user has INSPECT permissions directly or indirectly (permissions
+can be on a resource in a subcompartment). When set to RESTRICTED
+permissions are checked and no partial results are displayed.
+
+Accepted values are:
+
+   ACCESSIBLE, RESTRICTED
+
+--all
+
+Fetches all pages of results. If you provide this option, then you
+cannot provide the "--limit" option.
+
+--category [text]
+
+The category of the finding.
+
+--compartment-id-in-subtree [boolean]
+
+Default is false. When set to true, the hierarchy of compartments is
+traversed and all compartments and subcompartments in the tenancy are
+returned. Depends on the ‘accessLevel’ setting.
+
+--contains-references [text]
+
+An optional filter to return only findings that match the specified
+references. Use containsReferences param if need to filter by multiple
+references.
+
+Accepted values are:
+
+   CIS, GDPR, STIG
+
+--contains-severity [text]
+
+A filter to return only findings that match the specified risk
+level(s). Use containsSeverity parameter if need to filter by multiple
+risk levels.
+
+Accepted values are:
+
+   ADVISORY, DEFERRED, EVALUATE, HIGH, LOW, MEDIUM, PASS
+
+--finding-key [text]
+
+The unique key that identifies the finding. It is a string and unique
+within a security assessment.
+
+--from-json [text]
+
+Provide input to this command as a JSON document from a file using the
+file://path-to/file syntax.
+
+The "--generate-full-command-json-input" option can be used to
+generate a sample json file to be used with this command option. The
+key names are pre-populated and match the command option names
+(converted to camelCase format, e.g. compartment-id –> compartmentId),
+while the values of the keys need to be populated by the user before
+using the sample file as an input to this command. For any command
+option that accepts multiple values, the value of the key can be a
+JSON array.
+
+Options can still be provided on the command line. If an option exists
+in both the JSON document and the command line then the command line
+specified value will be used.
+
+For examples on usage of this option, please see our “using CLI with
+advanced JSON options” link: https://docs.cloud.oracle.com/iaas/Conte
+nt/API/SDKDocs/cliusing.htm#AdvancedJSONOptions
+
+--group-by [text]
+
+Attribute by which the finding analytics data should be grouped.
+
+Accepted values are:
+
+   findingKeyAndSeverity, findingKeyAndTopFindingStatus, severity
+
+--is-top-finding [boolean]
+
+A filter to return only the findings that are marked as top findings.
+
+--limit [integer]
+
+For list pagination. The maximum number of items to return per page in
+a paginated “List” call. For details about how pagination works, see
+List Pagination.
+
+--page [text]
+
+For list pagination. The page token representing the page at which to
+start retrieving results. It is usually retrieved from a previous
+“List” call. For details about how pagination works, see List
+Pagination.
+
+--page-size [integer]
+
+When fetching results, the number of results to fetch per call. Only
+valid when used with "--all" or "--limit", and ignored otherwise.
+
+--scim-query [text]
+
+The scimQuery query parameter accepts filter expressions that use the
+syntax described in Section 3.2.2.2 of the System for Cross-Domain
+Identity Management (SCIM) specification, which is available at
+RFC3339. In SCIM filtering expressions, text, date, and time values
+must be enclosed in quotation marks, with date and time values using
+ISO-8601 format. (Numeric and boolean values should not be quoted.)
+
+**Example:** | scimQuery=(severity eq ‘high’) scimQuery=(category eq
+“Users”) and (reference eq ‘CIS’)
+
+Supported fields: severity reference title category
+
+--severity [text]
+
+A filter to return only findings of a particular risk level.
+
+Accepted values are:
+
+   ADVISORY, DEFERRED, EVALUATE, HIGH, LOW, MEDIUM, PASS
+
+--target-database-group-id [text]
+
+A filter to return the target database group that matches the
+specified OCID.
+
+--target-ids [text]
+
+An optional filter to return only findings that match the specified
+target ids. Use this parameter to filter by multiple target ids.
+
+--top-finding-status [text]
+
+An optional filter to return only the top finding that match the
+specified status.
+
+Accepted values are:
+
+   ADVISORY, DEFERRED, EVALUATE, PASS, RISK
+
+
+Global Parameters
+=================
+
+Use "oci --help" for help on global parameters.
+
+"--auth-purpose", "--auth", "--cert-bundle", "--cli-auto-prompt", "--
+cli-rc-file", "--config-file", "--connection-timeout", "--debug", "--
+defaults-file", "--endpoint", "--generate-full-command-json-input", "
+--generate-param-json-input", "--help", "--latest-version", "--max-
+retries", "--no-retry", "--opc-client-request-id", "--opc-request-id",
+"--output", "--profile", "--proxy", "--query", "--raw-output", "--
+read-timeout", "--realm-specific-endpoint", "--region", "--release-
+info", "--request-id", "--version", "-?", "-d", "-h", "-i", "-v"
+
+
+Example using required parameter
+================================
+
+Copy the following CLI commands into a file named example.sh. Run the
+command by typing “bash example.sh” and replacing the example
+parameters with your own.
+
+Please note this sample will only work in the POSIX-compliant bash-
+like shell. You need to set up the OCI configuration and appropriate
+security policies before trying the examples.
+
+       export compartment_id=<substitute-value-of-compartment_id> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/data-safe/security-assessment/list-finding-analytics.html#cmdoption-compartment-id
+
+       oci data-safe security-assessment list-finding-analytics --compartment-id $compartment_id

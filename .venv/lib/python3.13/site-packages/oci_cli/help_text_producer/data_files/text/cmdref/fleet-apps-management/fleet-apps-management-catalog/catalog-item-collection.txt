@@ -1,0 +1,15 @@
+catalog-item-collection
+***********************
+
+
+Description
+===========
+
+The results of a CatalogItem search containing list of
+CatalogItemSummary items
+
+
+Available Commands
+==================
+
+* list-catalog-items

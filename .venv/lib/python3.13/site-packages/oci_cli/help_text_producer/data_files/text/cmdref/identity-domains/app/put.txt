@@ -1,0 +1,1653 @@
+"put"
+*****
+
+* Description
+
+* Usage
+
+* Required Parameters
+
+* Optional Parameters
+
+* Global Parameters
+
+* Example using required parameter
+
+
+Description
+===========
+
+Replace an App
+
+The top level –endpoint parameter must be supplied for this operation.
+
+
+Usage
+=====
+
+   oci identity-domains app put [OPTIONS]
+
+
+Required Parameters
+===================
+
+--app-id [text]
+
+ID of the resource
+
+--based-on-template [complex type]
+
+This is a complex type whose value must be valid JSON. The value can
+be provided as a string on the command line or passed in as a file
+using the file://path/to/file syntax.
+
+The "--generate-param-json-input" option can be used to generate an
+example of the JSON which must be provided. We recommend storing this
+example in a file, modifying it as needed and then passing it back in
+via the file:// syntax.
+
+--display-name [text]
+
+Display name of the application. Display name is intended to be user-
+friendly, and an administrator can change the value at any time.
+
+**SCIM++ Properties:**  - caseExact: false  - idcsSearchable: true  -
+multiValued: false  - mutability: readWrite  - required: true  -
+returned: always  - type: string  - uniqueness: server
+
+--schemas [complex type]
+
+REQUIRED. The schemas attribute is an array of Strings which allows
+introspection of the supported schema version for a SCIM
+representation as well any schema extensions supported by that
+representation. Each String value must be a unique URI. This
+specification defines URIs for User, Group, and a standard
+“enterprise” extension. All representations of SCIM schema MUST
+include a non-zero value array with value(s) of the URIs supported by
+that representation. Duplicate values MUST NOT be included. Value
+order is not specified and MUST not impact behavior.
+
+**SCIM++ Properties:**  - caseExact: false  - idcsSearchable: false  -
+multiValued: true  - mutability: readWrite  - required: true  -
+returned: default  - type: string  - uniqueness: none This is a
+complex type whose value must be valid JSON. The value can be provided
+as a string on the command line or passed in as a file using the
+file://path/to/file syntax.
+
+The "--generate-param-json-input" option can be used to generate an
+example of the JSON which must be provided. We recommend storing this
+example in a file, modifying it as needed and then passing it back in
+via the file:// syntax.
+
+
+Optional Parameters
+===================
+
+--access-token-expiry [integer]
+
+Expiry-time in seconds for an Access Token. Any token that allows
+access to this App will expire after the specified duration.
+
+**SCIM++ Properties:**  - idcsSearchable: false  - multiValued: false
+- mutability: readWrite  - required: false  - returned: default  -
+type: integer  - uniqueness: none
+
+--accounts [complex type]
+
+Accounts of App
+
+**SCIM++ Properties:**  - idcsCompositeKey: [value]  - idcsSearchable:
+true  - multiValued: true  - mutability: readOnly  - required: false
+- returned: request  - type: complex  - uniqueness: none
+
+This option is a JSON list with items of type AppAccounts.  For
+documentation on AppAccounts please see our API reference: https://do
+cs.cloud.oracle.com/api/#/en/identitydomains/v1/datatypes/AppAccounts.
+This is a complex type whose value must be valid JSON. The value can
+be provided as a string on the command line or passed in as a file
+using the file://path/to/file syntax.
+
+The "--generate-param-json-input" option can be used to generate an
+example of the JSON which must be provided. We recommend storing this
+example in a file, modifying it as needed and then passing it back in
+via the file:// syntax.
+
+--active [boolean]
+
+If true, this App is able to participate in runtime services, such as
+automatic-login, OAuth, and SAML. If false, all runtime services are
+disabled for this App, and only administrative operations can be
+performed.
+
+**SCIM++ Properties:**  - idcsSearchable: true  - multiValued: false
+- mutability: readWrite  - required: false  - returned: default  -
+type: boolean  - uniqueness: none
+
+--admin-roles [complex type]
+
+A list of AppRoles defined by this UnmanagedApp. Membership in each of
+these AppRoles confers administrative privilege within this App.
+
+**SCIM++ Properties:**  - idcsCompositeKey: [value]  - idcsSearchable:
+false  - multiValued: true  - mutability: readOnly  - required: false
+- returned: request  - type: complex
+
+This option is a JSON list with items of type AppAdminRoles.  For
+documentation on AppAdminRoles please see our API reference: https://
+docs.cloud.oracle.com/api/#/en/identitydomains/v1/datatypes/AppAdminR
+oles. This is a complex type whose value must be valid JSON. The value
+can be provided as a string on the command line or passed in as a file
+using the file://path/to/file syntax.
+
+The "--generate-param-json-input" option can be used to generate an
+example of the JSON which must be provided. We recommend storing this
+example in a file, modifying it as needed and then passing it back in
+via the file:// syntax.
+
+--alias-apps [complex type]
+
+Each value of this internal attribute refers to an Oracle Public Cloud
+infrastructure App on which this App depends.
+
+**SCIM++ Properties:**  - caseExact: true  - idcsCompositeKey: [value]
+- idcsSearchable: true  - multiValued: true  - mutability: readWrite
+- required: false  - returned: default  - type: complex  - uniqueness:
+none
+
+This option is a JSON list with items of type AppAliasApps.  For
+documentation on AppAliasApps please see our API reference: https://d
+ocs.cloud.oracle.com/api/#/en/identitydomains/v1/datatypes/AppAliasAp
+ps. This is a complex type whose value must be valid JSON. The value
+can be provided as a string on the command line or passed in as a file
+using the file://path/to/file syntax.
+
+The "--generate-param-json-input" option can be used to generate an
+example of the JSON which must be provided. We recommend storing this
+example in a file, modifying it as needed and then passing it back in
+via the file:// syntax.
+
+--all-url-schemes-allowed [boolean]
+
+If true, indicates that the system should allow all URL-schemes within
+each value of the ‘redirectUris’ attribute.  Also indicates that the
+system should not attempt to confirm that each value of the
+‘redirectUris’ attribute is a valid URI.  In particular, the system
+should not confirm that the domain component of the URI is a top-level
+domain and the system should not confirm that the hostname portion is
+a valid system that is reachable over the network.
+
+**SCIM++ Properties:**  - idcsSearchable: true  - multiValued: false
+- mutability: readWrite  - required: false  - returned: default  -
+type: boolean  - uniqueness: none
+
+--allow-access-control [boolean]
+
+If true, any managed App that is based on this template is checked for
+access control that is, access to this app is subject to successful
+authorization at SSO service, viz. app grants to start with.
+
+**SCIM++ Properties:**  - idcsSearchable: true  - multiValued: false
+- mutability: readWrite  - required: false  - returned: default  -
+type: boolean  - uniqueness: none
+
+--allow-offline [boolean]
+
+If true, indicates that the Refresh Token is allowed when this App
+acts as an OAuth Resource.
+
+**SCIM++ Properties:**  - idcsSearchable: true  - multiValued: false
+- mutability: readWrite  - required: false  - returned: default  -
+type: boolean  - uniqueness: none
+
+--allowed-grants [complex type]
+
+List of grant-types that this App is allowed to use when it acts as an
+OAuthClient.
+
+**SCIM++ Properties:**  - caseExact: true  - idcsSearchable: true  -
+multiValued: true  - mutability: readWrite  - required: false  -
+returned: default  - type: string  - uniqueness: none This is a
+complex type whose value must be valid JSON. The value can be provided
+as a string on the command line or passed in as a file using the
+file://path/to/file syntax.
+
+The "--generate-param-json-input" option can be used to generate an
+example of the JSON which must be provided. We recommend storing this
+example in a file, modifying it as needed and then passing it back in
+via the file:// syntax.
+
+--allowed-operations [text]
+
+OPTIONAL. Required only when this App acts as an OAuthClient.
+Supported values are ‘introspect’ and ‘onBehalfOfUser’. The value
+‘introspect’ allows the client to look inside the access-token. The
+value ‘onBehalfOfUser’ overrides how the client’s privileges are
+combined with the privileges of the Subject User. Ordinarily,
+authorization calculates the set of effective privileges as the
+intersection of the client’s privileges and the user’s privileges. The
+value ‘onBehalfOf’ indicates that authorization should ignore the
+privileges of the client and use only the user’s privileges to
+calculate the effective privileges.
+
+**SCIM++ Properties:**  - caseExact: true  - idcsSearchable: true  -
+multiValued: true  - mutability: readWrite  - required: false  -
+returned: default  - type: string  - uniqueness: none
+
+Accepted values are:
+
+   introspect, onBehalfOfUser
+
+--allowed-scopes [complex type]
+
+A list of scopes (exposed by this App or by other Apps) that this App
+is allowed to access when it acts as an OAuthClient.
+
+**SCIM++ Properties:**  - caseExact: true  - idcsCompositeKey: [fqs]
+- idcsSearchable: true  - multiValued: true  - mutability: readWrite
+- required: false  - returned: default  - type: complex  - uniqueness:
+none
+
+This option is a JSON list with items of type AppAllowedScopes.  For
+documentation on AppAllowedScopes please see our API reference: https
+://docs.cloud.oracle.com/api/#/en/identitydomains/v1/datatypes/AppAll
+owedScopes. This is a complex type whose value must be valid JSON. The
+value can be provided as a string on the command line or passed in as
+a file using the file://path/to/file syntax.
+
+The "--generate-param-json-input" option can be used to generate an
+example of the JSON which must be provided. We recommend storing this
+example in a file, modifying it as needed and then passing it back in
+via the file:// syntax.
+
+--allowed-tags [complex type]
+
+A list of tags, acting as an OAuthClient, this App is allowed to
+access.
+
+**Added In:** 17.4.6
+
+**SCIM++ Properties:**  - idcsCompositeKey: [key, value]  -
+idcsSearchable: true  - multiValued: true  - mutability: readWrite  -
+required: false  - returned: default  - type: complex  - uniqueness:
+none
+
+This option is a JSON list with items of type AppAllowedTags.  For
+documentation on AppAllowedTags please see our API reference: https:/
+/docs.cloud.oracle.com/api/#/en/identitydomains/v1/datatypes/AppAllow
+edTags. This is a complex type whose value must be valid JSON. The
+value can be provided as a string on the command line or passed in as
+a file using the file://path/to/file syntax.
+
+The "--generate-param-json-input" option can be used to generate an
+example of the JSON which must be provided. We recommend storing this
+example in a file, modifying it as needed and then passing it back in
+via the file:// syntax.
+
+--app-icon [text]
+
+Application icon.
+
+**SCIM++ Properties:**  - idcsSearchable: false  - multiValued: false
+- mutability: readWrite  - required: false  - returned: request  -
+type: string  - uniqueness: none
+
+--app-signon-policy [complex type]
+
+This is a complex type whose value must be valid JSON. The value can
+be provided as a string on the command line or passed in as a file
+using the file://path/to/file syntax.
+
+The "--generate-param-json-input" option can be used to generate an
+example of the JSON which must be provided. We recommend storing this
+example in a file, modifying it as needed and then passing it back in
+via the file:// syntax.
+
+--app-thumbnail [text]
+
+Application thumbnail.
+
+**SCIM++ Properties:**  - idcsSearchable: false  - multiValued: false
+- mutability: readWrite  - required: false  - returned: request  -
+type: string  - uniqueness: none
+
+--apps-network-perimeters [complex type]
+
+Network Perimeter
+
+**Added In:** 2010242156
+
+**SCIM++ Properties:**  - idcsCompositeKey: [value]  - multiValued:
+true  - mutability: readWrite  - required: false  - returned: default
+- type: complex
+
+This option is a JSON list with items of type
+AppAppsNetworkPerimeters.  For documentation on
+AppAppsNetworkPerimeters please see our API reference: https://docs.c
+loud.oracle.com/api/#/en/identitydomains/v1/datatypes/AppAppsNetworkP
+erimeters. This is a complex type whose value must be valid JSON. The
+value can be provided as a string on the command line or passed in as
+a file using the file://path/to/file syntax.
+
+The "--generate-param-json-input" option can be used to generate an
+example of the JSON which must be provided. We recommend storing this
+example in a file, modifying it as needed and then passing it back in
+via the file:// syntax.
+
+--as-opc-service [complex type]
+
+This is a complex type whose value must be valid JSON. The value can
+be provided as a string on the command line or passed in as a file
+using the file://path/to/file syntax.
+
+The "--generate-param-json-input" option can be used to generate an
+example of the JSON which must be provided. We recommend storing this
+example in a file, modifying it as needed and then passing it back in
+via the file:// syntax.
+
+--attr-rendering-metadata [complex type]
+
+Label for the attribute to be shown in the UI.
+
+**SCIM++ Properties:**  - idcsCompositeKey: [name]  - idcsSearchable:
+false  - multiValued: true  - mutability: immutable  - required: false
+- returned: default  - type: complex  - uniqueness: none
+
+This option is a JSON list with items of type
+AppAttrRenderingMetadata.  For documentation on
+AppAttrRenderingMetadata please see our API reference: https://docs.c
+loud.oracle.com/api/#/en/identitydomains/v1/datatypes/AppAttrRenderin
+gMetadata. This is a complex type whose value must be valid JSON. The
+value can be provided as a string on the command line or passed in as
+a file using the file://path/to/file syntax.
+
+The "--generate-param-json-input" option can be used to generate an
+example of the JSON which must be provided. We recommend storing this
+example in a file, modifying it as needed and then passing it back in
+via the file:// syntax.
+
+--attribute-sets [text]
+
+A multi-valued list of strings indicating the return type of attribute
+definition. The specified set of attributes can be fetched by the
+return type of the attribute. One or more values can be given together
+to fetch more than one group of attributes. If ‘attributes’ query
+parameter is also available, union of the two is fetched. Valid values
+- all, always, never, request, default. Values are case-insensitive.
+
+Accepted values are:
+
+   all, always, default, never, request
+
+--attributes [text]
+
+A comma-delimited string that specifies the names of resource
+attributes that should be returned in the response. By default, a
+response that contains resource attributes contains only attributes
+that are defined in the schema for that resource type as
+returned=always or returned=default. An attribute that is defined as
+returned=request is returned in a response only if the request
+specifies its name in the value of this query parameter. If a request
+specifies this query parameter, the response contains the attributes
+that this query parameter specifies, as well as any attribute that is
+defined as returned=always.
+
+--audience [text]
+
+The base URI for all of the scopes defined in this App. The value of
+‘audience’ is combined with the ‘value’ of each scope to form an ‘fqs’
+or fully qualified scope.
+
+**SCIM++ Properties:**  - caseExact: false  - idcsSearchable: false  -
+multiValued: false  - mutability: readWrite  - required: false  -
+returned: default  - type: string  - uniqueness: none
+
+--authorization [text]
+
+The Authorization field value consists of credentials containing the
+authentication information of the user agent for the realm of the
+resource being requested.
+
+--bypass-consent [boolean]
+
+If true, indicates that consent should be skipped for all scopes
+
+**Added In:** 19.2.1
+
+**SCIM++ Properties:**  - caseExact: false  - idcsSearchable: false  -
+multiValued: false  - mutability: readWrite  - required: false  -
+returned: default  - type: boolean  - uniqueness: none
+
+--callback-service-url [text]
+
+Callback Service URL
+
+**SCIM++ Properties:**  - caseExact: false  - idcsSearchable: false  -
+multiValued: false  - mutability: readOnly  - required: false  -
+returned: default  - type: string  - uniqueness: none
+
+--certificates [complex type]
+
+Each value of this attribute represent a certificate that this App
+uses when it acts as an OAuthClient.
+
+**SCIM++ Properties:**  - caseExact: false  - idcsCompositeKey:
+[certAlias]  - idcsSearchable: false  - multiValued: true  -
+mutability: readWrite  - required: false  - returned: default  - type:
+complex  - uniqueness: none
+
+This option is a JSON list with items of type AppCertificates.  For
+documentation on AppCertificates please see our API reference: https:
+//docs.cloud.oracle.com/api/#/en/identitydomains/v1/datatypes/AppCert
+ificates. This is a complex type whose value must be valid JSON. The
+value can be provided as a string on the command line or passed in as
+a file using the file://path/to/file syntax.
+
+The "--generate-param-json-input" option can be used to generate an
+example of the JSON which must be provided. We recommend storing this
+example in a file, modifying it as needed and then passing it back in
+via the file:// syntax.
+
+--client-ip-checking [text]
+
+Network Perimeters checking mode
+
+**Added In:** 2010242156
+
+**SCIM++ Properties:**  - caseExact: true  - idcsSearchable: false  -
+multiValued: false  - mutability: readWrite  - required: false  -
+returned: default  - type: string  - uniqueness: none
+
+Accepted values are:
+
+   anywhere, whitelisted
+
+--client-secret [text]
+
+This value is the credential of this App, which this App supplies as a
+password when this App authenticates to the Oracle Public Cloud
+infrastructure. This value is also the client secret of this App when
+it acts as an OAuthClient.
+
+**SCIM++ Properties:**  - caseExact: false  - idcsSearchable: false  -
+idcsSensitive: none  - multiValued: false  - mutability: readOnly  -
+required: false  - returned: default  - type: string  - uniqueness:
+none
+
+--client-type [text]
+
+Specifies the type of access that this App has when it acts as an
+OAuthClient.
+
+**SCIM++ Properties:**  - caseExact: false  - idcsSearchable: false  -
+multiValued: false  - mutability: readWrite  - required: false  -
+returned: default  - type: string  - uniqueness: none
+
+Accepted values are:
+
+   confidential, public, trusted
+
+--cloud-control-properties [complex type]
+
+A collection of arbitrary properties that scope the privileges of a
+cloud-control App.
+
+**Added In:** 18.4.2
+
+**SCIM++ Properties:**  - idcsCompositeKey: [name]  - idcsSearchable:
+false  - multiValued: true  - mutability: readOnly  - required: false
+- returned: request  - type: complex  - uniqueness: none
+
+This option is a JSON list with items of type
+AppCloudControlProperties.  For documentation on
+AppCloudControlProperties please see our API reference: https://docs.
+cloud.oracle.com/api/#/en/identitydomains/v1/datatypes/AppCloudContro
+lProperties. This is a complex type whose value must be valid JSON.
+The value can be provided as a string on the command line or passed in
+as a file using the file://path/to/file syntax.
+
+The "--generate-param-json-input" option can be used to generate an
+example of the JSON which must be provided. We recommend storing this
+example in a file, modifying it as needed and then passing it back in
+via the file:// syntax.
+
+--compartment-ocid [text]
+
+OCI Compartment Id (ocid) in which the resource lives.
+
+**SCIM++ Properties:**  - caseExact: false  - idcsSearchable: false  -
+multiValued: false  - mutability: readOnly  - required: false  -
+returned: default  - type: string  - uniqueness: none
+
+--contact-email-address [text]
+
+Contact Email Address
+
+**Added In:** 19.2.1
+
+**SCIM++ Properties:**  - idcsSearchable: false  - multiValued: false
+- mutability: readWrite  - required: false  - returned: default  -
+type: string  - uniqueness: none
+
+--delegated-service-names [complex type]
+
+Service Names allow to use OCI signature for client authentication
+instead of client credentials
+
+**Added In:** 2207040824
+
+**SCIM++ Properties:**  - caseExact: true  - idcsSearchable: false  -
+multiValued: true  - mutability: readWrite  - required: false  -
+returned: default  - type: string  - uniqueness: none This is a
+complex type whose value must be valid JSON. The value can be provided
+as a string on the command line or passed in as a file using the
+file://path/to/file syntax.
+
+The "--generate-param-json-input" option can be used to generate an
+example of the JSON which must be provided. We recommend storing this
+example in a file, modifying it as needed and then passing it back in
+via the file:// syntax.
+
+--delete-in-progress [boolean]
+
+A boolean flag indicating this resource in the process of being
+deleted. Usually set to true when synchronous deletion of the resource
+would take too long.
+
+**SCIM++ Properties:**  - caseExact: false  - idcsSearchable: true  -
+multiValued: false  - mutability: readOnly  - required: false  -
+returned: default  - type: boolean  - uniqueness: none
+
+--description [text]
+
+Description of the application.
+
+**SCIM++ Properties:**  - caseExact: false  - idcsSearchable: true  -
+multiValued: false  - mutability: readWrite  - required: false  -
+returned: default  - type: string  - uniqueness: none
+
+--disable-kmsi-token-authentication [boolean]
+
+Indicates whether the application is allowed to be access using kmsi
+token.
+
+**Added In:** 2111190457
+
+**SCIM++ Properties:**  - idcsSearchable: false  - multiValued: false
+- mutability: readWrite  - required: false  - returned: always  -
+type: boolean  - uniqueness: none
+
+--domain-ocid [text]
+
+OCI Domain Id (ocid) in which the resource lives.
+
+**SCIM++ Properties:**  - caseExact: false  - idcsSearchable: false  -
+multiValued: false  - mutability: readOnly  - required: false  -
+returned: default  - type: string  - uniqueness: none
+
+--editable-attributes [complex type]
+
+App attributes editable by subject
+
+**Added In:** 18.2.6
+
+**SCIM++ Properties:**  - caseExact: false  - idcsCompositeKey: [name]
+- idcsSearchable: false  - multiValued: true  - mutability: readOnly
+- required: false  - returned: request  - type: complex  - uniqueness:
+none
+
+This option is a JSON list with items of type AppEditableAttributes.
+For documentation on AppEditableAttributes please see our API
+reference: https://docs.cloud.oracle.com/api/#/en/identitydomains/v1/
+datatypes/AppEditableAttributes. This is a complex type whose value
+must be valid JSON. The value can be provided as a string on the
+command line or passed in as a file using the file://path/to/file
+syntax.
+
+The "--generate-param-json-input" option can be used to generate an
+example of the JSON which must be provided. We recommend storing this
+example in a file, modifying it as needed and then passing it back in
+via the file:// syntax.
+
+--error-page-url [text]
+
+This attribute specifies the URL of the page to which an application
+will redirect an end-user in case of error.
+
+**SCIM++ Properties:**  - caseExact: false  - idcsSearchable: false  -
+multiValued: false  - mutability: readWrite  - required: false  -
+returned: default  - type: string  - uniqueness: none
+
+--ext-dbcs-app [complex type]
+
+This is a complex type whose value must be valid JSON. The value can
+be provided as a string on the command line or passed in as a file
+using the file://path/to/file syntax.
+
+The "--generate-param-json-input" option can be used to generate an
+example of the JSON which must be provided. We recommend storing this
+example in a file, modifying it as needed and then passing it back in
+via the file:// syntax.
+
+--ext-enterprise-app-app [complex type]
+
+This is a complex type whose value must be valid JSON. The value can
+be provided as a string on the command line or passed in as a file
+using the file://path/to/file syntax.
+
+The "--generate-param-json-input" option can be used to generate an
+example of the JSON which must be provided. We recommend storing this
+example in a file, modifying it as needed and then passing it back in
+via the file:// syntax.
+
+--ext-form-fill-app-app [complex type]
+
+This is a complex type whose value must be valid JSON. The value can
+be provided as a string on the command line or passed in as a file
+using the file://path/to/file syntax.
+
+The "--generate-param-json-input" option can be used to generate an
+example of the JSON which must be provided. We recommend storing this
+example in a file, modifying it as needed and then passing it back in
+via the file:// syntax.
+
+--ext-form-fill-app-template-app-template [complex type]
+
+This is a complex type whose value must be valid JSON. The value can
+be provided as a string on the command line or passed in as a file
+using the file://path/to/file syntax.
+
+The "--generate-param-json-input" option can be used to generate an
+example of the JSON which must be provided. We recommend storing this
+example in a file, modifying it as needed and then passing it back in
+via the file:// syntax.
+
+--ext-kerberos-realm-app [complex type]
+
+This is a complex type whose value must be valid JSON. The value can
+be provided as a string on the command line or passed in as a file
+using the file://path/to/file syntax.
+
+The "--generate-param-json-input" option can be used to generate an
+example of the JSON which must be provided. We recommend storing this
+example in a file, modifying it as needed and then passing it back in
+via the file:// syntax.
+
+--ext-managedapp-app [complex type]
+
+This is a complex type whose value must be valid JSON. The value can
+be provided as a string on the command line or passed in as a file
+using the file://path/to/file syntax.
+
+The "--generate-param-json-input" option can be used to generate an
+example of the JSON which must be provided. We recommend storing this
+example in a file, modifying it as needed and then passing it back in
+via the file:// syntax.
+
+--ext-multicloud-service-app-app [complex type]
+
+This is a complex type whose value must be valid JSON. The value can
+be provided as a string on the command line or passed in as a file
+using the file://path/to/file syntax.
+
+The "--generate-param-json-input" option can be used to generate an
+example of the JSON which must be provided. We recommend storing this
+example in a file, modifying it as needed and then passing it back in
+via the file:// syntax.
+
+--ext-oci-tags [complex type]
+
+This is a complex type whose value must be valid JSON. The value can
+be provided as a string on the command line or passed in as a file
+using the file://path/to/file syntax.
+
+The "--generate-param-json-input" option can be used to generate an
+example of the JSON which must be provided. We recommend storing this
+example in a file, modifying it as needed and then passing it back in
+via the file:// syntax.
+
+--ext-opc-service-app [complex type]
+
+This is a complex type whose value must be valid JSON. The value can
+be provided as a string on the command line or passed in as a file
+using the file://path/to/file syntax.
+
+The "--generate-param-json-input" option can be used to generate an
+example of the JSON which must be provided. We recommend storing this
+example in a file, modifying it as needed and then passing it back in
+via the file:// syntax.
+
+--ext-radius-app-app [complex type]
+
+This is a complex type whose value must be valid JSON. The value can
+be provided as a string on the command line or passed in as a file
+using the file://path/to/file syntax.
+
+The "--generate-param-json-input" option can be used to generate an
+example of the JSON which must be provided. We recommend storing this
+example in a file, modifying it as needed and then passing it back in
+via the file:// syntax.
+
+--ext-requestable-app [complex type]
+
+This is a complex type whose value must be valid JSON. The value can
+be provided as a string on the command line or passed in as a file
+using the file://path/to/file syntax.
+
+The "--generate-param-json-input" option can be used to generate an
+example of the JSON which must be provided. We recommend storing this
+example in a file, modifying it as needed and then passing it back in
+via the file:// syntax.
+
+--ext-saml-service-provider-app [complex type]
+
+This is a complex type whose value must be valid JSON. The value can
+be provided as a string on the command line or passed in as a file
+using the file://path/to/file syntax.
+
+The "--generate-param-json-input" option can be used to generate an
+example of the JSON which must be provided. We recommend storing this
+example in a file, modifying it as needed and then passing it back in
+via the file:// syntax.
+
+--ext-web-tier-policy-app [complex type]
+
+This is a complex type whose value must be valid JSON. The value can
+be provided as a string on the command line or passed in as a file
+using the file://path/to/file syntax.
+
+The "--generate-param-json-input" option can be used to generate an
+example of the JSON which must be provided. We recommend storing this
+example in a file, modifying it as needed and then passing it back in
+via the file:// syntax.
+
+--force
+
+Perform update without prompting for confirmation.
+
+--from-json [text]
+
+Provide input to this command as a JSON document from a file using the
+file://path-to/file syntax.
+
+The "--generate-full-command-json-input" option can be used to
+generate a sample json file to be used with this command option. The
+key names are pre-populated and match the command option names
+(converted to camelCase format, e.g. compartment-id –> compartmentId),
+while the values of the keys need to be populated by the user before
+using the sample file as an input to this command. For any command
+option that accepts multiple values, the value of the key can be a
+JSON array.
+
+Options can still be provided on the command line. If an option exists
+in both the JSON document and the command line then the command line
+specified value will be used.
+
+For examples on usage of this option, please see our “using CLI with
+advanced JSON options” link: https://docs.cloud.oracle.com/iaas/Conte
+nt/API/SDKDocs/cliusing.htm#AdvancedJSONOptions
+
+--granted-app-roles [complex type]
+
+A list of AppRoles that are granted to this App (and that are defined
+by other Apps). Within the Oracle Public Cloud infrastructure, this
+allows AppID-based association. Such an association allows this App to
+act as a consumer and thus to access resources of another App that
+acts as a producer.
+
+**SCIM++ Properties:**  - caseExact: true  - idcsCompositeKey: [value]
+- idcsSearchable: true  - multiValued: true  - mutability: readOnly  -
+required: false  - returned: default  - type: complex  - uniqueness:
+none
+
+This option is a JSON list with items of type AppGrantedAppRoles.  For
+documentation on AppGrantedAppRoles please see our API reference: htt
+ps://docs.cloud.oracle.com/api/#/en/identitydomains/v1/datatypes/AppG
+rantedAppRoles. This is a complex type whose value must be valid JSON.
+The value can be provided as a string on the command line or passed in
+as a file using the file://path/to/file syntax.
+
+The "--generate-param-json-input" option can be used to generate an
+example of the JSON which must be provided. We recommend storing this
+example in a file, modifying it as needed and then passing it back in
+via the file:// syntax.
+
+--grants [complex type]
+
+Grants assigned to the app
+
+**SCIM++ Properties:**  - idcsCompositeKey: [value]  - idcsSearchable:
+true  - multiValued: true  - mutability: readOnly  - required: false
+- returned: request  - type: complex  - uniqueness: none
+
+This option is a JSON list with items of type AppGrants.  For
+documentation on AppGrants please see our API reference: https://docs
+.cloud.oracle.com/api/#/en/identitydomains/v1/datatypes/AppGrants.
+This is a complex type whose value must be valid JSON. The value can
+be provided as a string on the command line or passed in as a file
+using the file://path/to/file syntax.
+
+The "--generate-param-json-input" option can be used to generate an
+example of the JSON which must be provided. We recommend storing this
+example in a file, modifying it as needed and then passing it back in
+via the file:// syntax.
+
+--hashed-client-secret [text]
+
+Hashed Client Secret. This hash-value is used to verify the
+‘clientSecret’ credential of this App
+
+**Added In:** 2106240046
+
+**SCIM++ Properties:**  - idcsSearchable: false  - idcsSensitive:
+hash_sc  - multiValued: false  - mutability: readOnly  - required:
+false  - returned: request  - type: string  - uniqueness: none
+
+--home-page-url [text]
+
+Home Page URL
+
+**Added In:** 19.2.1
+
+**SCIM++ Properties:**  - idcsSearchable: false  - multiValued: false
+- mutability: readWrite  - required: false  - returned: default  -
+type: string  - uniqueness: none
+
+--icon [text]
+
+URL of application icon.
+
+**SCIM++ Properties:**  - idcsSearchable: false  - multiValued: false
+- mutability: readWrite  - required: false  - returned: default  -
+type: reference  - uniqueness: none
+
+--id [text]
+
+Unique identifier for the SCIM Resource as defined by the Service
+Provider. Each representation of the Resource MUST include a non-empty
+id value. This identifier MUST be unique across the Service Provider’s
+entire set of Resources. It MUST be a stable, non-reassignable
+identifier that does not change when the same Resource is returned in
+subsequent requests. The value of the id attribute is always issued by
+the Service Provider and MUST never be specified by the Service
+Consumer. bulkId: is a reserved keyword and MUST NOT be used in the
+unique identifier.
+
+**SCIM++ Properties:**  - caseExact: false  - idcsSearchable: true  -
+multiValued: false  - mutability: readOnly  - required: false  -
+returned: always  - type: string  - uniqueness: global
+
+--id-token-enc-algo [text]
+
+Encryption Alogrithm to use for encrypting ID token.
+
+**Added In:** 2010242156
+
+**SCIM++ Properties:**  - caseExact: false  - idcsSearchable: false  -
+multiValued: false  - mutability: readWrite  - required: false  -
+returned: default  - type: string  - uniqueness: none
+
+--idcs-created-by [complex type]
+
+This is a complex type whose value must be valid JSON. The value can
+be provided as a string on the command line or passed in as a file
+using the file://path/to/file syntax.
+
+The "--generate-param-json-input" option can be used to generate an
+example of the JSON which must be provided. We recommend storing this
+example in a file, modifying it as needed and then passing it back in
+via the file:// syntax.
+
+--idcs-last-modified-by [complex type]
+
+This is a complex type whose value must be valid JSON. The value can
+be provided as a string on the command line or passed in as a file
+using the file://path/to/file syntax.
+
+The "--generate-param-json-input" option can be used to generate an
+example of the JSON which must be provided. We recommend storing this
+example in a file, modifying it as needed and then passing it back in
+via the file:// syntax.
+
+--idcs-last-upgraded-in-release [text]
+
+The release number when the resource was upgraded.
+
+**SCIM++ Properties:**  - caseExact: false  - idcsSearchable: false  -
+multiValued: false  - mutability: readOnly  - required: false  -
+returned: request  - type: string  - uniqueness: none
+
+--idcs-prevented-operations [text]
+
+Each value of this attribute specifies an operation that only an
+internal client may perform on this particular resource.
+
+**SCIM++ Properties:**  - idcsSearchable: false  - multiValued: true
+- mutability: readOnly  - required: false  - returned: request  -
+type: string  - uniqueness: none
+
+Accepted values are:
+
+   delete, replace, update
+
+--identity-providers [complex type]
+
+A list of IdentityProvider assigned to app. A user trying to access
+this app will be automatically redirected to configured IdP during the
+authentication phase, before being able to access App.
+
+**SCIM++ Properties:**  - idcsCompositeKey: [value]  - idcsSearchable:
+false  - multiValued: true  - mutability: readWrite  - required: false
+- returned: request  - type: complex
+
+This option is a JSON list with items of type AppIdentityProviders.
+For documentation on AppIdentityProviders please see our API
+reference: https://docs.cloud.oracle.com/api/#/en/identitydomains/v1/
+datatypes/AppIdentityProviders. This is a complex type whose value
+must be valid JSON. The value can be provided as a string on the
+command line or passed in as a file using the file://path/to/file
+syntax.
+
+The "--generate-param-json-input" option can be used to generate an
+example of the JSON which must be provided. We recommend storing this
+example in a file, modifying it as needed and then passing it back in
+via the file:// syntax.
+
+--idp-policy [complex type]
+
+This is a complex type whose value must be valid JSON. The value can
+be provided as a string on the command line or passed in as a file
+using the file://path/to/file syntax.
+
+The "--generate-param-json-input" option can be used to generate an
+example of the JSON which must be provided. We recommend storing this
+example in a file, modifying it as needed and then passing it back in
+via the file:// syntax.
+
+--if-match [text]
+
+Used to make the request conditional on an ETag
+
+--infrastructure [boolean]
+
+If true, this App is an internal infrastructure App.
+
+**SCIM++ Properties:**  - idcsSearchable: true  - multiValued: false
+- mutability: readOnly  - required: false  - returned: default  -
+type: boolean  - uniqueness: none
+
+--is-alias-app [boolean]
+
+If true, this App is an AliasApp and it cannot be granted to an end-
+user directly.
+
+**SCIM++ Properties:**  - idcsSearchable: true  - multiValued: false
+- mutability: immutable  - required: false  - returned: always  -
+type: boolean  - uniqueness: none
+
+--is-database-service [boolean]
+
+If true, this application acts as database service Application
+
+**Added In:** 18.2.2
+
+**SCIM++ Properties:**  - idcsSearchable: true  - multiValued: false
+- mutability: readOnly  - required: false  - type: boolean
+
+--is-enterprise-app [boolean]
+
+If true, this app acts as Enterprise app with Authentication and URL
+Authz policy.
+
+**Added In:** 19.2.1
+
+**SCIM++ Properties:**  - idcsSearchable: true  - multiValued: false
+- mutability: readWrite  - required: false  - returned: default  -
+type: boolean  - uniqueness: none
+
+--is-form-fill [boolean]
+
+If true, this application acts as FormFill Application
+
+**SCIM++ Properties:**  - idcsSearchable: true  - multiValued: false
+- mutability: readWrite  - required: false  - returned: default  -
+type: boolean  - uniqueness: none
+
+--is-kerberos-realm [boolean]
+
+If true, indicates that this App supports Kerberos Authentication
+
+**SCIM++ Properties:**  - idcsSearchable: true  - multiValued: false
+- mutability: readWrite  - required: false  - returned: default  -
+type: boolean  - uniqueness: none
+
+--is-login-target [boolean]
+
+If true, this App allows runtime services to log end users into this
+App automatically.
+
+**SCIM++ Properties:**  - idcsSearchable: true  - multiValued: false
+- mutability: readWrite  - required: false  - returned: default  -
+type: boolean  - uniqueness: none
+
+--is-managed-app [boolean]
+
+If true, indicates that access to this App requires an account. That
+is, in order to log in to the App, a User must use an application-
+specific identity that is maintained in the remote identity-repository
+of that App.
+
+**SCIM++ Properties:**  - idcsSearchable: true  - multiValued: false
+- mutability: readOnly  - required: false  - returned: default  -
+type: boolean  - uniqueness: none
+
+--is-mobile-target [boolean]
+
+If true, indicates that the App should be visible in each end-user’s
+mobile application.
+
+**SCIM++ Properties:**  - idcsSearchable: true  - multiValued: false
+- mutability: readWrite  - required: false  - returned: default  -
+type: boolean  - uniqueness: none
+
+--is-multicloud-service-app [boolean]
+
+If true, indicates the app is used for multicloud service integration.
+
+**Added In:** 2301202328
+
+**SCIM++ Properties:**  - idcsSearchable: true  - multiValued: false
+- mutability: immutable  - required: false  - returned: default  -
+type: boolean  - uniqueness: none
+
+--is-o-auth-client [boolean]
+
+If true, this application acts as an OAuth Client
+
+**SCIM++ Properties:**  - idcsSearchable: true  - multiValued: false
+- mutability: readWrite  - required: false  - returned: default  -
+type: boolean  - uniqueness: none
+
+--is-o-auth-resource [boolean]
+
+If true, indicates that this application acts as an OAuth Resource.
+
+**SCIM++ Properties:**  - idcsSearchable: true  - multiValued: false
+- mutability: readWrite  - required: false  - returned: default  -
+type: boolean  - uniqueness: none
+
+--is-obligation-capable [boolean]
+
+This flag indicates if the App is capable of validating obligations
+with the token for allowing access to the App.
+
+**SCIM++ Properties:**  - caseExact: false  - idcsSearchable: true  -
+multiValued: false  - mutability: readWrite  - required: false  -
+returned: default  - type: boolean  - uniqueness: none
+
+--is-opc-service [boolean]
+
+If true, this application is an Oracle Public Cloud service-instance.
+
+**SCIM++ Properties:**  - idcsSearchable: true  - multiValued: false
+- mutability: readOnly  - required: false  - returned: default  -
+type: boolean  - uniqueness: none
+
+--is-radius-app [boolean]
+
+If true, this application acts as an Radius App
+
+**Added In:** 20.1.3
+
+**SCIM++ Properties:**  - idcsSearchable: true  - multiValued: false
+- mutability: readWrite  - required: false  - returned: default  -
+type: boolean  - uniqueness: none
+
+--is-saml-service-provider [boolean]
+
+If true, then this App acts as a SAML Service Provider.
+
+**SCIM++ Properties:**  - idcsSearchable: true  - multiValued: false
+- mutability: readWrite  - required: false  - returned: default  -
+type: boolean  - uniqueness: none
+
+--is-unmanaged-app [boolean]
+
+If true, indicates that this application accepts an Oracle Cloud
+Identity Service User as a login-identity (does not require an
+account) and relies for authorization on the User’s memberships in
+AppRoles.
+
+**SCIM++ Properties:**  - idcsSearchable: true  - multiValued: false
+- mutability: immutable  - required: false  - returned: default  -
+type: boolean  - uniqueness: none
+
+--is-web-tier-policy [boolean]
+
+If true, the webtier policy is active
+
+**SCIM++ Properties:**  - idcsSearchable: true  - multiValued: false
+- mutability: readWrite  - required: false  - returned: default  -
+type: boolean  - uniqueness: none
+
+--landing-page-url [text]
+
+The URL of the landing page for this App, which is the first page that
+an end user should see if runtime services log that end user in to
+this App automatically.
+
+**SCIM++ Properties:**  - idcsSearchable: false  - multiValued: false
+- mutability: readWrite  - required: false  - returned: default  -
+type: string  - uniqueness: none
+
+--linking-callback-url [text]
+
+This attribute specifies the callback URL for the social linking
+operation.
+
+**Added In:** 18.2.4
+
+**SCIM++ Properties:**  - caseExact: false  - idcsSearchable: false  -
+multiValued: false  - mutability: readWrite  - required: false  -
+returned: default  - type: string  - uniqueness: none
+
+--login-mechanism [text]
+
+The protocol that runtime services will use to log end users in to
+this App automatically. If ‘OIDC’, then runtime services use the
+OpenID Connect protocol. If ‘SAML’, then runtime services use Security
+Assertion Markup Language protocol.
+
+**SCIM++ Properties:**  - caseExact: true  - idcsSearchable: true  -
+multiValued: false  - mutability: readWrite  - required: false  -
+returned: default  - type: string  - uniqueness: none
+
+Accepted values are:
+
+   FORMFILL, OIDC, RADIUS, SAML
+
+--login-page-url [text]
+
+This attribute specifies the URL of the page that the App uses when an
+end-user signs in to that App.
+
+**SCIM++ Properties:**  - caseExact: false  - idcsSearchable: false  -
+multiValued: false  - mutability: readWrite  - required: false  -
+returned: default  - type: string  - uniqueness: none
+
+--logout-page-url [text]
+
+This attribute specifies the URL of the page that the App uses when an
+end-user signs out.
+
+**Added In:** 17.4.2
+
+**SCIM++ Properties:**  - caseExact: false  - idcsSearchable: false  -
+multiValued: false  - mutability: readWrite  - required: false  -
+returned: default  - type: string  - uniqueness: none
+
+--logout-uri [text]
+
+OAuth will use this URI to logout if this App wants to participate in
+SSO, and if this App’s session gets cleared as part of global logout.
+Note: This attribute is used only if this App acts as an OAuthClient.
+
+**SCIM++ Properties:**  - caseExact: false  - idcsSearchable: false  -
+multiValued: false  - mutability: readWrite  - required: false  -
+returned: default  - type: string  - uniqueness: none
+
+--meta [complex type]
+
+This is a complex type whose value must be valid JSON. The value can
+be provided as a string on the command line or passed in as a file
+using the file://path/to/file syntax.
+
+The "--generate-param-json-input" option can be used to generate an
+example of the JSON which must be provided. We recommend storing this
+example in a file, modifying it as needed and then passing it back in
+via the file:// syntax.
+
+--meter-as-opc-service [boolean]
+
+Indicates whether the application is billed as an OPCService. If true,
+customer is not billed for runtime operations of the app.
+
+**Added In:** 18.4.2
+
+**SCIM++ Properties:**  - idcsSearchable: false  - multiValued: false
+- mutability: readOnly  - required: false  - returned: always  - type:
+boolean  - uniqueness: none
+
+--migrated [boolean]
+
+If true, this App was migrated from an earlier version of Oracle
+Public Cloud infrastructure (and may therefore require special
+handling from runtime services such as OAuth or SAML). If false, this
+App requires no special handling from runtime services.
+
+**SCIM++ Properties:**  - idcsSearchable: true  - multiValued: false
+- mutability: readOnly  - required: false  - returned: default  -
+type: boolean  - uniqueness: none
+
+--name [text]
+
+Name of the application. Also serves as username if the application
+authenticates to Oracle Public Cloud infrastructure. This name may not
+be user-friendly and cannot be changed once an App is created.
+
+**SCIM++ Properties:**  - caseExact: false  - idcsSearchable: true  -
+multiValued: false  - mutability: immutable  - required: false  -
+returned: default  - type: string  - uniqueness: server
+
+--ocid [text]
+
+Unique OCI identifier for the SCIM Resource.
+
+**SCIM++ Properties:**  - caseExact: true  - idcsSearchable: true  -
+multiValued: false  - mutability: immutable  - required: false  -
+returned: default  - type: string  - uniqueness: global
+
+--post-logout-redirect-uris [complex type]
+
+Each value of this attribute is the URI of a landing page within this
+App. It is used only when this App, acting as an OAuthClient,
+initiates the logout flow and wants to be redirected back to one of
+its landing pages.
+
+**SCIM++ Properties:**  - caseExact: false  - idcsSearchable: false  -
+multiValued: true  - mutability: readWrite  - required: false  -
+returned: default  - type: string  - uniqueness: none This is a
+complex type whose value must be valid JSON. The value can be provided
+as a string on the command line or passed in as a file using the
+file://path/to/file syntax.
+
+The "--generate-param-json-input" option can be used to generate an
+example of the JSON which must be provided. We recommend storing this
+example in a file, modifying it as needed and then passing it back in
+via the file:// syntax.
+
+--privacy-policy-url [text]
+
+Privacy Policy URL
+
+**Added In:** 19.2.1
+
+**SCIM++ Properties:**  - idcsSearchable: false  - multiValued: false
+- mutability: readWrite  - required: false  - returned: default  -
+type: string  - uniqueness: none
+
+--product-logo-url [text]
+
+Application Logo URL
+
+**Added In:** 19.2.1
+
+**SCIM++ Properties:**  - idcsSearchable: false  - multiValued: false
+- mutability: readWrite  - required: false  - returned: default  -
+type: string  - uniqueness: none
+
+--product-name [text]
+
+Product Name
+
+**Added In:** 19.2.1
+
+**SCIM++ Properties:**  - idcsSearchable: false  - multiValued: false
+- mutability: readWrite  - required: false  - returned: default  -
+type: string  - uniqueness: none
+
+--protectable-secondary-audiences [complex type]
+
+A list of secondary audiences–additional URIs to be added
+automatically to any OAuth token that allows access to this App. Note:
+This attribute is used mainly for backward compatibility in certain
+Oracle Public Cloud Apps.
+
+**Added In:** 18.2.2
+
+**SCIM++ Properties:**  - caseExact: false  - idcsCompositeKey:
+[value]  - idcsSearchable: false  - multiValued: true  - mutability:
+readWrite  - required: false  - returned: default  - type: complex  -
+uniqueness: none
+
+This option is a JSON list with items of type
+AppProtectableSecondaryAudiences.  For documentation on
+AppProtectableSecondaryAudiences please see our API reference: https:
+//docs.cloud.oracle.com/api/#/en/identitydomains/v1/datatypes/AppProt
+ectableSecondaryAudiences. This is a complex type whose value must be
+valid JSON. The value can be provided as a string on the command line
+or passed in as a file using the file://path/to/file syntax.
+
+The "--generate-param-json-input" option can be used to generate an
+example of the JSON which must be provided. We recommend storing this
+example in a file, modifying it as needed and then passing it back in
+via the file:// syntax.
+
+--radius-policy [complex type]
+
+This is a complex type whose value must be valid JSON. The value can
+be provided as a string on the command line or passed in as a file
+using the file://path/to/file syntax.
+
+The "--generate-param-json-input" option can be used to generate an
+example of the JSON which must be provided. We recommend storing this
+example in a file, modifying it as needed and then passing it back in
+via the file:// syntax.
+
+--ready-to-upgrade [boolean]
+
+If true, this App requires an upgrade and mandates attention from
+application administrator. The flag is used by UI to indicate this app
+is ready to upgrade.
+
+**SCIM++ Properties:**  - idcsSearchable: true  - multiValued: false
+- mutability: readOnly  - required: false  - returned: default  -
+type: boolean  - uniqueness: none
+
+--redirect-uris [complex type]
+
+OPTIONAL. Each value is a URI within this App. This attribute is
+required when this App acts as an OAuthClient and is involved in
+three-legged flows (authorization-code flows).
+
+**SCIM++ Properties:**  - caseExact: false  - idcsSearchable: false  -
+multiValued: true  - mutability: readWrite  - required: false  -
+returned: default  - type: string  - uniqueness: none This is a
+complex type whose value must be valid JSON. The value can be provided
+as a string on the command line or passed in as a file using the
+file://path/to/file syntax.
+
+The "--generate-param-json-input" option can be used to generate an
+example of the JSON which must be provided. We recommend storing this
+example in a file, modifying it as needed and then passing it back in
+via the file:// syntax.
+
+--refresh-token-expiry [integer]
+
+Expiry-time in seconds for a Refresh Token.  Any token that allows
+access to this App, once refreshed, will expire after the specified
+duration.
+
+**SCIM++ Properties:**  - idcsSearchable: false  - multiValued: false
+- mutability: readWrite  - required: false  - returned: default  -
+type: integer  - uniqueness: none
+
+--resource-type-schema-version [text]
+
+An endpoint-specific schema version number to use in the Request.
+Allowed version values are Earliest Version or Latest Version as
+specified in each REST API endpoint description, or any sequential
+number inbetween. All schema attributes/body parameters are a part of
+version 1. After version 1, any attributes added or deprecated will be
+tagged with the version that they were added to or deprecated in. If
+no version is provided, the latest schema version is returned.
+
+--saml-service-provider [complex type]
+
+This is a complex type whose value must be valid JSON. The value can
+be provided as a string on the command line or passed in as a file
+using the file://path/to/file syntax.
+
+The "--generate-param-json-input" option can be used to generate an
+example of the JSON which must be provided. We recommend storing this
+example in a file, modifying it as needed and then passing it back in
+via the file:// syntax.
+
+--scopes [complex type]
+
+Scopes defined by this App. Used when this App acts as an OAuth
+Resource.
+
+**SCIM++ Properties:**  - caseExact: true  - idcsCompositeKey: [value]
+- idcsSearchable: true  - multiValued: true  - mutability: readWrite
+- required: false  - returned: default  - type: complex  - uniqueness:
+none
+
+This option is a JSON list with items of type AppScopes.  For
+documentation on AppScopes please see our API reference: https://docs
+.cloud.oracle.com/api/#/en/identitydomains/v1/datatypes/AppScopes.
+This is a complex type whose value must be valid JSON. The value can
+be provided as a string on the command line or passed in as a file
+using the file://path/to/file syntax.
+
+The "--generate-param-json-input" option can be used to generate an
+example of the JSON which must be provided. We recommend storing this
+example in a file, modifying it as needed and then passing it back in
+via the file:// syntax.
+
+--secondary-audiences [complex type]
+
+A list of secondary audiences–additional URIs to be added
+automatically to any OAuth token that allows access to this App. Note:
+This attribute is used mainly for backward compatibility in certain
+Oracle Public Cloud Apps.
+
+**Deprecated Since: 18.2.6**
+
+**SCIM++ Properties:**  - caseExact: false  - idcsSearchable: false  -
+multiValued: true  - mutability: readWrite  - required: false  -
+returned: default  - type: string  - uniqueness: none This is a
+complex type whose value must be valid JSON. The value can be provided
+as a string on the command line or passed in as a file using the
+file://path/to/file syntax.
+
+The "--generate-param-json-input" option can be used to generate an
+example of the JSON which must be provided. We recommend storing this
+example in a file, modifying it as needed and then passing it back in
+via the file:// syntax.
+
+--service-params [complex type]
+
+Custom attribute that is required to compute other attribute values
+during app creation.
+
+**SCIM++ Properties:**  - idcsCompositeKey: [name]  - idcsSearchable:
+false  - multiValued: true  - mutability: readWrite  - required: false
+- returned: always  - type: complex  - uniqueness: none
+
+This option is a JSON list with items of type AppServiceParams.  For
+documentation on AppServiceParams please see our API reference: https
+://docs.cloud.oracle.com/api/#/en/identitydomains/v1/datatypes/AppSer
+viceParams. This is a complex type whose value must be valid JSON. The
+value can be provided as a string on the command line or passed in as
+a file using the file://path/to/file syntax.
+
+The "--generate-param-json-input" option can be used to generate an
+example of the JSON which must be provided. We recommend storing this
+example in a file, modifying it as needed and then passing it back in
+via the file:// syntax.
+
+--service-type-urn [text]
+
+This Uniform Resource Name (URN) value identifies the type of Oracle
+Public Cloud service of which this app is an instance.
+
+**SCIM++ Properties:**  - caseExact: false  - idcsSearchable: true  -
+multiValued: false  - mutability: readWrite  - required: false  -
+returned: default  - type: string  - uniqueness: none
+
+--service-type-version [text]
+
+This value specifies the version of the Oracle Public Cloud service of
+which this App is an instance
+
+**SCIM++ Properties:**  - caseExact: false  - idcsSearchable: true  -
+multiValued: false  - mutability: readWrite  - required: false  -
+returned: default  - type: string  - uniqueness: none
+
+--show-in-my-apps [boolean]
+
+If true, this app will be displayed in the MyApps page of each end-
+user who has access to the App.
+
+**Added In:** 18.1.2
+
+**SCIM++ Properties:**  - idcsSearchable: true  - multiValued: false
+- mutability: readWrite  - required: false  - returned: default  -
+type: boolean  - uniqueness: none
+
+--signon-policy [complex type]
+
+This is a complex type whose value must be valid JSON. The value can
+be provided as a string on the command line or passed in as a file
+using the file://path/to/file syntax.
+
+The "--generate-param-json-input" option can be used to generate an
+example of the JSON which must be provided. We recommend storing this
+example in a file, modifying it as needed and then passing it back in
+via the file:// syntax.
+
+--tags [complex type]
+
+A list of tags on this resource.
+
+**SCIM++ Properties:**  - idcsCompositeKey: [key, value]  -
+idcsSearchable: true  - multiValued: true  - mutability: readWrite  -
+required: false  - returned: request  - type: complex  - uniqueness:
+none
+
+This option is a JSON list with items of type Tags.  For documentation
+on tags please see our API reference: https://docs.cloud.oracle.com/a
+pi/#/en/identitydomains/v1/datatypes/Tags. This is a complex type
+whose value must be valid JSON. The value can be provided as a string
+on the command line or passed in as a file using the
+file://path/to/file syntax.
+
+The "--generate-param-json-input" option can be used to generate an
+example of the JSON which must be provided. We recommend storing this
+example in a file, modifying it as needed and then passing it back in
+via the file:// syntax.
+
+--tenancy-ocid [text]
+
+OCI Tenant Id (ocid) in which the resource lives.
+
+**SCIM++ Properties:**  - caseExact: false  - idcsSearchable: false  -
+multiValued: false  - mutability: readOnly  - required: false  -
+returned: default  - type: string  - uniqueness: none
+
+--terms-of-service-url [text]
+
+Terms of Service URL
+
+**Added In:** 19.2.1
+
+**SCIM++ Properties:**  - idcsSearchable: false  - multiValued: false
+- mutability: readWrite  - required: false  - returned: default  -
+type: string  - uniqueness: none
+
+--terms-of-use [complex type]
+
+This is a complex type whose value must be valid JSON. The value can
+be provided as a string on the command line or passed in as a file
+using the file://path/to/file syntax.
+
+The "--generate-param-json-input" option can be used to generate an
+example of the JSON which must be provided. We recommend storing this
+example in a file, modifying it as needed and then passing it back in
+via the file:// syntax.
+
+--trust-policies [complex type]
+
+Trust Policies.
+
+**SCIM++ Properties:**  - idcsCompositeKey: [value]  - idcsSearchable:
+true  - multiValued: true  - mutability: readWrite  - required: false
+- returned: default  - type: complex
+
+This option is a JSON list with items of type AppTrustPolicies.  For
+documentation on AppTrustPolicies please see our API reference: https
+://docs.cloud.oracle.com/api/#/en/identitydomains/v1/datatypes/AppTru
+stPolicies. This is a complex type whose value must be valid JSON. The
+value can be provided as a string on the command line or passed in as
+a file using the file://path/to/file syntax.
+
+The "--generate-param-json-input" option can be used to generate an
+example of the JSON which must be provided. We recommend storing this
+example in a file, modifying it as needed and then passing it back in
+via the file:// syntax.
+
+--trust-scope [text]
+
+Indicates the scope of trust for this App when acting as an
+OAuthClient. A value of ‘Explicit’ indicates that the App is allowed
+to access only the scopes of OAuthResources that are explicitly
+specified as ‘allowedScopes’. A value of ‘Account’ indicates that the
+App is allowed implicitly to access any scope of any OAuthResource
+within the same Oracle Cloud Account. A value of ‘Tags’ indicates that
+the App is allowed to access any scope of any OAuthResource with a
+matching tag within the same Oracle Cloud Account. A value of
+‘Default’ indicates that the Tenant default trust scope configured in
+the Tenant Settings is used.
+
+**Added In:** 17.4.2
+
+**SCIM++ Properties:**  - caseExact: true  - idcsSearchable: false  -
+multiValued: false  - mutability: readWrite  - required: false  -
+returned: default  - type: string  - uniqueness: none
+
+Accepted values are:
+
+   Account, Default, Explicit, Tags
+
+--user-roles [complex type]
+
+A list of AppRoles defined by this UnmanagedApp. Membership in each of
+these AppRoles confers end-user privilege within this App.
+
+**SCIM++ Properties:**  - idcsCompositeKey: [value]  - idcsSearchable:
+false  - multiValued: true  - mutability: readOnly  - required: false
+- returned: request  - type: complex
+
+This option is a JSON list with items of type AppUserRoles.  For
+documentation on AppUserRoles please see our API reference: https://d
+ocs.cloud.oracle.com/api/#/en/identitydomains/v1/datatypes/AppUserRol
+es. This is a complex type whose value must be valid JSON. The value
+can be provided as a string on the command line or passed in as a file
+using the file://path/to/file syntax.
+
+The "--generate-param-json-input" option can be used to generate an
+example of the JSON which must be provided. We recommend storing this
+example in a file, modifying it as needed and then passing it back in
+via the file:// syntax.
+
+
+Global Parameters
+=================
+
+Use "oci --help" for help on global parameters.
+
+"--auth-purpose", "--auth", "--cert-bundle", "--cli-auto-prompt", "--
+cli-rc-file", "--config-file", "--connection-timeout", "--debug", "--
+defaults-file", "--endpoint", "--generate-full-command-json-input", "
+--generate-param-json-input", "--help", "--latest-version", "--max-
+retries", "--no-retry", "--opc-client-request-id", "--opc-request-id",
+"--output", "--profile", "--proxy", "--query", "--raw-output", "--
+read-timeout", "--realm-specific-endpoint", "--region", "--release-
+info", "--request-id", "--version", "-?", "-d", "-h", "-i", "-v"
+
+
+Example using required parameter
+================================
+
+Copy and paste the following example into a JSON file, replacing the
+example parameters with your own.
+
+       oci identity-domains app create --generate-param-json-input based-on-template > based-on-template.json
+       oci identity-domains app create --generate-param-json-input display-name > display-name.json
+       oci identity-domains app create --generate-param-json-input schemas > schemas.json
+
+       oci identity-domains app put --generate-param-json-input based-on-template > based-on-template.json
+       oci identity-domains app put --generate-param-json-input display-name > display-name.json
+       oci identity-domains app put --generate-param-json-input schemas > schemas.json
+
+Copy the following CLI commands into a file named example.sh. Run the
+command by typing “bash example.sh” and replacing the example
+parameters with your own.
+
+Please note this sample will only work in the POSIX-compliant bash-
+like shell. You need to set up the OCI configuration and appropriate
+security policies before trying the examples.
+
+       app_id=$(oci identity-domains app create --based-on-template file://based-on-template.json --display-name file://display-name.json --schemas file://schemas.json --query data.id --raw-output)
+
+       oci identity-domains app put --app-id $app_id --based-on-template file://based-on-template.json --display-name file://display-name.json --schemas file://schemas.json

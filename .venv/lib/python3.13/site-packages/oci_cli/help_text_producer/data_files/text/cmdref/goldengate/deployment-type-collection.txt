@@ -1,0 +1,14 @@
+deployment-type-collection
+**************************
+
+
+Description
+===========
+
+The list of DeploymentTypeDescriptor objects.
+
+
+Available Commands
+==================
+
+* list-deployment-types

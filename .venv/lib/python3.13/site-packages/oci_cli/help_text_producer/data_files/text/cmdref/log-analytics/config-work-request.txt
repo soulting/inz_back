@@ -1,0 +1,16 @@
+config-work-request
+*******************
+
+
+Description
+===========
+
+LogAnalyticsConfigWorkRequest
+
+
+Available Commands
+==================
+
+* get-config-work-request
+
+* list-config-work-requests

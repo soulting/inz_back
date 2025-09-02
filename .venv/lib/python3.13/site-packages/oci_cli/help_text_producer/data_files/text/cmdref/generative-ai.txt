@@ -1,0 +1,90 @@
+generative-ai
+*************
+
+
+Description
+===========
+
+OCI Generative AI is a fully managed service that provides a set of
+state-of-the-art, customizable large language models (LLMs) that cover
+a wide range of use cases for text generation, summarization, and text
+embeddings.
+
+Use the Generative AI service management CLI to create and manage
+dedicated AI clusters, endpoints, custom models, and work requests in
+the Generative AI service. For example, create a custom model by fine-
+tuning an out-of-the-box model using your own data, on a fine-tuning
+dedicated AI cluster. Then, create a hosting dedicated AI cluster with
+an endpoint to host your custom model.
+
+To access your custom model endpoints, or to try the out-of-the-box
+models to generate text, summarize, and create text embeddings see the
+[Generative AI Inference CLI].
+
+To learn more about the service, see the Generative AI documentation.
+
+
+Available Commands
+==================
+
+* dedicated-ai-cluster
+
+  * change-compartment
+
+  * create
+
+  * delete
+
+  * get
+
+  * update
+
+* dedicated-ai-cluster-collection
+
+  * list-dedicated-ai-clusters
+
+* endpoint
+
+  * change-compartment
+
+  * create
+
+  * delete
+
+  * get
+
+  * update
+
+* endpoint-collection
+
+  * list-endpoints
+
+* model
+
+  * change-compartment
+
+  * create
+
+  * delete
+
+  * get
+
+  * update
+
+* model-collection
+
+  * list-models
+
+* work-request
+
+  * get
+
+  * list
+
+* work-request-error
+
+  * list
+
+* work-request-log-entry
+
+  * list-work-request-logs

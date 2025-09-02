@@ -1,0 +1,15 @@
+internal-occm-demand-signal-catalog-resource
+********************************************
+
+
+Description
+===========
+
+A model containing information about the details of a demand signal
+catalog resource.
+
+
+Available Commands
+==================
+
+* list

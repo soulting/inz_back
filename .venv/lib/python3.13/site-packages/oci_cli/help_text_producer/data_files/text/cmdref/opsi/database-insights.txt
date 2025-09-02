@@ -1,0 +1,188 @@
+database-insights
+*****************
+
+
+Description
+===========
+
+Logical grouping used for Operations Insights database-targeted
+operations.
+
+
+Available Commands
+==================
+
+* change
+
+* change-autonomous-database-insight-advanced-features-credential-by-
+  iam
+
+* change-autonomous-database-insight-advanced-features-credential-by-
+  vault
+
+* change-external-mysql
+
+* change-macs-managed-autonomous-database-insight-connection-
+  credential-by-named-credentials
+
+* change-macs-managed-autonomous-database-insight-connection-
+  credential-by-vault
+
+* change-macs-managed-autonomous-database-insight-connection-
+  credentials-by-source
+
+* change-macs-managed-cloud-database-insight-connection-credential-by-
+  iam
+
+* change-macs-managed-cloud-database-insight-connection-credential-by-
+  named-credentials
+
+* change-macs-managed-cloud-database-insight-connection-credential-by-
+  vault
+
+* change-pe-comanaged-database-detail
+
+* create-autonomous-database
+
+* create-em-external-db
+
+* create-external-mysql-database-insight
+
+* create-macs-managed-autonomous-database-insight
+
+* create-macs-managed-cloud-database-insight
+
+* create-mds-my-sql-database
+
+* create-pe-comanged-database
+
+* delete
+
+* disable
+
+* disable-autonomous-database-insight-advanced-features
+
+* enable-autonomous-database
+
+* enable-autonomous-database-insight-advanced-features-credential-by-
+  iam
+
+* enable-autonomous-database-insight-advanced-features-credential-by-
+  vault
+
+* enable-em-external-db
+
+* enable-external-mysql-database-insight
+
+* enable-macs-managed-autonomous-database-insight
+
+* enable-macs-managed-cloud-database-insight
+
+* enable-mds-my-sql-database
+
+* enable-pe-comanaged-database
+
+* get
+
+* ingest-addm-reports
+
+* ingest-database-configuration
+
+* ingest-my-sql-sql-stats
+
+* ingest-my-sql-sql-text
+
+* ingest-sql-bucket
+
+* ingest-sql-plan-lines
+
+* ingest-sql-stats
+
+* ingest-sql-text
+
+* list
+
+* list-addm-db-finding-categories
+
+* list-addm-db-findings-time-series
+
+* list-addm-db-parameter-categories
+
+* list-addm-db-recommendation-categories
+
+* list-addm-db-recommendations-time-series
+
+* list-addm-dbs
+
+* list-database-configurations
+
+* list-sql-plans
+
+* list-sql-searches
+
+* list-sql-texts
+
+* summarize-addm-db-findings
+
+* summarize-addm-db-parameter-changes
+
+* summarize-addm-db-parameters
+
+* summarize-addm-db-recommendations
+
+* summarize-addm-db-schema-objects
+
+* summarize-addm-db-sql-statements
+
+* summarize-database-insight-resource-capacity-trend
+
+* summarize-database-insight-resource-forecast-trend
+
+* summarize-database-insight-resource-statistics
+
+* summarize-database-insight-resource-usage
+
+* summarize-database-insight-resource-usage-trend
+
+* summarize-database-insight-resource-utilization-insight
+
+* summarize-database-insight-tablespace-usage-trend
+
+* summarize-sql-insights
+
+* summarize-sql-plan-insights
+
+* summarize-sql-response-time-distributions
+
+* summarize-sql-statistics
+
+* summarize-sql-statistics-time-series
+
+* summarize-sql-statistics-time-series-by-plan
+
+* synchronize-autonomous-database-to-exadata
+
+* test-macs-managed-autonomous-database-insight-connection-credential-
+  by-named-credentials
+
+* test-macs-managed-cloud-database-insight-connection-credential-by-
+  iam
+
+* test-macs-managed-cloud-database-insight-connection-credential-by-
+  vault
+
+* update-autonomous-db
+
+* update-em-external-db
+
+* update-external-mysql-database-insight
+
+* update-macs-external-db
+
+* update-macs-managed-autonomous-database-insight
+
+* update-macs-managed-cloud-database-insight
+
+* update-mds-my-sql-database
+
+* update-pe-comanaged-database

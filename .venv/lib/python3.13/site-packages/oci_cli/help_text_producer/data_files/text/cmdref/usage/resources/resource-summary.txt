@@ -1,0 +1,14 @@
+resource-summary
+****************
+
+
+Description
+===========
+
+The details of a resource under a service.
+
+
+Available Commands
+==================
+
+* list-resources

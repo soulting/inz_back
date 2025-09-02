@@ -1,0 +1,14 @@
+publisher-collection
+********************
+
+
+Description
+===========
+
+Results of a publisher search. Contains Publisher items.
+
+
+Available Commands
+==================
+
+* list-publishers

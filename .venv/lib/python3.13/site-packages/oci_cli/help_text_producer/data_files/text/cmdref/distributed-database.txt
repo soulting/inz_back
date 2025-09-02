@@ -1,0 +1,139 @@
+distributed-database
+********************
+
+
+Description
+===========
+
+Use the Globally Distributed Database service CLI to create and manage
+the Globally distributed databases.
+
+
+Available Commands
+==================
+
+* distributed-autonomous-db-service
+
+  * distributed-autonomous-database
+
+    * add
+
+    * change-compartment
+
+    * configure-distributed-autonomous-database-gsms
+
+    * configure-distributed-autonomous-database-sharding
+
+    * create
+
+    * delete
+
+    * download-distributed-autonomous-database-gsm-certificate-
+      signing-request
+
+    * generate-distributed-autonomous-database-gsm-certificate-
+      signing-request
+
+    * generate-distributed-autonomous-database-wallet
+
+    * get
+
+    * patch
+
+    * rotate-distributed-autonomous-database-passwords
+
+    * start
+
+    * stop
+
+    * update
+
+    * upload-distributed-autonomous-database-signed-certificate-and-
+      generate-wallet
+
+    * validate-distributed-autonomous-database-network
+
+  * distributed-autonomous-database-collection
+
+    * list-distributed-autonomous-databases
+
+* distributed-db-private-endpoint-service
+
+  * distributed-database-private-endpoint
+
+    * change-compartment
+
+    * create
+
+    * delete
+
+    * get
+
+    * reinstate-proxy-instance
+
+    * update
+
+  * distributed-database-private-endpoint-collection
+
+    * list-distributed-database-private-endpoints
+
+* distributed-db-service
+
+  * distributed-database
+
+    * add
+
+    * change-compartment
+
+    * change-distributed-db-backup-config
+
+    * configure-distributed-database-gsms
+
+    * configure-distributed-database-sharding
+
+    * create
+
+    * delete
+
+    * download-distributed-database-gsm-certificate-signing-request
+
+    * generate-distributed-database-gsm-certificate-signing-request
+
+    * generate-distributed-database-wallet
+
+    * get
+
+    * patch
+
+    * rotate-distributed-database-passwords
+
+    * start
+
+    * stop
+
+    * update
+
+    * upload-distributed-database-signed-certificate-and-generate-
+      wallet
+
+    * validate-distributed-database-network
+
+  * distributed-database-collection
+
+    * list-distributed-databases
+
+* distributed-db-work-request-service
+
+  * work-request
+
+    * get
+
+    * list
+
+  * work-request-error
+
+    * list
+
+  * work-request-log-entry
+
+    * list-work-request-logs

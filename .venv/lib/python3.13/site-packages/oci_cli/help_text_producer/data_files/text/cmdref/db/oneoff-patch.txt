@@ -1,0 +1,27 @@
+oneoff-patch
+************
+
+
+Description
+===========
+
+One-off patches are created by specifying a database version,
+releaseUpdate and one-off patch number.
+
+
+Available Commands
+==================
+
+* change-compartment
+
+* create
+
+* delete
+
+* download
+
+* get
+
+* list
+
+* update

@@ -1,0 +1,203 @@
+"delete"
+********
+
+* Description
+
+* Usage
+
+* Required Parameters
+
+* Optional Parameters
+
+* Global Parameters
+
+* Example using required parameter
+
+* Other Examples
+
+
+Description
+===========
+
+Deletes the specified rule. The deletion takes effect typically within
+30 seconds.
+
+
+Usage
+=====
+
+   oci os retention-rule delete [OPTIONS]
+
+
+Required Parameters
+===================
+
+--bucket-name, --bucket, -bn [text]
+
+The name of the bucket. Avoid entering confidential information.
+Example: *my-new-bucket1*
+
+--retention-rule-id [text]
+
+The ID of the retention rule.
+
+
+Optional Parameters
+===================
+
+--force
+
+Perform deletion without prompting for confirmation.
+
+--from-json [text]
+
+Provide input to this command as a JSON document from a file using the
+file://path-to/file syntax.
+
+The "--generate-full-command-json-input" option can be used to
+generate a sample json file to be used with this command option. The
+key names are pre-populated and match the command option names
+(converted to camelCase format, e.g. compartment-id –> compartmentId),
+while the values of the keys need to be populated by the user before
+using the sample file as an input to this command. For any command
+option that accepts multiple values, the value of the key can be a
+JSON array.
+
+Options can still be provided on the command line. If an option exists
+in both the JSON document and the command line then the command line
+specified value will be used.
+
+For examples on usage of this option, please see our “using CLI with
+advanced JSON options” link: https://docs.cloud.oracle.com/iaas/Conte
+nt/API/SDKDocs/cliusing.htm#AdvancedJSONOptions
+
+--if-match [text]
+
+The entity tag (ETag) to match with the ETag of an existing resource.
+If the specified ETag matches the ETag of the existing resource, GET
+and HEAD requests will return the resource and PUT and POST requests
+will upload the resource.
+
+--namespace-name, --namespace, -ns [text]
+
+The Object Storage namespace used for the request. If not provided,
+this parameter will be obtained internally using a call to ‘oci os ns
+get’
+
+
+Global Parameters
+=================
+
+Use "oci --help" for help on global parameters.
+
+"--auth-purpose", "--auth", "--cert-bundle", "--cli-auto-prompt", "--
+cli-rc-file", "--config-file", "--connection-timeout", "--debug", "--
+defaults-file", "--endpoint", "--generate-full-command-json-input", "
+--generate-param-json-input", "--help", "--latest-version", "--max-
+retries", "--no-retry", "--opc-client-request-id", "--opc-request-id",
+"--output", "--profile", "--proxy", "--query", "--raw-output", "--
+read-timeout", "--realm-specific-endpoint", "--region", "--release-
+info", "--request-id", "--version", "-?", "-d", "-h", "-i", "-v"
+
+
+Example using required parameter
+================================
+
+Copy the following CLI commands into a file named example.sh. Run the
+command by typing “bash example.sh” and replacing the example
+parameters with your own.
+
+Please note this sample will only work in the POSIX-compliant bash-
+like shell. You need to set up the OCI configuration and appropriate
+security policies before trying the examples.
+
+       export bucket_name=<substitute-value-of-bucket_name> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/os/retention-rule/create.html#cmdoption-bucket-name
+
+       retention_rule_id=$(oci os retention-rule create --bucket-name $bucket_name --query data.id --raw-output)
+
+       oci os retention-rule delete --bucket-name $bucket_name --retention-rule-id $retention_rule_id
+
+
+Other Examples
+==============
+
+
+Description
+-----------
+
+Deletes the specified retention rule.
+
+
+Command
+-------
+
+    oci os retention-rule delete -bn bucket-client --retention-rule-id edfbdb0b-39ed-4d5e-8d30-3699da5c6b7a
+
+
+Output
+------
+
+   {
+    "output": "Are you sure you want to delete this resource? [y/N]:"
+   }
+
+
+Description
+-----------
+
+Deletes the specified retention rule without prompting for
+confirmation.
+
+
+Command
+-------
+
+    oci os retention-rule delete -bn bucket-client --retention-rule-id c18ee922-d256-4796-bc03-da7d501b1113 --force
+
+
+Output
+------
+
+   {
+    "output": null
+   }
+
+
+Description
+-----------
+
+Deletes the specified retention rule if specified etag matches.
+
+
+Command
+-------
+
+    oci os retention-rule delete -bn bucket-client --retention-rule-id 74e0b030-e408-40c8-baa2-92c9ff8b9fe7 --if-match 9c60c78a-8e1b-452e-bdef-07c679d837aa
+
+
+Output
+------
+
+   {
+    "output": "Are you sure you want to delete this resource? [y/N]:"
+   }
+
+
+Description
+-----------
+
+Deletes the specified retention rule in specified namespace.
+
+
+Command
+-------
+
+    oci os retention-rule delete -bn bucket-client --retention-rule-id ddafd8f0-3401-46ac-bf5f-dac0a170a295 -ns bmcostests
+
+
+Output
+------
+
+   {
+    "output": "Are you sure you want to delete this resource? [y/N]:"
+   }

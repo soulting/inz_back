@@ -1,0 +1,70 @@
+speech
+******
+
+
+Description
+===========
+
+The OCI Speech Service harnesses the power of spoken language by
+allowing developers to easily convert file-based data containing human
+speech into highly accurate text transcriptions.
+
+
+Available Commands
+==================
+
+* customization
+
+  * change-compartment
+
+  * create
+
+  * create-customization-entity-list-dataset
+
+  * create-customization-object-storage-dataset
+
+  * delete
+
+  * get
+
+  * list
+
+  * update
+
+  * update-customization-entity-list-dataset
+
+  * update-customization-object-storage-dataset
+
+* realtime-session-token
+
+  * create
+
+* synthesize-speech
+
+* transcription-job
+
+  * cancel
+
+  * change-compartment
+
+  * create
+
+  * delete
+
+  * get
+
+  * list
+
+  * update
+
+* transcription-task
+
+  * cancel
+
+  * get
+
+  * list
+
+* voice
+
+  * list

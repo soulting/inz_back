@@ -1,0 +1,21 @@
+oda-private-endpoint-attachment
+*******************************
+
+
+Description
+===========
+
+ODA Private Endpoint Attachment is used to attach ODA Private Endpoint
+to ODA (Digital Assistant) Instance.
+
+
+Available Commands
+==================
+
+* create
+
+* delete
+
+* get
+
+* list

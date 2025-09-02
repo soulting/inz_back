@@ -1,0 +1,18 @@
+address-service
+***************
+
+
+Description
+===========
+
+This site describes all the Rest endpoints of OSP Gateway.
+
+
+Available Commands
+==================
+
+* address
+
+  * get
+
+  * verify

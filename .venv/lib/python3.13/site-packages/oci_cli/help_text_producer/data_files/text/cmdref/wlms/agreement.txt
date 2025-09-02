@@ -1,0 +1,15 @@
+agreement
+*********
+
+
+Description
+===========
+
+The terms of use agreement which must be accepted prior to accessing
+certain product features.
+
+
+Available Commands
+==================
+
+* get

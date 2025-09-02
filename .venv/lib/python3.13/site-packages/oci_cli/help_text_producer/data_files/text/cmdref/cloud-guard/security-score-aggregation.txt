@@ -1,0 +1,16 @@
+security-score-aggregation
+**************************
+
+
+Description
+===========
+
+Provides the dimensions and their corresponding count value.
+
+
+Available Commands
+==================
+
+* request-security-scores
+
+* request-summarized-security-scores

@@ -1,0 +1,32 @@
+autonomous-vm-cluster
+*********************
+
+
+Description
+===========
+
+Details of the Autonomous VM cluster.
+
+
+Available Commands
+==================
+
+* change-compartment
+
+* create
+
+* delete
+
+* get
+
+* get-autonomous-vm-cluster-resource-usage
+
+* list
+
+* list-autonomous-vm-cluster-acd-resource-usage
+
+* rotate-autonomous-vm-cluster-ords-certs
+
+* rotate-autonomous-vm-cluster-ssl-certs
+
+* update

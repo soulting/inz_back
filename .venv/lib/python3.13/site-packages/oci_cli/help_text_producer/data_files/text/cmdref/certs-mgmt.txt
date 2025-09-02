@@ -1,0 +1,102 @@
+certs-mgmt
+**********
+
+
+Description
+===========
+
+CLI for managing certificates.
+
+
+Available Commands
+==================
+
+* association
+
+  * get
+
+  * list
+
+* ca-bundle
+
+  * change-compartment
+
+  * create
+
+  * delete
+
+  * get
+
+  * list
+
+  * update
+
+* certificate
+
+  * cancel-deletion
+
+  * change-compartment
+
+  * create-by-importing-config
+
+  * create-certificate-issued-by-internal-ca
+
+  * create-certificate-managed-externally-issued-by-internal-ca
+
+  * get
+
+  * list
+
+  * schedule-deletion
+
+  * update
+
+  * update-certificate-by-importing-config-details
+
+  * update-certificate-managed-externally
+
+  * update-certificate-managed-internally
+
+* certificate-authority
+
+  * cancel-deletion
+
+  * change-compartment
+
+  * create-root-ca-by-generating-config-details
+
+  * create-subordinate-ca-issued-by-internal-ca
+
+  * get
+
+  * list
+
+  * schedule-deletion
+
+  * update-root-ca-by-generating-config-details
+
+  * update-subordinate-ca-issued-by-internal-ca
+
+* certificate-authority-version
+
+  * cancel-deletion
+
+  * get
+
+  * list
+
+  * revoke
+
+  * schedule-deletion
+
+* certificate-version
+
+  * cancel-deletion
+
+  * get
+
+  * list
+
+  * revoke
+
+  * schedule-deletion

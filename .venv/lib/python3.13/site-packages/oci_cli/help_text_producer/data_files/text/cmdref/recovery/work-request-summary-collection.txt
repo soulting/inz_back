@@ -1,0 +1,15 @@
+work-request-summary-collection
+*******************************
+
+
+Description
+===========
+
+Results of a workRequest search. Contains both WorkRequest items and
+other information, such as metadata.
+
+
+Available Commands
+==================
+
+* list-work-requests

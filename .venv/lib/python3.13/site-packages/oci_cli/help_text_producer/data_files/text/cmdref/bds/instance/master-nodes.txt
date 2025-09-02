@@ -1,0 +1,17 @@
+master-nodes
+************
+
+
+Description
+===========
+
+Increases the size (scales out) of a cluster by adding master nodes.
+The added master nodes will have the same shape and will have the same
+amount of attached block storage as other master nodes in the cluster.
+[Command Reference](addMasterNodes)
+
+
+Available Commands
+==================
+
+* add

@@ -1,0 +1,19 @@
+pbf-listing
+***********
+
+
+Description
+===========
+
+PbfListing resources provide details about the available PBFs for
+consumption by the user. This resource contains details about PBF’s
+functionality, policies required, configuration parameters expected
+etc.
+
+
+Available Commands
+==================
+
+* get
+
+* list

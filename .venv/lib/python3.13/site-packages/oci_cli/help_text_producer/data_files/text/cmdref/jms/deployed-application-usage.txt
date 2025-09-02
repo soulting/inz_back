@@ -1,0 +1,14 @@
+deployed-application-usage
+**************************
+
+
+Description
+===========
+
+Deployed application usage during a specified time period.
+
+
+Available Commands
+==================
+
+* summarize

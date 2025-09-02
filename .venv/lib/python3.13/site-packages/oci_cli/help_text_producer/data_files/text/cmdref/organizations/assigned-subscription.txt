@@ -1,0 +1,17 @@
+assigned-subscription
+*********************
+
+
+Description
+===========
+
+Assigned subscription type, which carries shared properties for any
+assigned subscription version.
+
+
+Available Commands
+==================
+
+* get
+
+* list

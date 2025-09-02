@@ -1,0 +1,20 @@
+my-api-key
+**********
+
+
+Description
+===========
+
+The user’s API key.
+
+
+Available Commands
+==================
+
+* create
+
+* delete
+
+* get
+
+* patch

@@ -1,0 +1,52 @@
+fsu-action
+**********
+
+
+Description
+===========
+
+Exadata Fleet Update Action resource details.
+
+
+Available Commands
+==================
+
+* cancel
+
+* change-compartment
+
+* create
+
+* create-apply
+
+* create-cleanup
+
+* create-fsu-action-create-rollback-cycle-apply-action-details
+
+* create-precheck
+
+* create-rollback
+
+* create-stage
+
+* delete
+
+* get
+
+* get-output-content
+
+* resume
+
+* update
+
+* update-apply
+
+* update-cleanup
+
+* update-fsu-action-update-rollback-cycle-action-details
+
+* update-precheck
+
+* update-rollback
+
+* update-stage

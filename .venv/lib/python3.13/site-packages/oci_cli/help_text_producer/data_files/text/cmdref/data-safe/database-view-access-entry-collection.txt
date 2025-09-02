@@ -1,0 +1,14 @@
+database-view-access-entry-collection
+*************************************
+
+
+Description
+===========
+
+A collection of database view access summary objects.
+
+
+Available Commands
+==================
+
+* list-database-view-access-entries

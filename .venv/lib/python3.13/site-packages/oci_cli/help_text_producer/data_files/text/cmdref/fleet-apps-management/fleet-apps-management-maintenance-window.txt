@@ -1,0 +1,28 @@
+fleet-apps-management-maintenance-window
+****************************************
+
+
+Description
+===========
+
+Fleet Application Management provides a centralized platform to help
+you automate resource management tasks, validate patch compliance, and
+enhance operational efficiency across an enterprise.
+
+
+Available Commands
+==================
+
+* maintenance-window
+
+  * create
+
+  * delete
+
+  * get
+
+  * update
+
+* maintenance-window-collection
+
+  * list-maintenance-windows

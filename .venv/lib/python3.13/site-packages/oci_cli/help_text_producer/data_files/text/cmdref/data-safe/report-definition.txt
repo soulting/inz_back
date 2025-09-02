@@ -1,0 +1,32 @@
+report-definition
+*****************
+
+
+Description
+===========
+
+Description of report definition.
+
+
+Available Commands
+==================
+
+* change-compartment
+
+* create
+
+* delete
+
+* generate-report
+
+* get
+
+* list
+
+* remove
+
+* schedule-report
+
+* schedule-report-schedule-audit-report-details
+
+* update

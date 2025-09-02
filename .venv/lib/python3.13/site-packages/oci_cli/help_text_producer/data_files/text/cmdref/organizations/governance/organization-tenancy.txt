@@ -1,0 +1,16 @@
+organization-tenancy
+********************
+
+
+Description
+===========
+
+The information about the organization tenancy.
+
+
+Available Commands
+==================
+
+* add
+
+* remove

@@ -1,0 +1,84 @@
+channel
+*******
+
+
+Description
+===========
+
+Properties of a Channel.
+
+
+Available Commands
+==================
+
+* create
+
+* create-channel-create-android-channel-details
+
+* create-channel-create-app-event-channel-details
+
+* create-channel-create-application-channel-details
+
+* create-channel-create-cortana-channel-details
+
+* create-channel-create-facebook-channel-details
+
+* create-channel-create-ios-channel-details
+
+* create-channel-create-ms-teams-channel-details
+
+* create-channel-create-oss-channel-details
+
+* create-channel-create-osvc-channel-details
+
+* create-channel-create-service-cloud-channel-details
+
+* create-channel-create-slack-channel-details
+
+* create-channel-create-twilio-channel-details
+
+* create-channel-create-web-channel-details
+
+* create-channel-create-webhook-channel-details
+
+* delete
+
+* get
+
+* list
+
+* rotate-channel-keys
+
+* start
+
+* stop
+
+* update
+
+* update-channel-update-android-channel-details
+
+* update-channel-update-app-event-channel-details
+
+* update-channel-update-application-channel-details
+
+* update-channel-update-cortana-channel-details
+
+* update-channel-update-facebook-channel-details
+
+* update-channel-update-ios-channel-details
+
+* update-channel-update-ms-teams-channel-details
+
+* update-channel-update-oss-channel-details
+
+* update-channel-update-osvc-channel-details
+
+* update-channel-update-service-cloud-channel-details
+
+* update-channel-update-slack-channel-details
+
+* update-channel-update-twilio-channel-details
+
+* update-channel-update-web-channel-details
+
+* update-channel-update-webhook-channel-details

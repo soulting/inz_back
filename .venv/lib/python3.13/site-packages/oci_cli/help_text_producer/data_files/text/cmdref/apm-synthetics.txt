@@ -1,0 +1,132 @@
+apm-synthetics
+**************
+
+
+Description
+===========
+
+Use the APM Availability Monitoring CLI to query Scripts, Monitors,
+Dedicated Vantage Points and On-Premise Vantage Points resources. For
+more information, see Application Performance Monitoring.
+
+
+Available Commands
+==================
+
+* aggregated-network-data-result
+
+  * aggregate-network-data
+
+* dedicated-vantage-point
+
+  * create-with-oracle-rm-stack
+
+  * delete
+
+  * get
+
+  * update-with-oracle-rm-stack
+
+* dedicated-vantage-point-collection
+
+  * list-dedicated-vantage-points
+
+* monitor
+
+  * create-browser-monitor
+
+  * create-dns-sec-monitor
+
+  * create-dns-server-monitor
+
+  * create-dns-trace-monitor
+
+  * create-ftp-monitor
+
+  * create-network-monitor
+
+  * create-rest-monitor
+
+  * create-scripted-browser-monitor
+
+  * create-scripted-rest-monitor
+
+  * create-sql-monitor
+
+  * delete
+
+  * get
+
+  * update-browser-monitor
+
+  * update-dns-sec-monitor
+
+  * update-dns-server-monitor
+
+  * update-dns-trace-monitor
+
+  * update-ftp-monitor
+
+  * update-network-monitor
+
+  * update-rest-monitor
+
+  * update-scripted-browser-monitor
+
+  * update-scripted-rest-monitor
+
+  * update-sql-monitor
+
+* monitor-collection
+
+  * list-monitors
+
+* monitor-result
+
+  * get
+
+* on-premise-vantage-point
+
+  * create
+
+  * delete
+
+  * get
+
+  * update
+
+* on-premise-vantage-point-collection
+
+  * list-on-premise-vantage-points
+
+* public-vantage-point-collection
+
+  * list-public-vantage-points
+
+* script
+
+  * create
+
+  * delete
+
+  * get
+
+  * update
+
+* script-collection
+
+  * list-scripts
+
+* worker
+
+  * create
+
+  * delete
+
+  * get
+
+  * update
+
+* worker-collection
+
+  * list-workers

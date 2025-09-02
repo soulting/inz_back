@@ -1,0 +1,118 @@
+psql
+****
+
+
+Description
+===========
+
+Use the OCI Database with PostgreSQL CLI to manage resources such as
+database systems, database nodes, backups, and configurations. For
+information, see the user guide documentation for the service.
+
+
+Available Commands
+==================
+
+* backup
+
+  * backup-copy
+
+  * change-compartment
+
+  * create
+
+  * delete
+
+  * get
+
+  * update
+
+* backup-collection
+
+  * list-backups
+
+* configuration
+
+  * change-compartment
+
+  * create
+
+  * delete
+
+  * get
+
+  * update
+
+* configuration-collection
+
+  * list-configurations
+
+* connection-details
+
+  * get
+
+* db-system
+
+  * change-compartment
+
+  * create
+
+  * create-db-system-backup-source-details
+
+  * create-db-system-none-source-details
+
+  * create-db-system-oci-optimized-storage-details
+
+  * delete
+
+  * failover
+
+  * get
+
+  * get-primary-db-instance
+
+  * patch
+
+  * reset-master-user-password
+
+  * reset-master-user-password-plain-text-password-details
+
+  * reset-master-user-password-vault-secret-password-details
+
+  * restart-db-instance-in
+
+  * restore
+
+  * update
+
+  * update-db-system-db-instance
+
+* db-system-collection
+
+  * list-db-systems
+
+* default-configuration
+
+  * get
+
+* default-configuration-collection
+
+  * list-default-configurations
+
+* shape-summary
+
+  * list-shapes
+
+* work-request
+
+  * get
+
+  * list
+
+* work-request-error
+
+  * list
+
+* work-request-log-entry
+
+  * list-work-request-logs

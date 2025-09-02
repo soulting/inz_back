@@ -1,0 +1,36 @@
+deployment-backup
+*****************
+
+
+Description
+===========
+
+A backup of the current state of the GoldenGate deployment. Can be
+used to restore a deployment, or create a new deployment with that
+state as the starting deployment state.
+
+
+Available Commands
+==================
+
+* add-lock
+
+* cancel
+
+* change-compartment
+
+* copy
+
+* create
+
+* delete
+
+* get
+
+* list
+
+* remove-lock
+
+* restore-deployment
+
+* update

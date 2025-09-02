@@ -1,0 +1,14 @@
+distributed-database-collection
+*******************************
+
+
+Description
+===========
+
+Collection of Globally distributed databases.
+
+
+Available Commands
+==================
+
+* list-distributed-databases

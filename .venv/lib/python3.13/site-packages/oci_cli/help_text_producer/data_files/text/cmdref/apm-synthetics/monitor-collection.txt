@@ -1,0 +1,15 @@
+monitor-collection
+******************
+
+
+Description
+===========
+
+The results of a monitor search, which contains both MonitorSummary
+items and other data in an APM domain.
+
+
+Available Commands
+==================
+
+* list-monitors

@@ -1,0 +1,15 @@
+oda-instance-attachment-collection
+**********************************
+
+
+Description
+===========
+
+Results of a Oda instance attachment search. Contains
+OdaInstanceAttachment items.
+
+
+Available Commands
+==================
+
+* list-oda-instance-attachments

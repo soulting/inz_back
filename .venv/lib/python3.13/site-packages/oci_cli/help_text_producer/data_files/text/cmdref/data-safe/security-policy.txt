@@ -1,0 +1,25 @@
+security-policy
+***************
+
+
+Description
+===========
+
+The resource represents as a container for all the security policies
+in Data Safe.
+
+
+Available Commands
+==================
+
+* change-compartment
+
+* create
+
+* delete
+
+* get
+
+* list
+
+* update

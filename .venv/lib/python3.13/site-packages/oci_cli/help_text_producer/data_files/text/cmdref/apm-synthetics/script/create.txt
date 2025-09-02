@@ -1,0 +1,170 @@
+"create"
+********
+
+* Description
+
+* Usage
+
+* Required Parameters
+
+* Optional Parameters
+
+* Global Parameters
+
+* Example using required parameter
+
+
+Description
+===========
+
+Creates a new script.
+
+
+Usage
+=====
+
+   oci apm-synthetics script create [OPTIONS]
+
+
+Required Parameters
+===================
+
+--apm-domain-id [text]
+
+The APM domain ID the request is intended for.
+
+--content [text]
+
+The content of the script. It may contain custom-defined tags that can
+be used for setting dynamic parameters. The format to set dynamic
+parameters is: *<ORAP><ON>param name</ON><OV>param
+value</OV><OS>isParamValueSecret(true/false)</OS></ORAP>*. Param value
+and isParamValueSecret are optional, the default value for
+isParamValueSecret is false. Examples: With mandatory param name :
+*<ORAP><ON>param name</ON></ORAP>* With parameter name and value :
+*<ORAP><ON>param name</ON><OV>param value</OV></ORAP>* Note that the
+content is valid if it matches the given content type. For example, if
+the content type is SIDE, then the content should be in Side script
+format. If the content type is JS, then the content should be in
+JavaScript format. If the content type is PLAYWRIGHT_TS, then the
+content should be in TypeScript format.
+
+--content-type [text]
+
+Content type of script.
+
+Accepted values are:
+
+   JS, PLAYWRIGHT_TS, SIDE
+
+--display-name [text]
+
+Unique name that can be edited. The name should not contain any
+confidential information.
+
+
+Optional Parameters
+===================
+
+--content-file-name [text]
+
+File name of uploaded script content.
+
+--defined-tags [complex type]
+
+Defined tags for this resource. Each key is predefined and scoped to a
+namespace. Example: *{“foo-namespace”: {“bar-key”: “value”}}* This is
+a complex type whose value must be valid JSON. The value can be
+provided as a string on the command line or passed in as a file using
+the file://path/to/file syntax.
+
+The "--generate-param-json-input" option can be used to generate an
+example of the JSON which must be provided. We recommend storing this
+example in a file, modifying it as needed and then passing it back in
+via the file:// syntax.
+
+--freeform-tags [complex type]
+
+Simple key-value pair that is applied without any predefined name,
+type or scope. Exists for cross-compatibility only. Example: *{“bar-
+key”: “value”}* This is a complex type whose value must be valid JSON.
+The value can be provided as a string on the command line or passed in
+as a file using the file://path/to/file syntax.
+
+The "--generate-param-json-input" option can be used to generate an
+example of the JSON which must be provided. We recommend storing this
+example in a file, modifying it as needed and then passing it back in
+via the file:// syntax.
+
+--from-json [text]
+
+Provide input to this command as a JSON document from a file using the
+file://path-to/file syntax.
+
+The "--generate-full-command-json-input" option can be used to
+generate a sample json file to be used with this command option. The
+key names are pre-populated and match the command option names
+(converted to camelCase format, e.g. compartment-id –> compartmentId),
+while the values of the keys need to be populated by the user before
+using the sample file as an input to this command. For any command
+option that accepts multiple values, the value of the key can be a
+JSON array.
+
+Options can still be provided on the command line. If an option exists
+in both the JSON document and the command line then the command line
+specified value will be used.
+
+For examples on usage of this option, please see our “using CLI with
+advanced JSON options” link: https://docs.cloud.oracle.com/iaas/Conte
+nt/API/SDKDocs/cliusing.htm#AdvancedJSONOptions
+
+--parameters [complex type]
+
+List of script parameters. Example: *[{“paramName”: “userid”,
+“paramValue”:”testuser”, “isSecret”: false}]*
+
+This option is a JSON list with items of type ScriptParameter.  For
+documentation on ScriptParameter please see our API reference: https:
+//docs.cloud.oracle.com/api/#/en/apmsynthetic/20200630/datatypes/Scri
+ptParameter. This is a complex type whose value must be valid JSON.
+The value can be provided as a string on the command line or passed in
+as a file using the file://path/to/file syntax.
+
+The "--generate-param-json-input" option can be used to generate an
+example of the JSON which must be provided. We recommend storing this
+example in a file, modifying it as needed and then passing it back in
+via the file:// syntax.
+
+
+Global Parameters
+=================
+
+Use "oci --help" for help on global parameters.
+
+"--auth-purpose", "--auth", "--cert-bundle", "--cli-auto-prompt", "--
+cli-rc-file", "--config-file", "--connection-timeout", "--debug", "--
+defaults-file", "--endpoint", "--generate-full-command-json-input", "
+--generate-param-json-input", "--help", "--latest-version", "--max-
+retries", "--no-retry", "--opc-client-request-id", "--opc-request-id",
+"--output", "--profile", "--proxy", "--query", "--raw-output", "--
+read-timeout", "--realm-specific-endpoint", "--region", "--release-
+info", "--request-id", "--version", "-?", "-d", "-h", "-i", "-v"
+
+
+Example using required parameter
+================================
+
+Copy the following CLI commands into a file named example.sh. Run the
+command by typing “bash example.sh” and replacing the example
+parameters with your own.
+
+Please note this sample will only work in the POSIX-compliant bash-
+like shell. You need to set up the OCI configuration and appropriate
+security policies before trying the examples.
+
+       export apm_domain_id=<substitute-value-of-apm_domain_id> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/apm-synthetics/script/create.html#cmdoption-apm-domain-id
+       export content=<substitute-value-of-content> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/apm-synthetics/script/create.html#cmdoption-content
+       export content_type=<substitute-value-of-content_type> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/apm-synthetics/script/create.html#cmdoption-content-type
+       export display_name=<substitute-value-of-display_name> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/apm-synthetics/script/create.html#cmdoption-display-name
+
+       oci apm-synthetics script create --apm-domain-id $apm_domain_id --content $content --content-type $content_type --display-name $display_name

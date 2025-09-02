@@ -1,0 +1,16 @@
+risk-score-aggregation
+**********************
+
+
+Description
+===========
+
+Provides the dimensions and their corresponding risk score.
+
+
+Available Commands
+==================
+
+* request-risk-scores
+
+* request-summarized-risk-scores

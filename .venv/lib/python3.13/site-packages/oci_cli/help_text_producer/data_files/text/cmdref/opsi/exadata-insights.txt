@@ -1,0 +1,67 @@
+exadata-insights
+****************
+
+
+Description
+===========
+
+Logical grouping used for Operations Insights Exadata related
+operations.
+
+
+Available Commands
+==================
+
+* add-em-external-exadata-members
+
+* add-macs-managed-cloud-exadata-insight-members
+
+* add-pe-comanaged-exadata-members
+
+* change
+
+* create-em-external-exadata
+
+* create-macs-managed-cloud-exadata-insight
+
+* create-pe-comanaged-exadata
+
+* delete
+
+* disable
+
+* enable-em-external-exadata
+
+* enable-macs-managed-cloud-exadata-insight
+
+* enable-pe-comanaged-exadata
+
+* get
+
+* list
+
+* list-exadata-configurations
+
+* summarize-exadata-insight-resource-capacity-trend
+
+* summarize-exadata-insight-resource-capacity-trend-aggregated
+
+* summarize-exadata-insight-resource-forecast-trend
+
+* summarize-exadata-insight-resource-forecast-trend-aggregated
+
+* summarize-exadata-insight-resource-statistics
+
+* summarize-exadata-insight-resource-usage
+
+* summarize-exadata-insight-resource-usage-aggregated
+
+* summarize-exadata-insight-resource-utilization-insight
+
+* summarize-exadata-members
+
+* update-em-external-exadata
+
+* update-macs-managed-cloud-exadata-insight
+
+* update-pe-comanaged-exadata

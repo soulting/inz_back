@@ -1,0 +1,19 @@
+profile
+*******
+
+
+Description
+===========
+
+The comprehensive information about the user profiles available on a
+given target. It includes details such as profile name, failed login
+attempts, password reuse time, password verification function,
+password verification function implementation code snippet, sessions
+per user, connect time inactive account time, password lock time, cpu
+usage per session, target id, and compartment id.
+
+
+Available Commands
+==================
+
+* list-profile-analytics

@@ -1,0 +1,16 @@
+template
+********
+
+
+Description
+===========
+
+A template object.
+
+
+Available Commands
+==================
+
+* get
+
+* list

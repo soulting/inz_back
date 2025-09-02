@@ -1,0 +1,22 @@
+user
+****
+
+
+Description
+===========
+
+User Account
+
+
+Available Commands
+==================
+
+* create
+
+* delete
+
+* get
+
+* patch
+
+* put

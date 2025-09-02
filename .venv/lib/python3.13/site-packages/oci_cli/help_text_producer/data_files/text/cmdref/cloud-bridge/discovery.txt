@@ -1,0 +1,48 @@
+discovery
+*********
+
+
+Description
+===========
+
+CLI for Oracle Cloud Bridge service.
+
+
+Available Commands
+==================
+
+* asset-source
+
+  * change-compartment
+
+  * create
+
+  * delete
+
+  * get
+
+  * list
+
+  * list-asset-source-connections
+
+  * refresh
+
+  * update
+
+* discovery-schedule
+
+  * change-compartment
+
+  * create
+
+  * delete
+
+  * get
+
+  * list
+
+  * update
+
+* supported-cloud-regions
+
+  * list

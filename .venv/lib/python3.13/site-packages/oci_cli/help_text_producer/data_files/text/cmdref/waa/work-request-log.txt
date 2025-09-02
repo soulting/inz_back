@@ -1,0 +1,14 @@
+work-request-log
+****************
+
+
+Description
+===========
+
+A log message from the execution of a WorkRequest.
+
+
+Available Commands
+==================
+
+* list

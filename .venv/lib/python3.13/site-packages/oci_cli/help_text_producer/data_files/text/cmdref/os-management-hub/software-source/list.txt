@@ -1,0 +1,233 @@
+"list"
+******
+
+* Description
+
+* Usage
+
+* Optional Parameters
+
+* Global Parameters
+
+* Example using required parameter
+
+
+Description
+===========
+
+Lists software sources that match the specified tenancy or software
+source OCID. Filter the list against a variety of criteria including
+but not limited to its name, status, architecture, and OS family.
+
+
+Usage
+=====
+
+   oci os-management-hub software-source list [OPTIONS]
+
+
+Optional Parameters
+===================
+
+--all
+
+Fetches all pages of results. If you provide this option, then you
+cannot provide the "--limit" option.
+
+--arch-type [text]
+
+A filter to return only instances whose architecture type matches the
+given architecture.
+
+Accepted values are:
+
+   AARCH64, I386, I686, NOARCH, SRC, X86_64
+
+--availability [text]
+
+The availability of the software source in a non-OCI environment for a
+tenancy.
+
+Accepted values are:
+
+   AVAILABLE, RESTRICTED, SELECTED, UNAVAILABLE
+
+--availability-anywhere [text]
+
+The availability of the software source. Use this query parameter to
+filter across availabilities in different environments.
+
+Accepted values are:
+
+   AVAILABLE, RESTRICTED, SELECTED, UNAVAILABLE
+
+--availability-at-oci [text]
+
+The availability of the software source in an OCI environment for a
+tenancy.
+
+Accepted values are:
+
+   AVAILABLE, RESTRICTED, SELECTED, UNAVAILABLE
+
+--compartment-id, -c [text]
+
+The OCID of the compartment that contains the resources to list. This
+filter returns only resources contained within the specified
+compartment.
+
+--display-name [text]
+
+A filter to return resources that match the given user-friendly name.
+
+--display-name-contains [text]
+
+A filter to return resources that may partially match the given
+display name.
+
+--display-name-ne [text]
+
+A multi filter to return resources that do not contains the given
+display names.
+
+--from-json [text]
+
+Provide input to this command as a JSON document from a file using the
+file://path-to/file syntax.
+
+The "--generate-full-command-json-input" option can be used to
+generate a sample json file to be used with this command option. The
+key names are pre-populated and match the command option names
+(converted to camelCase format, e.g. compartment-id –> compartmentId),
+while the values of the keys need to be populated by the user before
+using the sample file as an input to this command. For any command
+option that accepts multiple values, the value of the key can be a
+JSON array.
+
+Options can still be provided on the command line. If an option exists
+in both the JSON document and the command line then the command line
+specified value will be used.
+
+For examples on usage of this option, please see our “using CLI with
+advanced JSON options” link: https://docs.cloud.oracle.com/iaas/Conte
+nt/API/SDKDocs/cliusing.htm#AdvancedJSONOptions
+
+--is-mandatory-for-alx [boolean]
+
+Indicates whether the software source is mandatory for the Autonomous
+Linux service.
+
+--is-mirror-sync-allowed [boolean]
+
+A filter to return software sources which can be synced to a
+management station.
+
+--lifecycle-state [text]
+
+A filter to return only software sources whose state matches the given
+state.
+
+Accepted values are:
+
+   ACTIVE, CREATING, DELETED, DELETING, FAILED, INACTIVE, NEEDS_ATTENTION, UPDATING
+
+--limit [integer]
+
+For list pagination. The maximum number of results per page, or items
+to return in a paginated “List” call. For important details about how
+pagination works, see List Pagination.
+
+Example:
+
+   50
+
+--os-family [text]
+
+A filter to return only resources that match the given operating
+system family.
+
+Accepted values are:
+
+   ALL, ORACLE_LINUX_6, ORACLE_LINUX_7, ORACLE_LINUX_8, ORACLE_LINUX_9, WINDOWS_SERVER_2016, WINDOWS_SERVER_2019, WINDOWS_SERVER_2022
+
+--page [text]
+
+For list pagination. The value of the *opc-next-page* response header
+from the previous “List” call. For important details about how
+pagination works, see List Pagination.
+
+Example:
+
+   3
+
+--page-size [integer]
+
+When fetching results, the number of results to fetch per call. Only
+valid when used with "--all" or "--limit", and ignored otherwise.
+
+--software-source-id [text]
+
+The OCID for the software source.
+
+--software-source-type [text]
+
+The type of the software source.
+
+Accepted values are:
+
+   CUSTOM, PRIVATE, THIRD_PARTY, VENDOR, VERSIONED
+
+--sort-by [text]
+
+The field to sort by. Only one sort order may be provided. Default
+order for timeCreated is descending. Default order for displayName is
+ascending.
+
+Accepted values are:
+
+   displayName, timeCreated
+
+--sort-order [text]
+
+The sort order to use, either ‘ASC’ or ‘DESC’.
+
+Accepted values are:
+
+   ASC, DESC
+
+--vendor-name [text]
+
+A filter to return only resources that match the given vendor name.
+
+Accepted values are:
+
+   MICROSOFT, ORACLE
+
+
+Global Parameters
+=================
+
+Use "oci --help" for help on global parameters.
+
+"--auth-purpose", "--auth", "--cert-bundle", "--cli-auto-prompt", "--
+cli-rc-file", "--config-file", "--connection-timeout", "--debug", "--
+defaults-file", "--endpoint", "--generate-full-command-json-input", "
+--generate-param-json-input", "--help", "--latest-version", "--max-
+retries", "--no-retry", "--opc-client-request-id", "--opc-request-id",
+"--output", "--profile", "--proxy", "--query", "--raw-output", "--
+read-timeout", "--realm-specific-endpoint", "--region", "--release-
+info", "--request-id", "--version", "-?", "-d", "-h", "-i", "-v"
+
+
+Example using required parameter
+================================
+
+Copy the following CLI commands into a file named example.sh. Run the
+command by typing “bash example.sh” and replacing the example
+parameters with your own.
+
+Please note this sample will only work in the POSIX-compliant bash-
+like shell. You need to set up the OCI configuration and appropriate
+security policies before trying the examples.
+
+       oci os-management-hub software-source list

@@ -1,0 +1,16 @@
+application-usage
+*****************
+
+
+Description
+===========
+
+Application usage during a specified time period. An application is a
+Java application that can be executed by a Java Runtime installation.
+An application is independent of the Java Runtime or its installation.
+
+
+Available Commands
+==================
+
+* summarize

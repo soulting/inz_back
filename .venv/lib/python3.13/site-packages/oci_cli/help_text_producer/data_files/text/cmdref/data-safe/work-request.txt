@@ -1,0 +1,22 @@
+work-request
+************
+
+
+Description
+===========
+
+An asynchronous work request.
+
+
+Available Commands
+==================
+
+* cancel
+
+* get
+
+* list
+
+* resume
+
+* suspend

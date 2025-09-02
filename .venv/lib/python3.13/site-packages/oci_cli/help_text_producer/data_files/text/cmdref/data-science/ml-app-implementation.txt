@@ -1,0 +1,29 @@
+ml-app-implementation
+*********************
+
+
+Description
+===========
+
+Resource representing solution for AI/ML use-case defined by ML
+Application
+
+
+Available Commands
+==================
+
+* change-compartment
+
+* create
+
+* delete
+
+* download-package
+
+* get
+
+* list
+
+* update
+
+* upload-package

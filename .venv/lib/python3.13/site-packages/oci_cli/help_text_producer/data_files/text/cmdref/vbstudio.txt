@@ -1,0 +1,34 @@
+vbstudio
+********
+
+
+Description
+===========
+
+VB Studio Controlplane Instance API
+
+
+Available Commands
+==================
+
+* instance
+
+  * create
+
+  * delete
+
+  * get
+
+  * list
+
+  * update
+
+* work-request
+
+  * errors
+
+  * get
+
+  * list
+
+  * logs

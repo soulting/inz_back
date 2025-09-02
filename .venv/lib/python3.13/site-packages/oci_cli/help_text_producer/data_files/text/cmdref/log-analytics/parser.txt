@@ -1,0 +1,34 @@
+parser
+******
+
+
+Description
+===========
+
+LogAnalyticsParser
+
+
+Available Commands
+==================
+
+* delete-parser
+
+* extract-structured-log-field-paths
+
+* extract-structured-log-header-paths
+
+* get-parser
+
+* get-parser-summary
+
+* list-parser-actions
+
+* list-parser-functions
+
+* list-parser-meta-plugins
+
+* list-parsers
+
+* test-parser
+
+* upsert-parser

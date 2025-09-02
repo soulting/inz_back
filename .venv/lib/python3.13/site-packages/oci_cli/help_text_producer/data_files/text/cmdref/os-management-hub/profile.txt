@@ -1,0 +1,44 @@
+profile
+*******
+
+
+Description
+===========
+
+Object that defines the registration profile.
+
+
+Available Commands
+==================
+
+* attach-lifecycle-stage
+
+* attach-managed-instance-group
+
+* attach-management-station
+
+* attach-software-sources
+
+* change-compartment
+
+* create-group-profile
+
+* create-lifecycle-profile
+
+* create-software-source-profile
+
+* create-windows-stand-alone-profile
+
+* delete
+
+* detach-software-sources
+
+* get
+
+* get-profile-version
+
+* list
+
+* list-available-software-sources
+
+* update

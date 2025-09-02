@@ -1,0 +1,18 @@
+external-asm-instance
+*********************
+
+
+Description
+===========
+
+The details of an external ASM instance.
+
+
+Available Commands
+==================
+
+* get
+
+* list
+
+* update

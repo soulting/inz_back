@@ -1,0 +1,20 @@
+masking-report
+**************
+
+
+Description
+===========
+
+A masking report contains information about a completed masking
+request. It includes details such as the target database masked,
+masking policy used, masking start and finish time, total number of
+schemas, tables, columns and values masked, masked columns, and the
+masking formats used.
+
+
+Available Commands
+==================
+
+* delete
+
+* get

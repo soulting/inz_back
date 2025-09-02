@@ -1,0 +1,24 @@
+sensitive-types-export
+**********************
+
+
+Description
+===========
+
+The resource represents sensitive types to be exported in Data Safe.
+
+
+Available Commands
+==================
+
+* change-compartment
+
+* create
+
+* delete
+
+* download
+
+* get
+
+* update

@@ -1,0 +1,28 @@
+ingest-time-rule
+****************
+
+
+Description
+===========
+
+An ingest time rule object.
+
+
+Available Commands
+==================
+
+* change-compartment
+
+* create
+
+* delete
+
+* disable
+
+* enable
+
+* get
+
+* list
+
+* update

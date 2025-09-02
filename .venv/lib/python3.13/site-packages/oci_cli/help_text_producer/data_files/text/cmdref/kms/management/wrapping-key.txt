@@ -1,0 +1,14 @@
+wrapping-key
+************
+
+
+Description
+===========
+
+The public RSA wrapping key associated with the vault
+
+
+Available Commands
+==================
+
+* get

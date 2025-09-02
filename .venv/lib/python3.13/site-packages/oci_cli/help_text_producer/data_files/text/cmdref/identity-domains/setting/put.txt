@@ -1,0 +1,952 @@
+"put"
+*****
+
+* Description
+
+* Usage
+
+* Required Parameters
+
+* Optional Parameters
+
+* Global Parameters
+
+* Example using required parameter
+
+
+Description
+===========
+
+Replace Settings
+
+The top level –endpoint parameter must be supplied for this operation.
+
+
+Usage
+=====
+
+   oci identity-domains setting put [OPTIONS]
+
+
+Required Parameters
+===================
+
+--csr-access [text]
+
+This value indicates whether Customer Service Representatives can
+login and have readOnly or readWrite access.  A value of ‘none’ means
+CSR cannot login to the services.
+
+**SCIM++ Properties:**  - multiValued: false  - mutability: readWrite
+- required: true  - returned: default  - type: string
+
+Accepted values are:
+
+   none, readOnly, readWrite
+
+--schemas [complex type]
+
+REQUIRED. The schemas attribute is an array of Strings which allows
+introspection of the supported schema version for a SCIM
+representation as well any schema extensions supported by that
+representation. Each String value must be a unique URI. This
+specification defines URIs for User, Group, and a standard
+“enterprise” extension. All representations of SCIM schema MUST
+include a non-zero value array with value(s) of the URIs supported by
+that representation. Duplicate values MUST NOT be included. Value
+order is not specified and MUST not impact behavior.
+
+**SCIM++ Properties:**  - caseExact: false  - idcsSearchable: false  -
+multiValued: true  - mutability: readWrite  - required: true  -
+returned: default  - type: string  - uniqueness: none This is a
+complex type whose value must be valid JSON. The value can be provided
+as a string on the command line or passed in as a file using the
+file://path/to/file syntax.
+
+The "--generate-param-json-input" option can be used to generate an
+example of the JSON which must be provided. We recommend storing this
+example in a file, modifying it as needed and then passing it back in
+via the file:// syntax.
+
+--setting-id [text]
+
+ID of the resource
+
+
+Optional Parameters
+===================
+
+--account-always-trust-scope [boolean]
+
+Indicates whether all the Apps in this customer tenancy should trust
+each other. A value of true overrides the ‘defaultTrustScope’
+attribute here in Settings, as well as any App-specific ‘trustScope’
+attribute, to force in effect ‘trustScope=Account’ for every App in
+this customer tenancy.
+
+**Added In:** 18.1.6
+
+**SCIM++ Properties:**  - multiValued: false  - mutability: readWrite
+- required: false  - returned: default  - type: boolean
+
+--allowed-domains [complex type]
+
+One or more email domains allowed in a user’s email field. If
+unassigned, any domain is allowed.
+
+**SCIM++ Properties:**  - caseExact: false  - multiValued: true  -
+mutability: readWrite  - required: false  - returned: default  - type:
+string  - uniqueness: none This is a complex type whose value must be
+valid JSON. The value can be provided as a string on the command line
+or passed in as a file using the file://path/to/file syntax.
+
+The "--generate-param-json-input" option can be used to generate an
+example of the JSON which must be provided. We recommend storing this
+example in a file, modifying it as needed and then passing it back in
+via the file:// syntax.
+
+--allowed-forgot-password-flow-return-urls [complex type]
+
+If specified, indicates the set of Urls which can be returned to after
+successful forgot password flow
+
+**Added In:** 19.3.3
+
+**SCIM++ Properties:**  - type: string  - multiValued: true  -
+required: false  - mutability: readWrite  - returned: default  -
+uniqueness: none  - caseExact: false This is a complex type whose
+value must be valid JSON. The value can be provided as a string on the
+command line or passed in as a file using the file://path/to/file
+syntax.
+
+The "--generate-param-json-input" option can be used to generate an
+example of the JSON which must be provided. We recommend storing this
+example in a file, modifying it as needed and then passing it back in
+via the file:// syntax.
+
+--allowed-notification-redirect-urls [complex type]
+
+If specified, indicates the set of allowed notification redirect Urls
+which can be specified as the value of “notificationRedirectUrl” in
+the POST …/admin/v1/MePasswordResetRequestor request payload, which
+will then be included in the reset password email notification sent to
+a user as part of the forgot password / password reset flow.
+
+**Added In:** 2009041201
+
+**SCIM++ Properties:**  - type: string  - multiValued: true  -
+required: false  - mutability: readWrite  - returned: default  -
+uniqueness: none  - caseExact: false This is a complex type whose
+value must be valid JSON. The value can be provided as a string on the
+command line or passed in as a file using the file://path/to/file
+syntax.
+
+The "--generate-param-json-input" option can be used to generate an
+example of the JSON which must be provided. We recommend storing this
+example in a file, modifying it as needed and then passing it back in
+via the file:// syntax.
+
+--attribute-sets [text]
+
+A multi-valued list of strings indicating the return type of attribute
+definition. The specified set of attributes can be fetched by the
+return type of the attribute. One or more values can be given together
+to fetch more than one group of attributes. If ‘attributes’ query
+parameter is also available, union of the two is fetched. Valid values
+- all, always, never, request, default. Values are case-insensitive.
+
+Accepted values are:
+
+   all, always, default, never, request
+
+--attributes [text]
+
+A comma-delimited string that specifies the names of resource
+attributes that should be returned in the response. By default, a
+response that contains resource attributes contains only attributes
+that are defined in the schema for that resource type as
+returned=always or returned=default. An attribute that is defined as
+returned=request is returned in a response only if the request
+specifies its name in the value of this query parameter. If a request
+specifies this query parameter, the response contains the attributes
+that this query parameter specifies, as well as any attribute that is
+defined as returned=always.
+
+--audit-event-retention-period [integer]
+
+Audit Event retention period. If set, overrides default of 30 days
+after which Audit Events will be purged
+
+**Added In:** 19.2.1
+
+**SCIM++ Properties:**  - multiValued: false  - mutability: readWrite
+- required: false  - returned: default  - type: integer
+
+--authorization [text]
+
+The Authorization field value consists of credentials containing the
+authentication information of the user agent for the realm of the
+resource being requested.
+
+--certificate-validation [complex type]
+
+This is a complex type whose value must be valid JSON. The value can
+be provided as a string on the command line or passed in as a file
+using the file://path/to/file syntax.
+
+The "--generate-param-json-input" option can be used to generate an
+example of the JSON which must be provided. We recommend storing this
+example in a file, modifying it as needed and then passing it back in
+via the file:// syntax.
+
+--cloud-account-name [text]
+
+The attribute to store the cloud account name
+
+**Deprecated Since: 2011192329**
+
+**SCIM++ Properties:**  - caseExact: false  - multiValued: false  -
+mutability: readOnly  - required: false  - returned: default  - type:
+string  - uniqueness: none
+
+--cloud-gate-cors-settings [complex type]
+
+This is a complex type whose value must be valid JSON. The value can
+be provided as a string on the command line or passed in as a file
+using the file://path/to/file syntax.
+
+The "--generate-param-json-input" option can be used to generate an
+example of the JSON which must be provided. We recommend storing this
+example in a file, modifying it as needed and then passing it back in
+via the file:// syntax.
+
+--cloud-migration-custom-url [text]
+
+If specified, indicates the custom SIM Migrator Url which can be used
+while SIM to Oracle Identity Cloud Service CloudAccount Migration.
+
+**Added In:** 2012271618
+
+**SCIM++ Properties:**  - type: string  - multiValued: false  -
+required: false  - mutability: readWrite  - returned: default  -
+uniqueness: none  - caseExact: false
+
+--cloud-migration-url-enabled [boolean]
+
+CloudAccountMigration: Enable Custom SIM Migrator Url.
+
+**Added In:** 2012271618
+
+**SCIM++ Properties:**  - caseExact: false  - multiValued: false  -
+mutability: readWrite  - required: false  - returned: default  - type:
+boolean  - uniqueness: none
+
+--company-names [complex type]
+
+Name of the company in different locales
+
+**SCIM++ Properties:**  - idcsCompositeKey: [locale]  - multiValued:
+true  - mutability: readWrite  - required: false  - returned: default
+- type: complex
+
+This option is a JSON list with items of type SettingsCompanyNames.
+For documentation on SettingsCompanyNames please see our API
+reference: https://docs.cloud.oracle.com/api/#/en/identitydomains/v1/
+datatypes/SettingsCompanyNames. This is a complex type whose value
+must be valid JSON. The value can be provided as a string on the
+command line or passed in as a file using the file://path/to/file
+syntax.
+
+The "--generate-param-json-input" option can be used to generate an
+example of the JSON which must be provided. We recommend storing this
+example in a file, modifying it as needed and then passing it back in
+via the file:// syntax.
+
+--compartment-ocid [text]
+
+OCI Compartment Id (ocid) in which the resource lives.
+
+**SCIM++ Properties:**  - caseExact: false  - idcsSearchable: false  -
+multiValued: false  - mutability: readOnly  - required: false  -
+returned: default  - type: string  - uniqueness: none
+
+--contact-emails [complex type]
+
+Contact emails used to notify tenants. Can be one or more user or
+group alias emails.
+
+**SCIM++ Properties:**  - caseExact: false  - multiValued: true  -
+mutability: readWrite  - required: false  - returned: default  - type:
+string  - uniqueness: none This is a complex type whose value must be
+valid JSON. The value can be provided as a string on the command line
+or passed in as a file using the file://path/to/file syntax.
+
+The "--generate-param-json-input" option can be used to generate an
+example of the JSON which must be provided. We recommend storing this
+example in a file, modifying it as needed and then passing it back in
+via the file:// syntax.
+
+--custom-branding [boolean]
+
+Indicates if the branding is default or custom
+
+**SCIM++ Properties:**  - multiValued: false  - mutability: readWrite
+- required: false  - returned: default  - type: boolean
+
+--custom-css-location [text]
+
+Storage URL location where the sanitized custom css is located
+
+**Added In:** 20.1.3
+
+**SCIM++ Properties:**  - caseExact: false  - multiValued: false  -
+mutability: readWrite  - required: false  - returned: default  - type:
+string  - uniqueness: none
+
+--custom-html-location [text]
+
+Storage URL location where the sanitized custom html is located
+
+**Added In:** 20.1.3
+
+**SCIM++ Properties:**  - caseExact: false  - multiValued: false  -
+mutability: readWrite  - required: false  - returned: default  - type:
+string  - uniqueness: none
+
+--custom-translation [text]
+
+Custom translations (JSON String)
+
+**Added In:** 20.1.3
+
+**SCIM++ Properties:**  - caseExact: false  - multiValued: false  -
+mutability: readWrite  - required: false  - returned: default  - type:
+string  - uniqueness: none
+
+--default-company-names [complex type]
+
+Default name of the Company in different locales
+
+**Added In:** 18.2.2
+
+**SCIM++ Properties:**  - idcsCompositeKey: [locale]  - multiValued:
+true  - mutability: readOnly  - required: false  - returned: default
+- type: complex
+
+This option is a JSON list with items of type
+SettingsDefaultCompanyNames.  For documentation on
+SettingsDefaultCompanyNames please see our API reference: https://doc
+s.cloud.oracle.com/api/#/en/identitydomains/v1/datatypes/SettingsDefa
+ultCompanyNames. This is a complex type whose value must be valid
+JSON. The value can be provided as a string on the command line or
+passed in as a file using the file://path/to/file syntax.
+
+The "--generate-param-json-input" option can be used to generate an
+example of the JSON which must be provided. We recommend storing this
+example in a file, modifying it as needed and then passing it back in
+via the file:// syntax.
+
+--default-images [complex type]
+
+References to various images
+
+**Added In:** 18.2.2
+
+**SCIM++ Properties:**  - idcsCompositeKey: [type]  - multiValued:
+true  - mutability: readOnly  - required: false  - returned: default
+- type: complex
+
+This option is a JSON list with items of type SettingsDefaultImages.
+For documentation on SettingsDefaultImages please see our API
+reference: https://docs.cloud.oracle.com/api/#/en/identitydomains/v1/
+datatypes/SettingsDefaultImages. This is a complex type whose value
+must be valid JSON. The value can be provided as a string on the
+command line or passed in as a file using the file://path/to/file
+syntax.
+
+The "--generate-param-json-input" option can be used to generate an
+example of the JSON which must be provided. We recommend storing this
+example in a file, modifying it as needed and then passing it back in
+via the file:// syntax.
+
+--default-login-texts [complex type]
+
+Default Login text in different locales
+
+**Added In:** 18.2.2
+
+**SCIM++ Properties:**  - idcsCompositeKey: [locale]  - multiValued:
+true  - mutability: readOnly  - required: false  - returned: default
+- type: complex
+
+This option is a JSON list with items of type
+SettingsDefaultLoginTexts.  For documentation on
+SettingsDefaultLoginTexts please see our API reference: https://docs.
+cloud.oracle.com/api/#/en/identitydomains/v1/datatypes/SettingsDefaul
+tLoginTexts. This is a complex type whose value must be valid JSON.
+The value can be provided as a string on the command line or passed in
+as a file using the file://path/to/file syntax.
+
+The "--generate-param-json-input" option can be used to generate an
+example of the JSON which must be provided. We recommend storing this
+example in a file, modifying it as needed and then passing it back in
+via the file:// syntax.
+
+--default-trust-scope [text]
+
+**Deprecated Since: 18.3.6**
+
+**SCIM++ Properties:** - multiValued: false - mutability: readWrite -
+required: false - returned: default - type: string Indicates the
+default trust scope for all apps
+
+Accepted values are:
+
+   Account, Explicit, Tags
+
+--delete-in-progress [boolean]
+
+A boolean flag indicating this resource in the process of being
+deleted. Usually set to true when synchronous deletion of the resource
+would take too long.
+
+**SCIM++ Properties:**  - caseExact: false  - idcsSearchable: true  -
+multiValued: false  - mutability: readOnly  - required: false  -
+returned: default  - type: boolean  - uniqueness: none
+
+--diagnostic-level [integer]
+
+The level of diagnostic logging that is currently in effect. A level
+of 0 (zero) indicates that diagnostic logging is disabled. A level of
+1 (one) indicates that diagnostic logging is enabled.
+
+**SCIM++ Properties:**  - caseExact: false  - idcsSearchable: false  -
+multiValued: false  - mutability: readWrite  - required: false  -
+returned: default  - type: integer  - uniqueness: none
+
+--diagnostic-record-for-search-identifies-returned-resources [boolean]
+
+Controls whether DiagnosticRecords for external search-operations
+(against SCIM resource-types in the Admin service) identify returned
+resources.  If true, indicates that for each successful external
+search-operation at least one DiagnosticRecord will include at least
+one identifier for each matching resource that is returned in that
+search-response.  If false, no DiagnosticRecord should be expected to
+identify returned resources for a search-operation.  The default value
+is false.
+
+**Added In:** 2011192329
+
+**SCIM++ Properties:**  - caseExact: false  - multiValued: false  -
+mutability: readWrite  - required: false  - returned: default  - type:
+boolean  - uniqueness: none
+
+--diagnostic-tracing-upto [text]
+
+The end time up to which diagnostic recording is switched on
+
+**SCIM++ Properties:**  - caseExact: false  - idcsSearchable: false  -
+multiValued: false  - mutability: readOnly  - required: false  -
+returned: default  - type: dateTime  - uniqueness: none
+
+--domain-ocid [text]
+
+OCI Domain Id (ocid) in which the resource lives.
+
+**SCIM++ Properties:**  - caseExact: false  - idcsSearchable: false  -
+multiValued: false  - mutability: readOnly  - required: false  -
+returned: default  - type: string  - uniqueness: none
+
+--enable-terms-of-use [boolean]
+
+Indicates if Terms of Use is enabled in UI
+
+**Added In:** 18.2.4
+
+**SCIM++ Properties:**  - caseExact: false  - multiValued: false  -
+mutability: readWrite  - required: false  - returned: default  - type:
+boolean  - uniqueness: none
+
+--external-id [text]
+
+An identifier for the Resource as defined by the Service Consumer. The
+externalId may simplify identification of the Resource between Service
+Consumer and Service Provider by allowing the Consumer to refer to the
+Resource with its own identifier, obviating the need to store a local
+mapping between the local identifier of the Resource and the
+identifier used by the Service Provider. Each Resource MAY include a
+non-empty externalId value. The value of the externalId attribute is
+always issued by the Service Consumer and can never be specified by
+the Service Provider. The Service Provider MUST always interpret the
+externalId as scoped to the Service Consumer’s tenant.
+
+**SCIM++ Properties:**  - caseExact: false  - multiValued: false  -
+mutability: readWrite  - required: false  - returned: default  - type:
+string  - uniqueness: none
+
+--force
+
+Perform update without prompting for confirmation.
+
+--from-json [text]
+
+Provide input to this command as a JSON document from a file using the
+file://path-to/file syntax.
+
+The "--generate-full-command-json-input" option can be used to
+generate a sample json file to be used with this command option. The
+key names are pre-populated and match the command option names
+(converted to camelCase format, e.g. compartment-id –> compartmentId),
+while the values of the keys need to be populated by the user before
+using the sample file as an input to this command. For any command
+option that accepts multiple values, the value of the key can be a
+JSON array.
+
+Options can still be provided on the command line. If an option exists
+in both the JSON document and the command line then the command line
+specified value will be used.
+
+For examples on usage of this option, please see our “using CLI with
+advanced JSON options” link: https://docs.cloud.oracle.com/iaas/Conte
+nt/API/SDKDocs/cliusing.htm#AdvancedJSONOptions
+
+--iam-upst-session-expiry [integer]
+
+Maximum duration for IAM User Principal Session Token expiry
+
+**Added In:** 2307071836
+
+**SCIM++ Properties:**  - idcsSearchable: false  - multiValued: false
+- mutability: readWrite  - required: false  - returned: default  -
+type: integer  - uniqueness: none
+
+--id [text]
+
+Unique identifier for the SCIM Resource as defined by the Service
+Provider. Each representation of the Resource MUST include a non-empty
+id value. This identifier MUST be unique across the Service Provider’s
+entire set of Resources. It MUST be a stable, non-reassignable
+identifier that does not change when the same Resource is returned in
+subsequent requests. The value of the id attribute is always issued by
+the Service Provider and MUST never be specified by the Service
+Consumer. bulkId: is a reserved keyword and MUST NOT be used in the
+unique identifier.
+
+**SCIM++ Properties:**  - caseExact: false  - idcsSearchable: true  -
+multiValued: false  - mutability: readOnly  - required: false  -
+returned: always  - type: string  - uniqueness: global
+
+--idcs-created-by [complex type]
+
+This is a complex type whose value must be valid JSON. The value can
+be provided as a string on the command line or passed in as a file
+using the file://path/to/file syntax.
+
+The "--generate-param-json-input" option can be used to generate an
+example of the JSON which must be provided. We recommend storing this
+example in a file, modifying it as needed and then passing it back in
+via the file:// syntax.
+
+--idcs-last-modified-by [complex type]
+
+This is a complex type whose value must be valid JSON. The value can
+be provided as a string on the command line or passed in as a file
+using the file://path/to/file syntax.
+
+The "--generate-param-json-input" option can be used to generate an
+example of the JSON which must be provided. We recommend storing this
+example in a file, modifying it as needed and then passing it back in
+via the file:// syntax.
+
+--idcs-last-upgraded-in-release [text]
+
+The release number when the resource was upgraded.
+
+**SCIM++ Properties:**  - caseExact: false  - idcsSearchable: false  -
+multiValued: false  - mutability: readOnly  - required: false  -
+returned: request  - type: string  - uniqueness: none
+
+--idcs-prevented-operations [text]
+
+Each value of this attribute specifies an operation that only an
+internal client may perform on this particular resource.
+
+**SCIM++ Properties:**  - idcsSearchable: false  - multiValued: true
+- mutability: readOnly  - required: false  - returned: request  -
+type: string  - uniqueness: none
+
+Accepted values are:
+
+   delete, replace, update
+
+--if-match [text]
+
+Used to make the request conditional on an ETag
+
+--images [complex type]
+
+References to various images
+
+**SCIM++ Properties:**  - idcsCompositeKey: [type]  - multiValued:
+true  - mutability: readWrite  - required: false  - returned: default
+- type: complex
+
+This option is a JSON list with items of type SettingsImages.  For
+documentation on SettingsImages please see our API reference: https:/
+/docs.cloud.oracle.com/api/#/en/identitydomains/v1/datatypes/Settings
+Images. This is a complex type whose value must be valid JSON. The
+value can be provided as a string on the command line or passed in as
+a file using the file://path/to/file syntax.
+
+The "--generate-param-json-input" option can be used to generate an
+example of the JSON which must be provided. We recommend storing this
+example in a file, modifying it as needed and then passing it back in
+via the file:// syntax.
+
+--is-hosted-page [boolean]
+
+Indicates if ‘hosted’ option was selected
+
+**Added In:** 20.1.3
+
+**SCIM++ Properties:**  - caseExact: false  - multiValued: false  -
+mutability: readWrite  - required: false  - returned: default  - type:
+boolean  - uniqueness: none
+
+--issuer [text]
+
+Tenant issuer.
+
+**Added In:** 20.1.3
+
+**SCIM++ Properties:**  - caseExact: false  - multiValued: false  -
+mutability: readWrite  - required: false  - returned: default  - type:
+string  - uniqueness: none
+
+--locale [text]
+
+Default location for purposes of localizing items such as currency,
+date and time format, numerical representations, and so on.
+
+**SCIM++ Properties:**  - caseExact: false  -
+idcsCanonicalValueSourceFilter: attrName eq “locales” and
+attrValues.value eq “$(locale)”  -
+idcsCanonicalValueSourceResourceType: AllowedValue  - multiValued:
+false  - mutability: readWrite  - required: false  - returned: default
+- type: string  - uniqueness: none
+
+--login-texts [complex type]
+
+Login text in different locales
+
+**SCIM++ Properties:**  - idcsCompositeKey: [locale]  - multiValued:
+true  - mutability: readWrite  - required: false  - returned: default
+- type: complex
+
+This option is a JSON list with items of type SettingsLoginTexts.  For
+documentation on SettingsLoginTexts please see our API reference: htt
+ps://docs.cloud.oracle.com/api/#/en/identitydomains/v1/datatypes/Sett
+ingsLoginTexts. This is a complex type whose value must be valid JSON.
+The value can be provided as a string on the command line or passed in
+as a file using the file://path/to/file syntax.
+
+The "--generate-param-json-input" option can be used to generate an
+example of the JSON which must be provided. We recommend storing this
+example in a file, modifying it as needed and then passing it back in
+via the file:// syntax.
+
+--max-no-of-app-cmva-to-return [integer]
+
+Limit the maximum return of CMVA for an App
+
+**Added In:** 2111112015
+
+**SCIM++ Properties:**  - idcsMinValue: 0  - multiValued: false  -
+mutability: readWrite  - required: false  - returned: default  - type:
+integer  - uniqueness: none
+
+--max-no-of-app-role-members-to-return [integer]
+
+Limit the maximum return of members for an AppRole
+
+**Added In:** 2111112015
+
+**SCIM++ Properties:**  - idcsMinValue: 0  - multiValued: false  -
+mutability: readWrite  - required: false  - returned: default  - type:
+integer  - uniqueness: none
+
+--meta [complex type]
+
+This is a complex type whose value must be valid JSON. The value can
+be provided as a string on the command line or passed in as a file
+using the file://path/to/file syntax.
+
+The "--generate-param-json-input" option can be used to generate an
+example of the JSON which must be provided. We recommend storing this
+example in a file, modifying it as needed and then passing it back in
+via the file:// syntax.
+
+--migration-status [text]
+
+Database Migration Status
+
+**Added In:** 19.2.1
+
+**SCIM++ Properties:**  - caseExact: true  - multiValued: false  -
+mutability: readOnly  - required: false  - returned: default  - type:
+string  - uniqueness: none
+
+--ocid [text]
+
+Unique OCI identifier for the SCIM Resource.
+
+**SCIM++ Properties:**  - caseExact: true  - idcsSearchable: true  -
+multiValued: false  - mutability: immutable  - required: false  -
+returned: default  - type: string  - uniqueness: global
+
+--on-premises-provisioning [boolean]
+
+On-Premises provisioning feature toggle.
+
+**Added In:** 19.2.1
+
+**SCIM++ Properties:**  - caseExact: false  - multiValued: false  -
+mutability: readOnly  - required: false  - returned: default  - type:
+boolean  - uniqueness: none
+
+--preferred-language [text]
+
+Preferred written or spoken language used for localized user
+interfaces
+
+**SCIM++ Properties:**  - caseExact: false  -
+idcsCanonicalValueSourceFilter: attrName eq “languages” and
+attrValues.value eq “$(preferredLanguage)”  -
+idcsCanonicalValueSourceResourceType: AllowedValue  - multiValued:
+false  - mutability: readWrite  - required: false  - returned: default
+- type: string  - uniqueness: none
+
+--prev-issuer [text]
+
+Previous Tenant issuer. This is an Oracle Identity Cloud Service
+internal attribute which is not meant to be directly modified by ID
+Admin. Even if the request body (Settings) contains this attribute,
+the actual value will be set according to the Oracle Identity Cloud
+Service internal logic rather than solely based on the value provided
+in the request payload.
+
+**Added In:** 20.1.3
+
+**SCIM++ Properties:**  - caseExact: false  - multiValued: false  -
+mutability: readWrite  - required: false  - returned: request  - type:
+string  - uniqueness: none
+
+--privacy-policy-url [text]
+
+Privacy Policy URL
+
+**Added In:** 18.2.4
+
+**SCIM++ Properties:**  - caseExact: false  - multiValued: false  -
+mutability: readWrite  - required: false  - returned: default  - type:
+string  - uniqueness: none
+
+--purge-configs [complex type]
+
+Purge Configs for different Resource Types
+
+**Deprecated Since: 19.1.6**
+
+**SCIM++ Properties:**  - idcsCompositeKey: [resourceName]  -
+multiValued: true  - mutability: readWrite  - required: false  -
+returned: default  - type: complex
+
+This option is a JSON list with items of type SettingsPurgeConfigs.
+For documentation on SettingsPurgeConfigs please see our API
+reference: https://docs.cloud.oracle.com/api/#/en/identitydomains/v1/
+datatypes/SettingsPurgeConfigs. This is a complex type whose value
+must be valid JSON. The value can be provided as a string on the
+command line or passed in as a file using the file://path/to/file
+syntax.
+
+The "--generate-param-json-input" option can be used to generate an
+example of the JSON which must be provided. We recommend storing this
+example in a file, modifying it as needed and then passing it back in
+via the file:// syntax.
+
+--re-auth-factor [text]
+
+If reAuthWhenChangingMyAuthenticationFactors is true (default), this
+attribute specifies which re-authentication factor to use. Allowed
+value is “password”.
+
+**Added In:** 20.1.3
+
+**SCIM++ Properties:**  - multiValued: true  - mutability: readWrite
+- required: false  - returned: default  - type: string
+
+Accepted values are:
+
+   password
+
+--re-auth-when-changing-my-authentication-factors [boolean]
+
+Specifies whether re-authentication is required or not when a user
+changes one of their security factors such as password or email.
+Default is true to ensure more secure behavior.
+
+**Added In:** 20.1.3
+
+**SCIM++ Properties:**  - caseExact: false  - multiValued: false  -
+mutability: readWrite  - required: false  - returned: default  - type:
+boolean  - uniqueness: none
+
+--resource-type-schema-version [text]
+
+An endpoint-specific schema version number to use in the Request.
+Allowed version values are Earliest Version or Latest Version as
+specified in each REST API endpoint description, or any sequential
+number inbetween. All schema attributes/body parameters are a part of
+version 1. After version 1, any attributes added or deprecated will be
+tagged with the version that they were added to or deprecated in. If
+no version is provided, the latest schema version is returned.
+
+--service-admin-cannot-list-other-users [boolean]
+
+By default, a service admin can list all users in stripe. If true, a
+service admin cannot list other users.
+
+**Added In:** 2108190438
+
+**SCIM++ Properties:**  - caseExact: false  - multiValued: false  -
+mutability: readWrite  - required: false  - returned: default  - type:
+boolean
+
+--signing-cert-public-access [boolean]
+
+Indicates if access on SigningCert is allowed to public or not
+
+**Added In:** 17.3.4
+
+**SCIM++ Properties:**  - multiValued: false  - mutability: readWrite
+- required: false  - returned: default  - type: boolean
+
+--sub-mapping-attr [text]
+
+**Added In:** 20.1.3
+
+**SCIM++ Properties:** - caseExact: false - multiValued: false -
+mutability: readWrite - required: false - returned: default - type:
+string - uniqueness: none Subject mapping user profile attribute. The
+input format should be SCIM compliant. This attribute should be of
+type String and multivalued to false.
+
+--tags [complex type]
+
+A list of tags on this resource.
+
+**SCIM++ Properties:**  - idcsCompositeKey: [key, value]  -
+idcsSearchable: true  - multiValued: true  - mutability: readWrite  -
+required: false  - returned: request  - type: complex  - uniqueness:
+none
+
+This option is a JSON list with items of type Tags.  For documentation
+on tags please see our API reference: https://docs.cloud.oracle.com/a
+pi/#/en/identitydomains/v1/datatypes/Tags. This is a complex type
+whose value must be valid JSON. The value can be provided as a string
+on the command line or passed in as a file using the
+file://path/to/file syntax.
+
+The "--generate-param-json-input" option can be used to generate an
+example of the JSON which must be provided. We recommend storing this
+example in a file, modifying it as needed and then passing it back in
+via the file:// syntax.
+
+--tenancy-ocid [text]
+
+OCI Tenant Id (ocid) in which the resource lives.
+
+**SCIM++ Properties:**  - caseExact: false  - idcsSearchable: false  -
+multiValued: false  - mutability: readOnly  - required: false  -
+returned: default  - type: string  - uniqueness: none
+
+--tenant-custom-claims [complex type]
+
+Custom claims associated with the specific tenant
+
+**Added In:** 18.4.2
+
+**SCIM++ Properties:**  - idcsCompositeKey: [name]  - multiValued:
+true  - mutability: readWrite  - required: false  - returned: default
+- type: complex  - uniqueness: none
+
+This option is a JSON list with items of type
+SettingsTenantCustomClaims.  For documentation on
+SettingsTenantCustomClaims please see our API reference: https://docs
+.cloud.oracle.com/api/#/en/identitydomains/v1/datatypes/SettingsTenan
+tCustomClaims. This is a complex type whose value must be valid JSON.
+The value can be provided as a string on the command line or passed in
+as a file using the file://path/to/file syntax.
+
+The "--generate-param-json-input" option can be used to generate an
+example of the JSON which must be provided. We recommend storing this
+example in a file, modifying it as needed and then passing it back in
+via the file:// syntax.
+
+--terms-of-use-url [text]
+
+Terms of Use URL
+
+**Added In:** 18.2.4
+
+**SCIM++ Properties:**  - caseExact: false  - multiValued: false  -
+mutability: readWrite  - required: false  - returned: default  - type:
+string  - uniqueness: none
+
+--timezone [text]
+
+User’s timezone
+
+**SCIM++ Properties:**  - caseExact: false  -
+idcsCanonicalValueSourceFilter: attrName eq “timezones” and
+attrValues.value eq “$(timezone)”  -
+idcsCanonicalValueSourceResourceType: AllowedValue  - multiValued:
+false  - mutability: readWrite  - required: false  - returned: default
+- type: string  - uniqueness: none
+
+
+Global Parameters
+=================
+
+Use "oci --help" for help on global parameters.
+
+"--auth-purpose", "--auth", "--cert-bundle", "--cli-auto-prompt", "--
+cli-rc-file", "--config-file", "--connection-timeout", "--debug", "--
+defaults-file", "--endpoint", "--generate-full-command-json-input", "
+--generate-param-json-input", "--help", "--latest-version", "--max-
+retries", "--no-retry", "--opc-client-request-id", "--opc-request-id",
+"--output", "--profile", "--proxy", "--query", "--raw-output", "--
+read-timeout", "--realm-specific-endpoint", "--region", "--release-
+info", "--request-id", "--version", "-?", "-d", "-h", "-i", "-v"
+
+
+Example using required parameter
+================================
+
+Copy and paste the following example into a JSON file, replacing the
+example parameters with your own.
+
+       oci identity-domains setting put --generate-param-json-input schemas > schemas.json
+
+Copy the following CLI commands into a file named example.sh. Run the
+command by typing “bash example.sh” and replacing the example
+parameters with your own.
+
+Please note this sample will only work in the POSIX-compliant bash-
+like shell. You need to set up the OCI configuration and appropriate
+security policies before trying the examples.
+
+       export csr_access=<substitute-value-of-csr_access> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/identity-domains/setting/put.html#cmdoption-csr-access
+       export setting_id=<substitute-value-of-setting_id> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/identity-domains/setting/put.html#cmdoption-setting-id
+
+       oci identity-domains setting put --csr-access $csr_access --schemas file://schemas.json --setting-id $setting_id

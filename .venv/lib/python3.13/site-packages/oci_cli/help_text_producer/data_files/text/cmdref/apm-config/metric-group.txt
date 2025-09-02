@@ -1,0 +1,19 @@
+metric-group
+************
+
+
+Description
+===========
+
+A metric group defines a set of metrics to collect from a span. It
+uses a span filter to specify which spans to process. The set is then
+published to a namespace, which is a product level subdivision of
+metrics.
+
+
+Available Commands
+==================
+
+* get-namespace-metrics
+
+* get-namespaces

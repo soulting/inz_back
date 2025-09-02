@@ -1,0 +1,22 @@
+mac-order
+*********
+
+
+Description
+===========
+
+A description of a MacOrder resource.
+
+
+Available Commands
+==================
+
+* cancel
+
+* change-compartment
+
+* create
+
+* get
+
+* update

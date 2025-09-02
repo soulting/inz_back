@@ -1,0 +1,17 @@
+java-release
+************
+
+
+Description
+===========
+
+Metadata associated with a specific release of Java. Includes the
+artifact details.
+
+
+Available Commands
+==================
+
+* get
+
+* list

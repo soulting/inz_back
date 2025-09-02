@@ -1,0 +1,496 @@
+fleet-apps-management
+*********************
+
+
+Description
+===========
+
+Fleet Application Management provides a centralized platform to help
+you automate resource management tasks, validate patch compliance, and
+enhance operational efficiency across an enterprise.
+
+
+Available Commands
+==================
+
+* announcement-collection
+
+  * list-announcements
+
+* compliance-report
+
+  * get
+
+* fleet
+
+  * change-compartment
+
+  * check-resource-tagging
+
+  * confirm-targets
+
+  * create
+
+  * create-fleet-dynamic-resource-selection
+
+  * create-fleet-environment-fleet-details
+
+  * create-fleet-generic-fleet-details
+
+  * create-fleet-group-fleet-details
+
+  * create-fleet-manual-resource-selection
+
+  * create-fleet-product-fleet-details
+
+  * delete
+
+  * generate-compliance-report
+
+  * get
+
+  * request-resource-validation
+
+  * request-target-discovery
+
+  * update
+
+  * update-fleet-dynamic-resource-selection
+
+  * update-fleet-manual-resource-selection
+
+* fleet-apps-management-admin
+
+  * compliance-policy
+
+    * get
+
+  * compliance-policy-collection
+
+    * list-compliance-policies
+
+  * compliance-policy-rule
+
+    * create
+
+    * create-compliance-policy-rule-patch-level-selection-details
+
+    * create-compliance-policy-rule-patch-name-selection-details
+
+    * create-compliance-policy-rule-patch-release-date-selection-
+      details
+
+    * delete
+
+    * get
+
+    * update
+
+    * update-compliance-policy-rule-patch-level-selection-details
+
+    * update-compliance-policy-rule-patch-name-selection-details
+
+    * update-compliance-policy-rule-patch-release-date-selection-
+      details
+
+  * compliance-policy-rule-collection
+
+    * list-compliance-policy-rules
+
+  * onboarding
+
+    * create
+
+    * delete
+
+    * enable-latest-policy
+
+    * get
+
+    * manage-settings
+
+    * update
+
+  * onboarding-collection
+
+    * list-onboardings
+
+  * onboarding-policy-collection
+
+    * list-onboarding-policies
+
+  * platform-configuration
+
+    * change-compartment
+
+    * create
+
+    * create-platform-configuration-credential-config-category-details
+
+    * create-platform-configuration-environment-config-category-
+      details
+
+    * create-platform-configuration-lifecycle-operation-config-
+      category-details
+
+    * create-platform-configuration-patch-type-config-category-details
+
+    * create-platform-configuration-product-config-category-details
+
+    * create-platform-configuration-product-stack-config-category-
+      details
+
+    * create-platform-configuration-self-hosted-instance-config-
+      category-details
+
+    * delete
+
+    * get
+
+    * update
+
+    * update-platform-configuration-credential-config-category-details
+
+    * update-platform-configuration-environment-config-category-
+      details
+
+    * update-platform-configuration-lifecycle-operation-config-
+      category-details
+
+    * update-platform-configuration-patch-type-config-category-details
+
+    * update-platform-configuration-product-config-category-details
+
+    * update-platform-configuration-product-stack-config-category-
+      details
+
+    * update-platform-configuration-self-hosted-instance-config-
+      category-details
+
+  * platform-configuration-collection
+
+    * list-platform-configurations
+
+  * property
+
+    * change-compartment
+
+    * create
+
+    * delete
+
+    * get
+
+    * update
+
+  * property-collection
+
+    * list-properties
+
+* fleet-apps-management-catalog
+
+  * catalog-item
+
+    * change-compartment
+
+    * clone
+
+    * create
+
+    * create-catalog-item-catalog-git-source-config
+
+    * create-catalog-item-catalog-marketplace-source-config
+
+    * create-catalog-item-catalog-par-source-config
+
+    * create-catalog-item-catalog-source-template-config
+
+    * delete
+
+    * get
+
+    * update
+
+  * catalog-item-collection
+
+    * list-catalog-items
+
+* fleet-apps-management-maintenance-window
+
+  * maintenance-window
+
+    * create
+
+    * delete
+
+    * get
+
+    * update
+
+  * maintenance-window-collection
+
+    * list-maintenance-windows
+
+* fleet-apps-management-operations
+
+  * compliance-record
+
+    * export-compliance-report
+
+  * compliance-record-aggregation-collection
+
+    * summarize-compliance-record-counts
+
+  * compliance-record-collection
+
+    * list-compliance-records
+
+  * execution
+
+    * get
+
+  * execution-collection
+
+    * list-executions
+
+  * inventory-record-collection
+
+    * list-inventory-records
+
+  * job-activity
+
+    * get
+
+  * managed-entity-aggregation-collection
+
+    * summarize-managed-entity-counts
+
+  * patch
+
+    * change-compartment
+
+    * create
+
+    * create-patch-generic-artifact-details
+
+    * create-patch-platform-specific-artifact-details
+
+    * delete
+
+    * get
+
+    * update
+
+    * update-patch-generic-artifact-details
+
+    * update-patch-platform-specific-artifact-details
+
+  * patch-collection
+
+    * list-patches
+
+  * resource-collection
+
+    * list-resources
+
+  * scheduled-fleet-collection
+
+    * list-scheduled-fleets
+
+  * scheduler-definition
+
+    * create
+
+    * create-scheduler-definition-custom-schedule
+
+    * create-scheduler-definition-maintenance-window-schedule
+
+    * delete
+
+    * get
+
+    * update
+
+    * update-scheduler-definition-custom-schedule
+
+    * update-scheduler-definition-maintenance-window-schedule
+
+  * scheduler-definition-collection
+
+    * list-scheduler-definitions
+
+  * scheduler-execution-collection
+
+    * list-scheduler-executions
+
+  * scheduler-job
+
+    * delete
+
+    * get
+
+    * manage-job-execution
+
+    * manage-job-execution-action-group-based-user-action-details
+
+    * manage-job-execution-step-based-user-action-details
+
+    * update
+
+  * scheduler-job-aggregation-collection
+
+    * summarize-scheduler-job-counts
+
+  * scheduler-job-collection
+
+    * list-scheduler-jobs
+
+  * step-collection
+
+    * list-steps
+
+* fleet-apps-management-provision
+
+  * provision
+
+    * change-compartment
+
+    * create
+
+    * delete
+
+    * get
+
+    * update
+
+  * provision-collection
+
+    * list-provisions
+
+* fleet-apps-management-runbooks
+
+  * runbook
+
+    * change-compartment
+
+    * create
+
+    * delete
+
+    * get
+
+    * publish
+
+    * set-default
+
+    * update
+
+  * runbook-collection
+
+    * list-runbooks
+
+  * runbook-version
+
+    * create
+
+    * delete
+
+    * get
+
+    * update
+
+  * runbook-version-collection
+
+    * list-runbook-versions
+
+  * task-record
+
+    * change-compartment
+
+    * create
+
+    * delete
+
+    * get
+
+    * update
+
+  * task-record-collection
+
+    * list-task-records
+
+* fleet-apps-management-work-request
+
+  * work-request
+
+    * get
+
+    * list
+
+  * work-request-error
+
+    * list
+
+  * work-request-log-entry
+
+    * list-work-request-logs
+
+* fleet-collection
+
+  * list-fleets
+
+* fleet-credential
+
+  * create
+
+  * delete
+
+  * get
+
+  * update
+
+* fleet-credential-collection
+
+  * list-fleet-credentials
+
+* fleet-product-collection
+
+  * list-fleet-products
+
+* fleet-property
+
+  * create
+
+  * delete
+
+  * get
+
+  * update
+
+* fleet-property-collection
+
+  * list-fleet-properties
+
+* fleet-resource
+
+  * create
+
+  * delete
+
+  * get
+
+  * update
+
+* fleet-resource-collection
+
+  * list-fleet-resources
+
+* fleet-target-collection
+
+  * list-fleet-targets
+
+  * list-targets
+
+* inventory-resource-collection
+
+  * list-inventory-resources

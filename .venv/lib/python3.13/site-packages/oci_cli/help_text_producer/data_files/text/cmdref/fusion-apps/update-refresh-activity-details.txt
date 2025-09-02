@@ -1,0 +1,14 @@
+update-refresh-activity-details
+*******************************
+
+
+Description
+===========
+
+The information about scheduled refresh.
+
+
+Available Commands
+==================
+
+* update-refresh-activity

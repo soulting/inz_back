@@ -1,0 +1,17 @@
+fleet-agent-configuration
+*************************
+
+
+Description
+===========
+
+Management Agent Configuration for a Fleet. Includes JRE scanning
+frequency and a list of include/exclude file system paths.
+
+
+Available Commands
+==================
+
+* get
+
+* update

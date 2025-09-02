@@ -1,0 +1,14 @@
+bulk-upload-template
+********************
+
+
+Description
+===========
+
+The bulk upload template file.
+
+
+Available Commands
+==================
+
+* get

@@ -1,0 +1,76 @@
+apm-traces
+**********
+
+
+Description
+===========
+
+Use the Application Performance Monitoring Trace Explorer CLI to query
+traces and associated spans in Trace Explorer. For more information,
+see Application Performance Monitoring.
+
+
+Available Commands
+==================
+
+* attributes
+
+  * activate
+
+  * auto-activate-status
+
+  * deactivate
+
+  * pin
+
+  * unpin
+
+  * update-attribute
+
+  * update-auto-activate
+
+  * update-notes
+
+* query
+
+  * query-response
+
+    * run-query
+
+  * quick-picks
+
+    * list
+
+* scheduled-query
+
+  * create
+
+  * delete
+
+  * get
+
+  * list
+
+  * update
+
+* trace
+
+  * aggregated-snapshot
+
+    * get
+
+  * log
+
+    * get
+
+  * span
+
+    * get
+
+  * trace
+
+    * get
+
+  * trace-snapshot
+
+    * get

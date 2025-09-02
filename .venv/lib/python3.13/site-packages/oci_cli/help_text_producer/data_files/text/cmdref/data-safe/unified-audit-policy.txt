@@ -1,0 +1,25 @@
+unified-audit-policy
+********************
+
+
+Description
+===========
+
+Resource represents a single unified audit policy on the target
+database.
+
+
+Available Commands
+==================
+
+* bulk-create
+
+* change-compartment
+
+* create
+
+* delete
+
+* get
+
+* update

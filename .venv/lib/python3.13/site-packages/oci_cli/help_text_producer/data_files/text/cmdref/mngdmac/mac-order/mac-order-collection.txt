@@ -1,0 +1,15 @@
+mac-order-collection
+********************
+
+
+Description
+===========
+
+Results of a MacOrder search. Contains both MacOrderSummary items and
+other information, such as metadata.
+
+
+Available Commands
+==================
+
+* list-mac-orders

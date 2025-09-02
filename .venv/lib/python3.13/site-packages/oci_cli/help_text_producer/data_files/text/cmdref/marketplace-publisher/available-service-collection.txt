@@ -1,0 +1,15 @@
+available-service-collection
+****************************
+
+
+Description
+===========
+
+Results of available service provider search, returns available
+services
+
+
+Available Commands
+==================
+
+* list-available-services

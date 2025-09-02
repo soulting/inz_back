@@ -1,0 +1,16 @@
+access-request-ext
+******************
+
+
+Description
+===========
+
+An access request to a customer’s resource that includes additional
+requestor metadata. An access request is a subsidiary resource of the
+Lockbox entity.
+
+
+Available Commands
+==================
+
+* get-access-request-internal

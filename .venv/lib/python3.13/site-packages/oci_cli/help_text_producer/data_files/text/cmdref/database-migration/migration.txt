@@ -1,0 +1,46 @@
+migration
+*********
+
+
+Description
+===========
+
+Migration resource
+
+
+Available Commands
+==================
+
+* add-mysql-objects
+
+* add-oracle-objects
+
+* change-compartment
+
+* clone-mysql-migration
+
+* clone-oracle-migration
+
+* create-mysql-migration
+
+* create-oracle-migration
+
+* delete
+
+* evaluate
+
+* get
+
+* list
+
+* remove-mysql-objects
+
+* remove-oracle-objects
+
+* retrieve-supported-phases
+
+* start
+
+* update-mysql-migration
+
+* update-oracle-migration

@@ -1,0 +1,14 @@
+recommendation-summary
+**********************
+
+
+Description
+===========
+
+The metadata associated with the recommendation summary.
+
+
+Available Commands
+==================
+
+* list

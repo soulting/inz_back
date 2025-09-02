@@ -1,0 +1,18 @@
+commitment
+**********
+
+
+Description
+===========
+
+OneSubscription CLI
+
+
+Available Commands
+==================
+
+* commitment
+
+  * get
+
+  * list

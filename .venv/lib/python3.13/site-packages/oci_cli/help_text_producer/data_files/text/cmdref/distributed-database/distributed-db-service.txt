@@ -1,0 +1,55 @@
+distributed-db-service
+**********************
+
+
+Description
+===========
+
+Use the Globally Distributed Database service CLI to create and manage
+the Globally distributed databases.
+
+
+Available Commands
+==================
+
+* distributed-database
+
+  * add
+
+  * change-compartment
+
+  * change-distributed-db-backup-config
+
+  * configure-distributed-database-gsms
+
+  * configure-distributed-database-sharding
+
+  * create
+
+  * delete
+
+  * download-distributed-database-gsm-certificate-signing-request
+
+  * generate-distributed-database-gsm-certificate-signing-request
+
+  * generate-distributed-database-wallet
+
+  * get
+
+  * patch
+
+  * rotate-distributed-database-passwords
+
+  * start
+
+  * stop
+
+  * update
+
+  * upload-distributed-database-signed-certificate-and-generate-wallet
+
+  * validate-distributed-database-network
+
+* distributed-database-collection
+
+  * list-distributed-databases

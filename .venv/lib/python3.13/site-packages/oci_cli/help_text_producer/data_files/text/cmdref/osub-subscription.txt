@@ -1,0 +1,35 @@
+osub-subscription
+*****************
+
+
+Description
+===========
+
+Set of CLI that return the Subscription Details, Commitment and
+Effective Rate Card Details
+
+
+Available Commands
+==================
+
+* commitment
+
+  * commitment
+
+    * list
+
+  * commitment-detail
+
+    * get-commitment
+
+* ratecard
+
+  * rate-card
+
+    * list
+
+* subscription
+
+  * subscription
+
+    * list

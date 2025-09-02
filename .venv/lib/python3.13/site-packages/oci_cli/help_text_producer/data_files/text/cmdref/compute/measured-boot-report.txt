@@ -1,0 +1,16 @@
+measured-boot-report
+********************
+
+
+Description
+===========
+
+The measured boot report for a shielded instance.
+
+
+Available Commands
+==================
+
+* accept-shielded-integrity-policy
+
+* get

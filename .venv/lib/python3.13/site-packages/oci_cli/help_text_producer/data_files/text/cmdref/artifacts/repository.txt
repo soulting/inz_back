@@ -1,0 +1,28 @@
+repository
+**********
+
+
+Description
+===========
+
+The metadata for the artifact repository.
+
+
+Available Commands
+==================
+
+* change-compartment
+
+* create
+
+* create-generic-repository
+
+* delete
+
+* get
+
+* list
+
+* update
+
+* update-generic-repository

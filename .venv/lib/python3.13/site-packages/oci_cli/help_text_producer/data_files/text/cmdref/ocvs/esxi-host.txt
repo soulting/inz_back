@@ -1,0 +1,37 @@
+esxi-host
+*********
+
+
+Description
+===========
+
+An ESXi host is a node in a Cluster. At a minimum, each Cluster has 3
+ESXi hosts that are used to implement a functioning VMware
+environment.
+
+In terms of implementation, an ESXi host is a Compute instance that is
+configured with the chosen bundle of VMware software.
+
+Notice that an *EsxiHost* object has its own OCID (*id*), and a
+separate attribute for the OCID of the Compute instance
+(*computeInstanceId*).
+
+
+Available Commands
+==================
+
+* create
+
+* delete
+
+* get
+
+* inplace-upgrade
+
+* list
+
+* replace-host
+
+* swap-billing
+
+* update

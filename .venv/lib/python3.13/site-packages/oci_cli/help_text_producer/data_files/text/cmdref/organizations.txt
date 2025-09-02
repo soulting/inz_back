@@ -1,0 +1,148 @@
+organizations
+*************
+
+
+Description
+===========
+
+Use the Organizations CLI to consolidate multiple OCI tenancies into
+an organization, and centrally manage your tenancies and organization
+resources. For more information, see Organization Management Overview.
+
+
+Available Commands
+==================
+
+* assigned-subscription
+
+  * get
+
+  * list
+
+* child-tenancy
+
+  * create
+
+* domain
+
+  * create
+
+  * delete
+
+  * get
+
+  * list
+
+  * update
+
+* domain-governance
+
+  * create
+
+  * delete
+
+  * get
+
+  * list
+
+  * update
+
+* governance
+
+  * organization-tenancy
+
+    * add
+
+    * remove
+
+* link
+
+  * delete
+
+  * get
+
+  * list
+
+* order
+
+  * activate
+
+  * get
+
+* organization
+
+  * get
+
+  * list
+
+  * list-organization-tenancies
+
+  * update
+
+* organization-tenancy
+
+  * approve-organization-tenancy-for-transfer
+
+  * delete
+
+  * get
+
+  * restore
+
+  * unapprove-organization-tenancy-for-transfer
+
+* recipient-invitation
+
+  * accept
+
+  * get
+
+  * ignore
+
+  * list
+
+  * update
+
+* sender-invitation
+
+  * cancel
+
+  * create
+
+  * get
+
+  * list
+
+  * update
+
+* subscription
+
+  * get
+
+  * list
+
+  * list-available-regions
+
+* subscription-mapping
+
+  * create
+
+  * delete
+
+  * get
+
+  * list
+
+* work-request
+
+  * get
+
+  * list
+
+* work-request-error
+
+  * list-errors
+
+* work-request-log-entry
+
+  * list

@@ -1,0 +1,14 @@
+term-collection
+***************
+
+
+Description
+===========
+
+Results of the term search. Contains term items.
+
+
+Available Commands
+==================
+
+* list-terms

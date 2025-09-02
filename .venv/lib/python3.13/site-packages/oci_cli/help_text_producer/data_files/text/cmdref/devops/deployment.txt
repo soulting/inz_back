@@ -1,0 +1,32 @@
+deployment
+**********
+
+
+Description
+===========
+
+A single execution or run of a pipeline.
+
+
+Available Commands
+==================
+
+* approve
+
+* cancel
+
+* create-pipeline-deployment
+
+* create-pipeline-redeployment
+
+* create-single-stage-deployment
+
+* create-single-stage-redeployment
+
+* get
+
+* list
+
+* update
+
+* update-single-stage-redeployment

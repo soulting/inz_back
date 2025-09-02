@@ -1,0 +1,43 @@
+task
+****
+
+
+Description
+===========
+
+The task type contains the audit summary information and the
+definition of the task.
+
+
+Available Commands
+==================
+
+* create-data-loader-task
+
+* create-integration-task
+
+* create-pipeline-task
+
+* create-task-from-dataflow-task
+
+* create-task-from-rest-task
+
+* create-task-from-sql-task
+
+* delete
+
+* get
+
+* list
+
+* update-data-loader-task
+
+* update-integration-task
+
+* update-pipeline-task
+
+* update-task-from-dataflow-task
+
+* update-task-from-rest-task
+
+* update-task-from-sql-task

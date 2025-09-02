@@ -1,0 +1,14 @@
+sensitive-schema
+****************
+
+
+Description
+===========
+
+A collection of sensitive schema summary objects.
+
+
+Available Commands
+==================
+
+* list

@@ -1,0 +1,14 @@
+redeemable-user-summary
+***********************
+
+
+Description
+===========
+
+User summary that can redeem rewards.
+
+
+Available Commands
+==================
+
+* list-redeemable-users

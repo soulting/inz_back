@@ -1,0 +1,18 @@
+cluster-config-version
+**********************
+
+
+Description
+===========
+
+A shared configuration object used by 0 or more kafka clusters.
+
+
+Available Commands
+==================
+
+* delete
+
+* get
+
+* list

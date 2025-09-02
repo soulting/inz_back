@@ -1,0 +1,26 @@
+snapshot
+********
+
+
+Description
+===========
+
+A point-in-time snapshot of a specified file system.
+
+
+Available Commands
+==================
+
+* add
+
+* create
+
+* delete
+
+* get
+
+* list
+
+* remove
+
+* update

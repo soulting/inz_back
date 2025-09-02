@@ -1,0 +1,26 @@
+scheduling-plan
+***************
+
+
+Description
+===========
+
+Details of a Scheduling Plan.
+
+
+Available Commands
+==================
+
+* cascading-delete
+
+* change-compartment
+
+* create
+
+* delete
+
+* get
+
+* list
+
+* reorder-scheduled-actions

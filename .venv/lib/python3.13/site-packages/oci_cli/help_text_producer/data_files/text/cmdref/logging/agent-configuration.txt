@@ -1,0 +1,34 @@
+agent-configuration
+*******************
+
+
+Description
+===========
+
+Top Unified Agent configuration object.
+
+
+Available Commands
+==================
+
+* change-compartment
+
+* create
+
+* create-log-configuration
+
+* create-unified-agent-configuration-unified-agent-monitoring-
+  configuration-details
+
+* delete
+
+* get
+
+* list
+
+* update
+
+* update-log-configuration
+
+* update-unified-agent-configuration-unified-agent-monitoring-
+  configuration-details

@@ -1,0 +1,343 @@
+goldengate
+**********
+
+
+Description
+===========
+
+Use the Oracle Cloud Infrastructure GoldenGate CLI to perform data
+replication operations.
+
+
+Available Commands
+==================
+
+* certificate
+
+  * create
+
+  * delete
+
+  * get
+
+  * list
+
+* connection
+
+  * add-lock
+
+  * change-compartment
+
+  * create-amazon-kinesis-connection
+
+  * create-amazon-redshift-connection
+
+  * create-amazon-s3-connection
+
+  * create-azure-data-lake-storage-connection
+
+  * create-azure-synapse-connection
+
+  * create-databricks-connection
+
+  * create-db2-connection
+
+  * create-elasticsearch-connection
+
+  * create-generic-connection
+
+  * create-goldengate-connection
+
+  * create-google-big-query-connection
+
+  * create-google-cloud-storage-connection
+
+  * create-google-pub-sub-connection
+
+  * create-hdfs-connection
+
+  * create-iceberg-connection
+
+  * create-jms-connection
+
+  * create-kafka-connection
+
+  * create-kafka-schema-registry-connection
+
+  * create-microsoft-fabric-connection
+
+  * create-microsoft-sqlserver-connection
+
+  * create-mongo-db-connection
+
+  * create-mysql-connection
+
+  * create-object-storage-connection
+
+  * create-oracle-connection
+
+  * create-oracle-nosql-connection
+
+  * create-postgresql-connection
+
+  * create-redis-connection
+
+  * create-snowflake-connection
+
+  * delete
+
+  * get
+
+  * list
+
+  * refresh
+
+  * remove-lock
+
+  * update-amazon-kinesis-connection
+
+  * update-amazon-redshift-connection
+
+  * update-amazon-s3-connection
+
+  * update-azure-data-lake-storage-connection
+
+  * update-azure-synapse-connection
+
+  * update-databricks-connection
+
+  * update-db2-connection
+
+  * update-elasticsearch-connection
+
+  * update-generic-connection
+
+  * update-goldengate-connection
+
+  * update-google-big-query-connection
+
+  * update-google-cloud-storage-connection
+
+  * update-google-pub-sub-connection
+
+  * update-hdfs-connection
+
+  * update-iceberg-connection
+
+  * update-jms-connection
+
+  * update-kafka-connection
+
+  * update-kafka-schema-registry-connection
+
+  * update-microsoft-fabric-connection
+
+  * update-microsoft-sqlserver-connection
+
+  * update-mongo-db-connection
+
+  * update-mysql-connection
+
+  * update-object-storage-connection
+
+  * update-oracle-connection
+
+  * update-oracle-nosql-connection
+
+  * update-postgresql-connection
+
+  * update-redis-connection
+
+  * update-snowflake-connection
+
+* connection-assignment
+
+  * create
+
+  * delete
+
+  * get
+
+  * list
+
+  * test
+
+* database-registration
+
+  * change-compartment
+
+  * create
+
+  * delete
+
+  * get
+
+  * list
+
+  * update
+
+* deployment
+
+  * add-deployment-local-peer
+
+  * add-lock
+
+  * change-compartment
+
+  * collect-diagnostics
+
+  * create
+
+  * delete
+
+  * export-wallet
+
+  * generate-library-url
+
+  * generate-log-reader-component-library-url
+
+  * get
+
+  * import-wallet
+
+  * list
+
+  * remove-deployment-local-peer
+
+  * remove-lock
+
+  * start
+
+  * stop
+
+  * switchover-deployment-peer
+
+  * update
+
+  * upgrade
+
+  * upgrade-to
+
+  * wallet-exists
+
+* deployment-backup
+
+  * add-lock
+
+  * cancel
+
+  * change-compartment
+
+  * copy
+
+  * create
+
+  * delete
+
+  * get
+
+  * list
+
+  * remove-lock
+
+  * restore-deployment
+
+  * update
+
+* deployment-environment
+
+  * list
+
+* deployment-peer-summary
+
+  * list-deployment-peers
+
+* deployment-type-collection
+
+  * list-deployment-types
+
+* deployment-upgrade
+
+  * cancel
+
+  * cancel-snooze
+
+  * get
+
+  * list
+
+  * reschedule
+
+  * rollback
+
+  * snooze
+
+  * upgrade
+
+* deployment-version
+
+  * list
+
+* deployment-wallets-operation-summary
+
+  * list-wallet-operations
+
+* message-summary
+
+  * list-messages
+
+* pipeline
+
+  * change-compartment
+
+  * collect-diagnostic
+
+  * create-zero-etl-pipeline
+
+  * delete
+
+  * get
+
+  * list
+
+  * list-initialization-steps
+
+  * list-running-processes
+
+  * list-schema-tables
+
+  * list-schemas
+
+  * start
+
+  * stop
+
+  * test-connection
+
+  * update-zero-etl-pipeline
+
+* pipeline-recipe-collection
+
+  * list-recipes
+
+* trail-file-summary
+
+  * list-trail-files
+
+* trail-sequence-summary
+
+  * list-trail-sequences
+
+* work-request
+
+  * get
+
+  * list
+
+* work-request-error
+
+  * list
+
+* work-request-log-entry
+
+  * list

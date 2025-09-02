@@ -1,0 +1,14 @@
+my-authentication-factor-initiator
+**********************************
+
+
+Description
+===========
+
+This schema defines the attributes of Initiator call.
+
+
+Available Commands
+==================
+
+* create

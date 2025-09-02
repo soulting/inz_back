@@ -1,0 +1,15 @@
+realtime-session-token
+**********************
+
+
+Description
+===========
+
+The response from the realtime session token endpoint that creates the
+auth token to be used with the realtime speech service.
+
+
+Available Commands
+==================
+
+* create

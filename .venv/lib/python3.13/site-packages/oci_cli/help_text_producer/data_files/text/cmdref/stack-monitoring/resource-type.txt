@@ -1,0 +1,27 @@
+resource-type
+*************
+
+
+Description
+===========
+
+The response object for create monitored resource type and get
+monitored resource type operations.
+
+
+Available Commands
+==================
+
+* create
+
+* create-system-format-resource-type
+
+* delete
+
+* get
+
+* list
+
+* update
+
+* update-system-format-resource-type

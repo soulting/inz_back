@@ -1,0 +1,15 @@
+action-param-values-summary
+***************************
+
+
+Description
+===========
+
+Details of the action parameter and its possible values that is used
+in listParamsForActionType.
+
+
+Available Commands
+==================
+
+* list-params-for-action-type

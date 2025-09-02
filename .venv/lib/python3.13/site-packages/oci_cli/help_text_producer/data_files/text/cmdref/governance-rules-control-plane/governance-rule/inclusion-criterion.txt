@@ -1,0 +1,23 @@
+inclusion-criterion
+*******************
+
+
+Description
+===========
+
+Represents the criterion for the inclusion of the child tenancies
+under a governance rule. This can be either TENANCY or TAG.
+
+
+Available Commands
+==================
+
+* create
+
+* create-inclusion-criterion-tenancy-association
+
+* delete
+
+* get
+
+* list-inclusion-criteria

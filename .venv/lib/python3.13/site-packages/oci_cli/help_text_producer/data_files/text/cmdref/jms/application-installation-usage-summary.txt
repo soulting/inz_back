@@ -1,0 +1,24 @@
+application-installation-usage-summary
+**************************************
+
+
+Description
+===========
+
+Summarizes application installation usage information during a
+specified time period. The main difference between ApplicationUsage
+and ApplicationInstallationUsageSummary is the presence of
+installation information. ApplicationUsage provides only aggregated
+information for an application regardless of the installation paths.
+Therefore, two different applications with the same application name
+installed in two different paths will be aggregated to a single
+application. This aggregation makes it difficult to focus actions to
+single application installed on a known path. An application
+installation is independent of the Java Runtime on which it’s running
+or the Managed Instance where it’s installed.
+
+
+Available Commands
+==================
+
+* summarize-application-installation-usage

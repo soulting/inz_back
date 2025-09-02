@@ -1,0 +1,17 @@
+compliance-policy
+*****************
+
+
+Description
+===========
+
+Define software patch compliance policies for various products running
+in OCI resources. A compliance policy is a configuration you set up
+for various products to report compliance by defining the schedule and
+patch baseline.
+
+
+Available Commands
+==================
+
+* get

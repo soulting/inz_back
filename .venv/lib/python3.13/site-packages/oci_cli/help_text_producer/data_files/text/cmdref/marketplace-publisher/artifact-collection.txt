@@ -1,0 +1,14 @@
+artifact-collection
+*******************
+
+
+Description
+===========
+
+Results of the artifact search. Contains the artifact items.
+
+
+Available Commands
+==================
+
+* list-artifacts

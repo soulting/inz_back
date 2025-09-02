@@ -1,0 +1,22 @@
+data-asset
+**********
+
+
+Description
+===========
+
+Represents a data source in the Data Integration service.
+
+
+Available Commands
+==================
+
+* create
+
+* delete
+
+* get
+
+* list
+
+* update

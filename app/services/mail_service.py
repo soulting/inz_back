@@ -9,22 +9,6 @@ from flask import render_template, current_app
 
 load_dotenv()
 
-def render_email_template(name, user_email, user_id, template):
-    base_path = os.path.join(os.path.dirname(__file__), "../templates/emails")
-    template_path = os.path.join(base_path, "simple_activation.html")
-
-    with open(template_path, "r", encoding="utf-8") as f:
-        html = f.read()
-
-    base_url = os.getenv("BASE_URL", "http://localhost:5000/auth")
-    activation_link = f"{base_url}/activate/{user_id}"
-
-    html = html.replace("{{ name }}", name)
-    html = html.replace("{{ email }}", user_email)
-    html = html.replace("{{ activation_link }}", activation_link)
-
-    return html
-
 
 def send_email(subject, body, to_email=None, reply_to=None, is_html=False):
     """Podstawowa funkcja wysyłania emaili"""
@@ -37,7 +21,7 @@ def send_email(subject, body, to_email=None, reply_to=None, is_html=False):
     recipient = to_email or default_to_email
 
     msg = MIMEMultipart()
-    msg["From"] = f"{os.getenv('FROM_NAME', 'Email Service')} <{from_email}>"
+    msg["From"] = "Czas na niemiecki"
     msg["To"] = recipient
     msg["Subject"] = subject
 
@@ -53,6 +37,8 @@ def send_email(subject, body, to_email=None, reply_to=None, is_html=False):
         server.login(from_email, password)
         server.sendmail(from_email, recipient, msg.as_string())
         server.quit()
+
+        print("wysłany")
         return True, "E-mail wysłany pomyślnie!"
     except Exception as e:
         return False, f"Błąd: {e}"
@@ -99,9 +85,30 @@ def send_welcome_email(name, user_email):
 
 
 def send_contact_form(name, user_email, message):
+
     """Email z formularza kontaktowego"""
     return send_email(
         subject=f"Nowa wiadomość od {name}",
         body=f"Otrzymałeś nową wiadomość:\n\nOd: {name}\nEmail: {user_email}\n\nWiadomość:\n{message}",
         reply_to=user_email
     )
+
+
+
+def send_to_amanda(user_email):
+
+    try:
+        html_body = render_template(
+            "emails/test.html",
+
+        )
+
+        return send_email(
+            subject="Aktywuj swoje konto",
+            body=html_body,
+            to_email=user_email,
+            is_html=True
+        )
+
+    except Exception as e:
+        return False, f"{e}"

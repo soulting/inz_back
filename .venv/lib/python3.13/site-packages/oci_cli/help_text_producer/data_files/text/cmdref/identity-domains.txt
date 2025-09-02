@@ -1,0 +1,879 @@
+identity-domains
+****************
+
+
+Description
+===========
+
+Use the Identity Domains CLI to manage resources within an identity
+domain, for example, users, dynamic resource groups, groups, and
+identity providers. For information about managing resources within
+identity domains, see Identity and Access Management (with identity
+domains). Use this pattern to construct endpoints for identity
+domains: *https://<domainURL>/admin/v1/*. See Finding an Identity
+Domain URL to locate the domain URL you need. Use the table of
+contents and search tool to explore the Identity Domains CLI.
+
+
+Available Commands
+==================
+
+* account-mgmt-info
+
+  * get
+
+* account-mgmt-infos
+
+  * list
+
+  * search
+
+* account-recovery-setting
+
+  * get
+
+  * patch
+
+  * put
+
+* account-recovery-settings
+
+  * list
+
+* api-key
+
+  * create
+
+  * delete
+
+  * get
+
+  * patch
+
+* api-keys
+
+  * list
+
+  * search
+
+* app
+
+  * create
+
+  * delete
+
+  * get
+
+  * patch
+
+  * put
+
+* app-role
+
+  * create
+
+  * delete
+
+  * get
+
+  * patch
+
+* app-roles
+
+  * list
+
+  * search
+
+* app-status-changer
+
+  * put
+
+* approval-workflow
+
+  * create
+
+  * delete
+
+  * get
+
+  * patch
+
+  * put
+
+* approval-workflow-assignment
+
+  * create
+
+  * delete
+
+  * get
+
+* approval-workflow-assignments
+
+  * list
+
+* approval-workflow-step
+
+  * create
+
+  * delete
+
+  * get
+
+  * patch
+
+* approval-workflow-steps
+
+  * list
+
+* approval-workflows
+
+  * list
+
+* apps
+
+  * list
+
+  * search
+
+* auth-token
+
+  * create
+
+  * delete
+
+  * get
+
+  * patch
+
+* auth-tokens
+
+  * list
+
+  * search
+
+* authentication-factor-setting
+
+  * get
+
+  * put
+
+* authentication-factor-settings
+
+  * list
+
+  * search
+
+* authentication-factors-remover
+
+  * create
+
+* branding-setting
+
+  * get
+
+* branding-settings
+
+  * list
+
+* cloud-gate
+
+  * create
+
+  * delete
+
+  * get
+
+  * patch
+
+  * put
+
+* cloud-gate-mapping
+
+  * create
+
+  * delete
+
+  * get
+
+  * patch
+
+  * put
+
+* cloud-gate-mappings
+
+  * list
+
+  * search
+
+* cloud-gate-server
+
+  * create
+
+  * delete
+
+  * get
+
+  * patch
+
+  * put
+
+* cloud-gate-servers
+
+  * list
+
+  * search
+
+* cloud-gates
+
+  * list
+
+  * search
+
+* condition
+
+  * create
+
+  * delete
+
+  * get
+
+  * list
+
+  * patch
+
+  * put
+
+  * search
+
+* customer-secret-key
+
+  * create
+
+  * delete
+
+  * get
+
+  * patch
+
+* customer-secret-keys
+
+  * list
+
+  * search
+
+* dynamic-resource-group
+
+  * create
+
+  * delete
+
+  * get
+
+  * patch
+
+  * put
+
+* dynamic-resource-groups
+
+  * list
+
+  * search
+
+* grant
+
+  * create
+
+  * delete
+
+  * get
+
+  * patch
+
+* grants
+
+  * list
+
+  * search
+
+* group
+
+  * create
+
+  * delete
+
+  * get
+
+  * patch
+
+  * put
+
+* groups
+
+  * list
+
+  * search
+
+* identity-propagation-trust
+
+  * create
+
+  * delete
+
+  * get
+
+  * patch
+
+  * put
+
+* identity-propagation-trusts
+
+  * list
+
+* identity-provider
+
+  * create
+
+  * delete
+
+  * get
+
+  * patch
+
+  * put
+
+* identity-providers
+
+  * list
+
+  * search
+
+* identity-setting
+
+  * get
+
+  * patch
+
+  * put
+
+* identity-settings
+
+  * list
+
+  * search
+
+* kmsi-setting
+
+  * get
+
+  * patch
+
+  * put
+
+* kmsi-settings
+
+  * list
+
+  * search
+
+* me
+
+  * create
+
+  * get
+
+  * patch
+
+  * put
+
+* me-password-changer
+
+  * put
+
+* my-api-key
+
+  * create
+
+  * delete
+
+  * get
+
+  * patch
+
+* my-api-keys
+
+  * list
+
+* my-apps
+
+  * list
+
+  * search
+
+* my-auth-token
+
+  * create
+
+  * delete
+
+  * get
+
+  * patch
+
+* my-auth-tokens
+
+  * list
+
+* my-authentication-factor-initiator
+
+  * create
+
+* my-authentication-factor-validator
+
+  * create
+
+* my-authentication-factors-remover
+
+  * create
+
+* my-completed-approval
+
+  * get
+
+* my-completed-approvals
+
+  * list
+
+* my-customer-secret-key
+
+  * create
+
+  * delete
+
+  * get
+
+  * patch
+
+* my-customer-secret-keys
+
+  * list
+
+* my-device
+
+  * delete
+
+  * get
+
+  * patch
+
+* my-devices
+
+  * list
+
+* my-groups
+
+  * list
+
+  * search
+
+* my-o-auth2-client-credential
+
+  * create
+
+  * delete
+
+  * get
+
+  * patch
+
+* my-o-auth2-client-credentials
+
+  * list
+
+* my-pending-approval
+
+  * get
+
+  * patch
+
+* my-pending-approvals
+
+  * list
+
+* my-request
+
+  * create
+
+  * get
+
+  * patch
+
+* my-requestable-groups
+
+  * list
+
+  * search
+
+* my-requests
+
+  * list
+
+  * search
+
+* my-smtp-credential
+
+  * create
+
+  * delete
+
+  * get
+
+  * patch
+
+* my-smtp-credentials
+
+  * list
+
+* my-support-account
+
+  * create
+
+  * delete
+
+  * get
+
+* my-support-accounts
+
+  * list
+
+* my-trusted-user-agent
+
+  * delete
+
+  * get
+
+* my-trusted-user-agents
+
+  * list
+
+* my-user-db-credential
+
+  * create
+
+  * delete
+
+  * get
+
+* my-user-db-credentials
+
+  * list
+
+* network-perimeter
+
+  * create
+
+  * delete
+
+  * get
+
+  * patch
+
+  * put
+
+* network-perimeters
+
+  * list
+
+  * search
+
+* notification-setting
+
+  * get
+
+  * put
+
+* notification-settings
+
+  * list
+
+  * search
+
+* o-auth-client-certificate
+
+  * create
+
+  * delete
+
+  * get
+
+* o-auth-client-certificates
+
+  * list
+
+  * search
+
+* o-auth-partner-certificate
+
+  * create
+
+  * delete
+
+  * get
+
+* o-auth-partner-certificates
+
+  * list
+
+  * search
+
+* o-auth2-client-credential
+
+  * create
+
+  * delete
+
+  * get
+
+  * patch
+
+* o-auth2-client-credentials
+
+  * list
+
+  * search
+
+* oci-console-sign-on-policy-consent
+
+  * get
+
+  * list
+
+  * search
+
+* password-policies
+
+  * list
+
+  * search
+
+* password-policy
+
+  * create
+
+  * delete
+
+  * get
+
+  * patch
+
+  * put
+
+* policy
+
+  * create
+
+  * delete
+
+  * get
+
+  * list
+
+  * patch
+
+  * put
+
+  * search
+
+* resource-type-schema-attributes
+
+  * list
+
+  * search
+
+* restore-oci-console-policy
+
+  * create
+
+* rule
+
+  * create
+
+  * delete
+
+  * get
+
+  * list
+
+  * patch
+
+  * put
+
+  * search
+
+* schema
+
+  * get
+
+  * patch
+
+  * put
+
+* schemas
+
+  * list
+
+  * search
+
+* security-question
+
+  * create
+
+  * delete
+
+  * get
+
+  * patch
+
+* security-question-setting
+
+  * get
+
+  * patch
+
+  * put
+
+* security-question-settings
+
+  * list
+
+  * search
+
+* security-questions
+
+  * list
+
+  * search
+
+* self-registration-profile
+
+  * create
+
+  * delete
+
+  * get
+
+  * patch
+
+  * put
+
+* self-registration-profiles
+
+  * list
+
+  * search
+
+* setting
+
+  * get
+
+  * patch
+
+  * put
+
+* settings
+
+  * list
+
+  * search
+
+* smtp-credential
+
+  * create
+
+  * delete
+
+  * get
+
+  * patch
+
+* smtp-credentials
+
+  * list
+
+  * search
+
+* social-identity-provider
+
+  * create
+
+  * delete
+
+  * get
+
+  * patch
+
+  * put
+
+* social-identity-providers
+
+  * list
+
+  * search
+
+* user
+
+  * create
+
+  * delete
+
+  * get
+
+  * patch
+
+  * put
+
+* user-attributes-setting
+
+  * get
+
+  * list
+
+  * patch
+
+  * search
+
+* user-capabilities-changer
+
+  * put
+
+* user-db-credential
+
+  * create
+
+  * delete
+
+  * get
+
+* user-db-credentials
+
+  * list
+
+  * search
+
+* user-password-changer
+
+  * put
+
+* user-password-resetter
+
+  * put
+
+* user-status-changer
+
+  * put
+
+* users
+
+  * list
+
+  * search

@@ -1,0 +1,15 @@
+resource-type-collection
+************************
+
+
+Description
+===========
+
+This is the collection of resource types supported by resource
+scheduler.
+
+
+Available Commands
+==================
+
+* list-resource-types

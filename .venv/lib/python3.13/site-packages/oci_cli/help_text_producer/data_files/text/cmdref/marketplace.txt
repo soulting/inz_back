@@ -1,0 +1,118 @@
+marketplace
+***********
+
+
+Description
+===========
+
+Use the Marketplace CLI to manage applications in Oracle Cloud
+Infrastructure Marketplace. For more information, see Overview of
+Marketplace
+
+
+Available Commands
+==================
+
+* accepted-agreement
+
+  * create
+
+  * delete
+
+  * get
+
+  * list
+
+  * update
+
+* account
+
+  * launch-eligibility
+
+    * get
+
+  * third-party-paid-listing-eligibility
+
+    * get
+
+* agreement
+
+  * get
+
+  * list
+
+* category
+
+  * list
+
+* listing
+
+  * export
+
+  * get
+
+  * list
+
+* listing-summary
+
+  * search-listings
+
+  * search-listings-free-text
+
+  * search-listings-structured
+
+* package
+
+  * get
+
+  * list
+
+* publication
+
+  * change-compartment
+
+  * create
+
+  * create-publication-create-image-publication-package
+
+  * delete
+
+  * get
+
+  * update
+
+* publication-package
+
+  * get
+
+  * list
+
+* publication-summary
+
+  * list-publications
+
+* publisher
+
+  * list
+
+* report-collection
+
+  * list-reports
+
+* report-type-collection
+
+  * list-report-types
+
+* tax-summary
+
+  * list-taxes
+
+* work-request
+
+  * get
+
+  * list
+
+  * list-work-request-errors
+
+  * list-work-request-logs

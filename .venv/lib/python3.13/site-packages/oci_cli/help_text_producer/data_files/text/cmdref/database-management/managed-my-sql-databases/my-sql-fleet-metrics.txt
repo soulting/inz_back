@@ -1,0 +1,14 @@
+my-sql-fleet-metrics
+********************
+
+
+Description
+===========
+
+The details of the MySQL Database fleet health metrics.
+
+
+Available Commands
+==================
+
+* get

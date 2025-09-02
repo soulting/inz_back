@@ -1,0 +1,22 @@
+cloud-gate-mapping
+******************
+
+
+Description
+===========
+
+Resource representing a Cloud Gate mapping
+
+
+Available Commands
+==================
+
+* create
+
+* delete
+
+* get
+
+* patch
+
+* put

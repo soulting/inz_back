@@ -1,0 +1,111 @@
+disaster-recovery
+*****************
+
+
+Description
+===========
+
+Use the Full Stack Disaster Recovery (DR) CLI to manage disaster
+recovery for business applications. Full Stack DR is an OCI disaster
+recovery orchestration and management service that provides
+comprehensive disaster recovery capabilities for all layers of an
+application stack, including infrastructure, middleware, database, and
+application.
+
+
+Available Commands
+==================
+
+* dr-plan
+
+  * create
+
+  * delete
+
+  * get
+
+  * list
+
+  * refresh
+
+  * refresh-dr-plan-refresh-dr-plan-default-details
+
+  * update
+
+  * verify
+
+  * verify-dr-plan-verify-dr-plan-default-details
+
+* dr-plan-execution
+
+  * cancel
+
+  * create
+
+  * create-failover
+
+  * create-failover-precheck
+
+  * create-start-drill
+
+  * create-start-drill-precheck
+
+  * create-stop-drill
+
+  * create-stop-drill-precheck
+
+  * create-switchover
+
+  * create-switchover-precheck
+
+  * delete
+
+  * get
+
+  * ignore
+
+  * list
+
+  * pause
+
+  * resume
+
+  * retry
+
+  * update
+
+* dr-protection-group
+
+  * associate
+
+  * change-compartment
+
+  * create
+
+  * delete
+
+  * disassociate
+
+  * get
+
+  * list
+
+  * update
+
+  * update-role
+
+* work-request
+
+  * cancel
+
+  * get
+
+  * list
+
+* work-request-error
+
+  * list
+
+* work-request-logs
+
+  * list

@@ -1,0 +1,235 @@
+network-firewall
+****************
+
+
+Description
+===========
+
+Use the Network Firewall CLI to create network firewalls and configure
+policies that regulates network traffic in and across VCNs.
+
+
+Available Commands
+==================
+
+* address-list
+
+  * bulk-upload
+
+  * create
+
+  * delete
+
+  * get
+
+  * list
+
+  * update
+
+  * update-address-list-update-fqdn-address-list-details
+
+  * update-address-list-update-ip-address-list-details
+
+* application
+
+  * bulk-upload
+
+  * create
+
+  * delete
+
+  * get
+
+  * list
+
+  * update
+
+* application-group
+
+  * bulk-upload
+
+  * create
+
+  * delete
+
+  * get
+
+  * list
+
+  * update
+
+* decryption-profile
+
+  * bulk-upload
+
+  * create
+
+  * delete
+
+  * get
+
+  * list
+
+  * update
+
+* decryption-rule
+
+  * bulk-upload
+
+  * create
+
+  * delete
+
+  * get
+
+  * list
+
+  * update
+
+* mapped-secret
+
+  * bulk-upload
+
+  * create
+
+  * delete
+
+  * get
+
+  * list
+
+  * update
+
+* nat-rule
+
+  * bulk-upload
+
+  * create
+
+  * delete
+
+  * get
+
+  * list
+
+  * update
+
+* network-firewall
+
+  * change-compartment
+
+  * create
+
+  * delete
+
+  * get
+
+  * list
+
+  * update
+
+* network-firewall-policy
+
+  * apply
+
+  * change-compartment
+
+  * clone
+
+  * create
+
+  * delete
+
+  * get
+
+  * list
+
+  * migrate
+
+  * update
+
+* security-rule
+
+  * bulk-upload
+
+  * create
+
+  * delete
+
+  * get
+
+  * list
+
+  * update
+
+* service
+
+  * bulk-upload
+
+  * create
+
+  * delete
+
+  * get
+
+  * list
+
+  * update
+
+* service-list
+
+  * bulk-upload
+
+  * create
+
+  * delete
+
+  * get
+
+  * list
+
+  * update
+
+* tunnel-inspection-rule
+
+  * bulk-upload
+
+  * create
+
+  * delete
+
+  * get
+
+  * list
+
+  * update
+
+* url-list
+
+  * bulk-upload
+
+  * create
+
+  * delete
+
+  * get
+
+  * list
+
+  * update
+
+* work-request
+
+  * cancel
+
+  * get
+
+  * list
+
+* work-request-error
+
+  * list
+
+* work-request-log-entry
+
+  * list-work-request-logs

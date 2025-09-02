@@ -1,0 +1,15 @@
+fleet-product-collection
+************************
+
+
+Description
+===========
+
+Results of a fleetProduct search. Contains boh FleetProductSummary
+items and other information, such as metadata.
+
+
+Available Commands
+==================
+
+* list-fleet-products

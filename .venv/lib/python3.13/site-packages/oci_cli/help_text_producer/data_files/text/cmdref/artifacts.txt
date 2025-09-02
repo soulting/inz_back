@@ -1,0 +1,107 @@
+artifacts
+*********
+
+
+Description
+===========
+
+CLI covering the Artifacts and Registry services. Use this CLI to
+manage resources such as generic artifacts and container images.
+
+
+Available Commands
+==================
+
+* container
+
+  * configuration
+
+    * get
+
+    * update
+
+  * image
+
+    * delete
+
+    * get
+
+    * list
+
+    * remove-version
+
+    * restore
+
+    * update
+
+  * image-signature
+
+    * create
+
+    * delete
+
+    * get
+
+    * get-verify
+
+    * list
+
+    * sign-upload
+
+    * update
+
+  * repository
+
+    * change-compartment
+
+    * create
+
+    * delete
+
+    * get
+
+    * list
+
+    * update
+
+* generic
+
+  * artifact
+
+    * delete
+
+    * delete-by-path
+
+    * download
+
+    * download-by-path
+
+    * get
+
+    * get-by-path
+
+    * list
+
+    * update
+
+    * update-by-path
+
+    * upload-by-path
+
+* repository
+
+  * change-compartment
+
+  * create
+
+  * create-generic-repository
+
+  * delete
+
+  * get
+
+  * list
+
+  * update
+
+  * update-generic-repository

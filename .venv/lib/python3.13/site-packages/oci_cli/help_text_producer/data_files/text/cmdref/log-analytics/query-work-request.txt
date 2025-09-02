@@ -1,0 +1,20 @@
+query-work-request
+******************
+
+
+Description
+===========
+
+Job details outlining parameters specified when job was submitted.
+
+
+Available Commands
+==================
+
+* background
+
+* cancel
+
+* get
+
+* list

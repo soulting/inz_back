@@ -1,0 +1,30 @@
+table
+*****
+
+
+Description
+===========
+
+NoSQL tables
+
+
+Available Commands
+==================
+
+* change-compartment
+
+* create
+
+* create-replica
+
+* delete
+
+* delete-replica
+
+* get
+
+* list
+
+* list-table-usage
+
+* update

@@ -1,0 +1,15 @@
+history-summary
+***************
+
+
+Description
+===========
+
+The metadata associated with the recommendation history and its
+related resources.
+
+
+Available Commands
+==================
+
+* list

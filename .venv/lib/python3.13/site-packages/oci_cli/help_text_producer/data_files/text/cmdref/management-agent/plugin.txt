@@ -1,0 +1,14 @@
+plugin
+******
+
+
+Description
+===========
+
+Summary of the ManagementAgentPlugin.
+
+
+Available Commands
+==================
+
+* list

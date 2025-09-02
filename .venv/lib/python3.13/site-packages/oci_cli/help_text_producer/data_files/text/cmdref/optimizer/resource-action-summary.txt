@@ -1,0 +1,16 @@
+resource-action-summary
+***********************
+
+
+Description
+===========
+
+The metadata associated with the resource action summary.
+
+
+Available Commands
+==================
+
+* filter-resource-actions
+
+* list

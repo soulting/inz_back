@@ -1,0 +1,14 @@
+target-alert-policy-association-summary
+***************************************
+
+
+Description
+===========
+
+A summary of target to alert policy association.
+
+
+Available Commands
+==================
+
+* list-target-alert-policy-associations

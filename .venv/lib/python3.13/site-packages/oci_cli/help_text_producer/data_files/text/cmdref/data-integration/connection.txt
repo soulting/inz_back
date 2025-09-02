@@ -1,0 +1,26 @@
+connection
+**********
+
+
+Description
+===========
+
+The connection for a data asset.
+
+
+Available Commands
+==================
+
+* create
+
+* create-connection-create-connection-from-bip
+
+* delete
+
+* get
+
+* list
+
+* update
+
+* update-connection-update-connection-from-bip

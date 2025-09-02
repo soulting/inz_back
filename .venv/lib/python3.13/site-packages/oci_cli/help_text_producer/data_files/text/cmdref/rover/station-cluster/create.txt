@@ -1,0 +1,295 @@
+"create"
+********
+
+* Description
+
+* Usage
+
+* Required Parameters
+
+* Optional Parameters
+
+* Global Parameters
+
+
+Description
+===========
+
+Creates a new RoverStation Cluster.
+
+
+Usage
+=====
+
+   oci rover station-cluster create [OPTIONS]
+
+
+Required Parameters
+===================
+
+--cluster-size [integer range]
+
+Number of nodes desired in the RoverStation Cluster, between 15 and
+30.
+
+--compartment-id, -c [text]
+
+The OCID of the compartment containing the RoverCluster.
+
+--display-name [text]
+
+A user-friendly name. Does not have to be unique, and it’s changeable.
+Avoid entering confidential information.
+
+--subscription-id [text]
+
+Subscription ID of RoverStation Cluster
+
+
+Optional Parameters
+===================
+
+--address1 [text]
+
+Address line 1.
+
+--address2 [text]
+
+Optional address line 2.
+
+--address3 [text]
+
+Optional address line 3.
+
+--address4 [text]
+
+Optional address line 4.
+
+--addressee [text]
+
+Company or person to send the appliance to
+
+--care-of [text]
+
+Place/person to direct the package to.
+
+--city-or-locality [text]
+
+City or Locality.
+
+--cluster-type [text]
+
+Type of cluster.
+
+Accepted values are:
+
+   STANDALONE, STATION
+
+--country [text]
+
+Country.
+
+--data-validation-code [text]
+
+Validation code returned by data validation tool. Required for return
+shipping label generation if data import was requested.
+
+--defined-tags [complex type]
+
+The defined tags associated with this resource, if any. Each key is
+predefined and scoped to namespaces. For more information, see
+Resource Tags. Example: *{“Operations”: {“CostCenter”: “42”}}* This is
+a complex type whose value must be valid JSON. The value can be
+provided as a string on the command line or passed in as a file using
+the file://path/to/file syntax.
+
+The "--generate-param-json-input" option can be used to generate an
+example of the JSON which must be provided. We recommend storing this
+example in a file, modifying it as needed and then passing it back in
+via the file:// syntax.
+
+--email [text]
+
+Email address.
+
+--enclosure-type [text]
+
+The type of enclosure rover nodes in this cluster are shipped in.
+
+Accepted values are:
+
+   NON_RUGGADIZED, RUGGADIZED
+
+--freeform-tags [complex type]
+
+The freeform tags associated with this resource, if any. Each tag is a
+simple key-value pair with no predefined name, type, or namespace. For
+more information, see Resource Tags. Example: *{“Department”:
+“Finance”}* This is a complex type whose value must be valid JSON. The
+value can be provided as a string on the command line or passed in as
+a file using the file://path/to/file syntax.
+
+The "--generate-param-json-input" option can be used to generate an
+example of the JSON which must be provided. We recommend storing this
+example in a file, modifying it as needed and then passing it back in
+via the file:// syntax.
+
+--from-json [text]
+
+Provide input to this command as a JSON document from a file using the
+file://path-to/file syntax.
+
+The "--generate-full-command-json-input" option can be used to
+generate a sample json file to be used with this command option. The
+key names are pre-populated and match the command option names
+(converted to camelCase format, e.g. compartment-id –> compartmentId),
+while the values of the keys need to be populated by the user before
+using the sample file as an input to this command. For any command
+option that accepts multiple values, the value of the key can be a
+JSON array.
+
+Options can still be provided on the command line. If an option exists
+in both the JSON document and the command line then the command line
+specified value will be used.
+
+For examples on usage of this option, please see our “using CLI with
+advanced JSON options” link: https://docs.cloud.oracle.com/iaas/Conte
+nt/API/SDKDocs/cliusing.htm#AdvancedJSONOptions
+
+--import-compartment-id [text]
+
+An OCID of a compartment where data will be imported to upon Rover
+cluster return.
+
+--import-file-bucket [text]
+
+Name of a bucket where files from NFS share will be imported to upon
+Rover cluster return.
+
+--is-import-requested [boolean]
+
+The flag indicating that customer requests data to be imported to OCI
+upon Rover cluster return.
+
+--lifecycle-state [text]
+
+The current state of the RoverCluster.
+
+Accepted values are:
+
+   ACTIVE, CREATING, DELETED, DELETING, FAILED, UPDATING
+
+--lifecycle-state-details [text]
+
+A property that can contain details on the lifecycle.
+
+--master-key-id [text]
+
+Customer provided master key ID to encrypt secret information. If not
+provided, Rover’s master key will be used for encryption.
+
+--master-key-id [text]
+
+Master key OCID in the customer tenancy that is used to encrypt
+customer secret information like superuser password and unlock
+passphrase
+
+--max-wait-seconds [integer]
+
+The maximum time to wait for the resource to reach the lifecycle state
+defined by "--wait-for-state". Defaults to 1200 seconds.
+
+--phone-number [text]
+
+Phone number.
+
+--point-of-contact [text]
+
+Name of point of contact for this order if customer is picking up.
+
+--point-of-contact-phone-number [text]
+
+Phone number of point of contact for this order if customer is picking
+up.
+
+--policy-compartment-id [text]
+
+Compartment ID where the master key policy (if master key provided)
+would be created
+
+--policy-name [text]
+
+Display name for the policy to be created for the master key (if
+provided)
+
+--shipping-preference [text]
+
+Preference for device delivery.
+
+Accepted values are:
+
+   CUSTOMER_PICKUP, ORACLE_SHIPPED
+
+--state-province-region [text]
+
+State or Province or Region.
+
+--subscription-id [text]
+
+ID provided to customer after successful subscription to Rover
+Stations.
+
+--system-tags [complex type]
+
+The system tags associated with this resource, if any. The system tags
+are set by Oracle cloud infrastructure services. Each key is
+predefined and scoped to namespaces. For more information, see
+Resource Tags. Example: *{orcl-cloud: {free-tier-retain: true}}* This
+is a complex type whose value must be valid JSON. The value can be
+provided as a string on the command line or passed in as a file using
+the file://path/to/file syntax.
+
+The "--generate-param-json-input" option can be used to generate an
+example of the JSON which must be provided. We recommend storing this
+example in a file, modifying it as needed and then passing it back in
+via the file:// syntax.
+
+--wait-for-state [text]
+
+This operation creates, modifies or deletes a resource that has a
+defined lifecycle state. Specify this option to perform the action and
+then wait until the resource reaches a given lifecycle state. Multiple
+states can be specified, returning on the first state. For example, "
+--wait-for-state" SUCCEEDED "--wait-for-state" FAILED would return on
+whichever lifecycle state is reached first. If timeout is reached, a
+return code of 2 is returned. For any other error, a return code of 1
+is returned.
+
+Accepted values are:
+
+   ACTIVE, CREATING, DELETED, DELETING, FAILED, UPDATING
+
+--wait-interval-seconds [integer]
+
+Check every "--wait-interval-seconds" to see whether the resource has
+reached the lifecycle state defined by "--wait-for-state". Defaults to
+30 seconds.
+
+--zip-postal-code [text]
+
+Zip or Postal Code
+
+
+Global Parameters
+=================
+
+Use "oci --help" for help on global parameters.
+
+"--auth-purpose", "--auth", "--cert-bundle", "--cli-auto-prompt", "--
+cli-rc-file", "--config-file", "--connection-timeout", "--debug", "--
+defaults-file", "--endpoint", "--generate-full-command-json-input", "
+--generate-param-json-input", "--help", "--latest-version", "--max-
+retries", "--no-retry", "--opc-client-request-id", "--opc-request-id",
+"--output", "--profile", "--proxy", "--query", "--raw-output", "--
+read-timeout", "--realm-specific-endpoint", "--region", "--release-
+info", "--request-id", "--version", "-?", "-d", "-h", "-i", "-v"

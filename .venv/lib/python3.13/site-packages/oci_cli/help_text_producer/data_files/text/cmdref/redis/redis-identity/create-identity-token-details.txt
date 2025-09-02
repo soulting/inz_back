@@ -1,0 +1,14 @@
+create-identity-token-details
+*****************************
+
+
+Description
+===========
+
+Generate an Identity token for Redis cluster
+
+
+Available Commands
+==================
+
+* create-identity-token

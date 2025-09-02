@@ -1,0 +1,25 @@
+target-database-group
+*********************
+
+
+Description
+===========
+
+The details of the target database group including matching criteria.
+Used for a single resource retrieval.
+
+
+Available Commands
+==================
+
+* change-compartment
+
+* create
+
+* delete
+
+* get
+
+* get-group-members
+
+* update

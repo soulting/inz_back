@@ -1,0 +1,28 @@
+scheduler-definition
+********************
+
+
+Description
+===========
+
+Definition of a Schedule.
+
+
+Available Commands
+==================
+
+* create
+
+* create-scheduler-definition-custom-schedule
+
+* create-scheduler-definition-maintenance-window-schedule
+
+* delete
+
+* get
+
+* update
+
+* update-scheduler-definition-custom-schedule
+
+* update-scheduler-definition-maintenance-window-schedule

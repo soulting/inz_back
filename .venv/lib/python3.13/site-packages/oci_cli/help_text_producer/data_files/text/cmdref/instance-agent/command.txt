@@ -1,0 +1,20 @@
+command
+*******
+
+
+Description
+===========
+
+The command payload.
+
+
+Available Commands
+==================
+
+* cancel
+
+* create
+
+* get
+
+* list

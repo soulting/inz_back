@@ -1,0 +1,129 @@
+"fetch-protected-database-configuration"
+****************************************
+
+* Description
+
+* Usage
+
+* Required Parameters
+
+* Optional Parameters
+
+* Global Parameters
+
+* Example using required parameter
+
+
+Description
+===========
+
+Downloads the network service configuration file ‘tnsnames.ora’ for a
+specified protected database. Applies to user-defined recovery systems
+only.
+
+
+Usage
+=====
+
+   oci recovery protected-database fetch-protected-database-configuration [OPTIONS]
+
+
+Required Parameters
+===================
+
+--file [filename]
+
+The name of the file that will receive the response data, or ‘-‘ to
+write to STDOUT.
+
+--protected-database-id [text]
+
+The protected database OCID.
+
+
+Optional Parameters
+===================
+
+--configuration-type [text]
+
+Currently has four config options ALL, TNSNAMES, HOSTS and CABUNDLE.
+All will return a zipped folder containing the contents of both
+tnsnames and the certificateChainPem.
+
+Accepted values are:
+
+   ALL, CABUNDLE, HOSTS, RCVCONF, TNSNAMES
+
+--from-json [text]
+
+Provide input to this command as a JSON document from a file using the
+file://path-to/file syntax.
+
+The "--generate-full-command-json-input" option can be used to
+generate a sample json file to be used with this command option. The
+key names are pre-populated and match the command option names
+(converted to camelCase format, e.g. compartment-id –> compartmentId),
+while the values of the keys need to be populated by the user before
+using the sample file as an input to this command. For any command
+option that accepts multiple values, the value of the key can be a
+JSON array.
+
+Options can still be provided on the command line. If an option exists
+in both the JSON document and the command line then the command line
+specified value will be used.
+
+For examples on usage of this option, please see our “using CLI with
+advanced JSON options” link: https://docs.cloud.oracle.com/iaas/Conte
+nt/API/SDKDocs/cliusing.htm#AdvancedJSONOptions
+
+--if-match [text]
+
+For optimistic concurrency control. In the PUT or DELETE call for a
+resource, set the *if-match* parameter to the value of the etag from a
+previous GET or POST response for that resource. The resource will be
+updated or deleted only if the etag you provide matches the resource’s
+current etag value.
+
+
+Global Parameters
+=================
+
+Use "oci --help" for help on global parameters.
+
+"--auth-purpose", "--auth", "--cert-bundle", "--cli-auto-prompt", "--
+cli-rc-file", "--config-file", "--connection-timeout", "--debug", "--
+defaults-file", "--endpoint", "--generate-full-command-json-input", "
+--generate-param-json-input", "--help", "--latest-version", "--max-
+retries", "--no-retry", "--opc-client-request-id", "--opc-request-id",
+"--output", "--profile", "--proxy", "--query", "--raw-output", "--
+read-timeout", "--realm-specific-endpoint", "--region", "--release-
+info", "--request-id", "--version", "-?", "-d", "-h", "-i", "-v"
+
+
+Example using required parameter
+================================
+
+Copy and paste the following example into a JSON file, replacing the
+example parameters with your own.
+
+       oci recovery protected-database create --generate-param-json-input recovery-service-subnets > recovery-service-subnets.json
+
+Copy the following CLI commands into a file named example.sh. Run the
+command by typing “bash example.sh” and replacing the example
+parameters with your own.
+
+Please note this sample will only work in the POSIX-compliant bash-
+like shell. You need to set up the OCI configuration and appropriate
+security policies before trying the examples.
+
+       export backup_retention_period_in_days=<substitute-value-of-backup_retention_period_in_days> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/recovery/protection-policy/create.html#cmdoption-backup-retention-period-in-days
+       export compartment_id=<substitute-value-of-compartment_id> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/recovery/protection-policy/create.html#cmdoption-compartment-id
+       export display_name=<substitute-value-of-display_name> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/recovery/protection-policy/create.html#cmdoption-display-name
+       export db_unique_name=<substitute-value-of-db_unique_name> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/recovery/protected-database/create.html#cmdoption-db-unique-name
+       export password=<substitute-value-of-password> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/recovery/protected-database/create.html#cmdoption-password
+
+       protection_policy_id=$(oci recovery protection-policy create --backup-retention-period-in-days $backup_retention_period_in_days --compartment-id $compartment_id --display-name $display_name --query data.id --raw-output)
+
+       protected_database_id=$(oci recovery protected-database create --compartment-id $compartment_id --db-unique-name $db_unique_name --display-name $display_name --password $password --protection-policy-id $protection_policy_id --recovery-service-subnets file://recovery-service-subnets.json --query data.id --raw-output)
+
+       oci recovery protected-database fetch-protected-database-configuration --file $file --protected-database-id $protected_database_id

@@ -1,0 +1,70 @@
+generative-ai-inference
+***********************
+
+
+Description
+===========
+
+OCI Generative AI is a fully managed service that provides a set of
+state-of-the-art, customizable large language models (LLMs) that cover
+a wide range of use cases for text generation, summarization, and text
+embeddings.
+
+Use the Generative AI service inference CLI to access your custom
+model endpoints, or to try the out-of-the-box models to chat, generate
+text, summarize, and create text embeddings.
+
+To use a Generative AI custom model for inference, you must first
+create an endpoint for that model. Use the [Generative AI service
+management CLI] to create a custom model by fine-tuning an out-of-the-
+box model, or a previous version of a custom model, using your own
+data. Fine-tune the custom model on a fine-tuning dedicated AI
+cluster. Then, create a hosting dedicated AI cluster with an endpoint
+to host your custom model. For resource management in the Generative
+AI service, use the [Generative AI service management CLI].
+
+To learn more about the service, see the Generative AI documentation.
+
+
+Available Commands
+==================
+
+* apply-guardrails-result
+
+  * apply-guardrails
+
+  * apply-guardrails-guardrails-text-input
+
+* chat-result
+
+  * chat
+
+  * chat-cohere-chat-request
+
+  * chat-dedicated-serving-mode
+
+  * chat-generic-chat-request
+
+  * chat-on-demand-serving-mode
+
+* embed-text-result
+
+  * embed-text
+
+* generate-text-result
+
+  * generate-text-cohere-llm-inference-request
+
+  * generate-text-llama-llm-inference-request
+
+* rerank-text-result
+
+  * rerank-text
+
+  * rerank-text-dedicated-serving-mode
+
+  * rerank-text-on-demand-serving-mode
+
+* summarize-text-result
+
+  * summarize-text

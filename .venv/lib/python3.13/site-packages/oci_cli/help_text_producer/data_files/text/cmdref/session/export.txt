@@ -1,0 +1,59 @@
+"export"
+********
+
+* Description
+
+* Usage
+
+* Required Parameters
+
+* Optional Parameters
+
+* Global Parameters
+
+
+Description
+===========
+
+Exports a CLI session into a zip that can be imported. The session
+exported is the active profile (specified either by defaults or the
+–config-file / –profile arguments.
+
+
+Usage
+=====
+
+   oci session export [OPTIONS]
+
+
+Required Parameters
+===================
+
+--output-file [path]
+
+The name of the export file to create, including the path, minus any
+format-specific extension.
+
+
+Optional Parameters
+===================
+
+--force
+
+If the ouptut zip already exists, overwrite the existing zip without a
+confirmation prompt.
+
+
+Global Parameters
+=================
+
+Use "oci --help" for help on global parameters.
+
+"--auth-purpose", "--auth", "--cert-bundle", "--cli-auto-prompt", "--
+cli-rc-file", "--config-file", "--connection-timeout", "--debug", "--
+defaults-file", "--endpoint", "--generate-full-command-json-input", "
+--generate-param-json-input", "--help", "--latest-version", "--max-
+retries", "--no-retry", "--opc-client-request-id", "--opc-request-id",
+"--output", "--profile", "--proxy", "--query", "--raw-output", "--
+read-timeout", "--realm-specific-endpoint", "--region", "--release-
+info", "--request-id", "--version", "-?", "-d", "-h", "-i", "-v"

@@ -1,0 +1,14 @@
+responder-execution-summary
+***************************
+
+
+Description
+===========
+
+A summary of detailed information on responder execution.
+
+
+Available Commands
+==================
+
+* list-responder-executions

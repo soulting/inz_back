@@ -1,0 +1,20 @@
+external-publication-validation
+*******************************
+
+
+Description
+===========
+
+The information about external published task validation.
+
+
+Available Commands
+==================
+
+* create
+
+* delete
+
+* get
+
+* list

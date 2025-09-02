@@ -1,0 +1,27 @@
+scheduled-job
+*************
+
+
+Description
+===========
+
+The object that defines a scheduled job. For more information about
+jobs, see Managing Jobs.
+
+
+Available Commands
+==================
+
+* change-compartment
+
+* create
+
+* delete
+
+* get
+
+* list
+
+* run-now
+
+* update

@@ -1,0 +1,326 @@
+"list"
+******
+
+* Description
+
+* Usage
+
+* Required Parameters
+
+* Optional Parameters
+
+* Global Parameters
+
+* Example using required parameter
+
+* Other Examples
+
+
+Description
+===========
+
+Lists all of the in-progress multipart uploads for the given bucket in
+the given Object Storage namespace.
+
+
+Usage
+=====
+
+   oci os multipart list [OPTIONS]
+
+
+Required Parameters
+===================
+
+--bucket-name, -bn [text]
+
+The name of the bucket. Avoid entering confidential information.
+Example: *my-new-bucket1*
+
+
+Optional Parameters
+===================
+
+--all
+
+Fetches all pages of results. If you provide this option, then you
+cannot provide the "--limit" option.
+
+--from-json [text]
+
+Provide input to this command as a JSON document from a file using the
+file://path-to/file syntax.
+
+The "--generate-full-command-json-input" option can be used to
+generate a sample json file to be used with this command option. The
+key names are pre-populated and match the command option names
+(converted to camelCase format, e.g. compartment-id –> compartmentId),
+while the values of the keys need to be populated by the user before
+using the sample file as an input to this command. For any command
+option that accepts multiple values, the value of the key can be a
+JSON array.
+
+Options can still be provided on the command line. If an option exists
+in both the JSON document and the command line then the command line
+specified value will be used.
+
+For examples on usage of this option, please see our “using CLI with
+advanced JSON options” link: https://docs.cloud.oracle.com/iaas/Conte
+nt/API/SDKDocs/cliusing.htm#AdvancedJSONOptions
+
+--limit [integer]
+
+For list pagination. The maximum number of results per page, or items
+to return in a paginated “List” call. For important details about how
+pagination works, see List Pagination.
+
+--namespace-name, --namespace, -ns [text]
+
+The Object Storage namespace used for the request. If not provided,
+this parameter will be obtained internally using a call to ‘oci os ns
+get’
+
+--page [text]
+
+For list pagination. The value of the *opc-next-page* response header
+from the previous “List” call. For important details about how
+pagination works, see List Pagination.
+
+--page-size [integer]
+
+When fetching results, the number of results to fetch per call. Only
+valid when used with "--all" or "--limit", and ignored otherwise.
+
+
+Global Parameters
+=================
+
+Use "oci --help" for help on global parameters.
+
+"--auth-purpose", "--auth", "--cert-bundle", "--cli-auto-prompt", "--
+cli-rc-file", "--config-file", "--connection-timeout", "--debug", "--
+defaults-file", "--endpoint", "--generate-full-command-json-input", "
+--generate-param-json-input", "--help", "--latest-version", "--max-
+retries", "--no-retry", "--opc-client-request-id", "--opc-request-id",
+"--output", "--profile", "--proxy", "--query", "--raw-output", "--
+read-timeout", "--realm-specific-endpoint", "--region", "--release-
+info", "--request-id", "--version", "-?", "-d", "-h", "-i", "-v"
+
+
+Example using required parameter
+================================
+
+Copy the following CLI commands into a file named example.sh. Run the
+command by typing “bash example.sh” and replacing the example
+parameters with your own.
+
+Please note this sample will only work in the POSIX-compliant bash-
+like shell. You need to set up the OCI configuration and appropriate
+security policies before trying the examples.
+
+       export bucket_name=<substitute-value-of-bucket_name> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/os/multipart/list.html#cmdoption-bucket-name
+
+       oci os multipart list --bucket-name $bucket_name
+
+
+Other Examples
+==============
+
+
+Description
+-----------
+
+Lists at most first 1000 in-progress multipart uploads for the given
+bucket.
+
+
+Command
+-------
+
+    oci os multipart list -bn bucket-client
+
+
+Output
+------
+
+   {
+    "data": [
+         {
+              "bucket": "bucket-client",
+              "namespace": "bmcostests",
+              "object": "x001",
+              "storage-tier": "Standard",
+              "time-created": "2022-12-20T13:08:32.827000+00:00",
+              "upload-id": "3eff9bc4-3f68-8fd2-8e2a-123ea593d922"
+         },
+         {
+              "bucket": "bucket-client",
+              "namespace": "bmcostests",
+              "object": "x001",
+              "storage-tier": "Standard",
+              "time-created": "2022-12-20T13:07:47.759000+00:00",
+              "upload-id": "b35fa1c0-df46-00bd-b9c4-58e946c547a2"
+         },
+         {
+              "bucket": "bucket-client",
+              "namespace": "bmcostests",
+              "object": "x002",
+              "storage-tier": "Standard",
+              "time-created": "2022-12-20T13:20:30.955000+00:00",
+              "upload-id": "08817535-8e7e-b460-dd51-6dba34103f45"
+         }
+    ]
+   }
+
+
+Description
+-----------
+
+Lists all of the in-progress multipart uploads for the given bucket.
+
+
+Command
+-------
+
+    oci os multipart list -bn bucket-client --all
+
+
+Output
+------
+
+   {
+    "data": [
+         {
+              "bucket": "bucket-client",
+              "namespace": "bmcostests",
+              "object": "x001",
+              "storage-tier": "Standard",
+              "time-created": "2022-12-20T13:08:32.827000+00:00",
+              "upload-id": "3eff9bc4-3f68-8fd2-8e2a-123ea593d922"
+         },
+         {
+              "bucket": "bucket-client",
+              "namespace": "bmcostests",
+              "object": "x001",
+              "storage-tier": "Standard",
+              "time-created": "2022-12-20T13:07:47.759000+00:00",
+              "upload-id": "b35fa1c0-df46-00bd-b9c4-58e946c547a2"
+         },
+         {
+              "bucket": "bucket-client",
+              "namespace": "bmcostests",
+              "object": "x002",
+              "storage-tier": "Standard",
+              "time-created": "2022-12-20T13:20:30.955000+00:00",
+              "upload-id": "08817535-8e7e-b460-dd51-6dba34103f45"
+         }
+    ]
+   }
+
+
+Description
+-----------
+
+Lists in-progress multipart uploads for the given bucket, with maximum
+result per page equal to specified limit.
+
+
+Command
+-------
+
+    oci os multipart list -bn bucket-client --limit 1
+
+
+Output
+------
+
+   {
+    "data": [
+         {
+              "bucket": "bucket-client",
+              "namespace": "bmcostests",
+              "object": "x001",
+              "storage-tier": "Standard",
+              "time-created": "2022-12-20T13:08:32.827000+00:00",
+              "upload-id": "3eff9bc4-3f68-8fd2-8e2a-123ea593d922"
+         }
+    ],
+    "opc-next-page": "1:xHAPKMbm64PPwzxjiFuh92_3fp_i7y6Ek2lTYQUlqsfzSdHr6Idw3TXT4YuCTLRvD-OokI5TsGnm_rQR2QXLz-krPLN6CQlE9Qvh2PRZZy36map0yPD2MC9nFvDgCmw2"
+   }
+
+
+Description
+-----------
+
+Lists all of the in-progress multipart uploads for the given bucket in
+specified namespace.
+
+
+Command
+-------
+
+    oci os multipart list -bn bucket-client -ns bmcostests
+
+
+Output
+------
+
+   {
+    "data": [
+         {
+              "bucket": "bucket-client",
+              "namespace": "bmcostests",
+              "object": "x001",
+              "storage-tier": "Standard",
+              "time-created": "2022-12-20T13:08:32.827000+00:00",
+              "upload-id": "3eff9bc4-3f68-8fd2-8e2a-123ea593d922"
+         },
+         {
+              "bucket": "bucket-client",
+              "namespace": "bmcostests",
+              "object": "x001",
+              "storage-tier": "Standard",
+              "time-created": "2022-12-20T13:07:47.759000+00:00",
+              "upload-id": "b35fa1c0-df46-00bd-b9c4-58e946c547a2"
+         },
+         {
+              "bucket": "bucket-client",
+              "namespace": "bmcostests",
+              "object": "x002",
+              "storage-tier": "Standard",
+              "time-created": "2022-12-20T13:20:30.955000+00:00",
+              "upload-id": "08817535-8e7e-b460-dd51-6dba34103f45"
+         }
+    ]
+   }
+
+
+Description
+-----------
+
+Lists all of the in-progress multipart uploads, taking input from json
+file
+
+
+Command
+-------
+
+    oci os multipart list --from-json file://json_input.json
+
+
+Output
+------
+
+   {
+    "data": [
+         {
+              "bucket": "bucket-client",
+              "namespace": "bmcostests",
+              "object": "x001",
+              "storage-tier": "Standard",
+              "time-created": "2022-12-20T13:08:32.827000+00:00",
+              "upload-id": "3eff9bc4-3f68-8fd2-8e2a-123ea593d922"
+         }
+    ],
+    "opc-next-page": "1:35y_1tAK-Y2rnutxGG2nam_3fp_i7y6Ek2lTYQUlqsfzSdHr6Idw3TXT4YuCTLRvD-OokI5TsGnm_rQR2QXLz-krPLN6CQlE9Qvh2PRZZy36map0yPD2MC9nFvDgCmw2"
+   }

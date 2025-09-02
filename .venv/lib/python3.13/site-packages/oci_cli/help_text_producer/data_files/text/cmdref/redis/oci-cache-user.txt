@@ -1,0 +1,43 @@
+oci-cache-user
+**************
+
+
+Description
+===========
+
+Use the OCI Cache CLI to create and manage clusters. A cluster is a
+memory-based storage solution. For more information, see OCI Cache.
+
+
+Available Commands
+==================
+
+* attached-oci-cache-cluster
+
+  * list-attached-redis-clusters
+
+* create-oci-cache-user-details
+
+  * create-oci-cache-user
+
+  * create-oci-cache-user-iam-authentication-mode
+
+  * create-oci-cache-user-password-authentication-mode
+
+* oci-cache-user
+
+  * change-compartment
+
+  * delete
+
+  * get
+
+  * update
+
+  * update-oci-cache-user-iam-authentication-mode
+
+  * update-oci-cache-user-password-authentication-mode
+
+* oci-cache-user-summary
+
+  * list-oci-cache-users

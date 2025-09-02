@@ -1,0 +1,69 @@
+kafka
+*****
+
+
+Description
+===========
+
+Use Oracle Streaming with Apache Kafka Control Plane CLI to
+create/update/delete managed Kafka clusters.
+
+
+Available Commands
+==================
+
+* cluster
+
+  * change-compartment
+
+  * create
+
+  * delete
+
+  * disable-superuser
+
+  * enable-superuser
+
+  * get
+
+  * list
+
+  * update
+
+* cluster-config
+
+  * change-compartment
+
+  * create
+
+  * delete
+
+  * get
+
+  * list
+
+  * update
+
+* cluster-config-version
+
+  * delete
+
+  * get
+
+  * list
+
+* work-request
+
+  * cancel
+
+  * get
+
+  * list
+
+* work-request-error
+
+  * list
+
+* work-request-log-entry
+
+  * list-work-request-logs

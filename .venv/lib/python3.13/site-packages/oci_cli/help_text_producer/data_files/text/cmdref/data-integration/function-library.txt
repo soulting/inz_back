@@ -1,0 +1,23 @@
+function-library
+****************
+
+
+Description
+===========
+
+The FunctionLibrary type contains the audit summary information and
+the definition of the FunctionLibrary.
+
+
+Available Commands
+==================
+
+* create
+
+* delete
+
+* get
+
+* list
+
+* update

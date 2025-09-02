@@ -1,0 +1,19 @@
+configuration
+*************
+
+
+Description
+===========
+
+A tenancy or service-level configuration. The service may of the
+standard *MULTI_TENANCY* type, or of the *HOSTED* environment type.
+
+
+Available Commands
+==================
+
+* get
+
+* unassign-kms-key
+
+* update-hosted

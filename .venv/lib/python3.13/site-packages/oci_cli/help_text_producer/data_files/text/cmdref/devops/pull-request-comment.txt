@@ -1,0 +1,27 @@
+pull-request-comment
+********************
+
+
+Description
+===========
+
+Pull Request Comment includes all the comment resources under a pull
+request
+
+
+Available Commands
+==================
+
+* create-pull-request-comment
+
+* delete-pull-request-comment
+
+* get-pull-request-comment
+
+* like-pull-request-comment
+
+* list-pull-request-comments
+
+* unlike-pull-request-comment
+
+* update-pull-request-comment

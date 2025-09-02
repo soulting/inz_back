@@ -1,0 +1,28 @@
+asset-source
+************
+
+
+Description
+===========
+
+Asset source.
+
+
+Available Commands
+==================
+
+* change-compartment
+
+* create
+
+* delete
+
+* get
+
+* list
+
+* list-asset-source-connections
+
+* refresh
+
+* update

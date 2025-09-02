@@ -1,0 +1,64 @@
+governance-rule
+***************
+
+
+Description
+===========
+
+A description of the GovernanceRulesControlPlane CLI
+
+
+Available Commands
+==================
+
+* enforced-governance-rule
+
+  * get
+
+  * list
+
+* governance-rule
+
+  * create
+
+  * create-governance-rule-allowed-regions-template
+
+  * create-governance-rule-quota-template
+
+  * create-governance-rule-tag-template
+
+  * delete
+
+  * get
+
+  * list
+
+  * retry
+
+  * update
+
+  * update-governance-rule-allowed-regions-template
+
+  * update-governance-rule-quota-template
+
+  * update-governance-rule-tag-template
+
+* inclusion-criterion
+
+  * create
+
+  * create-inclusion-criterion-tenancy-association
+
+  * delete
+
+  * get
+
+  * list-inclusion-criteria
+
+* tenancy-attachment
+
+  * get
+
+  * list
+
+  * retry

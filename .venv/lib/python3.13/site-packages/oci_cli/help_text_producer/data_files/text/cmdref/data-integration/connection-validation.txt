@@ -1,0 +1,22 @@
+connection-validation
+*********************
+
+
+Description
+===========
+
+The information about connection validation.
+
+
+Available Commands
+==================
+
+* create
+
+* create-connection-validation-create-connection-from-bip
+
+* delete
+
+* get
+
+* list

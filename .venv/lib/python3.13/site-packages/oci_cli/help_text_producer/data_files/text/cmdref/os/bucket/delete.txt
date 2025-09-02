@@ -1,0 +1,296 @@
+"delete"
+********
+
+* Description
+
+* Usage
+
+* Required Parameters
+
+* Optional Parameters
+
+* Global Parameters
+
+* Example using required parameter
+
+* Other Examples
+
+
+Description
+===========
+
+Deletes a bucket if the bucket is already empty. If not empty and the
+–empty option is specified, all objects, pre-authenticated requests,
+uncommitted multipart uploads and replication policies associated with
+the bucket are also deleted.
+
+
+Usage
+=====
+
+   oci os bucket delete [OPTIONS]
+
+
+Required Parameters
+===================
+
+--bucket-name, --name, -bn [text]
+
+The name of the bucket. Avoid entering confidential information.
+Example: *my-new-bucket1*
+
+
+Optional Parameters
+===================
+
+--dry-run
+
+When specified with the –empty option, displays a list of objects
+which would be deleted by this command if it were run without –dry-
+run. No objects will actually be deleted.
+
+--empty
+
+Delete all objects, pre-authenticated requests, uncommitted multipart
+uploads and replication policies associated with the bucket.
+
+--force
+
+Perform deletion without prompting for confirmation.
+
+--from-json [text]
+
+Provide input to this command as a JSON document from a file using the
+file://path-to/file syntax.
+
+The "--generate-full-command-json-input" option can be used to
+generate a sample json file to be used with this command option. The
+key names are pre-populated and match the command option names
+(converted to camelCase format, e.g. compartment-id –> compartmentId),
+while the values of the keys need to be populated by the user before
+using the sample file as an input to this command. For any command
+option that accepts multiple values, the value of the key can be a
+JSON array.
+
+Options can still be provided on the command line. If an option exists
+in both the JSON document and the command line then the command line
+specified value will be used.
+
+For examples on usage of this option, please see our “using CLI with
+advanced JSON options” link: https://docs.cloud.oracle.com/iaas/Conte
+nt/API/SDKDocs/cliusing.htm#AdvancedJSONOptions
+
+--if-match [text]
+
+The entity tag (ETag) to match with the ETag of an existing resource.
+If the specified ETag matches the ETag of the existing resource, GET
+and HEAD requests will return the resource and PUT and POST requests
+will upload the resource.
+
+--namespace-name, --namespace, -ns [text]
+
+The Object Storage namespace used for the request. If not provided,
+this parameter will be obtained internally using a call to ‘oci os ns
+get’
+
+--parallel-operations-count [integer]
+
+When specified with the –empty option, specifies the number of
+parallel delete operations to perform. Decreasing this value will make
+empty less resource intensive but it may take longer. Increasing this
+value may improve empty times, but it will consume more system
+resources and network bandwidth. [default: 10]
+
+
+Global Parameters
+=================
+
+Use "oci --help" for help on global parameters.
+
+"--auth-purpose", "--auth", "--cert-bundle", "--cli-auto-prompt", "--
+cli-rc-file", "--config-file", "--connection-timeout", "--debug", "--
+defaults-file", "--endpoint", "--generate-full-command-json-input", "
+--generate-param-json-input", "--help", "--latest-version", "--max-
+retries", "--no-retry", "--opc-client-request-id", "--opc-request-id",
+"--output", "--profile", "--proxy", "--query", "--raw-output", "--
+read-timeout", "--realm-specific-endpoint", "--region", "--release-
+info", "--request-id", "--version", "-?", "-d", "-h", "-i", "-v"
+
+
+Example using required parameter
+================================
+
+Copy the following CLI commands into a file named example.sh. Run the
+command by typing “bash example.sh” and replacing the example
+parameters with your own.
+
+Please note this sample will only work in the POSIX-compliant bash-
+like shell. You need to set up the OCI configuration and appropriate
+security policies before trying the examples.
+
+       export bucket_name=<substitute-value-of-bucket_name> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/os/bucket/delete.html#cmdoption-bucket-name
+
+       oci os bucket delete --bucket-name $bucket_name
+
+
+Other Examples
+==============
+
+
+Description
+-----------
+
+Deletes the specified bucket
+
+
+Command
+-------
+
+    oci os bucket delete -bn bucket-client
+
+
+Output
+------
+
+   {
+    "output": "Are you sure you want to delete this bucket? [y/N]"
+   }
+
+
+Description
+-----------
+
+Displays a list of objects which would be deleted by this command,
+without actually deleting the bucket
+
+
+Command
+-------
+
+    oci os bucket delete -bn bucket-client --empty --dry-run
+
+
+Output
+------
+
+   {
+    "multipart-upload": {
+         "delete-failures": {},
+         "deleted-objects": []
+    },
+    "object": {
+         "delete-failures": {},
+         "deleted-objects": []
+    },
+    "preauth-request": {
+         "delete-failures": {},
+         "deleted-objects": []
+    },
+    "replication-policy": {
+         "delete-failures": {},
+         "deleted-objects": []
+    }
+   }
+
+
+Description
+-----------
+
+Deletes the bucket without prompting for confirmation
+
+
+Command
+-------
+
+    oci os bucket delete -bn bucket-client --force
+
+
+Output
+------
+
+   {
+    "output": null
+   }
+
+
+Description
+-----------
+
+Delete all objects, pre-authenticated requests, uncommitted multipart
+uploads and replication policies associated with the bucket.
+
+
+Command
+-------
+
+    oci os bucket delete -bn bucket-client --empty
+
+
+Output
+------
+
+   {
+    "output": "This command will delete the bucket as well as all objects, pre-authenticated requests, uncommitted multipart uploads and replication policies associated with it. Are you sure you wish to continue? [y/N]:"
+   }
+
+
+Description
+-----------
+
+Deletes the bucket only if the specified etag matches with the bucket
+etag
+
+
+Command
+-------
+
+    oci os bucket delete -bn bucket-client --if-match 12ea76f7-1130-4279-8654-6819b94625df
+
+
+Output
+------
+
+   {
+    "output": "Are you sure you want to delete this bucket? [y/N]:"
+   }
+
+
+Description
+-----------
+
+Deletes the bucket with the specified number of parallel delete
+operations to perform
+
+
+Command
+-------
+
+    oci os bucket delete -bn bucket-client --parallel-operations-count 3
+
+
+Output
+------
+
+   {
+    "output": "Are you sure you want to delete this bucket? [y/N]:"
+   }
+
+
+Description
+-----------
+
+Deletes the bucket in the specified namespace
+
+
+Command
+-------
+
+    oci os bucket delete -bn bucket-client -ns namespace
+
+
+Output
+------
+
+   {
+    "output": null
+   }

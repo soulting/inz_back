@@ -1,0 +1,16 @@
+available-plugins
+*****************
+
+
+Description
+===========
+
+CLI for the Oracle Cloud Agent software running on compute instances.
+Oracle Cloud Agent is a lightweight process that monitors and manages
+compute instances.
+
+
+Available Commands
+==================
+
+* get

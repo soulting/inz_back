@@ -1,0 +1,195 @@
+"summarize-text"
+****************
+
+* Description
+
+* Usage
+
+* Required Parameters
+
+* Optional Parameters
+
+* Global Parameters
+
+* Example using required parameter
+
+* Other Examples
+
+
+Description
+===========
+
+Summarizes the input text.
+
+
+Usage
+=====
+
+   oci generative-ai-inference summarize-text-result summarize-text [OPTIONS]
+
+
+Required Parameters
+===================
+
+--compartment-id, -c [text]
+
+The OCID of compartment in which to call the Generative AI service to
+summarize text.
+
+--input [text]
+
+The input string to be summarized.
+
+--serving-mode [complex type]
+
+This is a complex type whose value must be valid JSON. The value can
+be provided as a string on the command line or passed in as a file
+using the file://path/to/file syntax.
+
+The "--generate-param-json-input" option can be used to generate an
+example of the JSON which must be provided. We recommend storing this
+example in a file, modifying it as needed and then passing it back in
+via the file:// syntax.
+
+
+Optional Parameters
+===================
+
+--additional-command [text]
+
+A free-form instruction for modifying how the summaries get generated.
+Should complete the sentence “Generate a summary _”. For example,
+“focusing on the next steps” or “written by Yoda”.
+
+--extractiveness [text]
+
+Controls how close to the original text the summary is. High
+extractiveness summaries will lean towards reusing sentences verbatim,
+while low extractiveness summaries will tend to paraphrase more.
+
+Accepted values are:
+
+   AUTO, HIGH, LOW, MEDIUM
+
+--format [text]
+
+Indicates the style in which the summary will be delivered - in a free
+form paragraph or in bullet points. If “AUTO” is selected, the best
+option will be picked based on the input text.
+
+Accepted values are:
+
+   AUTO, BULLETS, PARAGRAPH
+
+--from-json [text]
+
+Provide input to this command as a JSON document from a file using the
+file://path-to/file syntax.
+
+The "--generate-full-command-json-input" option can be used to
+generate a sample json file to be used with this command option. The
+key names are pre-populated and match the command option names
+(converted to camelCase format, e.g. compartment-id –> compartmentId),
+while the values of the keys need to be populated by the user before
+using the sample file as an input to this command. For any command
+option that accepts multiple values, the value of the key can be a
+JSON array.
+
+Options can still be provided on the command line. If an option exists
+in both the JSON document and the command line then the command line
+specified value will be used.
+
+For examples on usage of this option, please see our “using CLI with
+advanced JSON options” link: https://docs.cloud.oracle.com/iaas/Conte
+nt/API/SDKDocs/cliusing.htm#AdvancedJSONOptions
+
+--is-echo [boolean]
+
+Whether or not to include the original inputs in the response.
+
+--length [text]
+
+Indicates the approximate length of the summary. If “AUTO” is
+selected, the best option will be picked based on the input text.
+
+Accepted values are:
+
+   AUTO, LONG, MEDIUM, SHORT
+
+--temperature [text]
+
+A number that sets the randomness of the generated output. Lower
+temperatures mean less random generations.
+
+Use lower numbers for tasks with a correct answer such as question
+answering or summarizing. High temperatures can generate
+hallucinations or factually incorrect information. Start with
+temperatures lower than 1.0, and increase the temperature for more
+creative outputs, as you regenerate the prompts to refine the outputs.
+
+
+Global Parameters
+=================
+
+Use "oci --help" for help on global parameters.
+
+"--auth-purpose", "--auth", "--cert-bundle", "--cli-auto-prompt", "--
+cli-rc-file", "--config-file", "--connection-timeout", "--debug", "--
+defaults-file", "--endpoint", "--generate-full-command-json-input", "
+--generate-param-json-input", "--help", "--latest-version", "--max-
+retries", "--no-retry", "--opc-client-request-id", "--opc-request-id",
+"--output", "--profile", "--proxy", "--query", "--raw-output", "--
+read-timeout", "--realm-specific-endpoint", "--region", "--release-
+info", "--request-id", "--version", "-?", "-d", "-h", "-i", "-v"
+
+
+Example using required parameter
+================================
+
+Copy and paste the following example into a JSON file, replacing the
+example parameters with your own.
+
+       oci generative-ai-inference summarize-text-result summarize-text --generate-param-json-input input > input.json
+       oci generative-ai-inference summarize-text-result summarize-text --generate-param-json-input serving-mode > serving-mode.json
+
+Copy the following CLI commands into a file named example.sh. Run the
+command by typing “bash example.sh” and replacing the example
+parameters with your own.
+
+Please note this sample will only work in the POSIX-compliant bash-
+like shell. You need to set up the OCI configuration and appropriate
+security policies before trying the examples.
+
+       export compartment_id=<substitute-value-of-compartment_id> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/generative-ai-inference/summarize-text-result/summarize-text.html#cmdoption-compartment-id
+
+       oci generative-ai-inference summarize-text-result summarize-text --compartment-id $compartment_id --input file://input.json --serving-mode file://serving-mode.json
+
+
+Other Examples
+==============
+
+
+Description
+-----------
+
+Send an inference request for text summarization
+
+
+Command
+-------
+
+    oci generative-ai-inference summarize-text-result summarize-text --compartment-id $COMPARTMENT_ID --serving-mode "{\"servingType\": \"ON_DEMAND\", \"modelId\": \"$SERVING_MODEL_ID\"}" --input "$INPUT" --read-timeout 240 --region "$REGION"
+
+
+Output
+------
+
+   {
+    "data": {
+         "id": "91a266f1-107d-4803-b8a8-4576b8c0a360",
+         "input": null,
+         "model-id": "cohere.command",
+         "model-version": "15.6",
+         "summary": "Quantum dots are nanometer-sized semiconductor particles with unique optical and electronic properties arising from quantum mechanical effects that differ from those of bulk materials. When UV-lit, electrons in quantum dots can be excited to higher energy levels. These excited electrons can then release this energy as light, an effect known as photoluminescence. The color of the emitted light depends on the energy gap between the conduction and valence bands or between the discrete energy levels in the quantum dots. As a result of these properties, quantum dots have several applications in nanotechnology and materials science, including electronics, quantum computing, healthcare, and solar cells."
+    }
+   }

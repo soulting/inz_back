@@ -1,0 +1,14 @@
+aggregated-network-data-result
+******************************
+
+
+Description
+===========
+
+The aggregated network results.
+
+
+Available Commands
+==================
+
+* aggregate-network-data

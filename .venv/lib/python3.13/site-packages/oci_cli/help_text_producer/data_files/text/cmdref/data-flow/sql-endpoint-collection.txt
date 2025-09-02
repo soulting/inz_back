@@ -1,0 +1,15 @@
+sql-endpoint-collection
+***********************
+
+
+Description
+===========
+
+The results of a Sql Endpoint search. It contains the objects in a
+SqlEndpointSummary.
+
+
+Available Commands
+==================
+
+* list-sql-endpoints

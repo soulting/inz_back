@@ -1,0 +1,24 @@
+console-history
+***************
+
+
+Description
+===========
+
+The details of the Db Node console history.
+
+
+Available Commands
+==================
+
+* create
+
+* delete
+
+* get
+
+* get-console-history-content
+
+* list
+
+* update

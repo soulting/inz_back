@@ -1,0 +1,32 @@
+certificates
+************
+
+
+Description
+===========
+
+CLI for retrieving certificates.
+
+
+Available Commands
+==================
+
+* ca-bundle
+
+  * get
+
+* certificate-authority-bundle
+
+  * get
+
+* certificate-authority-bundle-version
+
+  * list
+
+* certificate-bundle
+
+  * get
+
+* certificate-bundle-version
+
+  * list

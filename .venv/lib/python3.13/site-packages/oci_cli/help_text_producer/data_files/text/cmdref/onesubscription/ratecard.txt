@@ -1,0 +1,16 @@
+ratecard
+********
+
+
+Description
+===========
+
+OneSubscription CLI
+
+
+Available Commands
+==================
+
+* rate-card
+
+  * list

@@ -1,0 +1,173 @@
+"snapshot"
+**********
+
+* Description
+
+* Usage
+
+* Required Parameters
+
+* Optional Parameters
+
+* Global Parameters
+
+* Example using required parameter
+
+
+Description
+===========
+
+Writes the dataset records and annotations in a consolidated format
+out to an object storage reference for consumption. While the snapshot
+takes place, there may be a time while records and annotations cannot
+be created to ensure the snapshot is a point in time.
+
+
+Usage
+=====
+
+   oci data-labeling-service dataset snapshot [OPTIONS]
+
+
+Required Parameters
+===================
+
+--are-annotations-included [boolean]
+
+Whether annotations are to be included in the export dataset digest.
+
+--are-unannotated-records-included [boolean]
+
+Whether to include records that have yet to be annotated in the export
+dataset digest.
+
+--dataset-id [text]
+
+Unique Dataset OCID
+
+--export-details [complex type]
+
+This is a complex type whose value must be valid JSON. The value can
+be provided as a string on the command line or passed in as a file
+using the file://path/to/file syntax.
+
+The "--generate-param-json-input" option can be used to generate an
+example of the JSON which must be provided. We recommend storing this
+example in a file, modifying it as needed and then passing it back in
+via the file:// syntax.
+
+
+Optional Parameters
+===================
+
+--export-format [complex type]
+
+This is a complex type whose value must be valid JSON. The value can
+be provided as a string on the command line or passed in as a file
+using the file://path/to/file syntax.
+
+The "--generate-param-json-input" option can be used to generate an
+example of the JSON which must be provided. We recommend storing this
+example in a file, modifying it as needed and then passing it back in
+via the file:// syntax.
+
+--from-json [text]
+
+Provide input to this command as a JSON document from a file using the
+file://path-to/file syntax.
+
+The "--generate-full-command-json-input" option can be used to
+generate a sample json file to be used with this command option. The
+key names are pre-populated and match the command option names
+(converted to camelCase format, e.g. compartment-id –> compartmentId),
+while the values of the keys need to be populated by the user before
+using the sample file as an input to this command. For any command
+option that accepts multiple values, the value of the key can be a
+JSON array.
+
+Options can still be provided on the command line. If an option exists
+in both the JSON document and the command line then the command line
+specified value will be used.
+
+For examples on usage of this option, please see our “using CLI with
+advanced JSON options” link: https://docs.cloud.oracle.com/iaas/Conte
+nt/API/SDKDocs/cliusing.htm#AdvancedJSONOptions
+
+--if-match [text]
+
+For optimistic concurrency control. In the PUT or DELETE call for a
+resource, set the *if-match* parameter to the value of the etag from a
+previous GET or POST response for that resource. The resource will be
+updated or deleted only if the etag you provide matches the resource’s
+current etag value.
+
+--max-wait-seconds [integer]
+
+The maximum time to wait for the work request to reach the state
+defined by "--wait-for-state". Defaults to 1200 seconds.
+
+--wait-for-state [text]
+
+This operation asynchronously creates, modifies or deletes a resource
+and uses a work request to track the progress of the operation.
+Specify this option to perform the action and then wait until the work
+request reaches a certain state. Multiple states can be specified,
+returning on the first state. For example, "--wait-for-state"
+SUCCEEDED "--wait-for-state" FAILED would return on whichever
+lifecycle state is reached first. If timeout is reached, a return code
+of 2 is returned. For any other error, a return code of 1 is returned.
+
+Accepted values are:
+
+   ACCEPTED, CANCELED, CANCELING, FAILED, IN_PROGRESS, SUCCEEDED, WAITING
+
+--wait-interval-seconds [integer]
+
+Check every "--wait-interval-seconds" to see whether the work request
+has reached the state defined by "--wait-for-state". Defaults to 30
+seconds.
+
+
+Global Parameters
+=================
+
+Use "oci --help" for help on global parameters.
+
+"--auth-purpose", "--auth", "--cert-bundle", "--cli-auto-prompt", "--
+cli-rc-file", "--config-file", "--connection-timeout", "--debug", "--
+defaults-file", "--endpoint", "--generate-full-command-json-input", "
+--generate-param-json-input", "--help", "--latest-version", "--max-
+retries", "--no-retry", "--opc-client-request-id", "--opc-request-id",
+"--output", "--profile", "--proxy", "--query", "--raw-output", "--
+read-timeout", "--realm-specific-endpoint", "--region", "--release-
+info", "--request-id", "--version", "-?", "-d", "-h", "-i", "-v"
+
+
+Example using required parameter
+================================
+
+Copy and paste the following example into a JSON file, replacing the
+example parameters with your own.
+
+       oci data-labeling-service dataset create --generate-param-json-input dataset-format-details > dataset-format-details.json
+       oci data-labeling-service dataset create --generate-param-json-input dataset-source-details > dataset-source-details.json
+       oci data-labeling-service dataset create --generate-param-json-input label-set > label-set.json
+
+       oci data-labeling-service dataset snapshot --generate-param-json-input export-details > export-details.json
+
+Copy the following CLI commands into a file named example.sh. Run the
+command by typing “bash example.sh” and replacing the example
+parameters with your own.
+
+Please note this sample will only work in the POSIX-compliant bash-
+like shell. You need to set up the OCI configuration and appropriate
+security policies before trying the examples.
+
+       export annotation_format=<substitute-value-of-annotation_format> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/data-labeling-service/dataset/create.html#cmdoption-annotation-format
+       export compartment_id=<substitute-value-of-compartment_id> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/data-labeling-service/dataset/create.html#cmdoption-compartment-id
+       export are_annotations_included=<substitute-value-of-are_annotations_included> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/data-labeling-service/dataset/snapshot.html#cmdoption-are-annotations-included
+       export are_unannotated_records_included=<substitute-value-of-are_unannotated_records_included> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/data-labeling-service/dataset/snapshot.html#cmdoption-are-unannotated-records-included
+
+       dataset_id=$(oci data-labeling-service dataset create --annotation-format $annotation_format --compartment-id $compartment_id --dataset-format-details file://dataset-format-details.json --dataset-source-details file://dataset-source-details.json --label-set file://label-set.json --query data.id --raw-output)
+
+       oci data-labeling-service dataset snapshot --are-annotations-included $are_annotations_included --are-unannotated-records-included $are_unannotated_records_included --dataset-id $dataset_id --export-details file://export-details.json

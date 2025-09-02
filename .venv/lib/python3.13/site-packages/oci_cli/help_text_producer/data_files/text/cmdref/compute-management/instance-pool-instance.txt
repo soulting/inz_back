@@ -1,0 +1,18 @@
+instance-pool-instance
+**********************
+
+
+Description
+===========
+
+Information about an instance that belongs to an instance pool.
+
+
+Available Commands
+==================
+
+* attach
+
+* detach
+
+* get

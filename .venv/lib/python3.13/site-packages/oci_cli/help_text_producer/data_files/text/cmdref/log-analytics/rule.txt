@@ -1,0 +1,17 @@
+rule
+****
+
+
+Description
+===========
+
+A generic rule object - represents an ingest time rule or a scheduled
+task.
+
+
+Available Commands
+==================
+
+* get-rules-summary
+
+* list

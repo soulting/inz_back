@@ -1,0 +1,43 @@
+job
+***
+
+
+Description
+===========
+
+Results of a Database Connection search. Contains
+DatabaseConnectionSummary items.
+
+
+Available Commands
+==================
+
+* abort
+
+* collect-traces
+
+* create-parameter-file-version
+
+* delete
+
+* delete-parameter-file-version
+
+* get
+
+* get-advisor-report
+
+* get-job-output-content
+
+* get-parameter-file-version
+
+* list
+
+* list-parameter-file-versions
+
+* make-current-parameter-file-version
+
+* resume
+
+* suspend
+
+* update

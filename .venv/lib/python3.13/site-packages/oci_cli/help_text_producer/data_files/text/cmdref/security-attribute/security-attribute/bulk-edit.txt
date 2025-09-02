@@ -1,0 +1,134 @@
+"bulk-edit"
+***********
+
+* Description
+
+* Usage
+
+* Required Parameters
+
+* Optional Parameters
+
+* Global Parameters
+
+* Example using required parameter
+
+
+Description
+===========
+
+Edits the specified list of security attributes for the selected
+resources. This operation triggers a process that edits the attributes
+on all selected resources. The possible actions are:
+
+   * Add a security attribute when it does not already exist on the
+     resource.   * Update the value for a security attribute when it
+     is present on the resource.   * Add a security attribute when it
+     does not already exist on the resource or update the value when
+     it is present on the resource.   * Remove a security attribute
+     from a resource. The security attribute is removed from the
+     resource regardless of the value.
+
+The edits can include a combination of operations and attributes.
+However, multiple operations cannot apply to the same attribute in the
+same request.
+
+
+Usage
+=====
+
+   oci security-attribute security-attribute bulk-edit [OPTIONS]
+
+
+Required Parameters
+===================
+
+--bulk-edit-operations [complex type]
+
+The operations associated with the request to bulk edit tags. This is
+a complex type whose value must be valid JSON. The value can be
+provided as a string on the command line or passed in as a file using
+the file://path/to/file syntax.
+
+The "--generate-param-json-input" option can be used to generate an
+example of the JSON which must be provided. We recommend storing this
+example in a file, modifying it as needed and then passing it back in
+via the file:// syntax.
+
+--compartment-id, -c [text]
+
+The OCID of the compartment where the bulk edit request is submitted.
+
+--resources [complex type]
+
+The resources to be updated. This is a complex type whose value must
+be valid JSON. The value can be provided as a string on the command
+line or passed in as a file using the file://path/to/file syntax.
+
+The "--generate-param-json-input" option can be used to generate an
+example of the JSON which must be provided. We recommend storing this
+example in a file, modifying it as needed and then passing it back in
+via the file:// syntax.
+
+
+Optional Parameters
+===================
+
+--from-json [text]
+
+Provide input to this command as a JSON document from a file using the
+file://path-to/file syntax.
+
+The "--generate-full-command-json-input" option can be used to
+generate a sample json file to be used with this command option. The
+key names are pre-populated and match the command option names
+(converted to camelCase format, e.g. compartment-id –> compartmentId),
+while the values of the keys need to be populated by the user before
+using the sample file as an input to this command. For any command
+option that accepts multiple values, the value of the key can be a
+JSON array.
+
+Options can still be provided on the command line. If an option exists
+in both the JSON document and the command line then the command line
+specified value will be used.
+
+For examples on usage of this option, please see our “using CLI with
+advanced JSON options” link: https://docs.cloud.oracle.com/iaas/Conte
+nt/API/SDKDocs/cliusing.htm#AdvancedJSONOptions
+
+
+Global Parameters
+=================
+
+Use "oci --help" for help on global parameters.
+
+"--auth-purpose", "--auth", "--cert-bundle", "--cli-auto-prompt", "--
+cli-rc-file", "--config-file", "--connection-timeout", "--debug", "--
+defaults-file", "--endpoint", "--generate-full-command-json-input", "
+--generate-param-json-input", "--help", "--latest-version", "--max-
+retries", "--no-retry", "--opc-client-request-id", "--opc-request-id",
+"--output", "--profile", "--proxy", "--query", "--raw-output", "--
+read-timeout", "--realm-specific-endpoint", "--region", "--release-
+info", "--request-id", "--version", "-?", "-d", "-h", "-i", "-v"
+
+
+Example using required parameter
+================================
+
+Copy and paste the following example into a JSON file, replacing the
+example parameters with your own.
+
+       oci security-attribute security-attribute bulk-edit --generate-param-json-input bulk-edit-operations > bulk-edit-operations.json
+       oci security-attribute security-attribute bulk-edit --generate-param-json-input resources > resources.json
+
+Copy the following CLI commands into a file named example.sh. Run the
+command by typing “bash example.sh” and replacing the example
+parameters with your own.
+
+Please note this sample will only work in the POSIX-compliant bash-
+like shell. You need to set up the OCI configuration and appropriate
+security policies before trying the examples.
+
+       export compartment_id=<substitute-value-of-compartment_id> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/security-attribute/security-attribute/bulk-edit.html#cmdoption-compartment-id
+
+       oci security-attribute security-attribute bulk-edit --bulk-edit-operations file://bulk-edit-operations.json --compartment-id $compartment_id --resources file://resources.json

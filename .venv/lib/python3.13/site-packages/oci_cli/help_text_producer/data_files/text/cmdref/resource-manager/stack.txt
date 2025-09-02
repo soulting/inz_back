@@ -1,0 +1,65 @@
+stack
+*****
+
+
+Description
+===========
+
+The properties that define a stack. A stack is the collection of
+Oracle Cloud Infrastructure resources corresponding to a given
+Terraform configuration. For instructions on managing stacks, see
+Managing Stacks. For more information about stacks, see Key Concepts.
+
+
+Available Commands
+==================
+
+* change-compartment
+
+* code
+
+* copy
+
+* create
+
+* create-from-bitbucket-cloud
+
+* create-from-bitbucket-server
+
+* create-from-compartment
+
+* create-from-git-provider
+
+* create-from-object-storage
+
+* create-from-template
+
+* create-stack-create-dev-ops-config-source-details
+
+* delete
+
+* detect-drift
+
+* get
+
+* get-stack-tf-config
+
+* get-stack-tf-state
+
+* list
+
+* list-resource-discovery-services
+
+* list-resource-drift-details
+
+* list-terraform-versions
+
+* update
+
+* update-from-bitbucket-cloud
+
+* update-from-git-provider
+
+* update-from-object-storage
+
+* update-stack-update-dev-ops-config-source-details

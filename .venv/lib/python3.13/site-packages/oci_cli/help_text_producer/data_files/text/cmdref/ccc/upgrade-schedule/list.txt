@@ -1,0 +1,604 @@
+"list"
+******
+
+* Description
+
+* Usage
+
+* Optional Parameters
+
+* Global Parameters
+
+* Example using required parameter
+
+* Other Examples
+
+
+Description
+===========
+
+Returns a list of Compute Cloud@Customer upgrade schedules.
+
+
+Usage
+=====
+
+   oci ccc upgrade-schedule list [OPTIONS]
+
+
+Optional Parameters
+===================
+
+--access-level [text]
+
+Valid values are RESTRICTED and ACCESSIBLE. Default is RESTRICTED.
+Setting this to ACCESSIBLE returns only those compartments for which
+the user has INSPECT permissions directly or indirectly (permissions
+can be on a resource in a subcompartment). When set to RESTRICTED
+permissions are checked and no partial results are displayed.
+
+Accepted values are:
+
+   ACCESSIBLE, RESTRICTED
+
+--all
+
+Fetches all pages of results. If you provide this option, then you
+cannot provide the "--limit" option.
+
+--compartment-id, -c [text]
+
+The OCID of the compartment in which to list resources.
+
+--compartment-id-in-subtree [boolean]
+
+Default is false. When set to true, the hierarchy of compartments is
+traversed and all compartments and sub-compartments in the tenancy are
+returned. Depends on the ‘accessLevel’ setting.
+
+--display-name [text]
+
+A filter to return only resources that match the entire display name
+given.
+
+--display-name-contains [text]
+
+A filter to return only resources whose display name contains the
+substring.
+
+--from-json [text]
+
+Provide input to this command as a JSON document from a file using the
+file://path-to/file syntax.
+
+The "--generate-full-command-json-input" option can be used to
+generate a sample json file to be used with this command option. The
+key names are pre-populated and match the command option names
+(converted to camelCase format, e.g. compartment-id –> compartmentId),
+while the values of the keys need to be populated by the user before
+using the sample file as an input to this command. For any command
+option that accepts multiple values, the value of the key can be a
+JSON array.
+
+Options can still be provided on the command line. If an option exists
+in both the JSON document and the command line then the command line
+specified value will be used.
+
+For examples on usage of this option, please see our “using CLI with
+advanced JSON options” link: https://docs.cloud.oracle.com/iaas/Conte
+nt/API/SDKDocs/cliusing.htm#AdvancedJSONOptions
+
+--from-json [text]
+
+Provide input to this command as a JSON document from a file using the
+file://path-to/file syntax.
+
+The "--generate-full-command-json-input" option can be used to
+generate a sample json file to be used with this command option. The
+key names are pre-populated and match the command option names
+(converted to camelCase format, e.g. compartment-id –> compartmentId),
+while the values of the keys need to be populated by the user before
+using the sample file as an input to this command. For any command
+option that accepts multiple values, the value of the key can be a
+JSON array.
+
+Options can still be provided on the command line. If an option exists
+in both the JSON document and the command line then the command line
+specified value will be used.
+
+For examples on usage of this option, please see our “using CLI with
+advanced JSON options” link: https://docs.cloud.oracle.com/iaas/Conte
+nt/API/SDKDocs/cliusing.htm#AdvancedJSONOptions
+
+--lifecycle-state [text]
+
+A filter to return resources only when their lifecycleState matches
+the given lifecycleState.
+
+Accepted values are:
+
+   ACTIVE, DELETED, FAILED, NEEDS_ATTENTION
+
+--limit [integer]
+
+The maximum number of items to return.
+
+--page [text]
+
+A token representing the position at which to start retrieving
+results. This must come from the *opc-next-page* header field of a
+previous response.
+
+--page-size [integer]
+
+When fetching results, the number of results to fetch per call. Only
+valid when used with "--all" or "--limit", and ignored otherwise.
+
+--sort-by [text]
+
+The field to sort by. Only one sort order may be provided. Default
+order for timeCreated is descending. Default order for displayName is
+ascending.
+
+Accepted values are:
+
+   displayName, timeCreated
+
+--sort-order [text]
+
+The sort order to use, either ‘ASC’ or ‘DESC’.
+
+Accepted values are:
+
+   ASC, DESC
+
+--upgrade-schedule-id [text]
+
+Compute Cloud@Customer upgrade schedule OCID.
+
+
+Global Parameters
+=================
+
+Use "oci --help" for help on global parameters.
+
+"--auth-purpose", "--auth", "--cert-bundle", "--cli-auto-prompt", "--
+cli-rc-file", "--config-file", "--connection-timeout", "--debug", "--
+defaults-file", "--endpoint", "--generate-full-command-json-input", "
+--generate-param-json-input", "--help", "--latest-version", "--max-
+retries", "--no-retry", "--opc-client-request-id", "--opc-request-id",
+"--output", "--profile", "--proxy", "--query", "--raw-output", "--
+read-timeout", "--realm-specific-endpoint", "--region", "--release-
+info", "--request-id", "--version", "-?", "-d", "-h", "-i", "-v"
+
+
+Example using required parameter
+================================
+
+Copy the following CLI commands into a file named example.sh. Run the
+command by typing “bash example.sh” and replacing the example
+parameters with your own.
+
+Please note this sample will only work in the POSIX-compliant bash-
+like shell. You need to set up the OCI configuration and appropriate
+security policies before trying the examples.
+
+       oci ccc upgrade-schedule list
+
+
+Other Examples
+==============
+
+
+Description
+-----------
+
+Lists all Compute Cloud@Customer upgrade schedules in the specified
+compartment.
+
+
+Command
+-------
+
+    oci ccc upgrade-schedule list -c <compartment_OCID> --all
+
+
+Output
+------
+
+   {
+    "data": {
+         "items": [
+              {
+                   "compartment-id": "<compartment_OCID>",
+                   "defined-tags": {
+                        "Oracle-Tags": {
+                             "CreatedBy": "user",
+                             "CreatedOn": "2023-07-04T10:49:37.693Z"
+                        }
+                   },
+                   "display-name": "TestUpgradeSchedule2",
+                   "freeform-tags": {},
+                   "id": "<upgrade_schedule_OCID_1>",
+                   "lifecycle-state": "ACTIVE",
+                   "system-tags": {},
+                   "time-created": "2023-07-04T10:49:37.807000+00:00"
+              },
+              {
+                   "compartment-id": "<compartment_OCID>",
+                   "defined-tags": {
+                        "Oracle-Tags": {
+                             "CreatedBy": "user",
+                             "CreatedOn": "2023-07-04T10:48:36.196Z"
+                        }
+                   },
+                   "display-name": "TestUpgradeSchedule1",
+                   "freeform-tags": {},
+                   "id": "<upgrade_schedule_OCID_2>",
+                   "lifecycle-state": "ACTIVE",
+                   "system-tags": {},
+                   "time-created": "2023-07-04T10:48:36.350000+00:00"
+              },
+              {
+                   "compartment-id": "<compartment_OCID>",
+                   "defined-tags": {
+                        "Oracle-Tags": {
+                             "CreatedBy": "user",
+                             "CreatedOn": "2023-07-04T10:47:24.873Z"
+                        }
+                   },
+                   "display-name": "TestUpgradeSchedule1",
+                   "freeform-tags": {},
+                   "id": "<upgrade_schedule_OCID_3>",
+                   "lifecycle-state": "ACTIVE",
+                   "system-tags": {},
+                   "time-created": "2023-07-04T10:47:25.090000+00:00"
+              },
+              {
+                   "compartment-id": "<compartment_OCID>",
+                   "defined-tags": {
+                        "Oracle-Tags": {
+                             "CreatedBy": "user",
+                             "CreatedOn": "2023-07-04T09:46:14.829Z"
+                        }
+                   },
+                   "display-name": "TestUpgradeSchedule1",
+                   "freeform-tags": {},
+                   "id": "<upgrade_schedule_OCID_4>",
+                   "lifecycle-state": "ACTIVE",
+                   "system-tags": {},
+                   "time-created": "2023-07-04T09:46:15.182000+00:00"
+              }
+         ]
+    }
+   }
+
+
+Description
+-----------
+
+Lists Compute Cloud@Customer upgrade schedules with a specified
+display name.
+
+
+Command
+-------
+
+    oci ccc upgrade-schedule list -c <compartment_OCID> --display-name TestUpgradeSchedule1
+
+
+Output
+------
+
+   {
+    "data": {
+         "items": [
+              {
+                   "compartment-id": "<compartment_OCID>",
+                   "defined-tags": {
+                        "Oracle-Tags": {
+                             "CreatedBy": "user",
+                             "CreatedOn": "2023-07-04T10:48:36.196Z"
+                        }
+                   },
+                   "display-name": "TestUpgradeSchedule1",
+                   "freeform-tags": {},
+                   "id": "<upgrade_schedule_OCID_1>",
+                   "lifecycle-state": "ACTIVE",
+                   "system-tags": {},
+                   "time-created": "2023-07-04T10:48:36.350000+00:00"
+              },
+              {
+                   "compartment-id": "<compartment_OCID>",
+                   "defined-tags": {
+                        "Oracle-Tags": {
+                             "CreatedBy": "user",
+                             "CreatedOn": "2023-07-04T10:47:24.873Z"
+                        }
+                   },
+                   "display-name": "TestUpgradeSchedule1",
+                   "freeform-tags": {},
+                   "id": "<upgrade_schedule_OCID_2>",
+                   "lifecycle-state": "ACTIVE",
+                   "system-tags": {},
+                   "time-created": "2023-07-04T10:47:25.090000+00:00"
+              },
+              {
+                   "compartment-id": "<compartment_OCID>",
+                   "defined-tags": {
+                        "Oracle-Tags": {
+                             "CreatedBy": "user",
+                             "CreatedOn": "2023-07-04T09:46:14.829Z"
+                        }
+                   },
+                   "display-name": "TestUpgradeSchedule1",
+                   "freeform-tags": {},
+                   "id": "<upgrade_schedule_OCID_3>",
+                   "lifecycle-state": "ACTIVE",
+                   "system-tags": {},
+                   "time-created": "2023-07-04T09:46:15.182000+00:00"
+              }
+         ]
+    }
+   }
+
+
+Description
+-----------
+
+Lists Compute Cloud@Customer upgrade schedules with a specified
+lifecycle state
+
+
+Command
+-------
+
+    oci ccc upgrade-schedule list -c <compartment_OCID> --lifecycle-state DELETED
+
+
+Output
+------
+
+   {
+    "data": {
+         "items": [
+              {
+                   "compartment-id": "<compartment_OCID>",
+                   "defined-tags": {
+                        "Oracle-Tags": {
+                             "CreatedBy": "user",
+                             "CreatedOn": "2023-07-04T10:48:36.196Z"
+                        }
+                   },
+                   "display-name": "TestUpgradeSchedule1",
+                   "freeform-tags": {},
+                   "id": "<upgrade_schedule_OCID_1>",
+                   "lifecycle-state": "DELETED",
+                   "system-tags": {},
+                   "time-created": "2023-07-04T10:48:36.350000+00:00"
+              },
+              {
+                   "compartment-id": "<compartment_OCID>",
+                   "defined-tags": {
+                        "Oracle-Tags": {
+                             "CreatedBy": "user",
+                             "CreatedOn": "2023-07-04T09:46:14.829Z"
+                        }
+                   },
+                   "display-name": "TestUpgradeSchedule1",
+                   "freeform-tags": {},
+                   "id": "<upgrade_schedule_OCID_2>",
+                   "lifecycle-state": "DELETED",
+                   "system-tags": {},
+                   "time-created": "2023-07-04T09:46:15.182000+00:00"
+              }
+         ]
+    }
+   }
+
+
+Description
+-----------
+
+Lists Compute Cloud@Customer upgrade schedules by specified sorting
+order
+
+
+Command
+-------
+
+    oci ccc upgrade-schedule list -c <compartment_OCID> --sort-order ASC
+
+
+Output
+------
+
+   {
+    "data": {
+         "items": [
+              {
+                   "compartment-id": "<compartment_OCID>",
+                   "defined-tags": {
+                        "Oracle-Tags": {
+                             "CreatedBy": "user",
+                             "CreatedOn": "2023-07-04T09:46:14.829Z"
+                        }
+                   },
+                   "display-name": "TestUpgradeSchedule1",
+                   "freeform-tags": {},
+                   "id": "<upgrade_schedule_OCID_1>",
+                   "lifecycle-state": "ACTIVE",
+                   "system-tags": {},
+                   "time-created": "2023-07-04T09:46:15.182000+00:00"
+              },
+              {
+                   "compartment-id": "<compartment_OCID>",
+                   "defined-tags": {
+                        "Oracle-Tags": {
+                             "CreatedBy": "user",
+                             "CreatedOn": "2023-07-04T10:47:24.873Z"
+                        }
+                   },
+                   "display-name": "TestUpgradeSchedule1",
+                   "freeform-tags": {},
+                   "id": "<upgrade_schedule_OCID_2>",
+                   "lifecycle-state": "ACTIVE",
+                   "system-tags": {},
+                   "time-created": "2023-07-04T10:47:25.090000+00:00"
+              },
+              {
+                   "compartment-id": "<compartment_OCID>",
+                   "defined-tags": {
+                        "Oracle-Tags": {
+                             "CreatedBy": "user",
+                             "CreatedOn": "2023-07-04T10:48:36.196Z"
+                        }
+                   },
+                   "display-name": "TestUpgradeSchedule1",
+                   "freeform-tags": {},
+                   "id": "<upgrade_schedule_OCID_3>",
+                   "lifecycle-state": "ACTIVE",
+                   "system-tags": {},
+                   "time-created": "2023-07-04T10:48:36.350000+00:00"
+              },
+              {
+                   "compartment-id": "<compartment_OCID>",
+                   "defined-tags": {
+                        "Oracle-Tags": {
+                             "CreatedBy": "user",
+                             "CreatedOn": "2023-07-04T10:49:37.693Z"
+                        }
+                   },
+                   "display-name": "TestUpgradeSchedule2",
+                   "freeform-tags": {},
+                   "id": "<upgrade_schedule_OCID_4>",
+                   "lifecycle-state": "ACTIVE",
+                   "system-tags": {},
+                   "time-created": "2023-07-04T10:49:37.807000+00:00"
+              }
+         ]
+    }
+   }
+
+
+Description
+-----------
+
+Lists Compute Cloud@Customer upgrade schedule with the specified
+upgrade schedule OCID
+
+
+Command
+-------
+
+    oci ccc upgrade-schedule list -c <compartment_OCID> --upgrade-schedule-id <upgrade_schedule_OCID>
+
+
+Output
+------
+
+   {
+    "data": {
+         "items": [
+              {
+                   "compartment-id": "<compartment_OCID>",
+                   "defined-tags": {
+                        "Oracle-Tags": {
+                             "CreatedBy": "user",
+                             "CreatedOn": "2023-07-04T10:48:36.196Z"
+                        }
+                   },
+                   "display-name": "TestUpgradeSchedule1",
+                   "freeform-tags": {},
+                   "id": "<upgrade_schedule_OCID>",
+                   "lifecycle-state": "ACTIVE",
+                   "system-tags": {},
+                   "time-created": "2023-07-04T10:48:36.350000+00:00"
+              }
+         ]
+    }
+   }
+
+
+Description
+-----------
+
+Lists Compute Cloud@Customer upgrade schedules with a specified access
+level
+
+
+Command
+-------
+
+    oci ccc upgrade-schedule list -c <compartment_OCID> --access-level RESTRICTED
+
+
+Output
+------
+
+   {
+    "data": {
+         "items": [
+              {
+                   "compartment-id": "<compartment_OCID>",
+                   "defined-tags": {
+                        "Oracle-Tags": {
+                             "CreatedBy": "user",
+                             "CreatedOn": "2023-07-04T10:49:37.693Z"
+                        }
+                   },
+                   "display-name": "TestUpgradeSchedule2",
+                   "freeform-tags": {},
+                   "id": "<upgrade_schedule_OCID_1>",
+                   "lifecycle-state": "ACTIVE",
+                   "system-tags": {},
+                   "time-created": "2023-07-04T10:49:37.807000+00:00"
+              },
+              {
+                   "compartment-id": "<compartment_OCID>",
+                   "defined-tags": {
+                        "Oracle-Tags": {
+                             "CreatedBy": "user",
+                             "CreatedOn": "2023-07-04T10:48:36.196Z"
+                        }
+                   },
+                   "display-name": "TestUpgradeSchedule1",
+                   "freeform-tags": {},
+                   "id": "<upgrade_schedule_OCID_2>",
+                   "lifecycle-state": "ACTIVE",
+                   "system-tags": {},
+                   "time-created": "2023-07-04T10:48:36.350000+00:00"
+              },
+              {
+                   "compartment-id": "<compartment_OCID>",
+                   "defined-tags": {
+                        "Oracle-Tags": {
+                             "CreatedBy": "user",
+                             "CreatedOn": "2023-07-04T10:47:24.873Z"
+                        }
+                   },
+                   "display-name": "TestUpgradeSchedule1",
+                   "freeform-tags": {},
+                   "id": "<upgrade_schedule_OCID_3>",
+                   "lifecycle-state": "ACTIVE",
+                   "system-tags": {},
+                   "time-created": "2023-07-04T10:47:25.090000+00:00"
+              },
+              {
+                   "compartment-id": "<compartment_OCID>",
+                   "defined-tags": {
+                        "Oracle-Tags": {
+                             "CreatedBy": "user",
+                             "CreatedOn": "2023-07-04T09:46:14.829Z"
+                        }
+                   },
+                   "display-name": "TestUpgradeSchedule1",
+                   "freeform-tags": {},
+                   "id": "<upgrade_schedule_OCID_4>",
+                   "lifecycle-state": "ACTIVE",
+                   "system-tags": {},
+                   "time-created": "2023-07-04T09:46:15.182000+00:00"
+              }
+         ]
+    }
+   }

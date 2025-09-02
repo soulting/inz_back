@@ -1,0 +1,14 @@
+verified-data
+*************
+
+
+Description
+===========
+
+The response to a request to verify the message.
+
+
+Available Commands
+==================
+
+* verify

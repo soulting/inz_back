@@ -1,0 +1,42 @@
+skill
+*****
+
+
+Description
+===========
+
+Skill metadata.
+
+
+Available Commands
+==================
+
+* bulk-create-skill-entities
+
+* cascading-delete-skill-custom-entities
+
+* create
+
+* create-skill-clone-skill-details
+
+* create-skill-create-new-skill-details
+
+* create-skill-create-skill-version-details
+
+* create-skill-extend-skill-details
+
+* delete
+
+* export
+
+* export-digital-assistant
+
+* get
+
+* list
+
+* publish
+
+* train
+
+* update

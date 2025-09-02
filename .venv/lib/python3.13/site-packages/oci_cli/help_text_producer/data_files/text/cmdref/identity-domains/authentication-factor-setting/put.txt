@@ -1,0 +1,592 @@
+"put"
+*****
+
+* Description
+
+* Usage
+
+* Required Parameters
+
+* Optional Parameters
+
+* Global Parameters
+
+* Example using required parameter
+
+
+Description
+===========
+
+Replace Authentication Factor Settings
+
+The top level –endpoint parameter must be supplied for this operation.
+
+
+Usage
+=====
+
+   oci identity-domains authentication-factor-setting put [OPTIONS]
+
+
+Required Parameters
+===================
+
+--authentication-factor-setting-id [text]
+
+ID of the resource
+
+--bypass-code-enabled [boolean]
+
+If true, indicates that Bypass Code is enabled for authentication
+
+**SCIM++ Properties:**  - idcsSearchable: false  - multiValued: false
+- mutability: readWrite  - required: true  - returned: default  -
+type: boolean  - uniqueness: none
+
+--bypass-code-settings [complex type]
+
+This is a complex type whose value must be valid JSON. The value can
+be provided as a string on the command line or passed in as a file
+using the file://path/to/file syntax.
+
+The "--generate-param-json-input" option can be used to generate an
+example of the JSON which must be provided. We recommend storing this
+example in a file, modifying it as needed and then passing it back in
+via the file:// syntax.
+
+--client-app-settings [complex type]
+
+This is a complex type whose value must be valid JSON. The value can
+be provided as a string on the command line or passed in as a file
+using the file://path/to/file syntax.
+
+The "--generate-param-json-input" option can be used to generate an
+example of the JSON which must be provided. We recommend storing this
+example in a file, modifying it as needed and then passing it back in
+via the file:// syntax.
+
+--compliance-policy [complex type]
+
+Compliance Policy that defines actions to be taken when a condition is
+violated
+
+**SCIM++ Properties:**  - idcsCompositeKey: [name]  - idcsSearchable:
+false  - multiValued: true  - mutability: readWrite  - required: true
+- returned: default  - type: complex  - uniqueness: none This is a
+complex type whose value must be valid JSON. The value can be provided
+as a string on the command line or passed in as a file using the
+file://path/to/file syntax.
+
+The "--generate-param-json-input" option can be used to generate an
+example of the JSON which must be provided. We recommend storing this
+example in a file, modifying it as needed and then passing it back in
+via the file:// syntax.
+
+--endpoint-restrictions [complex type]
+
+This is a complex type whose value must be valid JSON. The value can
+be provided as a string on the command line or passed in as a file
+using the file://path/to/file syntax.
+
+The "--generate-param-json-input" option can be used to generate an
+example of the JSON which must be provided. We recommend storing this
+example in a file, modifying it as needed and then passing it back in
+via the file:// syntax.
+
+--mfa-enrollment-type [text]
+
+Specifies if Multi-Factor Authentication enrollment is mandatory or
+optional for a user
+
+**Deprecated Since: 18.1.2**
+
+**SCIM++ Properties:**  - idcsCanonicalValueSourceFilter: attrName eq
+“mfaEnrollmentType” and attrValues.value eq “$(mfaEnrollmentType)”  -
+idcsCanonicalValueSourceResourceType: AllowedValue  - idcsSearchable:
+false  - multiValued: false  - mutability: readWrite  - required: true
+- returned: default  - type: string  - uniqueness: none
+
+--notification-settings [complex type]
+
+This is a complex type whose value must be valid JSON. The value can
+be provided as a string on the command line or passed in as a file
+using the file://path/to/file syntax.
+
+The "--generate-param-json-input" option can be used to generate an
+example of the JSON which must be provided. We recommend storing this
+example in a file, modifying it as needed and then passing it back in
+via the file:// syntax.
+
+--push-enabled [boolean]
+
+If true, indicates that the Mobile App Push Notification channel is
+enabled for authentication
+
+**SCIM++ Properties:**  - idcsSearchable: false  - multiValued: false
+- mutability: readWrite  - required: true  - returned: default  -
+type: boolean  - uniqueness: none
+
+--schemas [complex type]
+
+REQUIRED. The schemas attribute is an array of Strings which allows
+introspection of the supported schema version for a SCIM
+representation as well any schema extensions supported by that
+representation. Each String value must be a unique URI. This
+specification defines URIs for User, Group, and a standard
+“enterprise” extension. All representations of SCIM schema MUST
+include a non-zero value array with value(s) of the URIs supported by
+that representation. Duplicate values MUST NOT be included. Value
+order is not specified and MUST not impact behavior.
+
+**SCIM++ Properties:**  - caseExact: false  - idcsSearchable: false  -
+multiValued: true  - mutability: readWrite  - required: true  -
+returned: default  - type: string  - uniqueness: none This is a
+complex type whose value must be valid JSON. The value can be provided
+as a string on the command line or passed in as a file using the
+file://path/to/file syntax.
+
+The "--generate-param-json-input" option can be used to generate an
+example of the JSON which must be provided. We recommend storing this
+example in a file, modifying it as needed and then passing it back in
+via the file:// syntax.
+
+--security-questions-enabled [boolean]
+
+If true, indicates that Security Questions are enabled for
+authentication
+
+**SCIM++ Properties:**  - idcsSearchable: false  - multiValued: false
+- mutability: readWrite  - required: true  - returned: default  -
+type: boolean  - uniqueness: none
+
+--sms-enabled [boolean]
+
+If true, indicates that the Short Message Service (SMS) channel is
+enabled for authentication
+
+**SCIM++ Properties:**  - idcsSearchable: false  - multiValued: false
+- mutability: readWrite  - required: true  - returned: default  -
+type: boolean  - uniqueness: none
+
+--totp-enabled [boolean]
+
+If true, indicates that the Mobile App One Time Passcode channel is
+enabled for authentication
+
+**SCIM++ Properties:**  - idcsSearchable: false  - multiValued: false
+- mutability: readWrite  - required: true  - returned: default  -
+type: boolean  - uniqueness: none
+
+--totp-settings [complex type]
+
+This is a complex type whose value must be valid JSON. The value can
+be provided as a string on the command line or passed in as a file
+using the file://path/to/file syntax.
+
+The "--generate-param-json-input" option can be used to generate an
+example of the JSON which must be provided. We recommend storing this
+example in a file, modifying it as needed and then passing it back in
+via the file:// syntax.
+
+
+Optional Parameters
+===================
+
+--attribute-sets [text]
+
+A multi-valued list of strings indicating the return type of attribute
+definition. The specified set of attributes can be fetched by the
+return type of the attribute. One or more values can be given together
+to fetch more than one group of attributes. If ‘attributes’ query
+parameter is also available, union of the two is fetched. Valid values
+- all, always, never, request, default. Values are case-insensitive.
+
+Accepted values are:
+
+   all, always, default, never, request
+
+--attributes [text]
+
+A comma-delimited string that specifies the names of resource
+attributes that should be returned in the response. By default, a
+response that contains resource attributes contains only attributes
+that are defined in the schema for that resource type as
+returned=always or returned=default. An attribute that is defined as
+returned=request is returned in a response only if the request
+specifies its name in the value of this query parameter. If a request
+specifies this query parameter, the response contains the attributes
+that this query parameter specifies, as well as any attribute that is
+defined as returned=always.
+
+--authorization [text]
+
+The Authorization field value consists of credentials containing the
+authentication information of the user agent for the realm of the
+resource being requested.
+
+--auto-enroll-email-factor-disabled [boolean]
+
+If true, indicates that email will not be enrolled as a MFA factor
+automatically if it a account recovery factor
+
+**Added In:** 2011192329
+
+**SCIM++ Properties:**  - idcsSearchable: false  - multiValued: false
+- mutability: readWrite  - required: false  - returned: default  -
+type: boolean  - uniqueness: none
+
+--compartment-ocid [text]
+
+OCI Compartment Id (ocid) in which the resource lives.
+
+**SCIM++ Properties:**  - caseExact: false  - idcsSearchable: false  -
+multiValued: false  - mutability: readOnly  - required: false  -
+returned: default  - type: string  - uniqueness: none
+
+--delete-in-progress [boolean]
+
+A boolean flag indicating this resource in the process of being
+deleted. Usually set to true when synchronous deletion of the resource
+would take too long.
+
+**SCIM++ Properties:**  - caseExact: false  - idcsSearchable: true  -
+multiValued: false  - mutability: readOnly  - required: false  -
+returned: default  - type: boolean  - uniqueness: none
+
+--domain-ocid [text]
+
+OCI Domain Id (ocid) in which the resource lives.
+
+**SCIM++ Properties:**  - caseExact: false  - idcsSearchable: false  -
+multiValued: false  - mutability: readOnly  - required: false  -
+returned: default  - type: string  - uniqueness: none
+
+--email-enabled [boolean]
+
+If true, indicates that the EMAIL channel is enabled for
+authentication
+
+**Added In:** 18.1.2
+
+**SCIM++ Properties:**  - idcsSearchable: false  - multiValued: false
+- mutability: readWrite  - required: false  - returned: default  -
+type: boolean  - uniqueness: none
+
+--email-settings [complex type]
+
+This is a complex type whose value must be valid JSON. The value can
+be provided as a string on the command line or passed in as a file
+using the file://path/to/file syntax.
+
+The "--generate-param-json-input" option can be used to generate an
+example of the JSON which must be provided. We recommend storing this
+example in a file, modifying it as needed and then passing it back in
+via the file:// syntax.
+
+--ext-fido-authentication-factor-settings [complex type]
+
+This is a complex type whose value must be valid JSON. The value can
+be provided as a string on the command line or passed in as a file
+using the file://path/to/file syntax.
+
+The "--generate-param-json-input" option can be used to generate an
+example of the JSON which must be provided. We recommend storing this
+example in a file, modifying it as needed and then passing it back in
+via the file:// syntax.
+
+--ext-third-party-authentication-factor-settings [complex type]
+
+This is a complex type whose value must be valid JSON. The value can
+be provided as a string on the command line or passed in as a file
+using the file://path/to/file syntax.
+
+The "--generate-param-json-input" option can be used to generate an
+example of the JSON which must be provided. We recommend storing this
+example in a file, modifying it as needed and then passing it back in
+via the file:// syntax.
+
+--fido-authenticator-enabled [boolean]
+
+If true, indicates that the Fido Authenticator channels are enabled
+for authentication
+
+**Added In:** 2009232244
+
+**SCIM++ Properties:**  - idcsSearchable: false  - multiValued: false
+- mutability: readWrite  - required: false  - returned: default  -
+type: boolean  - uniqueness: none
+
+--force
+
+Perform update without prompting for confirmation.
+
+--from-json [text]
+
+Provide input to this command as a JSON document from a file using the
+file://path-to/file syntax.
+
+The "--generate-full-command-json-input" option can be used to
+generate a sample json file to be used with this command option. The
+key names are pre-populated and match the command option names
+(converted to camelCase format, e.g. compartment-id –> compartmentId),
+while the values of the keys need to be populated by the user before
+using the sample file as an input to this command. For any command
+option that accepts multiple values, the value of the key can be a
+JSON array.
+
+Options can still be provided on the command line. If an option exists
+in both the JSON document and the command line then the command line
+specified value will be used.
+
+For examples on usage of this option, please see our “using CLI with
+advanced JSON options” link: https://docs.cloud.oracle.com/iaas/Conte
+nt/API/SDKDocs/cliusing.htm#AdvancedJSONOptions
+
+--hide-backup-factor-enabled [boolean]
+
+If true, indicates that ‘Show backup factor(s)’ button will be hidden
+during authentication
+
+**Added In:** 19.3.3
+
+**SCIM++ Properties:**  - idcsSearchable: false  - multiValued: false
+- mutability: readWrite  - required: false  - returned: default  -
+type: boolean  - uniqueness: none
+
+--id [text]
+
+Unique identifier for the SCIM Resource as defined by the Service
+Provider. Each representation of the Resource MUST include a non-empty
+id value. This identifier MUST be unique across the Service Provider’s
+entire set of Resources. It MUST be a stable, non-reassignable
+identifier that does not change when the same Resource is returned in
+subsequent requests. The value of the id attribute is always issued by
+the Service Provider and MUST never be specified by the Service
+Consumer. bulkId: is a reserved keyword and MUST NOT be used in the
+unique identifier.
+
+**SCIM++ Properties:**  - caseExact: false  - idcsSearchable: true  -
+multiValued: false  - mutability: readOnly  - required: false  -
+returned: always  - type: string  - uniqueness: global
+
+--idcs-created-by [complex type]
+
+This is a complex type whose value must be valid JSON. The value can
+be provided as a string on the command line or passed in as a file
+using the file://path/to/file syntax.
+
+The "--generate-param-json-input" option can be used to generate an
+example of the JSON which must be provided. We recommend storing this
+example in a file, modifying it as needed and then passing it back in
+via the file:// syntax.
+
+--idcs-last-modified-by [complex type]
+
+This is a complex type whose value must be valid JSON. The value can
+be provided as a string on the command line or passed in as a file
+using the file://path/to/file syntax.
+
+The "--generate-param-json-input" option can be used to generate an
+example of the JSON which must be provided. We recommend storing this
+example in a file, modifying it as needed and then passing it back in
+via the file:// syntax.
+
+--idcs-last-upgraded-in-release [text]
+
+The release number when the resource was upgraded.
+
+**SCIM++ Properties:**  - caseExact: false  - idcsSearchable: false  -
+multiValued: false  - mutability: readOnly  - required: false  -
+returned: request  - type: string  - uniqueness: none
+
+--idcs-prevented-operations [text]
+
+Each value of this attribute specifies an operation that only an
+internal client may perform on this particular resource.
+
+**SCIM++ Properties:**  - idcsSearchable: false  - multiValued: true
+- mutability: readOnly  - required: false  - returned: request  -
+type: string  - uniqueness: none
+
+Accepted values are:
+
+   delete, replace, update
+
+--identity-store-settings [complex type]
+
+This is a complex type whose value must be valid JSON. The value can
+be provided as a string on the command line or passed in as a file
+using the file://path/to/file syntax.
+
+The "--generate-param-json-input" option can be used to generate an
+example of the JSON which must be provided. We recommend storing this
+example in a file, modifying it as needed and then passing it back in
+via the file:// syntax.
+
+--if-match [text]
+
+Used to make the request conditional on an ETag
+
+--meta [complex type]
+
+This is a complex type whose value must be valid JSON. The value can
+be provided as a string on the command line or passed in as a file
+using the file://path/to/file syntax.
+
+The "--generate-param-json-input" option can be used to generate an
+example of the JSON which must be provided. We recommend storing this
+example in a file, modifying it as needed and then passing it back in
+via the file:// syntax.
+
+--mfa-enabled-category [text]
+
+Specifies the category of people for whom Multi-Factor Authentication
+is enabled. This is a readOnly attribute which reflects the value of
+mfaEnabledCategory attribute in SsoSettings
+
+**Deprecated Since: 18.1.2**
+
+**SCIM++ Properties:**  - idcsSearchable: false  - multiValued: false
+- mutability: readOnly  - required: false  - returned: default  -
+type: string  - uniqueness: none
+
+--ocid [text]
+
+Unique OCI identifier for the SCIM Resource.
+
+**SCIM++ Properties:**  - caseExact: true  - idcsSearchable: true  -
+multiValued: false  - mutability: immutable  - required: false  -
+returned: default  - type: string  - uniqueness: global
+
+--phone-call-enabled [boolean]
+
+If true, indicates that the phone (PHONE_CALL) channel is enabled for
+authentication
+
+**Added In:** 20.1.3
+
+**SCIM++ Properties:**  - idcsSearchable: false  - multiValued: false
+- mutability: readWrite  - required: false  - returned: default  -
+type: boolean  - uniqueness: none
+
+--resource-type-schema-version [text]
+
+An endpoint-specific schema version number to use in the Request.
+Allowed version values are Earliest Version or Latest Version as
+specified in each REST API endpoint description, or any sequential
+number inbetween. All schema attributes/body parameters are a part of
+version 1. After version 1, any attributes added or deprecated will be
+tagged with the version that they were added to or deprecated in. If
+no version is provided, the latest schema version is returned.
+
+--tags [complex type]
+
+A list of tags on this resource.
+
+**SCIM++ Properties:**  - idcsCompositeKey: [key, value]  -
+idcsSearchable: true  - multiValued: true  - mutability: readWrite  -
+required: false  - returned: request  - type: complex  - uniqueness:
+none
+
+This option is a JSON list with items of type Tags.  For documentation
+on tags please see our API reference: https://docs.cloud.oracle.com/a
+pi/#/en/identitydomains/v1/datatypes/Tags. This is a complex type
+whose value must be valid JSON. The value can be provided as a string
+on the command line or passed in as a file using the
+file://path/to/file syntax.
+
+The "--generate-param-json-input" option can be used to generate an
+example of the JSON which must be provided. We recommend storing this
+example in a file, modifying it as needed and then passing it back in
+via the file:// syntax.
+
+--tenancy-ocid [text]
+
+OCI Tenant Id (ocid) in which the resource lives.
+
+**SCIM++ Properties:**  - caseExact: false  - idcsSearchable: false  -
+multiValued: false  - mutability: readOnly  - required: false  -
+returned: default  - type: string  - uniqueness: none
+
+--third-party-factor [complex type]
+
+This is a complex type whose value must be valid JSON. The value can
+be provided as a string on the command line or passed in as a file
+using the file://path/to/file syntax.
+
+The "--generate-param-json-input" option can be used to generate an
+example of the JSON which must be provided. We recommend storing this
+example in a file, modifying it as needed and then passing it back in
+via the file:// syntax.
+
+--user-enrollment-disabled-factors [text]
+
+Factors for which enrollment should be blocked for End User
+
+**Added In:** 2012271618
+
+**SCIM++ Properties:**  - idcsSearchable: false  - multiValued: true
+- mutability: readWrite  - required: false  - returned: default  -
+type: string  - uniqueness: none
+
+Accepted values are:
+
+   EMAIL, FIDO_AUTHENTICATOR, OFFLINETOTP, PHONE_CALL, PUSH, SMS, THIRDPARTY, TOTP, VOICE, YUBICO_OTP
+
+--yubico-otp-enabled [boolean]
+
+If true, indicates that the Yubico OTP is enabled for authentication
+
+**Added In:** 2109090424
+
+**SCIM++ Properties:**  - idcsSearchable: false  - multiValued: false
+- mutability: readWrite  - required: false  - returned: default  -
+type: boolean  - uniqueness: none
+
+
+Global Parameters
+=================
+
+Use "oci --help" for help on global parameters.
+
+"--auth-purpose", "--auth", "--cert-bundle", "--cli-auto-prompt", "--
+cli-rc-file", "--config-file", "--connection-timeout", "--debug", "--
+defaults-file", "--endpoint", "--generate-full-command-json-input", "
+--generate-param-json-input", "--help", "--latest-version", "--max-
+retries", "--no-retry", "--opc-client-request-id", "--opc-request-id",
+"--output", "--profile", "--proxy", "--query", "--raw-output", "--
+read-timeout", "--realm-specific-endpoint", "--region", "--release-
+info", "--request-id", "--version", "-?", "-d", "-h", "-i", "-v"
+
+
+Example using required parameter
+================================
+
+Copy and paste the following example into a JSON file, replacing the
+example parameters with your own.
+
+       oci identity-domains authentication-factor-setting put --generate-param-json-input bypass-code-settings > bypass-code-settings.json
+       oci identity-domains authentication-factor-setting put --generate-param-json-input client-app-settings > client-app-settings.json
+       oci identity-domains authentication-factor-setting put --generate-param-json-input compliance-policy > compliance-policy.json
+       oci identity-domains authentication-factor-setting put --generate-param-json-input endpoint-restrictions > endpoint-restrictions.json
+       oci identity-domains authentication-factor-setting put --generate-param-json-input notification-settings > notification-settings.json
+       oci identity-domains authentication-factor-setting put --generate-param-json-input schemas > schemas.json
+       oci identity-domains authentication-factor-setting put --generate-param-json-input totp-settings > totp-settings.json
+
+Copy the following CLI commands into a file named example.sh. Run the
+command by typing “bash example.sh” and replacing the example
+parameters with your own.
+
+Please note this sample will only work in the POSIX-compliant bash-
+like shell. You need to set up the OCI configuration and appropriate
+security policies before trying the examples.
+
+       export authentication_factor_setting_id=<substitute-value-of-authentication_factor_setting_id> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/identity-domains/authentication-factor-setting/put.html#cmdoption-authentication-factor-setting-id
+       export bypass_code_enabled=<substitute-value-of-bypass_code_enabled> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/identity-domains/authentication-factor-setting/put.html#cmdoption-bypass-code-enabled
+       export mfa_enrollment_type=<substitute-value-of-mfa_enrollment_type> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/identity-domains/authentication-factor-setting/put.html#cmdoption-mfa-enrollment-type
+       export push_enabled=<substitute-value-of-push_enabled> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/identity-domains/authentication-factor-setting/put.html#cmdoption-push-enabled
+       export security_questions_enabled=<substitute-value-of-security_questions_enabled> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/identity-domains/authentication-factor-setting/put.html#cmdoption-security-questions-enabled
+       export sms_enabled=<substitute-value-of-sms_enabled> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/identity-domains/authentication-factor-setting/put.html#cmdoption-sms-enabled
+       export totp_enabled=<substitute-value-of-totp_enabled> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/identity-domains/authentication-factor-setting/put.html#cmdoption-totp-enabled
+
+       oci identity-domains authentication-factor-setting put --authentication-factor-setting-id $authentication_factor_setting_id --bypass-code-enabled $bypass_code_enabled --bypass-code-settings file://bypass-code-settings.json --client-app-settings file://client-app-settings.json --compliance-policy file://compliance-policy.json --endpoint-restrictions file://endpoint-restrictions.json --mfa-enrollment-type $mfa_enrollment_type --notification-settings file://notification-settings.json --push-enabled $push_enabled --schemas file://schemas.json --security-questions-enabled $security_questions_enabled --sms-enabled $sms_enabled --totp-enabled $totp_enabled --totp-settings file://totp-settings.json

@@ -1,0 +1,246 @@
+jms
+***
+
+
+Description
+===========
+
+The CLI for the Fleet Management feature of Java Management Service to
+monitor and manage the usage of Java in your enterprise. Use these CLI
+to manage fleets, configure managed instances to report to fleets, and
+gain insights into the Java workloads running on these instances by
+carrying out basic and advanced features.
+
+
+Available Commands
+==================
+
+* agent-installer-summary
+
+  * generate-agent-installer-configuration
+
+  * list-agent-installers
+
+* announcement-collection
+
+  * list-announcements
+
+* application-installation-usage-summary
+
+  * summarize-application-installation-usage
+
+* application-usage
+
+  * summarize
+
+* blocklist
+
+  * create
+
+  * delete
+
+  * list
+
+* crypto-analysis-result
+
+  * delete
+
+  * get
+
+  * list
+
+* deployed-application-installation-usage-summary
+
+  * summarize-deployed-application-installation-usage
+
+* deployed-application-usage
+
+  * summarize
+
+* drs-file
+
+  * delete
+
+  * get
+
+* drs-file-collection
+
+  * list-drs-files
+
+* export-setting
+
+  * get
+
+  * update
+
+* export-status
+
+  * get
+
+* fleet
+
+  * change-compartment
+
+  * create
+
+  * create-drs-file
+
+  * delete
+
+  * disable-drs
+
+  * enable-drs
+
+  * generate-agent-deploy-script
+
+  * generate-load-pipeline-script
+
+  * get
+
+  * list
+
+  * request-crypto-analyses
+
+  * request-deployed-application-migration-analyses
+
+  * request-java-migration-analyses
+
+  * request-jfr-recordings
+
+  * request-performance-tuning-analyses
+
+  * summarize-resource-inventory
+
+  * update
+
+  * update-drs-file
+
+* fleet-advanced-feature-configuration
+
+  * get
+
+  * update
+
+* fleet-agent-configuration
+
+  * get
+
+  * update
+
+* fleet-diagnosis-summary
+
+  * list-fleet-diagnoses
+
+* fleet-error-aggregation
+
+  * summarize-fleet-errors
+
+* fleet-error-summary
+
+  * list-fleet-errors
+
+* installation-site-summary
+
+  * add
+
+  * list-installation-sites
+
+  * remove
+
+* installation-usage
+
+  * summarize
+
+* java-family
+
+  * get
+
+  * list
+
+* java-migration-analysis-result
+
+  * delete
+
+  * get
+
+  * list
+
+* java-release
+
+  * get
+
+  * list
+
+* java-server-instance-usage
+
+  * summarize
+
+* java-server-usage
+
+  * scan
+
+  * summarize
+
+* jms-plugin
+
+  * create
+
+  * delete
+
+  * get
+
+  * list
+
+  * update
+
+* jre-usage
+
+  * list
+
+  * summarize
+
+* library-usage
+
+  * scan
+
+  * summarize
+
+* managed-instance-usage
+
+  * summarize
+
+* performance-tuning-analysis-result
+
+  * delete
+
+  * get
+
+  * list
+
+* plugin-error-aggregation
+
+  * summarize-plugin-errors
+
+* plugin-error-summary
+
+  * list-plugin-errors
+
+* work-item-summary
+
+  * list-work-items
+
+* work-request
+
+  * cancel
+
+  * get
+
+  * list
+
+* work-request-error
+
+  * list
+
+* work-request-log-entry
+
+  * list-work-request-logs

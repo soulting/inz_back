@@ -1,0 +1,309 @@
+"head"
+******
+
+* Description
+
+* Usage
+
+* Required Parameters
+
+* Optional Parameters
+
+* Global Parameters
+
+* Example using required parameter
+
+* Other Examples
+
+
+Description
+===========
+
+Gets the user-defined metadata and entity tag for an object.
+
+Example:
+   oci os object head -ns mynamespace -bn mybucket –name myfile.txt
+
+
+Usage
+=====
+
+   oci os object head [OPTIONS]
+
+
+Required Parameters
+===================
+
+-bn, --bucket-name [text]
+
+The name of the bucket.
+
+--name [text]
+
+The name of the object.
+
+
+Optional Parameters
+===================
+
+--encryption-key-file [filename]
+
+A file containing the base64-encoded string of the AES-256 encryption
+key associated with the object.
+
+--from-json [text]
+
+Provide input to this command as a JSON document from a file using the
+file://path-to/file syntax.
+
+The "--generate-full-command-json-input" option can be used to
+generate a sample json file to be used with this command option. The
+key names are pre-populated and match the command option names
+(converted to camelCase format, e.g. compartment-id –> compartmentId),
+while the values of the keys need to be populated by the user before
+using the sample file as an input to this command. For any command
+option that accepts multiple values, the value of the key can be a
+JSON array.
+
+Options can still be provided on the command line. If an option exists
+in both the JSON document and the command line then the command line
+specified value will be used.
+
+For examples on usage of this option, please see our “using CLI with
+advanced JSON options” link: https://docs.cloud.oracle.com/iaas/Conte
+nt/API/SDKDocs/cliusing.htm#AdvancedJSONOptions
+
+--if-match [text]
+
+The entity tag to match.
+
+--if-none-match [text]
+
+The entity tag to avoid matching.
+
+-ns, --namespace, --namespace-name [text]
+
+The top-level namespace used for the request. If not provided, this
+parameter will be obtained internally using a call to ‘oci os ns get’
+
+--version-id [text]
+
+VersionId used to identify a particular version of the object
+
+
+Global Parameters
+=================
+
+Use "oci --help" for help on global parameters.
+
+"--auth-purpose", "--auth", "--cert-bundle", "--cli-auto-prompt", "--
+cli-rc-file", "--config-file", "--connection-timeout", "--debug", "--
+defaults-file", "--endpoint", "--generate-full-command-json-input", "
+--generate-param-json-input", "--help", "--latest-version", "--max-
+retries", "--no-retry", "--opc-client-request-id", "--opc-request-id",
+"--output", "--profile", "--proxy", "--query", "--raw-output", "--
+read-timeout", "--realm-specific-endpoint", "--region", "--release-
+info", "--request-id", "--version", "-?", "-d", "-h", "-i", "-v"
+
+
+Example using required parameter
+================================
+
+Copy the following CLI commands into a file named example.sh. Run the
+command by typing “bash example.sh” and replacing the example
+parameters with your own.
+
+Please note this sample will only work in the POSIX-compliant bash-
+like shell. You need to set up the OCI configuration and appropriate
+security policies before trying the examples.
+
+       export bucket_name=<substitute-value-of-bucket_name> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/os/object/head.html#cmdoption-bucket-name
+       export name=<substitute-value-of-name> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/os/object/head.html#cmdoption-name
+
+       oci os object head --bucket-name $bucket_name --name $name
+
+
+Other Examples
+==============
+
+
+Description
+-----------
+
+This command gets the user-defined metadata and entity tag for an
+object
+
+
+Command
+-------
+
+    oci os object head -bn bucket-client --name test.txt
+
+
+Output
+------
+
+   {
+    "accept-ranges": "bytes",
+    "access-control-allow-credentials": "true",
+    "access-control-allow-methods": "POST,PUT,GET,HEAD,DELETE,OPTIONS",
+    "access-control-allow-origin": "*",
+    "access-control-expose-headers": "accept-ranges,access-control-allow-credentials,access-control-allow-methods,access-control-allow-origin,content-length,content-md5,content-type,date,etag,last-modified,opc-client-info,opc-client-request-id,opc-request-id,storage-tier,version-id,x-api-id",
+    "content-length": "23",
+    "content-md5": "3fEfRGtHscXnERhbvm3oMw==",
+    "content-type": "text/plain",
+    "date": "Thu, 20 Oct 2022 11:37:53 GMT",
+    "etag": "15eac955-cd07-446f-a82d-96a8b3096e2d",
+    "last-modified": "Thu, 20 Oct 2022 11:25:53 GMT",
+    "opc-client-request-id": "B8FEDD29DF39448C892051E6D514F44C",
+    "opc-request-id": "phx-1:-a9bto2VD-a2IkkUu-O32sqYcBd376YvdXYTUA3AeU4YXrqUq8HZVWfzpiSEwGT5",
+    "storage-tier": "Standard",
+    "version-id": "5da7b28e-30d1-4391-be76-a041f4b3d75e",
+    "x-api-id": "native"
+   }
+
+
+Description
+-----------
+
+This command gets the user-defined metadata and entity tag for an
+object for the given version id of the object
+
+
+Command
+-------
+
+    oci os object head -bn bucket-client --name test.txt --version-id 93b78e10-29e4-417c-b574-d2fe7dd2c310
+
+
+Output
+------
+
+   {
+    "accept-ranges": "bytes",
+    "access-control-allow-credentials": "true",
+    "access-control-allow-methods": "POST,PUT,GET,HEAD,DELETE,OPTIONS",
+    "access-control-allow-origin": "*",
+    "access-control-expose-headers": "accept-ranges,access-control-allow-credentials,access-control-allow-methods,access-control-allow-origin,archival-state,content-length,content-md5,content-type,date,etag,last-modified,opc-client-info,opc-client-request-id,opc-meta-content-type,opc-request-id,storage-tier,version-id,x-api-id",
+    "archival-state": "Archived",
+    "content-length": "23",
+    "content-md5": "3fEfRGtHscXnERhbvm3oMw==",
+    "content-type": "text/plain",
+    "date": "Thu, 20 Oct 2022 11:43:24 GMT",
+    "etag": "bed26708-0e4b-4d98-b75e-83cc17846750",
+    "last-modified": "Thu, 20 Oct 2022 11:42:27 GMT",
+    "opc-client-request-id": "B01130459CBC419CA7ACD68851A75FF1",
+    "opc-meta-content-type": "sample",
+    "opc-request-id": "phx-1:n8Rk6XIm3HMsRBktlystsd-wAZK1ADDS0ov2wJLKX_6I6AE2-vTP5cZphqmSz2M1",
+    "storage-tier": "Archive",
+    "version-id": "93b22a10-29e4-417c-b574-d2fe7dd2c310",
+    "x-api-id": "native"
+   }
+
+
+Description
+-----------
+
+This command gets the user-defined metadata and entity tag for an
+object for the given namespace
+
+
+Command
+-------
+
+    oci os object head -bn bucket-client --name test.txt --namespace user_namespace
+
+
+Output
+------
+
+   {
+    "accept-ranges": "bytes",
+    "access-control-allow-credentials": "true",
+    "access-control-allow-methods": "POST,PUT,GET,HEAD,DELETE,OPTIONS",
+    "access-control-allow-origin": "*",
+    "access-control-expose-headers": "accept-ranges,access-control-allow-credentials,access-control-allow-methods,access-control-allow-origin,archival-state,content-length,content-md5,content-type,date,etag,last-modified,opc-client-info,opc-client-request-id,opc-meta-content-type,opc-request-id,storage-tier,version-id,x-api-id",
+    "archival-state": "Archived",
+    "content-length": "23",
+    "content-md5": "3fEfRGtHscXnERhbvm3oMw==",
+    "content-type": "text/plain",
+    "date": "Thu, 20 Oct 2022 11:47:03 GMT",
+    "etag": "bed26708-0e4b-4d98-b75e-83cc16344770",
+    "last-modified": "Thu, 20 Oct 2022 11:42:27 GMT",
+    "opc-client-request-id": "0BB3B30FF4A14EA6AACDB62D9591D535",
+    "opc-meta-content-type": "sample",
+    "opc-request-id": "phx-1:BOBbrs6ikCVbq_qRmvL6jxhNk75qDFu73Dxe0r2PwwA3snOtpr5dmECHnI1sPwmV",
+    "storage-tier": "Archive",
+    "version-id": "93b22a10-29e4-417c-b574-d2fe7dd2c310",
+    "x-api-id": "native"
+   }
+
+
+Description
+-----------
+
+This command gets the metadata only when etag matches
+
+
+Command
+-------
+
+    oci os object head -bn bucket-client --name test.txt --if-match 38ffcfda-1200-4e9f-a7c7-4ff307032c44
+
+
+Output
+------
+
+   {
+    "accept-ranges": "bytes",
+    "access-control-allow-credentials": "true",
+    "access-control-allow-methods": "POST,PUT,GET,HEAD,DELETE,OPTIONS",
+    "access-control-allow-origin": "*",
+    "access-control-expose-headers": "accept-ranges,access-control-allow-credentials,access-control-allow-methods,access-control-allow-origin,content-length,content-md5,content-type,date,etag,last-modified,opc-client-info,opc-client-request-id,opc-request-id,storage-tier,version-id,x-api-id",
+    "content-length": "23",
+    "content-md5": "3fEfRGtHscXnERhbvm3oMw==",
+    "content-type": "text/plain",
+    "date": "Wed, 26 Oct 2022 13:11:20 GMT",
+    "etag": "38ffcfda-1200-4e9f-a7c7-4ff307032c44",
+    "last-modified": "Wed, 26 Oct 2022 11:15:42 GMT",
+    "opc-client-request-id": "0C01E36CD4C245329936187FB99CE1C9",
+    "opc-request-id": "phx-1:CiCnPv1aNOD2ykRz1veYf35EMAV0SsXNHgq3255B4_402dpUFyIH1pgEvK3c9qW0",
+    "storage-tier": "Standard",
+    "version-id": "ec9db9a3-b7a9-4a1a-aae1-defa5e68cc10",
+    "x-api-id": "native"
+   }
+
+
+Description
+-----------
+
+This command gets the metadata only when etag does not matches
+
+
+Command
+-------
+
+    oci os object head -bn bucket-client --name test.txt --if-none-match abcd-invalid-etag
+
+
+Output
+------
+
+   {
+    "accept-ranges": "bytes",
+    "access-control-allow-credentials": "true",
+    "access-control-allow-methods": "POST,PUT,GET,HEAD,DELETE,OPTIONS",
+    "access-control-allow-origin": "*",
+    "access-control-expose-headers": "accept-ranges,access-control-allow-credentials,access-control-allow-methods,access-control-allow-origin,content-length,content-md5,content-type,date,etag,last-modified,opc-client-info,opc-client-request-id,opc-request-id,storage-tier,version-id,x-api-id",
+    "content-length": "23",
+    "content-md5": "3fEfRGtHscXnERhbvm3oMw==",
+    "content-type": "text/plain",
+    "date": "Wed, 26 Oct 2022 13:15:02 GMT",
+    "etag": "38ffcfda-1200-4e9f-a7c7-4ff307032c44",
+    "last-modified": "Wed, 26 Oct 2022 11:15:42 GMT",
+    "opc-client-request-id": "D474082E575A452BB79CE1E4896F0350",
+    "opc-request-id": "phx-1:EVEivFlk1LhjGmnxOamdHDbKmnD5hGwsfObUwBoypJ-yDmsRYvFji7n81imxJ8aG",
+    "storage-tier": "Standard",
+    "version-id": "ec9db9a3-b7a9-4a1a-aae1-defa5e68cc10",
+    "x-api-id": "native"
+   }

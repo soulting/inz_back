@@ -1,0 +1,182 @@
+"list"
+******
+
+* Description
+
+* Usage
+
+* Required Parameters
+
+* Optional Parameters
+
+* Global Parameters
+
+* Example using required parameter
+
+
+Description
+===========
+
+Lists models in the specified compartment.
+
+
+Usage
+=====
+
+   oci data-science model list [OPTIONS]
+
+
+Required Parameters
+===================
+
+--compartment-id, -c [text]
+
+<b>Filter</b> results by the OCID of the compartment.
+
+
+Optional Parameters
+===================
+
+--all
+
+Fetches all pages of results. If you provide this option, then you
+cannot provide the "--limit" option.
+
+--category [text]
+
+Specifies the type of models to list. By default, user models are
+listed.
+
+Accepted values are:
+
+   SERVICE, USER
+
+--created-by [text]
+
+<b>Filter</b> results by the OCID of the user who created the
+resource.
+
+--display-name [text]
+
+<b>Filter</b> results by its user-friendly name.
+
+--from-json [text]
+
+Provide input to this command as a JSON document from a file using the
+file://path-to/file syntax.
+
+The "--generate-full-command-json-input" option can be used to
+generate a sample json file to be used with this command option. The
+key names are pre-populated and match the command option names
+(converted to camelCase format, e.g. compartment-id –> compartmentId),
+while the values of the keys need to be populated by the user before
+using the sample file as an input to this command. For any command
+option that accepts multiple values, the value of the key can be a
+JSON array.
+
+Options can still be provided on the command line. If an option exists
+in both the JSON document and the command line then the command line
+specified value will be used.
+
+For examples on usage of this option, please see our “using CLI with
+advanced JSON options” link: https://docs.cloud.oracle.com/iaas/Conte
+nt/API/SDKDocs/cliusing.htm#AdvancedJSONOptions
+
+--id [text]
+
+<b>Filter</b> results by OCID. Must be an OCID of the correct type for
+the resource type.
+
+--lifecycle-state [text]
+
+<b>Filter</b> results by the specified lifecycle state. Must be a
+valid state for the resource type.
+
+Accepted values are:
+
+   ACTIVE, DELETED, FAILED, INACTIVE
+
+--limit [integer]
+
+For list pagination. The maximum number of results per page, or items
+to return in a paginated “List” call. 1 is the minimum, 100 is the
+maximum. See List Pagination.
+
+Example:
+
+   50
+
+--model-version-set-name [text]
+
+<b>Filter</b> results by the name of the model version set.
+
+--page [text]
+
+For list pagination. The value of the *opc-next-page* response header
+from the previous “List” call.
+
+See List Pagination.
+
+--page-size [integer]
+
+When fetching results, the number of results to fetch per call. Only
+valid when used with "--all" or "--limit", and ignored otherwise.
+
+--project-id [text]
+
+<b>Filter</b> results by the OCID of the project.
+
+--sort-by [text]
+
+Specifies the field to sort by. Accepts only one field. By default,
+when you sort by *timeCreated*, the results are shown in descending
+order. All other fields default to ascending order. Sort order for the
+*displayName* field is case sensitive.
+
+Accepted values are:
+
+   displayName, lifecycleState, timeCreated
+
+--sort-order [text]
+
+Specifies sort order to use, either *ASC* (ascending) or *DESC*
+(descending).
+
+Accepted values are:
+
+   ASC, DESC
+
+--version-label [text]
+
+<b>Filter</b> results by version label.
+
+
+Global Parameters
+=================
+
+Use "oci --help" for help on global parameters.
+
+"--auth-purpose", "--auth", "--cert-bundle", "--cli-auto-prompt", "--
+cli-rc-file", "--config-file", "--connection-timeout", "--debug", "--
+defaults-file", "--endpoint", "--generate-full-command-json-input", "
+--generate-param-json-input", "--help", "--latest-version", "--max-
+retries", "--no-retry", "--opc-client-request-id", "--opc-request-id",
+"--output", "--profile", "--proxy", "--query", "--raw-output", "--
+read-timeout", "--realm-specific-endpoint", "--region", "--release-
+info", "--request-id", "--version", "-?", "-d", "-h", "-i", "-v"
+
+
+Example using required parameter
+================================
+
+Copy the following CLI commands into a file named example.sh. Run the
+command by typing “bash example.sh” and replacing the example
+parameters with your own.
+
+Please note this sample will only work in the POSIX-compliant bash-
+like shell. You need to set up the OCI configuration and appropriate
+security policies before trying the examples.
+
+       export compartment_id=<substitute-value-of-compartment_id> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/data-science/model/list.html#cmdoption-compartment-id
+
+       oci data-science model list --compartment-id $compartment_id

@@ -1,0 +1,22 @@
+discovery-job-result
+********************
+
+
+Description
+===========
+
+A discovery job result representing a sensitive column. It can be one
+of the following three types: NEW: A new sensitive column in the
+target database that is not in the sensitive data model. DELETED: A
+column that is present in the sensitive data model but has been
+deleted from the target database. MODIFIED: A column that is present
+in the target database as well as the sensitive data model but some of
+its attributes have been modified.
+
+
+Available Commands
+==================
+
+* delete
+
+* get

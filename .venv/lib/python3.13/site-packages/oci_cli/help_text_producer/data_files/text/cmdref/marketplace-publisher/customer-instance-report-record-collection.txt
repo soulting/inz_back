@@ -1,0 +1,14 @@
+customer-instance-report-record-collection
+******************************************
+
+
+Description
+===========
+
+Customer instance report
+
+
+Available Commands
+==================
+
+* list-customer-instance-report-records

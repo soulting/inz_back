@@ -1,0 +1,54 @@
+db-system
+*********
+
+
+Description
+===========
+
+The CLI for the MySQL Database Service
+
+
+Available Commands
+==================
+
+* clone
+
+* create
+
+* delete
+
+* get
+
+* heatwave-cluster
+
+  * add
+
+  * delete
+
+  * get
+
+  * restart
+
+  * start
+
+  * stop
+
+  * update
+
+* heatwave-cluster-memory-estimate
+
+  * generate
+
+  * get
+
+* import
+
+* list
+
+* restart
+
+* start
+
+* stop
+
+* update

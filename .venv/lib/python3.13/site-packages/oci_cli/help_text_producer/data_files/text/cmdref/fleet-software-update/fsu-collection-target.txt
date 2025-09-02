@@ -1,0 +1,14 @@
+fsu-collection-target
+*********************
+
+
+Description
+===========
+
+Details of a target member of a Exadata Fleet Update Collection.
+
+
+Available Commands
+==================
+
+* get

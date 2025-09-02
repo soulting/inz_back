@@ -1,0 +1,15 @@
+masked-column-summary
+*********************
+
+
+Description
+===========
+
+Summary of a masked column. A masked column is a database column
+masked by a data masking request.
+
+
+Available Commands
+==================
+
+* list-masked-columns

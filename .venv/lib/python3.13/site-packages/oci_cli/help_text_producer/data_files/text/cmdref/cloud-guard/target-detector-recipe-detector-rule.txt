@@ -1,0 +1,33 @@
+target-detector-recipe-detector-rule
+************************************
+
+
+Description
+===========
+
+A TargetDetectorRecipeDetectorRule resource contains a specific
+instance of a single detector rule in one of the supported detector
+types (for example, activity, configuration, or threat).
+
+A TargetDetectorRecipeDetectorRule resource: * Is effectively a copy
+of a DetectorRecipeRule resource (made when a detector recipe is
+attached to a target) in which users can make certain changes if it’s
+Oracle-managed, and other changes if it’s user-managed. * Is visible
+on the Cloud Guard Targets, Target Details page. * Is effectively
+located in a specific OCI compartment, through the
+ThreatDetectorRecipe resource to which it belongs. * Can be modified
+by users, programmatically or through the UI. * Changes that can be
+made here apply locally, to resources in OCI compartments mapped to
+the target that attaches the associated detector recipe (in a
+TargetDetectorRecipe resource), and override any changes made in rules
+associated with the corresponding DetectorRecipe resource.
+
+
+Available Commands
+==================
+
+* get
+
+* list
+
+* update

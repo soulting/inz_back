@@ -1,0 +1,22 @@
+target-asset
+************
+
+
+Description
+===========
+
+Description of the target asset.
+
+
+Available Commands
+==================
+
+* create
+
+* delete
+
+* get
+
+* list
+
+* update

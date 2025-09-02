@@ -1,0 +1,374 @@
+data-catalog
+************
+
+
+Description
+===========
+
+Use the Data Catalog CLI to collect, organize, find, access,
+understand, enrich, and activate technical, business, and operational
+metadata. For more information, see Data Catalog.
+
+
+Available Commands
+==================
+
+* attribute
+
+  * create
+
+  * delete
+
+  * get
+
+  * list
+
+  * update
+
+* attribute-tag
+
+  * create
+
+  * delete
+
+  * get
+
+  * list
+
+* catalog
+
+  * add
+
+  * attach
+
+  * change-compartment
+
+  * create
+
+  * delete
+
+  * detach
+
+  * get
+
+  * list
+
+  * object-stats
+
+  * process-recommendation
+
+  * recommendations
+
+  * remove
+
+  * update
+
+  * users
+
+* catalog-private-endpoint
+
+  * add
+
+  * change-compartment
+
+  * create
+
+  * delete
+
+  * get
+
+  * list
+
+  * remove
+
+  * update
+
+* connection
+
+  * create
+
+  * delete
+
+  * get
+
+  * list
+
+  * test
+
+  * update
+
+  * upload-credentials
+
+* custom-property
+
+  * create
+
+  * delete
+
+  * get
+
+  * list
+
+  * update
+
+* data-asset
+
+  * add-data-selector-patterns
+
+  * asynchronous-export
+
+  * create
+
+  * delete
+
+  * get
+
+  * import
+
+  * import-connection
+
+  * import-lineage
+
+  * list
+
+  * parse-connection
+
+  * remove-data-selector-patterns
+
+  * synchronous-export
+
+  * update
+
+  * validate-connection
+
+* data-asset-tag
+
+  * create
+
+  * delete
+
+  * get
+
+  * list
+
+* entity
+
+  * create
+
+  * delete
+
+  * fetch-entity-lineage
+
+  * get
+
+  * list
+
+  * list-aggregated-physical
+
+  * update
+
+* entity-tag
+
+  * create
+
+  * delete
+
+  * get
+
+  * list
+
+* folder
+
+  * create
+
+  * delete
+
+  * get
+
+  * list
+
+  * update
+
+* folder-tag
+
+  * create
+
+  * delete
+
+  * get
+
+  * list
+
+* glossary
+
+  * asynchronous-export
+
+  * create
+
+  * delete
+
+  * expand-tree-for
+
+  * export
+
+  * get
+
+  * import
+
+  * list
+
+  * update
+
+* job
+
+  * create
+
+  * delete
+
+  * get
+
+  * list
+
+  * update
+
+* job-definition
+
+  * create
+
+  * delete
+
+  * get
+
+  * list
+
+  * update
+
+* job-execution
+
+  * create
+
+  * get
+
+  * list
+
+* job-log
+
+  * get
+
+  * list
+
+* job-metric
+
+  * get
+
+  * list
+
+* metastore
+
+  * add
+
+  * change-compartment
+
+  * create
+
+  * delete
+
+  * get
+
+  * list
+
+  * remove
+
+  * update
+
+* namespace
+
+  * create
+
+  * delete
+
+  * get
+
+  * list
+
+  * update
+
+* pattern
+
+  * create
+
+  * delete
+
+  * get
+
+  * list
+
+  * list-derived-logical-entities
+
+  * update
+
+  * validate
+
+* rule-summary
+
+  * list-rules
+
+* search
+
+  * query
+
+* suggest-results
+
+  * suggest-matches
+
+* tag
+
+  * list
+
+* term
+
+  * create
+
+  * delete
+
+  * get
+
+  * list
+
+  * update
+
+* term-relationship
+
+  * create
+
+  * delete
+
+  * get
+
+  * list
+
+  * update
+
+* type
+
+  * associate-custom-properties
+
+  * disassociate-custom-properties
+
+  * get
+
+  * list
+
+* work-request
+
+  * get
+
+  * list
+
+* work-request-error
+
+  * list
+
+* work-request-log
+
+  * list

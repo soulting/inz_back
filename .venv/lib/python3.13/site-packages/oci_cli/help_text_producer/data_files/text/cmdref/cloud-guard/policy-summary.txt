@@ -1,0 +1,15 @@
+policy-summary
+**************
+
+
+Description
+===========
+
+A policy summary (PolicySummary object) contains a list of all current
+global policy statements (policy attributes).
+
+
+Available Commands
+==================
+
+* list-policies

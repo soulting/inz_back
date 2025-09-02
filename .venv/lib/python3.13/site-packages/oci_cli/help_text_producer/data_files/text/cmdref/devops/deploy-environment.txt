@@ -1,0 +1,34 @@
+deploy-environment
+******************
+
+
+Description
+===========
+
+The target OCI resources, such as Compute instances, Container Engine
+for Kubernetes(OKE) clusters, or Function, where artifacts are
+deployed.
+
+
+Available Commands
+==================
+
+* create-compute-instance-environment
+
+* create-function-environment
+
+* create-oke-cluster-environment
+
+* delete
+
+* get
+
+* list
+
+* update
+
+* update-compute-instance-environment
+
+* update-function-environment
+
+* update-oke-cluster-environment

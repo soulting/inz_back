@@ -1,0 +1,32 @@
+operator-control-assignment
+***************************
+
+
+Description
+===========
+
+An Operator Control Assignment identifies the target resource that is
+placed under the governance of an Operator Control. Creating an
+Operator Control Assignment Assignment with a time duration ensures
+that human accesses to the target resource will be governed by
+Operator Control for the duration specified.
+
+
+Available Commands
+==================
+
+* change-compartment
+
+* create
+
+* delete
+
+* get
+
+* get-assignment-validation-status
+
+* list
+
+* update
+
+* validate-operator-assignment

@@ -1,0 +1,15 @@
+runtime-pipeline
+****************
+
+
+Description
+===========
+
+Runtime pipeline model which holds the runtime metadata of the task
+executed.
+
+
+Available Commands
+==================
+
+* get

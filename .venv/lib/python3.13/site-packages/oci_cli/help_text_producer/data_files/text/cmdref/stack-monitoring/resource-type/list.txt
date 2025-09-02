@@ -1,0 +1,206 @@
+"list"
+******
+
+* Description
+
+* Usage
+
+* Required Parameters
+
+* Optional Parameters
+
+* Global Parameters
+
+* Example using required parameter
+
+
+Description
+===========
+
+Returns list of resource types accessible to the customer. There are
+two types of resource types - System resource types and User resource
+types. System resource types are available out of the box in the stack
+monitoring resource service and are accessible to all the tenant
+users. User resource types are created in the context of a tenancy and
+are visible only for the tenancy. By default, both System resource
+types and User resource types are returned.
+
+
+Usage
+=====
+
+   oci stack-monitoring resource-type list [OPTIONS]
+
+
+Required Parameters
+===================
+
+--compartment-id, -c [text]
+
+The OCID of the tenancy for which monitored resource types should be
+listed.
+
+
+Optional Parameters
+===================
+
+--all
+
+Fetches all pages of results. If you provide this option, then you
+cannot provide the "--limit" option.
+
+--exclude-fields [text]
+
+Partial response refers to an optimization technique offered by the
+RESTful web APIs, to return all the information except the fields
+requested to be excluded (excludeFields) by the client. In this
+mechanism, the client sends the exclude field names as the query
+parameters for an API to the server, and the server trims down the
+default response content by removing the fields that are not required
+by the client. The parameter controls which fields to exlude and to
+return and should be a query string parameter called “excludeFields”
+of an array type, provide the values as enums, and use
+collectionFormat.
+
+--fields [text]
+
+Partial response refers to an optimization technique offered by the
+RESTful web APIs, to return only the information (fields) required by
+the client. In this mechanism, the client sends the required field
+names as the query parameters for an API to the server, and the server
+trims down the default response content by removing the fields that
+are not required by the client. The parameter controls which fields to
+return and should be a query string parameter called “fields” of an
+array type, provide the values as enums, and use collectionFormat.
+
+MonitoredResourceType Id, name and compartment will be added by
+default.
+
+--from-json [text]
+
+Provide input to this command as a JSON document from a file using the
+file://path-to/file syntax.
+
+The "--generate-full-command-json-input" option can be used to
+generate a sample json file to be used with this command option. The
+key names are pre-populated and match the command option names
+(converted to camelCase format, e.g. compartment-id –> compartmentId),
+while the values of the keys need to be populated by the user before
+using the sample file as an input to this command. For any command
+option that accepts multiple values, the value of the key can be a
+JSON array.
+
+Options can still be provided on the command line. If an option exists
+in both the JSON document and the command line then the command line
+specified value will be used.
+
+For examples on usage of this option, please see our “using CLI with
+advanced JSON options” link: https://docs.cloud.oracle.com/iaas/Conte
+nt/API/SDKDocs/cliusing.htm#AdvancedJSONOptions
+
+--is-exclude-system-types [boolean]
+
+A filter to exclude system resource types. If set to true, system
+resource types will be excluded.
+
+--limit [integer]
+
+For list pagination. The maximum number of results per page, or items
+to return in a paginated “List” call. For important details about how
+pagination works, see List Pagination.
+
+--metric-namespace [text]
+
+A filter to return monitored resource types that has the matching
+namespace.
+
+--name [text]
+
+A filter to return monitored resource types that match exactly with
+the resource type name given.
+
+--page [text]
+
+For list pagination. The value of the *opc-next-page* response header
+from the previous “List” call. For important details about how
+pagination works, see List Pagination.
+
+--page-size [integer]
+
+When fetching results, the number of results to fetch per call. Only
+valid when used with "--all" or "--limit", and ignored otherwise.
+
+--resource-category [text]
+
+A filter to return only resources with matching resource category.
+
+Accepted values are:
+
+   APPLICATION, DATABASE, INFRASTRUCTURE, MIDDLEWARE, UNKNOWN
+
+--sort-by [text]
+
+The field to sort by. Only one sort order may be provided. Default
+order for ‘timeUpdated’ is descending. Default order for ‘name’ is
+ascending.
+
+Accepted values are:
+
+   name, timeUpdated
+
+--sort-order [text]
+
+The sort order to use, either ascending (*ASC*) or descending
+(*DESC*).
+
+Accepted values are:
+
+   ASC, DESC
+
+--source-type [text]
+
+A filter to return only resources with matching source type.
+
+Accepted values are:
+
+   COLLECTD, OCI_NATIVE, PROMETHEUS, SM_MGMT_AGENT_MONITORED, SM_REPO_ONLY, TELEGRAF
+
+--status [text]
+
+A filter to return only resources that matches with lifecycleState
+given.
+
+Accepted values are:
+
+   ACTIVE, CREATING, DELETED, DELETING, FAILED, UPDATING
+
+
+Global Parameters
+=================
+
+Use "oci --help" for help on global parameters.
+
+"--auth-purpose", "--auth", "--cert-bundle", "--cli-auto-prompt", "--
+cli-rc-file", "--config-file", "--connection-timeout", "--debug", "--
+defaults-file", "--endpoint", "--generate-full-command-json-input", "
+--generate-param-json-input", "--help", "--latest-version", "--max-
+retries", "--no-retry", "--opc-client-request-id", "--opc-request-id",
+"--output", "--profile", "--proxy", "--query", "--raw-output", "--
+read-timeout", "--realm-specific-endpoint", "--region", "--release-
+info", "--request-id", "--version", "-?", "-d", "-h", "-i", "-v"
+
+
+Example using required parameter
+================================
+
+Copy the following CLI commands into a file named example.sh. Run the
+command by typing “bash example.sh” and replacing the example
+parameters with your own.
+
+Please note this sample will only work in the POSIX-compliant bash-
+like shell. You need to set up the OCI configuration and appropriate
+security policies before trying the examples.
+
+       export compartment_id=<substitute-value-of-compartment_id> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/stack-monitoring/resource-type/list.html#cmdoption-compartment-id
+
+       oci stack-monitoring resource-type list --compartment-id $compartment_id

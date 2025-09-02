@@ -1,0 +1,170 @@
+cloud-bridge
+************
+
+
+Description
+===========
+
+CLI for Oracle Cloud Bridge service.
+
+
+Available Commands
+==================
+
+* common
+
+  * work-request
+
+    * cancel
+
+    * get
+
+    * list
+
+  * work-request-error
+
+    * list
+
+  * work-request-log-entry
+
+    * list
+
+* discovery
+
+  * asset-source
+
+    * change-compartment
+
+    * create
+
+    * delete
+
+    * get
+
+    * list
+
+    * list-asset-source-connections
+
+    * refresh
+
+    * update
+
+  * discovery-schedule
+
+    * change-compartment
+
+    * create
+
+    * delete
+
+    * get
+
+    * list
+
+    * update
+
+  * supported-cloud-regions
+
+    * list
+
+* inventory
+
+  * asset
+
+    * change-compartment
+
+    * change-tags
+
+    * create
+
+    * delete
+
+    * get
+
+    * list
+
+    * update
+
+  * asset-aggregation
+
+    * analyze-assets
+
+  * historical-metric
+
+    * list
+
+    * submit
+
+  * inventory
+
+    * create
+
+    * delete
+
+    * get
+
+    * import
+
+    * import-via-assets
+
+    * list
+
+    * update
+
+* ocb-agent-svc
+
+  * agent
+
+    * change-compartment
+
+    * create
+
+    * delete
+
+    * get
+
+    * list
+
+    * update
+
+  * agent-dependency
+
+    * change-compartment
+
+    * create
+
+    * delete
+
+    * get
+
+    * list
+
+    * update
+
+  * appliance-image
+
+    * list-appliance-images
+
+  * environment
+
+    * add
+
+    * change-compartment
+
+    * create
+
+    * delete
+
+    * get
+
+    * list
+
+    * remove
+
+    * update
+
+  * plugin
+
+    * get
+
+    * update

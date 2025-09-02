@@ -1,0 +1,23 @@
+occm-demand-signal
+******************
+
+
+Description
+===========
+
+An occm demand signal is a resource that communicates the forecasting
+needs of a customer to OCI in advance.
+
+
+Available Commands
+==================
+
+* create
+
+* delete
+
+* get
+
+* list
+
+* update

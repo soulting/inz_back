@@ -1,0 +1,14 @@
+responder-execution-aggregation
+*******************************
+
+
+Description
+===========
+
+Provides the dimensions and their corresponding count value.
+
+
+Available Commands
+==================
+
+* request-summarized-responder-executions

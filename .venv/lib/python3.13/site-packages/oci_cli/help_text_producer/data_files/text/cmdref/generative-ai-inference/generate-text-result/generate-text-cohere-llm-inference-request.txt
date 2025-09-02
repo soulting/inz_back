@@ -1,0 +1,262 @@
+"generate-text-cohere-llm-inference-request"
+********************************************
+
+* Description
+
+* Usage
+
+* Required Parameters
+
+* Optional Parameters
+
+* Global Parameters
+
+* Example using required parameter
+
+* Other Examples
+
+
+Description
+===========
+
+Generates a text response based on the user prompt.
+
+
+Usage
+=====
+
+   oci generative-ai-inference generate-text-result generate-text-cohere-llm-inference-request [OPTIONS]
+
+
+Required Parameters
+===================
+
+--compartment-id, -c [text]
+
+The OCID of compartment in which to call the Generative AI service to
+generate text.
+
+--inference-request-prompt [text]
+
+Represents the prompt to be completed. The trailing white spaces are
+trimmed before completion.
+
+--serving-mode [complex type]
+
+This is a complex type whose value must be valid JSON. The value can
+be provided as a string on the command line or passed in as a file
+using the file://path/to/file syntax.
+
+The "--generate-param-json-input" option can be used to generate an
+example of the JSON which must be provided. We recommend storing this
+example in a file, modifying it as needed and then passing it back in
+via the file:// syntax.
+
+
+Optional Parameters
+===================
+
+--from-json [text]
+
+Provide input to this command as a JSON document from a file using the
+file://path-to/file syntax.
+
+The "--generate-full-command-json-input" option can be used to
+generate a sample json file to be used with this command option. The
+key names are pre-populated and match the command option names
+(converted to camelCase format, e.g. compartment-id –> compartmentId),
+while the values of the keys need to be populated by the user before
+using the sample file as an input to this command. For any command
+option that accepts multiple values, the value of the key can be a
+JSON array.
+
+Options can still be provided on the command line. If an option exists
+in both the JSON document and the command line then the command line
+specified value will be used.
+
+For examples on usage of this option, please see our “using CLI with
+advanced JSON options” link: https://docs.cloud.oracle.com/iaas/Conte
+nt/API/SDKDocs/cliusing.htm#AdvancedJSONOptions
+
+--inference-request-frequency-penalty [text]
+
+To reduce repetitiveness of generated tokens, this number penalizes
+new tokens based on their frequency in the generated text so far.
+Greater numbers encourage the model to use new tokens, while lower
+numbers encourage the model to repeat the tokens. Set to 0 to disable.
+
+--inference-request-is-echo [boolean]
+
+Whether or not to return the user prompt in the response. This option
+only applies to non-stream results.
+
+--inference-request-is-stream [boolean]
+
+Whether to stream back partial progress. If set, tokens are sent as
+data-only server-sent events as they become available.
+
+--inference-request-max-tokens [integer]
+
+The maximum number of tokens to predict for each response. Includes
+input plus output tokens.
+
+--inference-request-num-generations [integer]
+
+The number of generated texts that will be returned.
+
+--inference-request-presence-penalty [text]
+
+To reduce repetitiveness of generated tokens, this number penalizes
+new tokens based on whether they’ve appeared in the generated text so
+far. Greater numbers encourage the model to use new tokens, while
+lower numbers encourage the model to repeat the tokens.
+
+Similar to frequency penalty, a penalty is applied to previously
+present tokens, except that this penalty is applied equally to all
+tokens that have already appeared, regardless of how many times
+they’ve appeared. Set to 0 to disable.
+
+--inference-request-return-likelihoods [text]
+
+Specifies how and if the token likelihoods are returned with the
+response.
+
+Accepted values are:
+
+   ALL, GENERATION, NONE
+
+--inference-request-stop-sequences [complex type]
+
+The generated text is cut at the end of the earliest occurrence of
+this stop sequence. The generated text will include this stop
+sequence. This is a complex type whose value must be valid JSON. The
+value can be provided as a string on the command line or passed in as
+a file using the file://path/to/file syntax.
+
+The "--generate-param-json-input" option can be used to generate an
+example of the JSON which must be provided. We recommend storing this
+example in a file, modifying it as needed and then passing it back in
+via the file:// syntax.
+
+--inference-request-temperature [text]
+
+A number that sets the randomness of the generated output. A lower
+temperature means a less random generations.
+
+Use lower numbers for tasks with a correct answer such as question
+answering or summarizing. High temperatures can generate
+hallucinations or factually incorrect information. Start with
+temperatures lower than 1.0 and increase the temperature for more
+creative outputs, as you regenerate the prompts to refine the outputs.
+
+--inference-request-top-k [integer]
+
+An integer that sets up the model to use only the top k most likely
+tokens in the generated output. A higher k introduces more randomness
+into the output making the output text sound more natural. Default
+value is 0 which disables this method and considers all tokens. To set
+a number for the likely tokens, choose an integer between 1 and 500.
+
+If also using top p, then the model considers only the top tokens
+whose probabilities add up to p percent and ignores the rest of the k
+tokens. For example, if k is 20, but the probabilities of the top 10
+add up to .75, then only the top 10 tokens are chosen.
+
+--inference-request-top-p [text]
+
+If set to a probability 0.0 < p < 1.0, it ensures that only the most
+likely tokens, with total probability mass of p, are considered for
+generation at each step.
+
+To eliminate tokens with low likelihood, assign p a minimum percentage
+for the next token’s likelihood. For example, when p is set to 0.75,
+the model eliminates the bottom 25 percent for the next token. Set to
+1.0 to consider all tokens and set to 0 to disable. If both k and p
+are enabled, p acts after k.
+
+--inference-request-truncate [text]
+
+For an input that’s longer than the maximum token length, specifies
+which part of the input text will be truncated.
+
+Accepted values are:
+
+   END, NONE, START
+
+
+Global Parameters
+=================
+
+Use "oci --help" for help on global parameters.
+
+"--auth-purpose", "--auth", "--cert-bundle", "--cli-auto-prompt", "--
+cli-rc-file", "--config-file", "--connection-timeout", "--debug", "--
+defaults-file", "--endpoint", "--generate-full-command-json-input", "
+--generate-param-json-input", "--help", "--latest-version", "--max-
+retries", "--no-retry", "--opc-client-request-id", "--opc-request-id",
+"--output", "--profile", "--proxy", "--query", "--raw-output", "--
+read-timeout", "--realm-specific-endpoint", "--region", "--release-
+info", "--request-id", "--version", "-?", "-d", "-h", "-i", "-v"
+
+
+Example using required parameter
+================================
+
+Copy and paste the following example into a JSON file, replacing the
+example parameters with your own.
+
+       oci generative-ai-inference generate-text-result generate-text-cohere-llm-inference-request --generate-param-json-input serving-mode > serving-mode.json
+
+Copy the following CLI commands into a file named example.sh. Run the
+command by typing “bash example.sh” and replacing the example
+parameters with your own.
+
+Please note this sample will only work in the POSIX-compliant bash-
+like shell. You need to set up the OCI configuration and appropriate
+security policies before trying the examples.
+
+       export compartment_id=<substitute-value-of-compartment_id> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/generative-ai-inference/generate-text-result/generate-text-cohere-llm-inference-request.html#cmdoption-compartment-id
+       export inference_request_prompt=<substitute-value-of-inference_request_prompt> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/generative-ai-inference/generate-text-result/generate-text-cohere-llm-inference-request.html#cmdoption-inference-request-prompt
+
+       oci generative-ai-inference generate-text-result generate-text-cohere-llm-inference-request --compartment-id $compartment_id --inference-request-prompt $inference_request_prompt --serving-mode file://serving-mode.json
+
+
+Other Examples
+==============
+
+
+Description
+-----------
+
+Send an inference request to Cohere model for text generation
+
+
+Command
+-------
+
+    oci generative-ai-inference generate-text-result generate-text-cohere-llm-inference-request --compartment-id $COMPARTMENT_ID --serving-mode "{\"servingType\": \"ON_DEMAND\", \"modelId\": \"$SERVING_MODEL_ID\"}" --inference-request-prompt "Tell me one fact about Oracle" --read-timeout 240 --region $REGION
+
+
+Output
+------
+
+   {
+    "data": {
+         "inference-response": {
+              "generated-texts": [
+                   {
+                        "finish-reason": null,
+                        "id": "82b340f1-276e-4abf-92e2-a389190d6602",
+                        "likelihood": null,
+                        "text": " One interesting fact about Oracle is that it is one of the oldest database management systems still in use today. It has a long history that dates back to the early 1970s when it was founded by Larry Ellison, Bob Miner, and Ed Oates.",
+                        "token-likelihoods": null
+                   }
+              ],
+              "prompt": "null",
+              "runtime-type": "COHERE",
+              "time-created": "2024-01-22T20:37:44.116000+00:00"
+         },
+         "model-id": "cohere.command",
+         "model-version": "15.6"
+    }
+   }

@@ -1,0 +1,40 @@
+fleet-apps-management-catalog
+*****************************
+
+
+Description
+===========
+
+Fleet Application Management provides a centralized platform to help
+you automate resource management tasks, validate patch compliance, and
+enhance operational efficiency across an enterprise.
+
+
+Available Commands
+==================
+
+* catalog-item
+
+  * change-compartment
+
+  * clone
+
+  * create
+
+  * create-catalog-item-catalog-git-source-config
+
+  * create-catalog-item-catalog-marketplace-source-config
+
+  * create-catalog-item-catalog-par-source-config
+
+  * create-catalog-item-catalog-source-template-config
+
+  * delete
+
+  * get
+
+  * update
+
+* catalog-item-collection
+
+  * list-catalog-items

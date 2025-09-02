@@ -1,0 +1,26 @@
+sensitive-type-group
+********************
+
+
+Description
+===========
+
+The details of the sensitive type group.
+
+
+Available Commands
+==================
+
+* change-compartment
+
+* create
+
+* delete
+
+* get
+
+* list-grouped-sensitive-types
+
+* patch-grouped-sensitive-types
+
+* update

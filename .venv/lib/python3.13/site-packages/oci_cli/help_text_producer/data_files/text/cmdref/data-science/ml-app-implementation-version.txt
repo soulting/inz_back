@@ -1,0 +1,22 @@
+ml-app-implementation-version
+*****************************
+
+
+Description
+===========
+
+Read-only fully managed snapshot of MlApplicationImplementation taken
+when MlApplicationImplementation was updated with new ML Application
+package.
+
+
+Available Commands
+==================
+
+* download-package
+
+* get
+
+* list
+
+* update

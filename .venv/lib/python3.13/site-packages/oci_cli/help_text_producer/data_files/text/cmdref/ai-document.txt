@@ -1,0 +1,96 @@
+ai-document
+***********
+
+
+Description
+===========
+
+Document AI helps customers perform various analysis on their
+documents. If a customer has lots of documents, they can process them
+in batch using asynchronous CLI endpoints.
+
+
+Available Commands
+==================
+
+* analyze-document-result
+
+  * analyze-document
+
+  * analyze-document-inline-document-details
+
+  * analyze-document-object-storage-document-details
+
+* model
+
+  * add
+
+  * change-compartment
+
+  * create
+
+  * delete
+
+  * get
+
+  * list
+
+  * patch
+
+  * remove
+
+  * update
+
+* model-type-info
+
+  * get-model-type
+
+* processor-job
+
+  * cancel
+
+  * create
+
+  * create-processor-job-general-processor-config
+
+  * create-processor-job-inline-document-content
+
+  * create-processor-job-invoice-processor-config
+
+  * create-processor-job-object-storage-locations
+
+  * get
+
+* project
+
+  * add
+
+  * change-compartment
+
+  * create
+
+  * delete
+
+  * get
+
+  * list
+
+  * remove
+
+  * update
+
+* work-request
+
+  * cancel
+
+  * get
+
+  * list
+
+* work-request-error
+
+  * list
+
+* work-request-log-entry
+
+  * list-work-request-logs

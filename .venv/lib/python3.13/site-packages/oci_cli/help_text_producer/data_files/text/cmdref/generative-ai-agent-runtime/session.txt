@@ -1,0 +1,26 @@
+session
+*******
+
+
+Description
+===========
+
+A session represents an interactive conversation initiated by a user
+through an API to engage with an agent. It involves a series of
+exchanges where the user sends queries or prompts, and the agent
+responds with relevant information, actions, or assistance based on
+the user’s input. The session persists for the duration of the
+interaction, maintaining context and continuity to provide coherent
+and meaningful responses throughout the conversation.
+
+
+Available Commands
+==================
+
+* create
+
+* delete
+
+* get
+
+* update

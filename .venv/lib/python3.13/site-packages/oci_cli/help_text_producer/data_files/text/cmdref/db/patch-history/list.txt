@@ -1,0 +1,17 @@
+list
+****
+
+
+Description
+===========
+
+Lists the history of patch operations on the specified Database Home.
+[Command Reference](listDbHomePatchHistoryEntries)
+
+
+Available Commands
+==================
+
+* by-database
+
+* by-db-system

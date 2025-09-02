@@ -1,0 +1,33 @@
+capacity-reservation
+********************
+
+
+Description
+===========
+
+A template that defines the settings to use when creating compute
+capacity reservations.
+
+
+Available Commands
+==================
+
+* change-compartment
+
+* create
+
+* delete
+
+* get
+
+* instance
+
+  * list
+
+* instance-shape
+
+  * list
+
+* list
+
+* update

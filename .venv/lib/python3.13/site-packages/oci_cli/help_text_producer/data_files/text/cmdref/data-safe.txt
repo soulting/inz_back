@@ -1,0 +1,926 @@
+data-safe
+*********
+
+
+Description
+===========
+
+CLI for using Oracle Data Safe.
+
+
+Available Commands
+==================
+
+* alert
+
+  * alerts-update
+
+  * change-compartment
+
+  * get
+
+  * patch
+
+  * update
+
+* alert-policy
+
+  * change-compartment
+
+  * create
+
+  * delete
+
+  * get
+
+  * list
+
+  * list-alert-policy-rules
+
+  * update
+
+* alert-policy-rule
+
+  * create
+
+  * delete
+
+  * get
+
+  * update
+
+* alert-summary
+
+  * list-alert-analytics
+
+  * list-alerts
+
+* attribute-set
+
+  * change-compartment
+
+  * create
+
+  * delete
+
+  * get
+
+  * list
+
+  * list-associated-resources
+
+  * update
+
+* audit-archive-retrieval
+
+  * change-compartment
+
+  * create
+
+  * delete
+
+  * get
+
+  * list
+
+  * update
+
+* audit-event-summary
+
+  * list-audit-event-analytics
+
+  * list-audit-events
+
+* audit-policy
+
+  * change-compartment
+
+  * get
+
+  * provision
+
+  * retrieve
+
+  * update
+
+* audit-policy-analytics
+
+  * list
+
+* audit-policy-collection
+
+  * list-audit-policies
+
+* audit-profile
+
+  * calculate-audit-volume-available
+
+  * calculate-audit-volume-collected
+
+  * change-compartment
+
+  * change-retention
+
+  * create
+
+  * delete
+
+  * discover-audit-trails
+
+  * get
+
+  * list
+
+  * list-available-audit-volumes
+
+  * list-collected-audit-volumes
+
+  * list-target-overrides
+
+  * update
+
+* audit-profile-analytic-collection
+
+  * list-audit-profile-analytics
+
+* audit-trail
+
+  * delete
+
+  * get
+
+  * list
+
+  * resume
+
+  * start
+
+  * stop
+
+  * update
+
+* audit-trail-analytic-collection
+
+  * list-audit-trail-analytics
+
+* database-security-config
+
+  * change-compartment
+
+  * get
+
+  * list
+
+  * refresh
+
+  * update
+
+* database-table-access-entry
+
+  * get
+
+* database-table-access-entry-collection
+
+  * list-database-table-access-entries
+
+* database-view-access-entry
+
+  * get
+
+* database-view-access-entry-collection
+
+  * list-database-view-access-entries
+
+* difference-column
+
+  * get
+
+* discovery-job
+
+  * change-compartment
+
+  * create
+
+  * delete
+
+  * get
+
+  * list
+
+  * list-discovery-job-results
+
+  * patch-discovery-job-results
+
+* discovery-job-result
+
+  * delete
+
+  * get
+
+* finding
+
+  * update
+
+* library-masking-format
+
+  * change-compartment
+
+  * create
+
+  * delete
+
+  * get
+
+  * update
+
+* library-masking-format-summary
+
+  * list-library-masking-formats
+
+* masked-column-summary
+
+  * list-masked-columns
+
+* masking-column
+
+  * create
+
+  * delete
+
+  * get
+
+  * get-compatible-formats-for-data-types
+
+  * get-compatible-formats-for-sensitive-types
+
+  * list
+
+  * patch
+
+  * update
+
+* masking-error-summary
+
+  * list-masking-errors
+
+* masking-object
+
+  * list
+
+* masking-policy
+
+  * add
+
+  * apply-sdm-masking-policy-difference
+
+  * change-compartment
+
+  * create
+
+  * create-masking-policy-create-column-source-from-sdm-details
+
+  * create-masking-policy-create-column-source-from-target-details
+
+  * delete
+
+  * download
+
+  * download-masking-log
+
+  * download-masking-report
+
+  * generate-masking-policy-for-download
+
+  * generate-masking-report-for-download
+
+  * get
+
+  * list
+
+  * list-masking-analytics
+
+  * list-masking-reports
+
+  * mask-data
+
+  * update
+
+  * update-masking-policy-update-column-source-sdm-details
+
+  * update-masking-policy-update-column-source-target-details
+
+  * upload
+
+* masking-policy-health-report
+
+  * change-compartment
+
+  * delete
+
+  * generate-health-report
+
+  * get
+
+  * list
+
+  * list-masking-policy-health-report-logs
+
+* masking-policy-referential-relation-summary
+
+  * list-masking-policy-referential-relations
+
+* masking-report
+
+  * delete
+
+  * get
+
+* masking-schema
+
+  * list
+
+* on-prem-connector
+
+  * change-compartment
+
+  * create
+
+  * delete
+
+  * generate-on-prem-connector-configuration
+
+  * get
+
+  * list
+
+  * update
+
+  * update-on-prem-connector-wallet
+
+* peer-target-database
+
+  * create
+
+  * create-peer-target-database-database-cloud-service-details
+
+  * delete
+
+  * get
+
+  * list
+
+  * update
+
+  * update-peer-target-database-database-cloud-service-details
+
+* private-endpoint
+
+  * change-compartment
+
+  * create
+
+  * delete
+
+  * get
+
+  * list
+
+  * update
+
+* profile
+
+  * list-profile-analytics
+
+* referential-relation
+
+  * create
+
+  * delete
+
+  * get
+
+  * list
+
+* report
+
+  * change-compartment
+
+  * get
+
+  * get-report-content
+
+  * update
+
+* report-definition
+
+  * change-compartment
+
+  * create
+
+  * delete
+
+  * generate-report
+
+  * get
+
+  * list
+
+  * remove
+
+  * schedule-report
+
+  * schedule-report-schedule-audit-report-details
+
+  * update
+
+* report-summary
+
+  * list-reports
+
+* role-grant-path-collection
+
+  * list-role-grant-paths
+
+* sdm-masking-policy-difference
+
+  * change-compartment
+
+  * create
+
+  * delete
+
+  * get
+
+  * list
+
+  * list-difference-columns
+
+  * patch-sdm-masking-policy-difference-columns
+
+  * update
+
+* security-assessment
+
+  * apply-security-assessment-template
+
+  * change-compartment
+
+  * compare
+
+  * compare-to-template-baseline
+
+  * create
+
+  * delete
+
+  * download-security-assessment-report
+
+  * generate-security-assessment-report
+
+  * get
+
+  * get-security-assessment-comparison
+
+  * get-template-baseline-comparison
+
+  * list
+
+  * list-checks
+
+  * list-finding-analytics
+
+  * list-findings
+
+  * list-findings-change-audit-logs
+
+  * list-security-feature-analytics
+
+  * list-security-features
+
+  * list-template-analytics
+
+  * list-template-association-analytics
+
+  * patch-checks
+
+  * patch-findings
+
+  * refresh
+
+  * remove
+
+  * set-security-assessment-baseline
+
+  * unset-security-assessment-baseline
+
+  * update
+
+* security-policy
+
+  * change-compartment
+
+  * create
+
+  * delete
+
+  * get
+
+  * list
+
+  * update
+
+* security-policy-config
+
+  * change-compartment
+
+  * create
+
+  * delete
+
+  * get
+
+  * update
+
+* security-policy-config-collection
+
+  * list-security-policy-configs
+
+* security-policy-deployment
+
+  * change-compartment
+
+  * create
+
+  * delete
+
+  * deploy
+
+  * get
+
+  * list
+
+  * refresh
+
+  * update
+
+* security-policy-entry-state
+
+  * get
+
+  * list
+
+* security-policy-report
+
+  * get
+
+* security-policy-report-collection
+
+  * list-security-policy-reports
+
+* sensitive-column
+
+  * create
+
+  * delete
+
+  * get
+
+  * list
+
+  * patch
+
+  * update
+
+* sensitive-data-model
+
+  * apply-discovery-job-results
+
+  * change-compartment
+
+  * create
+
+  * delete
+
+  * download
+
+  * download-discovery-report
+
+  * generate-discovery-report-for-download
+
+  * generate-sensitive-data-model-for-download
+
+  * get
+
+  * list
+
+  * list-discovery-analytics
+
+  * list-sensitive-column-analytics
+
+  * update
+
+  * upload
+
+* sensitive-data-model-sensitive-type-collection
+
+  * list-sensitive-data-model-sensitive-types
+
+* sensitive-object
+
+  * list
+
+* sensitive-schema
+
+  * list
+
+* sensitive-type
+
+  * bulk-create
+
+  * change-compartment
+
+  * create
+
+  * create-sensitive-type-create-sensitive-category-details
+
+  * create-sensitive-type-create-sensitive-type-pattern-details
+
+  * delete
+
+  * get
+
+  * list
+
+  * update
+
+  * update-sensitive-type-update-sensitive-category-details
+
+  * update-sensitive-type-update-sensitive-type-pattern-details
+
+* sensitive-type-group
+
+  * change-compartment
+
+  * create
+
+  * delete
+
+  * get
+
+  * list-grouped-sensitive-types
+
+  * patch-grouped-sensitive-types
+
+  * update
+
+* sensitive-type-group-summary
+
+  * list-sensitive-type-groups
+
+* sensitive-types-export
+
+  * change-compartment
+
+  * create
+
+  * delete
+
+  * download
+
+  * get
+
+  * update
+
+* sensitive-types-export-collection
+
+  * list-sensitive-types-exports
+
+* service
+
+  * enable
+
+  * get
+
+  * modify-global-settings
+
+* sql-collection
+
+  * change-compartment
+
+  * create
+
+  * delete
+
+  * generate-sql-firewall-policy
+
+  * get
+
+  * list
+
+  * purge-sql-collection-logs
+
+  * refresh-sql-collection-log-insights
+
+  * start
+
+  * stop
+
+  * update
+
+* sql-collection-analytics
+
+  * list
+
+* sql-collection-log-insights
+
+  * list
+
+* sql-firewall-allowed-sql
+
+  * list
+
+* sql-firewall-allowed-sql-analytics
+
+  * list
+
+* sql-firewall-policy
+
+  * change-compartment
+
+  * delete
+
+  * get
+
+  * list
+
+  * update
+
+* sql-firewall-policy-analytics
+
+  * list
+
+* sql-firewall-violation-summary
+
+  * list-sql-firewall-violation-analytics
+
+  * list-sql-firewall-violations
+
+* target-alert-policy-association
+
+  * change-compartment
+
+  * create
+
+  * delete
+
+  * get
+
+  * patch
+
+  * update
+
+* target-alert-policy-association-summary
+
+  * list-target-alert-policy-associations
+
+* target-database
+
+  * activate
+
+  * change-compartment
+
+  * create
+
+  * deactivate
+
+  * delete
+
+  * download-privilege-script
+
+  * get
+
+  * list
+
+  * list-columns
+
+  * list-roles
+
+  * list-schemas
+
+  * list-tables
+
+  * refresh
+
+  * update
+
+* target-database-group
+
+  * change-compartment
+
+  * create
+
+  * delete
+
+  * get
+
+  * get-group-members
+
+  * update
+
+* target-database-group-summary
+
+  * list-target-database-groups
+
+* unified-audit-policy
+
+  * bulk-create
+
+  * change-compartment
+
+  * create
+
+  * delete
+
+  * get
+
+  * update
+
+* unified-audit-policy-collection
+
+  * list-unified-audit-policies
+
+* unified-audit-policy-definition
+
+  * change-compartment
+
+  * delete
+
+  * get
+
+  * update
+
+* unified-audit-policy-definition-collection
+
+  * list-unified-audit-policy-definitions
+
+* user-assessment
+
+  * change-compartment
+
+  * compare
+
+  * create
+
+  * delete
+
+  * download-user-assessment-report
+
+  * generate-user-assessment-report
+
+  * get
+
+  * get-profile
+
+  * get-user-assessment-comparison
+
+  * list
+
+  * list-grants
+
+  * list-password-expiry-date-analytics
+
+  * list-profile-summaries
+
+  * list-user-access-analytics
+
+  * list-user-analytics
+
+  * list-users
+
+  * refresh
+
+  * set-user-assessment-baseline
+
+  * unset-user-assessment-baseline
+
+  * update
+
+* work-request
+
+  * cancel
+
+  * get
+
+  * list
+
+  * resume
+
+  * suspend
+
+* work-request-error
+
+  * list
+
+* work-request-log-entry
+
+  * list

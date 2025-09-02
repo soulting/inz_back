@@ -1,0 +1,58 @@
+multicloud
+**********
+
+
+Description
+===========
+
+Use the Oracle Multicloud CLI to retrieve resource anchors and network
+anchors, and the metadata mappings related a Cloud Service Provider.
+For more information, see <link to docs>.
+
+
+Available Commands
+==================
+
+* metadata
+
+  * external-location-mapping-metadatum-summary-collection
+
+    * list-external-location-mapping-metadata
+
+  * external-location-summaries-metadatum-summary-collection
+
+    * list-external-location-summaries-metadata
+
+  * external-locations-metadatum-collection
+
+    * list-external-location-details-metadata
+
+* multi-clouds-metadata
+
+  * multi-cloud-metadata
+
+    * get
+
+  * multi-cloud-metadata-collection
+
+    * list-multi-cloud-metadata
+
+* omhub-network-anchor
+
+  * network-anchor
+
+    * get
+
+  * network-anchor-collection
+
+    * list-network-anchors
+
+* omhub-resource-anchor
+
+  * resource-anchor
+
+    * get
+
+  * resource-anchor-collection
+
+    * list-resource-anchors

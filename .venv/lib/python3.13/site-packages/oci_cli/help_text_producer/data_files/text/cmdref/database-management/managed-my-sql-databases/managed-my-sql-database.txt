@@ -1,0 +1,36 @@
+managed-my-sql-database
+***********************
+
+
+Description
+===========
+
+The details of the Managed MySQL Database.
+
+
+Available Commands
+==================
+
+* change-mysql-database-management-type
+
+* get
+
+* get-binary-log-information
+
+* get-general-replication-information
+
+* get-my-sql-query-details
+
+* list-high-availability-members
+
+* list-inbound-replications
+
+* list-managed-my-sql-database-configuration-data
+
+* list-managed-my-sql-database-sql-data
+
+* list-my-sql-digest-errors
+
+* list-outbound-replications
+
+* summarize-managed-my-sql-database-availability-metrics

@@ -1,0 +1,18 @@
+indicator
+*********
+
+
+Description
+===========
+
+A data signature observed on a network or host that indicates a
+potential security threat. Indicators can be plain text or computed
+(hashed) values.
+
+
+Available Commands
+==================
+
+* get
+
+* summarize

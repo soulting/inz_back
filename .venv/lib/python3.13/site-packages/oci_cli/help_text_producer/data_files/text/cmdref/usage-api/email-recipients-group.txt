@@ -1,0 +1,22 @@
+email-recipients-group
+**********************
+
+
+Description
+===========
+
+The recipients group to receive usage statement emails.
+
+
+Available Commands
+==================
+
+* create
+
+* delete
+
+* get
+
+* list
+
+* update

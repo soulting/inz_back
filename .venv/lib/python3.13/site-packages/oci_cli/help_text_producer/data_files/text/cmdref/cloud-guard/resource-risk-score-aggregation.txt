@@ -1,0 +1,14 @@
+resource-risk-score-aggregation
+*******************************
+
+
+Description
+===========
+
+Risk score of a resource.
+
+
+Available Commands
+==================
+
+* request-summarized-trend-resource-risk-scores

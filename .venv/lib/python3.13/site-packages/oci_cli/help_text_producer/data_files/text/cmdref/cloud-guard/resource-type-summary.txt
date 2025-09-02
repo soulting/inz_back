@@ -1,0 +1,14 @@
+resource-type-summary
+*********************
+
+
+Description
+===========
+
+A summary of detailed information on a resource type.
+
+
+Available Commands
+==================
+
+* list-resource-types

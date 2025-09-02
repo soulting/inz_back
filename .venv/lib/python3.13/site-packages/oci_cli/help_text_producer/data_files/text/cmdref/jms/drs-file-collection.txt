@@ -1,0 +1,14 @@
+drs-file-collection
+*******************
+
+
+Description
+===========
+
+List of DRS details.
+
+
+Available Commands
+==================
+
+* list-drs-files

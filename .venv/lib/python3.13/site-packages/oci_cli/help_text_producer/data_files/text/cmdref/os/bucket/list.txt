@@ -1,0 +1,378 @@
+"list"
+******
+
+* Description
+
+* Usage
+
+* Required Parameters
+
+* Optional Parameters
+
+* Global Parameters
+
+* Example using required parameter
+
+* Other Examples
+
+
+Description
+===========
+
+Gets a list of all BucketSummary items in a compartment. A
+BucketSummary contains only summary fields for the bucket and does not
+contain fields like the user-defined metadata.
+
+ListBuckets returns a BucketSummary containing at most 1000 buckets.
+To paginate through more buckets, use the returned *opc-next-page*
+value with the *page* request parameter.
+
+To use this and other API operations, you must be authorized in an IAM
+policy. If you are not authorized, talk to an administrator. If you
+are an administrator who needs to write policies to give users access,
+see Getting Started with Policies.
+
+
+Usage
+=====
+
+   oci os bucket list [OPTIONS]
+
+
+Required Parameters
+===================
+
+--compartment-id, -c [text]
+
+The ID of the compartment in which to list buckets.
+
+
+Optional Parameters
+===================
+
+--all
+
+Fetches all pages of results. If you provide this option, then you
+cannot provide the "--limit" option.
+
+--fields [text]
+
+Bucket summary in list of buckets includes the ‘namespace’, ‘name’,
+‘compartmentId’, ‘createdBy’, ‘timeCreated’, and ‘etag’ fields. This
+parameter can also include ‘tags’ (freeformTags and definedTags). The
+only supported value of this parameter is ‘tags’ for now. Example
+‘tags’.
+
+Accepted values are:
+
+   tags
+
+--from-json [text]
+
+Provide input to this command as a JSON document from a file using the
+file://path-to/file syntax.
+
+The "--generate-full-command-json-input" option can be used to
+generate a sample json file to be used with this command option. The
+key names are pre-populated and match the command option names
+(converted to camelCase format, e.g. compartment-id –> compartmentId),
+while the values of the keys need to be populated by the user before
+using the sample file as an input to this command. For any command
+option that accepts multiple values, the value of the key can be a
+JSON array.
+
+Options can still be provided on the command line. If an option exists
+in both the JSON document and the command line then the command line
+specified value will be used.
+
+For examples on usage of this option, please see our “using CLI with
+advanced JSON options” link: https://docs.cloud.oracle.com/iaas/Conte
+nt/API/SDKDocs/cliusing.htm#AdvancedJSONOptions
+
+--limit [integer]
+
+For list pagination. The maximum number of results per page, or items
+to return in a paginated “List” call. For important details about how
+pagination works, see List Pagination.
+
+--namespace-name, --namespace, -ns [text]
+
+The Object Storage namespace used for the request. If not provided,
+this parameter will be obtained internally using a call to ‘oci os ns
+get’
+
+--page [text]
+
+For list pagination. The value of the *opc-next-page* response header
+from the previous “List” call. For important details about how
+pagination works, see List Pagination.
+
+--page-size [integer]
+
+When fetching results, the number of results to fetch per call. Only
+valid when used with "--all" or "--limit", and ignored otherwise.
+
+
+Global Parameters
+=================
+
+Use "oci --help" for help on global parameters.
+
+"--auth-purpose", "--auth", "--cert-bundle", "--cli-auto-prompt", "--
+cli-rc-file", "--config-file", "--connection-timeout", "--debug", "--
+defaults-file", "--endpoint", "--generate-full-command-json-input", "
+--generate-param-json-input", "--help", "--latest-version", "--max-
+retries", "--no-retry", "--opc-client-request-id", "--opc-request-id",
+"--output", "--profile", "--proxy", "--query", "--raw-output", "--
+read-timeout", "--realm-specific-endpoint", "--region", "--release-
+info", "--request-id", "--version", "-?", "-d", "-h", "-i", "-v"
+
+
+Example using required parameter
+================================
+
+Copy the following CLI commands into a file named example.sh. Run the
+command by typing “bash example.sh” and replacing the example
+parameters with your own.
+
+Please note this sample will only work in the POSIX-compliant bash-
+like shell. You need to set up the OCI configuration and appropriate
+security policies before trying the examples.
+
+       export compartment_id=<substitute-value-of-compartment_id> # https://docs.cloud.oracle.com/en-us/iaas/tools/oci-cli/latest/oci_cli_docs/cmdref/os/bucket/list.html#cmdoption-compartment-id
+
+       oci os bucket list --compartment-id $compartment_id
+
+
+Other Examples
+==============
+
+
+Description
+-----------
+
+Lists at most first 1000 buckets of specified compartment
+
+
+Command
+-------
+
+    oci os bucket list -c ocid1.compartment.oc1..aaaaaaaa3ffjane6aoullgob4daj6xw2bzkm7maswctna2zgoxfny4smpoha
+
+
+Output
+------
+
+   {
+    "data": [
+         {
+              "compartment-id": "ocid1.compartment.oc1..aaaaaaaa3ffjane6aoullgob4daj6xw2bzkm7maswctna2zgoxfny4smpoha",
+              "created-by": "ocid1.user.oc1..aaaaaaaatflstw5i7x3pb5ukijuanrhdgijymtiqwlkexuzar2aoyaluqcdq",
+              "defined-tags": null,
+              "etag": "d822baac-990c-4d29-8715-f59a36910283",
+              "freeform-tags": null,
+              "name": "bucket-client",
+              "namespace": "bmcostests",
+              "time-created": "2022-11-18T11:37:31.283000+00:00"
+         }
+    ]
+   }
+
+
+Description
+-----------
+
+Lists all the buckets in the specified compartment
+
+
+Command
+-------
+
+    oci os bucket list -c ocid1.compartment.oc1..aaaaaaaa3ffjane6aoullgob4daj6xw2bzkm7maswctna2zgoxfny4smpoha --all
+
+
+Output
+------
+
+   {
+    "data": [
+         {
+              "compartment-id": "ocid1.compartment.oc1..aaaaaaaa3ffjane6aoullgob4daj6xw2bzkm7maswctna2zgoxfny4smpoha",
+              "created-by": "ocid1.user.oc1..aaaaaaaatflstw5i7x3pb5ukijuanrhdgijymtiqwlkexuzar2aoyaluqcdq",
+              "defined-tags": null,
+              "etag": "d822baac-990c-4d29-8715-f59a36910283",
+              "freeform-tags": null,
+              "name": "bucket-client",
+              "namespace": "bmcostests",
+              "time-created": "2022-11-18T11:37:31.283000+00:00"
+         }
+    ]
+   }
+
+
+Description
+-----------
+
+Lists buckets with tags field in summary
+
+
+Command
+-------
+
+    oci os bucket list -c ocid1.compartment.oc1..aaaaaaaa3ffjane6aoullgob4daj6xw2bzkm7maswctna2zgoxfny4smpoha --fields tags
+
+
+Output
+------
+
+   {
+    "data": [
+         {
+              "compartment-id": "ocid1.compartment.oc1..aaaaaaaa3ffjane6aoullgob4daj6xw2bzkm7maswctna2zgoxfny4smpoha",
+              "created-by": "ocid1.user.oc1..aaaaaaaatflstw5i7x3pb5ukijuanrhdgijymtiqwlkexuzar2aoyaluqcdq",
+              "defined-tags": {},
+              "etag": "d822baac-990c-4d29-8715-f59a36910283",
+              "freeform-tags": {},
+              "name": "bucket-client",
+              "namespace": "bmcostests",
+              "time-created": "2022-11-18T11:37:31.283000+00:00"
+         }
+    ]
+   }
+
+
+Description
+-----------
+
+Lists buckets in the compartment, with maximum number of results per
+page equal to the specified limit
+
+
+Command
+-------
+
+    oci os bucket list -c ocid1.compartment.oc1..aaaaaaaa3ffjane6aoullgob4daj6xw2bzkm7maswctna2zgoxfny4smpoha --limit 2
+
+
+Output
+------
+
+   {
+    "data": [
+         {
+              "compartment-id": "ocid1.compartment.oc1..aaaaaaaa3ffjane6aoullgob4daj6xw2bzkm7maswctna2zgoxfny4smpoha",
+              "created-by": "ocid1.user.oc1..aaaaaaaatflstw5i7x3pb5ukijuanrhdgijymtiqwlkexuzar2aoyaluqcdq",
+              "defined-tags": null,
+              "etag": "25c87aa6-02e3-4246-9d29-3a44b4e59d8c",
+              "freeform-tags": null,
+              "name": "bucket-20221122-1322",
+              "namespace": "bmcostests",
+              "time-created": "2022-11-22T07:56:52.489000+00:00"
+         },
+         {
+              "compartment-id": "ocid1.compartment.oc1..aaaaaaaa3ffjane6aoullgob4daj6xw2bzkm7maswctna2zgoxfny4smpoha",
+              "created-by": "ocid1.user.oc1..aaaaaaaatflstw5i7x3pb5ukijuanrhdgijymtiqwlkexuzar2aoyaluqcdq",
+              "defined-tags": null,
+              "etag": "25d2ce40-a2bc-4e78-bf5b-f25053ede098",
+              "freeform-tags": null,
+              "name": "bucket-20221122-1326",
+              "namespace": "bmcostests",
+              "time-created": "2022-11-22T07:56:38.402000+00:00"
+         }
+    ],
+    "opc-next-page": "1:ST3INStDGbRIG-qmfAZyXPBRQItAuxQ0BXNmGqu6Ry7ql1TQAXiDqNarcD_-b2sj"
+   }
+
+
+Description
+-----------
+
+List buckets on the the specified page, use opc-next-page response
+header from the previous “List” call
+
+
+Command
+-------
+
+    oci os bucket list -c ocid1.compartment.oc1..aaaaaaaa3ffjane6aoullgob4daj6xw2bzkm7maswctna2zgoxfny4smpoha --page 1:ST3INStDGbRIG-qmfAZyXPBRQItAuxQ0BXNmGqu6Ry7ql1TQAXiDqNarcD_-b2sj
+
+
+Output
+------
+
+   {
+    "data": [
+         {
+              "compartment-id": "ocid1.compartment.oc1..aaaaaaaa3ffjane6aoullgob4daj6xw2bzkm7maswctna2zgoxfny4smpoha",
+              "created-by": "ocid1.user.oc1..aaaaaaaatflstw5i7x3pb5ukijuanrhdgijymtiqwlkexuzar2aoyaluqcdq",
+              "defined-tags": null,
+              "etag": "9b78888f-c8b2-4dee-911b-4527c7231706",
+              "freeform-tags": null,
+              "name": "bucket-20221122-13261",
+              "namespace": "bmcostests",
+              "time-created": "2022-11-22T07:56:45.794000+00:00"
+         },
+         {
+              "compartment-id": "ocid1.compartment.oc1..aaaaaaaa3ffjane6aoullgob4daj6xw2bzkm7maswctna2zgoxfny4smpoha",
+              "created-by": "ocid1.user.oc1..aaaaaaaatflstw5i7x3pb5ukijuanrhdgijymtiqwlkexuzar2aoyaluqcdq",
+              "defined-tags": null,
+              "etag": "07b34ff2-6bca-46d5-ad6e-86a9c8a272a7",
+              "freeform-tags": null,
+              "name": "bucket-ab",
+              "namespace": "bmcostests",
+              "time-created": "2022-11-21T19:35:01.246000+00:00"
+         }
+    ]
+   }
+
+
+Description
+-----------
+
+Lists buckets in the compartment, with number of results per call
+equal to the specified page size
+
+
+Command
+-------
+
+    oci os bucket list -c ocid1.compartment.oc1..aaaaaaaa3ffjane6aoullgob4daj6xw2bzkm7maswctna2zgoxfny4smpoha --page-size 2
+
+
+Output
+------
+
+   {
+    "data": [
+         {
+              "compartment-id": "ocid1.compartment.oc1..aaaaaaaa3ffjane6aoullgob4daj6xw2bzkm7maswctna2zgoxfny4smpoha",
+              "created-by": "ocid1.user.oc1..aaaaaaaatflstw5i7x3pb5ukijuanrhdgijymtiqwlkexuzar2aoyaluqcdq",
+              "defined-tags": null,
+              "etag": "25c87aa6-02e3-4246-9d29-3a44b4e59d8c",
+              "freeform-tags": null,
+              "name": "bucket-20221122-1322",
+              "namespace": "bmcostests",
+              "time-created": "2022-11-22T07:56:52.489000+00:00"
+         },
+         {
+              "compartment-id": "ocid1.compartment.oc1..aaaaaaaa3ffjane6aoullgob4daj6xw2bzkm7maswctna2zgoxfny4smpoha",
+              "created-by": "ocid1.user.oc1..aaaaaaaatflstw5i7x3pb5ukijuanrhdgijymtiqwlkexuzar2aoyaluqcdq",
+              "defined-tags": null,
+              "etag": "25d2ce40-a2bc-4e78-bf5b-f25053ede098",
+              "freeform-tags": null,
+              "name": "bucket-20221122-1326",
+              "namespace": "bmcostests",
+              "time-created": "2022-11-22T07:56:38.402000+00:00"
+         },
+         {
+              "compartment-id": "ocid1.compartment.oc1..aaaaaaaa3ffjane6aoullgob4daj6xw2bzkm7maswctna2zgoxfny4smpoha",
+              "created-by": "ocid1.user.oc1..aaaaaaaatflstw5i7x3pb5ukijuanrhdgijymtiqwlkexuzar2aoyaluqcdq",
+              "defined-tags": null,
+              "etag": "9b78888f-c8b2-4dee-911b-4527c7231706",
+              "freeform-tags": null,
+              "name": "bucket-20221122-13261",
+              "namespace": "bmcostests",
+              "time-created": "2022-11-22T07:56:45.794000+00:00"
+         }
+    ]
+   }

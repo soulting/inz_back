@@ -1,0 +1,14 @@
+bds-cluster-version
+*******************
+
+
+Description
+===========
+
+Cluster version details including bds and odh version information.
+
+
+Available Commands
+==================
+
+* list

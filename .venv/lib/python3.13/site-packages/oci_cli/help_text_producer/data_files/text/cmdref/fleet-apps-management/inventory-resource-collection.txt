@@ -1,0 +1,16 @@
+inventory-resource-collection
+*****************************
+
+
+Description
+===========
+
+Results of a inventoryResource search. Contains both
+InventoryResourceSummary items and other information, such as
+metadata.
+
+
+Available Commands
+==================
+
+* list-inventory-resources

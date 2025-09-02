@@ -1,0 +1,18 @@
+rerank-text-result
+******************
+
+
+Description
+===========
+
+The rerank response to return to the caller.
+
+
+Available Commands
+==================
+
+* rerank-text
+
+* rerank-text-dedicated-serving-mode
+
+* rerank-text-on-demand-serving-mode

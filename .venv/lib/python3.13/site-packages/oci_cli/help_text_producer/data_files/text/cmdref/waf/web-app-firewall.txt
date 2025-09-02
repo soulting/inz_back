@@ -1,0 +1,25 @@
+web-app-firewall
+****************
+
+
+Description
+===========
+
+A resource connecting a WebAppFirewallPolicy to a backend of
+particular type, applying that policy’s coverage to the backend.
+
+
+Available Commands
+==================
+
+* change-compartment
+
+* create-for-load-balancer
+
+* delete
+
+* get
+
+* list
+
+* update-for-load-balancer

@@ -1,0 +1,14 @@
+user-status-changer
+*******************
+
+
+Description
+===========
+
+Schema to handle user status change by administrator.
+
+
+Available Commands
+==================
+
+* put

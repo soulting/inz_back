@@ -1,0 +1,21 @@
+cloudsql
+********
+
+
+Description
+===========
+
+Adds Cloud SQL to your cluster. You can use Cloud SQL to query against
+non-relational data stored in multiple big data sources, including
+Apache Hive, HDFS, Oracle NoSQL Database, and Apache HBase. Adding
+Cloud SQL adds a query server node to the cluster and creates cell
+servers on all the worker nodes in the cluster. [Command
+Reference](addCloudSql)
+
+
+Available Commands
+==================
+
+* add
+
+* remove

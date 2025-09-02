@@ -1,0 +1,16 @@
+generate-text-result
+********************
+
+
+Description
+===========
+
+The generated text result to return.
+
+
+Available Commands
+==================
+
+* generate-text-cohere-llm-inference-request
+
+* generate-text-llama-llm-inference-request

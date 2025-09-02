@@ -1,0 +1,15 @@
+instance-shape
+**************
+
+
+Description
+===========
+
+An available shape used to launch instances in a compute capacity
+reservation.
+
+
+Available Commands
+==================
+
+* list

@@ -1,0 +1,22 @@
+namespace
+*********
+
+
+Description
+===========
+
+Namespace Definition
+
+
+Available Commands
+==================
+
+* create
+
+* delete
+
+* get
+
+* list
+
+* update

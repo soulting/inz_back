@@ -1,0 +1,183 @@
+ai-vision
+*********
+
+
+Description
+===========
+
+Using Vision, you can upload images to detect and classify objects in
+them. If you have lots of images, you can process them in batch using
+asynchronous CLI endpoints. Vision’s features are thematically split
+between Document AI for document-centric images, and Image Analysis
+for object and scene-based images. Pretrained models and custom models
+are supported.
+
+
+Available Commands
+==================
+
+* analyze-document
+
+* analyze-document-inline-document-details
+
+* analyze-document-object-storage-document-details
+
+* analyze-image
+
+* analyze-image-inline-image-details
+
+* analyze-image-object-storage-image-details
+
+* document-job
+
+  * cancel
+
+  * create
+
+  * create-document-job-object-list-inline-input-location
+
+  * get
+
+* image-job
+
+  * cancel
+
+  * create
+
+  * create-image-job-object-list-inline-input-location
+
+  * get
+
+* model
+
+  * change-compartment
+
+  * create
+
+  * delete
+
+  * get
+
+  * update
+
+* model-collection
+
+  * list-models
+
+* project
+
+  * change-compartment
+
+  * create
+
+  * delete
+
+  * get
+
+  * update
+
+* project-collection
+
+  * list-projects
+
+* stream-group
+
+  * change-compartment
+
+  * create
+
+  * delete
+
+  * get
+
+  * update
+
+* stream-group-collection
+
+  * list-stream-groups
+
+* stream-job
+
+  * change-compartment
+
+  * create
+
+  * create-stream-job-object-storage-output-location
+
+  * delete
+
+  * get
+
+  * start
+
+  * stop
+
+  * update
+
+  * update-stream-job-object-storage-output-location
+
+* stream-job-collection
+
+  * list-stream-jobs
+
+* stream-source
+
+  * change-compartment
+
+  * create
+
+  * create-stream-source-rtsp-source-details
+
+  * delete
+
+  * get
+
+  * update
+
+  * update-stream-source-rtsp-source-details
+
+* stream-source-collection
+
+  * list-stream-sources
+
+* video-job
+
+  * cancel
+
+  * create
+
+  * create-video-job-object-list-inline-input-location
+
+  * get
+
+* vision-private-endpoint
+
+  * change-compartment
+
+  * create
+
+  * delete
+
+  * get
+
+  * update
+
+* vision-private-endpoint-collection
+
+  * list-vision-private-endpoints
+
+* work-request
+
+  * cancel
+
+  * get
+
+  * list
+
+* work-request-error
+
+  * list
+
+* work-request-log-entry
+
+  * list-work-request-logs

@@ -1,0 +1,35 @@
+target-detector-recipe
+**********************
+
+
+Description
+===========
+
+A TargetDetectorRecipe resource contains a specific instance of one of
+the supported detector types (for example, activity, configuration, or
+threat) in which some settings can be modified specifically for a
+single target.
+
+A TargetDetectorRecipe resource: * Is effectively a copy of a
+DetectorRecipe resource in which users can make very limited changes
+if it’s Oracle-managed, and more changes if it’s user-managed. * Is
+visible on the Cloud Guard Targets, Target Details page. * Is located
+in a specific OCI compartment. * Can be modified by users,
+programmatically or through the UI. * Changes that can be made here
+override any settings in the corresponding DetectorRecipe, of which
+the TargetDetectorRecipe resource is effectively a copy, created when
+the detector recipe is attached to the target.
+
+
+Available Commands
+==================
+
+* create
+
+* delete
+
+* get
+
+* list
+
+* update

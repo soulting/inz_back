@@ -1,0 +1,15 @@
+endpoint-collection
+*******************
+
+
+Description
+===========
+
+Results of an endpoint search. Contains EndpointSummary items and
+other information such as metadata.
+
+
+Available Commands
+==================
+
+* list-endpoints

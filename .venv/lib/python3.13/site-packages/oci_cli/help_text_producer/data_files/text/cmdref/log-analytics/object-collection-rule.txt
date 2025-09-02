@@ -1,0 +1,24 @@
+object-collection-rule
+**********************
+
+
+Description
+===========
+
+The configuration details of an Object Storage based collection rule.
+
+
+Available Commands
+==================
+
+* change-compartment
+
+* create
+
+* delete
+
+* get
+
+* list
+
+* update

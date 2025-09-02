@@ -1,0 +1,14 @@
+disbursement-report-record-collection
+*************************************
+
+
+Description
+===========
+
+Disbursement report
+
+
+Available Commands
+==================
+
+* list-disbursement-report-records

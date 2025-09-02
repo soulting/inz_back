@@ -1,0 +1,20 @@
+alert-policy-rule
+*****************
+
+
+Description
+===========
+
+A rule associated with a alert policy.
+
+
+Available Commands
+==================
+
+* create
+
+* delete
+
+* get
+
+* update

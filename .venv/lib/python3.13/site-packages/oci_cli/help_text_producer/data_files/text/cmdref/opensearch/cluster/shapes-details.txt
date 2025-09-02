@@ -1,0 +1,14 @@
+shapes-details
+**************
+
+
+Description
+===========
+
+Shapes for OpenSearch Cluster.
+
+
+Available Commands
+==================
+
+* list

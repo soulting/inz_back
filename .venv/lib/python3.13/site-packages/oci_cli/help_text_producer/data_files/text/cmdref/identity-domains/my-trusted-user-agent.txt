@@ -1,0 +1,24 @@
+my-trusted-user-agent
+*********************
+
+
+Description
+===========
+
+This schema defines the attributes of Trusted User Agents owned by
+users. Multi-Factor Authentication uses Trusted User Agents to
+authenticate users.  A User Agent is software application that a user
+uses to issue requests.
+   For example, a User Agent could be a particular browser (possibly
+   one of several executing on a desktop or laptop) or a particular
+   mobile application (again, one of several executing on a particular
+   mobile device). A User Agent is trusted once the Multi-Factor
+   Authentication has verified it in some way.
+
+
+Available Commands
+==================
+
+* delete
+
+* get

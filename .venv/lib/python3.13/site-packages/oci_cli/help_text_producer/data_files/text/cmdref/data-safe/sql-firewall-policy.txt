@@ -1,0 +1,23 @@
+sql-firewall-policy
+*******************
+
+
+Description
+===========
+
+The SQL Firewall policy resource contains the firewall policy metadata
+for a single user.
+
+
+Available Commands
+==================
+
+* change-compartment
+
+* delete
+
+* get
+
+* list
+
+* update
